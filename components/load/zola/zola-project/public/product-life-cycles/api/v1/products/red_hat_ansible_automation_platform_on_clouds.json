@@ -1,0 +1,15 @@
+{"data": [{
+  "all_phases": [],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "name": "Red Hat Ansible Automation Platform on Clouds",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "3e3f72ff-090c-4464-9b9e-3b5e32611c58",
+  "versions": []
+}]}

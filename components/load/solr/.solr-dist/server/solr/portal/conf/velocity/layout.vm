@@ -1,0 +1,14 @@
+#**
+ *  Overall HTML page layout
+ *#
+
+<html>
+<head>
+  #parse("head.vm")
+</head>
+  <body>
+    <div id="content">
+      $content
+    </div>
+  </body>
+</html>

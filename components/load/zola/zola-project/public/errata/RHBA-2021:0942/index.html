@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/errata.min.css">
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+RHBA-2021:0942 - Update to RHEL7-based OpenJDK S2I Images for OpenShift - Red Hat Customer Portal
+</title>
+        
+<meta name="documentKind" content="Errata" />
+<meta name="lastModifiedDate" content="2021-03-18T16:34:08Z" />
+
+<meta name="id" content="RHBA-2021:0942" />
+<meta name="allTitle" content="RHBA-2021:0942 - Update to RHEL7-based OpenJDK S2I Images for OpenShift - Red Hat Customer Portal" />
+<meta name="portal_synopsis" content="Update to RHEL7-based OpenJDK S2I Images for OpenShift" />
+<meta name="portal_summary" content="Updates are available for the RHEL7-based OpenJDK S2I images (OpenJDK versions 8 and 11) for OpenShift Container Platform 3.11 and 4.7." />
+<meta name="portal_severity" content="None" />
+<meta name="portal_publication_date" content="2021-03-18T16:33:17Z" />
+<meta name="view_uri" content="&#x2F;errata&#x2F;RHBA-2021:0942" />
+<meta name="portal_advisory_type" content="Bug Fix Advisory" />
+
+    
+        <meta name="portal_product_names" content="Red Hat OpenShift Container Platform for Power" />
+    
+        <meta name="portal_product_names" content="Red Hat OpenShift Container Platform" />
+    
+    
+        <meta name="portal_product_filter" content="Red Hat OpenShift Container Platform|Red Hat OpenShift Container Platform for Power|4.6|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat OpenShift Container Platform|Red Hat OpenShift Container Platform|4.6|x86_64" />
+    
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/errata-search/">Red Hat Product Errata</a>
+                                
+                                
+                                RHBA-2021:0942
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<dl class="details">
+    <dt>Issued:</dt>
+    <dd>2021-03-18</dd>
+    <dt>Updated:</dt>
+    <dd>2021-03-18</dd>
+</dl>
+
+<h1>RHBA-2021:0942 - Update to RHEL7-based OpenJDK S2I Images for OpenShift</h1>
+
+<hr />
+<h2 id="synopsis">Synopsis</h2>
+<p>Update to RHEL7-based OpenJDK S2I Images for OpenShift</p>
+<h2 id="type-severity">Type/Severity</h2>
+<p>Bug Fix Advisory None</p>
+<h2 id="topic">Topic</h2>
+<p>Updates are available for the RHEL7-based OpenJDK S2I images (OpenJDK versions 8 and 11) for OpenShift Container Platform 3.11 and 4.7.</p>
+<h2 id="description">Description</h2>
+<p>Red Hat JBoss Middleware for OpenShift provides images for many of the Red Hat Middleware products, for use with OpenShift Container Platform, with on-premise or private cloud deployments.</p>
+<p>These images include fixes for CVE-2021-20264.</p>
+<p>These images can be used with OpenShift Container Platform 3.11 and 4.</p>
+<h2 id="solution">Solution</h2>
+<p>To update to the latest Red Hat JBoss Middleware for OpenShift Java S2I images run the following steps to pull in the content:</p>
+<ol>
+<li>On your master host(s), ensure you are logged into the CLI as a cluster administrator or user that has project administrator access to the global &quot;openshift&quot; project. For example:</li>
+</ol>
+<p>$ oc login -u system:admin</p>
+<ol start="2">
+<li>Run the following command to update the OpenShift Java S2I image streams in the &quot;openshift&quot; project:</li>
+</ol>
+<p>$ oc replace --force -n openshift -f <br />
+<a href="https://raw.githubusercontent.com/jboss-container-images/openjdk/release/templates/image-streams.json" class="mimir-link-warn" title="Mimir does not include content from: raw.githubusercontent.com">https://raw.githubusercontent.com/jboss-container-images/openjdk/release/templates/image-streams.json</a></p>
+<p>Note, this update of the image streams will pull images from registry.redhat.io, which requires authentication.  Please refer to the following KB for details on how to configure your environment to use the new registry: https://access.redhat.com/RegistryAuthentication</p>
+<h2 id="affected-products">Affected Products</h2>
+<table><thead><tr><th>Product</th><th>Version</th><th>Arch</th></tr></thead><tbody>
+<tr><td>Red Hat OpenShift Container Platform</td><td>4.6</td><td>x86_64</td></tr>
+<tr><td>Red Hat OpenShift Container Platform for Power</td><td>4.6</td><td>ppc64le</td></tr>
+</tbody></table>
+<h2 id="fixes">Fixes</h2>
+<p>(none)</p>
+<h2 id="cves">CVEs</h2>
+<p>(none)</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://access.redhat.com/security/cve/CVE-2021-20264" class="mimir-link-warn" title="This content is not included in Mimir."><a href="https://access.redhat.com/security/cve/CVE-2021-20264" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/security/cve/CVE-2021-20264</a></a></li>
+</ul>
+
+
+<hr/>
+<p class="contact">
+The Red Hat security contact is <a href="mailto:secalert@redhat.com" class="mimir-link-warn" title="This content is not included in Mimir.">secalert@redhat.com</a>.
+More contact details at <a href="https://access.redhat.com/security/team/contact/" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/security/team/contact/</a>.
+</p>
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

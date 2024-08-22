@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Using the AMQ Spring Boot Starter - AMQ Spring Boot Starter 2.5
+</title>
+        
+<meta name="product" content="AMQ Spring Boot Starter" />
+<meta name="documentation_version" content="2.5" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2023-12-07T15:50:57.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/amq_spring_boot_starter/3.0/">AMQ Spring Boot Starter</a>
+                                
+                                <a href="/documentation/en-us/amq_spring_boot_starter/2.5/">2.5</a>
+                                
+                                
+                                Using the AMQ Spring Boot Starter
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Using the AMQ Spring Boot Starter</a>
+                    </li><li>
+                        <a href="#making-open-source-more-inclusive">
+                            Making open source more inclusive
+                        </a>
+                    </li><li>
+                        <a href="#overview">
+                            1. Overview
+                        </a><ol>
+                <li>
+                        <a href="#key_features">
+                            1.1. Key features
+                        </a>
+                    </li><li>
+                        <a href="#supported_standards_and_protocols">
+                            1.2. Supported standards and protocols
+                        </a>
+                    </li><li>
+                        <a href="#supported_configurations">
+                            1.3. Supported configurations
+                        </a>
+                    </li><li>
+                        <a href="#document_conventions">
+                            1.4. Document conventions
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#installation">
+                            2. Installation
+                        </a><ol>
+                <li>
+                        <a href="#prerequisites">
+                            2.1. Prerequisites
+                        </a>
+                    </li><li>
+                        <a href="#using_the_red_hat_maven_repository">
+                            2.2. Using the Red Hat Maven repository
+                        </a>
+                    </li><li>
+                        <a href="#installing_a_local_maven_repository">
+                            2.3. Installing a local Maven repository
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#getting_started">
+                            3. Getting started
+                        </a><ol>
+                <li>
+                        <a href="#prerequisites_2">
+                            3.1. Prerequisites
+                        </a>
+                    </li><li>
+                        <a href="#running_hello_world">
+                            3.2. Running Hello World
+                        </a>
+                    </li><li>
+                        <a href="#additional_examples">
+                            3.3. Additional examples
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#configuration">
+                            4. Configuration
+                        </a><ol>
+                <li>
+                        <a href="#connection_options">
+                            4.1. Connection options
+                        </a>
+                    </li><li>
+                        <a href="#pooling_options">
+                            4.2. Pooling options
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#using_your_subscription">
+                            A. Using your subscription
+                        </a><ol>
+                <li>
+                        <a href="#accessing_your_account">
+                            A.1. Accessing your account
+                        </a>
+                    </li><li>
+                        <a href="#activating_a_subscription">
+                            A.2. Activating a subscription
+                        </a>
+                    </li><li>
+                        <a href="#downloading_release_files">
+                            A.3. Downloading release files
+                        </a>
+                    </li><li>
+                        <a href="#registering_your_system_for_packages">
+                            A.4. Registering your system for packages
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#using_red_hat_maven_repositories">
+                            B. Using Red Hat Maven repositories
+                        </a><ol>
+                <li>
+                        <a href="#using_the_online_repository">
+                            B.1. Using the online repository
+                        </a>
+                    </li><li>
+                        <a href="#using_a_local_repository">
+                            B.2. Using a local repository
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#using_the_broker_with_the_examples">
+                            C. Using AMQ Broker with the examples
+                        </a><ol>
+                <li>
+                        <a href="#installing_the_broker">
+                            C.1. Installing the broker
+                        </a>
+                    </li><li>
+                        <a href="#starting_the_broker">
+                            C.2. Starting the broker
+                        </a>
+                    </li><li>
+                        <a href="#creating_a_queue">
+                            C.3. Creating a queue
+                        </a>
+                    </li><li>
+                        <a href="#stopping_the_broker">
+                            C.4. Stopping the broker
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm140530664099952">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--using_the_amq_spring_boot_starter">
+            <h1 class="title">Using the AMQ Spring Boot Starter</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140530656351840"><div class="titlepage"><div><div class="producttitle"><span class="productname">AMQ Spring Boot Starter</span> <span class="productnumber">2.5</span></div><div><h2 class="subtitle">Developing a Spring Boot application for JMS (javax)</h2></div><div><a href="#idm140530664099952">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This guide describes how to install and configure the library, run hands-on examples, and use your client with other components.
+			</div></div></div></div><hr/></div><section class="preface" id="making-open-source-more-inclusive"><div class="titlepage"><div><div><h1 class="title">Making open source more inclusive</h1></div></div></div><p>
+			Red Hat is committed to replacing problematic language in our code, documentation, and web properties. We are beginning with these four terms: master, slave, blacklist, and whitelist. Because of the enormity of this endeavor, these changes will be implemented gradually over several upcoming releases. For more details, see <a class="link mimir-link-warn" href="https://www.redhat.com/en/blog/making-open-source-more-inclusive-eradicating-problematic-language" title="Mimir does not include content from: www.redhat.com">our CTO Chris Wright’s message</a>.
+		</p></section><section class="chapter" id="overview"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Overview</h1></div></div></div><p>
+			AMQ Spring Boot Starter is an adapter for creating Spring-based applications that use AMQ messaging. It provides a Spring Boot starter module that enables you to build standalone Spring applications. The starter uses the Red Hat build of Apache Qpid JMS client to communicate using the AMQP 1.0 protocol.
+		</p><p>
+			This release supports <code class="literal">javax.jms</code>. For <code class="literal">jakarta.jms</code> support, see the 3.x release of AMQ Spring Boot Starter.
+		</p><p>
+			AMQ Spring Boot Starter is based on the <a class="link mimir-link-warn" href="https://github.com/amqphub/amqp-10-jms-spring-boot" title="Mimir does not include content from: github.com">AMQP 1.0 JMS Spring Boot</a> project.
+		</p><section class="section" id="key_features"><div class="titlepage"><div><div><h2 class="title">1.1. Key features</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Quickly build standalone Spring applications with built-in messaging
+					</li><li class="listitem">
+						Automatic configuration of JMS resources
+					</li><li class="listitem">
+						Configurable pooling of JMS connections and sessions
+					</li></ul></div></section><section class="section" id="supported_standards_and_protocols"><div class="titlepage"><div><div><h2 class="title">1.2. Supported standards and protocols</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Version 2.5 of the Spring Boot API
+					</li><li class="listitem">
+						Version 2.0 of the <a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=343" title="Mimir does not include content from: jcp.org">Java Message Service</a> API
+					</li><li class="listitem">
+						Version 1.0 of the <a class="link mimir-link-warn" href="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-overview-v1.0-os.html" title="Mimir does not include content from: docs.oasis-open.org">Advanced Message Queueing Protocol</a> (AMQP)
+					</li></ul></div></section><section class="section" id="supported_configurations"><div class="titlepage"><div><div><h2 class="title">1.3. Supported configurations</h2></div></div></div><p>
+				Refer to <a class="link mimir-link-warn" href="https://access.redhat.com/articles/2791941" title="This content is not included in Mimir.">Red Hat AMQ Supported Configurations</a> on the Red Hat Customer Portal for current information regarding AMQ Spring Boot Starter supported configurations.
+			</p></section><section class="section" id="document_conventions"><div class="titlepage"><div><div><h2 class="title">1.4. Document conventions</h2></div></div></div><h4 id="the_sudo_command">The sudo command</h4><p>
+				In this document, <code class="literal">sudo</code> is used for any command that requires root privileges. Exercise caution when using <code class="literal">sudo</code> because any changes can affect the entire system. For more information about <code class="literal">sudo</code>, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-gaining_privileges#sect-Gaining_Privileges-The_sudo_Command" title="This content is not included in Mimir.">Using the sudo command</a>.
+			</p><h4 id="file_paths">File paths</h4><p>
+				In this document, all file paths are valid for Linux, UNIX, and similar operating systems (for example, <code class="literal">/home/andrea</code>). On Microsoft Windows, you must use the equivalent Windows paths (for example, <code class="literal">C:\Users\andrea</code>).
+			</p><h4 id="variable_text">Variable text</h4><p>
+				This document contains code blocks with variables that you must replace with values specific to your environment. Variable text is enclosed in arrow braces and styled as italic monospace. For example, in the following command, replace <code class="literal"><span class="emphasis"><em>&lt;project-dir&gt;</em></span></code> with the value for your environment:
+			</p><pre class="programlisting language-shell">$ cd <span class="emphasis"><em>&lt;project-dir&gt;</em></span></pre></section></section><section class="chapter" id="installation"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Installation</h1></div></div></div><p>
+			This chapter guides you through the steps to install AMQ Spring Boot Starter in your environment.
+		</p><section class="section" id="prerequisites"><div class="titlepage"><div><div><h2 class="title">2.1. Prerequisites</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						You must have a <a class="link" href="#using_your_subscription" title="Appendix A. Using your subscription">subscription</a> to access AMQ release files and repositories.
+					</li><li class="listitem">
+						To build programs with AMQ Spring Boot Starter, you must install <a class="link mimir-link-warn" href="http://maven.apache.org/" title="Mimir does not include content from: maven.apache.org">Apache Maven</a>.
+					</li><li class="listitem">
+						To use AMQ Spring Boot Starter, you must install Java.
+					</li></ul></div></section><section class="section" id="using_the_red_hat_maven_repository"><div class="titlepage"><div><div><h2 class="title">2.2. Using the Red Hat Maven repository</h2></div></div></div><p>
+				Configure your Maven environment to download the client library from the Red Hat Maven repository.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Add the Red Hat repository to your Maven settings or POM file. For example configuration files, see <a class="xref" href="#using_the_online_repository" title="B.1. Using the online repository">Section B.1, “Using the online repository”</a>.
+					</p><pre class="programlisting language-xml">&lt;repository&gt;
+  &lt;id&gt;red-hat-ga&lt;/id&gt;
+  &lt;url&gt;https://maven.repository.redhat.com/ga&lt;/url&gt;
+&lt;/repository&gt;</pre></li><li class="listitem"><p class="simpara">
+						Add the library dependency to your POM file.
+					</p><pre class="programlisting language-xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.amqphub.spring&lt;/groupId&gt;
+  &lt;artifactId&gt;amqp-10-jms-spring-boot-starter&lt;/artifactId&gt;
+  &lt;version&gt;2.5.25.redhat-00001&lt;/version&gt;
+&lt;/dependency&gt;</pre></li></ol></div><p>
+				The client is now available in your Maven project.
+			</p></section><section class="section" id="installing_a_local_maven_repository"><div class="titlepage"><div><div><h2 class="title">2.3. Installing a local Maven repository</h2></div></div></div><p>
+				As an alternative to the online repository, AMQ Spring Boot Starter can be installed to your local filesystem as a file-based Maven repository.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						<a class="link" href="#using_your_subscription" title="Appendix A. Using your subscription">Use your subscription</a> to download the <span class="strong strong"><strong>AMQ Spring Boot Starter 2.5.25 Maven repository</strong></span> .zip file.
+					</li><li class="listitem"><p class="simpara">
+						Extract the file contents into a directory of your choosing.
+					</p><p class="simpara">
+						On Linux or UNIX, use the <code class="literal">unzip</code> command to extract the file contents.
+					</p><pre class="programlisting language-shell">$ unzip amq-spring-boot-starter-2.5.25-maven-repository.zip</pre><p class="simpara">
+						On Windows, right-click the .zip file and select <span class="strong strong"><strong>Extract All</strong></span>.
+					</p></li><li class="listitem">
+						Configure Maven to use the repository in the <code class="literal">maven-repository</code> directory inside the extracted install directory. For more information, see <a class="xref" href="#using_a_local_repository" title="B.2. Using a local repository">Section B.2, “Using a local repository”</a>.
+					</li></ol></div></section></section><section class="chapter" id="getting_started"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Getting started</h1></div></div></div><p>
+			This chapter guides you through the steps to set up your environment and run a simple messaging program.
+		</p><section class="section" id="prerequisites_2"><div class="titlepage"><div><div><h2 class="title">3.1. Prerequisites</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						To build the example, Maven must be configured to use the <a class="link" href="#using_the_red_hat_maven_repository" title="2.2. Using the Red Hat Maven repository">Red Hat repository</a> or a <a class="link" href="#installing_a_local_maven_repository" title="2.3. Installing a local Maven repository">local repository</a>.
+					</li><li class="listitem">
+						You must have a message broker listening for connections on <code class="literal">localhost</code>. It must have anonymous access enabled. For more information, see <a class="link" href="#starting_the_broker" title="C.2. Starting the broker">Starting the broker</a>.
+					</li><li class="listitem">
+						You must have a queue named <code class="literal">example</code>. For more information, see <a class="link" href="#creating_a_queue" title="C.3. Creating a queue">Creating a queue</a>.
+					</li></ul></div></section><section class="section" id="running_hello_world"><div class="titlepage"><div><div><h2 class="title">3.2. Running Hello World</h2></div></div></div><p>
+				The Hello World example creates a connection to the broker, sends a message containing a greeting to the <code class="literal">example</code> queue, and receives it back. On success, it prints the received message to the console.
+			</p><div class="formalpara"><p class="title"><strong>Example: Sending and receiving "Hello World!" - <code class="literal">HelloWorld.java</code></strong></p><p>
+					
+<pre class="programlisting language-java">package net.example;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jms.annotation.EnableJms;
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.jms.core.JmsTemplate;
+
+@EnableJms
+@SpringBootApplication
+public class HelloWorld implements CommandLineRunner {
+    @Autowired
+    private JmsTemplate jmsTemplate;
+
+    public static void main(String[] args) {
+        SpringApplication.run(HelloWorld.class, args);
+    }
+
+    @Override
+    public void run(String... strings) throws Exception {
+        sendMessage("Hello World!");
+    }
+
+    public void sendMessage(String text) {
+        System.out.println(String.format("Sending '%s'", text));
+        this.jmsTemplate.convertAndSend("example", text);
+    }
+
+    @JmsListener(destination = "example")
+    public void receiveMessage(String text) {
+        System.out.println(String.format("Received '%s'", text));
+    }
+}</pre>
+
+				</p></div><h4 id="running_the_example">Running the example</h4><p>
+				To compile and run the example program, use the following procedure:
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Create a new project directory. This is referred to as <code class="literal"><span class="emphasis"><em>&lt;project-dir&gt;</em></span></code> in the steps that follow.
+					</li><li class="listitem"><p class="simpara">
+						Copy the example listing to the following location:
+					</p><pre class="programlisting language-shell"><span class="emphasis"><em>&lt;project-dir&gt;</em></span>/src/main/java/net/example/HelloWorld.java</pre></li><li class="listitem"><p class="simpara">
+						Use a text editor to create a new <code class="literal"><span class="emphasis"><em>&lt;project-dir&gt;</em></span>/pom.xml</code> file. Add the following XML to it:
+					</p><pre class="programlisting language-xml">&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;net.example&lt;/groupId&gt;
+  &lt;artifactId&gt;example&lt;/artifactId&gt;
+  &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+
+  &lt;parent&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;2.5.0&lt;/version&gt;
+  &lt;/parent&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.amqphub.spring&lt;/groupId&gt;
+      &lt;artifactId&gt;amqp-10-jms-spring-boot-starter&lt;/artifactId&gt;
+      &lt;version&gt;2.5.25.redhat-00001&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;</pre></li><li class="listitem"><p class="simpara">
+						Change to the project directory and use the <code class="literal">mvn</code> command to compile the program.
+					</p><pre class="programlisting language-shell">$ mvn clean package</pre></li><li class="listitem"><p class="simpara">
+						Use the <code class="literal">java</code> command to run the program.
+					</p><pre class="programlisting language-shell">$ java -jar target/example-1.0.0-SNAPSHOT.jar</pre><p class="simpara">
+						Running the Hello World example results in the following console output:
+					</p><pre class="programlisting language-shell">$ java -jar target/example-1.0.0-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+[...]
+2018-11-05 16:21:09.849  INFO 14805 --- [main] net.example.HelloWorld: Started HelloWorld in 1.074 seconds (JVM running for 1.38)
+Sending 'Hello World!'
+Received 'Hello World!'</pre></li></ol></div></section><section class="section" id="additional_examples"><div class="titlepage"><div><div><h2 class="title">3.3. Additional examples</h2></div></div></div><p>
+				More example programs are available from the <a class="link mimir-link-warn" href="https://github.com/amqphub/amqp-10-jms-spring-boot/tree/2.5.25/amqp-10-jms-spring-boot-examples" title="Mimir does not include content from: github.com">AMQP 1.0 JMS Spring Boot project</a> and the <a class="link mimir-link-warn" href="https://spring.io/guides/gs/messaging-jms/" title="Mimir does not include content from: spring.io">Spring project</a>.
+			</p></section></section><section class="chapter" id="configuration"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Configuration</h1></div></div></div><p>
+			The following options can be used in an <code class="literal">application-properties</code> file to configure your Spring Boot application.
+		</p><section class="section" id="connection_options"><div class="titlepage"><div><div><h2 class="title">4.1. Connection options</h2></div></div></div><p>
+				These options determine how AMQ Spring Boot Starter establishes connections to remote AMQP peers. The starter uses Red Hat build of Apache Qpid JMS to communicate over the network. For more information, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_build_of_apache_qpid_jms" title="This content is not included in Mimir.">Using Apache Qpid JMS</a>.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">amqphub.amqp10jms.remoteUrl</span></dt><dd><p class="simpara">
+							The connection URI that the Red Hat build of Apache Qpid JMS client uses to establish new connections.
+						</p><div class="formalpara"><p class="title"><strong>Connection URI format</strong></p><p>
+								
+<pre class="screen">amqp[s]://host:port[?option=value[&amp;option2=value...]]</pre>
+
+							</p></div><p class="simpara">
+							For more information, see <a class="link" href="/documentation/en-us/amq_spring_boot_starter/2.5/html-single/using_the_amq_spring_boot_starter/index/#connection_uris">Connection URIs</a> in Red Hat build of Apache Qpid JMS.
+						</p></dd><dt><span class="term">amqphub.amqp10jms.username</span></dt><dd>
+							The username used to authenticate the connection.
+						</dd><dt><span class="term">amqphub.amqp10jms.password</span></dt><dd>
+							The password used to authenticate the connection.
+						</dd><dt><span class="term">amqphub.amqp10jms.clientId</span></dt><dd>
+							The client ID applied to the connection.
+						</dd><dt><span class="term">amqphub.amqp10jms.receiveLocalOnly</span></dt><dd>
+							If enabled, calls to <code class="literal">receive</code> with a timeout argument check the consumer’s local message buffer only. Otherwise, the remote peer is checked as well to ensure there are no messages available. It is disabled by default.
+						</dd><dt><span class="term">amqphub.amqp10jms.receiveNoWaitLocalOnly</span></dt><dd>
+							If enabled, calls to <code class="literal">receiveNoWait</code> check the consumer’s local message buffer only. Otherwise, the remote peer is checked as well to ensure there are no messages available. It is disabled by default.
+						</dd></dl></div></section><section class="section" id="pooling_options"><div class="titlepage"><div><div><h2 class="title">4.2. Pooling options</h2></div></div></div><p>
+				These options determine how AMQ Spring Boot Starter caches JMS connections and sessions.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">amqphub.amqp10jms.pool.enabled</span></dt><dd>
+							Controls whether pooling is enabled. It is disabled by default.
+						</dd><dt><span class="term">amqphub.amqp10jms.pool.maxConnections</span></dt><dd>
+							The maximum number of connections for a single pool. The default is 1.
+						</dd><dt><span class="term">amqphub.amqp10jms.pool.maxSessionsPerConnection</span></dt><dd><p class="simpara">
+							The maximum number of sessions for each connection. The default is 500. A negative value removes any limit.
+						</p><p class="simpara">
+							If the limit is exceeded, <code class="literal">createSession()</code> either blocks or throws an exception, depending on configuration.
+						</p></dd><dt><span class="term">amqphub.amqp10jms.pool.blockIfSessionPoolIsFull</span></dt><dd><p class="simpara">
+							If enabled, calls to <code class="literal">createSession()</code> block until a session becomes available in the pool. It is enabled by default.
+						</p><p class="simpara">
+							If disabled, calls to <code class="literal">createSession()</code> throw an <code class="literal">IllegalStateException</code> if no session is available.
+						</p></dd><dt><span class="term">amqphub.amqp10jms.pool.blockIfSessionPoolIsFullTimeout</span></dt><dd>
+							The time in milliseconds before a blocked call to <code class="literal">createSession()</code> throws an <code class="literal">IllegalStateException</code>. The default is -1, meaning the call blocks forever.
+						</dd><dt><span class="term">amqphub.amqp10jms.pool.connectionIdleTimeout</span></dt><dd>
+							The time in milliseconds before a connection not currently on loan can be evicted from the pool. The default is 30 seconds. A value of 0 disables the timeout.
+						</dd><dt><span class="term">amqphub.amqp10jms.pool.connectionCheckInterval</span></dt><dd>
+							The time in milliseconds between periodic checks for expired connections. The default is 0, meaning the check is disabled.
+						</dd><dt><span class="term">amqphub.amqp10jms.pool.useAnonymousProducers</span></dt><dd><p class="simpara">
+							If enabled, use a single anonymous JMS <code class="literal">MessageProducer</code> for all calls to <code class="literal">createProducer()</code>. It is enabled by default.
+						</p><p class="simpara">
+							In rare cases, this behavior is undesirable. If disabled, every call to <code class="literal">createProducer()</code> results in a new <code class="literal">MessageProducer</code> instance.
+						</p></dd><dt><span class="term">amqphub.amqp10jms.pool.explicitProducerCacheSize</span></dt><dd>
+							When not using anonymous producers, the JMS <code class="literal">Session</code> can be configured to cache a certain number of <code class="literal">MessageProducer</code> objects with explicit destinations. As new producers are created that do not match the cached producers, the oldest entry in the cache is evicted.
+						</dd><dt><span class="term">amqphub.amqp10jms.pool.useProviderJMSContext</span></dt><dd><p class="simpara">
+							If enabled, use the <code class="literal">JMSContext</code> classes of the underlying JMS provider. It is disabled by default.
+						</p><p class="simpara">
+							In normal operation, the pool uses its own generic <code class="literal">JMSContext</code> implementation to wrap connections from the pool instead of using the provider implementation. The generic implementation might have limitations the provider implementation does not. However, when enabled, connections from the <code class="literal">JMSContext</code> API are not managed by the pool.
+						</p></dd></dl></div></section></section><section class="appendix" id="using_your_subscription"><div class="titlepage"><div><div><h1 class="title">Appendix A. Using your subscription</h1></div></div></div><p>
+			AMQ is provided through a software subscription. To manage your subscriptions, access your account at the Red Hat Customer Portal.
+		</p><section class="section" id="accessing_your_account"><div class="titlepage"><div><div><h2 class="title">A.1. Accessing your account</h2></div></div></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Go to <a class="link" href="/">access.redhat.com</a>.
+					</li><li class="listitem">
+						If you do not already have an account, create one.
+					</li><li class="listitem">
+						Log in to your account.
+					</li></ol></div></section><section class="section" id="activating_a_subscription"><div class="titlepage"><div><div><h2 class="title">A.2. Activating a subscription</h2></div></div></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Go to <a class="link" href="/">access.redhat.com</a>.
+					</li><li class="listitem">
+						Navigate to <span class="strong strong"><strong>My Subscriptions</strong></span>.
+					</li><li class="listitem">
+						Navigate to <span class="strong strong"><strong>Activate a subscription</strong></span> and enter your 16-digit activation number.
+					</li></ol></div></section><section class="section" id="downloading_release_files"><div class="titlepage"><div><div><h2 class="title">A.3. Downloading release files</h2></div></div></div><p>
+				To access .zip, .tar.gz, and other release files, use the customer portal to find the relevant files for download. If you are using RPM packages or the Red Hat Maven repository, this step is not required.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Open a browser and log in to the Red Hat Customer Portal <span class="strong strong"><strong>Product Downloads</strong></span> page at <a class="link mimir-link-warn" href="https://access.redhat.com/downloads" title="This content is not included in Mimir.">access.redhat.com/downloads</a>.
+					</li><li class="listitem">
+						Locate the <span class="strong strong"><strong>Red Hat AMQ</strong></span> entries in the <span class="strong strong"><strong>INTEGRATION AND AUTOMATION</strong></span> category.
+					</li><li class="listitem">
+						Select the desired AMQ product. The <span class="strong strong"><strong>Software Downloads</strong></span> page opens.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Download</strong></span> link for your component.
+					</li></ol></div></section><section class="section" id="registering_your_system_for_packages"><div class="titlepage"><div><div><h2 class="title">A.4. Registering your system for packages</h2></div></div></div><p>
+				To install RPM packages for this product on Red Hat Enterprise Linux, your system must be registered. If you are using downloaded release files, this step is not required.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Go to <a class="link" href="/">access.redhat.com</a>.
+					</li><li class="listitem">
+						Navigate to <span class="strong strong"><strong>Registration Assistant</strong></span>.
+					</li><li class="listitem">
+						Select your OS version and continue to the next page.
+					</li><li class="listitem">
+						Use the listed command in your system terminal to complete the registration.
+					</li></ol></div><p>
+				For more information about registering your system, see one of the following resources:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/system_administrators_guide/index#chap-Subscription_and_Support-Registering_a_System_and_Managing_Subscriptions" title="This content is not included in Mimir.">Red Hat Enterprise Linux 7 - Registering the system and managing subscriptions</a>
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/configuring_basic_system_settings/index#registering-the-system-and-managing-subscriptions_getting-started-with-system-administration" title="This content is not included in Mimir.">Red Hat Enterprise Linux 8 - Registering the system and managing subscriptions</a>
+					</li></ul></div></section></section><section class="appendix" id="using_red_hat_maven_repositories"><div class="titlepage"><div><div><h1 class="title">Appendix B. Using Red Hat Maven repositories</h1></div></div></div><p>
+			This section describes how to use Red Hat-provided Maven repositories in your software.
+		</p><section class="section" id="using_the_online_repository"><div class="titlepage"><div><div><h2 class="title">B.1. Using the online repository</h2></div></div></div><p>
+				Red Hat maintains a central Maven repository for use with your Maven-based projects. For more information, see the <a class="link mimir-link-warn" href="https://access.redhat.com/maven-repository" title="This content is not included in Mimir.">repository welcome page</a>.
+			</p><p>
+				There are two ways to configure Maven to use the Red Hat repository:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link" href="#adding_the_repository_to_your_maven_settings" title="Adding the repository to your Maven settings">Add the repository to your Maven settings</a>
+					</li><li class="listitem">
+						<a class="link" href="#adding_the_repository_to_your_pom_file" title="Adding the repository to your POM file">Add the repository to your POM file</a>
+					</li></ul></div><h4 id="adding_the_repository_to_your_maven_settings">Adding the repository to your Maven settings</h4><p>
+				This method of configuration applies to all Maven projects owned by your user, as long as your POM file does not override the repository configuration and the included profile is enabled.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Locate the Maven <code class="literal">settings.xml</code> file. It is usually inside the <code class="literal">.m2</code> directory in the user home directory. If the file does not exist, use a text editor to create it.
+					</p><p class="simpara">
+						On Linux or UNIX:
+					</p><pre class="programlisting language-shell">/home/<span class="emphasis"><em>&lt;username&gt;</em></span>/.m2/settings.xml</pre><p class="simpara">
+						On Windows:
+					</p><pre class="programlisting language-shell">C:\Users\&lt;username&gt;\.m2\settings.xml</pre></li><li class="listitem"><p class="simpara">
+						Add a new profile containing the Red Hat repository to the <code class="literal">profiles</code> element of the <code class="literal">settings.xml</code> file, as in the following example:
+					</p><div class="formalpara"><p class="title"><strong>Example: A Maven <code class="literal">settings.xml</code> file containing the Red Hat repository</strong></p><p>
+							
+<pre class="programlisting language-xml">&lt;settings&gt;
+  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;red-hat&lt;/id&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;red-hat-ga&lt;/id&gt;
+          &lt;url&gt;https://maven.repository.redhat.com/ga&lt;/url&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+          &lt;id&gt;red-hat-ga&lt;/id&gt;
+          &lt;url&gt;https://maven.repository.redhat.com/ga&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+      &lt;/pluginRepositories&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
+  &lt;activeProfiles&gt;
+    &lt;activeProfile&gt;red-hat&lt;/activeProfile&gt;
+  &lt;/activeProfiles&gt;
+&lt;/settings&gt;</pre>
+
+						</p></div></li></ol></div><p>
+				For more information about Maven configuration, see the <a class="link mimir-link-warn" href="http://maven.apache.org/settings.html" title="Mimir does not include content from: maven.apache.org">Maven settings reference</a>.
+			</p><h4 id="adding_the_repository_to_your_pom_file">Adding the repository to your POM file</h4><p>
+				To configure a repository directly in your project, add a new entry to the <code class="literal">repositories</code> element of your POM file, as in the following example:
+			</p><div class="formalpara"><p class="title"><strong>Example: A Maven <code class="literal">pom.xml</code> file containing the Red Hat repository</strong></p><p>
+					
+<pre class="programlisting language-xml">&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;com.example&lt;/groupId&gt;
+  &lt;artifactId&gt;example-app&lt;/artifactId&gt;
+  &lt;version&gt;1.0.0&lt;/version&gt;
+
+  &lt;repositories&gt;
+    &lt;repository&gt;
+      &lt;id&gt;red-hat-ga&lt;/id&gt;
+      &lt;url&gt;https://maven.repository.redhat.com/ga&lt;/url&gt;
+    &lt;/repository&gt;
+  &lt;/repositories&gt;
+&lt;/project&gt;</pre>
+
+				</p></div><p>
+				For more information about POM file configuration, see the <a class="link mimir-link-warn" href="https://maven.apache.org/pom.html" title="Mimir does not include content from: maven.apache.org">Maven POM reference</a>.
+			</p></section><section class="section" id="using_a_local_repository"><div class="titlepage"><div><div><h2 class="title">B.2. Using a local repository</h2></div></div></div><p>
+				Red Hat provides file-based Maven repositories for some of its components. These are delivered as downloadable archives that you can extract to your local filesystem.
+			</p><p>
+				To configure Maven to use a locally extracted repository, apply the following XML in your Maven settings or POM file:
+			</p><pre class="programlisting language-xml">&lt;repository&gt;
+  &lt;id&gt;red-hat-local&lt;/id&gt;
+  &lt;url&gt;${repository-url}&lt;/url&gt;
+&lt;/repository&gt;</pre><p>
+				<code class="literal">${repository-url}</code> must be a file URL containing the local filesystem path of the extracted repository.
+			</p><div class="table" id="idm140530663669632"><p class="title"><strong>Table B.1. Example URLs for local Maven repositories</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 20%; " class="col_1"><!--Empty--></col><col style="width: 40%; " class="col_2"><!--Empty--></col><col style="width: 40%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140530663663840" scope="col">Operating system</th><th align="left" valign="top" id="idm140530663618992" scope="col">Filesystem path</th><th align="left" valign="top" id="idm140530663617904" scope="col">URL</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140530663663840"> <p>
+								Linux or UNIX
+							</p>
+							 </td><td align="left" valign="top" headers="idm140530663618992"> <p>
+								<code class="literal">/home/alice/maven-repository</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140530663617904"> <p>
+								<code class="literal">file:/home/alice/maven-repository</code>
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140530663663840"> <p>
+								Windows
+							</p>
+							 </td><td align="left" valign="top" headers="idm140530663618992"> <p>
+								<code class="literal">C:\repos\red-hat</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140530663617904"> <p>
+								<code class="literal">file:C:\repos\red-hat</code>
+							</p>
+							 </td></tr></tbody></table></div></div></section></section><section class="appendix" id="using_the_broker_with_the_examples"><div class="titlepage"><div><div><h1 class="title">Appendix C. Using AMQ Broker with the examples</h1></div></div></div><p>
+			The AMQ Spring Boot Starter examples require a running message broker with a queue named <code class="literal">example</code>. Use the procedures below to install and start the broker and define the queue.
+		</p><section class="section" id="installing_the_broker"><div class="titlepage"><div><div><h2 class="title">C.1. Installing the broker</h2></div></div></div><p>
+				Follow the instructions in <span class="emphasis"><em>Getting Started with AMQ Broker</em></span> to <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_amq_broker/7.11/html-single/getting_started_with_amq_broker/#installing-broker-getting-started" title="This content is not included in Mimir.">install the broker</a> and <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_amq_broker/7.11/html-single/getting_started_with_amq_broker/#creating-broker-instance-getting-started" title="This content is not included in Mimir.">create a broker instance</a>. Enable anonymous access.
+			</p><p>
+				The following procedures refer to the location of the broker instance as <code class="literal"><span class="emphasis"><em>&lt;broker-instance-dir&gt;</em></span></code>.
+			</p></section><section class="section" id="starting_the_broker"><div class="titlepage"><div><div><h2 class="title">C.2. Starting the broker</h2></div></div></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Use the <code class="literal">artemis run</code> command to start the broker.
+					</p><pre class="programlisting language-shell">$ <span class="emphasis"><em>&lt;broker-instance-dir&gt;</em></span>/bin/artemis run</pre></li><li class="listitem"><p class="simpara">
+						Check the console output for any critical errors logged during startup. The broker logs <code class="literal">Server is now live</code> when it is ready.
+					</p><pre class="programlisting language-shell">$ example-broker/bin/artemis run
+           __  __  ____    ____            _
+     /\   |  \/  |/ __ \  |  _ \          | |
+    /  \  | \  / | |  | | | |_) |_ __ ___ | | _____ _ __
+   / /\ \ | |\/| | |  | | |  _ &lt;| '__/ _ \| |/ / _ \ '__|
+  / ____ \| |  | | |__| | | |_) | | | (_) |   &lt;  __/ |
+ /_/    \_\_|  |_|\___\_\ |____/|_|  \___/|_|\_\___|_|
+
+ Red Hat AMQ &lt;version&gt;
+
+2020-06-03 12:12:11,807 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+...
+2020-06-03 12:12:12,336 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+...</pre></li></ol></div></section><section class="section" id="creating_a_queue"><div class="titlepage"><div><div><h2 class="title">C.3. Creating a queue</h2></div></div></div><p>
+				In a new terminal, use the <code class="literal">artemis queue</code> command to create a queue named <code class="literal">example</code>.
+			</p><pre class="programlisting language-shell">$ <span class="emphasis"><em>&lt;broker-instance-dir&gt;</em></span>/bin/artemis queue create --name example --address example --auto-create-address --anycast</pre><p>
+				You are prompted to answer a series of yes or no questions. Answer <code class="literal">N</code> for no to all of them.
+			</p><p>
+				Once the queue is created, the broker is ready for use with the example programs.
+			</p></section><section class="section" id="stopping_the_broker"><div class="titlepage"><div><div><h2 class="title">C.4. Stopping the broker</h2></div></div></div><p>
+				When you are done running the examples, use the <code class="literal">artemis stop</code> command to stop the broker.
+			</p><pre class="programlisting language-shell">$ <span class="emphasis"><em>&lt;broker-instance-dir&gt;</em></span>/bin/artemis stop</pre><p>
+				<span class="emphasis"><em>Revised on 2023-12-05 15:12:35 UTC</em></span>
+			</p></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm140530664099952"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2023 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

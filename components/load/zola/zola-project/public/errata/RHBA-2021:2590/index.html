@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/errata.min.css">
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+RHBA-2021:2590 - cloud-init bug fix and enhancement update - Red Hat Customer Portal
+</title>
+        
+<meta name="documentKind" content="Errata" />
+<meta name="lastModifiedDate" content="2021-06-29T15:34:49Z" />
+
+<meta name="id" content="RHBA-2021:2590" />
+<meta name="allTitle" content="RHBA-2021:2590 - cloud-init bug fix and enhancement update - Red Hat Customer Portal" />
+<meta name="portal_synopsis" content="cloud-init bug fix and enhancement update" />
+<meta name="portal_summary" content="An update for cloud-init is now available for Red Hat Enterprise Linux 8." />
+<meta name="portal_severity" content="None" />
+<meta name="portal_publication_date" content="2021-06-29T13:58:57Z" />
+<meta name="view_uri" content="&#x2F;errata&#x2F;RHBA-2021:2590" />
+<meta name="portal_advisory_type" content="Bug Fix Advisory" />
+
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for Power, little endian - Extended Update Support" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for x86_64" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for x86_64 - Extended Update Support" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for IBM z Systems" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for ARM 64 - Extended Update Support" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux Server - AUS" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux Server - TUS" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for IBM z Systems - Extended Update Support" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for ARM 64" />
+    
+        <meta name="portal_product_names" content="Red Hat Enterprise Linux for Power, little endian" />
+    
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for Power, little endian - Extended Update Support|8.4|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for Power, little endian - Extended Update Support|8.6|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for Power, little endian - Extended Update Support|8.8|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64|8|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64 - Extended Update Support|8.4|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64 - Extended Update Support|8.6|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for IBM z Systems|8|s390x" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions|8.8|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for ARM 64 - Extended Update Support|8.8|aarch64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server - AUS|8.6|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for ARM 64 - Extended Update Support|8.4|aarch64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server - AUS|8.4|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for ARM 64 - Extended Update Support|8.6|aarch64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server - TUS|8.4|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server - TUS|8.6|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server - TUS|8.8|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for IBM z Systems - Extended Update Support|8.6|s390x" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for IBM z Systems - Extended Update Support|8.4|s390x" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions|8.6|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions|8.4|ppc64le" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for IBM z Systems - Extended Update Support|8.8|s390x" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions|8.6|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions|8.4|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions|8.8|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for x86_64 - Extended Update Support|8.8|x86_64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for ARM 64|8|aarch64" />
+    
+        <meta name="portal_product_filter" content="Red Hat Enterprise Linux|Red Hat Enterprise Linux for Power, little endian|8|ppc64le" />
+    
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/errata-search/">Red Hat Product Errata</a>
+                                
+                                
+                                RHBA-2021:2590
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<dl class="details">
+    <dt>Issued:</dt>
+    <dd>2021-06-29</dd>
+    <dt>Updated:</dt>
+    <dd>2021-06-29</dd>
+</dl>
+
+<h1>RHBA-2021:2590 - cloud-init bug fix and enhancement update</h1>
+
+<hr />
+<h2 id="synopsis">Synopsis</h2>
+<p>cloud-init bug fix and enhancement update</p>
+<h2 id="type-severity">Type/Severity</h2>
+<p>Bug Fix Advisory None</p>
+<h2 id="topic">Topic</h2>
+<p>An update for cloud-init is now available for Red Hat Enterprise Linux 8.</p>
+<h2 id="description">Description</h2>
+<p>The cloud-init packages provide a set of init scripts for cloud instances.
+Cloud instances need special scripts to run during initialization to
+retrieve and install SSH keys, and to let the user run various scripts.</p>
+<p>Bug Fix(es) and Enhancement(s):</p>
+<ul>
+<li>Intermittent failure to start cloud-init due to failure to detect macs
+(BZ#1957135)</li>
+</ul>
+<h2 id="solution">Solution</h2>
+<p>Before applying this update, make sure all previously released errata
+relevant to your system have been applied.</p>
+<p>For details on how to apply this update, refer to:</p>
+<p><a href="https://access.redhat.com/articles/11258" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/articles/11258</a></p>
+<h2 id="affected-products">Affected Products</h2>
+<table><thead><tr><th>Product</th><th>Version</th><th>Arch</th></tr></thead><tbody>
+<tr><td>Red Hat Enterprise Linux for x86_64</td><td>8</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions</td><td>8.8</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions</td><td>8.6</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for x86_64 - Update Services for SAP Solutions</td><td>8.4</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for x86_64 - Extended Update Support</td><td>8.8</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for x86_64 - Extended Update Support</td><td>8.6</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for x86_64 - Extended Update Support</td><td>8.4</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux for Power, little endian</td><td>8</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux for Power, little endian - Extended Update Support</td><td>8.8</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux for Power, little endian - Extended Update Support</td><td>8.6</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux for Power, little endian - Extended Update Support</td><td>8.4</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux for IBM z Systems</td><td>8</td><td>s390x</td></tr>
+<tr><td>Red Hat Enterprise Linux for IBM z Systems - Extended Update Support</td><td>8.8</td><td>s390x</td></tr>
+<tr><td>Red Hat Enterprise Linux for IBM z Systems - Extended Update Support</td><td>8.6</td><td>s390x</td></tr>
+<tr><td>Red Hat Enterprise Linux for IBM z Systems - Extended Update Support</td><td>8.4</td><td>s390x</td></tr>
+<tr><td>Red Hat Enterprise Linux for ARM 64</td><td>8</td><td>aarch64</td></tr>
+<tr><td>Red Hat Enterprise Linux for ARM 64 - Extended Update Support</td><td>8.8</td><td>aarch64</td></tr>
+<tr><td>Red Hat Enterprise Linux for ARM 64 - Extended Update Support</td><td>8.6</td><td>aarch64</td></tr>
+<tr><td>Red Hat Enterprise Linux for ARM 64 - Extended Update Support</td><td>8.4</td><td>aarch64</td></tr>
+<tr><td>Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions</td><td>8.8</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions</td><td>8.6</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux Server for Power LE - Update Services for SAP Solutions</td><td>8.4</td><td>ppc64le</td></tr>
+<tr><td>Red Hat Enterprise Linux Server - TUS</td><td>8.8</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux Server - TUS</td><td>8.6</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux Server - TUS</td><td>8.4</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux Server - AUS</td><td>8.6</td><td>x86_64</td></tr>
+<tr><td>Red Hat Enterprise Linux Server - AUS</td><td>8.4</td><td>x86_64</td></tr>
+</tbody></table>
+<h2 id="updated-packages">Updated Packages</h2>
+<ul>
+<li>cloud-init-20.3-10.el8_4.3.src.rpm</li>
+<li>cloud-init-20.3-10.el8_4.3.noarch.rpm</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1957135" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1957135</a></li>
+</ul>
+<h2 id="cves">CVEs</h2>
+<p>(none)</p>
+<h2 id="references">References</h2>
+<p>(none)</p>
+
+
+<hr/>
+<p class="contact">
+The Red Hat security contact is <a href="mailto:secalert@redhat.com" class="mimir-link-warn" title="This content is not included in Mimir.">secalert@redhat.com</a>.
+More contact details at <a href="https://access.redhat.com/security/team/contact/" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/security/team/contact/</a>.
+</p>
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

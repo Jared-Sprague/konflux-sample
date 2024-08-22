@@ -1,0 +1,268 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Extended life phase ends",
+      "name": "Extended life phase",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/rhhiv",
+  "name": "Red Hat Hyperconverged Infrastructure for Virtualization",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "2f6b46b5-f69f-4c7b-9667-927026991110",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.8",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2020-08-04T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.7",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2020-02-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2020-08-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2021-08-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.6",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2019-04-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2020-02-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2020-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.5",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2018-12-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-04-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.0",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2017-06-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2017-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2018-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.1",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2017-12-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2018-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

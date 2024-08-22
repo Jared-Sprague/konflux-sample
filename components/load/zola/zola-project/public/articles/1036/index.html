@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How does the useradd command work on a system that has shadow passwords enabled?
+</title>
+        
+<meta name="documentKind" content="article" />
+<meta name="lastModifiedDate" content="2012-09-16T02:04:13.000Z" />
+<meta name="url_slug" content="1036" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=article">Articles</a>
+                                
+                                
+                                How does the useradd command work on a system that has shadow passwords enabled?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_article cirrus-content" id="main-content">
+    <h1>How does the useradd command work on a system that has shadow passwords enabled?</h1>
+
+    <div class="status-container">
+      Updated <time datetime="2012-09-16T02:04:13.000Z">15 Sept 2012</time>
+    </div>
+
+    <hr>
+    <p>The following steps illustrate what happens if the command '<code>useradd juan</code>' is issued on a system that has shadow passwords enabled:</p>
+<ol>
+<li>
+<p>A new line for <code>juan</code> is created in <code>/etc/passwd</code>. The line has the following characteristics:</p>
+<ul>
+<li>
+<p>It begins with the username <code>juan</code>.</p>
+</li>
+<li>
+<p>There is an <code>x</code> for the password field indicating that the system is using shadow passwords.</p>
+</li>
+<li>
+<p>A UID at or above 500 is created. (Under Red Hat Enterprise Linux, UIDs and GIDs below 500 are reserved for system use.)</p>
+</li>
+<li>
+<p>A GID at or above 500 is created.</p>
+</li>
+<li>
+<p>The optional GECOS information is left blank.</p>
+</li>
+<li>
+<p>The home directory for <code>juan</code> is set to <code>/home/juan/</code>.</p>
+</li>
+<li>
+<p>The default shell is set to <code>/bin/bash</code>.</p>
+</li>
+<li>
+<p>It begins with the username <code>juan</code>.</p>
+</li>
+<li>
+<p>Two exclamation points (!!) appear in the password field of the <code>/etc/shadow</code> file, which locks the account.<br />
+<strong>Note:</strong> If an encrypted password is passed using the <code>-p</code> flag, it is placed in the <code>/etc/shadow</code> file on the new line for the user.</p>
+</li>
+<li>
+<p>The password is set to never expire.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>A new line for <code>juan</code> is created in <code>/etc/shadow</code>. The line has the following characteristics:The line created in <code>/etc/group</code> has the following characteristics:</p>
+<ul>
+<li>
+<p>It begins with the group name <code>juan</code>.</p>
+</li>
+<li>
+<p>An <code>x</code> appears in the password field indicating that the system is using shadow group passwords.</p>
+</li>
+<li>
+<p>The GID matches the one listed for user <code>juan</code> in <code>/etc/passwd</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>A new line for a group named <code>juan</code> is created in <code>/etc/group</code>. A group with the same name as a user is called a <em>user private group.</em></p>
+<ul>
+<li>
+<p>It begins with the group name <code>juan.</code></p>
+</li>
+<li>
+<p>An exclamation point appears in the password field of the <code>/etc/gshadow</code> file, which locks the group.</p>
+</li>
+<li>
+<p>All other fields are blank.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>A new line for a group named juan is created in <code>/etc/gshadow</code>. The line has the following characteristics:</p>
+</li>
+<li>
+<p>A directory for user <code>juan</code> is created in the <code>/home/</code> directory. This directory is owned by user <code>juan</code> and group <code>juan</code>. However, it has read, write, and execute privileges <em>only</em> for the user <code>juan</code>. All other permissions are denied.</p>
+</li>
+<li>
+<p>The files within the <code>/etc/skel/</code> directory (which contain default user settings) are copied into the new <code>/home/juan/</code> directory.</p>
+</li>
+</ol>
+<p>At this point, a locked account called <code>juan</code> exists on the system. To activate it, the administrator must next assign a password to the account using the <code>passwd</code> command and, optionally, set password aging guidelines.</p>
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

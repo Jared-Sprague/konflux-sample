@@ -1,0 +1,44 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/node/5168201",
+  "name": "Red Hat Cost Management",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "38561c77-2ffe-4397-ab09-12b98a76b88d",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "Hosted (Saas)",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2020-05-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    }
+  ]
+}]}

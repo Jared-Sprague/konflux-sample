@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Where are system log files located?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:28:59.000Z" />
+<meta name="url_slug" content="1087" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                Where are system log files located?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>Where are system log files located?</h1>
+
+  
+    <span class="status unverified" title="This solution has not yet been verified to work for Red Hat customers.">
+        <pfe-icon icon="web-icon-alert-warning" style="--pfe-icon--color: #ec7a08; top: -0.1em"></pfe-icon>
+       Solution Unverified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:28:59.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 3, 4, 5, 6</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>Where are system log files located?</li>
+<li>Where are messages logged in RHEL?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<ul>
+<li>Most log files are located in the <code>/var/log/</code> directory, such as <code>/var/log/messages</code></li>
+<li>Some applications such as <code>httpd</code> and <code>samba</code> have a directory within <code>/var/log/</code> for their log files</li>
+</ul>
+<h2 id="diagnostic-steps">Diagnostic Steps</h2>
+<p>Notice the multiple files in the log file directory with numbers after them? These are created when the log files are rotated. Log files are rotated so their file sizes do not become too large. The <code>logrotate</code> package contains a cron task that automatically rotates log files according to the <code>/etc/logrotate.conf</code> configuration file and the configuration files in the <code>/etc/logrotate.d/</code> directory. By default, it is configured to rotate every week and keep four weeks worth of previous log files.</p>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

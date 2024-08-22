@@ -1,0 +1,120 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/node/7015012",
+  "name": "Red Hat Plug-ins for Backstage",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "bd4b56d2-d0ed-40eb-8864-e23b4d7aba1c",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.0",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-06-28T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-09-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "December, 2023",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "December, 2023",
+          "date_format": "string",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.0",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-09-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "December, 2023",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "December, 2023",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "December, 2023",
+          "date_format": "string",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    }
+  ]
+}]}

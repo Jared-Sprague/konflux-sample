@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I halt usage of the older software and begin using the new software after installing security errata?
+</title>
+        
+<meta name="documentKind" content="article" />
+<meta name="lastModifiedDate" content="2012-09-16T02:04:13.000Z" />
+<meta name="url_slug" content="1012" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=article">Articles</a>
+                                
+                                
+                                How do I halt usage of the older software and begin using the new software after installing security errata?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_article cirrus-content" id="main-content">
+    <h1>How do I halt usage of the older software and begin using the new software after installing security errata?</h1>
+
+    <div class="status-container">
+      Updated <time datetime="2012-09-16T02:04:13.000Z">15 Sept 2012</time>
+    </div>
+
+    <hr>
+    <p>After downloading and installing security errata via Red Hat Network or the Red Hat errata website, it is important to halt usage of the older software and begin using the new software. How this is done depends on the type of software that has been updated. The following list itemizes the general categories of software and provides instructions for using the updated versions after a package upgrade.</p>
+<p><strong>Note:</strong> In general, rebooting the system is the surest way to ensure that the latest version of a software package is used; however, this option is not always available to the system administrator.</p>
+<p><strong>Applications</strong></p>
+<p>User-space applications are any programs which can be initiated by a system user. Typically, such applications are used only when a user, script, or automated task utility launches them and do not persist for long periods of time.Once such a user-space application is updated, halt any instances of the application on the system and launch the program again to use the updated version.</p>
+<p><strong>Kernel</strong></p>
+<p>The kernel is the core software component for the Red Hat Enterprise Linux operating system. It manages access to memory, the processor, and peripherals as well as schedules all tasks.Because of its central role, the kernel cannot be restarted without also stopping the computer. Therefore, an updated version of the kernel cannot be used until the system is rebooted.</p>
+<p><strong>Shared Libraries</strong></p>
+<p>Shared libraries are units of code, such as glibc, which are used by a number of applications and services. Applications utilizing a shared library typically load the shared code when the application is initialized, so any applications using the updated library must be halted and relaunched.To determine which running applications link against a particular library, use the <code>lsof</code> command, as in the following example: <code>lsof /usr/lib/libwrap.so*</code>This command returns a list of all the running programs which use TCP wrappers for host access control. Therefore, any program listed must be halted and relaunched if the tcp_wrappers package is updated.</p>
+<p><strong>SysV Services</strong></p>
+<p>SysV services are persistent server programs launched during the boot process. Examples of SysV services include <code>sshd</code> , <code>vsftpd</code> , and <code>xinetd</code> .Because these programs usually persist in memory as long as the machine is booted, each updated SysV service must be halted and relaunched after the package is upgraded. This can be done using the Services Configuration Tool or by logging into a root shell prompt and issuing the /sbin/service command as in the following example:</p>
+<pre><code>&#x2F;sbin&#x2F;service &lt;service-name&gt; restart
+</code></pre>
+<p>In the previous example, replace &lt;service-name&gt; with the name of the service, such as <code>sshd</code> .Refer to the chapter titled <em>Controlling Access to Services</em> in the <em>Red Hat Enterprise Linux System Administration Guide</em> for more information regarding the <strong>Services Configuration Tool.</strong></p>
+<p><strong><code>
+xinetd<br>
+</code> Services</strong></p>
+<p>Services controlled by the <code>xinetd</code> super service only run when a there is an active connection. Examples of services controlled by <code>xinetd</code> include Telnet, IMAP, and POP3.Because new instances of these services are launched by <code>xinetd</code> each time a new request is received, connections that occur after an upgrade are handled by the updated software. However, if there are active connections at the time the <code>xinetd</code> controlled service is upgraded, they are serviced by the older version of the software.To kill off older instances of a particular <code>xinetd</code> controlled service, upgrade the package for the service then halt all processes currently running by first determining if the process is running using the <code>ps</code> command and then using the <code>kill or killall</code> command to halt current instances of the service.For example, if security errata <code>imap</code> packages are released, upgrade the packages, then type the following command as root into a shell prompt:</p>
+<pre><code>ps -aux | grep imap
+</code></pre>
+<p>This command returns all active IMAP sessions. Individual sessions can then be terminated by issuing the following command:</p>
+<pre><code>kill -9 &lt;PID&gt;
+</code></pre>
+<p>In the previous example, replace <code>&lt;PID&gt;</code> with the process identification number for an IMAP session.To kill all active IMAP sessions, issue the following command:</p>
+<pre><code>killall imapd
+</code></pre>
+<p>Refer to the chapter titled <em>TCP Wrappers and <code>xinetd</code></em> in the <em>Red Hat Enterprise Linux Reference Guide</em> for general information regarding <code>xinetd</code> .</p>
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

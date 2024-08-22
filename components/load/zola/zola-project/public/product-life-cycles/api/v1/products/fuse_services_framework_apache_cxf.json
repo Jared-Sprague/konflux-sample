@@ -1,0 +1,194 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/fusesource/",
+  "name": "Fuse Services Framework/Apache CXF",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "50a3c0d3-41ba-4184-b5ca-969c97e170c0",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.1",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2008-03-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2011-11-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2012-11-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2012-11-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.2",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2009-04-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2013-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.3",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2010-11-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2013-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.4",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2011-06-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2013-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

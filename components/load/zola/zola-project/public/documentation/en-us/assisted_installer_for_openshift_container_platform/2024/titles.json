@@ -1,0 +1,36 @@
+{
+  "version": {
+    "name": "2024",
+    "slug": "2024",
+    "url": "/documentation/en-us/assisted_installer_for_openshift_container_platform/2024"
+  },
+  "titles": [
+    {
+      "titleId": "bd35e61c-fa7a-4832-98e8-a4da3a19ea0a",
+      "modified": 1723751884,
+      "name": "Installing OpenShift Container Platform with the Assisted Installer",
+      "url": "/documentation/en-us/assisted_installer_for_openshift_container_platform/2024/html-single/installing_openshift_container_platform_with_the_assisted_installer/index",
+      "category": {
+        "weight": 50,
+        "name": "Installation Guide"
+      },
+      "description": "User Guide",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/assisted_installer_for_openshift_container_platform/2024/html-single/installing_openshift_container_platform_with_the_assisted_installer/index",
+        "slug": "installing_openshift_container_platform_with_the_assisted_installer",
+        "id": "710b10b6ae93ddffeebfa502013709d6.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2024/pdf/installing_openshift_container_platform_with_the_assisted_installer/Assisted_Installer_for_OpenShift_Container_Platform-2024-Installing_OpenShift_Container_Platform_with_the_Assisted_Installer-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/assisted_installer_for_openshift_container_platform/2024/pdf/installing_openshift_container_platform_with_the_assisted_installer/assisted_installer_for_openshift_container_platform-2024-installing_openshift_container_platform_with_the_assisted_installer-en-us.pdf",
+        "relative_path": "/documentation/en-us/assisted_installer_for_openshift_container_platform/2024/pdf/installing_openshift_container_platform_with_the_assisted_installer/assisted_installer_for_openshift_container_platform-2024-installing_openshift_container_platform_with_the_assisted_installer-en-us.pdf"
+      },
+      "toc": {
+        "id": "fc192e1ad5637d19b8c24254bf3be011.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

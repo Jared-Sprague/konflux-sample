@@ -1,0 +1,279 @@
+{
+  "version": {
+    "name": "1-latest",
+    "slug": "1-latest",
+    "url": "/documentation/en-us/cost_management_service/1-latest"
+  },
+  "titles": [
+    {
+      "titleId": "16193de9-31fa-429d-bac8-d9ef33433eeb",
+      "modified": 1722265158,
+      "name": "Getting started with cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index",
+      "category": {
+        "weight": 50,
+        "name": "Introduction to cost management"
+      },
+      "description": "Learn about and configure cost management",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index",
+        "slug": "getting_started_with_cost_management",
+        "id": "9bf8993cf76739e382d01b9f9e3457b0.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/getting_started_with_cost_management/Cost_Management_Service-1-latest-Getting_started_with_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/getting_started_with_cost_management/cost_management_service-1-latest-getting_started_with_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/getting_started_with_cost_management/cost_management_service-1-latest-getting_started_with_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "47f4941c6adcde9c8a3a6a992041536c.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "14a8517a-0f5c-4d2f-a1de-5cd92f387cc9",
+      "modified": 1722963924,
+      "name": "What’s new in cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/whats_new_in_cost_management/index",
+      "category": {
+        "weight": 50,
+        "name": "Introduction to cost management"
+      },
+      "description": "Learn about new features and updates",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/whats_new_in_cost_management/index",
+        "slug": "whats_new_in_cost_management",
+        "id": "d094b9876b5129ee90593b17cef4e9bb.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/whats_new_in_cost_management/Cost_Management_Service-1-latest-Whats_new_in_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/whats_new_in_cost_management/cost_management_service-1-latest-whats_new_in_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/whats_new_in_cost_management/cost_management_service-1-latest-whats_new_in_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "a935081be0f1ac74b5c3ca2b29b58423.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "98dab1cc-72c7-41ce-945f-594faba4ea0e",
+      "modified": 1724275887,
+      "name": "Integrating OpenShift Container Platform data into cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index",
+      "category": {
+        "weight": 51,
+        "name": "Setting up integrations"
+      },
+      "description": "Learn how to add and configure your OpenShift Container Platform integrations",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index",
+        "slug": "integrating_openshift_container_platform_data_into_cost_management",
+        "id": "fed4ccdad891491508b6e643893ce54d.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/integrating_openshift_container_platform_data_into_cost_management/Cost_Management_Service-1-latest-Integrating_OpenShift_Container_Platform_data_into_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/integrating_openshift_container_platform_data_into_cost_management/cost_management_service-1-latest-integrating_openshift_container_platform_data_into_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/integrating_openshift_container_platform_data_into_cost_management/cost_management_service-1-latest-integrating_openshift_container_platform_data_into_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "1f33b2587889778da21480b1efed1590.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "15e9e726-9f0a-4e15-8c07-9b21f232c930",
+      "modified": 1722545632,
+      "name": "Integrating Amazon Web Services (AWS) data into cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index",
+      "category": {
+        "weight": 51,
+        "name": "Setting up integrations"
+      },
+      "description": "Learn how to add your AWS integrations and RHEL metering",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index",
+        "slug": "integrating_amazon_web_services_aws_data_into_cost_management",
+        "id": "359720fa53391bbfab96d979dacfbf54.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/integrating_amazon_web_services_aws_data_into_cost_management/Cost_Management_Service-1-latest-Integrating_Amazon_Web_Services_AWS_data_into_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/integrating_amazon_web_services_aws_data_into_cost_management/cost_management_service-1-latest-integrating_amazon_web_services_aws_data_into_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/integrating_amazon_web_services_aws_data_into_cost_management/cost_management_service-1-latest-integrating_amazon_web_services_aws_data_into_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "41347f9caf256cb174d75765e52abf73.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "969e41e9-3109-4740-b9fe-8fbf297a00c8",
+      "modified": 1722545630,
+      "name": "Integrating Microsoft Azure data into cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_microsoft_azure_data_into_cost_management/index",
+      "category": {
+        "weight": 51,
+        "name": "Setting up integrations"
+      },
+      "description": "Learn how to add your Microsoft Azure integration and RHEL metering",
+      "weight": 52,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_microsoft_azure_data_into_cost_management/index",
+        "slug": "integrating_microsoft_azure_data_into_cost_management",
+        "id": "90f3173e3bb9533af726453294380e58.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/integrating_microsoft_azure_data_into_cost_management/Cost_Management_Service-1-latest-Integrating_Microsoft_Azure_data_into_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/integrating_microsoft_azure_data_into_cost_management/cost_management_service-1-latest-integrating_microsoft_azure_data_into_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/integrating_microsoft_azure_data_into_cost_management/cost_management_service-1-latest-integrating_microsoft_azure_data_into_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "97a5fd431f6a93ca031ed7512d39d78c.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "96ce51c8-b444-4c66-9cf4-7ec9ded61594",
+      "modified": 1722024251,
+      "name": "Integrating Google Cloud data into cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_google_cloud_data_into_cost_management/index",
+      "category": {
+        "weight": 51,
+        "name": "Setting up integrations"
+      },
+      "description": "Learn how to add and configure your Google Cloud integration",
+      "weight": 53,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_google_cloud_data_into_cost_management/index",
+        "slug": "integrating_google_cloud_data_into_cost_management",
+        "id": "547ab39b932a1cfa9a0a0918b8f24ec4.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/integrating_google_cloud_data_into_cost_management/Cost_Management_Service-1-latest-Integrating_Google_Cloud_data_into_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/integrating_google_cloud_data_into_cost_management/cost_management_service-1-latest-integrating_google_cloud_data_into_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/integrating_google_cloud_data_into_cost_management/cost_management_service-1-latest-integrating_google_cloud_data_into_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "fd9d1542f68a8c36cee526d68aeab5e9.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "3ace60f5-449f-4ed9-a3e3-2ef9f38aabfb",
+      "modified": 1722024288,
+      "name": "Integrating Oracle Cloud data into cost management",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_oracle_cloud_data_into_cost_management/index",
+      "category": {
+        "weight": 51,
+        "name": "Setting up integrations"
+      },
+      "description": "Learn how to add and configure your Oracle Cloud integration",
+      "weight": 54,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/integrating_oracle_cloud_data_into_cost_management/index",
+        "slug": "integrating_oracle_cloud_data_into_cost_management",
+        "id": "ad17e070f4d1e0fa108d7983148697ab.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/integrating_oracle_cloud_data_into_cost_management/Cost_Management_Service-1-latest-Integrating_Oracle_Cloud_data_into_cost_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/integrating_oracle_cloud_data_into_cost_management/cost_management_service-1-latest-integrating_oracle_cloud_data_into_cost_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/integrating_oracle_cloud_data_into_cost_management/cost_management_service-1-latest-integrating_oracle_cloud_data_into_cost_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "139e9c852ba67ad7d3fc968a8a097e84.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "141fb815-2dcc-4550-af2b-7b6f1f5109ca",
+      "modified": 1722024300,
+      "name": "Limiting access to cost management resources",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index",
+      "category": {
+        "weight": 51,
+        "name": "Setting up integrations"
+      },
+      "description": "Learn how to secure your cost information",
+      "weight": 55,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index",
+        "slug": "limiting_access_to_cost_management_resources",
+        "id": "2f8046e713463a38821ac100ec317119.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/limiting_access_to_cost_management_resources/Cost_Management_Service-1-latest-Limiting_access_to_cost_management_resources-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/limiting_access_to_cost_management_resources/cost_management_service-1-latest-limiting_access_to_cost_management_resources-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/limiting_access_to_cost_management_resources/cost_management_service-1-latest-limiting_access_to_cost_management_resources-en-us.pdf"
+      },
+      "toc": {
+        "id": "6146a8f08f036d7a7621cfa2b1b3acf7.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "f1823e73-de81-4d61-9ba8-2dc6cf3dab06",
+      "modified": 1724095277,
+      "name": "Using cost models",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index",
+      "category": {
+        "weight": 52,
+        "name": "Configuring cost models and tagging"
+      },
+      "description": "Configuring cost models to reflect your cloud costs",
+      "weight": 53,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index",
+        "slug": "using_cost_models",
+        "id": "e2e20b424801b5042e5ec713d6183b8a.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/using_cost_models/Cost_Management_Service-1-latest-Using_cost_models-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/using_cost_models/cost_management_service-1-latest-using_cost_models-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/using_cost_models/cost_management_service-1-latest-using_cost_models-en-us.pdf"
+      },
+      "toc": {
+        "id": "d095c0a376aa00252d545cec29faee09.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "646703aa-5e38-4027-bc65-0eaedd940efb",
+      "modified": 1724275890,
+      "name": "Managing cost data using tagging",
+      "url": "/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index",
+      "category": {
+        "weight": 52,
+        "name": "Configuring cost models and tagging"
+      },
+      "description": "Organize resources and allocate costs with tags",
+      "weight": 54,
+      "singlePage": {
+        "url": "/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index",
+        "slug": "managing_cost_data_using_tagging",
+        "id": "732acc39f8f74a894e1f161878ff189b.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/pdf/managing_cost_data_using_tagging/Cost_Management_Service-1-latest-Managing_cost_data_using_tagging-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/cost_management_service/1-latest/pdf/managing_cost_data_using_tagging/cost_management_service-1-latest-managing_cost_data_using_tagging-en-us.pdf",
+        "relative_path": "/documentation/en-us/cost_management_service/1-latest/pdf/managing_cost_data_using_tagging/cost_management_service-1-latest-managing_cost_data_using_tagging-en-us.pdf"
+      },
+      "toc": {
+        "id": "204ae66c593a28766d0f8cd4fbe3a5b2.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

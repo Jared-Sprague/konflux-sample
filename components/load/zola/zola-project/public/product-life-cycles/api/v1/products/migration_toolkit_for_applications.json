@@ -1,0 +1,198 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "Tier",
+  "footnote": "",
+  "former_names": [
+    "Red Hat Migration Toolkit for Applications"
+  ],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/migrationtoolkits",
+  "name": "Migration Toolkit for Applications",
+  "package": "mta-operator",
+  "product_extra_headers": [],
+  "release_cadence": "4 months",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "e4870ea0-5a9e-4f40-b4ed-52a0b0dfb608",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "7.0",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-01-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release of Migration Toolkit for Applications",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release of Migration Toolkit for Applications + 3 months",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "6.2",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-08-22T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-01-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-04-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "6.1",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-04-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-08-22T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-22T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "6.0",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-11-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-04-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-07-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "5.1",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2020-12-10T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "\t Nov 17, 2022",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

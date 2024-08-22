@@ -1,0 +1,463 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full Support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "Tier",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/rhacs",
+  "name": "Red Hat Advanced Cluster Security for Kubernetes",
+  "package": "rhacs-operator",
+  "product_extra_headers": [],
+  "release_cadence": "4 months",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "e8a69345-eadb-4406-b29d-fcd0b3de4bee",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.5",
+      "openshift_compatibility": "4.16, 4.15, 4.14, 4.13, 4.12",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-07-24T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-01-24T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-05-24T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Agnostic",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.4",
+      "openshift_compatibility": "4.16, 4.15, 4.14, 4.13, 4.12",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-03-28T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-09-28T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-01-28T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Agnostic",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.3",
+      "openshift_compatibility": "4.15, 4.14, 4.13, 4.12, 4.11",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-11-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-06-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.2",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-09-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-03-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.1",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-06-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-12-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.0",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-05-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.74",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-02-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.73",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-12-06T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-06-07T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.72",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-09-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-03-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.71",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-07-25T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-01-25T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.70",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-07-04T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-12-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.69",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-03-21T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-09-21T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.68",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-02-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-08-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.67",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2021-12-16T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-07-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

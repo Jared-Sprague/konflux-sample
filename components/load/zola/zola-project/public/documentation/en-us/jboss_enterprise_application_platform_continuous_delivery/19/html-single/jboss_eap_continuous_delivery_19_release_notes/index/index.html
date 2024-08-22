@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+JBoss EAP Continuous Delivery 19 Release Notes - JBoss Enterprise Application Platform Continuous Delivery 19
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Continuous Delivery" />
+<meta name="documentation_version" content="19" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2020-04-30T11:47:56.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/">JBoss Enterprise Application Platform Continuous Delivery</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19/">19</a>
+                                
+                                
+                                JBoss EAP Continuous Delivery 19 Release Notes
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">JBoss EAP Continuous Delivery 19 Release Notes</a>
+                    </li><li>
+                        <a href="#about-cd_default">
+                            1. About JBoss EAP Continuous Delivery 19
+                        </a><ol>
+                <li>
+                        <a href="#cd-release-limitations_default">
+                            1.1. Differences Between JBoss EAP and JBoss EAP Continuous Delivery
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#new_features_and_enhancements">
+                            2. New Features and Enhancements
+                        </a><ol>
+                <li>
+                        <a href="#security_default">
+                            2.1. Security
+                        </a>
+                    </li><li>
+                        <a href="#server-management_default">
+                            2.2. Server Management
+                        </a>
+                    </li><li>
+                        <a href="#management-cli_default">
+                            2.3. Management CLI
+                        </a>
+                    </li><li>
+                        <a href="#web-services_default">
+                            2.4. Web Services
+                        </a>
+                    </li><li>
+                        <a href="#microprofile_default">
+                            2.5. Eclipse MicroProfile
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#unsupported_and_deprecated_functionality">
+                            3. Unsupported and Deprecated Functionality
+                        </a><ol>
+                <li>
+                        <a href="#unsupported-features_default">
+                            3.1. Unsupported Features
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#resolved-issues_default">
+                            4. Resolved Issues
+                        </a>
+                    </li><li>
+                        <a href="#fixed-cves_default">
+                            5. Fixed CVEs
+                        </a>
+                    </li><li>
+                        <a href="#known-issues_default">
+                            6. Known Issues
+                        </a>
+                    </li><li>
+                        <a href="#idm140172960851840">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--jboss_eap_continuous_delivery_19_release_notes">
+            <h1 class="title">JBoss EAP Continuous Delivery 19 Release Notes</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140172960960160"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Continuous Delivery</span> <span class="productnumber">19</span></div><div><h2 class="subtitle">For Use with JBoss Enterprise Application Platform Continuous Delivery 19</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm140172960851840">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				These release notes contain important information related to JBoss Enterprise Application Platform continuous delivery release 19, which is available as a Technology Preview release in the cloud only.
+			</div></div></div></div><hr/></div><section class="chapter" id="about-cd_default"><div class="titlepage"><div><div><h1 class="title">Chapter 1. About JBoss EAP Continuous Delivery 19</h1></div></div></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+				The JBoss Enterprise Application Platform continuous delivery stream (JBoss EAP CD) has been provided as a Technology Preview offering for the entirety of its <a class="link mimir-link-warn" href="https://access.redhat.com/announcements/3411471" title="This content is not included in Mimir.">availability</a>. Based upon user feedback, and in accordance with the terms of the <a class="link mimir-link-warn" href="https://access.redhat.com/support/offerings/techpreview" title="This content is not included in Mimir.">Technology Preview Features Support Scope</a>, Red Hat has decided to deprecate the JBoss EAP CD stream.
+			</p></div></div><p>
+			The JBoss Enterprise Application Platform continuous delivery (JBoss EAP CD) release 19 is a Technology Preview release available in the cloud only. This JBoss EAP CD release introduces a new delivery stream of JBoss EAP. For JBoss EAP CD19, only release note documentation is provided. Additional documentation will be provided in following releases.
+		</p><p>
+			The purpose of this new delivery model is to quickly introduce new features ahead of the traditional JBoss EAP GA release. The JBoss EAP CD releases are only available in the OpenShift image format and can be accessed from the Red Hat Container Catalog.
+		</p><p>
+			Traditional JBoss EAP GA releases, the next being JBoss EAP 7.4, are based on an aggregate of JBoss EAP CD releases. They are available through the normal distribution methods.
+		</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+				This continuous delivery release for JBoss EAP is provided as Technology Preview only. Technology Preview features are not supported with Red Hat production service level agreements (SLAs), might not be functionally complete, and Red Hat does not recommend to use them for production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.
+			</p><p>
+				See <a class="link mimir-link-warn" href="https://access.redhat.com/support/offerings/techpreview" title="This content is not included in Mimir.">Technology Preview Features Support Scope</a> on the Red Hat Customer Portal for information about the support scope for Technology Preview features.
+			</p></div></div><section class="section" id="cd-release-limitations_default"><div class="titlepage"><div><div><h2 class="title">1.1. Differences Between JBoss EAP and JBoss EAP Continuous Delivery</h2></div></div></div><p>
+				There are notable differences between the JBoss EAP product and the continuous delivery release for JBoss EAP.
+			</p><div class="table" id="idm140172959110960"><p class="title"><strong>Table 1.1. Differences between JBoss EAP and JBoss EAP Continuous Delivery</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 25%; " class="col_1"><!--Empty--></col><col style="width: 25%; " class="col_2"><!--Empty--></col><col style="width: 50%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140172960885536" scope="col">JBoss EAP Feature</th><th align="left" valign="top" id="idm140172960884448" scope="col">Status in JBoss EAP Continuous Delivery</th><th align="left" valign="top" id="idm140172960883344" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140172960885536"> <p>
+								JBoss EAP management console
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960884448"> <p>
+								Not included
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960883344"> <p>
+								The JBoss EAP management console is not included in this release of JBoss EAP Continuous Delivery.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140172960885536"> <p>
+								JBoss EAP management CLI
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960884448"> <p>
+								Not recommended
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960883344"> <p>
+								The JBoss EAP management CLI is not recommended for use with JBoss EAP running in a containerized environment. Any configuration changes made using the management CLI in a running container will be lost when the container restarts.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140172960885536"> <p>
+								Managed domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960884448"> <p>
+								Not supported
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960883344"> </td></tr><tr><td align="left" valign="top" headers="idm140172960885536"> <p>
+								Default root page
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960884448"> <p>
+								Disabled
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960883344"> <p>
+								The default root page is disabled, but you can deploy your own application to the root context as <code class="literal">ROOT.war</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140172960885536"> <p>
+								Remote messaging
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960884448"> <p>
+								Supported
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960883344"> <p>
+								Red Hat AMQ for inter-pod and remote messaging is supported. JBoss EAP CD releases only support client messaging, and Red Hat AMQ provides the messaging broker.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140172960885536"> <p>
+								Transaction recovery
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960884448"> <p>
+								Partially supported
+							</p>
+							 </td><td align="left" valign="top" headers="idm140172960883344"> </td></tr></tbody></table></div></div></section></section><section class="chapter" id="new_features_and_enhancements"><div class="titlepage"><div><div><h1 class="title">Chapter 2. New Features and Enhancements</h1></div></div></div><section class="section" id="security_default"><div class="titlepage"><div><div><h2 class="title">2.1. Security</h2></div></div></div><h4 id="ability-use-tls-protocol">Using TLS Protocol Version 1.3 with JDK 11</h4><p>
+				Elytron now provides the ability to use Transport Layer Security (TLS) Protocol version 1.3 for JBoss EAP running against JDK 11.
+			</p><p>
+				TLS 1.3 is disabled by default. You can enable TLS 1.3 by configuring the new <code class="literal">cipher-suite-names</code> attribute in the SSL Context resource definition in the <code class="literal">elytron</code> subsystem.
+			</p><p>
+				Compared with TLS 1.2, you might experience reduced performance when running TLS 1.3 with JDK 11. Diminished performance might occur when a very large number of TLS 1.3 requests are being made. A system upgrade to a newer JDK version can improve performance. Test your setup with TLS 1.3 for performance degradation before enabling it in production.
+			</p></section><section class="section" id="server-management_default"><div class="titlepage"><div><div><h2 class="title">2.2. Server Management</h2></div></div></div><h4 id="use_a_global_directory_to_distribute_shared_libraries_across_deployments">Use a Global Directory to Distribute Shared Libraries Across Deployments</h4><p>
+				In JBoss EAP 7.3 and earlier versions, you could not create and configure a global directory to distribute shared libraries across deployments running on a server. These capabilities have been added to the <code class="literal">ee</code> subsystem.
+			</p><p>
+				A global directory offers a better alternative to the global module approach. For example, if you want to change the name of a library listed in a global module, you must remove the global module, change the library’s name, and then add the library to a new global module.  If you change the name of a library that is listed in the global directory, you only need to restart the server to make the library name change available for all deployments.
+			</p><p>
+				Using a global directory is also a better solution if you want to share multiple libraries across deployed applications.
+			</p></section><section class="section" id="management-cli_default"><div class="titlepage"><div><div><h2 class="title">2.3. Management CLI</h2></div></div></div><h4 id="runtime-statistics-managed-executor-service">Exposing Runtime Statistics for Managed Executor Services</h4><p>
+				In the previous JBoss EAP release, runtime statistics were not available for managed executor services in the <code class="literal">ee</code> subsystem.
+			</p><p>
+				You can now monitor the performance of managed executor services by viewing the runtime statistics generated with the new management CLI attributes. The following management CLI attributes have been added:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">active-thread-count</code>: the approximate number of threads that are actively executing tasks
+					</li><li class="listitem">
+						<code class="literal">completed-task-count</code>: the approximate total number of tasks that have completed execution
+					</li><li class="listitem">
+						<code class="literal">hung-thread-count</code>: the number of executor threads that are hung
+					</li><li class="listitem">
+						<code class="literal">max-thread-count</code>: the largest number of executor threads
+					</li><li class="listitem">
+						<code class="literal">current-queue-size</code>: the current size of the executor’s task queue
+					</li><li class="listitem">
+						<code class="literal">task-count</code>: the approximate total number of tasks that have been submitted for execution
+					</li><li class="listitem">
+						<code class="literal">thread-count</code>: the current number of executor threads
+					</li></ul></div><h4 id="property-replacement-permissions-files">Using Property Replacement for Permissions Files</h4><p>
+				Users upgrading from JBoss EAP 6 to JBoss EAP 7 were unable to migrate file permissions in the Java policy file to the <code class="literal">permissions.xml</code> or <code class="literal">jboss-permissions.xml</code> files. It was not possible to use property replacement to migrate file permissions in the <code class="literal">permissions.xml</code> and <code class="literal">jboss-permissions.xml</code> files.
+			</p><p>
+				You can now use property replacement for the <code class="literal">permissions.xml</code> and <code class="literal">jboss-permissions.xml</code> files.
+			</p><p>
+				The property replacement for <code class="literal">jboss-permissions.xml</code> and <code class="literal">permissions.xml</code> files can be enabled or disabled using the <code class="literal">jboss-descriptor-property-replacement</code> and <code class="literal">spec-descriptor-property-replacement</code> attributes in the <code class="literal">ee</code> subsystem.
+			</p><h4 id="configuring_resteasy_parameters">Configuring RESTEasy Parameters</h4><p>
+				You can now use the JBoss EAP management CLI to change the settings for RESTEasy parameters. A global change applies the updated settings to new deployments as <code class="literal">web.xml</code> context parameters.
+			</p><p>
+				You can modify the settings of a parameter by using the <code class="literal">:write-attribute</code> operation with the <code class="literal">/subsystem=jaxrs</code> resource in the management CLI. For example:
+			</p><pre class="screen">/subsystem=jaxrs:write-attribute(name=resteasy-add-charset, value=false)</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					When you change the settings of a parameter, the updated settings only apply to new deployments. Restart the server to apply the new settings to current deployments.
+				</p></div></div><h4 id="configuring_resteasy_providers">Configuring RESTEasy Providers</h4><p>
+				In RESTEasy, certain built-in providers are enabled by default. You can now use the new RESTEasy parameter <code class="literal">resteasy.disable.providers</code> in the JBoss EAP management CLI to disable specific built-in providers.
+			</p><p>
+				The following example demonstrates how to disable the built-in provider <code class="literal">FileProvider</code>:
+			</p><pre class="screen">/subsystem=jaxrs:write-attribute(name=resteasy-disable-providers, value=[org.jboss.resteasy.plugins.providers.FileProvider])</pre><p>
+				You can use the <code class="literal">resteasy.disable.providers</code> parameter with the pre-existing parameter <code class="literal">resteasy.use.builtin.providers</code> to customize a specific provider configuration that applies to all new deployments.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					When you change the settings of the <code class="literal">resteasy.disable.providers</code> parameter, the updated settings only apply to new deployments. Restart the server to apply the new settings to current deployments.
+				</p></div></div></section><section class="section" id="web-services_default"><div class="titlepage"><div><div><h2 class="title">2.4. Web Services</h2></div></div></div><h4 id="integration-elytron-webservices-clients">Integrating Elytron with Web Services Clients</h4><p>
+				You can now configure web services clients to use Elytron automatically to obtain the credentials, the authentication method, and the SSL context.
+			</p><p>
+				If you use the web services client and assign configuration properties to it using the JBossWS API, you are not prompted for credentials or required to accept server certificates if the valid configuration is in the Elytron client. The following authentication methods are supported:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Username Token Profile authentication
+					</li><li class="listitem">
+						HTTP Basic authentication
+					</li><li class="listitem">
+						TLS protocol
+					</li></ul></div><p>
+				The configuration is specified by the <code class="literal">&lt;webservices/&gt;</code> element in <code class="literal">wildfly-config.xml</code>.
+			</p></section><section class="section" id="microprofile_default"><div class="titlepage"><div><div><h2 class="title">2.5. Eclipse MicroProfile</h2></div></div></div><h4 id="microprofile-fault-tolerance">Support for Eclipse MicroProfile Fault Tolerance 2.1</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-fault-tolerance" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile Fault Tolerance</a> 2.1 specification.
+			</p><p>
+				The Eclipse MicroProfile Fault Tolerance 2.1 specification defines the following patterns for handling a failure:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Timeout
+					</li><li class="listitem">
+						Fallback
+					</li><li class="listitem">
+						Retry
+					</li><li class="listitem">
+						CircuitBreaker
+					</li><li class="listitem">
+						Bulkhead
+					</li></ul></div><p>
+				A new subsystem, <code class="literal">microprofile-fault-tolerance-smallrye</code>, provides the Eclipse MicroProfile Fault Tolerance 2.1 integration in JBoss EAP.
+			</p><h4 id="microprofile-jwt">Support for Eclipse MicroProfile JWT RBAC 1.1</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-jwt-auth" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile JWT RBAC</a> 1.1 specification.
+			</p><p>
+				With Eclipse MicroProfile JWT RBAC, you can authenticate an identity using a cryptographically-signed JSON Web Token (JWT) token that is received in an HTTP request. The claims of the authenticated identity are verified using role-based access control (RBAC) for accessing microservice endpoints.
+			</p><p>
+				Eclipse MicroProfile JWT RBAC provides the following benefits:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Eclipse MicroProfile JWT RBAC requires only minimal configuration within a deployment for establishing an identity.
+					</li><li class="listitem">
+						Eclipse MicroProfile JWT RBAC does not rely on access to external repositories of identities, such as databases or directory servers.
+					</li></ul></div><p>
+				A new subsystem, <code class="literal">microprofile-jwt-smallrye</code>, provides the Eclipse MicroProfile JWT RBAC integration in JBoss EAP.
+			</p><h4 id="microprofile-open-api">Support for Eclipse MicroProfile OpenAPI 1.1</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-open-api" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile OpenAPI</a> 1.1 specification.
+			</p><p>
+				The Eclipse MicroProfile OpenAPI specification defines an HTTP GET <code class="literal">/openapi</code> endpoint that returns an OpenAPI v3 compliant document. This document describes the RESTful services provided by an application. The supported document formats are YAML and JSON.
+			</p><p>
+				A new subsystem, <code class="literal">microprofile-openapi-smallrye</code>, provides the Eclipse MicroProfile OpenAPI integration in JBoss EAP.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Currently, the <code class="literal">/openapi</code> endpoint for a virtual host can only document a single JAX-RS deployment. To use OpenAPI with multiple JAX-RS deployments that are registered with different context paths on the same virtual host, each deployment must use a distinct endpoint path.
+				</p></div></div><h4 id="microprofile-config">Support for Eclipse MicroProfile Config 1.4</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-config" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile Config</a> 1.4 specification.
+			</p><p>
+				The <code class="literal">microprofile-config-smallrye</code> subsystem has been updated to integrate Eclipse MicroProfile version 1.4.
+			</p><h4 id="microprofile-health">Support for Eclipse MicroProfile Health 2.2</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-health" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile Health</a> 2.2 specification.
+			</p><p>
+				The <code class="literal">microprofile-health-smallrye</code> subsystem has been updated to integrate Eclipse MicroProfile Health 2.2 in JBoss EAP.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Health checks in subdeployments of an Enterprise Application Archive (EAR) deployment are not supported.
+				</p></div></div><h4 id="microprofile-metrics">Support for Eclipse MicroProfile Metrics 2.3</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-metrics" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile Metrics</a> 2.3 specification.
+			</p><p>
+				The <code class="literal">microprofile-metrics-smallrye</code> subsystem has been updated to integrate Eclipse MicroProfile Metrics 2.3. The updated subsystem provides a new optional base metric <code class="literal">ProcessCpuTime</code>.
+			</p><h4 id="microprofile-opentracing">Eclipse MicroProfile OpenTracing 1.3</h4><p>
+				JBoss EAP supports the <a class="link mimir-link-warn" href="https://microprofile.io/project/eclipse/microprofile-opentracing" title="Mimir does not include content from: microprofile.io">Eclipse MicroProfile OpenTracing</a> 1.3 specification.
+			</p><p>
+				The <code class="literal">microprofile-opentracing-smallrye</code> subsystem has been updated to provide the Eclipse MicroProfile OpenTracing 1.3 integration in JBoss EAP.
+			</p><p>
+				The updated <code class="literal">microprofile-opentracing-smallrye</code> subsystem includes support for tracing JAX-RS and CDI. The subsystem also allows configuration of <a class="link mimir-link-warn" href="https://github.com/jaegertracing/jaeger-client-java" title="Mimir does not include content from: github.com">Jaeger Java Client</a>.
+			</p><h4 id="support-for-mprestclient-1.4">Support for Eclipse MicroProfile REST Client 1.4</h4><p>
+				JBoss EAP now supports the <a class="link mimir-link-warn" href="https://download.eclipse.org/microprofile/microprofile-rest-client-1.4.0/apidocs/" title="Mimir does not include content from: download.eclipse.org">MicroProfile REST Client 1.4 specification</a>. MicroProfile REST Client 1.4 adds the Contexts and Dependency Injection (CDI) capability to the class <code class="literal">org.eclipse.microprofile.rest.client.ext.ClientHeadersFactory</code>.
+			</p></section></section><section class="chapter" id="unsupported_and_deprecated_functionality"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Unsupported and Deprecated Functionality</h1></div></div></div><section class="section" id="unsupported-features_default"><div class="titlepage"><div><div><h2 class="title">3.1. Unsupported Features</h2></div></div></div><p>
+				Support for some technologies are removed due to the high maintenance cost, low community interest, and better alternative solutions. The following features are not supported in this continuous delivery release for JBoss EAP.
+			</p><h4 id="resteasy_parameters">RESTEasy Parameters</h4><p>
+				RESTEasy provides a Servlet 3.0 <code class="literal">ServletContainerInitializer</code> integration interface that performs an automatic scan of resources and providers for a servlet. Containers can use this integration interface to start an application. Therefore, use of the following RESTEasy parameters is no longer supported:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						resteasy.scan
+					</li><li class="listitem">
+						resteasy.scan.providers
+					</li><li class="listitem">
+						resteasy.scan.resources
+					</li></ul></div></section></section><section class="chapter" id="resolved-issues_default"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Resolved Issues</h1></div></div></div><p>
+			See <a class="link mimir-link-warn" href="https://issues.redhat.com/issues/?filter=12345381" title="Mimir does not include content from: issues.redhat.com">Resolved Issues for JBoss EAP CD 19</a> to view the list of issues that have been resolved for this release.
+		</p></section><section class="chapter" id="fixed-cves_default"><div class="titlepage"><div><div><h1 class="title">Chapter 5. Fixed CVEs</h1></div></div></div><p>
+			JBoss EAP Continuous Delivery 19 includes fixes for the following security-related issues:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-14540" title="This content is not included in Mimir.">CVE-2019-14540</a>: REST: jackson-databind: Polymorphic typing issue related to com.zaxxer.hikari.HikariConfig.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-16942" title="This content is not included in Mimir.">CVE-2019-16942</a>: REST: jackson-databind: Serialization gadgets in classes of the commons-dbcp package.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-10086" title="This content is not included in Mimir.">CVE-2019-10086</a>: Server: commons-beanutils: apache-commons-beanutils: does not suppress the class property in PropertyUtilsBean by default.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-16943" title="This content is not included in Mimir.">CVE-2019-16943</a>: REST: jackson-databind: Serialization gadgets in classes of the p6spy package.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-20445" title="This content is not included in Mimir.">CVE-2019-20445</a>: JMS: netty: <code class="literal">HttpObjectDecoder.java</code> allows the content-length header to be accompanied by a second content-length header.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-17531" title="This content is not included in Mimir.">CVE-2019-17531</a>: REST: jackson-databind: Polymorphic typing issue when enabling default typing for an externally exposed JSON endpoint and having <code class="literal">apache-log4j-extra</code> in the classpath leads to code execution.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-20444" title="This content is not included in Mimir.">CVE-2019-20444</a>: JMS: netty: HTTP request smuggling.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-14888" title="This content is not included in Mimir.">CVE-2019-14888</a>: Web (Undertow): undertow: Possible Denial Of Service (DOS) in Undertow HTTP server listening on HTTPS.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-12423" title="This content is not included in Mimir.">CVE-2019-12423</a>: Web Services: cxf-core: cxf: OpenId Connect token service does not properly validate the clientId.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-14887" title="This content is not included in Mimir.">CVE-2019-14887</a>: Management: wildfly: The <code class="literal">enabled-protocols</code> value in legacy security is not respected if OpenSSL security provider is in use.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-0210" title="This content is not included in Mimir.">CVE-2019-0210</a>: MP OpenTracing: libthrift: thrift: Out-of-bounds read related to <code class="literal">TJSONProtocol</code> or <code class="literal">TSimpleJSONProtocol</code>.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-16869" title="This content is not included in Mimir.">CVE-2019-16869</a>: JMS: netty: HTTP request smuggling by mishandled whitespace before the colon in HTTP headers.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2020-1732" title="This content is not included in Mimir.">CVE-2020-1732</a>: Security: wildfly: Soteria: Security identity corruption across concurrent threads.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2020-7238" title="This content is not included in Mimir.">CVE-2020-7238</a>: JMS: netty: HTTP request smuggling due to Transfer-Encoding whitespace mishandling.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2020-1695" title="This content is not included in Mimir.">CVE-2020-1695</a>: REST: resteasy-jaxrs: resteasy: Improper validation of response header in <code class="literal">MediaTypeHeaderDelegate.java</code> class.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-14893" title="This content is not included in Mimir.">CVE-2019-14893</a>: REST: jackson-databind: Serialization gadgets in classes of the xalan package.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-16335" title="This content is not included in Mimir.">CVE-2019-16335</a>: REST: jackson-databind: Polymorphic typing issue related to <code class="literal">com.zaxxer.hikari.HikariDataSource</code>.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-14892" title="This content is not included in Mimir.">CVE-2019-14892</a>: REST: jackson-databind: Serialization gadgets in classes of the commons-configuration package.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-10174" title="This content is not included in Mimir.">CVE-2019-10174</a>: Clustering: infinispan-core: infinispan: The <code class="literal">invokeAccessibly</code> method from the <code class="literal">ReflectionUtil</code> class allows to invoke private methods.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-17267" title="This content is not included in Mimir.">CVE-2019-17267</a>: REST: jackson-databind: Serialization gadgets in classes of the ehcache package.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2020-10688" title="This content is not included in Mimir.">CVE-2020-10688</a>: REST: resteasy: RESTEASY003870 exception in RESTEasy can lead to a reflected XSS attack.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-12419" title="This content is not included in Mimir.">CVE-2019-12419</a>: Web Services: xf-core: cxf: OpenId Connect token service does not properly validate the clientId.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2020-1745" title="This content is not included in Mimir.">CVE-2020-1745</a>: Web (Undertow): undertow: AJP File Read/Inclusion Vulnerability.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-0205" title="This content is not included in Mimir.">CVE-2019-0205</a>: MP OpenTracing: libthrift: thrift: Endless loop when fed with specific input data.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/security/cve/cve-2019-17573" title="This content is not included in Mimir.">CVE-2019-17573</a>: Web Services: cxf: Reflected XSS in the services listing page.
+				</li></ul></div></section><section class="chapter" id="known-issues_default"><div class="titlepage"><div><div><h1 class="title">Chapter 6. Known Issues</h1></div></div></div><p>
+			See <a class="link mimir-link-warn" href="https://issues.redhat.com/issues/?filter=12345380" title="Mimir does not include content from: issues.redhat.com">Known Issues for JBoss EAP CD 19</a> to view the list of known issues for this release.
+		</p><p>
+			<br/><br/><br/><br/>
+		</p><p>
+			<span class="emphasis"><em><span class="right right">Revised on 2020-04-24 16:45:53 UTC</span></em></span>
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm140172960851840"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2020 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+{
+  "version": {
+    "name": "1.0",
+    "slug": "1.0",
+    "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0"
+  },
+  "titles": [
+    {
+      "titleId": "463b8b3e-4313-4777-bb28-beba4dcaff51",
+      "modified": 1707819291,
+      "name": "About Builds",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/about_builds/index",
+      "category": {
+        "weight": 55,
+        "name": "Getting Started"
+      },
+      "description": "Introduction to Builds",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/about_builds/index",
+        "slug": "about_builds",
+        "id": "ee9e6ef134dd0da06008cc8380a3a4cc.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/about_builds/builds_for_Red_Hat_OpenShift-1.0-About_Builds-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/about_builds/builds_for_red_hat_openshift-1.0-about_builds-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/about_builds/builds_for_red_hat_openshift-1.0-about_builds-en-us.pdf"
+      },
+      "toc": {
+        "id": "185504c165266026ca937c004bfdbde9.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "ece48f92-6e2f-457a-8420-27f02a04ab2b",
+      "modified": 1707819708,
+      "name": "Install",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/install/index",
+      "category": {
+        "weight": 56,
+        "name": "Install"
+      },
+      "description": "Installing Builds",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/install/index",
+        "slug": "install",
+        "id": "c01a80a2fef8c7a4a0afb9d203f497d4.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/install/builds_for_Red_Hat_OpenShift-1.0-Install-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/install/builds_for_red_hat_openshift-1.0-install-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/install/builds_for_red_hat_openshift-1.0-install-en-us.pdf"
+      },
+      "toc": {
+        "id": "629390c53ae44fecdbf13f0d4536601a.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "20e8b661-887d-44da-94e0-bf1cd2e0edf2",
+      "modified": 1707819629,
+      "name": "Configure",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/configure/index",
+      "category": {
+        "weight": 57,
+        "name": "Configure"
+      },
+      "description": "Configuring Builds",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/configure/index",
+        "slug": "configure",
+        "id": "3cccfa297eef4a9d06f2a11620b497ab.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/configure/builds_for_Red_Hat_OpenShift-1.0-Configure-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/configure/builds_for_red_hat_openshift-1.0-configure-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/configure/builds_for_red_hat_openshift-1.0-configure-en-us.pdf"
+      },
+      "toc": {
+        "id": "2e80a321dbfa44ff4653e92967b39770.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "f8dea508-17cc-482f-a20a-0b196c2ae833",
+      "modified": 1708325365,
+      "name": "Work with Builds",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/work_with_builds/index",
+      "category": {
+        "weight": 58,
+        "name": "Work with Builds"
+      },
+      "description": "Using Builds",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/work_with_builds/index",
+        "slug": "work_with_builds",
+        "id": "2ce5bbdacac0c361c0e189b16d1e6a2e.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/work_with_builds/builds_for_Red_Hat_OpenShift-1.0-Work_with_Builds-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/work_with_builds/builds_for_red_hat_openshift-1.0-work_with_builds-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/work_with_builds/builds_for_red_hat_openshift-1.0-work_with_builds-en-us.pdf"
+      },
+      "toc": {
+        "id": "a88da80dbdb22d891aac52c8c5a83b3b.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "1a0dc60d-6ffa-4222-a1cc-326d69577520",
+      "modified": 1707819521,
+      "name": "Authentication",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/authentication/index",
+      "category": {
+        "weight": 59,
+        "name": "Authentication and authorization"
+      },
+      "description": "Understanding authentication at runtime",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/authentication/index",
+        "slug": "authentication",
+        "id": "0b44b92589acc7e2cf0783feb82f9706.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/authentication/builds_for_Red_Hat_OpenShift-1.0-Authentication-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/authentication/builds_for_red_hat_openshift-1.0-authentication-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/authentication/builds_for_red_hat_openshift-1.0-authentication-en-us.pdf"
+      },
+      "toc": {
+        "id": "046d9a9d10b1d3583a80906c264a4934.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "19e36947-0f95-4150-b3aa-eabcf6c44095",
+      "modified": 1707819829,
+      "name": "Observability",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/observability/index",
+      "category": {
+        "weight": 60,
+        "name": "Observability"
+      },
+      "description": "Build controller observability",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/observability/index",
+        "slug": "observability",
+        "id": "762de62f620cfccb57ca1ef663aa47dc.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/observability/builds_for_Red_Hat_OpenShift-1.0-Observability-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/observability/builds_for_red_hat_openshift-1.0-observability-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/observability/builds_for_red_hat_openshift-1.0-observability-en-us.pdf"
+      },
+      "toc": {
+        "id": "6ba84f59b4c8a45ef8a1fe92eabd349e.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "41313802-6d1f-4a50-834a-a5af035beaf0",
+      "modified": 1707819924,
+      "name": "Uninstall",
+      "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/uninstall/index",
+      "category": {
+        "weight": 61,
+        "name": "Uninstall"
+      },
+      "description": "Uninstalling Builds",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/builds_for_red_hat_openshift/1.0/html-single/uninstall/index",
+        "slug": "uninstall",
+        "id": "2a43c26573754b86c047014c396b437d.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/uninstall/builds_for_Red_Hat_OpenShift-1.0-Uninstall-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/uninstall/builds_for_red_hat_openshift-1.0-uninstall-en-us.pdf",
+        "relative_path": "/documentation/en-us/builds_for_red_hat_openshift/1.0/pdf/uninstall/builds_for_red_hat_openshift-1.0-uninstall-en-us.pdf"
+      },
+      "toc": {
+        "id": "c97112953d6a76fc805ad234ba2fd8cb.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

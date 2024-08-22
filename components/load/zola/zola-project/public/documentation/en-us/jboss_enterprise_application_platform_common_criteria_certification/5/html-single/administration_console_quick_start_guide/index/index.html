@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Administration Console Quick Start Guide - JBoss Enterprise Application Platform Common Criteria Certification 5
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Common Criteria Certification" />
+<meta name="documentation_version" content="5" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2017-11-28T18:42:55.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/">JBoss Enterprise Application Platform Common Criteria Certification</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/5/">5</a>
+                                
+                                
+                                Administration Console Quick Start Guide
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Administration Console Quick Start Guide</a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Overview">
+                            1. Overview
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Installation">
+                            2. Installation
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Accessing_the_Console">
+                            3. Accessing the Console
+                        </a>
+                    </li><li>
+                        <a href="#idm140667085618112">
+                            4. Securing the Console
+                        </a><ol>
+                <li>
+                        <a href="#idm140667099468176">
+                            4.1. Enabling authentication
+                        </a>
+                    </li><li>
+                        <a href="#idm140667089834400">
+                            4.2. Enabling authentication for the http invoker
+                        </a>
+                    </li><li>
+                        <a href="#idm140667092594016">
+                            4.3. Setting up users and roles
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-User_Interface_Overview">
+                            5. User Interface Overview
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Resource_Panel">
+                            6. Resource Panel
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Navigation_Panel">
+                            7. Navigation Panel
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Common_Tasks">
+                            8. Common Tasks
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Updating_Applications">
+                            9. Updating Applications
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Application_undeployment_and_resource_removal">
+                            10. Application undeployment and resource removal
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Adding_Resources">
+                            11. Adding Resources
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Updating_Resource_Configurations">
+                            12. Updating Resource Configurations
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Monitoring_the_Enterprise_Application_Platform_Instance">
+                            13. Monitoring the Enterprise Application Platform Instance
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Flushing_the_Connection_Pool_for_a_Datasource">
+                            14. Flushing the Connection Pool for a Datasource
+                        </a>
+                    </li><li>
+                        <a href="#Administration_Console_Quick_Start_Guide-Port_Configuration">
+                            15. Port Configuration
+                        </a>
+                    </li><li>
+                        <a href="#appe-Publican-Revision_History">
+                            A. Revision History
+                        </a>
+                    </li><li>
+                        <a href="#idm140667098753488">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--administration_console_quick_start_guide">
+            <h1 class="title">Administration Console Quick Start Guide</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140667092500960" lang="en-US"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Common Criteria Certification</span> <span class="productnumber">5</span></div><div><h2 class="subtitle">for use with JBoss Enterprise Application Platform 5 Common Criteria Certification</h2></div><p class="edition">Edition 5.1.0</p><div><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="https://access.redhat.com/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/a78399a6916bd5b945caa082f6c4fa4e/title_logo.svg" type="image/svg+xml"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/20c014cff25dbc2aeb4126383228ede4/title_logo.png" alt="" /></object></span>
+
+	</h3></div><div><div xml:lang="en-US" class="authorgroup" lang="en-US"><div class="author"><h3 class="author"><span class="firstname">JBoss Operations Network</span> <span class="surname">development team</span></h3></div><div class="editor"><h4 class="editedby">Edited by</h4><h3 class="editor"><span class="firstname">Isaac</span> <span class="surname">Rooskov</span></h3></div><div class="editor"><h4 class="editedby">Edited by</h4><h3 class="editor"><span class="firstname">Laura</span> <span class="surname">Bailey</span></h3></div></div></div><div><p class="copyright">Copyright © 2010 Red Hat, Inc</p></div><div><a href="#idm140667098753488">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+			This book is a quick start guide to the Admin Console of JBoss Enterprise Application Platform 5.1.0.
+		</div></div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Overview" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Overview</h1></div></div></div><div class="para">
+		This document is intended to provide a reference to get you started with the newly released JBoss Enterprise Application Platform Admin Console along with a overview of the features it provides to assist with the management of your JBoss Enterprise Application Platform 5 installation. The Administration Console provides a single administration point for managing and modifying your Applications and Enterprise Application Platform resources.
+	</div><div class="para">
+		This release of the Admin Console provides the following administrative features:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Deploy, Undeploy, and Update Enterprise Applications including:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Enterprise Applications (EARs)
+					</div></li><li class="listitem"><div class="para">
+						Web Applications (WARs)
+					</div></li><li class="listitem"><div class="para">
+						Resource Adapters(RARs)
+					</div></li><li class="listitem"><div class="para">
+						EJB JARs (EJB2 and EJB3)
+					</div></li></ul></div></li><li class="listitem"><div class="para">
+				Persistent configuration changes for the following resources:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Datasources
+					</div></li><li class="listitem"><div class="para">
+						Connection Factories
+					</div></li><li class="listitem"><div class="para">
+						Service Binding Manager
+					</div></li><li class="listitem"><div class="para">
+						JMS Queues and Topics based on JBoss Messaging
+					</div></li></ul></div></li></ul></div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				View statistics and carry out operations on many other components:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Enterprise Application Platform server examples: version, memory usage, thread count and stop operation
+					</div></li><li class="listitem"><div class="para">
+						Hibernate Session factories
+					</div></li><li class="listitem"><div class="para">
+						JBoss Web vhosts: supported aliases
+					</div></li><li class="listitem"><div class="para">
+						JBoss Web connectors: for example, Maximum Request Time
+					</div></li><li class="listitem"><div class="para">
+						EARs and WARs: for example, Average Response Time and lifecycle operations (start, stop and reload)
+					</div></li></ul></div></li><li class="listitem"><div class="para">
+				Monitor all standard JVM metrics and execute operations. For example, garbage collection.
+			</div></li></ul></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Installation" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Installation</h1></div></div></div><div class="para">
+		Throughout this chapter we will refer to the location of <code class="varname">JBOSS_HOME</code> as <code class="filename">&lt;installation-dir&gt;/jboss-as</code>
+	</div><div class="para">
+		The Administration Console is distributed as part of the <span class="emphasis"><em>default</em></span>, <span class="emphasis"><em>all</em></span>, <span class="emphasis"><em>web</em></span> and <span class="emphasis"><em>production</em></span> server configurations.
+	</div><div class="para">
+		Start the server by opening a command prompt at <code class="filename">$JBOSS_HOME/bin</code> and execute the command:
+	</div><div class="para">
+		On Unix systems:
+	</div><pre class="programlisting">
+./run.sh
+</pre><div class="para">
+		On Windows systems:
+	</div><pre class="programlisting">
+run.bat
+</pre><div class="para">
+		The above command starts the <span class="emphasis"><em>default</em></span> configuration. If you prefer to run with an alternate configuration, repeat the above command passing in your configuration using the <code class="code">-c</code> option. Below is the syntax for starting the server with the <span class="emphasis"><em>all</em></span> configuration, for example:
+	</div><div class="para">
+		On Unix systems:
+	</div><pre class="programlisting">
+./run.sh -c all
+</pre><div class="para">
+		On Windows Systems:
+	</div><pre class="programlisting">
+run.bat -c all
+</pre><div class="para">
+		In addition to the configurations mentioned above, it is expected that the Administration Console will work with any custom configuration that supports the installation of Seam applications, however that support is not guaranteed. To use the Console with a different configuration (for instance, the <span class="emphasis"><em>test</em></span> configuration), you can copy the <code class="filename">admin-console.war</code> directory from the <span class="emphasis"><em>default</em></span> server configuration as shown below (for Unix systems):
+	</div><pre class="programlisting">
+cd $JBOSS_HOME/server/default/deploy
+cp -pr admin-console.war $JBOSS_HOME/server/test/deploy
+</pre><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			The Administration Console is not supported with the <span class="emphasis"><em>minimal</em></span> configuration provided with the distribution or any configurations based on the <span class="emphasis"><em>minimal</em></span> configuration.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Accessing_the_Console" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Accessing the Console</h1></div></div></div><div class="para">
+		Once the server is started, simply point your browser to <a href="http://localhost:8080/" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/</a> and then choose the Admin Console link from the list.
+	</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			This URL assumes you are accessing the Admin Console from the machine your Enterprise Application Platform instance is running on and your server is listening on the default ports and network interface. If you have changed any of these defaults you will have to alter the URL accordingly.
+		</div></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			The Admin Console has been tested against and is supported for use with Mozilla Firefox 2.0, 3.0, 3.5 and 3.6; and Internet Explorer 6 and 7. It may also work in other browsers, but it is only supported in the browsers listed here.
+		</div></div></div><div class="para">
+		Once the Admin Console has been loaded the login page will be displayed:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/c7afea2f5becfa5774ac809053d2124a/login.png" width="207" /></div><div class="para">
+		Login credentials are the same as used for the JMX console. A default user is provided for immediate access as part of the Enterprise Application Platform. In order to enable this user you need to uncomment the setting in <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/props/jmx-console-users.properties</code> so that it contains:
+	</div><pre class="programlisting">admin=admin</pre><div class="para">
+		Once the <code class="filename">jmx-console-users.properties</code> file has been saved, enter <span class="emphasis"><em>admin</em></span> for both the username and password in the prompts and then click the <span class="bold bold"><strong>Login</strong></span> button. After clicking the <span class="bold bold"><strong>Login</strong></span> button, the Admin Console will scan your Enterprise Application Platform instance and detect what is running on it. Once this is complete, you will be shown a screen similar to the one below:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/6f1016014ac62898c785ecb5fc81b64e/Admin-Console-QuickStart_html_m7220e21e.png" width="444" /></div></div><div xml:lang="en-US" class="chapter" id="idm140667085618112" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Securing the Console</h1></div></div></div><div class="para">
+		If JBoss services need to listen on external IP addresses that may be visible to unauthorized users, it is important that authentication is enabled on the Admin Console. Failure to enable authentication could result in exposing administrative services on the JBoss Enterprise Application Platform instance to malicious users, which could result in Denial of Service (DoS) attacks.
+	</div><div class="para">
+		Follow the instructions in this section to secure your Admin Console.
+	</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			In the instructions that follow, $PROFILE refers to the server profile used by the installation, for example, default, minimal, or any custom server profile created by the administrator. All specified paths are relative to <code class="filename">$JBOSS_HOME</code>.
+		</div></div></div><div class="section" id="idm140667099468176"><div class="titlepage"><div><div><h2 class="title">4.1. Enabling authentication</h2></div></div></div><div class="para">
+			In the following <code class="filename">web.xml</code> files:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/deploy/jmx-console.war/WEB-INF/web.xml</code>
+				</div></li><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/deploy/management/console-mgr.sar/web-console.war/WEB-INF/web.xml</code>
+				</div></li></ul></div><div class="para">
+			Uncomment the following <code class="literal">security-constraint</code> fragment:
+		</div><pre class="programlisting">&lt;security-constraint&gt;
+  &lt;web-resource-collection&gt;
+    &lt;web-resource-name&gt;HtmlAdaptor&lt;/web-resource-name&gt;
+    &lt;description&gt;An example security config that only allows
+  users with the
+    role JBossAdmin to access the HTML JMX console web application
+    &lt;/description&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;http-method&gt;GET&lt;/http-method&gt;
+    &lt;http-method&gt;POST&lt;/http-method&gt;
+  &lt;/web-resource-collection&gt;
+  &lt;auth-constraint&gt;
+    &lt;role-name&gt;JBossAdmin&lt;/role-name&gt;
+  &lt;/auth-constraint&gt;
+&lt;/security-constraint&gt;</pre><div class="para">
+			In the following <code class="filename">jboss-web.xml</code> files:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/deploy/jmx-console.war/WEB-INF/jboss-web.xml</code>
+				</div></li><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/deploy/management/console-mgr.sar/web-console.war/WEB-INF/jboss-web.xml</code>
+				</div></li></ul></div><div class="para">
+			Ensure that a fragment similar to the following is included:
+		</div><pre class="programlisting">&lt;jboss-web&gt;
+  &lt;!-- Uncomment the security-domain to enable security. You will
+     need to edit the htmladaptor login configuration to setup the
+     login modules used to authentication users.
+  --&gt;
+  &lt;security-domain&gt;java:/jaas/jmx-console&lt;/security-domain&gt;
+&lt;/jboss-web&gt;</pre></div><div class="section" id="idm140667089834400"><div class="titlepage"><div><div><h2 class="title">4.2. Enabling authentication for the http invoker</h2></div></div></div><div class="para">
+			The <code class="filename">server/$PROFILE/deploy/http-invoker.sar/invoker.war/WEB-INF/web.xml</code> or <code class="filename">server/$PROFILE/deploy/httpha-invoker.sar/invoker.war/WEB-INF/web.xml</code> file (depending on your server profile) must define a JNDIFactory, EJBInvokerServlet, and JMXInvokerServlet in the security realm. This means that the <code class="literal">security-constraint</code> element should be similar to:
+		</div><pre class="programlisting">&lt;security-constraint&gt;
+  &lt;web-resource-collection&gt;
+    &lt;web-resource-name&gt;HttpInvokers&lt;/web-resource-name&gt;
+    &lt;description&gt;An example security config that only allows
+  users with the
+       role HttpInvoker to access the HTTP invoker servlets
+    &lt;/description&gt;
+    &lt;url-pattern&gt;/restricted/*&lt;/url-pattern&gt;
+  &lt;url-pattern&gt;/JNDIFactory/*&lt;/url-pattern&gt;
+  &lt;url-pattern&gt;/EJBInvokerServlet/*&lt;/url-pattern&gt;
+  &lt;url-pattern&gt;/JMXInvokerServlet/*&lt;/url-pattern&gt;
+    &lt;http-method&gt;GET&lt;/http-method&gt;
+    &lt;http-method&gt;POST&lt;/http-method&gt;
+  &lt;/web-resource-collection&gt;
+  &lt;auth-constraint&gt;
+    &lt;role-name&gt;HttpInvoker&lt;/role-name&gt;
+  &lt;/auth-constraint&gt;
+&lt;/security-constraint&gt;</pre><div class="para">
+			This file should also define an associated security domain:
+		</div><pre class="programlisting">&lt;jboss-web&gt;
+  &lt;security-domain&gt;java:/jaas/jmx-console&lt;/security-domain&gt;
+&lt;/jboss-web&gt;</pre><div class="para">
+			Binding the jmx-invoker to localhost is highly recommended.
+		</div><div class="para">
+			To do so, edit <code class="filename">server/$PROFILE/conf/jboss-service.xml</code> such that the ServerAddress of the RMI/JRMP invoker is <code class="literal">localhost</code>, as shown in the following code snippet:
+		</div><pre class="programlisting">&lt;!-- RMI/JRMP invoker --&gt;
+&lt;mbean code="org.jboss.invocation.jrmp.server.JRMPInvoker"
+  name="jboss:service=invoker,type=jrmp"&gt;
+  &lt;attribute name="RMIObjectPort"&gt;4444&lt;/attribute&gt;
+  &lt;attribute name="ServerAddress"&gt;localhost&lt;/attribute&gt;
+  ....</pre><div class="para">
+			Add the following lines to the <code class="literal">server</code> section of <code class="filename">server/$PROFILE/deploy/jmx-invoker-service.xml</code>:
+		</div><pre class="programlisting">&lt;!-- A pooled invoker bound to localhost --&gt;
+  &lt;mbean code="org.jboss.invocation.pooled.server.PooledInvoker"
+    name="jboss:service=invoker,type=pooled,host=localhost"&gt;
+    &lt;attribute name="NumAcceptThreads"&gt;1&lt;/attribute&gt;
+    &lt;attribute name="MaxPoolSize"&gt;300&lt;/attribute&gt;
+    &lt;attribute name="ClientMaxPoolSize"&gt;300&lt;/attribute&gt;
+    &lt;attribute name="SocketTimeout"&gt;60000&lt;/attribute&gt;
+    &lt;attribute name="ServerBindAddress"&gt;localhost&lt;/attribute&gt;
+    &lt;attribute name="ServerBindPort"&gt;4443&lt;/attribute&gt;
+    &lt;attribute
+    name="ClientConnectAddress"&gt;localhost&lt;/attribute&gt;
+    &lt;attribute name="ClientConnectPort"&gt;0&lt;/attribute&gt;
+    &lt;attribute name="ClientRetryCount"&gt;1&lt;/attribute&gt;
+    &lt;attribute name="EnableTcpNoDelay"&gt;false&lt;/attribute&gt;
+    &lt;depends
+    optional-attribute-name="TransactionManagerService"&gt;jboss:service=TransactionManager&lt;/depends&gt;</pre><div class="para">
+			In the <code class="code">&lt;mbean code="org.jboss.invocation.jrmp.server.JRMPProxyFactory"</code> section, change <code class="code">&lt;depends optional-attribute-name="InvokerName"&gt;</code> to:
+		</div><pre class="programlisting">&lt;depends optional-attribute-name="InvokerName"&gt;
+    jboss:service=invoker,type=pooled,host=localhost
+  &lt;/depends&gt;</pre></div><div class="section" id="idm140667092594016"><div class="titlepage"><div><div><h2 class="title">4.3. Setting up users and roles</h2></div></div></div><div class="para">
+			In <a class="xref" href="#Administration_Console_Quick_Start_Guide-Accessing_the_Console">Chapter 3, <em>Accessing the Console</em></a>, you set up the default user/password combination of admin/admin. Change and update the usernames and passwords for the configured security doman by editing the corresponding credential files:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/conf/props/jmx-console-users.properties</code>
+				</div></li><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/deploy/management/console-mgr.sar/web-console.war/WEB-INF/classes/web-console-users.properties</code>
+				</div></li></ul></div><div class="para">
+			You can change/update roles for the configured security domains by editing the appropriate credential file:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/conf/props/jmx-console-roles.properties</code>
+				</div></li><li class="listitem"><div class="para">
+					<code class="filename">server/$PROFILE/deploy/management/console-mgr.sar/web-console.war/WEB-INF/classes/web-console-roles.properties</code>
+				</div></li></ul></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-User_Interface_Overview" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 5. User Interface Overview</h1></div></div></div><div class="para">
+		Once successfully logged in, you have an overall summary of the system that the JBoss Enterprise Application Platform is running on, such as Operating System information and host name.
+	</div><div class="para">
+		The Administration Console pages are split up into two main areas:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				The left navigation panel (blue background) allows the user to browse the different resources which are deployed into their Enterprise Application Platform instance. A tree metaphor is used to represent the resource hierarchy, with the root being the machine the Enterprise Application Platform instance is running on. The tree can be expanded to show child resources, for example the Enterprise Application Platform instance and then within that a list of Datasources.
+			</div></li><li class="listitem"><div class="para">
+				The main resource panel (white background) shows information about a particular resource or resources which were selected from the navigation on the left. This is also the place that allows direct access to all the administrative tasks for a resource (for example, update its configuration), delete it. The resource showing in the main pane is normally highlighted in <span class="bold bold"><strong>bold</strong></span> in the navigation pane.
+			</div></li></ul></div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/1d3199fe0cc1e46aece570657cb795d3/Admin-Console-QuickStart_html_m7e00265f.jpg" width="444" /></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			The currently running JBoss Enterprise Application Platform instance, with its configuration shown in parentheses, is found under the <span class="emphasis"><em>JBossAS Servers</em></span> folder near the top of the navigation tree. Only one running server is managed at a time through the Administration Console. Click on the <span class="emphasis"><em>JBoss Enterprise Application Platform 5 (default)</em></span> link and an overview of the Enterprise Application Platform instance which is running the Administration Console is shown.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Resource_Panel" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 6. Resource Panel</h1></div></div></div><div class="para">
+		You can see in the example above the main tabs which are present for all individual resources. Not all tabs are available for every sort of resource, though Summary and Metrics tabs will always be enabled. If a feature is not supported for a particular resource then that tab is greyed out (for example, the Administration Console does not support configuring a JBoss Web Virtual Host so the Configuration tab for those sort of resources will be disabled). The following is a breakdown of the functionality behind each tab:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Summary: This presents a quick overview of the resource including relevant metrics on how it is operating.
+			</div></li><li class="listitem"><div class="para">
+				Configuration: If enabled this tab lets you update the configuration of a resource (for example, increase the pool size for a Datasource) or switch the Enterprise Application Platform instance to use a different set of ports.
+			</div></li><li class="listitem"><div class="para">
+				Metrics: Shows the same information as the summary tab plus any more detailed metrics which are collected on the resource. Metrics will be gathered each time you visit the page.
+			</div></li><li class="listitem"><div class="para">
+				Control: If enabled, this tab lets you execute operations on the resource (for example, stopping the Enterprise Application Platform instance).
+			</div></li><li class="listitem"><div class="para">
+				Content: If enabled this tab lets you update the actual files used to deploy the resource (for example, update the WAR file used to deploy a web application).
+			</div></li></ul></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			The currently selected tab is shown in white, available tabs are blue and unavailable ones are grey.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Navigation_Panel" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 7. Navigation Panel</h1></div></div></div><div class="para">
+		All applications and resources discovered during server start up should be available underneath the Enterprise Application Platform instance in the navigation tree. The screen shot below is shown with all the items in the tree expanded.
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/1d2c2ba1aecec1c843164603f12ccb2a/Admin-Console-QuickStart_html_221ebd17.png" width="444" /></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			The navigation panel is currently fixed width so to see wider entries use the scroll bar at the bottom of the panel.
+		</div></div></div><div class="para">
+		The are two sorts of items shown in the navigation panel:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Collection of resources: These items are indicated by a yellow folder icon.
+			</div></li><li class="listitem"><div class="para">
+				Individual resources: These are indicated by a blue document icon.
+			</div></li></ul></div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/8c18fe49b7f271de8c9a6319c16a8c5b/Admin-Console-QuickStart_html_m205ffe11.jpg" width="326" /></div><div class="para">
+		Clicking on a collection resource (for example, the <span class="emphasis"><em>Resources</em></span> link above) will render in the main panel either:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				a list of resource categories from where you can drill down further:
+			</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/ce9625393e1d28aa2370d7cf6ec7ea70/Admin-Console-QuickStart_html_766c3974.jpg" width="444" /></div></li><li class="listitem"><div class="para">
+				or a list of actual resources from where you can drill down to see a particular resource. For some resource types you can create or delete instances of a resource from this view.
+			</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/7fa8f0f413bbaf4e4eb8a7ad56d0c3e2/Admin-Console-QuickStart_html_ma5a1ef5.jpg" width="444" /></div></li></ul></div><div class="para">
+		Expanding one of the folder nodes in the navigation will show either individual resources or further collections of resources which themselves can be expanded.
+	</div><div class="para">
+		Click on an individual resource will show the Summary tab for that resource, as seen previously for the Enterprise Application Platform instance. If available, expanding an individual resource node in the navigation will show the child resources it has deployed within it.
+	</div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Common_Tasks" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 8. Common Tasks</h1></div></div></div><div class="para">
+		Next we will give an overview of some common tasks you can do with the Administration Console. Each task will be used to highlight a particular function within the console.
+	</div><div class="para">
+		For a detailed list of all the supported resources and the functions the Administration Console can perform on them please see the accompanying resource specific documentation.
+	</div><h2 id="idm140667096652768">Application Deployment</h2><div class="para">
+		All applications running in the Enterprise Application Platform instance are listed in the summary view under <span class="emphasis"><em>: &lt;machine&gt; : JBossAS Servers : JBoss Enterprise Application Platform 5 (default) : Applications </em></span>in the navigation. Applications can also further organized by their types to simplify the view:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/7cb7048f35d4c337c99556dd7daa88de/Admin-Console-QuickStart_html_m3b909920.jpg" width="326" /></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			The Embedded application types were deployed as part of an Enterprise Archive. They are listed separately for easier management and each embedded archive shows the relationship to its' parent. Embedded applications are managed via their parent. In other words, they cannot be deleted or updated and control operations do not apply to them. The management of these applications is done through the operations on the parent.
+		</div></div></div><div class="para">
+		To deploy an application, navigate to the Application type you want to add. In this example, we will use an Enterprise Application. Clicking on the link <span class="emphasis"><em>Enterprise Applications (EAR)s</em></span> will bring you to the Enterprise Application (EAR) Summary Tab.
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/690c235e7c5e2a3ac3ba04c1f64c87b5/Admin-Console-QuickStart_html_1c1dbde3.jpg" width="444" /></div><div class="para">
+		Clicking on:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/76c28bf1f71f53bb3752d9ec81d6db87/Admin-Console-QuickStart_html_m6fe09573.jpg" width="247" /></div><div class="para">
+		brings you to <code class="literal">Add New Enterprise Application (EAR)</code> page. Click the <span class="bold bold"><strong>BROWSE</strong></span> button and select the EAR file to be deployed. Select whether to deploy the app exploded or to the farm directory. Click <span class="bold bold"><strong>CONTINUE</strong></span> to proceed with the application deployment. The status of the deployment will be shown and if successful, added to the list of applications ready to be managed. Otherwise, the reason for the failed deployment will be shown.
+	</div><div class="para">
+		You can follow this same procedure for other application types that you want to add.
+	</div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Updating_Applications" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 9. Updating Applications</h1></div></div></div><div class="para">
+		To update an application, select it from the navigation panel and then in the main panel click on the Content Tab. <span class="bold bold"><strong>BROWSE</strong></span> to the location of where the updated application resides then hit the <span class="bold bold"><strong>UPDATE</strong></span> button. Example below of updating an .EAR deployment:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/746ddd3f6393cc9637ce70ab6734a9a8/Admin-Console-QuickStart_html_m195e931e.jpg" width="444" /></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			The file to be updated must have the same name as the application you wish to update.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Application_undeployment_and_resource_removal" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 10. Application undeployment and resource removal</h1></div></div></div><div class="para">
+		Many types of resources including applications can be deleted by navigating to the Resources' Type specific (for example, Enterprise Application (EAR)s) Summary Tab and simply clicking the <span class="bold bold"><strong>DELETE</strong></span> button next to the name of the resource you want to delete. For example, to undeploy an EAR file, choose the <span class="emphasis"><em>Enterprise Application (EAR)s</em></span> folder from the navigation and then in the main panel find the application you are looking to remove and click the <span class="bold bold"><strong>DELETE</strong></span> button next to it. Once the removal has been confirmed, the Application will be undeployed from the server and will no longer be able to be managed. You will have to deploy it again if it is needed. As noted above, Embedded Applications do not have the delete option available.
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/8371460f70fb5a7ead5663911ba2e632/Admin-Console-QuickStart_html_5f455b01.jpg" width="444" /></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Adding_Resources" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 11. Adding Resources</h1></div></div></div><div class="para">
+		Other resources, in addition to applications, can be added to your Enterprise Application Platform instance using the Administration Console. In fact whether you adding new resources or modifying resources already deployed to the running server, the Administration Console offers easy management of the resource properties avoiding error-prone editing of XML configuration files.
+	</div><div class="para">
+		Similar to deploying an application, choose the specific type of resource you want to add from the navigation panel (for example, <span class="emphasis"><em>Local Tx Datasources</em></span> rather than just <span class="emphasis"><em>Datasources</em></span>), this will bring up the Summary tab for this type. Next hit the <span class="bold bold"><strong>Add a new resource</strong></span> button on the right hand side of the main panel. You will be prompted for the template that will be used to create the configuration.
+	</div><div class="para">
+		A template is just a set of suggested values to use for the properties defined on that resource. For example, the Oracle templates contain suggested values that are typically used when creating a Datasource for connecting to an Oracle database. Your template choices for datasource types are:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Local Tx Datasource
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Oracle Local TX (Local Tx Datasource)
+					</div></li><li class="listitem"><div class="para">
+						default (Local Tx Datasource)
+					</div></li></ul></div></li><li class="listitem"><div class="para">
+				No Tx Datasources
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Oracle No TX (No Tx Datasource)
+					</div></li><li class="listitem"><div class="para">
+						default (No Tx Datasource)
+					</div></li></ul></div></li><li class="listitem"><div class="para">
+				XA Datasources
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Oracle XA (XA Datasource)
+					</div></li><li class="listitem"><div class="para">
+						default (XA Datasource)
+					</div></li></ul></div></li></ul></div><div class="para">
+		After selecting the appropriate template, click <span class="bold bold"><strong>CONTINUE</strong></span>. Add the appropriate configuration information for the datasource. Next to each editable property is a description detailing the use of the property, default value if any, and the affect of the property change. Common configuration errors are detected and will be highlighted after attempting to save. Check the Unset box if the property will not be used. At the end of your configuration session, click <span class="bold bold"><strong>SAVE</strong></span> at the bottom of the page which deploys the configuration information to the server. Click <span class="bold bold"><strong>CANCEL</strong></span> if you decide not to create the new resource.
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/648b9b387548f2d112888eca1d48fcc6/Admin-Console-QuickStart_html_1736bd6b.jpg" width="247" /></div><div class="para">
+		After you have saved the new configuration the main panel should return to displaying a list of resources along with a message about whether or not the resource creation succeeded.
+	</div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			Any database drivers needed for the Datasource to function correctly must be deployed to the Enterprise Application Platform instance separately.
+		</div></div></div><div class="para">
+		A similar procedure works for creating JMS Destinations and Connection Factories. For Connection Factories however the required resource adapter must already be deployed prior to configuring the connection factory. If this has not yet been done, simply navigate to the Resource Adapters (RAR)s or Enterprise Application (EAR)s (for a resource adapter deployed as part of an Enterprise Archive) and deploy the adaptor JAR file.
+	</div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Updating_Resource_Configurations" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 12. Updating Resource Configurations</h1></div></div></div><div class="para">
+		For resources that support configuration, either created through the Administration Console or deployed separately, you can use the Console to make modifications to their settings. Simply choose the resource to be modified from the navigation panel or from one of the resource list views and then select its Configuration tab, from where changes can then be made:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/dde4d13bba3f312d2698a32022f542e5/Admin-Console-QuickStart_html_24ffdce8.jpg" width="444" /></div><div class="para">
+		Updating a resources configuration follows a very similar pattern to adding a resource described above. Change the properties you want to be updated and hit the <span class="bold bold"><strong>SAVE</strong></span> button at the bottom of the page and the changes will be applied to the Enterprise Application Platform instance.
+	</div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+			If a resource was previously deployed and modified via the Console, the administration of the resource should continue to be done via the Console. The resource modifications are persistent but will not be reflected in the resources original configuration file. This means that changes between manual edits to configuration files and changes performed via the Console are not interchangeable. If you make a change to a configuration file outside of the Administration Console it will override and replace any changes you have previously made via the Console.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Monitoring_the_Enterprise_Application_Platform_Instance" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 13. Monitoring the Enterprise Application Platform Instance</h1></div></div></div><div class="para">
+		Basic information is provided on every resource managed by the Admin Console via the resources Summary tab. However some resources such as the Enterprise Application Platform instance itself , also offer more detailed metrics. See below for an example:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/747070ce578bc12545eb5cecb14b9bdd/jbas-metrics.PNG" width="444" /></div><div class="para">
+		This metrics are collected from the resource when the Metrics tab is viewed and can be recalculated by hitting the <span class="bold bold"><strong>REFRESH</strong></span> button at the bottom main panel.
+	</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			In order to see JVM resources and metrics, the Enterprise Application Platform instance must be started with the <span class="property">-Djboss.platform.mbeanserver</span> system property specified as part of <code class="varname">JAVA_OPTS</code>.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Flushing_the_Connection_Pool_for_a_Datasource" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 14. Flushing the Connection Pool for a Datasource</h1></div></div></div><div class="para">
+		Certain resources, such as Datasources, have support for executing particular operations from the Administration Console. These operations are exposed on the Control tab for a particular resource. Below is the Control tab for a Datasource:
+	</div><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/409d974e65bfd7a68e95608574bf4d65/Admin-Console-QuickStart_html_3cb12404.jpg" width="444" /></div><div class="para">
+		In order to flush the connection pool associated with a Datasource you navigate to the Datasource you are interested in, select its Control tab and then push the <span class="bold bold"><strong>FLUSH</strong></span> button. Once the Control operation is executed, the Operation status is returned and listed in the Operations History section at the bottom of the main pane. Multiple operations can be executed and a history of results is maintained until the Enterprise Application Platform instance is restarted.
+	</div><div class="para">
+		Other control operations include stopping the Enterprise Application Platform instance and removing all messages from a JMS Queue.
+	</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			Starting the Enterprise Application Platform from the Administration Console is not supported because the Console requires a running instance of the Enterprise Application Platform in order to operate.
+		</div></div></div></div><div xml:lang="en-US" class="chapter" id="Administration_Console_Quick_Start_Guide-Port_Configuration" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 15. Port Configuration</h1></div></div></div><div class="para">
+		The Service Binding Manager co-ordinates which ports the Enterprise Application Platform instance listens on when it starts up and the Administration Console provides a mechanism for configuring this service to change which ports get used. In the navigation pane select the SBM: <span class="emphasis"><em>&lt;machine&gt; : JBossAS Servers : JBoss Enterprise Application Platform 5 (default) : Service Binding Manager</em></span>. Next go to its Configuration tab and for the Active Binding Set Name property enter the name of the new port set you wish the Enterprise Application Platform instance to use and hit the <span class="bold bold"><strong>SAVE</strong></span> button at the bottom of the page. Out of the box, the Enterprise Application Platform ships with four port sets defined as:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				ports-default: The standard ports, for instance JBoss Web listens for HTTP requests on 8080. You can view all of the standard port settings on the Configuration tab of the Service Binding Manager resource.
+			</div></li><li class="listitem"><div class="para">
+				ports-01: The standard ports incremented by 100. For example, HTTP is on 8180
+			</div></li><li class="listitem"><div class="para">
+				ports-02: The standard ports incremented by 200. For example, HTTP is on 8280
+			</div></li><li class="listitem"><div class="para">
+				ports-03: The standard ports incremented by 300. For example, HTTP is on 8380
+			</div></li></ul></div><div class="mediaobject"><img src="https://access.redhat.com/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Administration_Console_Quick_Start_Guide-en-US/images/binding.png" width="NaN" height="NaN" class="mimir-link-warn" title="This content is not included in Mimir." /></div><div class="para">
+		If you wish to specify a different range of ports to use then you can create your own Service Binding Set resource through the Administration Console. Select the <span class="emphasis"><em>Service Binding Sets</em></span> folder from the navigation, hit the <span class="bold bold"><strong>Add a new resource</strong></span> button on the main panel and enter in the necessary information.
+	</div><div class="para">
+		Once you have updated the configuration for the Service Binding Manager, the Enterprise Application Platform instance must be restarted for those changes to take effect. After the restart, the new ports will be used when accessing the Administration Console (for example, http://localhost:8180/admin-console).
+	</div></div><div xml:lang="en-US" class="appendix" id="appe-Publican-Revision_History" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Appendix A. Revision History</h1></div></div></div><div class="para"><p><!--Empty--></p>
+		<div class="revhistory"><table summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 5.1.0-111.400</td><td align="left">2013-10-31</td><td align="left"><span class="author"><span class="firstname">Rüdiger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild with publican 4.0.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.1.0-111</td><td align="left">2012-07-18</td><td align="left"><span class="author"><span class="firstname">Anthony</span> <span class="surname">Towns</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild for Publican 3.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.1-0</td><td align="left">Tue Aug 03 2010</td><td align="left"><span class="author"><span class="firstname">Rebecca</span> <span class="surname">Newton</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Changed version number in line with new versioning requirements.</td></tr><tr><td>Revised for JBoss Enterprise Application Platform 5.1.0.GA, including:</td></tr><tr><td>JBPAPP-3278</td></tr><tr><td>JBPAPP-3276</td></tr><tr><td>JBPAPP-4776</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 1.0-0</td><td align="left">Tue Feb 09 2010</td><td align="left"><span class="author"><span class="firstname">Laura</span> <span class="surname">Bailey</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Initial draft.</td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div><div class="legalnotice"><a id="idm140667098753488"><!--Empty--></a><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2010 Red Hat, Inc.
+	</div><div class="para">
+		This document is licensed by Red Hat under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="mimir-link-warn" title="Mimir does not include content from: creativecommons.org">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original. If the document is modified, all Red Hat trademarks must be removed.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat Software Collections is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

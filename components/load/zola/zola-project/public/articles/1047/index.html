@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How can I get my Red Hat system to obtain an IP address from my Windows Dynamic Host Configuration Protocol (DHCP) server?
+</title>
+        
+<meta name="documentKind" content="article" />
+<meta name="lastModifiedDate" content="2012-09-16T02:04:13.000Z" />
+<meta name="url_slug" content="1047" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=article">Articles</a>
+                                
+                                
+                                How can I get my Red Hat system to obtain an IP address from my Windows Dynamic Host Configuration Protocol (DHCP) server?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_article cirrus-content" id="main-content">
+    <h1>How can I get my Red Hat system to obtain an IP address from my Windows Dynamic Host Configuration Protocol (DHCP) server?</h1>
+
+    <div class="status-container">
+      Updated <time datetime="2012-09-16T02:04:13.000Z">15 Sept 2012</time>
+    </div>
+
+    <hr>
+    <p>For some Dynamic Host Configuration Protocol (DHCP) servers it is necessary to use a different version of the DHCP client on your Red Hat system.</p>
+<p>For <strong>Red Hat Enterprise Linux 2.1</strong> users do the following:</p>
+<p>first need to remove the default version:</p>
+<pre><code>     rpm -e dhcpcd
+</code></pre>
+<p>Next you will need to install the pump package. If your system is registered with the <a href="/">Red Hat Network</a> (RHN), you can install the pump package using the following command:</p>
+<pre><code>     up2date pump
+</code></pre>
+<p>If you can not access Red Hat Network, then you should be able to install the pump RPM from your installation CDs.</p>
+<p>After the RPM is installed, you will need to restart (or start) your networking service:</p>
+<pre><code>     service network restart
+     service network start
+</code></pre>
+<p>Your system should now be able to obtain an IP address from your Windows DHCP server if your network interface is configured to obtain the IP address via DHCP.</p>
+<p><strong>Note:</strong> For Red Hat Enterprise Linux 3, there is no alternate supported DHCP packages but there is <strong>dhcpcd</strong> which is an alternative to the <strong>pump</strong> package and may be beneficial.</p>
+<p>Please visit <a href="http://www.phystech.com/download/dhcpcd.html" class="mimir-link-warn" title="Mimir does not include content from: www.phystech.com">DHCPCD Homepage</a> for more information.</p>
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

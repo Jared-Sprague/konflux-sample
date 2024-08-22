@@ -1,0 +1,52 @@
+{
+  "version": {
+    "name": "3.0",
+    "slug": "3.0",
+    "url": "/documentation/en-us/amq_spring_boot_starter/3.0"
+  },
+  "titles": [
+    {
+      "titleId": "709b2f38-b06c-4f33-b3ac-25c1a4d11043",
+      "modified": 1701964253,
+      "name": "Using the AMQ Spring Boot Starter",
+      "url": "/documentation/en-us/amq_spring_boot_starter/3.0/html-single/using_the_amq_spring_boot_starter/index",
+      "category": {
+        "weight": 50,
+        "name": "AMQ Clients"
+      },
+      "description": "Developing a Spring Boot application for JMS (jakarta)",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/amq_spring_boot_starter/3.0/html-single/using_the_amq_spring_boot_starter/index",
+        "slug": "using_the_amq_spring_boot_starter",
+        "id": "7d521f508f8072c792f7ccfb3376ec50.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/amq_spring_boot_starter/3.0/pdf/using_the_amq_spring_boot_starter/AMQ_Spring_Boot_Starter-3.0-Using_the_AMQ_Spring_Boot_Starter-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/amq_spring_boot_starter/3.0/pdf/using_the_amq_spring_boot_starter/amq_spring_boot_starter-3.0-using_the_amq_spring_boot_starter-en-us.pdf",
+        "relative_path": "/documentation/en-us/amq_spring_boot_starter/3.0/pdf/using_the_amq_spring_boot_starter/amq_spring_boot_starter-3.0-using_the_amq_spring_boot_starter-en-us.pdf"
+      },
+      "toc": {
+        "id": "72864fa71b531c2b3502c568350fb6ee.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": null,
+      "modified": null,
+      "name": "AMQ Clients",
+      "url": "https://access.redhat.com/documentation/en-us/red_hat_amq_clients/",
+      "category": {
+        "weight": 50,
+        "name": "AMQ Clients"
+      },
+      "description": "Documentation for the most recent release of AMQ Clients",
+      "weight": 50,
+      "singlePage": null,
+      "pdf": null,
+      "toc": null,
+      "custom_link": true
+    }
+  ]
+}

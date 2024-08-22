@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Working with systems in the Insights Inventory application - Edge management 1-latest
+</title>
+        
+<meta name="product" content="Edge management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-05-09T07:53:36.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/edge_management/1-latest/">Edge management</a>
+                                
+                                <a href="/documentation/en-us/edge_management/1-latest/">1-latest</a>
+                                
+                                
+                                Working with systems in the Insights Inventory application
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Working with systems in the Insights Inventory application</a>
+                    </li><li>
+                        <a href="#idm140420702382432">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#proc-rhem-create-group">
+                            1. Creating a system group to manage multiple systems
+                        </a>
+                    </li><li>
+                        <a href="#adding-a-single-system-to-a-group">
+                            2. Adding a single system to a group
+                        </a>
+                    </li><li>
+                        <a href="#adding-multiple-systems-to-a-group">
+                            3. Adding multiple systems to a group
+                        </a>
+                    </li><li>
+                        <a href="#adding-systems-to-a-group-from-group-details-menu">
+                            4. Adding systems to a group from the Group details view
+                        </a>
+                    </li><li>
+                        <a href="#proc-rhem-remove-system">
+                            5. Removing a system from a group
+                        </a>
+                    </li><li>
+                        <a href="#removing-systems-in-a-group-from-group-details-menu">
+                            6. Removing systems in a group from the Group details view
+                        </a>
+                    </li><li>
+                        <a href="#vulnerabilites">
+                            7. Vulnerabilities
+                        </a><ol>
+                <li>
+                        <a href="#proc-rhem-checking-vuln">
+                            7.1. Checking a system for vulnerabilities
+                        </a>
+                    </li><li>
+                        <a href="#proc-rhem-address-vuln">
+                            7.2. Addressing vulnerabilities in a system
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-rhem-update-groups">
+                            8. Updating systems in a group
+                        </a>
+                    </li><li>
+                        <a href="#con-rhem-custom-repo">
+                            9. Managing custom repositories
+                        </a><ol>
+                <li>
+                        <a href="#proc-rhem-add-custom-repo-app">
+                            9.1. Adding a custom repository
+                        </a>
+                    </li><li>
+                        <a href="#proc-rhem-add-custom-repo-image">
+                            9.2. Adding a custom repository to an image
+                        </a>
+                    </li><li>
+                        <a href="#proc-rhem-edit-custom-repo">
+                            9.3. Removing a custom repository from an image
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm140420702370544">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--working_with_systems_in_the_insights_inventory_application">
+            <h1 class="title">Working with systems in the Insights Inventory application</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140420709643424"><div class="titlepage"><div><div class="producttitle"><span class="productname">Edge management</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle"><!--Empty--></h2></div><div><a href="#idm140420702370544">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				You can group systems and choose which ones receive updates.
+			</div></div></div></div><hr/></div><section class="preface" id="idm140420702382432"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p>
+			After you create your OSTree images, install the RHEL for Edge images on your devices, and register these systems with the Red Hat Insights application, you can organize systems into groups. With that, you can manage multiple systems simultaneously, and perform various tasks, such as vulnerability assessment. You can also check for vulnerabilities. If Common Vulnerabilities and Exposures (CVEs) are identified, you can use the Insights Inventory application to update the image and simultaneously deploy the update to multiple systems.
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+					If you are using <a class="link mimir-link-warn" href="https://console.stage.redhat.com/edge/fleet-management" title="Mimir does not include content from: console.stage.redhat.com">Edge management</a>:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+							To be able to edit, delete, or to display host’s details, you must have the <code class="literal">Inventory Hosts Administrator</code> role assigned to your account.
+						</li><li class="listitem">
+							If you just want to be able to display host’s details, but no access to actions you must have at least the <code class="literal">Inventory Hosts Viewer</code> role assigned to your account.
+						</li></ul></div></li><li class="listitem"><p class="simpara">
+					If you are using <a class="link mimir-link-warn" href="https://console.stage.redhat.com/insights/inventory/" title="Mimir does not include content from: console.stage.redhat.com">Inventory</a> under Red Hat Insights:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+							If you want to use <code class="literal">Inventory groups</code> access, see the <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_insights/1-latest/html/viewing_and_managing_system_inventory/deploying-insights-with-rhca" title="This content is not included in Mimir.">User access to inventory groups</a> documentation to learn more on how to manage groups access.
+						</li><li class="listitem">
+							If you do not want to use granular <code class="literal">Inventory groups</code> access, you must have at least the <code class="literal">Inventory Hosts Administrator</code> and the <code class="literal">Inventory Groups Administrator</code> roles assigned to your account.
+						</li></ul></div></li></ul></div><div class="admonition warning"><div class="admonition_header">Warning</div><div><p>
+				If you want your non-org administrator users to be able to see or manage their Inventory groups, you must add one of the Inventory Groups roles to the Default Access RBAC group. Otherwise, non-org administrator users will not be able to see or manage the Inventory Groups.
+			</p></div></div><p>
+			Inventory groups support role-based access (RBAC). By using RBAC, you can set custom permissions on inventory groups according to the user role. See <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_insights/1-latest/html/viewing_and_managing_system_inventory/deploying-insights-with-rhca#user-access-to-inventory-groups_inventory-groups" title="This content is not included in Mimir.">User access to inventory groups</a> for more details.
+		</p></section><section class="chapter" id="proc-rhem-create-group"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Creating a system group to manage multiple systems</h1></div></div></div><p>
+			In the Insights inventory groups application, you can consolidate multiple systems into groups, simplifying their management. For example, you can easily mitigate vulnerabilities and update systems that are alike.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/edge_management/2022/html/create_rhel_for_edge_images_and_configure_automated_management/proc-rhem-auto-reg" title="This content is not included in Mimir.">registered the systems</a> you plan to group with the Insights Inventory application.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+				</li><li class="listitem">
+					From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory</strong></span>.
+				</li><li class="listitem">
+					In the dashboard menu, click <span class="strong strong"><strong>Inventory</strong></span> &gt; <span class="strong strong"><strong>Groups</strong></span>.
+				</li><li class="listitem">
+					On the <span class="strong strong"><strong>Groups</strong></span> page, click <span class="strong strong"><strong>Create group</strong></span>.
+				</li><li class="listitem">
+					In the <span class="strong strong"><strong>Create Group</strong></span> dialog, add a group name that describes your group, for example <code class="literal">retail-north-america</code>. Click <span class="strong strong"><strong>Create</strong></span>.
+				</li><li class="listitem">
+					On the <span class="strong strong"><strong>Inventory</strong></span> &gt; <span class="strong strong"><strong>Groups</strong></span> page, use the search box to find the group you just created and click the group name, for example <code class="literal">retail-north-america</code>, from the group list.
+				</li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					If the group creation was successful, you can see the group name on the page for your group.
+				</li></ul></div></section><section class="chapter" id="adding-a-single-system-to-a-group"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Adding a single system to a group</h1></div></div></div><p class="_abstract _abstract">
+			In the Insights inventory groups application, you can add a single system to a group to manage it more easily. For example, you can easily mitigate vulnerabilities and update systems that are alike. With the Insights inventory group application, you can add a system to only one group.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have registered the systems you plan to group with the Insights Inventory application.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+				</li><li class="listitem">
+					From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Systems</strong></span>.
+				</li><li class="listitem"><p class="simpara">
+					On the <span class="strong strong"><strong>System</strong></span> page, add a single system to a group: Click the options icon <span class="strong strong"><strong>(⋮)</strong></span> near the image and click <span class="guibutton">Add to group</span>. The <span class="strong strong"><strong>Add to group</strong></span> window open:
+				</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+							Select one of the options:
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									Add to an existing group: Select an existing group and click <span class="guibutton">Add</span>.
+								</li><li class="listitem">
+									Create a new group: Click the <span class="guibutton">Create group</span> button. Click <span class="guibutton">Add</span>.
+								</li></ul></div></li></ol></div></li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					If adding systems to the group was successful, you can see the systems added to the group on the page for your group.
+				</li></ul></div></section><section class="chapter" id="adding-multiple-systems-to-a-group"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Adding multiple systems to a group</h1></div></div></div><p class="_abstract _abstract">
+			In the Insights Inventory application, you can add several systems to a group to manage them more easily. For example, you can easily mitigate vulnerabilities and update systems that are alike.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have registered the systems you plan to group with the Insights Inventory application.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+				</li><li class="listitem">
+					From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Systems</strong></span>.
+				</li><li class="listitem"><p class="simpara">
+					On the <span class="strong strong"><strong>System</strong></span> page:
+				</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+							Search for the systems you want to add from the Inventory and select the ones you want to add to your group.
+						</li><li class="listitem"><p class="simpara">
+							Click the options icon <span class="strong strong"><strong>(⋮)</strong></span> and click <span class="strong strong"><strong>Add to group</strong></span>. The <span class="strong strong"><strong>Add to group</strong></span> window open:
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									Add to an existing group: Select an existing group and click <span class="guibutton">Add</span>.
+								</li><li class="listitem">
+									Create a new group: Click the <span class="guibutton">Create group</span> button. Click <span class="guibutton">Add</span>.
+								</li></ul></div></li></ol></div></li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					If adding the multiple systems to the group was successful, you can see the systems added to the group on the page for your group.
+				</li></ul></div></section><section class="chapter" id="adding-systems-to-a-group-from-group-details-menu"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Adding systems to a group from the Group details view</h1></div></div></div><p class="_abstract _abstract">
+			In the Insights Inventory application, you can add several systems to a group from the Group details view. This allows you to manage the systems simultaneously, along with the other members in the group. For example, you can easily update systems that have an update available.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/edge_management/2022/html/create_rhel_for_edge_images_and_configure_automated_management/proc-rhem-auto-reg" title="This content is not included in Mimir.">registered the systems</a> you plan to group with the Insights Inventory application.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+				</li><li class="listitem">
+					From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Groups</strong></span>.
+				</li><li class="listitem"><p class="simpara">
+					In the <span class="strong strong"><strong>Groups</strong></span> page:
+				</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+							Click the group to which you want to add systems from the Inventory. The group page opens, showing the current systems.
+						</li><li class="listitem">
+							Click <span class="guibutton">Add systems</span>. The Add systems window opens.
+						</li><li class="listitem">
+							From the <span class="strong strong"><strong>Immutable (OSTree)</strong></span> tab, select the systems that you want to add.
+						</li><li class="listitem">
+							Click <span class="guibutton">Add systems</span>. A popup alert informs you that the action was successful.
+						</li></ol></div></li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					If adding the multiple systems to the group was successful, you can see the systems that were added to the group.
+				</li></ul></div></section><section class="chapter" id="proc-rhem-remove-system"><div class="titlepage"><div><div><h1 class="title">Chapter 5. Removing a system from a group</h1></div></div></div><p>
+			If you no longer want a system in a group in the Insights Inventory application, you can remove it. For example, if a system no longer needs to be managed with other systems of a group, you can remove it.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have already grouped systems registered with the Insights Inventory application.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+				</li><li class="listitem">
+					From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Groups</strong></span>.
+				</li><li class="listitem">
+					On the <span class="strong strong"><strong>Groups</strong></span> page, use the <span class="strong strong"><strong>Filter by name</strong></span> search box to find the group you want to modify, and then click the name of the group.
+				</li><li class="listitem">
+					Select the systems you want to remove.
+				</li><li class="listitem">
+					In the <span class="strong strong"><strong>Group</strong></span> toolbar, click the <span class="strong strong"><strong>Actions for group details</strong></span> menu, which is three vertical dots.
+				</li><li class="listitem">
+					Click <span class="strong strong"><strong>Remove from group</strong></span>. Then, confirm and click <span class="strong strong"><strong>Remove</strong></span>.
+				</li></ol></div></section><section class="chapter" id="removing-systems-in-a-group-from-group-details-menu"><div class="titlepage"><div><div><h1 class="title">Chapter 6. Removing systems in a group from the Group details view</h1></div></div></div><p>
+			If you no longer want a system in a group in the Insights Inventory application, you can remove it by using the Group details view. For example, if a system no longer needs to be managed with the other systems in a group, you can remove it.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/edge_management/2022/html/create_rhel_for_edge_images_and_configure_automated_management/proc-rhem-auto-reg" title="This content is not included in Mimir.">registered the systems</a> you plan to group with the Insights Inventory application.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+				</li><li class="listitem">
+					From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Groups</strong></span>.
+				</li><li class="listitem"><p class="simpara">
+					In the <span class="strong strong"><strong>Groups</strong></span> page:
+				</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+							Click the group from which you want to remove systems from the Inventory. The <span class="strong strong"><strong>Group</strong></span> page opens, showing the current systems.
+						</li><li class="listitem">
+							From the <span class="strong strong"><strong>Immutable (OSTree)</strong></span> tab, select the systems that you want to remove.
+						</li><li class="listitem"><p class="simpara">
+							Click the <span class="strong strong"><strong>More options (⋮)</strong></span> icon and choose <span class="strong strong"><strong>Remove from group</strong></span>.
+						</p><p class="simpara">
+							A window alert asks that you confirm that you want to remove the system from the group.
+						</p></li><li class="listitem">
+							Click <span class="guibutton">Remove</span>. A popup alert informs you that the action was successful.
+						</li></ol></div></li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					Check that the system is no longer part of the group.
+				</li></ul></div></section><section class="chapter" id="vulnerabilites"><div class="titlepage"><div><div><h1 class="title">Chapter 7. Vulnerabilities</h1></div></div></div><p>
+			You can use the Insights Inventory application to check for vulnerabilities and update systems if necessary to address those vulnerabilities identified by the system.
+		</p><section class="section" id="proc-rhem-checking-vuln"><div class="titlepage"><div><div><h2 class="title">7.1. Checking a system for vulnerabilities</h2></div></div></div><p>
+				You can use the Insights Inventory application to check for CVEs or other vulnerabilities in systems you have registered with the Insights Inventory application.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You have a Red Hat Hybrid Cloud Console account
+					</li><li class="listitem">
+						You have a system registered with the Insights Inventory application.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+					</li><li class="listitem">
+						From the dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Security &gt; Systems</strong></span>.
+					</li><li class="listitem">
+						Check for vulnerabilities for one of your systems. Click the name of the system, then navigate to the system details page and click the <span class="strong strong"><strong>Vulnerability</strong></span> tab.
+					</li></ol></div><p>
+				If there are Common Vulnerabilities and Exposures (CVEs) present in your system, you can address them immediately in the <span class="strong strong"><strong>Vulnerability</strong></span> tab. See <a class="link" href="#proc-rhem-address-vuln" title="7.2. Addressing vulnerabilities in a system">Addressing vulnerabilities in a system</a>.
+			</p></section><section class="section" id="proc-rhem-address-vuln"><div class="titlepage"><div><div><h2 class="title">7.2. Addressing vulnerabilities in a system</h2></div></div></div><p>
+				After you check for vulnerabilities, if a CVE is found, you can remediate it by updating the image from the <span class="strong strong"><strong>Vulnerabilities</strong></span> tab.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You have a Red Hat Hybrid Cloud Console account.
+					</li><li class="listitem">
+						You have a system registered with the Insights Inventory application.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Access <a class="link mimir-link-warn" href="https://console.redhat.com/insights/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> platform and log in.
+					</li><li class="listitem">
+						From the console dashboard, navigate to <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Security &gt; Systems</strong></span>.
+					</li><li class="listitem">
+						In the edge management menu, click <span class="strong strong"><strong>Inventory &gt; Security &gt; Systems</strong></span>.
+					</li><li class="listitem">
+						Click the name of the system, then click the <span class="strong strong"><strong>Vulnerability</strong></span> tab.
+					</li><li class="listitem"><p class="simpara">
+						Click <span class="strong strong"><strong>Update Image</strong></span> and follow the prompts.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Review the details about the update and click <span class="strong strong"><strong>Update Image</strong></span> to build an updated image. The build might take a few minutes.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						After the update completes, the status column shows that an update is available. You can now send the update to the system.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the edge management menu, click <span class="strong strong"><strong>Inventory</strong></span> &gt; <span class="strong strong"><strong>Systems</strong></span>.
+							</li><li class="listitem">
+								Click the name of the system you want to update.
+							</li><li class="listitem">
+								On the system details page, click <span class="strong strong"><strong>Vulnerabilities</strong></span> &gt; <span class="strong strong"><strong>Update system</strong></span>.
+							</li></ol></div></li><li class="listitem">
+						Review the information about the update and then click <span class="strong strong"><strong>Update system</strong></span>.
+					</li></ol></div><div class="formalpara"><p class="title"><strong>Verification</strong></p><p>
+					If the update was successful, after your system reboots, it automatically sends confirmation to the Insights Inventory application. Check the system status on the system details page. While the system is updating, the system status is <code class="literal">Updating</code>. If the update was successful, the status column for the system is <code class="literal">Up to date</code>. If there is an <code class="literal">Error</code> status, click <span class="strong strong"><strong>Error</strong></span> to check the reason. You can click <span class="strong strong"><strong>Retry</strong></span> to attempt to update your system again.
+				</p></div></section></section><section class="chapter" id="proc-rhem-update-groups"><div class="titlepage"><div><div><h1 class="title">Chapter 8. Updating systems in a group</h1></div></div></div><p>
+			If you have several systems using the same image in the edge management application, you can update several systems in a group simultaneously after you update the image. Use the <span class="strong strong"><strong>More options icon (⋮)</strong></span>, select the images that you plan to update. You will to be able to choose the package version to update your images.
+		</p><div class="admonition warning"><div class="admonition_header">Warning</div><div><p>
+				Using RHEL for Edge customized images that were created using the on-site version of RHEL image builder is not supported by the edge management application.
+			</p><p>
+				There is no support for updating an Edge system by using the CLI. You can only update your Edge systems by using the Red Hat Hybrid Cloud Console.
+			</p></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You have a Red Hat Hybrid Cloud Console account.
+				</li><li class="listitem">
+					You have the systems registered with Remote Host Configuration and Management.
+				</li><li class="listitem">
+					You have an updated image that contains the changes you want to push to your systems. For more information, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/edge_management/2022/html-single/create_rhel_for_edge_images_and_configure_automated_management/index#proc-rhem-update-image" title="This content is not included in Mimir.">Updating an image</a>.
+				</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+					Go to the <a class="link mimir-link-warn" href="https://console.redhat.com/edge/fleet-management" title="Mimir does not include content from: console.redhat.com">edge management</a> application in the Red Hat Hybrid Cloud Console platform and log in.
+				</li><li class="listitem">
+					In the edge management menu, click <span class="strong strong"><strong>Inventory</strong></span> &gt; <span class="strong strong"><strong>Groups</strong></span>.
+				</li><li class="listitem">
+					Select the group from the list that contains several systems you want to update.
+				</li><li class="listitem">
+					Select the systems in the group that have the <code class="literal">Update available</code> status and that use the same image. You can check the image each system uses in the <span class="strong strong"><strong>Image</strong></span> column.
+				</li><li class="listitem">
+					In the <span class="strong strong"><strong>Group</strong></span> toolbar, click the <span class="strong strong"><strong>Actions for group details</strong></span> menu, which is three vertical dots.
+				</li><li class="listitem">
+					Click <span class="strong strong"><strong>Update selected</strong></span>.
+				</li><li class="listitem">
+					Review the information about the update. Click <span class="strong strong"><strong>Update system</strong></span>.
+				</li></ol></div><div class="formalpara"><p class="title"><strong>Verification</strong></p><p>
+				Check <span class="strong strong"><strong>Inventory &gt; Groups</strong></span> and click the group from which the updates were triggered. If the update was sent to the system, the system status is <code class="literal">Up to date</code>.
+			</p></div><div class="itemizedlist"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/solutions/6992347" title="This content is not included in Mimir.">How to start the upgrade process of an Edge Management deployed system</a>.
+				</li><li class="listitem">
+					<a class="link mimir-link-warn" href="https://access.redhat.com/articles/7010809" title="This content is not included in Mimir.">Edge Management supportability</a>.
+				</li></ul></div></section><section class="chapter" id="con-rhem-custom-repo"><div class="titlepage"><div><div><h1 class="title">Chapter 9. Managing custom repositories</h1></div></div></div><p>
+			Custom repositories extend the images you build in the edge management application to packages beyond those that Red Hat provides. You can customize the images with custom repositories and custom packages that fit your specific business case. For example, you can add packages from the Extra Packages for Enterprise Linux (EPEL), or any compatible package list. You can update your existing images by adding or removing packages from these custom repositories. You can also remove repositories, and also add repositories from the popular repositories.
+		</p><section class="section" id="proc-rhem-add-custom-repo-app"><div class="titlepage"><div><div><h2 class="title">9.1. Adding a custom repository</h2></div></div></div><p>
+				To add packages from the third-party repository to your customized images, you must first define your repository with third-party information.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You have a RHEL subscription.
+					</li><li class="listitem">
+						You have administrator access to the Red Hat Hybrid Cloud Console web user interface or <span class="strong strong"><strong>repository administrator</strong></span> role.
+					</li><li class="listitem">
+						You have the URL for your custom repository.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Access <a class="link mimir-link-warn" href="https://console.redhat.com/" title="Mimir does not include content from: console.redhat.com">Hybrid Cloud Console</a>.
+					</li><li class="listitem"><p class="simpara">
+						Click <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Content &gt; Repositories</strong></span>.
+					</p><p class="simpara">
+						The <span class="strong strong"><strong>Custom repositories</strong></span> dashboard appears.
+					</p></li><li class="listitem">
+						Click <span class="guibutton">Add repositories</span>. The <span class="strong strong"><strong>Add custom repositories</strong></span> wizard opens.
+					</li><li class="listitem"><p class="simpara">
+						Enter the following information:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								<span class="strong strong"><strong>NAME</strong></span> - mandatory.
+							</li><li class="listitem">
+								<span class="strong strong"><strong>URL</strong></span> - mandatory.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Restrict architecture</strong></span> drop-down menu, select an architecture. You can allow all the architectures or restrict one to your system architecture to prevent incorrect repositories availability.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Restrict OS version</strong></span> drop-down menu select an operating system (OS). You can allow all the RHEL versions or select one for your system version to prevent incorrect repositories being available.
+							</li><li class="listitem">
+								<span class="strong strong"><strong>GPG key</strong></span> - upload the <code class="literal">.txt</code> file with a GPG key or paste the URL or value of an existing GPG key. The GPG key verifies the signed packages of a repository. If you do not provide the GPG key for a repository, your system cannot perform the verification.
+							</li></ol></div></li><li class="listitem">
+						If you want to add another repository, click the <span class="guibutton">Add another repository</span> button and repeat step 3.
+					</li><li class="listitem">
+						Click <span class="guibutton">Save</span>. The Red Hat Hybrid Cloud Console validates the project status. If your repository is marked as <code class="literal">Invalid</code>, check the repository URL that you added.
+					</li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Open the list of custom repositories and verify that the repository you added is listed.
+					</li></ul></div><div class="itemizedlist"><p class="title"><strong>Troubleshooting</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						If your repository is marked as <code class="literal">Invalid</code>, check the repository URL that you added.
+					</li></ul></div></section><section class="section" id="proc-rhem-add-custom-repo-image"><div class="titlepage"><div><div><h2 class="title">9.2. Adding a custom repository to an image</h2></div></div></div><p>
+				You can add a custom repository and the associated packages to an image after it has been created.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You have a Red Hat Hybrid Cloud Console account.
+					</li><li class="listitem">
+						You have built an image in the Red Hat Hybrid Cloud Console and registered it with rhc client that contains custom repositories.
+					</li><li class="listitem">
+						You have added one or more custom repositories. See <a class="link" href="#proc-rhem-add-custom-repo-app" title="9.1. Adding a custom repository">Adding a custom repository</a> for more information.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Access <a class="link mimir-link-warn" href="https://console.redhat.com/" title="Mimir does not include content from: console.redhat.com">Hybrid Cloud Console</a>.
+					</li><li class="listitem"><p class="simpara">
+						Click <span class="strong strong"><strong>Red Hat Insights &gt; RHEL &gt; Inventory &gt; Images</strong></span>.
+					</p><p class="simpara">
+						The Insights Image Builder dashboard appears.
+					</p></li><li class="listitem">
+						Click the <span class="strong strong"><strong>Immutable (OSTree)</strong></span> tab.
+					</li><li class="listitem">
+						Click the name of the image you want to update.
+					</li><li class="listitem">
+						On the image details page, click <span class="strong strong"><strong>Actions</strong></span> &gt; <span class="strong strong"><strong>Create new version</strong></span>. The <span class="strong strong"><strong>Update image</strong></span> wizard opens.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span> on both the <span class="strong strong"><strong>Details</strong></span> and <span class="strong strong"><strong>Options</strong></span> page to view the custom repositories that have been added to the image.
+					</li><li class="listitem"><p class="simpara">
+						On the <span class="strong strong"><strong>Content</strong></span> page, perform the following actions:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								On the <span class="strong strong"><strong>Custom repositories</strong></span> page, select the linked custom repositories you want to add.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>Next</strong></span>.
+							</li><li class="listitem">
+								On the <span class="strong strong"><strong>Additional custom packages</strong></span> page, search and choose the packages you want to add from the repository. If you are using the Fedora example repository <code class="literal"><a class="link mimir-link-warn" href="https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/29/Everything/x86_64/os/" title="Mimir does not include content from: dl.fedoraproject.org">https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/29/Everything/x86_64/os/</a></code>, enter <code class="literal">waf-python3</code> to add the package.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>Next</strong></span>.
+							</li></ol></div></li><li class="listitem">
+						On the <span class="strong strong"><strong>Review</strong></span> page, review your changes and click <span class="strong strong"><strong>Update image</strong></span>.
+					</li></ol></div><div class="formalpara"><p class="title"><strong>Next step</strong></p><p>
+					After the image update completes, you can update systems that are using that image. See <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/edge_management/2022/html-single/create_rhel_for_edge_images_and_configure_automated_management/index#proc-rhem-update-system" title="This content is not included in Mimir.">Updating a system</a> for more information.
+				</p></div></section><section class="section" id="proc-rhem-edit-custom-repo"><div class="titlepage"><div><div><h2 class="title">9.3. Removing a custom repository from an image</h2></div></div></div><p>
+				You can remove custom repositories and the associated packages from an image after it has been created. When you remove a custom repository, the packages associated with that custom repository will also be removed from the image.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You have a Red Hat Hybrid Cloud Console account.
+					</li><li class="listitem">
+						You have built an image in the Red Hat Hybrid Cloud Console and registered it with Remote Host Configuration and Management that contains custom repositories.
+					</li><li class="listitem">
+						You have added one or more custom repositories. See <a class="link" href="#proc-rhem-add-custom-repo-app" title="9.1. Adding a custom repository">Adding a custom repository to the edge management application</a> for more information.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Access <a class="link mimir-link-warn" href="https://console.redhat.com/" title="Mimir does not include content from: console.redhat.com">Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Settings icon (⚙)</strong></span> in the top right and, from the menu, select <span class="strong strong"><strong>Settings</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> menu, select <span class="strong strong"><strong>Repositories</strong></span>.
+					</li><li class="listitem">
+						From the <span class="strong strong"><strong>Your repositories</strong></span> tab, select the <span class="guibutton">Custom</span>.
+					</li><li class="listitem"><p class="simpara">
+						From the available repositories, select the repository to delete.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Click the <span class="strong strong"><strong>More options (⋮)</strong></span> icon and choose <span class="strong strong"><strong>Delete</strong></span>.
+							</li><li class="listitem">
+								From the <span class="strong strong"><strong>Remove repository</strong></span> window, confirm that you want to delete the repository by clicking <span class="guibutton">Remove</span>.
+							</li></ol></div></li></ol></div></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm140420702370544"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

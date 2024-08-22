@@ -1,0 +1,117 @@
+{
+  "version": {
+    "name": "1-latest",
+    "slug": "1-latest",
+    "url": "/documentation/en-us/hybrid_committed_spend/1-latest"
+  },
+  "titles": [
+    {
+      "titleId": "0c734eae-68a7-408d-a6be-cab8ec7a583c",
+      "modified": 1722024148,
+      "name": "Getting started with hybrid committed spend",
+      "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/getting_started_with_hybrid_committed_spend/index",
+      "category": {
+        "weight": 50,
+        "name": "Hybrid committed spend"
+      },
+      "description": "Learn about and configure hybrid committed spend",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/getting_started_with_hybrid_committed_spend/index",
+        "slug": "getting_started_with_hybrid_committed_spend",
+        "id": "b74d17b86b2de75e324d5d2b3f5cc173.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/hybrid_committed_spend/1-latest/pdf/getting_started_with_hybrid_committed_spend/Hybrid_committed_spend-1-latest-Getting_started_with_hybrid_committed_spend-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/hybrid_committed_spend/1-latest/pdf/getting_started_with_hybrid_committed_spend/hybrid_committed_spend-1-latest-getting_started_with_hybrid_committed_spend-en-us.pdf",
+        "relative_path": "/documentation/en-us/hybrid_committed_spend/1-latest/pdf/getting_started_with_hybrid_committed_spend/hybrid_committed_spend-1-latest-getting_started_with_hybrid_committed_spend-en-us.pdf"
+      },
+      "toc": {
+        "id": "dd3a53ec24d4118be45165600c47c3dc.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "730cb062-f4b2-4485-9f60-b57b9b0fc0bf",
+      "modified": 1722024159,
+      "name": "Integrating Amazon Web Services (AWS) data into hybrid committed spend",
+      "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_amazon_web_services_aws_data_into_hybrid_committed_spend/index",
+      "category": {
+        "weight": 51,
+        "name": "Adding Sources"
+      },
+      "description": "Learn how to add and configure your AWS integrations",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_amazon_web_services_aws_data_into_hybrid_committed_spend/index",
+        "slug": "integrating_amazon_web_services_aws_data_into_hybrid_committed_spend",
+        "id": "f3359c13b2ee2d830bb42f9408dbe309.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_amazon_web_services_aws_data_into_hybrid_committed_spend/Hybrid_Committed_Spend-1-latest-Integrating_Amazon_Web_Services_AWS_data_into_hybrid_committed_spend-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_amazon_web_services_aws_data_into_hybrid_committed_spend/hybrid_committed_spend-1-latest-integrating_amazon_web_services_aws_data_into_hybrid_committed_spend-en-us.pdf",
+        "relative_path": "/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_amazon_web_services_aws_data_into_hybrid_committed_spend/hybrid_committed_spend-1-latest-integrating_amazon_web_services_aws_data_into_hybrid_committed_spend-en-us.pdf"
+      },
+      "toc": {
+        "id": "4d45356ea9245e9d582b7b57759cac2a.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "7226d1f6-2c05-4bb1-8083-61dc30a9d7c3",
+      "modified": 1722024185,
+      "name": "Integrating Microsoft Azure data into hybrid committed spend",
+      "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_microsoft_azure_data_into_hybrid_committed_spend/index",
+      "category": {
+        "weight": 51,
+        "name": "Adding Sources"
+      },
+      "description": "Learn how to add and configure your Microsoft Azure integrations",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_microsoft_azure_data_into_hybrid_committed_spend/index",
+        "slug": "integrating_microsoft_azure_data_into_hybrid_committed_spend",
+        "id": "0a8abe9c9762555538336f486bf455a0.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_microsoft_azure_data_into_hybrid_committed_spend/Hybrid_committed_spend-1-latest-Integrating_Microsoft_Azure_data_into_hybrid_committed_spend-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_microsoft_azure_data_into_hybrid_committed_spend/hybrid_committed_spend-1-latest-integrating_microsoft_azure_data_into_hybrid_committed_spend-en-us.pdf",
+        "relative_path": "/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_microsoft_azure_data_into_hybrid_committed_spend/hybrid_committed_spend-1-latest-integrating_microsoft_azure_data_into_hybrid_committed_spend-en-us.pdf"
+      },
+      "toc": {
+        "id": "cf15f2847fc6929ed27b49fafa8c9cb0.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "bbe25b8a-c37a-4f9e-85f8-bac8f7e21b25",
+      "modified": 1722024172,
+      "name": "Integrating Google Cloud data into hybrid committed spend",
+      "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_google_cloud_data_into_hybrid_committed_spend/index",
+      "category": {
+        "weight": 51,
+        "name": "Adding Sources"
+      },
+      "description": "Learn how to add and configure your Google Cloud integrations",
+      "weight": 52,
+      "singlePage": {
+        "url": "/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_google_cloud_data_into_hybrid_committed_spend/index",
+        "slug": "integrating_google_cloud_data_into_hybrid_committed_spend",
+        "id": "3289bc828d13b74e8da47c18fd80f8e8.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_google_cloud_data_into_hybrid_committed_spend/Hybrid_committed_spend-1-latest-Integrating_Google_Cloud_data_into_hybrid_committed_spend-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_google_cloud_data_into_hybrid_committed_spend/hybrid_committed_spend-1-latest-integrating_google_cloud_data_into_hybrid_committed_spend-en-us.pdf",
+        "relative_path": "/documentation/en-us/hybrid_committed_spend/1-latest/pdf/integrating_google_cloud_data_into_hybrid_committed_spend/hybrid_committed_spend-1-latest-integrating_google_cloud_data_into_hybrid_committed_spend-en-us.pdf"
+      },
+      "toc": {
+        "id": "55f33ccd416befe00c9340999051a7ea.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

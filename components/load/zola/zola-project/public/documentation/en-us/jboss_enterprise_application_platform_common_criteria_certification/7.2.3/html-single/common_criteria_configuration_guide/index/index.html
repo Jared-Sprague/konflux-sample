@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Common Criteria Configuration Guide - JBoss Enterprise Application Platform Common Criteria Certification 7.2.3
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Common Criteria Certification" />
+<meta name="documentation_version" content="7.2.3" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2021-11-17T19:37:49.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/">JBoss Enterprise Application Platform Common Criteria Certification</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/">7.2.3</a>
+                                
+                                
+                                Common Criteria Configuration Guide
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Common Criteria Configuration Guide</a>
+                    </li><li>
+                        <a href="#introduction">
+                            1. Introduction
+                        </a><ol>
+                <li>
+                        <a href="#Purpose_of_this_Document">
+                            1.1. Purpose of this Document
+                        </a>
+                    </li><li>
+                        <a href="#JBoss_EAP-specific_conventions">
+                            1.2. JBoss EAP-specific conventions
+                        </a>
+                    </li><li>
+                        <a href="#What_is_a_Common_Criteria_Compliant_System">
+                            1.3. What is a Common Criteria Compliant System?
+                        </a>
+                    </li><li>
+                        <a href="#Certified_Documentation">
+                            1.4. Certified Documentation
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Requirements_for_the_Evaluated_Configuration">
+                            2. Requirements for the Evaluated Configuration
+                        </a><ol>
+                <li>
+                        <a href="#software_requirements">
+                            2.1. Software Requirements
+                        </a><ol>
+                <li>
+                        <a href="#Operating_System">
+                            2.1.1. Operating System
+                        </a>
+                    </li><li>
+                        <a href="#Database_JDBC_Drivers">
+                            2.1.2. Database JDBC Drivers
+                        </a>
+                    </li><li>
+                        <a href="#ldap_servers">
+                            2.1.3. LDAP Servers
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Physical_Requirements">
+                            2.2. Physical Requirements
+                        </a>
+                    </li><li>
+                        <a href="#Personnel_Requirements">
+                            2.3. Personnel Requirements
+                        </a>
+                    </li><li>
+                        <a href="#Connectivity_Requirements">
+                            2.4. Connectivity Requirements
+                        </a><ol>
+                <li>
+                        <a href="#Cluster_Connectivity_Requirements">
+                            2.4.1. Cluster Connectivity Requirements
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Downloading_and_Verifying_the_Packages">
+                            3. Downloading and Verifying the Packages
+                        </a><ol>
+                <li>
+                        <a href="#About_the_Red_Hat_Customer_Portal">
+                            3.1. About the Red Hat Customer Portal
+                        </a>
+                    </li><li>
+                        <a href="#Verify_the_Authenticity_of_the_Download_Site">
+                            3.2. Verify the Authenticity of the Download Site
+                        </a>
+                    </li><li>
+                        <a href="#Verify_the_Downloaded_Files">
+                            3.3. Verify the Downloaded Files
+                        </a>
+                    </li><li>
+                        <a href="#Zip_Installation">
+                            3.4. Zip Installation
+                        </a><ol>
+                <li>
+                        <a href="#Download_JBoss_EAP_7_Zip_Installation1">
+                            3.4.1. Download JBoss EAP
+                        </a>
+                    </li><li>
+                        <a href="#Install_JBoss_EAP_7_ZIP_Installation">
+                            3.4.2. Install JBoss EAP (ZIP Installation)
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#RPM_Installation_from_ISO">
+                            3.5. RPM Installation from ISO
+                        </a><ol>
+                <li>
+                        <a href="#Download_ISO">
+                            3.5.1. Download JBoss EAP 7 ISO
+                        </a>
+                    </li><li>
+                        <a href="#Install_ISO">
+                            3.5.2. Install JBoss EAP 7 from ISO
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Confirming_the_Version_of_your_JBoss_EAP_7_Installation">
+                            3.6. Confirming the Version of your JBoss EAP 7 Installation
+                        </a>
+                    </li><li>
+                        <a href="#Updating_Common_Criteria_Compliant_JBoss_EAP_7_Installation">
+                            3.7. Updating a Common Criteria Compliant JBoss EAP 7 Installation
+                        </a><ol>
+                <li>
+                        <a href="#Applying_Patches_to_a_Zip_Installation">
+                            3.7.1. Applying Patches to a ZIP Installation
+                        </a>
+                    </li><li>
+                        <a href="#Applying_Patches_to_a_RPM_Installation_from_ISO">
+                            3.7.2. Applying Patches to an RPM Installation from ISO
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Start_and_Stop_JBoss_EAP_7">
+                            4. Start and Stop JBoss EAP 7
+                        </a><ol>
+                <li>
+                        <a href="#Start_JBoss_EAP_7">
+                            4.1. Start JBoss EAP 7
+                        </a>
+                    </li><li>
+                        <a href="#Start_JBoss_EAP_7_as_a_Standalone_Server">
+                            4.2. Start JBoss EAP 7 as a Standalone Server
+                        </a>
+                    </li><li>
+                        <a href="#Start_JBoss_EAP_7_as_a_Managed_Domain">
+                            4.3. Start JBoss EAP 7 as a Managed Domain
+                        </a>
+                    </li><li>
+                        <a href="#Start_EAP_with_an_Alternative_Configuration">
+                            4.4. Start JBoss EAP 7 with an Alternative Configuration
+                        </a>
+                    </li><li>
+                        <a href="#Reference_of_Switches_and_Arguments_to_pass_at_Server_Runtime1">
+                            4.5. Reference of Switches and Arguments to pass at Server Runtime
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Configuration_Requirements">
+                            5. Configuration Requirements
+                        </a><ol>
+                <li>
+                        <a href="#network_configuration">
+                            5.1. Network Configuration
+                        </a><ol>
+                <li>
+                        <a href="#Network_Interfaces">
+                            5.1.1. Network Interfaces
+                        </a>
+                    </li><li>
+                        <a href="#Network_Configuration">
+                            5.1.2. Network Interface Configuration
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Security_Configuration">
+                            5.2. Security Configuration
+                        </a><ol>
+                <li>
+                        <a href="#About_Authorization1">
+                            5.2.1. About Authorization
+                        </a>
+                    </li><li>
+                        <a href="#Java_Security_Manager">
+                            5.2.2. Java Security Manager
+                        </a>
+                    </li><li>
+                        <a href="#EJB_Authorization_Policy">
+                            5.2.3. EJB Authorization Policy
+                        </a><ol>
+                <li>
+                        <a href="#enabling_jacc_using_elytron">
+                            5.2.3.1. Enabling JACC Using the elytron Subsystem
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#elytron_subsystem">
+                            5.3. Elytron Subsystem
+                        </a><ol>
+                <li>
+                        <a href="#adding_and_removing_the_elytron_subsystem">
+                            5.3.1. Adding and Removing the Elytron Subsystem
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Database_Configuration1">
+                            5.4. Database Configuration
+                        </a>
+                    </li><li>
+                        <a href="#Guidance_on_Configuring_Java_Security_Permissions">
+                            5.5. Guidance on Configuring Java Security Permissions
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Development_Guide_for_the_Common_Criteria_Certified_System">
+                            6. Development Guide for the Common Criteria Certified System
+                        </a><ol>
+                <li>
+                        <a href="#Enterprise_Application">
+                            6.1. Enterprise Application
+                        </a>
+                    </li><li>
+                        <a href="#General_Restrictions1">
+                            6.2. General Restrictions
+                        </a>
+                    </li><li>
+                        <a href="#Developer_Advice_for_User_Credentials">
+                            6.3. Developer Advice for User Credentials
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Overview_of_the_Security_Functions">
+                            7. Overview of the Security Functions
+                        </a><ol>
+                <li>
+                        <a href="#Access_Control3">
+                            7.1. Access Control
+                        </a>
+                    </li><li>
+                        <a href="#Role-Based_Access_Control_for_Management_Interfaces">
+                            7.2. Role-Based Access Control for Management Interfaces
+                        </a>
+                    </li><li>
+                        <a href="#Audit">
+                            7.3. Audit
+                        </a>
+                    </li><li>
+                        <a href="#Clustering3">
+                            7.4. Clustering
+                        </a>
+                    </li><li>
+                        <a href="#Identification_and_Authentication">
+                            7.5. Identification and Authentication
+                        </a>
+                    </li><li>
+                        <a href="#Transaction_Rollback">
+                            7.6. Transaction Rollback
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm140187692474688">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--common_criteria_configuration_guide">
+            <h1 class="title">Common Criteria Configuration Guide</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140187698684656"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Common Criteria Certification</span> <span class="productnumber">7.2.3</span></div><div><h2 class="subtitle">For Use with Red Hat JBoss Enterprise Application Platform 7</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services </span></div></div><div><a href="#idm140187692474688">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This book describes configuring and securing Red Hat JBoss Enterprise Application Platform 7.2.3 to meet Common Criteria EAL4 certification.
+			</div></div></div></div><hr/></div><section class="chapter" id="introduction"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Introduction</h1></div></div></div><section class="section" id="Purpose_of_this_Document"><div class="titlepage"><div><div><h2 class="title">1.1. Purpose of this Document</h2></div></div></div><p>
+				This document provides guidance to administrators and application developers who wish to use Red Hat JBoss Enterprise Application Platform 7 in a certified, Common Criteria compliant, secure configuration.
+			</p><p>
+				This document is intended to be self-contained in addressing the most important issues at a high level, and refers to existing documentation where more details are needed. Knowledge of the Common Criteria is not required for readers of this document.
+			</p><p>
+				JBoss EAP 7 is the subject of this document as the Target of Evaluation (TOE) for Common Criteria certification. JBoss EAP 7 has been evaluated under Common Criteria version 3.1 at level of assurance EAL4. This provides assurance that this product has been structurally tested.
+			</p><p>
+				This chapter contains a brief introduction to the Common Criteria certification and the structure of this book.
+			</p><p>
+				<a class="link" href="#Requirements_for_the_Evaluated_Configuration" title="Chapter 2. Requirements for the Evaluated Configuration">Requirements for the Evaluated Configuration</a> contains the requirements for deploying the certified product.
+			</p><p>
+				<a class="link" href="#Downloading_and_Verifying_the_Packages" title="Chapter 3. Downloading and Verifying the Packages">Downloading and Verifying the Packages</a> contains the steps that are required to ensure you are using the certified version of JBoss EAP 7.
+			</p><p>
+				<a class="link" href="#Start_and_Stop_JBoss_EAP_7" title="Chapter 4. Start and Stop JBoss EAP 7">Start and Stop JBoss EAP 7</a> provides instructions on how to start and stop the server, and the different modes of operation.
+			</p><p>
+				<a class="link" href="#Development_Guide_for_the_Common_Criteria_Certified_System" title="Chapter 6. Development Guide for the Common Criteria Certified System">Development Guide for the Common Criteria Certified System</a> contains guidelines for developers creating applications for JBoss EAP 7.
+			</p><p>
+				<a class="link" href="#Overview_of_the_Security_Functions" title="Chapter 7. Overview of the Security Functions">Overview of the Security Functions</a> contains the details of the security implementation and usage limitations of JBoss EAP 7.
+			</p><p>
+				Should there be any discrepancy between information contained in this guide and any other product documentation, this guide takes precedence; it addresses the requirements for the evaluated configuration of JBoss EAP 7.
+			</p></section><section class="section" id="JBoss_EAP-specific_conventions"><div class="titlepage"><div><div><h2 class="title">1.2. JBoss EAP-specific conventions</h2></div></div></div><p>
+				All instances of <code class="literal">EAP_HOME</code> in this guide refer to the JBoss EAP root installation directory. For example, if you used the ZIP installation package and extracted the JBoss EAP binary to your Linux <code class="literal">/home/USER</code> directory, EAP_HOME refers to the <code class="literal">/home/USER/jboss-eap-[version]/</code> directory.
+			</p><p>
+				See <code class="literal">About the Use of EAP_HOME in this Document</code> topic in the <span class="emphasis"><em>Installation Guide</em></span> for more information on this.
+			</p></section><section class="section" id="What_is_a_Common_Criteria_Compliant_System"><div class="titlepage"><div><div><h2 class="title">1.3. What is a Common Criteria Compliant System?</h2></div></div></div><p>
+				The Common Criteria for Information Technology Security Evaluation, usually known as Common Criteria or CC, is an internationally-recognized standard (ISO/IEC 15408) used as the basis for independent evaluation of the security properties of an IT product.
+			</p><p>
+				Common Criteria provides consumers with an impartial security assurance of a product to predefined levels. These levels range from EAL1 to EAL7, each placing increased demands on the developer for evidence of testing, in turn providing increased assurance within the product for consumers.
+			</p><p>
+				Under the Common Criteria Recognition Arrangement (CCRA), members agree to recognize Common Criteria certificates that have been produced by any certificate authorizing participant, in accordance with the terms laid out in the CCRA. Currently, the CCRA is comprised of more than 20 member nations: Australia, Austria, Canada, the Czech Republic, Finland, France, Germany, Greece, Hungary, India, Israel, Italy, Japan, the Netherlands, New Zealand, Norway, the Republic of Singapore, Spain, the United Kingdom, and the United States amongst others. New members are expected to join in the near future.
+			</p><p>
+				A system can be considered to be <span class="emphasis"><em>CC compliant</em></span> if it matches an evaluated and certified configuration. This implies various requirements concerning hardware and software, as well as requirements concerning the operating environment, users, and the ongoing operating procedures.
+			</p><p>
+				You can find further information on Common Criteria at <a class="link mimir-link-warn" href="http://www.commoncriteriaportal.org/" title="Mimir does not include content from: www.commoncriteriaportal.org">the Common Criteria Portal</a>.
+			</p></section><section class="section" id="Certified_Documentation"><div class="titlepage"><div><div><h2 class="title">1.4. Certified Documentation</h2></div></div></div><p>
+				When installing, configuring, and operating JBoss EAP 7 in a Common Criteria evaluated configuration, you must only refer to the product documentation authorized for use with this Common Criteria certification.
+			</p><p>
+				The product documentation bundle is available in two certified formats from the Red Hat Customer Portal:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						PDF documentation bundle
+					</li><li class="listitem">
+						Online
+					</li></ul></div><p>
+				All references to JBoss EAP documentation in this guide refer to the guides contained in the certified formats.
+			</p><div class="admonition warning"><div class="admonition_header">Warning</div><div><p>
+					When operating an evaluated configuration, you must refer <span class="emphasis"><em>only</em></span> to the Common Criteria version of the documentation for JBoss EAP 7. The standard product documentation version may contain information that could result in an evaluated configuration certification breach.
+				</p></div></div></section></section><section class="chapter" id="Requirements_for_the_Evaluated_Configuration"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Requirements for the Evaluated Configuration</h1></div></div></div><section class="section" id="software_requirements"><div class="titlepage"><div><div><h2 class="title">2.1. Software Requirements</h2></div></div></div><section class="section" id="Operating_System"><div class="titlepage"><div><div><h3 class="title">2.1.1. Operating System</h3></div></div></div><p>
+					A full range of platform tests have been performed on the following tested configurations.
+				</p><div class="informaltable"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"><!--Empty--></col><col style="width: 10%; " class="col_2"><!--Empty--></col><col style="width: 10%; " class="col_3"><!--Empty--></col><col style="width: 10%; " class="col_4"><!--Empty--></col><col style="width: 10%; " class="col_5"><!--Empty--></col><col style="width: 10%; " class="col_6"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140187692625200" scope="col">Operating System</th><th align="left" valign="top" id="idm140187698424560" scope="col">OracleJDK 1.8.0</th><th align="left" valign="top" id="idm140187698423472" scope="col">IBMJDK 1.8.0</th><th align="left" valign="top" id="idm140187698422384" scope="col">OpenJDK 1.8.0</th><th align="left" valign="top" id="idm140187698421296" scope="col">Oracle JDK 11</th><th align="left" valign="top" id="idm140187698420208" scope="col">OpenJDK 11</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140187692625200"> <p>
+									Red Hat Enterprise Linux 6 x86_64
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698424560"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698423472"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698422384"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698421296"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698420208"> </td></tr><tr><td align="left" valign="top" headers="idm140187692625200"> <p>
+									Red Hat Enterprise Linux 7 x86_64
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698424560"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698423472"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698422384"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698421296"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698420208"> <p>
+									X
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692625200"> <p>
+									Solaris 11 x86_64
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698424560"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698423472"> </td><td align="left" valign="top" headers="idm140187698422384"> </td><td align="left" valign="top" headers="idm140187698421296"> </td><td align="left" valign="top" headers="idm140187698420208"> </td></tr><tr><td align="left" valign="top" headers="idm140187692625200"> <p>
+									Solaris 11 SPARC64
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698424560"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698423472"> </td><td align="left" valign="top" headers="idm140187698422384"> </td><td align="left" valign="top" headers="idm140187698421296"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698420208"> </td></tr><tr><td align="left" valign="top" headers="idm140187692625200"> <p>
+									Windows Server 2012 R2 Standard x86_64
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698424560"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698423472"> </td><td align="left" valign="top" headers="idm140187698422384"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698421296"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698420208"> <p>
+									X
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692625200"> <p>
+									Windows Server 2016 x86_64
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698424560"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698423472"> </td><td align="left" valign="top" headers="idm140187698422384"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698421296"> <p>
+									X
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187698420208"> <p>
+									X
+								</p>
+								 </td></tr></tbody></table></div></section><section class="section" id="Database_JDBC_Drivers"><div class="titlepage"><div><div><h3 class="title">2.1.2. Database JDBC Drivers</h3></div></div></div><p>
+					JBoss EAP 7 is evaluated with the following relational database systems. Only these database systems with the specific driver versions are acceptable for use with JBoss EAP 7.
+				</p><div class="table" id="idm140187698711280"><p class="title"><strong>Table 2.1. Only the following databases and database drivers are supported.</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"><!--Empty--></col><col style="width: 50%; " class="col_2"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140187692530768" scope="col">Databases</th><th align="left" valign="top" id="idm140187692529680" scope="col">JDBC Driver Versions</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									IBM DB2 Enterprise e11.1 (FP1 11.1.1.1)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									IBM DB2 JDBC Universal Driver Architecture 4.24.92
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									Oracle 12cR1 RAC (12.1.0.2.0)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									Oracle JDBC Driver v12.2.0.1 (ojdbc8.jar)
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									MySQL 5.7 (5.7.17)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									MySQL Connector/J 8.0.12
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									MariaDB 10.1.19
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									MariaDB Connector/J 2.2.4
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									MariaDB Galera Cluster 10.1.19
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									MariaDB Connector/J 2.2.4
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									Microsoft SQL Server 2016 SP1
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									Microsoft JDBC Drivers 6.4.0
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									PostgreSQL 10.1
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									JDBC4 Postgresql Driver, Version 42.2.2
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									Enterprise DB Postgres Plus Advanced Server 10.1 (10.1.5)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									Postgres Plus Advanced Server Driver 10.1 (10.0.0.1)
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187692530768"> <p>
+									Sybase ASE 16.0 (SP02)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187692529680"> <p>
+									JDBC™/16.0 GA (Build 27008)/P/EBF22326
+								</p>
+								 </td></tr></tbody></table></div></div><p>
+					For information on how to configure each database with JBoss EAP 7, refer to <a class="link" href="#Database_Configuration1" title="5.4. Database Configuration">Database Configuration</a>.
+				</p></section><section class="section" id="ldap_servers"><div class="titlepage"><div><div><h3 class="title">2.1.3. LDAP Servers</h3></div></div></div><p>
+					JBoss EAP 7 is evaluated with the following LDAP servers. Only these LDAP servers are acceptable for use with JBoss EAP 7.
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							Red Hat Directory Server 10.1
+						</li><li class="listitem">
+							Red Hat Directory Server 10.0
+						</li><li class="listitem">
+							Microsoft Active Directory 2012 R2
+						</li><li class="listitem">
+							Microsoft Active Directory 2016
+						</li></ul></div></section></section><section class="section" id="Physical_Requirements"><div class="titlepage"><div><div><h2 class="title">2.2. Physical Requirements</h2></div></div></div><p>
+				The hardware and software executing JBoss EAP 7, as well as the software critical to security policy enforcement must be protected from modification by unauthorized parties, whether internal or external. Reasonable physical security measures to ensure that unauthorized persons do not have physical access to the hardware running the JBoss EAP 7 software must be implemented.
+			</p></section><section class="section" id="Personnel_Requirements"><div class="titlepage"><div><div><h2 class="title">2.3. Personnel Requirements</h2></div></div></div><p>
+				There must be one or more competent individuals who are assigned to manage JBoss EAP 7, its environment, and the security of the information it contains. The system administrator personnel must not be carelessly or willfully negligent, or hostile, and follow and abide by the instructions provided by the administrator documentation.
+			</p><p>
+				The developer of user applications executed by JBoss EAP 7, including web server applications and enterprise beans, must be trustworthy and comply with all instructions set forth by the user guidance and evaluated configuration guidance of JBoss EAP 7.
+			</p></section><section class="section" id="Connectivity_Requirements"><div class="titlepage"><div><div><h2 class="title">2.4. Connectivity Requirements</h2></div></div></div><p>
+				The operating system and the Java virtual machine operate according to their specification. These external systems shall be configured in accordance with this guidance.
+			</p><p>
+				Any other system with which JBoss EAP 7 communicates is assumed to be under the same management control and operate under the same security policy constraints as JBoss EAP 7.
+			</p><section class="section" id="Cluster_Connectivity_Requirements"><div class="titlepage"><div><div><h3 class="title">2.4.1. Cluster Connectivity Requirements</h3></div></div></div><p>
+					JBoss EAP 7 instances must operate in a network segment that is logically separated from any other network segment by use of a packet filtering mechanism. This packet filter must only allow incoming communication that meets both the following criteria:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							The network protocol is TCP
+						</li><li class="listitem">
+							The destination port is 8080 or 8443
+						</li></ul></div><p>
+					All outgoing communication from one of the JBoss EAP 7 instances must be allowed.
+				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						There are three defined interfaces to separate trusted and untrusted network traffic: public, cluster, and internal. Refer to <a class="link" href="#Network_Interfaces" title="5.1.1. Network Interfaces">Network Interfaces</a> for more information.
+					</p></div></div><p>
+					Each cluster node communicates with the other nodes by means of standard network sockets. Whenever this occurs the client side of each connection has a port number assigned to it by the host operating system from a range of ports that are reserved for client sockets. These ports are referred to as dynamic or ephemeral ports. They are only used by a connection until it is closed. Once the connection is closed the port is made available for use by other new client connections. Refer to your operating system documentation if you need to configure this port range.
+				</p></section></section></section><section class="chapter" id="Downloading_and_Verifying_the_Packages"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Downloading and Verifying the Packages</h1></div></div></div><p>
+			JBoss EAP 7 is available in ZIP and RPM formats. ZIP files and ISO with RPMs are available from the Red Hat Customer Portal at <a class="link" href="/">https://access.redhat.com</a>.
+		</p><p>
+			To guarantee authenticity of the downloaded software, verify the authenticity of the files and their source.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				Other formats, like Installer Installation or containerized image for JBoss EAP that is designed for use with OpenShift, are not supported for a CC compliant system.
+			</p></div></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+				Unless specifically stated otherwise, the screen shots and other samples shown in this section are examples only. The actual presentation of the downloaded websites may change over time.
+			</p></div></div><section class="section" id="About_the_Red_Hat_Customer_Portal"><div class="titlepage"><div><div><h2 class="title">3.1. About the Red Hat Customer Portal</h2></div></div></div><p>
+				The <span class="emphasis"><em>Red Hat Customer Portal</em></span> is the centralized platform for Red Hat knowledge and subscription resources. Use the <span class="emphasis"><em>Red Hat Customer Portal</em></span> to:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Manage and maintain Red Hat entitlements and support contracts
+					</li><li class="listitem">
+						Download officially-supported software
+					</li><li class="listitem">
+						Access product documentation and the Red Hat Knowledgebase
+					</li><li class="listitem">
+						Contact Red Hat Support
+					</li><li class="listitem">
+						File bugs against Red Hat products
+					</li></ul></div><p>
+				The Customer Portal is available here: <a class="link" href="/">https://access.redhat.com</a>.
+			</p></section><section class="section" id="Verify_the_Authenticity_of_the_Download_Site"><div class="titlepage"><div><div><h2 class="title">3.2. Verify the Authenticity of the Download Site</h2></div></div></div><p>
+				Red Hat Customer Portal and Red Hat Network are both secure sites. This is indicated by the 'security padlock' icon in the browser status bar.
+			</p><p>
+				If the 'security padlock' is not visible, check the authenticity of the site by viewing the identity certificate.
+			</p><div class="orderedlist"><p class="title"><strong>Checking Site Security with Firefox</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the address bar, click the padlock icon.
+					</li><li class="listitem">
+						From the pop-up box, click <span class="strong strong"><strong>More Information</strong></span>.
+					</li><li class="listitem">
+						From the Page Info window, click <span class="strong strong"><strong>Security</strong></span>.
+					</li><li class="listitem">
+						The certificate displays details such as who owns the site, who issued the certificate, when it was issued, when it expires and fingerprint verification strings.
+					</li></ol></div><div class="figure" id="idm140187698576272"><p class="title"><strong>Figure 3.1. Example of the Red Hat Network SSL Certificate</strong></p><div class="figure-contents"><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-7.2.3-Common_Criteria_Configuration_Guide-en-US/images/859509f55a783ac8966ec910c12a155e/4416.png" alt="Example of the Red Hat Network SSL Certificate" /></div></div></div><p>
+				If neither of the lock icons are present in your browser and a verified certificate cannot be found, you may not be connected to the correct site. If you are unable to reach the secure Red Hat Customer Portal site, contact Red Hat Support and report this problem.
+			</p></section><section class="section" id="Verify_the_Downloaded_Files"><div class="titlepage"><div><div><h2 class="title">3.3. Verify the Downloaded Files</h2></div></div></div><p>
+				Each downloaded file needs to be checked to verify that it is for the certified version of JBoss EAP <span class="emphasis"><em>PROD_VER</em></span>. The Red Hat Customer Portal lists the SHA-256 hash sum for each file. If the SHA-256 hash sum of a downloaded file matches that quoted on the Red Hat Customer Portal, you can assume it is verified.
+			</p><p>
+				For JBoss downloads, you can view the <code class="literal">SHA-256</code> hash sum on the <span class="strong strong"><strong>Software Details</strong></span> page for each file, by clicking on the file name in the <span class="strong strong"><strong>Download File</strong></span> list. For Red Hat Enterprise Linux downloads, the <code class="literal">SHA-256</code> hash sum is listed next to the ISO download link.
+			</p><p>
+				On Apple OSX, the <code class="literal">sha256</code> command must be replaced with <code class="literal">shasum -a 256</code>. On Microsoft Windows, a third-party SHA256 hash sum utility is required as there is no native utility.
+			</p><div class="orderedlist"><p class="title"><strong>Using the sha256sum tool on Linux or Unix</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Open a terminal, and navigate to the directory where the file was downloaded.
+					</li><li class="listitem">
+						Execute the <code class="literal">sha256sum</code> command (or equivalent) on the file.
+					</li></ol></div><p>
+				For example:
+			</p><pre class="screen">$ sha256sum jboss-eap-7.2.0.zip
+682d2e7168c9f09cc019dce8f5a70e61169e2dc438dc44ba7352aba4e0634e20 *jboss-eap-7.2.0.zip</pre><p>
+				The value generated by the <code class="literal">sha256sum</code> utility must match the value displayed on the Red Hat Customer Portal for the file. If they are not the same, your download is either incomplete or corrupt, and you will need to download the file again. If the checksum will still not successfully validate after several attempted downloads, contact Red Hat Support for assistance.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					To generate a checksum for a downloaded file, the <code class="literal">sha256sum</code> command can be used on most Linux and Unix operating systems. Mac OS X includes the equivalent command <code class="literal">shasum -a 256</code>.
+				</p><p>
+					If you are using Microsoft Windows you must download a third party utility to perform these steps because Microsoft Windows does not include a <code class="literal">SHA-256</code> checksum tool.
+				</p></div></div></section><section class="section" id="Zip_Installation"><div class="titlepage"><div><div><h2 class="title">3.4. Zip Installation</h2></div></div></div><p>
+				The JBoss EAP 7 ZIP file is available from the <a class="link" href="/">Customer Portal</a>. The ZIP file installation is platform-independent and is the preferred way to install JBoss EAP 7 on all supported platforms.
+			</p><section class="section" id="Download_JBoss_EAP_7_Zip_Installation1"><div class="titlepage"><div><div><h3 class="title">3.4.1. Download JBoss EAP</h3></div></div></div><p>
+					This topic covers the steps to download the required archive.
+				</p><div class="orderedlist"><p class="title"><strong>Download the ZIP file</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Log into the Red Hat Customer Portal at <a class="link" href="/">https://access.redhat.com</a>.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Downloads</strong></span>.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Red Hat JBoss Enterprise Application Platform</strong></span> in the <span class="strong strong"><strong>Product Downloads</strong></span> list.
+						</li><li class="listitem">
+							Select 7.2 from the <span class="strong strong"><strong>Version</strong></span> drop-down menu.
+						</li><li class="listitem">
+							Select Red Hat JBoss Enterprise Application Platform 7.2.0 from the list of Releases and click <span class="strong strong"><strong>Download</strong></span>.
+						</li><li class="listitem">
+							Select Red Hat JBoss Enterprise Application Platform 7.2 Update 03 from the list of Patches and click <span class="strong strong"><strong>Download</strong></span>.
+						</li><li class="listitem">
+							When the downloads have finished, verify that the checksum of the downloaded files match the checksum listed on the Customer Portal. See <a class="link" href="#Verify_the_Downloaded_Files" title="3.3. Verify the Downloaded Files">Verify the Downloaded Files</a>.
+						</li></ol></div><p>
+					JBoss EAP 7 has been downloaded successfully to the target machine, and is ready for installation.
+				</p></section><section class="section" id="Install_JBoss_EAP_7_ZIP_Installation"><div class="titlepage"><div><div><h3 class="title">3.4.2. Install JBoss EAP (ZIP Installation)</h3></div></div></div><p>
+					This topic covers the steps to install JBoss EAP 7 using the downloaded ZIP file.
+				</p><p>
+					Once the JBoss EAP ZIP installation file has been downloaded, it can be installed by extracting the package contents.
+				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							If necessary, move the ZIP file to the server and location where JBoss EAP should be installed.
+						</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								The user who will be running JBoss EAP must have read and write access to this directory.
+							</p></div></div></li><li class="listitem"><p class="simpara">
+							Extract the ZIP archive.
+						</p><pre class="screen">$ unzip <span class="emphasis"><em>JBossEAPZipName</em></span></pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								For Windows Server, right-click the ZIP file and select <span class="strong strong"><strong>Extract All</strong></span>.
+							</p></div></div><p class="simpara">
+							The directory created by extracting the ZIP archive is the top-level directory for the JBoss EAP installation. This is referred to as <code class="literal"><span class="emphasis"><em>EAP_HOME</em></span></code>.
+						</p></li><li class="listitem"><p class="simpara">
+							Apply required patches.
+						</p><p class="simpara">
+							To apply this update using the CLI on Unix-based systems, run the following command from <code class="literal"><span class="emphasis"><em>JBOSS_HOME</em></span></code>:
+						</p><pre class="screen">bin/jboss-cli.sh "patch apply path/to/jboss-eap-7.2.3-patch.zip"</pre><p class="simpara">
+							To apply this update using the CLI on Windows-based systems, run the following command from <code class="literal"><span class="emphasis"><em>JBOSS_HOME</em></span></code>:
+						</p><pre class="screen">bin\jboss-cli.bat "patch apply path\to\jboss-eap-7.2.3-patch.zip"</pre></li></ol></div></section></section><section class="section" id="RPM_Installation_from_ISO"><div class="titlepage"><div><div><h2 class="title">3.5. RPM Installation from ISO</h2></div></div></div><p>
+				Download the ISO installation file for JBoss EAP 7 from the Red Hat Customer Portal. It contains all the security and patch errata.
+			</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					Installing JBoss EAP 7 using the RPM method must be done from the ISO file for a certified configuration. Installing JBoss EAP 7 using RPMs directly from the Red Hat Network is not valid for a certified configuration.
+				</p></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Register the server on the Red Hat Network.
+					</li><li class="listitem">
+						Subscribe to the <span class="strong strong"><strong>Red Hat Enterprise Linux Server</strong></span> base software channel appropriate to your Red Hat Enterprise Linux version.
+					</li><li class="listitem">
+						Do not subscribe to the <span class="strong strong"><strong>JBoss Application Platform for Server</strong></span> sub-channel in the <span class="strong strong"><strong>JBoss Enterprise Platform group</strong></span>.
+					</li></ul></div><section class="section" id="Download_ISO"><div class="titlepage"><div><div><h3 class="title">3.5.1. Download JBoss EAP 7 ISO</h3></div></div></div><div class="formalpara"><p class="title"><strong>Download the JBoss EAP 7 ISO</strong></p><p>
+						You must have an entitlement to access the ISO image. Contact the Red Hat Support for subscription management and customer support if you can not complete the procedure.
+					</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+							Log into the Red Hat Customer Portal at <a class="link" href="/">https://access.redhat.com</a>.
+						</li><li class="listitem">
+							Open the following link: <a class="link mimir-link-warn" href="https://access.redhat.com/downloads/content/183/ver=7.2/" title="This content is not included in Mimir.">https://access.redhat.com/downloads/content/183/ver=7.2/</a>.
+						</li><li class="listitem">
+							Select JBoss Enterprise Application Platform in the <span class="strong strong"><strong>Product Variant</strong></span> drop-down menu.
+						</li><li class="listitem">
+							Select 7.2 for RHEL 6 or RHEL 7 from the <span class="strong strong"><strong>Version</strong></span> drop-down menu.
+						</li><li class="listitem"><p class="simpara">
+							Click the Red Hat JBoss Enterprise Application Platform 7.2.3 (RHEL 6) ISO image file for RHEL 6 or the Red Hat JBoss Enterprise Application Platform 7.2.3 (RHEL 7) ISO image file for RHEL 7 to begin the download.
+						</p><p class="simpara">
+							Ensure you download the correct ISO for your version of Red Hat Enterprise Linux.
+						</p></li><li class="listitem">
+							After the download has completed, confirm the checksum of the downloaded ISO matches the checksum listed on the Customer Portal. For instructions, see <a class="link" href="#Verify_the_Downloaded_Files" title="3.3. Verify the Downloaded Files">Verify the Downloaded Files</a>.
+						</li></ol></div></section><section class="section" id="Install_ISO"><div class="titlepage"><div><div><h3 class="title">3.5.2. Install JBoss EAP 7 from ISO</h3></div></div></div><p>
+					This procedure is applicable only to Red Hat Enterprise Linux.
+				</p><p>
+					All ISO images contain the relevant security errata and patches for the evaluated configuration. You do not need to install any other errata when you choose the ISO installation method.
+				</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+						You must activate superuser privileges to install the ISO image.
+					</p></div></div><div class="orderedlist"><p class="title"><strong>Install JBoss EAP 7 from ISO on Red Hat Enterprise Linux.</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							Mount ISO image
+						</p><p class="simpara">
+							Mount the ISO image downloaded in <a class="link" href="#Download_ISO" title="3.5.1. Download JBoss EAP 7 ISO">Download JBoss EAP 7 ISO</a> to <code class="literal">/mnt/jboss</code>.
+						</p><pre class="screen">[root ~]# mkdir /mnt/jboss
+[root ~]# mount -o loop PATH_TO_ISO_IMAGE /mnt/jboss</pre></li><li class="listitem"><p class="simpara">
+							Create repository
+						</p><p class="simpara">
+							Create a file named <code class="literal">jbosslocal.repo</code> in <code class="literal">/etc/yum.repos.d/</code>.
+						</p><pre class="screen">[root ~]# cat &lt;&lt; EOF &gt; /etc/yum.repos.d/jbosslocal.repo
+[jbosslocal]
+name=jbosslocal
+baseurl=file:///mnt/jboss
+enabled=1
+gpgcheck=0
+EOF</pre></li><li class="listitem"><p class="simpara">
+							Install JBoss EAP 7
+						</p><p class="simpara">
+							Run the following command:
+						</p><pre class="screen">[root ~]# yum groupinstall jboss-eap7</pre></li></ol></div><p>
+					The default <code class="literal">EAP_HOME</code> path for the RPM installation is <code class="literal">/usr/share/jbossas</code>.
+				</p></section></section><section class="section" id="Confirming_the_Version_of_your_JBoss_EAP_7_Installation"><div class="titlepage"><div><div><h2 class="title">3.6. Confirming the Version of your JBoss EAP 7 Installation</h2></div></div></div><p>
+				There are three ways to verify the version number of your JBoss EAP 7 installation.
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link" href="#using_the_startup_script" title="Using the -V with the startup script">Using the <code class="literal">-V</code> with the startup script</a>
+					</li><li class="listitem">
+						<a class="link" href="#using_the_management_console" title="Using the Management Console">Using the Management Console</a>
+					</li><li class="listitem">
+						<a class="link" href="#view_console_output" title="View the console output, or server.log file">View the console output, or server.log file</a>
+					</li></ul></div><h4 id="using_the_startup_script">Using the <code class="literal">-V</code> with the startup script</h4><p>
+				Retrieve information about the version of your JBoss EAP 7 installation by running the same script used to start the server with only the <code class="literal">-V</code> switch. If your installation is a standalone or managed domain, for Red Hat Enterprise Linux and Solaris, this script is either <code class="literal">standalone.sh</code> or <code class="literal">domain.sh</code>, and on Microsoft Windows Server it is the equivalent <code class="literal">.bat</code> scripts. The startup scripts are located in <code class="literal">EAP_HOME/bin</code>.
+			</p><p>
+				Running the startup script with only the <code class="literal">-V</code> switch will not start the server, and does not require the server to be running. It displays information about the JBoss EAP version and its configured Java environment. Below is an example of using it on an installation of JBoss EAP 7 on Red Hat Enterprise Linux. Note the version number, <code class="literal">JBoss EAP <span class="emphasis"><em>PROD_VER</em></span>.GA</code>, displayed as the last line of the output.
+			</p><pre class="screen">$ ./standalone.sh -V
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/<span class="emphasis"><em>user</em></span>/EAP-7.2.GA
+
+  JAVA: java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/<span class="emphasis"><em>user</em></span>/EAP-7.2.GA/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true
+
+=========================================================================
+
+17:57:11,912 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+JBoss EAP 7.2.0.GA (WildFly Core 3.0.10.Final-redhat-1)</pre><h4 id="using_the_management_console">Using the Management Console</h4><p>
+				When the JBoss EAP 7 server is running, the version information is displayed at top of the home page of the Web Console, located at <a class="link mimir-link-warn" href="http://localhost:9990/console/" title="Mimir does not include content from: localhost">http://localhost:9990/console/</a>.
+			</p><h4 id="view_console_output">View the console output, or server.log file</h4><p>
+				When a server is started, the version is echoed to the console, and written to the server log. For standalone configurations the server log is located at <code class="literal">EAP_HOME/standalone/log/server.log</code>, and for managed domain servers it is <code class="literal">EAP_HOME/domain/servers/SERVER_NAME/log/server.log</code>:
+			</p><pre class="screen">08:29:23,756 INFO [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: JBoss EAP 7.2.0.GA (WildFly Core 3.0.10.Final-redhat-1) started in 3494ms - Started 299 of 560 services (348 services are lazy, passive or on-demand)</pre></section><section class="section" id="Updating_Common_Criteria_Compliant_JBoss_EAP_7_Installation"><div class="titlepage"><div><div><h2 class="title">3.7. Updating a Common Criteria Compliant JBoss EAP 7 Installation</h2></div></div></div><p>
+				Updates are regularly released for JBoss EAP, and these updates may include fixes for important security issues. However, with the exception of a JBoss EAP 7 ZIP installation, any updates to a Common Criteria compliant JBoss EAP installation will invalidate that installation’s Common Criteria certification.
+			</p><div class="admonition warning"><div class="admonition_header">Warning</div><div><p>
+					Not applying security updates is potentially a serious risk. If security updates are released, it is at your discretion whether to apply them to a Common Criteria Compliant JBoss EAP installation. You may wish to forgo Common Criteria certification in favor of applying updates that resolve security issues.
+				</p></div></div><section class="section" id="Applying_Patches_to_a_Zip_Installation"><div class="titlepage"><div><div><h3 class="title">3.7.1. Applying Patches to a ZIP Installation</h3></div></div></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+						Applying patches to a Common Criteria compliant installation will invalidate that installation’s Common Criteria certification.
+					</p></div></div><p>
+					Use the <code class="literal">patch</code> command to apply patches to your ZIP installation. See the <span class="emphasis"><em>Installation Guide</em></span> for instructions.
+				</p></section><section class="section" id="Applying_Patches_to_a_RPM_Installation_from_ISO"><div class="titlepage"><div><div><h3 class="title">3.7.2. Applying Patches to an RPM Installation from ISO</h3></div></div></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+						Applying patches to a Common Criteria compliant installation will invalidate that installation’s Common Criteria certification.
+					</p></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							Remove the local repository
+						</p><p class="simpara">
+							Remove the file named <code class="literal">jbosslocal.repo</code> from <code class="literal">/etc/yum.repos.d/</code>
+						</p><pre class="screen">[root ~]# rm /etc/yum.repos.d/jbosslocal.repo</pre></li><li class="listitem">
+							Update the installation as a normal RPM installation. See the <span class="emphasis"><em>Installation Guide</em></span> for instructions.
+						</li></ol></div></section></section></section><section class="chapter" id="Start_and_Stop_JBoss_EAP_7"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Start and Stop JBoss EAP 7</h1></div></div></div><section class="section" id="Start_JBoss_EAP_7"><div class="titlepage"><div><div><h2 class="title">4.1. Start JBoss EAP 7</h2></div></div></div><p>
+				Start JBoss EAP 7 in one of the following ways:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link" href="#Start_JBoss_EAP_7_as_a_Standalone_Server" title="4.2. Start JBoss EAP 7 as a Standalone Server">Start JBoss EAP 7 as a Standalone Server</a>
+					</li><li class="listitem">
+						<a class="link" href="#Start_JBoss_EAP_7_as_a_Managed_Domain" title="4.3. Start JBoss EAP 7 as a Managed Domain">Start JBoss EAP 7 as a Managed Domain</a>
+					</li></ul></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					The Java Security Manager needs to be turned on for EAL4 CC. The Java Security Manager is a class that manages the external boundary of the Java Virtual Machine (JVM) sandbox, controlling how code executing within the JVM can interact with resources outside the JVM. For information about Java Security Manager server configuration changes, see the <span class="emphasis"><em>How to Configure Server Security</em></span> for JBoss EAP.
+				</p></div></div></section><section class="section" id="Start_JBoss_EAP_7_as_a_Standalone_Server"><div class="titlepage"><div><div><h2 class="title">4.2. Start JBoss EAP 7 as a Standalone Server</h2></div></div></div><p>
+				This topic covers the steps to start JBoss EAP 7 as a Standalone Server.
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						For Red Hat Enterprise Linux, run the command: <code class="literal">EAP_HOME/bin/standalone.sh</code>
+					</li><li class="listitem">
+						For Microsoft Windows Server, run the command: <code class="literal">EAP_HOME\bin\standalone.bat</code>
+					</li></ul></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					To print a list of additional parameters to pass to the start-up scripts, use the <code class="literal">-h</code> parameter.
+				</p></div></div></section><section class="section" id="Start_JBoss_EAP_7_as_a_Managed_Domain"><div class="titlepage"><div><div><h2 class="title">4.3. Start JBoss EAP 7 as a Managed Domain</h2></div></div></div><div class="formalpara"><p class="title"><strong>Order of Operations</strong></p><p>
+					The domain controller must be started before any other host controllers in the domain. Use this procedure first on the domain controller, and then on each other host controller in the domain.
+				</p></div><div class="orderedlist"><p class="title"><strong>Start the Platform Service as a Managed Domain</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						For Red Hat Enterprise Linux, run the command, <code class="literal">EAP_HOME/bin/domain.sh</code>
+					</li><li class="listitem"><p class="simpara">
+						For Microsoft Windows Server, run the command, <code class="literal">EAP_HOME\bin\domain.bat</code>
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+							For a list of parameters you can pass to the start-up script, use the <code class="literal">-h</code> parameter.
+						</p></div></div></li></ol></div></section><section class="section" id="Start_EAP_with_an_Alternative_Configuration"><div class="titlepage"><div><div><h2 class="title">4.4. Start JBoss EAP 7 with an Alternative Configuration</h2></div></div></div><p>
+				If you do not specify a configuration file, the server starts with the default file. However, when you start the server, you can specify a configuration manually. The process varies slightly, depending on whether you are using a managed domain or standalone server, and depending on which operating system you are using.
+			</p><div class="formalpara"><p class="title"><strong>Prerequisite</strong></p><p>
+					Before using an alternative configuration file, prepare it using the default configuration as a template. For a managed domain, the configuration file needs to be placed in the <code class="literal">EAP_HOME/domain/configuration/</code> directory. For a standalone server, the configuration file should be placed in the <code class="literal">EAP_HOME/standalone/configuration/</code> directory.
+				</p></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Several example configurations are included in the <code class="literal">EAP_HOME/docs/examples/configs/</code> directory. Use these examples to enable extra features such as clustering or the Transactions XTS API.
+				</p></div></div><div class="orderedlist"><p class="title"><strong>Start the Instance with an Alternative Configuration</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Standalone server
+					</p><p class="simpara">
+						For a standalone server, provide the file name of the configuration file as an option to the <code class="literal">--server-config</code> parameter. The configuration file must be located in the <code class="literal">EAP_HOME/standalone/configuration/</code> directory, and you need to specify the file path relative to that directory.
+					</p><p class="simpara">
+						<span class="strong strong"><strong>Example: Using an alternative configuration file for a standalone server in Red Hat Enterprise Linux</strong></span>
+					</p><pre class="screen">[user@host bin]$ ./standalone.sh --server-config=standalone-alternative.xml</pre><p class="simpara">
+						This example uses the <code class="literal">EAP_HOME/standalone/configuration/standalone-alternative.xml</code> configuration file.
+					</p><p class="simpara">
+						<span class="strong strong"><strong>Example: Using an alternative configuration file for a Standalone Server in Microsoft Windows Server</strong></span>
+					</p><pre class="screen">C:\EAP_HOME\bin&gt; standalone.bat --server-config=standalone-alternative.xml</pre><p class="simpara">
+						This example uses the <code class="literal">EAP_HOME\standalone\configuration\standalone-alternative.xml</code> configuration file.
+					</p></li><li class="listitem"><p class="simpara">
+						Managed Domain
+					</p><p class="simpara">
+						For a managed domain, provide the file name of the configuration file as an option to the <code class="literal">--domain-config</code> parameter. The file must be present in the <code class="literal">EAP_HOME/domain/configuration/</code> directory, and you need to specify the path relative to that directory.
+					</p><p class="simpara">
+						<span class="strong strong"><strong>Example: Using an alternative configuration file for a managed domain in Red Hat Enterprise Linux</strong></span>
+					</p><pre class="screen">[user@host bin]$ ./domain.sh --domain-config=domain-alternative.xml</pre><p class="simpara">
+						This example uses the <code class="literal">EAP_HOME/domain/configuration/domain-alternative.xml</code> configuration file.
+					</p><p class="simpara">
+						<span class="strong strong"><strong>Example: Using an alternative configuration file for a managed domain in Microsoft Windows Server</strong></span>
+					</p><pre class="screen">C:\EAP_HOME\bin&gt; domain.bat --domain-config=domain-alternative.xml</pre><p class="simpara">
+						This example uses the <code class="literal">EAP_HOME\domain\configuration\domain-alternative.xml</code> configuration file.
+					</p></li></ol></div><p>
+				JBoss EAP should now be running, using your alternative configuration file.
+			</p></section><section class="section" id="Reference_of_Switches_and_Arguments_to_pass_at_Server_Runtime1"><div class="titlepage"><div><div><h2 class="title">4.5. Reference of Switches and Arguments to pass at Server Runtime</h2></div></div></div><p>
+				The application server startup script accepts the addition of arguments and switches at runtime. The use of these parameters allows for the server to be started under alternative configurations to those defined in the <code class="literal">standalone.xml</code>, <code class="literal">domain.xml</code> and <code class="literal">host.xml</code> configuration files. This might include starting the server with an alternative set of socket bindings or a secondary configuration. A list of these available parameters can be accessed by passing the help switch at startup.
+			</p><div class="formalpara"><p class="title"><strong>Example</strong></p><p>
+					The following example is similar to the server startup explained in <a class="link" href="#Start_JBoss_EAP_7_as_a_Standalone_Server" title="4.2. Start JBoss EAP 7 as a Standalone Server">Start JBoss EAP 7 as a Standalone Server</a> and <a class="link" href="#Start_JBoss_EAP_7_as_a_Managed_Domain" title="4.3. Start JBoss EAP 7 as a Managed Domain">Start JBoss EAP 7 as a Managed Domain</a>, with the addition of the <code class="literal">-h</code> or <code class="literal">--help</code> switch. The results of the help switch are explained in the table below.
+				</p></div><p>
+				Standalone server:
+			</p><pre class="screen">[localhost bin]$ standalone.sh -h</pre><p>
+				Managed domain:
+			</p><pre class="screen">[localhost bin]$ domain.sh -h</pre><div class="table" id="idm140187692989344"><p class="title"><strong>Table 4.1. Table of runtime switches and arguments</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 30%; " class="col_1"><!--Empty--></col><col style="width: 20%; " class="col_2"><!--Empty--></col><col style="width: 50%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140187695046048" scope="col">Argument or Switch</th><th align="left" valign="top" id="idm140187695044960" scope="col">Mode</th><th align="left" valign="top" id="idm140187695043872" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--admin-only</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set the server’s running type to <code class="literal">ADMIN_ONLY</code>. This will cause it to open administrative interfaces and accept management requests, but not start other runtime services or accept end user requests.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--admin-only</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set the host controller’s running type to <code class="literal">ADMIN_ONLY</code> causing it to open administrative interfaces and accept management requests but not start servers or, if this host controller is the master for the domain, accept incoming connections from slave host controllers.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-b &lt;value&gt;</code>, <code class="literal">-b=&lt;value&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set system property <code class="literal">jboss.bind.address</code> to the given value.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-b&lt;interface&gt;=&lt;value&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set system property <code class="literal">jboss.bind.address.&lt;interface&gt;</code> to the given value.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--backup</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Keep a copy of the persistent domain configuration even if this host is not the Domain Controller.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-c &lt;config&gt;</code>, <code class="literal">-c=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the server configuration file to use. The default is <code class="literal">standalone.xml</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-c &lt;config&gt;</code>, <code class="literal">-c=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the server configuration file to use. The default is <code class="literal">domain.xml</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--cached-dc</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								If the host is not the Domain Controller and cannot contact the Domain Controller at boot, boot using a locally cached copy of the domain configuration.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--debug [&lt;port&gt;]</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Activate debug mode with an optional argument to specify the port. Only works if the launch script supports it.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-D&lt;name&gt;[=&lt;value&gt;]</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set a system property.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--domain-config=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the server configuration file to use. The default is <code class="literal">domain.xml</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-h</code>, <code class="literal">--help</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Display the help message and exit.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--host-config=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the host configuration file to use. The default is <code class="literal">host.xml</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--interprocess-hc-address=&lt;address&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Address on which the host controller should listen for communication from the process controller.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--interprocess-hc-port=&lt;port&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Port on which the host controller should listen for communication from the process controller.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--master-address=&lt;address&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set system property <code class="literal">jboss.domain.master.address</code> to the given value. In a default slave Host Controller config, this is used to configure the address of the master Host Controller.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--master-port=&lt;port&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set system property <code class="literal">jboss.domain.master.port</code> to the given value. In a default slave Host Controller config, this is used to configure the port used for native management communication by the master Host Controller.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--read-only-server-config=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the server configuration file to use. This differs from <code class="literal">--server-config</code> and <code class="literal">-c</code> in that the original file is never overwritten.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--read-only-domain-config=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the domain configuration file to use. This differs from <code class="literal">--domain-config</code> and <code class="literal">-c</code> in that the initial file is never overwritten.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--read-only-host-config=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the host configuration file to use. This differs from <code class="literal">--host-config</code> in that the initial file is never overwritten.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-P &lt;url&gt;</code>, <code class="literal">-P=&lt;url&gt;</code>, <code class="literal">--properties=&lt;url&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Load system properties from the given URL.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--pc-address=&lt;address&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Address on which the process controller listens for communication from processes it controls.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--pc-port=&lt;port&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Port on which the process controller listens for communication from processes it controls.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-S&lt;name&gt;[=&lt;value&gt;]</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set a security property.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--server-config=&lt;config&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Name of the server configuration file to use. The default is <code class="literal">standalone.xml</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-u &lt;value&gt;</code>, <code class="literal">-u=&lt;value&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set system property <code class="literal">jboss.default.multicast.address</code> to the given value.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-v</code>, <code class="literal">-V</code>, <code class="literal">--version</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Display the application server version and exit.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">-secmgr</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone, Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Runs the server with a security manager installed.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187695046048"> <p>
+								<code class="literal">--start-mode=&lt;mode&gt;</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695044960"> <p>
+								Standalone
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187695043872"> <p>
+								Set the start mode of the server. This option cannot be used in conjunction with <code class="literal">--admin-only</code>. Valid values are:
+							</p>
+							 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+										<code class="literal">normal</code>: The server will start normally.
+									</li><li class="listitem">
+										<code class="literal">admin-only</code>: The server will only open administrative interfaces and accept management requests but not start other runtime services or accept end user requests.
+									</li><li class="listitem">
+										<code class="literal">suspend</code>: The server will start in suspended mode and will not service requests until it has been resumed.
+									</li></ul></div>
+							 </td></tr></tbody></table></div></div></section></section><section class="chapter" id="Configuration_Requirements"><div class="titlepage"><div><div><h1 class="title">Chapter 5. Configuration Requirements</h1></div></div></div><p>
+			The following sections describe modifications to be made to the server configuration to comply with CC requirements. When changes are made using the management console or management CLI, the existing configuration is automatically backed up. You can use those backups for reference or to revert to an earlier configuration if required. See the <span class="emphasis"><em>Configuration Guide</em></span> for further details of this feature.
+		</p><section class="section" id="network_configuration"><div class="titlepage"><div><div><h2 class="title">5.1. Network Configuration</h2></div></div></div><section class="section" id="Network_Interfaces"><div class="titlepage"><div><div><h3 class="title">5.1.1. Network Interfaces</h3></div></div></div><p>
+					The following network interfaces are defined and created so that trusted and untrusted network traffic is separated.
+				</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">public</span></dt><dd>
+								For communication to and from external, potentially untrusted parties.
+							</dd><dt><span class="term">cluster</span></dt><dd>
+								For communication between cluster nodes. Cannot be accessed by untrusted parties. This must be enforced as part of network/firewall configuration.
+							</dd><dt><span class="term">internal</span></dt><dd>
+								For communication between trusted servers or users (such as administrators) via the internal network. Cannot be accessible to untrusted parties or general users of the system.
+							</dd></dl></div></section><section class="section" id="Network_Configuration"><div class="titlepage"><div><div><h3 class="title">5.1.2. Network Interface Configuration</h3></div></div></div><p>
+					To ensure compliance with Common Criteria requirements, apply the relevant network configurations.
+				</p><div class="orderedlist"><p class="title"><strong>Define and Configure Network Interfaces</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							Create <code class="literal">internal</code> and <code class="literal">cluster</code> network interfaces.
+						</p><pre class="screen">[standalone@localhost:9990 /] /interface=cluster:add(inet-address=expression "${jboss.bind.address.cluster:127.0.0.1}")
+[standalone@localhost:9990 /] /interface=internal:add(inet-address=expression "${jboss.bind.address.internal:127.0.0.1}")</pre></li><li class="listitem"><p class="simpara">
+							Bind each socket to the specified network interface.
+						</p><p class="simpara">
+							For each line in <a class="link" href="#table-Network_Bindings" title="Table 5.1. Network Bindings">Network Bindings</a>, use the following command to bind the socket to the specified network interface.
+						</p><pre class="screen">[standalone@localhost:9990 /] /socket-binding-group=standard-sockets/socket-binding=BINDING_NAME:write-attribute(name=interface,value=NETWORK_INTERFACE)</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								Not all socket bindings are relevant to the available configuration by default. Only those that are part of the product configuration are applicable.
+							</p></div></div><p class="simpara">
+							For example, the following command binds <code class="literal">management-http</code> to the <code class="literal">internal</code> network interface:
+						</p><pre class="screen">[standalone@localhost:9990 /] /socket-binding-group=standard-sockets/socket-binding=management-http:write-attribute(name=interface,value=internal)</pre></li><li class="listitem"><p class="simpara">
+							Remove the <code class="literal">unsecure</code> network interface from the following configuration files: <code class="literal">standalone-full.xml</code> and <code class="literal">standalone-full-ha.xml</code>.
+						</p><pre class="screen">[standalone@localhost:9990 /] /interface=unsecure:remove</pre></li><li class="listitem"><p class="simpara">
+							Restart JBoss EAP.
+						</p><p class="simpara">
+							Restart JBoss EAP so that the network bindings take effect.
+						</p></li></ol></div><div class="table" id="table-Network_Bindings"><p class="title"><strong>Table 5.1. Network Bindings</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"><!--Empty--></col><col style="width: 33%; " class="col_2"><!--Empty--></col><col style="width: 33%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140187690545808" scope="col">Binding Name</th><th align="left" valign="top" id="idm140187690544720" scope="col">Network Interface</th><th align="left" valign="top" id="idm140187690543632" scope="col">Port Number</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									ajp
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									8009
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									http
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									public
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									8080
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									https
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									public
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									8443
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									iiop
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									3528
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									iiop-ssl
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									3529
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									jgroups-mping
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									cluster
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									0 - multicast: 45700
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									jgroups-tcp
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									cluster
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									7600
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									jgroups-udp
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									cluster
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									55200 - multicast: 45688
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									management-http
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									9990
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									management-https
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									9993
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									messaging
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									5445
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									messaging-throughput
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									5455
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									modcluster
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									public/internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									0 - multicast: 23364
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									txn-recovery-environment
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									4712
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140187690545808"> <p>
+									txn-status-manager
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690544720"> <p>
+									internal
+								</p>
+								 </td><td align="left" valign="top" headers="idm140187690543632"> <p>
+									4713
+								</p>
+								 </td></tr></tbody></table></div></div></section></section><section class="section" id="Security_Configuration"><div class="titlepage"><div><div><h2 class="title">5.2. Security Configuration</h2></div></div></div><p>
+				The following configuration steps must be performed to ensure security compliance with Common Criteria requirements.
+			</p><h4 id="enable_elytron_security_across_the_server">Enable Elytron Security Across the Server</h4><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					The legacy security subsystem is not compliant with Common Criteria. Disable the legacy security subsystem and enable the <code class="literal">elytron</code> subsystem.
+				</p></div></div><p>
+				There is a simple way to enable Elytron across the server. JBoss EAP 7.2 introduced an example configuration script that enables Elytron as the security provider. This script resides in the <span class="emphasis"><em>EAP_HOME</em></span>/docs/examples directory in the server installation.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					The example configuration script includes references to the native interface, which is no longer supported. Remove the following lines from this script:
+				</p></div></div><pre class="screen">/host=master/core-service=management/management-interface=native-interface:write-attribute(name=sasl-authentication-factory,value=management-sasl-authentication) /host=master/core-service=management/management-interface=native-interface:undefine-attribute(name=security-realm)</pre><p>
+				Execute the following command to enable Elytron security across the server. The server must be completely stopped before executing the command.
+			</p><pre class="screen">$ <span class="emphasis"><em>EAP_HOME</em></span>/bin/jboss-cli.sh --file=EAP_HOME/docs/examples/enable-elytron.cli</pre><section class="section" id="About_Authorization1"><div class="titlepage"><div><div><h3 class="title">5.2.1. About Authorization</h3></div></div></div><p>
+					In JBoss EAP 7, a <code class="literal">SecurityDomain</code> references one or more <code class="literal">SecurityRealms</code> for loading identities. These identities are used for authentication. They also contain role decoder and mapper references to map the identity for authorization decisions.
+				</p><p>
+					Authorization is different from authentication, and usually happens after authentication.
+				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						XACML is not permitted in the Common Criteria Certified configuration.
+					</p></div></div></section><section class="section" id="Java_Security_Manager"><div class="titlepage"><div><div><h3 class="title">5.2.2. Java Security Manager</h3></div></div></div><p>
+					The Java Security Manager is a class that manages the external boundary of the Java Virtual Machine (JVM) sandbox, controlling how code executing within the JVM can interact with resources outside the JVM. When the Java Security Manager is activated, the Java API checks with the security manager for approval before executing a wide range of potentially unsafe operations. The Java Security Manager uses a security policy to determine whether a given action will be allowed or denied.
+				</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+						JBoss EAP 7 defines Java Security Policies in two ways: the <code class="literal">security-manager</code> subsystem and through XML files in the individual deployments. The <code class="literal">security-manager</code> subsystem defines minimum and maximum permission for <span class="emphasis"><em>ALL</em></span> deployments, while the XML files specify the permissions requested by the individual deployment. Before starting JBoss EAP with the Java Security Manager enabled, you need make sure all security policies are defined in the <code class="literal">security-manager</code> subsystem.
+					</p><p>
+						For more information on defining policies in the <code class="literal">security-manager</code> subsystem, refer the <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/how_to_configure_server_security/#java_security_manager" title="This content is not included in Mimir.">Java Security Manager</a> section in the <span class="emphasis"><em>How to Configure Server Security</em></span> for JBoss EAP.
+					</p></div></div><h5 id="run-within-java-security-manager">Run JBoss EAP With the Java Security Manager</h5><p>
+					To run JBoss EAP with the Java Security Manager, you need to use the <code class="literal">secmgr</code> option during startup. There are two ways to do this:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+							Use the flag with the startup script To use the <code class="literal">-secmgr</code> flag with the startup script, include it when starting up your JBoss EAP instance:
+						</p><div class="formalpara"><p class="title"><strong>Example: Startup Script</strong></p><p>
+								
+<pre class="screen">./standalone.sh -secmgr</pre>
+
+							</p></div></li><li class="listitem"><p class="simpara">
+							Using the Startup Configuration File
+						</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+								The domain or standalone server must be completely stopped before you edit any configuration files.
+							</p></div></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								If you are using JBoss EAP in a managed domain, you must perform the following procedure on each physical host or instance in your domain.
+							</p></div></div><p class="simpara">
+							To enable the Java Security Manager using the startup configuration file, you need to edit either the <code class="literal">standalone.conf</code> or <code class="literal">domain.conf</code> file, depending if you are running a standalone instance or managed domain. If running in Windows, the <code class="literal">standalone.conf.bat</code> or <code class="literal">domain.conf.bat</code> files are used instead.
+						</p><p class="simpara">
+							Uncomment the <code class="literal">SECMGR="true"</code> line in the configuration file:
+						</p><div class="formalpara"><p class="title"><strong>Example: standalone.conf or domain.conf</strong></p><p>
+								
+<pre class="screen"># Uncomment this to run with a security manager enabled
+SECMGR="true"</pre>
+
+							</p></div><div class="formalpara"><p class="title"><strong>Example: standalone.conf.bat or domain.conf.bat</strong></p><p>
+								
+<pre class="screen">rem # Uncomment this to run with a security manager enabled
+set "SECMGR=true"</pre>
+
+							</p></div></li></ul></div></section><section class="section" id="EJB_Authorization_Policy"><div class="titlepage"><div><div><h3 class="title">5.2.3. EJB Authorization Policy</h3></div></div></div><p>
+					Applications can implement custom authentication and authorization verification using a Java Authorization Contract for Containers (JACC) Authorization Module. In JBoss EAP 7, the JACC authorization module forms part of a JAAS security domain.
+				</p><section class="section" id="enabling_jacc_using_elytron"><div class="titlepage"><div><div><h4 class="title">5.2.3.1. Enabling JACC Using the <code class="literal">elytron</code> Subsystem</h4></div></div></div><div class="formalpara"><p class="title"><strong>Disable JACC in the Legacy Security Subsystem</strong></p><p>
+							By default, the application server uses the legacy <code class="literal">security</code> subsystem to configure the JACC policy provider and factory. The default configuration maps to implementations from PicketBox.
+						</p></div><p>
+						In order to use Elytron to manage JACC configuration, or any other policy you want to install to the application server, you must first disable JACC in the legacy <code class="literal">security</code> subsystem. For that, you can use the following management CLI command:
+					</p><pre class="screen">/subsystem=security:write-attribute(name=initialize-jacc, value=false)</pre><p>
+						Failure to do so can result in the following error in the server log: <code class="literal">MSC000004: Failure during stop of service org.wildfly.security.policy: java.lang.StackOverflowError</code>.
+					</p><div class="formalpara"><p class="title"><strong>Define a JACC Policy Provider</strong></p><p>
+							The <code class="literal">elytron</code> subsystem provides a built-in policy provider based on JACC specification. To create the policy provider you can execute the following management CLI command:
+						</p></div><pre class="screen">/subsystem=elytron/policy=jacc:add(jacc-policy={})
+
+reload</pre><div class="formalpara"><p class="title"><strong>Enable JACC to a Web Deployment</strong></p><p>
+							Once a JACC policy provider is defined, you can enable JACC for web deployments by executing the following command:
+						</p></div><pre class="screen">/subsystem=undertow/application-security-domain=other:write-attribute(name=enable-jacc,value=true)</pre><p>
+						The command above enables JACC for the "other" application-security-domain in the Undertow subsystem.
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+							The "other" application-security-domain gets added when running the script that enables Elytron across the server. See <a class="link" href="#Security_Configuration" title="5.2. Security Configuration">Security Configuration</a>.
+						</p></div></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+							If you have not run the script for enabling Elytron across the server, you must first run the following command:
+						</p></div></div><pre class="screen">/subsystem=undertow/application-security-domain=other:add(security-domain=ApplicationDomain)</pre><div class="formalpara"><p class="title"><strong>Enable JACC to an EJB Deployment</strong></p><p>
+							Once a JACC policy provider is defined, you can enable JACC for EJB deployments by executing the following command:
+						</p></div><pre class="screen">/subsystem=ejb3/application-security-domain=other:write-attribute(name=enable-jacc,value=true)</pre><p>
+						The command above enables JACC for the "other" application-security-domain in the EJB subsystem.
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+							The "other" application-security-domain gets added when running the script that enables Elytron across the server. See <a class="link" href="#Security_Configuration" title="5.2. Security Configuration">Security Configuration</a>.
+						</p></div></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+							If you have not run the script for enabling Elytron across the server, you must first run the following command:
+						</p></div></div><pre class="screen">/subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain)</pre><div class="formalpara"><p class="title"><strong>Creating a Custom Elytron Policy Provider</strong></p><p>
+							A custom policy provider is used when you need a custom <code class="literal">java.security.Policy</code>, like when you want to integrate with some external authorization service in order to check permissions. To create a custom policy provider, you will need to implement the <code class="literal">java.security.Policy</code>, create and plug in a custom module with the implementation and use the implementation from the module in the <code class="literal">elytron</code> subsystem.
+						</p></div><pre class="screen">/subsystem=elytron/policy=policy-provider-a:add(custom-policy={class-name=MyPolicyProviderA, module=x.y.z})</pre><p>
+						For more information, see the <span class="emphasis"><em>Policy Provider Properties</em></span> in the Development Guide.
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+							In most cases, you can use the JACC policy provider as it is expected to be part of any Java EE compliant application server.
+						</p></div></div></section></section></section><section class="section" id="elytron_subsystem"><div class="titlepage"><div><div><h2 class="title">5.3. Elytron Subsystem</h2></div></div></div><p>
+				The <code class="literal">elytron</code> subsystem is new in JBoss EAP 7.2. It is based on the WildFly Elytron project, which is a security framework used to unify security across the entire application server. The <code class="literal">elytron</code> subsystem enables a single point of configuration for securing both applications and the management interfaces. WildFly Elytron also provides a set of APIs and SPIs for providing custom implementations of functionality and integrating with the <code class="literal">elytron</code> subsystem.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					The <code class="literal">elytron</code> subsystem is responsible for the security of a CC compliant system. Legacy security subsystem and legacy security realms are not supported.
+				</p></div></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Vaults are not supported in the CC compliant system. Credential store is the recommended solution instead.
+				</p></div></div><p>
+				You can find more background information on different Elytron components in the <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/security_architecture/" title="This content is not included in Mimir.">Security Architecture</a> guide.
+			</p><section class="section" id="adding_and_removing_the_elytron_subsystem"><div class="titlepage"><div><div><h3 class="title">5.3.1. Adding and Removing the Elytron Subsystem</h3></div></div></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						If you are starting with JBoss EAP 7.2, the <code class="literal">elytron</code> subsystem is already present and no further configuration is required.
+					</p><p>
+						This is required only when you are using an older JBoss EAP installation.
+					</p></div></div><p>
+					To add the <code class="literal">elytron</code> extension required for the <code class="literal">elytron</code> subsystem:
+				</p><pre class="screen">/extension=org.wildfly.extension.elytron:add()</pre><p>
+					To add the <code class="literal">elytron</code> subsystem in JBoss EAP:
+				</p><pre class="screen">/subsystem=elytron:add
+
+reload</pre><p>
+					To remove the <code class="literal">elytron</code> subsystem in JBoss EAP:
+				</p><pre class="screen">/subsystem=elytron:remove
+
+reload</pre><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+						Other subsystems within JBoss EAP may have dependencies on the <code class="literal">elytron</code> subsystem. If these dependencies are not resolved before removing it, you will see errors when starting JBoss EAP.
+					</p></div></div></section></section><section class="section" id="Database_Configuration1"><div class="titlepage"><div><div><h2 class="title">5.4. Database Configuration</h2></div></div></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					For better startup server behavior, the preferred installation method for JDBC drivers is to install them as a core module.
+				</p></div></div><h4 id="security_permissions_for_jdbc_drivers">Security Permissions for JDBC Drivers</h4><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Security Permissions for JDBC Drivers in the Deployment
+					</p><p class="simpara">
+						In JBoss EAP 7, you can add a <code class="literal">META-INF/permissions.xml</code> to your deployment, which is part of <a class="link mimir-link-warn" href="http://jcp.org/en/jsr/detail?id=342" title="Mimir does not include content from: jcp.org">JSR 342</a> and is a part of the Java EE specification. This file allows you to specify the permissions needed by the deployment.
+					</p><p class="simpara">
+						All permissions required by the deployment can be found in the documentation for the respective drivers.
+					</p></li><li class="listitem"><p class="simpara">
+						Security Permissions for JDBC Drivers in Modules
+					</p><p class="simpara">
+						For all JDBC drivers installed as modules, no extra settings are required for their security manager permissions.
+					</p></li></ol></div><p>
+				For more information, see the <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/how_to_configure_server_security/#java_security_manager" title="This content is not included in Mimir.">Java Security Manager</a> section in the <span class="emphasis"><em>How to Configure Server Security</em></span> guide.
+			</p></section><section class="section" id="Guidance_on_Configuring_Java_Security_Permissions"><div class="titlepage"><div><div><h2 class="title">5.5. Guidance on Configuring Java Security Permissions</h2></div></div></div><p>
+				The system administrator for the operation of the certified system is expected to configure the security permissions for all enterprise applications that are deployed on the certified system, when the certified system runs in the security manager enabled mode.
+			</p><div class="admonition warning"><div class="admonition_header">Warning</div><div><p>
+					In addition to the <a class="link" href="#Development_Guide_for_the_Common_Criteria_Certified_System" title="Chapter 6. Development Guide for the Common Criteria Certified System">General Restrictions</a>, the following permissions <span class="emphasis"><em>must not be granted</em></span> to any application in order to maintain a certified configuration:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							File permissions, except to files that are dedicated to the application
+						</li><li class="listitem">
+							Network permissions
+						</li><li class="listitem">
+							Permissions to load native code
+						</li></ul></div></div></div><p>
+				For more information, refer the <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/how_to_configure_server_security/#define-security-policy" title="This content is not included in Mimir.">Define a Java Security Policy</a> section in the <span class="emphasis"><em>How to Configure Server Security</em></span> guide.
+			</p></section></section><section class="chapter" id="Development_Guide_for_the_Common_Criteria_Certified_System"><div class="titlepage"><div><div><h1 class="title">Chapter 6. Development Guide for the Common Criteria Certified System</h1></div></div></div><section class="section" id="Enterprise_Application"><div class="titlepage"><div><div><h2 class="title">6.1. Enterprise Application</h2></div></div></div><p>
+				JBoss EAP 7 implements the Java EE 7 Full Platform and Web Profile standards, including:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Batch 1.0
+					</li><li class="listitem">
+						JSON-P 1.0
+					</li><li class="listitem">
+						Concurrency 1.0
+					</li><li class="listitem">
+						WebSocket 1.1
+					</li><li class="listitem">
+						JMS 2.0
+					</li><li class="listitem">
+						JPA 2.1
+					</li><li class="listitem">
+						JCA 1.7
+					</li><li class="listitem">
+						JAX-RS 2.0
+					</li><li class="listitem">
+						JAX-WS 2.2
+					</li><li class="listitem">
+						Servlet 3.1
+					</li><li class="listitem">
+						JSF 2.2
+					</li><li class="listitem">
+						JSP 2.3
+					</li><li class="listitem">
+						EL 3.0
+					</li><li class="listitem">
+						CDI 1.2
+					</li><li class="listitem">
+						JTA 1.2
+					</li><li class="listitem">
+						Interceptors 1.2
+					</li><li class="listitem">
+						Common Annotations 1.1
+					</li><li class="listitem">
+						Managed Beans 1.0
+					</li><li class="listitem">
+						EJB 3.2
+					</li><li class="listitem">
+						Bean Validation 1.1
+					</li></ul></div><p>
+				Typically the application accepts requests from clients, does some processing and responds with results. The enterprise application that is developed by the trusted developer is hereby referred to as a user application.
+			</p></section><section class="section" id="General_Restrictions1"><div class="titlepage"><div><div><h2 class="title">6.2. General Restrictions</h2></div></div></div><p>
+				The trusted software developer must follow the following restrictions when developing secure software for the certified system.
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+						Application Programming Interfaces (APIs) that are not documented in the applicable product documentation <span class="emphasis"><em>must not be used</em></span>.
+					</li><li class="listitem">
+						The programming restrictions mandated by the Enterprise JavaBeans Specification v3.2 must be strictly followed. For more information, refer to <a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=345" title="Mimir does not include content from: jcp.org">JSR 345: Enterprise JavaBeans 3.2 specification.</a>
+					</li></ol></div><h4 id="enterprise_java_beans_specification_developer_restrictions">Enterprise Java Beans Specification Developer Restrictions</h4><p>
+				The restrictions are:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						An enterprise bean must not use read/write static fields. Using read-only static fields is allowed. Therefore, it is recommended that all static fields in the enterprise bean class be declared as final.
+					</li><li class="listitem">
+						An enterprise bean must not use thread synchronization primitives to synchronize execution of multiple instances.
+					</li><li class="listitem">
+						An enterprise bean must not use the AWT functionality to attempt to output information to a display or to input information from a keyboard.
+					</li><li class="listitem">
+						An enterprise bean must not use the <code class="literal">java.io</code> package to attempt to access files and directories in the file system.
+					</li><li class="listitem">
+						An enterprise bean must not attempt to listen on a socket, accept connections on a socket, or use a socket for multicast.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to query a class to obtain information about the declared members that are not otherwise accessible to the enterprise bean because of the security rules of the Java language. The enterprise bean must not attempt to use the Reflection API to access information that the security rules of the Java programming language make unavailable.
+					</li><li class="listitem"><p class="simpara">
+						The enterprise bean must not attempt to
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								create a class loader
+							</li><li class="listitem">
+								obtain the current class loader
+							</li><li class="listitem">
+								set the context class loader
+							</li><li class="listitem">
+								set security manager
+							</li><li class="listitem">
+								create a new security manager
+							</li><li class="listitem">
+								stop the JVM
+							</li><li class="listitem">
+								change the input, output, and error streams
+							</li></ul></div></li><li class="listitem">
+						The enterprise bean must not attempt to set the socket factory used by ServerSocket, Socket, or the stream handler factory used by URL.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to manage threads. The enterprise bean must not attempt to start, stop, suspend, or resume a thread, or to change a thread’s priority or name. The enterprise bean must not attempt to manage thread groups.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to obtain the security policy information for a particular code source.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to load a native library.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to gain access to packages and classes that the usual rules of the Java programming language make unavailable to the enterprise bean.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to define a class in a package.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to access or modify the security configuration objects (Policy, Security, Provider, Signer, and Identity).
+					</li><li class="listitem">
+						The enterprise bean must not attempt to use the subclass and object substitution features of the Java Serialization Protocol.
+					</li><li class="listitem">
+						The enterprise bean must not attempt to pass this as an argument or method result. The enterprise bean must pass the result of <code class="literal">SessionContext.getEJBObject</code>, <code class="literal">SessionContext.getEJBLocalObject</code>, <code class="literal">EntityContext.getEJBObject</code>, or <code class="literal">EntityContext.getEJBLocalObject</code> instead.
+					</li><li class="listitem">
+						The enterprise bean must not use Simple and Protected GSSAPI Negotiation Mechanism (SPNEGO).
+					</li><li class="listitem"><p class="simpara">
+						The enterprise bean must not use annotations from PicketBox. The following annotations that modify the behavior of the JAAS module must not be used:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">@AuthenticationMechanism</code>
+							</li><li class="listitem">
+								<code class="literal">@SecurityMapping</code>
+							</li><li class="listitem">
+								<code class="literal">@Authentication</code>
+							</li><li class="listitem">
+								<code class="literal">@Authorization</code>
+							</li><li class="listitem">
+								<code class="literal">@SecurityConfig</code>
+							</li><li class="listitem">
+								<code class="literal">@SecurityAudit</code>
+							</li></ul></div></li></ul></div><p>
+				These restrictions are enforced by the Java Security Manager when the certified system runs in the security manager enabled mode. The following measures should also be taken to protect against endangering the security and stability of the certified system:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						System administrators of the certified system must ensure they do not provide user application security permissions that relax any of the aforementioned restrictions.
+					</li><li class="listitem">
+						Applications should be audited prior to deployment to ensure that the code contained within the deployments, including the code contained within bundles jars, does not make any calls to the APIs provided by the class ‘org.wildfly.security.manager.WildFlySecurityManager’.
+					</li></ul></div></section><section class="section" id="Developer_Advice_for_User_Credentials"><div class="titlepage"><div><div><h2 class="title">6.3. Developer Advice for User Credentials</h2></div></div></div><p>
+				To configure authentication for an outbound invocation, the <code class="literal">AuthenticationContext</code> can be used. For this outbound invocation, SASL authentication will be used.
+			</p><div class="formalpara"><p class="title"><strong>Example: Setting the <code class="literal">AuthenticationContext</code></strong></p><p>
+					
+<pre class="programlisting language-java">final AuthenticationContext authenticationContext = AuthenticationContext.empty()
+.with(
+MatchRule.ALL,
+AuthenticationConfiguration.empty()
+.useName("username")
+.useRealm(null)
+.usePassword("password"));</pre>
+
+				</p></div><p>
+				The <code class="literal">AuthenticationContext</code> can then wrap an outbound call to ensure this policy is used.
+			</p><pre class="programlisting language-java">authenticationContext.runCallable(() -&gt; {
+     // Make Remote Call
+}</pre></section></section><section class="chapter" id="Overview_of_the_Security_Functions"><div class="titlepage"><div><div><h1 class="title">Chapter 7. Overview of the Security Functions</h1></div></div></div><section class="section" id="Access_Control3"><div class="titlepage"><div><div><h2 class="title">7.1. Access Control</h2></div></div></div><p>
+				JBoss EAP 7 has access control mechanisms to restrict access for the following request types:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						HTTP: URLs and paths provided with URLs, as well as Plain Old Java Objects (POJOs) deployed as servlets and session Beans, can be protected from access by subjects.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p class="simpara">
+								Obtain the names of the roles allowed to access the URL. The role names are determined by the <code class="literal">security-constraint</code> elements defined for the invoked URL and optionally the HTTP request method as part of the HTTP deployment descriptor or the <code class="literal">@ServletSecurity</code> annotation.
+							</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+									JBoss EAP supports all HTTP request methods specified in the RFCs and custom methods.
+								</p></div></div><p class="simpara">
+								In addition to the specification of the URL and HTTP request method, the access control mechanism can optionally require cryptographic protection of the user’s connection, which can be either none, <code class="literal">integrity-protected</code> or <code class="literal">confidentiality-protected</code>.
+							</p></li></ul></div></li><li class="listitem"><p class="simpara">
+						EJB: EJBs and associated method names can be protected from invocation by subjects.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								Obtain the names of the roles allowed to access the EJB method from the EJB container. The role names are determined by the <code class="literal">role-name</code> elements of all <code class="literal">method-permission</code> elements containing the invoked method as defined in the EJB deployment descriptor or annotation.
+							</li><li class="listitem">
+								If no roles have been assigned, or the method is specified in an exclude-list element, then access to the method is denied. Otherwise, the <code class="literal">doesUserHaveRole</code> method is invoked to see if the caller has one of the assigned role names. This method iterates through the role names and checks if the authenticated user’s <code class="literal">Subject Roles</code> group contains role with the given name. Access is allowed if any role name is a member of the <code class="literal">Roles</code> group. Access is denied if none of the role names are members.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						JMS: Message queue destinations and topic destinations can be protected from access by subjects:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								Obtain the names of the roles allowed to access the message queue destination or topic destination. The role names are determined by the <code class="literal">security-setting</code> elements defined for the message queue destination or topic destination in the JBoss EAP configuration file.
+							</li><li class="listitem"><p class="simpara">
+								Access to the message queue and topic destinations is controlled using the following permissions:
+							</p><div class="itemizedlist"><ul class="itemizedlist" type="square"><li class="listitem">
+										<code class="literal">create-durable-queue</code> allows the role to create a durable queue under matching addresses.
+									</li><li class="listitem">
+										<code class="literal">delete-durable-queue</code> allows the role to delete a durable queue under matching addresses.
+									</li><li class="listitem">
+										<code class="literal">create-non-durable-queue</code> allows the role to create a non-durable queue under matching addresses.
+									</li><li class="listitem">
+										<code class="literal">delete-non-durable-queue</code> allows the role to delete a non-durable queue under matching addresses.
+									</li><li class="listitem">
+										<code class="literal">send</code> allows the role to send a message to matching addresses.
+									</li><li class="listitem">
+										<code class="literal">consume</code> allows the role to consume a message from a queue bound to matching addresses.
+									</li><li class="listitem">
+										<code class="literal">manage</code> allows the role to invoke management operations by sending management messages to the management address.
+									</li></ul></div></li><li class="listitem">
+								The TSF permits to specify a global default access control rule which governs the access to the destinations if no access control rule is specified for the individual destination. If no roles have been assigned, or the destinations are not covered by an access control rule, including no global access control rule specified, then access to the method is denied. Otherwise, the <code class="literal">doesUserHaveRole</code> method is invoked to see if the caller has one of the assigned role names. This method iterates through the role names and checks if the authenticated user’s <code class="literal">Subject Roles</code> group contains the required role name. Access is allowed if any role name is a member of the <code class="literal">Roles</code> group. Access is denied if none of the role names are members.
+							</li></ul></div></li></ul></div><p>
+				For more information see the <span class="emphasis"><em>Configuration Guide</em></span>.
+			</p></section><section class="section" id="Role-Based_Access_Control_for_Management_Interfaces"><div class="titlepage"><div><div><h2 class="title">7.2. Role-Based Access Control for Management Interfaces</h2></div></div></div><p>
+				The management interfaces of JBoss EAP 7, the management CLI and the web-based management console, allow access to the JBoss EAP system configuration in order to manage all configurable aspects of JBoss EAP 7. Administrators can access general system aspects, such as network port configurations, and container configurations. In addition, configuration aspects for services offered by containers are managed as well.
+			</p><p>
+				The configuration of applications, such as the application access control, are addressed in the deployment descriptors shipped with the application. Therefore, application configuration is generally not accessible via the management interfaces.
+			</p><p>
+				The administrative interfaces can be bound to a specific network interface. This allows for the management interfaces to be restricted to an administration LAN in order to prevent untrusted users from accessing the management interfaces. In order for administrators to interact with administrative interfaces, they must log in. Administration accounts are maintained separately from other user accounts.
+			</p><p>
+				Each action on an object that an administrative user can perform is subject to a role-based access control mechanism. The actions are classified into:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Model operations, whose main function is to read/write from the model, although there will often be associated runtime services started/stopped as a consequence.
+					</li><li class="listitem">
+						RPC operations, which invokes some runtime that affects runtime state only. This may either read runtime state or change it. The model is not affected.
+					</li></ul></div><p>
+				A set of object-action capabilities are mapped to a management role. This mapping defines the allowed access for the management role. A set of pre-defined management roles is included with JBoss EAP <span class="emphasis"><em>PROD_VER</em></span> and is available after installation. The pre-configured roles are detailed below.
+			</p><h4 id="role_based_access_control_pre_configured_management_roles">Role-based Access Control Pre-configured Management Roles</h4><div class="table" id="idm140187692213712"><p class="title"><strong>Table 7.1. Role-based access control</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 30%; " class="col_1"><!--Empty--></col><col style="width: 70%; " class="col_2"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140187692208864" scope="col">Role</th><th align="left" valign="top" id="idm140187692207776" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								Monitor
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The Monitor role has the fewest permissions and restricts the user to viewing the configuration and the current state. The monitor role does not have permission to modify the server configuration, or access sensitive data or operations.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								Operator
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The Operator role extends the Monitor role by adding the ability to modify the runtime state of the server, but not the persistent configuration. For example, the operator can start or stop servers, and pause and resume JMS destinations. The operator role does not have permission to modify the server configuration, or access sensitive data or operations.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								Maintainer
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The Maintainer role has access to view and modify the runtime state and all configurations except sensitive data and operations. The Maintainer role has almost complete access to administer the server without giving those users access to passwords and other sensitive information.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								Administrator
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The Administrator role has unrestricted access to all resources and operations on the server except the audit logging system. The Administrator role has access to sensitive data and operations, and can also configure the access control system.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								SuperUser
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The SuperUser role does not have any restrictions, and it has complete access to all resources and operations of the server, including the audit logging system. If RBAC is disabled, all management users have permissions equivalent to the SuperUser role.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								Deployer
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The Deployer role has the same permissions as the Monitor, but it can modify the configuration and state for deployments and any other resource type enabled as an application resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140187692208864"> <p>
+								Auditor
+							</p>
+							 </td><td align="left" valign="top" headers="idm140187692207776"> <p>
+								The Auditor role has all the permissions of the Monitor role and can also view, but not modify, sensitive data. The Auditor role has full access to the audit logging system.
+							</p>
+							 </td></tr></tbody></table></div></div><p>
+				A role is a named set of permissions. These permissions include constraints, for example the read permissions for the Monitor role is constrained to non-sensitive actions and targets. Redefinition of the permissions and constraints associated with the above mentioned standard roles is not permitted.
+			</p><p>
+				A limited form of creation of new roles is allowed. These new roles are equivalent to the standard roles, but with an additional constraint applied to all permission, for example the target must be related to a particular host or server group.
+			</p><p>
+				All administrative operations are stored in configuration files (either <code class="literal">domain.xml</code> or <code class="literal">standalone.xml</code> depending on the startup mode). The administrative interfaces are an in-memory image of the data stored in the configuration file. Once the in-memory image is modified, the modified configuration file is stored.
+			</p><p>
+				The role-based access control mechanism can only be enforced if the administrator accesses the JBoss EAP <span class="emphasis"><em>PROD_VER</em></span> system configuration using the management CLI or management console. If an administrator has shell access to the host, the underlying operating system may grant direct read or write access to the JBoss EAP system configuration files. Such access would imply that the role-based access control mechanism is not enforced. It is assumed that the host is located in a protected environment where direct access to the JBoss EAP system configuration files is not allowed.
+			</p></section><section class="section" id="Audit"><div class="titlepage"><div><div><h2 class="title">7.3. Audit</h2></div></div></div><p>
+				JBoss EAP 7 can generate audit records for access control events. Attempts to access web resources, invocation of EJB methods, unauthorized message destinations, and regular web service related access control can all be logged. As the administrator you can select the level of events to audit.
+			</p><p>
+				The audit facility is based on the integrated log4j mechanism. log4j has three main components: <code class="literal">loggers</code>, <code class="literal">appenders</code>, and <code class="literal">layouts</code>. These three types of components work together to enable developers to log messages according to message type and level, and to control at run-time how these messages are formatted and where they are reported.
+			</p><p>
+				The audit information is recorded in text files which can be reviewed using tools from the underlying operating system, such as pagers or editors. Audit records can also be forwarded to a syslog server for additional audit controls.
+			</p><p>
+				User information, principal name, appears <span class="emphasis"><em>only</em></span> in the first log that records the authentication request, and also in the ERROR log generated if the authentication is unsuccessful. Subsequent log events do not explicitly record the user executing the methods.
+			</p><p>
+				User information can be obtained by using the container and thread IDs that are recorded in each audit log and remain during the life of the user session.
+			</p></section><section class="section" id="Clustering3"><div class="titlepage"><div><div><h2 class="title">7.4. Clustering</h2></div></div></div><p>
+				A cluster is a set of nodes. In a JBoss EAP 7 cluster, a node is a JBoss EAP 7 server instance. To build a cluster, several JBoss EAP 7 instances have to be grouped together, also known as a <code class="literal">partition</code>.
+			</p><p>
+				Clustering allows the execution of applications on several parallel nodes. Two cluster concepts are possible with JBoss EAP 7: a failover cluster, and a load-distribution cluster. In both cases, the server state is distributed across different servers, and if any server fails, the application is still accessible via other cluster nodes.
+			</p><p>
+				Cluster communication establishes data consistency between different cluster nodes. JGroups and Infinispan provide the underlying communication, node replication, and caching services for JBoss EAP 7 clusters. These services are configured as MBeans. There is a set of Infinispan and JGroups MBeans for each type of clustering applications (for example, the Stateful Session EJBs, the distributed entity EJBs, etc.).
+			</p><p>
+				Infinispan provides distributed cache and state replication services for the JBoss EAP 7 cluster. A JBoss EAP 7 cluster can have multiple Infinispan MBeans: one for HTTP session replication, one for stateful session beans, one for cached entity beans, and so on.
+			</p><p>
+				The following information is replicated as part of cluster communication:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Replication of the state of a node includes the replication of HTTP sessions, EJB 3.0 session beans, EJB 3.0 entity beans, as well as Hibernate persistence objects (distributed state replication service using Infinispan).
+					</li><li class="listitem">
+						Replication of the state of a node covering the replication of HTTP sessions, and EJB 2.x session beans.
+					</li><li class="listitem">
+						Replication of JBoss Messaging queues. Messages sent to a distributed queue or topic on one node are consumable on other nodes.
+					</li></ul></div><p>
+				JBoss EAP 7 does not perform an automated replication of the JNDI state. When applications defining JNDI resources are replicated to different cluster nodes, they are newly deployed at the nodes. With this deployment, the JNDI resources are created similar to a regular deployment. System configuration changes that involve modifications of JNDI resources are replicated to the cluster nodes, and applied similarly to a local reconfiguration. The JNDI registry maintaining the JNDI mappings is managed consistently between the different cluster nodes. As JNDI does not maintain a state other than the JNDI registry, this is sufficient to ensure cluster-wide consistency of the JNDI service.
+			</p></section><section class="section" id="Identification_and_Authentication"><div class="titlepage"><div><div><h2 class="title">7.5. Identification and Authentication</h2></div></div></div><p>
+				Users are assigned unique user identifiers which are used as the basis for access control decisions and auditing.
+			</p><p>
+				JBoss EAP 7 authenticates the identity of the user before allowing the user to perform any further security-mediated actions.
+			</p><p>
+				JBoss EAP 7 internally maintains the identifier associated with the thread spawned for a user after a successful authentication.
+			</p><p>
+				JBoss EAP 7 provides different identification and authentication mechanisms for different request types:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						HTTP and web services: HTTP-basic authentication, HTTP-digest authentication, form-based authentication, client certificate-based authentication.
+					</li><li class="listitem">
+						EJB: Username and password-based authentication, client certificate-based authentication.
+					</li><li class="listitem">
+						JMS: Username and password-based authentication.
+					</li></ul></div></section><section class="section" id="Transaction_Rollback"><div class="titlepage"><div><div><h2 class="title">7.6. Transaction Rollback</h2></div></div></div><p>
+				JBoss EAP 7 supports the aggregation of operations into transactions, which can be applied and rolled back consistently.
+			</p><p>
+				A transaction is a unit of work containing one or more operations involving one or more shared resources having atomicity, consistency, isolation and durability (ACID) properties - the four important properties of transactions.
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Atomicity: A transaction must be atomic. This means that either all the work done in the transaction must be performed, or none of it must be performed. Doing only part of a transaction is not allowed.
+					</li><li class="listitem">
+						Consistency: When a transaction is completed, the system must be in a stable and consistent condition.
+					</li><li class="listitem">
+						Isolation: Different transactions must be isolated from each other. This means that the partial work done in one transaction is not visible to other transactions until the transaction is committed, and that each process in a multi-user system can be programmed as if it was the only process accessing the system.
+					</li><li class="listitem">
+						Durability: The changes made during a transaction are made persistent when it is committed. When a transaction is committed, its changes will not be lost, even if the server crashes afterward.
+					</li></ul></div><p>
+				The default transaction manager for JBoss EAP 7 is JBoss Transactions, a fast in-VM transaction manager implementation.
+			</p><p>
+				Traditionally, ACID transaction systems have shared the following characteristics:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Transactions are short lived
+					</li><li class="listitem">
+						Resources (such as databases) are locked for the duration of the transaction
+					</li><li class="listitem">
+						Participants have a high degree of trust with each other
+					</li></ul></div><p>
+				The advent of the Internet and web services has given rise to distributed transactions between participants unknown to each other. JBoss Transactions adds native support for web services transactions by providing the components necessary to build interoperable, reliable, multi-party, web services-based applications with minimum effort.
+			</p><p>
+				The programming interfaces are based on the Java API for XML Transactions (JAXTX) and include protocol support for the WS-AtomicTransaction and WS-BusinessActivity specifications. JBoss is designed to support multiple coordination protocols.
+			</p><p>
+				JBoss EAP 7 supports both local and distributed transactions. A transaction is considered to be distributed if it spans multiple process instances, i.e. virtual machines (VMs). Typically a distributed transaction will contain participants that are located within multiple VMs but the transaction is coordinated in a separate VM, or co-located with one of the participants. If the deployment requires distributed transactions then the web services transactions component can be utilized, which uses SOAP/HTTP.
+			</p></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm140187692474688"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2021 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

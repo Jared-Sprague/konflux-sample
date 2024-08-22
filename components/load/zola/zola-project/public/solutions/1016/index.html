@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Are kickstart installations supported over HTTPS?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:24:30.000Z" />
+<meta name="url_slug" content="1016" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                Are kickstart installations supported over HTTPS?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>Are kickstart installations supported over HTTPS?</h1>
+
+  
+    <span class="status unverified" title="This solution has not yet been verified to work for Red Hat customers.">
+        <pfe-icon icon="web-icon-alert-warning" style="--pfe-icon--color: #ec7a08; top: -0.1em"></pfe-icon>
+       Solution Unverified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:24:30.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 5</li>
+<li>Red Hat Enterprise Linux 6</li>
+<li>Red Hat Enterprise Linux 7</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>Is 'https' supported when fetching the kickstart file ?</li>
+<li>Can I use the HTTPS protocol for kickstart installations?</li>
+<li>Can a https URL be used for kickstart?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<ul>
+<li>As of RHEL5 anaconda does not have support for using HTTPS to fetch the kickstart file from an http location.</li>
+<li>Since RHEL6.0 HTTPS can be used to fetch the kickstart file or access repositories, this support was extended with RHEL6.1 and RHEL6.2.</li>
+<li>Since RHEL7.0 HTTPS can be used to fetch the kickstart file or access repositories. </li>
+<li>For  HTTPS to be useful it is necessary to verify the authenticity of the https server, so to verify that the installation happens from a source we can trust. Without this verification we have a secured transport of data but no verification we are really speaking with a trustworthy source.</li>
+</ul>
+<h3 id="additional-informations-for-rhel6">Additional informations for RHEL6</h3>
+<p>When using https for kickstart installations of RHEL6 please note the following:</p>
+<ul>
+<li>
+<p>By default just a set of Certification Autorities in the <code>initrd</code> is used. Since errata <a href="http://rhn.redhat.com/errata/RHBA-2011-0662.html" class="mimir-link-warn" title="This content is not included in Mimir.">RHBA-2011-0662</a> (which already contained on the RHEL6.1 media) the parameter <code>--noverifyssl</code> is available for the kickstart options <code>url</code> and <code>repo</code>. Please note that https is of very limited use without properly verification of the https server.</p>
+</li>
+<li>
+<p>To access reporitories using https <a href="http://rhn.redhat.com/errata/RHBA-2011-0530.html" class="mimir-link-warn" title="This content is not included in Mimir.">RHBA-2011:0530-1</a> has been released, this errata is part of RHEL6.1</p>
+<pre><code>url --url https:&#x2F;&#x2F;...&#x2F;path&#x2F;to&#x2F;expanded&#x2F;media
+</code></pre>
+<p>can be used in ks.cfg</p>
+<pre><code>url --noverifyssl --url https:&#x2F;&#x2F;...&#x2F;path&#x2F;to&#x2F;repo
+</code></pre>
+<p>can be used in ks.cfg, allowing https without successful verification of the cert chain</p>
+</li>
+<li>
+<p>Since anaconda-13.21.149-1.el6 (which is part of RHEL6.2 and was released with errata <a href="http://rhn.redhat.com/errata/RHBA-2011-1565.html" class="mimir-link-warn" title="This content is not included in Mimir.">RHBA-2011-1565</a> these enhancements are available:</p>
+<ul>
+<li>If the kernel option <code>ks=https://.../ks.cfg</code> is used then the installation stops if the certificate of the HTTPS service not trusted</li>
+<li>If the kernel option <code>ks=https://.../ks.cfg noverifyssl</code> is used then the  installation continues even if the certificate of the HTTPS service not trusted. This option also implicitly sets a <code>--noverifyssl</code> for the <code>url</code> option in the <code>ks.cfg</code> file.</li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-informations-for-rhel7">Additional informations for RHEL7</h3>
+<p>When using https for kickstart installations of RHEL7 please note the following:</p>
+<ul>
+<li>
+<p>By default just a set of Certification Autorities in the <code>initrd</code> is used. The parameter <code>--noverifyssl</code> is available for the kickstart options <code>url</code> and <code>repo</code>. Please note that https is of very limited use without properly verification of the https server.</p>
+</li>
+<li>
+<p>To access reporitories using https,</p>
+<pre><code>url --url https:&#x2F;&#x2F;...&#x2F;path&#x2F;to&#x2F;expanded&#x2F;media
+</code></pre>
+<p>can be used in ks.cfg</p>
+<pre><code>url --noverifyssl --url https:&#x2F;&#x2F;...&#x2F;path&#x2F;to&#x2F;repo
+</code></pre>
+<p>can be used in ks.cfg, allowing https without successful verification of the cert chain</p>
+</li>
+<li>
+<p>If the kernel option <code>ks=https://.../ks.cfg</code> is used then the installation stops if the certificate of the HTTPS service not trusted</p>
+</li>
+<li>
+<p>If the kernel option <code>ks=https://.../ks.cfg noverifyssl</code> is used then the  installation continues even if the certificate of the HTTPS service not trusted. This option also implicitly sets a <code>--noverifyssl</code> for the <code>url</code> option in the <code>ks.cfg</code> file.</p>
+</li>
+</ul>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

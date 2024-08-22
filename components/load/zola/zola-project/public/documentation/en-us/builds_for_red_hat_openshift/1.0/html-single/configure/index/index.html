@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Configure - builds for Red Hat OpenShift 1.0
+</title>
+        
+<meta name="product" content="builds for Red Hat OpenShift" />
+<meta name="documentation_version" content="1.0" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-02-13T10:20:29.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/builds_for_red_hat_openshift/1.0/">builds for Red Hat OpenShift</a>
+                                
+                                <a href="/documentation/en-us/builds_for_red_hat_openshift/1.0/">1.0</a>
+                                
+                                
+                                Configure
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Configure</a>
+                    </li><li>
+                        <a href="#configuring-builds">
+                            1. Configuring Builds
+                        </a><ol>
+                <li>
+                        <a href="#ob-configurable-fields-in-build_configuring-openshift-builds">
+                            1.1. Configurable fields in build
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-the-source_configuring-openshift-builds">
+                            1.2. Source definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-the-strategy_configuring-openshift-builds">
+                            1.3. Strategy definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-param-values_configuring-openshift-builds">
+                            1.4. Parameter values definition for a build
+                        </a><ol>
+                <li>
+                        <a href="#example-configuration-for-defining-parameter-values_configuring-openshift-builds">
+                            1.4.1. Example configuration for defining parameter values
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#ob-defining-the-container-file_configuring-openshift-builds">
+                            1.5. Builder or docker file definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-the-output_configuring-openshift-builds">
+                            1.6. Output definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-retention-parameters_configuring-openshift-builds">
+                            1.7. Retention parameters definition for a build
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-volumes_configuring-openshift-builds">
+                            1.8. Volumes definition for a build
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#configuring-build-strategies">
+                            2. Configuring build strategies
+                        </a><ol>
+                <li>
+                        <a href="#ob-defining-strategy-parameters_configuring-build-strategies">
+                            2.1. Strategy parameters definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-system-parameters_configuring-build-strategies">
+                            2.2. System parameters definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-step-resources_configuring-build-strategies">
+                            2.3. Step resources definition
+                        </a><ol>
+                <li>
+                        <a href="#ob-strategies-with-different-resources_configuring-build-strategies">
+                            2.3.1. Strategies with different resources
+                        </a><ol>
+                <li>
+                        <a href="#example-buildah-small-limit_configuring-build-strategies">
+                            2.3.1.1. Buildah strategy with small limit
+                        </a>
+                    </li><li>
+                        <a href="#example-buildah-medium-limit_configuring-build-strategies">
+                            2.3.1.2. Buildah strategy with medium limit
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#ob-resource-management-in-tekton-pipelines_configuring-build-strategies">
+                            2.3.2. Resource management in Tekton pipelines
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#ob-defining-annotations_configuring-build-strategies">
+                            2.4. Annotations definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-securely-referencing-string-parameters_configuring-build-strategies">
+                            2.5. Secure referencing of string parameters
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-system-results_configuring-build-strategies">
+                            2.6. System results definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-volumes-and-volume-mounts_configuring-build-strategies">
+                            2.7. Volumes and volume mounts definition
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#configuring-build-runs">
+                            3. Configuring build runs
+                        </a><ol>
+                <li>
+                        <a href="#ob-configurable-fields-in-build-run_configuring-build-runs">
+                            3.1. Configurable fields in build run
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-the-build-reference_configuring-build-runs">
+                            3.2. Build reference definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-the-build-specification_configuring-build-runs">
+                            3.3. Build specification definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-param-values-in-build-run_configuring-build-runs">
+                            3.4. Parameter values definition for a build run
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-the-service-account_configuring-build-runs">
+                            3.5. Service account definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-retention-parameters-in-build-run_configuring-build-runs">
+                            3.6. Retention parameters definition for a build run
+                        </a>
+                    </li><li>
+                        <a href="#ob-defining-volumes-in-build-run_configuring-build-runs">
+                            3.7. Volumes definition for a build run
+                        </a>
+                    </li><li>
+                        <a href="#ob-specifying-environment-variables_configuring-build-runs">
+                            3.8. Environment variables definition
+                        </a>
+                    </li><li>
+                        <a href="#ob-build-run-status_configuring-build-runs">
+                            3.9. Build run status
+                        </a><ol>
+                <li>
+                        <a href="#ob-understanding-the-status-of-a-build-run_configuring-build-runs">
+                            3.9.1. Build run statuses description
+                        </a>
+                    </li><li>
+                        <a href="#ob-understanding-failed-build-runs_configuring-build-runs">
+                            3.9.2. Failed build runs
+                        </a>
+                    </li><li>
+                        <a href="#ob-step-results-in-build-run-status_configuring-build-runs">
+                            3.9.3. Step results in build run status
+                        </a>
+                    </li><li>
+                        <a href="#ob-build-snapshot_configuring-build-runs">
+                            3.9.4. Build snapshot
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#ob-relationship-of-build-run-with-tekton-tasks_configuring-build-runs">
+                            3.10. Relationship of build run with Tekton tasks
+                        </a>
+                    </li><li>
+                        <a href="#ob-canceling-a-build-run_configuring-build-runs">
+                            3.11. Build run cancellation
+                        </a>
+                    </li><li>
+                        <a href="#ob-automatic-build-run-deletion_configuring-build-runs">
+                            3.12. Automatic build run deletion
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm140078191979232">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--configure">
+            <h1 class="title">Configure</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140078197713792"><div class="titlepage"><div><div class="producttitle"><span class="productname">builds for Red Hat OpenShift</span> <span class="productnumber">1.0</span></div><div><h2 class="subtitle">Configuring Builds</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm140078191979232">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This document provides information about configuring Builds.
+			</div></div></div></div><hr/></div><section class="chapter" id="configuring-builds"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Configuring Builds</h1></div></div></div><p>
+			In a <code class="literal">Build</code> custom resource (CR), you can define the source, build strategy, parameter values, output, retention parameters, and volumes to configure a build. A <code class="literal">Build</code> resource is available for use within a namespace.
+		</p><p>
+			For configuring a build, create a <code class="literal">Build</code> resource YAML file and apply it to the OpenShift Container Platform cluster.
+		</p><section class="section" id="ob-configurable-fields-in-build_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.1. Configurable fields in build</h2></div></div></div><p>
+				You can use the following fields in your <code class="literal">Build</code> custom resource (CR):
+			</p><div class="table" id="idm140078192588608"><p class="title"><strong>Table 1.1. Fields in the <code class="literal">Build</code> CR</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 30%; " class="col_1"><!--Empty--></col><col style="width: 15%; " class="col_2"><!--Empty--></col><col style="width: 55%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140078190931792" scope="col">Field</th><th align="left" valign="top" id="idm140078190930704" scope="col">Presence</th><th align="left" valign="top" id="idm140078190929616" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">apiVersion</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Specifies the API version of the resource, for example, <code class="literal">shipwright.io/v1beta1</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">kind</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Specifies the type of the resource, for example, <code class="literal">Build</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">metadata</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes the metadata that identifies the custom resource definition instance, for example, the name of the <code class="literal">Build</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.source</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes the location of the source code, for example, a Git repository or source bundle image.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.strategy</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes the name and type of the strategy used for the <code class="literal">Build</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.output</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes the location where the generated image will be pushed.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.output.pushSecret</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes an existing secret to get access to the container registry.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.paramValues</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes a name-value list to specify values for parameters defined in the build strategy.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.timeout</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Defines a custom timeout. The default value is ten minutes. You can overwrite this field value in your <code class="literal">BuildRun</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.output.annotations</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes a list of key-value pair that you can use to annotate the output image.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.output.labels</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Denotes a list of key-value pair that you can use to label the output image.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.env</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Defines additional environment variables that you can pass to the build container. The available variables depend on the tool that is used by your build strategy.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.retention.ttlAfterFailed</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Specifies the duration for which a failed build run can exist.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.retention.ttlAfterSucceeded</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Specifies the duration for which a successful build run can exist.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.retention.failedLimit</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Specifies the number of failed build runs that can exist.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078190931792"> <p>
+								<code class="literal">spec.retention.succeededLimit</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190930704"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078190929616"> <p>
+								Specifies the number of successful build runs that can exist.
+							</p>
+							 </td></tr></tbody></table></div></div></section><section class="section" id="ob-defining-the-source_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.2. Source definition</h2></div></div></div><p>
+				You can configure the source details for a build in the <code class="literal">Build</code> custom resource (CR) by setting the value of the following fields:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">source.git.url</code>: Defines the source location of the image available in a Git repository.
+					</li><li class="listitem">
+						<code class="literal">source.git.cloneSecret</code>: References a secret in the namespace that contains the SSH private key for a private Git repository.
+					</li><li class="listitem">
+						<code class="literal">source.git.revision</code>: Defines a specific revision to select from the source Git repository. For example, a commit, tag, or branch name. This field defaults to the Git repository default branch.
+					</li><li class="listitem">
+						<code class="literal">source.contextDir</code>: Specifies the context path for the repositories where the source code is not present at the root folder.
+					</li></ul></div><p>
+				The build controller does not automatically validate that the Git repository you specified for pulling an image exists. If you need to validate, set the value of the <code class="literal">build.shipwright.io/verify.repository</code> annotation to <code class="literal">true</code>, as shown in the following example:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-golang-build
+  annotations:
+    build.shipwright.io/verify.repository: "true"
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-go
+    contextDir: docker-build</pre><p>
+				The build controller validates the existence of a Git repository in the following scenarios:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						When you use the endpoint URL with an HTTP or HTTPS protocol.
+					</li><li class="listitem">
+						When you have defined an SSH protocol, such as <code class="literal">git@</code>, but not a referenced secret, such as <code class="literal">source.git.cloneSecret</code>.
+					</li></ul></div><p>
+				The following examples show how you can configure a build with different set of source inputs.
+			</p><div class="formalpara"><p class="title"><strong>Example: Configuring a build with credentials</strong></p><p>
+					You can configure a build with a source by specifying your credentials, as shown in the following example:
+				</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-build
+spec:
+  source:
+    git:
+      url: https://github.com/sclorg/nodejs-ex
+      cloneSecret: source-repository-credentials</pre><div class="formalpara"><p class="title"><strong>Example: Configuring a build with a context path</strong></p><p>
+					You can configure a build with a source that specifies a context path in the Git repository, as shown in the following example:
+				</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-custom-context-dockerfile
+spec:
+  source:
+    git:
+      url: https://github.com/userjohn/npm-simple
+    contextDir: docker-build</pre><div class="formalpara"><p class="title"><strong>Example: Configuring a build with a tag</strong></p><p>
+					You can configure a build with a source that specifies the tag <code class="literal">v.0.1.0</code> for the Git repository, as shown in the following example:
+				</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-golang-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-go
+      revision: v0.1.0</pre><div class="formalpara"><p class="title"><strong>Example: Configuring a build with environment variables</strong></p><p>
+					You can also configure a build that specifies environment variables, as shown in the following example:
+				</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-golang-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-go
+    contextDir: docker-build
+  env:
+    - name: &lt;example_var_1&gt;
+      value: "&lt;example_value_1&gt;"
+    - name: &lt;example_var_2&gt;
+      value: "&lt;example_value_2&gt;"</pre></section><section class="section" id="ob-defining-the-strategy_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.3. Strategy definition</h2></div></div></div><p>
+				You can configure the strategy for a build in the <code class="literal">Build</code> CR. The following build strategies are available for use:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">buildah</code>
+					</li><li class="listitem">
+						<code class="literal">source-to-image</code>
+					</li></ul></div><p>
+				To configure a build strategy, define the <code class="literal">spec.strategy.name</code> and <code class="literal">spec.strategy.kind</code> fields in the <code class="literal">Build</code> CR, as shown in the following example:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-build
+spec:
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy</pre></section><section class="section" id="ob-defining-param-values_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.4. Parameter values definition for a build</h2></div></div></div><p>
+				You can specify values for the build strategy parameters in your <code class="literal">Build</code> CR. By specifying parameter values, you can control how the steps of the build strategy work. You can also overwrite the values in the <code class="literal">BuildRun</code> resource.
+			</p><p>
+				For all parameters, you must specify values either directly or by using reference keys from config maps or secrets.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					The usage of the parameter in the build strategy steps limits the usage of config maps and secrets. You can only use config maps and secrets if the parameter is used in the command, argument, or environment variable.
+				</p></div></div><p>
+				When using the <code class="literal">paramValues</code> field in your <code class="literal">Build</code> CR, avoid the following scenarios:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Specifying a <code class="literal">spec.paramValues</code> name that does not match one of the <code class="literal">spec.parameters</code> defined in the <code class="literal">BuildStrategy</code> CR.
+					</li><li class="listitem">
+						Specifying a <code class="literal">spec.paramValues</code> name that collides with the Shipwright reserved parameters. These parameters include <code class="literal">BUILDER_IMAGE</code>, <code class="literal">CONTEXT_DIR</code>, and any name starting with <code class="literal">shp-</code>.
+					</li></ul></div><p>
+				Also, ensure that you understand the content of your strategy before defining the <code class="literal">paramValues</code> field in the <code class="literal">Build</code> CR.
+			</p><section class="section" id="example-configuration-for-defining-parameter-values_configuring-openshift-builds"><div class="titlepage"><div><div><h3 class="title">1.4.1. Example configuration for defining parameter values</h3></div></div></div><p>
+					The following examples show how to define parameters in a build strategy and assign values to those parameters by using a <code class="literal">Build</code> CR. You can also assign a value to a parameter of the type <code class="literal">array</code> in your <code class="literal">Build</code> CR.
+				</p><div class="formalpara"><p class="title"><strong>Example: Defining parameters in a <code class="literal">ClusterBuildStrategy</code> CR</strong></p><p>
+						The following example shows a <code class="literal">ClusterBuildStrategy</code> CR that defines several parameters:
+					</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: ClusterBuildStrategy
+metadata:
+  name: buildah
+spec:
+  parameters:
+    - name: build-args
+      description: "The values for the args in the Dockerfile. Values must be in the format KEY=VALUE."
+      type: array
+      defaults: []
+    # ...
+    - name: storage-driver
+      description: "The storage driver to use, such as 'overlay' or 'vfs'."
+      type: string
+      default: "vfs"
+# ...
+steps:
+# ...</pre><div class="formalpara"><p class="title"><strong>Example: Assigning values to parameters in a <code class="literal">Build</code> CR</strong></p><p>
+						The above <code class="literal">ClusterBuildStrategy</code> CR defines a <code class="literal">storage-driver</code> parameter and you can specify the value of the <code class="literal">storage-driver</code> parameter in your <code class="literal">Build</code> CR, as shown in the following example:
+					</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: &lt;your_build&gt;
+  namespace: &lt;your_namespace&gt;
+spec:
+  paramValues:
+  - name: storage-driver
+    value: "overlay"
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  output:
+  # ...</pre><div class="formalpara"><p class="title"><strong>Example: Creating a <code class="literal">ConfigMap</code> CR to control a parameter centrally</strong></p><p>
+						If you want to use the <code class="literal">storage-driver</code> parameter for multiple builds and control its usage centrally, then you can create a <code class="literal">ConfigMap</code> CR, as shown in the following example:
+					</p></div><pre class="programlisting language-yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: buildah-configuration
+  namespace: &lt;your_namespace&gt;
+data:
+  storage-driver: overlay</pre><p>
+					You can use the created <code class="literal">ConfigMap</code> CR as a parameter value in your <code class="literal">Build</code> CR, as shown in the following example:
+				</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: &lt;your_build&gt;
+  namespace: &lt;your_namespace&gt;
+spec:
+  paramValues:
+  - name: storage-driver
+    configMapValue:
+      name: buildah-configuration
+      key: storage-driver
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  output:
+  # ...</pre><div class="formalpara"><p class="title"><strong>Example: Assigning value to a parameter of the type <code class="literal">array</code> in a <code class="literal">Build</code> CR</strong></p><p>
+						You can assign value to a parameter of the type <code class="literal">array</code>. If you use the <code class="literal">buildah</code> strategy, you can define a <code class="literal">registries-search</code> parameter to search images in specific registries. The following example shows how you can assign a value to the <code class="literal">registries-search</code> array parameter:
+					</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: &lt;your_build&gt;
+  namespace: &lt;your_namespace&gt;
+spec:
+  paramValues:
+  - name: storage-driver
+    configMapValue:
+      name: buildah-configuration
+      key: storage-driver
+  - name: registries-search
+    values:
+    - value: registry.redhat.io
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  output:
+  # ...</pre><div class="formalpara"><p class="title"><strong>Example: Referencing a secret in a <code class="literal">Build</code> CR</strong></p><p>
+						You can reference a secret for a <code class="literal">registries-block</code> array parameter, as shown in the following example:
+					</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: &lt;your_build&gt;
+  namespace: &lt;your_namespace&gt;
+spec:
+  paramValues:
+  - name: storage-driver
+    configMapValue:
+      name: buildah-configuration
+      key: storage-driver
+  - name: registries-block
+    values:
+    - secretValue: <span id="CO1-1"><!--Empty--></span><span class="callout">1</span>
+        name: registry-configuration
+        key: reg-blocked
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  output:
+  # ...</pre><div class="calloutlist"><dl class="calloutlist"><dt><a href="#CO1-1"><span class="callout">1</span></a> </dt><dd><div class="para">
+							The value references a secret.
+						</div></dd></dl></div></section></section><section class="section" id="ob-defining-the-container-file_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.5. Builder or docker file definition</h2></div></div></div><p>
+				In your <code class="literal">Build</code> CR, you can use the <code class="literal">spec.paramValues</code> field to specify the image that contains the tools to build the output image. The following example specifies a <code class="literal">Dockerfile</code> image in a <code class="literal">Build</code> CR:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-golang-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-go
+    contextDir: docker-build
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: dockerfile
+    value: Dockerfile</pre><p>
+				You can also use a <code class="literal">builder</code> image as part of the <code class="literal">source-to-image</code> build strategy in your <code class="literal">Build</code> CR, as shown in the following example:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: s2i-nodejs-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-nodejs
+    contextDir: source-build/
+  strategy:
+    name: source-to-image
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: builder-image
+    value: docker.io/centos/nodejs-10-centos7</pre></section><section class="section" id="ob-defining-the-output_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.6. Output definition</h2></div></div></div><p>
+				In your <code class="literal">Build</code> CR, you can specify an output location to push the image. When using an external private registry as your output location, you must specify a secret to access the image. You can also specify the annotations and labels for the output image.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					When you specify annotations or labels, the output image is pushed twice. The first push comes from the build strategy and the second push changes the image configuration to add the annotations and labels.
+				</p></div></div><p>
+				The following example defines a public registry where the image is pushed:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: s2i-nodejs-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-nodejs
+    contextDir: source-build/
+  strategy:
+    name: source-to-image
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: builder-image
+    value: docker.io/centos/nodejs-10-centos7
+  output:
+    image: image-registry.openshift-image-registry.svc:5000/build-examples/nodejs-ex</pre><p>
+				The following example defines a private registry where the image is pushed:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: s2i-nodejs-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-nodejs
+    contextDir: source-build/
+  strategy:
+    name: source-to-image
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: builder-image
+    value: docker.io/centos/nodejs-10-centos7
+  output:
+    image: us.icr.io/source-to-image-build/nodejs-ex
+    pushSecret: icr-knbuild</pre><p>
+				The following example defines annotations and labels for the image:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: s2i-nodejs-build
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-nodejs
+    contextDir: source-build/
+  strategy:
+    name: source-to-image
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: builder-image
+    value: docker.io/centos/nodejs-10-centos7
+  output:
+    image: us.icr.io/source-to-image-build/nodejs-ex
+    pushSecret: icr-knbuild
+    annotations:
+      "org.opencontainers.image.source": "https://github.com/org/repo"
+      "org.opencontainers.image.url": "https://my-company.com/images"
+    labels:
+      "maintainer": "team@my-company.com"
+      "description": "This is my cool image"</pre></section><section class="section" id="ob-defining-retention-parameters_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.7. Retention parameters definition for a build</h2></div></div></div><p>
+				You can define retention parameters for the following purposes:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						To specify how long a completed build run can exist
+					</li><li class="listitem">
+						To specify the number of succeeded or failed build runs that can exist for a build
+					</li></ul></div><p>
+				Retention parameters provide a way to clean your <code class="literal">BuildRun</code> instances or resources automatically. You can set the value of the following retention parameters in your <code class="literal">Build</code> CR:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">retention.succeededLimit</code>: Defines the number of succeeded build runs that can exist for a build.
+					</li><li class="listitem">
+						<code class="literal">retention.failedLimit</code>: Defines the number of failed build runs that can exist for a build.
+					</li><li class="listitem">
+						<code class="literal">retention.ttlAfterFailed</code>: Specifies the duration for which a failed build run can exist.
+					</li><li class="listitem">
+						<code class="literal">retention.ttlAfterSucceeded</code>: Specifies the duration for which a successful build run can exist.
+					</li></ul></div><p>
+				The following example shows the usage of retention parameters in a <code class="literal">Build</code> CR:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: build-retention-ttl
+spec:
+  source:
+    git:
+      url: "https://github.com/shipwright-io/sample-go"
+    contextDir: docker-build
+  strategy:
+    kind: ClusterBuildStrategy
+    name: buildah
+  output:
+  # ...
+  retention:
+    ttlAfterFailed: 30m
+    ttlAfterSucceeded: 1h
+    failedLimit: 10
+    succeededLimit: 20
+  # ...</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					When you change the value of the <code class="literal">retention.failedLimit</code> and <code class="literal">retention.succeededLimit</code> parameters, the new limit is enforced as soon as those changes are applied on your build. However, when you change the value of the <code class="literal">retention.ttlAfterFailed</code> and <code class="literal">retention.ttlAfterSucceeded</code> parameters, the new retention duration is enforced only on the new build runs. Old build runs adhere to the old retention duration. If you have defined retention duration in both <code class="literal">BuildRun</code> and <code class="literal">Build</code> CRs, the retention duration defined in the <code class="literal">BuildRun</code> CR gets the priority.
+				</p></div></div></section><section class="section" id="ob-defining-volumes_configuring-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.8. Volumes definition for a build</h2></div></div></div><p>
+				You can define volumes in your <code class="literal">Build</code> CR. The defined volumes override the volumes specified in the <code class="literal">BuildStrategy</code> resource. If a volume is not overridden, then the build run fails.
+			</p><p>
+				The following example shows the usage of the <code class="literal">volumes</code> field in a <code class="literal">Build</code> CR:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: &lt;build_name&gt;
+spec:
+  source:
+    git:
+      url: https://github.com/example/url
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: dockerfile
+    value: Dockerfile
+  output:
+    image: registry/namespace/image:latest
+  volumes:
+    - name: &lt;your_volume_name&gt;
+      configMap:
+        name: &lt;your_configmap_name&gt;</pre></section></section><section class="chapter" id="configuring-build-strategies"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Configuring build strategies</h1></div></div></div><p>
+			In a <code class="literal">BuildStrategy</code> or <code class="literal">ClusterBuildStrategy</code> custom resource (CR), you can define strategy parameters, system parameters, step resources definitions, annotations, and volumes to configure a build strategy. A <code class="literal">BuildStrategy</code> resource is available for use within a namespace, and a <code class="literal">ClusterBuildStrategy</code> resource is available for use throughout the cluster.
+		</p><p>
+			To configure a build strategy, create a <code class="literal">BuildStrategy</code> or <code class="literal">ClusterBuildStrategy</code> resource YAML file and apply it to the OpenShift Container Platform cluster.
+		</p><section class="section" id="ob-defining-strategy-parameters_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.1. Strategy parameters definition</h2></div></div></div><p>
+				You can define strategy parameters in a <code class="literal">BuildStrategy</code> or <code class="literal">ClusterBuildStrategy</code> custom resource (CR) and set, or modify, the values of those parameters in your <code class="literal">Build</code> or <code class="literal">BuildRun</code> CR. You can also configure or modify strategy parameters at build time when creating your build strategy.
+			</p><p>
+				Consider the following points before defining parameters for your strategy:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Define a list of parameters in the <code class="literal">spec.parameters</code> field of your build strategy CR. Each list item contains a name, a description, a type, and an optional default value, or values, for an array type. If no default value is set, you must define a value in the <code class="literal">Build</code> or <code class="literal">BuildRun</code> CR.
+					</li><li class="listitem">
+						Define parameters of string or array type in the <code class="literal">spec.steps</code> field of your build strategy.
+					</li><li class="listitem"><p class="simpara">
+						Specify a parameter of string type by using the <code class="literal">$(params.your-parameter-name)</code> syntax. You can set a value for the <code class="literal">your-parameter-name</code> parameter in your <code class="literal">Build</code> or <code class="literal">BuildRun</code> CR that references your strategy. You can define the following string parameters based on your needs:
+					</p><div class="table" id="idm140078197855648"><p class="title"><strong>Table 2.1. String parameters</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"><!--Empty--></col><col style="width: 50%; " class="col_2"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140078197850816" scope="col">Parameter</th><th align="left" valign="top" id="idm140078197849728" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140078197850816"> <p>
+										<code class="literal">image</code>
+									</p>
+									 </td><td align="left" valign="top" headers="idm140078197849728"> <p>
+										Use this parameter to define a custom tag, such as <code class="literal">golang:$(params.go-version)</code>
+									</p>
+									 </td></tr><tr><td align="left" valign="top" headers="idm140078197850816"> <p>
+										<code class="literal">args</code>
+									</p>
+									 </td><td align="left" valign="top" headers="idm140078197849728"> <p>
+										Use this parameter to pass data into your builder commands
+									</p>
+									 </td></tr><tr><td align="left" valign="top" headers="idm140078197850816"> <p>
+										<code class="literal">env</code>
+									</p>
+									 </td><td align="left" valign="top" headers="idm140078197849728"> <p>
+										Use this parameter to provide a value for an environment variable
+									</p>
+									 </td></tr></tbody></table></div></div></li><li class="listitem"><p class="simpara">
+						Specify a parameter of array type by using the <code class="literal">$(params.your-array-parameter-name[*])</code> syntax. After specifying the array, you can use it in an argument or a command. For each item in the array, an argument will be set. The following example uses an array parameter in the <code class="literal">spec.steps</code> field of the build strategy:
+					</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: ClusterBuildStrategy
+metadata:
+  name: &lt;cluster_build_strategy_name&gt;
+  # ...
+spec:
+  parameters:
+    - name: tool-args
+      description: Parameters for the tool
+      type: array
+  steps:
+    - name: a-step
+      command:
+        - some-tool
+      args:
+        - --tool-args
+        - $(params.tool-args[*])</pre></li><li class="listitem">
+						Provide parameter values as simple strings or as references to keys in config maps or secrets. For a parameter, you can use a config map or secret value only if it is defined in the <code class="literal">command</code>, <code class="literal">args</code>, or <code class="literal">env</code> section of the <code class="literal">spec.steps</code> field.
+					</li></ul></div></section><section class="section" id="ob-defining-system-parameters_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.2. System parameters definition</h2></div></div></div><p>
+				You can use system parameters when defining the steps of a build strategy to access system information, or user-defined information in a <code class="literal">Build</code> or <code class="literal">BuildRun</code> custom resource (CR). You cannot configure or modify system parameters as they are defined at runtime by the build run controller.
+			</p><p>
+				You can define the following system parameters in your build strategy definition:
+			</p><div class="table" id="idm140078188597104"><p class="title"><strong>Table 2.2. System parameters</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"><!--Empty--></col><col style="width: 50%; " class="col_2"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140078188592272" scope="col">Parameter</th><th align="left" valign="top" id="idm140078188591184" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140078188592272"> <p>
+								<code class="literal">$(params.shp-source-root)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078188591184"> <p>
+								Denotes the absolute path to the directory that contains the source code.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078188592272"> <p>
+								<code class="literal">$(params.shp-source-context)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078188591184"> <p>
+								Denotes the absolute path to the context directory of the source code. If you do not specify any value for <code class="literal">spec.source.contextDir</code> in the <code class="literal">Build</code> CR, this parameter uses the value of the <code class="literal">$(params.shp-source-root)</code> system parameter.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078188592272"> <p>
+								<code class="literal">$(params.shp-output-image)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078188591184"> <p>
+								Denotes the URL of the image to push as defined in the <code class="literal">spec.output.image</code> field of your <code class="literal">Build</code> or <code class="literal">BuildRun</code> CR.
+							</p>
+							 </td></tr></tbody></table></div></div></section><section class="section" id="ob-defining-step-resources_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.3. Step resources definition</h2></div></div></div><p>
+				You can include a definition of resources, such as the limit imposed on CPU, memory, and disk usage for all steps in a build strategy. For strategies with multiple steps, a step might require more resources than others. As a strategy administrator, you can define the resource values that are optimal for each step.
+			</p><p>
+				For example, you can install strategies with the same steps, but different names and step resources on the cluster so that users can create a build with smaller or larger resource requirements.
+			</p><section class="section" id="ob-strategies-with-different-resources_configuring-build-strategies"><div class="titlepage"><div><div><h3 class="title">2.3.1. Strategies with different resources</h3></div></div></div><p>
+					Define multiple types of the same strategy with varying limits on the resources. The following examples use the same <code class="literal">buildah</code> strategy with small and medium limits defined for the resources. These examples provide a strategy administrator more control over the step resources definition.
+				</p><section class="section" id="example-buildah-small-limit_configuring-build-strategies"><div class="titlepage"><div><div><h4 class="title">2.3.1.1. Buildah strategy with small limit</h4></div></div></div><p>
+						Define the <code class="literal">spec.steps[].resources</code> field with a small resource limit for the <code class="literal">buildah</code> strategy, as shown in the following example:
+					</p><div class="formalpara"><p class="title"><strong>Example: <code class="literal">buildah</code> strategy with small limit</strong></p><p>
+							
+<pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: ClusterBuildStrategy
+metadata:
+  name: buildah-small
+spec:
+  steps:
+    - name: build-and-push
+      image: quay.io/containers/buildah:v1.31.0
+      workingDir: $(params.shp-source-root)
+      securityContext:
+        capabilities:
+          add:
+          - "SETFCAP"
+      command:
+        - /bin/bash
+      args:
+        - -c
+        - |
+          set -euo pipefail
+          # Parse parameters
+        # ...
+        # That's the separator between the shell script and its args
+        - --
+        - --context
+        - $(params.shp-source-context)
+        - --dockerfile
+        - $(build.dockerfile)
+        - --image
+        - $(params.shp-output-image)
+        - --build-args
+        - $(params.build-args[*])
+        - --registries-block
+        - $(params.registries-block[*])
+        - --registries-insecure
+        - $(params.registries-insecure[*])
+        - --registries-search
+        - $(params.registries-search[*])
+      resources:
+        limits:
+          cpu: 250m
+          memory: 65Mi
+        requests:
+          cpu: 250m
+          memory: 65Mi
+  parameters:
+    - name: build-args
+      description: "The values for the args in the Dockerfile. Values must be in the format KEY=VALUE."
+      type: array
+      defaults: []
+    # ...</pre>
+
+						</p></div></section><section class="section" id="example-buildah-medium-limit_configuring-build-strategies"><div class="titlepage"><div><div><h4 class="title">2.3.1.2. Buildah strategy with medium limit</h4></div></div></div><p>
+						Define the <code class="literal">spec.steps[].resources</code> field with a medium resource limit for the <code class="literal">buildah</code> strategy, as shown in the following example:
+					</p><div class="formalpara"><p class="title"><strong>Example: <code class="literal">buildah</code> strategy with medium limit</strong></p><p>
+							
+<pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: ClusterBuildStrategy
+metadata:
+  name: buildah-medium
+spec:
+  steps:
+    - name: build-and-push
+      image: quay.io/containers/buildah:v1.31.0
+      workingDir: $(params.shp-source-root)
+      securityContext:
+        capabilities:
+          add:
+          - "SETFCAP"
+      command:
+        - /bin/bash
+      args:
+        - -c
+        - |
+          set -euo pipefail
+          # Parse parameters
+        # ...
+        # That's the separator between the shell script and its args
+        - --
+        - --context
+        - $(params.shp-source-context)
+        - --dockerfile
+        - $(build.dockerfile)
+        - --image
+        - $(params.shp-output-image)
+        - --build-args
+        - $(params.build-args[*])
+        - --registries-block
+        - $(params.registries-block[*])
+        - --registries-insecure
+        - $(params.registries-insecure[*])
+        - --registries-search
+        - $(params.registries-search[*])
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1Gi
+        requests:
+          cpu: 500m
+          memory: 1Gi
+  parameters:
+    - name: build-args
+      description: "The values for the args in the Dockerfile. Values must be in the format KEY=VALUE."
+      type: array
+      defaults: []
+    # ...</pre>
+
+						</p></div><p>
+						After configuring the resource definition for a strategy, you must reference the strategy in your <code class="literal">Build</code> CR, as shown in the following example:
+					</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: buildah-medium
+spec:
+  source:
+    git:
+      url: https://github.com/shipwright-io/sample-go
+    contextDir: docker-build
+  strategy:
+    name: buildah-medium
+    kind: ClusterBuildStrategy
+  # ...</pre></section></section><section class="section" id="ob-resource-management-in-tekton-pipelines_configuring-build-strategies"><div class="titlepage"><div><div><h3 class="title">2.3.2. Resource management in Tekton pipelines</h3></div></div></div><p>
+					The build controller works with the Tekton pipeline controller so that it can schedule pods for executing the strategy steps. At runtime, the build controller creates a Tekton <code class="literal">TaskRun</code> resource, and the <code class="literal">TaskRun</code> resource creates a new pod in the specific namespace. This pod then sequentially executes all of the strategy steps to build an image.
+				</p></section></section><section class="section" id="ob-defining-annotations_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.4. Annotations definition</h2></div></div></div><p>
+				You can define annotations for a build strategy or a cluster build strategy like for any other Kubernetes object. The build strategy first propagates annotations to the <code class="literal">TaskRun</code> resource. Then, Tekton propagates them to the pod.
+			</p><p>
+				You can use annotations for the following purposes:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						To limit the network bandwidth the pod is allowed to use, the <code class="literal">kubernetes.io/ingress-bandwidth</code> and <code class="literal">kubernetes.io/egress-bandwidth</code> annotations are defined in the Kubernetes network traffic shaping feature.
+					</li><li class="listitem">
+						To define the AppArmor profile of a container, the <code class="literal">container.apparmor.security.beta.kubernetes.io/&lt;container_name&gt;</code> annotation is used.
+					</li></ul></div><p>
+				The following example shows the usage of annotations in a build strategy:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: ClusterBuildStrategy
+metadata:
+  name: &lt;cluster_build_strategy_name&gt;
+  annotations:
+    container.apparmor.security.beta.kubernetes.io/step-build-and-push: unconfined
+    container.seccomp.security.alpha.kubernetes.io/step-build-and-push: unconfined
+spec:
+  # ...</pre><p>
+				The following annotations are not propagated:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">kubectl.kubernetes.io/last-applied-configuration</code>
+					</li><li class="listitem">
+						<code class="literal">clusterbuildstrategy.shipwright.io/*</code>
+					</li><li class="listitem">
+						<code class="literal">buildstrategy.shipwright.io/*</code>
+					</li><li class="listitem">
+						<code class="literal">build.shipwright.io/*</code>
+					</li><li class="listitem">
+						<code class="literal">buildrun.shipwright.io/*</code>
+					</li></ul></div><p>
+				A strategy administrator can further restrict the usage of annotations by using policy engines.
+			</p></section><section class="section" id="ob-securely-referencing-string-parameters_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.5. Secure referencing of string parameters</h2></div></div></div><p>
+				String parameters are used when you define environment variables, arguments, or images in a <code class="literal">BuildStrategy</code> or <code class="literal">ClusterBuildStrategy</code> custom resource (CR). In your build strategy steps, you can reference string parameters by using the <code class="literal">$(params.your-parameter-name)</code> syntax.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					You can also reference system parameters and strategy parameters by using the <code class="literal">$(params.your-parameter-name)</code> syntax in your build strategy steps.
+				</p></div></div><p>
+				In the pod, all <code class="literal">$(params.your-parameter-name)</code> variables are replaced by actual strings. However, you must pay attention when you reference a string parameter in an argument by using an inline script. For example, to securely pass a parameter value into an argument defined with a script, you can choose one of the following approaches:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Use environment variables
+					</li><li class="listitem">
+						Use arguments
+					</li></ul></div><div class="formalpara"><p class="title"><strong>Example: Referencing a string parameter into an environment variable</strong></p><p>
+					You can pass the string parameter into an environment variable, instead of directly using it inside the script. By using quoting around the environment variable, you can avoid the command injection vulnerability. You can use this approach for strategies, such as <code class="literal">buildah</code>. The following example uses an environment variable inside the script to reference a string parameter:
+				</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildStrategy
+metadata:
+  name: sample-strategy
+spec:
+  parameters:
+    - name: sample-parameter
+      description: A sample parameter
+      type: string
+  steps:
+    - name: sample-step
+      env:
+        - name: PARAM_SAMPLE_PARAMETER
+          value: $(params.sample-parameter)
+      command:
+        - /bin/bash
+      args:
+        - -c
+        - |
+          set -euo pipefail
+
+          some-tool --sample-argument "${PARAM_SAMPLE_PARAMETER}"</pre><div class="formalpara"><p class="title"><strong>Example: Referencing a string parameter into an argument</strong></p><p>
+					You can pass the string parameter into an argument defined within your script. Appropriate shell quoting guards against command injection. You can use this approach for strategies, such as <code class="literal">buildah</code>. The following example uses an argument defined within your script to reference a string parameter:
+				</p></div><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildStrategy
+metadata:
+  name: sample-strategy
+spec:
+  parameters:
+    - name: sample-parameter
+      description: A sample parameter
+      type: string
+  steps:
+    - name: sample-step
+      command:
+        - /bin/bash
+      args:
+        - -c
+        - |
+          set -euo pipefail
+
+          SAMPLE_PARAMETER="$1"
+
+          some-tool --sample-argument "${SAMPLE_PARAMETER}"
+        - --
+        - $(params.sample-parameter)</pre></section><section class="section" id="ob-defining-system-results_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.6. System results definition</h2></div></div></div><p>
+				You can store the size and digest of the image that is created by your build strategy to a set of result files. You can also store error details for debugging purposes when a <code class="literal">BuildRun</code> resource fails. You can define the following result parameters in your <code class="literal">BuildStrategy</code> or <code class="literal">ClusterBuildStrategy</code> CR:
+			</p><div class="table" id="idm140078196931504"><p class="title"><strong>Table 2.3. Result parameters</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"><!--Empty--></col><col style="width: 50%; " class="col_2"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140078193114320" scope="col">Parameter</th><th align="left" valign="top" id="idm140078193113232" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140078193114320"> <p>
+								<code class="literal">$(results.shp-image-digest.path)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078193113232"> <p>
+								Denotes the path to the file that stores the digest of the image.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078193114320"> <p>
+								<code class="literal">$(results.shp-image-size.path)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078193113232"> <p>
+								Denotes the path to the file that stores the compressed size of the image.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078193114320"> <p>
+								<code class="literal">$(results.shp-error-reason.path)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078193113232"> <p>
+								Denotes the path to the file that stores the error reason.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078193114320"> <p>
+								<code class="literal">$(results.shp-error-message.path)</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078193113232"> <p>
+								Denotes the path to the file that stores the error message.
+							</p>
+							 </td></tr></tbody></table></div></div><p>
+				The following example shows the size and digest of the image in the <code class="literal">.status.output</code> field of the <code class="literal">BuildRun</code> CR:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+# ...
+status:
+ # ...
+  output:
+    digest: sha256:07626e3c7fdd28d5328a8d6df8d29cd3da760c7f5e2070b534f9b880ed093a53
+    size: 1989004
+  # ...</pre><p>
+				The following example shows the error reason and message in the <code class="literal">.status.failureDetails</code> field of the <code class="literal">BuildRun</code> CR:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+# ...
+status:
+  # ...
+  failureDetails:
+    location:
+      container: step-source-default
+      pod: baran-build-buildrun-gzmv5-b7wbf-pod-bbpqr
+    message: The source repository does not exist, or you have insufficient permission
+      to access it.
+    reason: GitRemotePrivate</pre></section><section class="section" id="ob-defining-volumes-and-volume-mounts_configuring-build-strategies"><div class="titlepage"><div><div><h2 class="title">2.7. Volumes and volume mounts definition</h2></div></div></div><p>
+				A build strategy includes the definition of volumes and volume mounts. The volumes defined in a build strategy support all of the usual <code class="literal">volumeSource</code> types. The build steps refer to the volumes by creating a volume mount.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					The volume mount defined in build steps allows you to access volumes defined in a <code class="literal">BuildStrategy</code>, <code class="literal">Build</code> or <code class="literal">BuildRun</code> resource.
+				</p></div></div><p>
+				Volumes in build strategy use an <code class="literal">overridable</code> boolean flag, which is set to <code class="literal">false</code> by default. If a <code class="literal">Build</code> or <code class="literal">BuildRun</code> resource tries to override the volumes defined in a <code class="literal">BuildStrategy</code> resource, it will fail because the default value of the <code class="literal">overridable</code> flag is <code class="literal">false</code>.
+			</p><p>
+				The following example shows a <code class="literal">BuildStrategy</code> resource that defines the <code class="literal">volumes</code> and <code class="literal">volumeMounts</code> fields:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildStrategy
+metadata:
+  name: buildah
+spec:
+  steps:
+    - name: build
+      image: quay.io/containers/buildah:v1.23.3
+      # ...
+      volumeMounts:
+        - name: varlibcontainers
+          mountPath: /var/lib/containers
+  volumes:
+    - name: varlibcontainers
+      overridable: true
+      emptyDir: {}</pre></section></section><section class="chapter" id="configuring-build-runs"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Configuring build runs</h1></div></div></div><p>
+			In a <code class="literal">BuildRun</code> custom resource (CR), you can define the build reference, build specification, parameter values, service account, output, retention parameters, and volumes to configure a build run. A <code class="literal">BuildRun</code> resource is available for use within a namespace.
+		</p><p>
+			For configuring a build run, create a <code class="literal">BuildRun</code> resource YAML file and apply it to the OpenShift Container Platform cluster.
+		</p><section class="section" id="ob-configurable-fields-in-build-run_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.1. Configurable fields in build run</h2></div></div></div><p>
+				You can use the following fields in your <code class="literal">BuildRun</code> custom resource (CR):
+			</p><div class="table" id="idm140078197370688"><p class="title"><strong>Table 3.1. Fields in the <code class="literal">BuildRun</code> CR</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 30%; " class="col_1"><!--Empty--></col><col style="width: 15%; " class="col_2"><!--Empty--></col><col style="width: 55%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140078196796864" scope="col">Field</th><th align="left" valign="top" id="idm140078196795776" scope="col">Presence</th><th align="left" valign="top" id="idm140078196794688" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">apiVersion</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Specifies the API version of the resource. For example, <code class="literal">shipwright.io/v1beta1</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">kind</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Specifies the type of the resource. For example, <code class="literal">BuildRun</code>.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">metadata</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Required
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Indicates the metadata that identifies the custom resource definition instance. For example, the name of the <code class="literal">BuildRun</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.build.name</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Specifies an existing <code class="literal">Build</code> resource instance to use. You cannot use this field with the <code class="literal">spec.build.spec</code> field.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.build.spec</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Specifies an embedded <code class="literal">Build</code> resource instance to use. You cannot use this field with the <code class="literal">spec.build.name</code> field.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.serviceAccount</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Indicates the service account to use when building the image.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.timeout</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Defines a custom timeout. This field value overwrites the value of the <code class="literal">spec.timeout</code> field defined in your <code class="literal">Build</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.paramValues</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Indicates a name-value list to specify values for parameters defined in the build strategy. The parameter value overwrites the value of the parameter that is defined with the same name in your <code class="literal">Build</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.output.image</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Indicates a custom location where the generated image will be pushed. This field value overwrites the value of the <code class="literal">output.image</code> field defined in your <code class="literal">Build</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.output.pushSecret</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Indicates an existing secret to get access to the container registry. This secret will be added to the service account along with other secrets requested by the <code class="literal">Build</code> resource.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140078196796864"> <p>
+								<code class="literal">spec.env</code>
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196795776"> <p>
+								Optional
+							</p>
+							 </td><td align="left" valign="top" headers="idm140078196794688"> <p>
+								Defines additional environment variables that you can pass to the build container. This field value overrides any environment variables that are specified in the <code class="literal">Build</code> resource. The available variables depend on the tool that is used by your build strategy.
+							</p>
+							 </td></tr></tbody></table></div></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					You cannot use the <code class="literal">spec.build.name</code> and <code class="literal">spec.build.spec</code> fields together in the same CR because they are mutually exclusive.
+				</p></div></div></section><section class="section" id="ob-defining-the-build-reference_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.2. Build reference definition</h2></div></div></div><p>
+				You can configure the <code class="literal">spec.build.name</code> field in your <code class="literal">BuildRun</code> resource to reference a <code class="literal">Build</code> resource that indicates an image to build. The following example shows a <code class="literal">BuildRun</code> CR that configures the <code class="literal">spec.build.name</code> field:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-buildrun
+spec:
+  build:
+    name: buildah-build</pre></section><section class="section" id="ob-defining-the-build-specification_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.3. Build specification definition</h2></div></div></div><p>
+				You can embed a complete build specification into your <code class="literal">BuildRun</code> resource using the <code class="literal">spec.build.spec</code> field. By embedding specifications, you can build an image without creating and maintaining a dedicated <code class="literal">Build</code> custom resource. The following example shows a <code class="literal">BuildRun</code> CR that configures the <code class="literal">spec.build.spec</code> field:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: standalone-buildrun
+spec:
+   build:
+    spec:
+      source:
+        git:
+          url: https://github.com/shipwright-io/sample-go.git
+        contextDir: source-build
+      strategy:
+        kind: ClusterBuildStrategy
+        name: buildah
+      output:
+        image: &lt;path_to_image&gt;</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					You cannot use the <code class="literal">spec.build.name</code> and <code class="literal">spec.build.spec</code> fields together in the same CR because they are mutually exclusive.
+				</p></div></div></section><section class="section" id="ob-defining-param-values-in-build-run_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.4. Parameter values definition for a build run</h2></div></div></div><p>
+				You can specify values for the build strategy parameters in your <code class="literal">BuildRun</code> CR. If you have provided a value for a parameter that is also defined in the <code class="literal">Build</code> resource with the same name, then the value defined in the <code class="literal">BuildRun</code> resource takes priority.
+			</p><p>
+				In the following example, the value of the <code class="literal">cache</code> parameter in the <code class="literal">BuildRun</code> resource overrides the value of the <code class="literal">cache</code> parameter, which is defined in the <code class="literal">Build</code> resource:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: &lt;your_build&gt;
+  namespace: &lt;your_namespace&gt;
+spec:
+  paramValues:
+  - name: cache
+    value: disabled
+  strategy:
+    name: &lt;your_strategy&gt;
+    kind: ClusterBuildStrategy
+  source:
+  # ...
+  output:
+  # ...</pre><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: &lt;your_buildrun&gt;
+  namespace: &lt;your_namespace&gt;
+spec:
+  build:
+    name: &lt;your_build&gt;
+  paramValues:
+  - name: cache
+    value: registry</pre></section><section class="section" id="ob-defining-the-service-account_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.5. Service account definition</h2></div></div></div><p>
+				You can define a service account in your <code class="literal">BuildRun</code> resource. The service account hosts all secrets referenced in your <code class="literal">Build</code> resource, as shown in the following example:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-buildrun
+spec:
+  build:
+    name: buildah-build
+  serviceAccount: pipeline <span id="CO2-1"><!--Empty--></span><span class="callout">1</span></pre><div class="calloutlist"><dl class="calloutlist"><dt><a href="#CO2-1"><span class="callout">1</span></a> </dt><dd><div class="para">
+						You can also set the value of the <code class="literal">spec.serviceAccount</code> field to <code class="literal">".generate"</code> to generate the service account during runtime. The name of the generated service account corresponds with the name of the <code class="literal">BuildRun</code> resource.
+					</div></dd></dl></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					When you do not define the service account, the <code class="literal">BuildRun</code> resource uses the <code class="literal">pipeline</code> service account if it exists in the namespace. Otherwise, the <code class="literal">BuildRun</code> resource uses the <code class="literal">default</code> service account.
+				</p></div></div></section><section class="section" id="ob-defining-retention-parameters-in-build-run_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.6. Retention parameters definition for a build run</h2></div></div></div><p>
+				You can specify the duration for which a completed build run can exist in your <code class="literal">BuildRun</code> resource. Retention parameters provide a way to clean your <code class="literal">BuildRun</code> instances automatically. You can set the value of the following retention parameters in your <code class="literal">BuildRun</code> CR:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">retention.ttlAfterFailed</code>: Specifies the duration for which a failed build run can exist
+					</li><li class="listitem">
+						<code class="literal">retention.ttlAfterSucceeded</code>: Specifies the duration for which a successful build run can exist
+					</li></ul></div><p>
+				The following example shows how to define retention parameters in your <code class="literal">BuildRun</code> CR:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buidrun-retention-ttl
+spec:
+  build:
+    name: build-retention-ttl
+  retention:
+    ttlAfterFailed: 10m
+    ttlAfterSucceeded: 10m</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					If you have defined a retention parameter in both <code class="literal">BuildRun</code> and <code class="literal">Build</code> CRs, the value defined in the <code class="literal">BuildRun</code> CR overrides the value of the retention parameter defined in the <code class="literal">Build</code> CR.
+				</p></div></div></section><section class="section" id="ob-defining-volumes-in-build-run_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.7. Volumes definition for a build run</h2></div></div></div><p>
+				You can define volumes in your <code class="literal">BuildRun</code> CR. The defined volumes override the volumes specified in the <code class="literal">BuildStrategy</code> resource. If a volume is not overridden, then the build run fails.
+			</p><p>
+				In case the <code class="literal">Build</code> and <code class="literal">BuildRun</code> resources override the same volume, the volume defined in the <code class="literal">BuildRun</code> resource is used for overriding.
+			</p><p>
+				The following example shows a <code class="literal">BuildRun</code> CR that uses the <code class="literal">volumes</code> field:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: &lt;buildrun_name&gt;
+spec:
+  build:
+    name: &lt;build_name&gt;
+  volumes:
+    - name: &lt;volume_name&gt;
+      configMap:
+        name: &lt;configmap_name&gt;</pre></section><section class="section" id="ob-specifying-environment-variables_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.8. Environment variables definition</h2></div></div></div><p>
+				You can use environment variables in your <code class="literal">BuildRun</code> CR based on your needs. The following example shows how to define environment variables:
+			</p><div class="formalpara"><p class="title"><strong>Example: Defining a <code class="literal">BuildRun</code> resource with environment variables</strong></p><p>
+					
+<pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-buildrun
+spec:
+  build:
+    name: buildah-build
+  env:
+    - name: &lt;example_var_1&gt;
+      value: "&lt;example_value_1&gt;"
+    - name: &lt;example_var_2&gt;
+      value: "&lt;example_value_2&gt;"</pre>
+
+				</p></div><p>
+				The following example shows a <code class="literal">BuildRun</code> resource that uses the Kubernetes downward API to expose a pod as an environment variable:
+			</p><div class="formalpara"><p class="title"><strong>Example: Defining a <code class="literal">BuildRun</code> resource to expose a pod as an environment variable</strong></p><p>
+					
+<pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-buildrun
+spec:
+  build:
+    name: buildah-build
+  env:
+    - name: &lt;pod_name&gt;
+      valueFrom:
+        fieldRef:
+          fieldPath: metadata.name</pre>
+
+				</p></div><p>
+				The following example shows a <code class="literal">BuildRun</code> resource that uses the Kubernetes downward API to expose a container as an environment variable:
+			</p><div class="formalpara"><p class="title"><strong>Example: Defining a <code class="literal">BuildRun</code> resource to expose a container as an environment variable</strong></p><p>
+					
+<pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-buildrun
+spec:
+  build:
+    name: buildah-build
+  env:
+    - name: MEMORY_LIMIT
+      valueFrom:
+        resourceFieldRef:
+          containerName: &lt;my_container&gt;
+          resource: limits.memory</pre>
+
+				</p></div></section><section class="section" id="ob-build-run-status_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.9. Build run status</h2></div></div></div><p>
+				The <code class="literal">BuildRun</code> resource updates whenever the image building status changes, as shown in the following examples:
+			</p><div class="formalpara"><p class="title"><strong>Example: BuildRun with Unknown status</strong></p><p>
+					
+<pre class="programlisting language-terminal">$ oc get buildrun buildah-buildrun-mp99r
+NAME                    SUCCEEDED   REASON    STARTTIME   COMPLETIONTIME
+buildah-buildrun-mp99r  Unknown     Unknown      1s</pre>
+
+				</p></div><div class="formalpara"><p class="title"><strong>Example: BuildRun with True status</strong></p><p>
+					
+<pre class="programlisting language-terminal">$ oc get buildrun buildah-buildrun-mp99r
+NAME                   SUCCEEDED   REASON     STARTTIME   COMPLETIONTIME
+buildah-buildrun-mp99r  True        Succeeded      29m       20m</pre>
+
+				</p></div><p>
+				A <code class="literal">BuildRun</code> resource stores the status-related information in the <code class="literal">status.conditions</code> field. For example, a condition with the type <code class="literal">Succeeded</code> indicates that resources have successfully completed their operation. The <code class="literal">status.conditions</code> field includes significant information like status, reason, and message for the <code class="literal">BuildRun</code> resource.
+			</p><section class="section" id="ob-understanding-the-status-of-a-build-run_configuring-build-runs"><div class="titlepage"><div><div><h3 class="title">3.9.1. Build run statuses description</h3></div></div></div><p>
+					A <code class="literal">BuildRun</code> custom resource (CR) can have different statuses during the image building process. The following table covers the different statuses of a build run:
+				</p><div class="table" id="idm140078189906928"><p class="title"><strong>Table 3.2. Statuses of a build run</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 15%; " class="col_1"><!--Empty--></col><col style="width: 30%; " class="col_2"><!--Empty--></col><col style="width: 55%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140078189901168" scope="col">Status</th><th align="left" valign="top" id="idm140078189900080" scope="col">Cause</th><th align="left" valign="top" id="idm140078189898992" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">Unknown</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">Pending</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The <code class="literal">BuildRun</code> resource waits for a pod in status <code class="literal">Pending</code>.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">Unknown</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">Running</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The <code class="literal">BuildRun</code> resource has been validated and started to perform its work.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">Unknown</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunCanceled</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The user has requested to cancel the build run. This request triggers the build run controller to make a request for canceling the related task runs. Cancellation is still under process when this status is present.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">True</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">Succeeded</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The pod for the <code class="literal">BuildRun</code> resource is created.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">Failed</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The <code class="literal">BuildRun</code> resource is failed in one of the steps.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunTimeout</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The execution of the <code class="literal">BuildRun</code> resource is timed out.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">UnknownStrategyKind</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The strategy type defined in the <code class="literal">Kind</code> field is unknown. You can define these strategy types: <code class="literal">ClusterBuildStrategy</code> and <code class="literal">BuildStrategy</code>.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">ClusterBuildStrategyNotFound</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The referenced cluster-scoped strategy was not found in the cluster.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildStrategyNotFound</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The referenced namespace-scoped strategy was not found in the cluster.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">SetOwnerReferenceFailed</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									Setting the <code class="literal">ownerReferences</code> field from the <code class="literal">BuildRun</code> resource to the related <code class="literal">TaskRun</code> resource failed.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">TaskRunIsMissing</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The <code class="literal">TaskRun</code> resource related to the <code class="literal">BuildRun</code> resource was not found.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">TaskRunGenerationFailed</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The generation of a <code class="literal">TaskRun</code> specification has failed.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">MissingParameterValues</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									You have not provided any value for some parameters that are defined in the build strategy without any default. You must provide the values for those parameters in the <code class="literal">Build</code> or the <code class="literal">BuildRun</code> CR.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">RestrictedParametersInUse</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									A value for a system parameter was provided, which is not allowed.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">UndefinedParameter</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									A value for a parameter was provided that is not defined in the build strategy.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">WrongParameterValueType</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									A value was provided for a build strategy parameter with the wrong type. For example, if the parameter is defined as an array or a string in the build strategy, you must provide a set of values or a direct value accordingly.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">InconsistentParameterValues</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									A value for a parameter contained more than one of these values: <code class="literal">value</code>, <code class="literal">configMapValue</code>, and <code class="literal">secretValue</code>. You must provide only one of the mentioned values to maintain consistency.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">EmptyArrayItemParameterValues</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									An item inside the values of an array parameter contained none of these values: <code class="literal">value</code>,<code class="literal">configMapValue</code>, and <code class="literal">secretValue</code>. You must provide only one of the mentioned values as null array items are not allowed.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">IncompleteConfigMapValueParameterValues</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									A value for a parameter contained a <code class="literal">configMapValue</code> value where the <code class="literal">name</code> or the <code class="literal">value</code> field was empty. You must specify the empty field to point to an existing config map key in your namespace.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">IncompleteSecretValueParameterValues</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									A value for a parameter contained a <code class="literal">secretValue</code> value where the <code class="literal">name</code> or the <code class="literal">value</code> field was empty. You must specify the empty field to point to an existing secret key in your namespace.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">ServiceAccountNotFound</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The referenced service account was not found in the cluster.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRegistrationFailed</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The referenced build in the <code class="literal">BuildRun</code> resource is in a <code class="literal">Failed</code> state.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildNotFound</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The referenced build in the <code class="literal">BuildRun</code> resource was not found.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunCanceled</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The <code class="literal">BuildRun</code> and related <code class="literal">TaskRun</code> resources were canceled successfully.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunNameInvalid</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The defined build run name in the <code class="literal">metadata.name</code> field is invalid. You must provide a valid label value for the build run name in your <code class="literal">BuildRun</code> CR.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunNoRefOrSpec</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The <code class="literal">BuildRun</code> resource does not have either the <code class="literal">spec.build.name</code> or <code class="literal">spec.build.spec</code> field defined.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunAmbiguousBuild</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The defined <code class="literal">BuildRun</code> resource uses both the <code class="literal">spec.build.name</code> and <code class="literal">spec.build.spec</code> fields. Only one of the parameters is allowed at a time.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">BuildRunBuildFieldOverrideForbidden</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The defined <code class="literal">spec.build.name</code> field uses an override in combination with the <code class="literal">spec.build.spec</code> field, which is not allowed. Use the <code class="literal">spec.build.spec</code> field to directly specify the respective value.
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140078189901168"> <p>
+									<code class="literal">False</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189900080"> <p>
+									<code class="literal">PodEvicted</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140078189898992"> <p>
+									The build run pod was evicted from the node it was running on.
+								</p>
+								 </td></tr></tbody></table></div></div></section><section class="section" id="ob-understanding-failed-build-runs_configuring-build-runs"><div class="titlepage"><div><div><h3 class="title">3.9.2. Failed build runs</h3></div></div></div><p>
+					When a build run fails, you can check the <code class="literal">status.failureDetails</code> field in your <code class="literal">BuildRun</code> CR to identify the exact point where the failure happened in the pod or container. The <code class="literal">status.failureDetails</code> field includes an error message and a reason for the failure. You only see the message and reason for failure if they are defined in your build strategy.
+				</p><p>
+					The following example shows a failed build run:
+				</p><pre class="programlisting language-yaml"># ...
+status:
+  # ...
+  failureDetails:
+    location:
+      container: step-source-default
+      pod: baran-build-buildrun-gzmv5-b7wbf-pod-bbpqr
+    message: The source repository does not exist, or you have insufficient permission
+      to access it.
+    reason: GitRemotePrivate</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						The <code class="literal">status.failureDetails</code> field also provides error details for all operations related to Git.
+					</p></div></div></section><section class="section" id="ob-step-results-in-build-run-status_configuring-build-runs"><div class="titlepage"><div><div><h3 class="title">3.9.3. Step results in build run status</h3></div></div></div><p>
+					After a <code class="literal">BuildRun</code> resource completes its execution, the <code class="literal">.status</code> field contains the <code class="literal">.status.taskResults</code> result emitted from the steps generated by the build run controller. The result includes the image digest or the commit SHA of the source code that is used for building the image. In a <code class="literal">BuildRun</code> resource, the <code class="literal">.status.sources</code> field contains the result from the execution of source steps and the <code class="literal">.status.output</code> field contains the result from the execution of output steps.
+				</p><p>
+					The following example shows a <code class="literal">BuildRun</code> resource with step results for a Git source:
+				</p><div class="formalpara"><p class="title"><strong>Example: A <code class="literal">BuildRun</code> resource with step results for a Git source</strong></p><p>
+						
+<pre class="programlisting language-yaml"># ...
+status:
+  buildSpec:
+    # ...
+  output:
+    digest: sha256:07626e3c7fdd28d5328a8d6df8d29cd3da760c7f5e2070b534f9b880ed093a53
+    size: 1989004
+  sources:
+  - name: default
+    git:
+      commitAuthor: xxx xxxxxx
+      commitSha: f25822b85021d02059c9ac8a211ef3804ea8fdde
+      branchName: main</pre>
+
+					</p></div><p>
+					The following example shows a <code class="literal">BuildRun</code> resource with step results for a local source code:
+				</p><div class="formalpara"><p class="title"><strong>Example: A <code class="literal">BuildRun</code> resource with step results for a local source code</strong></p><p>
+						
+<pre class="programlisting language-yaml"># ...
+status:
+  buildSpec:
+    # ...
+  output:
+    digest: sha256:07626e3c7fdd28d5328a8d6df8d29cd3da760c7f5e2070b534f9b880ed093a53
+    size: 1989004
+  sources:
+  - name: default
+    bundle:
+      digest: sha256:0f5e2070b534f9b880ed093a537626e3c7fdd28d5328a8d6df8d29cd3da760c7</pre>
+
+					</p></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						You get to see the digest and size of the output image only if it is defined in your build strategy.
+					</p></div></div></section><section class="section" id="ob-build-snapshot_configuring-build-runs"><div class="titlepage"><div><div><h3 class="title">3.9.4. Build snapshot</h3></div></div></div><p>
+					For each build run reconciliation, the <code class="literal">buildSpec</code> field in the status of the <code class="literal">BuildRun</code> resource updates if an existing task run is part of that build run.
+				</p><p>
+					During this update, a <code class="literal">Build</code> resource snapshot generates and embeds into the <code class="literal">status.buildSpec</code> field of the <code class="literal">BuildRun</code> resource. Due to this, the <code class="literal">buildSpec</code> field contains an exact copy of the original <code class="literal">Build</code> specification, which was used to execute a particular image build. By using the build snapshot, you can see the original <code class="literal">Build</code> resource configuration.
+				</p></section></section><section class="section" id="ob-relationship-of-build-run-with-tekton-tasks_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.10. Relationship of build run with Tekton tasks</h2></div></div></div><p>
+				The <code class="literal">BuildRun</code> resource delegates the task of image construction to the Tekton <code class="literal">TaskRun</code> resource, which runs all steps until either the completion of the task, or a failure occurs in the task.
+			</p><p>
+				During the build run reconciliation, the build run controller generates a new <code class="literal">TaskRun</code> resource. The controller embeds the required steps for a build run execution in the <code class="literal">TaskRun</code> resource. The embedded steps are defined in your build strategy.
+			</p></section><section class="section" id="ob-canceling-a-build-run_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.11. Build run cancellation</h2></div></div></div><p>
+				You can cancel an active <code class="literal">BuildRun</code> instance by setting its state to <code class="literal">BuildRunCanceled</code>. When you cancel a <code class="literal">BuildRun</code> instance, the underlying <code class="literal">TaskRun</code> resource is also marked as canceled.
+			</p><p>
+				The following example shows a canceled build run for a <code class="literal">BuildRun</code> resource:
+			</p><pre class="programlisting language-yaml">apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-buildrun
+spec:
+  # [...]
+  state: "BuildRunCanceled"</pre></section><section class="section" id="ob-automatic-build-run-deletion_configuring-build-runs"><div class="titlepage"><div><div><h2 class="title">3.12. Automatic build run deletion</h2></div></div></div><p>
+				To automatically delete a build run, you can add the following retention parameters in the <code class="literal">build</code> or <code class="literal">buildrun</code> specification:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						<code class="literal">buildrun</code> TTL parameters: Ensures that build runs only exist for a defined duration of time after completion.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">buildrun.spec.retention.ttlAfterFailed</code>: The build run is deleted if the specified time has passed and the build run has failed.
+							</li><li class="listitem">
+								<code class="literal">buildrun.spec.retention.ttlAfterSucceeded</code>: The build run is deleted if the specified time has passed and the build run has succeeded.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						<code class="literal">build</code> TTL parameters: Ensures that build runs for a build only exist for a defined duration of time after completion.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">build.spec.retention.ttlAfterFailed</code>: The build run is deleted if the specified time has passed and the build run has failed for the build.
+							</li><li class="listitem">
+								<code class="literal">build.spec.retention.ttlAfterSucceeded</code>: The build run is deleted if the specified time has passed and the build run has succeeded for the build.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						<code class="literal">build</code> limit parameters: Ensures that only a limited number of succeeded or failed build runs can exist for a build.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">build.spec.retention.succeededLimit</code>: Defines the number of succeeded build runs that can exist for the build.
+							</li><li class="listitem">
+								<code class="literal">build.spec.retention.failedLimit</code>: Defines the number of failed build runs that can exist for the build.
+							</li></ul></div></li></ul></div></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm140078191979232"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

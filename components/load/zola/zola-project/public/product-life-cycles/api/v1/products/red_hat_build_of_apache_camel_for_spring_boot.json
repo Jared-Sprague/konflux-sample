@@ -1,0 +1,159 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [
+    "Red Hat Integration- Camel for Spring Boot",
+    "Red Hat Build of Apache Camel for Spring Boot"
+  ],
+  "is_layered_product": false,
+  "is_operator": false,
+  "name": "Red Hat build of Apache Camel for Spring Boot",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "02ac789d-2b8f-4d06-a173-ad12f6602772",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.20.x",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-05-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-10-04T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.18.x",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-12-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-05-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "3.14.x",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-08-10T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-12-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-06-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-06-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

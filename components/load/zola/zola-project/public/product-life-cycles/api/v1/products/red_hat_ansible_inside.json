@@ -1,0 +1,157 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance Support 1 ends",
+      "name": "Maintenance Support 1",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support 2 ends",
+      "name": "Maintenance support 2",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/ansible-inside",
+  "name": "Red Hat Ansible Inside",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "bd451bd0-a220-4c5c-a5d6-346421eea1a4",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.2",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-10-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-06-25T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.1",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-03-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-09-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-03-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-09-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "0.9",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-10-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-04-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-10-03T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-04-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

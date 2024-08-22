@@ -1,0 +1,79 @@
+{
+  "version": {
+    "name": "1-latest",
+    "slug": "1-latest",
+    "url": "/documentation/en-us/edge_management/1-latest"
+  },
+  "titles": [
+    {
+      "titleId": "b14667d3-d45e-4fcb-82b0-aa294b258d51",
+      "modified": 1715241215,
+      "name": "Create RHEL for Edge images and configure automated management",
+      "url": "/documentation/en-us/edge_management/1-latest/html-single/create_rhel_for_edge_images_and_configure_automated_management/index",
+      "category": {
+        "weight": 50,
+        "name": "Edge Management"
+      },
+      "description": "Getting started with edge management in the Red Hat Hybrid Cloud Console",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/edge_management/1-latest/html-single/create_rhel_for_edge_images_and_configure_automated_management/index",
+        "slug": "create_rhel_for_edge_images_and_configure_automated_management",
+        "id": "307ef578a69a237b67e6f02b06a25648.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/edge_management/1-latest/pdf/create_rhel_for_edge_images_and_configure_automated_management/Edge_management-1-latest-Create_RHEL_for_Edge_images_and_configure_automated_management-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/edge_management/1-latest/pdf/create_rhel_for_edge_images_and_configure_automated_management/edge_management-1-latest-create_rhel_for_edge_images_and_configure_automated_management-en-us.pdf",
+        "relative_path": "/documentation/en-us/edge_management/1-latest/pdf/create_rhel_for_edge_images_and_configure_automated_management/edge_management-1-latest-create_rhel_for_edge_images_and_configure_automated_management-en-us.pdf"
+      },
+      "toc": {
+        "id": "1bf36e3ba1f31e6900b6b536c858cef6.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "c62e72ff-0812-4aa2-8aa1-6d2c3a10b6bb",
+      "modified": 1715241216,
+      "name": "Working with systems in the Insights Inventory application",
+      "url": "/documentation/en-us/edge_management/1-latest/html-single/working_with_systems_in_the_insights_inventory_application/index",
+      "category": {
+        "weight": 50,
+        "name": "Edge Management"
+      },
+      "description": "",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/edge_management/1-latest/html-single/working_with_systems_in_the_insights_inventory_application/index",
+        "slug": "working_with_systems_in_the_insights_inventory_application",
+        "id": "f563db3aa3005ba4741bbd708475ec7a.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/edge_management/1-latest/pdf/working_with_systems_in_the_insights_inventory_application/Edge_management-1-latest-Working_with_systems_in_the_Insights_Inventory_application-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/edge_management/1-latest/pdf/working_with_systems_in_the_insights_inventory_application/edge_management-1-latest-working_with_systems_in_the_insights_inventory_application-en-us.pdf",
+        "relative_path": "/documentation/en-us/edge_management/1-latest/pdf/working_with_systems_in_the_insights_inventory_application/edge_management-1-latest-working_with_systems_in_the_insights_inventory_application-en-us.pdf"
+      },
+      "toc": {
+        "id": "360d56b7e8cec4019c0f2bd921c66146.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": null,
+      "modified": null,
+      "name": "Composing, installing, and managing RHEL for Edge images",
+      "url": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/composing_installing_and_managing_rhel_for_edge_images/index",
+      "category": {
+        "weight": 50,
+        "name": "Edge Management"
+      },
+      "description": "Composing, installing, and managing RHEL for Edge Images on Red Hat Enterprise Linux 9",
+      "weight": 52,
+      "singlePage": null,
+      "pdf": null,
+      "toc": null,
+      "custom_link": true
+    }
+  ]
+}

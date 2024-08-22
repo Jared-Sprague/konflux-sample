@@ -1,0 +1,1 @@
+body.mimir-body{border-top:var(--mimir-fixed-header-height) solid}body.mimir-body:before{position:fixed;z-index:1000000;top:0;left:0;right:0;content:"UNCLASSIFIED";text-align:center;display:block;background-color:green;color:#fff;font-weight:700;height:var(--mimir-fixed-header-height);font-size:12px;line-height:1.8}

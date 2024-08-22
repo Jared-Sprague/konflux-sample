@@ -1,0 +1,40 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "OCP Version(s) compatibility",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/openshift#osc",
+  "name": "Red Hat OpenShift sandboxed containers",
+  "package": "sandboxed-containers-operator",
+  "product_extra_headers": [],
+  "release_cadence": "Not Specified",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "dd931c63-b784-4a85-9934-e85e24754788",
+  "versions": []
+}]}

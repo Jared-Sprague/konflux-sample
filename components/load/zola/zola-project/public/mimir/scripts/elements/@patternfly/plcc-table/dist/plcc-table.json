@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Plcc table",
+  "description": "To show product lifecycle data",
+  "type": "object",
+  "tag": "plcc-table",
+  "class": "PlccTable",
+  "category": "component",
+  "properties": {
+    "slots": {
+      "title": "Slots",
+      "description": "Definition of the supported slots",
+      "type": "object",
+      "properties": {
+        "default": {
+          "title": "Default slot",
+          "type": "array",
+          "namedSlot": false,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "raw"
+              }
+            ]
+          }
+        }
+      },
+      "required": ["default"]
+    },
+    "attributes": {
+      "title": "Attributes",
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  "required": ["slots", "attributes"],
+  "additionalProperties": false
+}

@@ -1,0 +1,285 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended update support ends",
+      "name": "Extended update support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended update support Term 2 ends",
+      "name": "Extended update support Term 2",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    }
+  ],
+  "extra_header": "RHEL Version(s) compatability",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": false,
+  "name": "Red Hat Device Edge",
+  "package": null,
+  "product_extra_headers": [
+    "RHEL for Edge Version Compatibility",
+    "Red Hat build of Microshift Version Compatibility"
+  ],
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "c2e4ad98-7109-4a4c-a93c-c37d3e0e3aa3",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "9.4",
+        "4.16"
+      ],
+      "extra_header_value": "9.4",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "4.17 GA + 3 months or end of Full Support for RHEL 9.4",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "December 27, 2025 or at end of Maintenance Support for RHEL 9.4",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "2027-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "9.2",
+        "4.15"
+      ],
+      "extra_header_value": "9.2",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-02-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "4.16 GA + 3 months or end of Full Support for RHEL 9.2",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "August 27, 2025 or at end of Maintenance Support for RHEL 9.2",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "9.3",
+        "4.15"
+      ],
+      "extra_header_value": "9.3",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-02-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "4.16 GA + 3 months or end of Full Support for RHEL 9.3",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "August 27, 2025 or at end of Maintenance Support for RHEL 9.3",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "9.3",
+        "4.14"
+      ],
+      "extra_header_value": "9.3",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-11-07T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": " May 27, 2024 or when RHEL 9.3 Full Support Ends, which will happen with RHEL 9.4 GA release",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "May 1, 2025 or when RHEL 9.3 Maintenance Support Ends",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "9.2",
+        "4.14"
+      ],
+      "extra_header_value": "9.2",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-05-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    }
+  ]
+}]}

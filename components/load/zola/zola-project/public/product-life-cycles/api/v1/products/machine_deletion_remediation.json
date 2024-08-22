@@ -1,0 +1,175 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "Upstream version",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/openshift/#mdr",
+  "name": "machine deletion remediation",
+  "package": "machine-deletion-remediation",
+  "product_extra_headers": [
+    "Upstream version"
+  ],
+  "release_cadence": "4 months",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "ebcd6e3b-911c-4459-81bc-fed860c858e1",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "0.3"
+      ],
+      "extra_header_value": "0.3",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "0.3",
+      "openshift_compatibility": "4.12, 4.13, 4.14, 4.15",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-02-20T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Rolling",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "0.2"
+      ],
+      "extra_header_value": "Rolling",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "0.2-EUS",
+      "openshift_compatibility": "4.14",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-09-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "End of OCP 4.14 maintenance",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Rolling",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "0.2"
+      ],
+      "extra_header_value": "Rolling",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "0.2",
+      "openshift_compatibility": "4.11, 4.12, 4.13, 4.14",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-09-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "Next release",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Rolling",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "0.1"
+      ],
+      "extra_header_value": "0.1",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "0.1",
+      "openshift_compatibility": "4.11, 4.12, 4.13",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-05-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-09-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-09-12T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

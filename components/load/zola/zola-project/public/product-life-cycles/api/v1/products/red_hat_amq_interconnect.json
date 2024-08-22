@@ -1,0 +1,111 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Extended life cycle support (ELS) 1 ends",
+      "name": "Extended life cycle support (ELS) 1",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    },
+    {
+      "additional_text": null,
+      "display_name": "Extended life cycle support (ELS) 2 ends",
+      "name": "Extended life cycle support (ELS) 2",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    }
+  ],
+  "extra_header": "Tier",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/jboss_notes/",
+  "name": "Red Hat AMQ Interconnect",
+  "package": "amq7-interconnect-operator",
+  "product_extra_headers": [],
+  "release_cadence": "Not Specified",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "93445f23-cd2e-4914-b459-bf5bc815cdbd",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.x",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2018-03-05T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-11-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2029-11-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Extended Support"
+    }
+  ]
+}]}

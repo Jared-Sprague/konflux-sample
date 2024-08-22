@@ -1,0 +1,109 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "Tier",
+  "footnote": "<p><strong>Note:</strong> Originally, MTR releases included a Maintenance support phase. Support phases for MTR releases now end when the next version is released.</p>\n<p><strong>Note:</strong> The Migration Toolkit for Runtimes product will reach its End of Life by September 30th, 2024. All customers using it should start their to transition to Migration Toolkit for Applications, as it is fully backwards compatible with all features and rulesets available in Migration Toolkit for Runtimes and will be maintained in the long term.</p>\n",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/migrationtoolkits",
+  "name": "Migration Toolkit for Runtimes",
+  "package": "mtr-operator",
+  "product_extra_headers": [],
+  "release_cadence": "Not Specified",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "de0238d9-79aa-4093-b5d5-4fd1c97248c4",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.2",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-09-14T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-09-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.1",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-09-14T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.0",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-11-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

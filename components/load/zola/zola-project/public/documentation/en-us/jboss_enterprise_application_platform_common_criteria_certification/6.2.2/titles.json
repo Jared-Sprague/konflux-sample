@@ -1,0 +1,63 @@
+{
+  "version": {
+    "name": "6.2.2",
+    "slug": "6.2.2",
+    "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2"
+  },
+  "titles": [
+    {
+      "titleId": "a4d6953b-6efc-4551-a4d1-0ae782932a32",
+      "modified": 1511894567,
+      "name": "Common Criteria Configuration Guide",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/html-single/common_criteria_configuration_guide/index",
+      "category": {
+        "weight": 121,
+        "name": "Reference"
+      },
+      "description": "for use with JBoss Enterprise Application Platform 6 Common Criteria Certification",
+      "weight": -50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/html-single/common_criteria_configuration_guide/index",
+        "slug": "common_criteria_configuration_guide",
+        "id": "2436b3d12907b97deb238ba06a719c11.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/pdf/common_criteria_configuration_guide/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-6.2.2-Common_Criteria_Configuration_Guide-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/pdf/common_criteria_configuration_guide/jboss_enterprise_application_platform_common_criteria_certification-6.2.2-common_criteria_configuration_guide-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/pdf/common_criteria_configuration_guide/jboss_enterprise_application_platform_common_criteria_certification-6.2.2-common_criteria_configuration_guide-en-us.pdf"
+      },
+      "toc": {
+        "id": "493eca1a07fb38bd4ee7e3360ac4ba1a.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "1891163c-dda2-4b37-9f09-028c8a8e73da",
+      "modified": 1511894567,
+      "name": "Security Guide",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/html-single/security_guide/index",
+      "category": {
+        "weight": 121,
+        "name": "Reference"
+      },
+      "description": "For Use with Red Hat JBoss Enterprise Application Platform 6",
+      "weight": -49,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/html-single/security_guide/index",
+        "slug": "security_guide",
+        "id": "0c1b301a11b8028419512e559dc7e2aa.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/pdf/security_guide/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-6.2.2-Security_Guide-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/pdf/security_guide/jboss_enterprise_application_platform_common_criteria_certification-6.2.2-security_guide-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/6.2.2/pdf/security_guide/jboss_enterprise_application_platform_common_criteria_certification-6.2.2-security_guide-en-us.pdf"
+      },
+      "toc": {
+        "id": "bda6cc1c8532e05ab181db7d30db3b33.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance Support 1 ends",
+      "name": "Maintenance Support 1",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support 2 ends",
+      "name": "Maintenance support 2",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended life cycle support (ELS) add-on ends",
+      "name": "Extended life cycle support (ELS) add-on",
+      "ptype": "extended",
+      "tooltip": "This is an Add-On entitlement. Customers must have this entitlement on their account in order to receive this support."
+    }
+  ],
+  "extra_header": "",
+  "footnote": "<p>The Ansible Automation Platform (AAP) version listed indicates what version of AAP that version of core is included in. This is usually the latest version of Ansible-core available when an AAP release goes GA.</p>\n",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/ansible-automation-platform-execution-environments",
+  "name": "Ansible Core",
+  "package": null,
+  "policies": "https://access.redhat.com/ansible-top-support-policies",
+  "product_extra_headers": [
+    "Control Node Python",
+    "Target Python/Powershell"
+  ],
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "1c8ba872-b0f0-4a34-8c4b-8372660fe0d6",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 3.8 - 3.10",
+        "Python 2.7, 3.5 - 3.10/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "2.2",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-core 2.13",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-05-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-07T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 3.8 - 3.10",
+        "Python 2.6 - 2.7, 3.5 - 3.10/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "Python 3.8 - 3.10",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-core 2.12",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2021-12-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 2.7, 3.5 - 3.9",
+        "Python 2.6 - 2.7, 3.5 - 3.9/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "2.0",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-core 2.11",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2021-04-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-11-08T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 3.10 - 3.12",
+        "Python 2.7, 3.6 - 3.12/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "Python 2.7, 3.6 - 3.12/Powershell 3 - 5.1",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-core 2.16",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-11-07T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-06T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-11-07T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-05-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 3.9 - 3.11",
+        "Python 2.7, 3.5 - 3.11/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "Python 3.9 - 3.11",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-core 2.15",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-05-23T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-23T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-23T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-11-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 2.7, 3.5 - 3.8",
+        "Python 2.6 - 2.7, 3.5 - 3.8/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "Python 2.7, 3.5 - 3.8",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-engine 2.9",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2019-11-06T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-05-24T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Extended Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "Python 3.9 - 3.11",
+        "Python 2.7, 3.5 - 3.11/Powershell 3 - 5.1"
+      ],
+      "extra_header_value": "Python 3.9 - 3.11",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "ansible-core 2.14",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-11-08T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-05-08T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-08T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

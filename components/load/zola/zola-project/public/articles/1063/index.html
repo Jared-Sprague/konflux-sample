@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I add ethtool settings to a network device permanently?
+</title>
+        
+<meta name="documentKind" content="article" />
+<meta name="lastModifiedDate" content="2013-09-23T06:46:33.000Z" />
+<meta name="url_slug" content="1063" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=article">Articles</a>
+                                
+                                
+                                How do I add ethtool settings to a network device permanently?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_article cirrus-content" id="main-content">
+    <h1>How do I add ethtool settings to a network device permanently?</h1>
+
+    <div class="status-container">
+      Updated <time datetime="2013-09-23T06:46:33.000Z">23 Sept 2013</time>
+    </div>
+
+    <hr>
+    <p><code>ethtool</code> can be used to set options for many types of ethernet devices. The <code>/etc/sysconfig/network-scripts/ifcfg-ethX</code> can have the <code>ethtool</code> settings added to the file so that the settings are in place whenever the device is brought up.</p>
+<p>For example, the command :</p>
+<pre><code>ethtool -s eth0 speed 100 duplex full autoneg off
+</code></pre>
+<p>will set the eth0 device to 100Mbs, full duplex, with the auto negotiation off. To have the initialization scripts set this every time the eth0 device is brought up, add a line to the <code>/etc/sysconfig/network-scripts/ifcfg-eth0</code> like this:</p>
+<pre><code>ETHTOOL_OPTS=&quot;speed 100 duplex full autoneg off&quot;
+</code></pre>
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,271 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General Availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended update support ends",
+      "name": "Extended update support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended update support Term 2 ends",
+      "name": "Extended update support Term 2",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    }
+  ],
+  "extra_header": "OCP Version(s) Compatibility",
+  "footnote": "",
+  "former_names": [
+    "LVMO",
+    "Logical Volume Manager Storage operator"
+  ],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/openshift_operators",
+  "name": "Logical Volume Manager Storage",
+  "package": "lvms-operator",
+  "product_extra_headers": [],
+  "release_cadence": "4 months",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "72202ec8-fa38-4248-9bb5-7e2487b61bdd",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.16",
+      "openshift_compatibility": "4.16",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-09-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-12-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "2027-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "Aligned",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.15",
+      "openshift_compatibility": "4.15",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-02-08T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-09T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-08-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "Aligned",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.14",
+      "openshift_compatibility": "4.14",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-10-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-01-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-05-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-10-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "Aligned",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.13",
+      "openshift_compatibility": "4.13",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-05-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-08-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-11-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "4.12, 4.12 EUS",
+      "openshift_compatibility": "4.12",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-01-11T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-04-11T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-07-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-01-17T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended update support"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support Term 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Extended Support"
+    }
+  ]
+}]}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+What are the different types of kernel packages in Red Hat Enterprise Linux?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:28:45.000Z" />
+<meta name="url_slug" content="1001" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                What are the different types of kernel packages in Red Hat Enterprise Linux?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>What are the different types of kernel packages in Red Hat Enterprise Linux?</h1>
+
+  
+  <span class="status verified" title="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s).">
+        <pfe-icon icon="web-icon-alert-success" style="--pfe-icon--color: #3f9c35; top: -0.1em"></pfe-icon>
+       Solution Verified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:28:45.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<p>Red Hat Enterprise Linux</p>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>What are the different types of kernel packages in Red Hat Enterprise Linux?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<p>Red Hat Enterprise Linux contains the following kernel packages (some may not apply to your architecture, and  not all are available in all major releases):</p>
+<ul>
+<li>
+<p><strong>kernel</strong> - contains the kernel and following key features:</p>
+<ul>
+<li>
+<p>Uniprocessor support (will utilize a single processor on multi-processor systems) (RHEL3,4,5)</p>
+</li>
+<li>
+<p>Multi-processor support for Intel EM64T systems (RHEL 3 only)</p>
+</li>
+<li>
+<p>4GB RAM support on Intel and AMD x86 systems<sup>(1)</sup></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-BOOT</strong> contains the installation kernel (x86 only)</p>
+<ul>
+<li>Uniprocessor support</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-{*-}devel</strong> (RHEL 4 and ongoing) - contains kernel header files</p>
+<ul>
+<li>replaces kernel-source</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-debug</strong> - contains the same kernel as kernel but with debugging options enabled (RHEL 5 only)</p>
+</li>
+<li>
+<p><strong>kernel-doc</strong> - contains kernel documentation</p>
+<ul>
+<li>previously found in /usr/src/linux{-*}/Documentation</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-hugemem</strong> (i686 only) - in addition to the options of kernel-smp :</p>
+<ul>
+<li>
+<p>4GB/4GB split - ~4GB of virtual address space for kernel resources and ~4GB for each user processor</p>
+</li>
+<li>
+<p>Should be utilized on systems/loads where more addressable kernel resources are required including greater than 16GB systems</p>
+</li>
+<li>
+<p>isn't shipped in RHEL5 and above.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-kdump</strong> (RHEL 6 only; POWER and s390x architectures only) - secondary kernel for kernel crash dump capture; cf. <a href="https://access.redhat.com/solutions/6038" class="mimir-link-warn" title="This content is not included in Mimir."><em>How do I configure kexec/kdump on Red Hat Enterprise Linux?</em></a></p>
+</li>
+<li>
+<p><strong>kernel-largesmp</strong> (RHEL 4 only; 64-bit architectures only) - similar to kernel-smp, but with support for higher numbers of CPU on x86_64, Itanium2 and POWER; cf. <a href="https://access.redhat.com/articles/3947" class="mimir-link-warn" title="This content is not included in Mimir."><em>What are the memory and CPU limits of the largesmp kernel in Red Hat Enterprise Linux 4?</em></a></p>
+</li>
+<li>
+<p><strong>kernel-PAE</strong> (RHEL 5 only; x86 only) - kernel with support for up to 16 Gb of RAM; cf. <a href="https://access.redhat.com/solutions/9712" class="mimir-link-warn" title="This content is not included in Mimir."><em>Why can't I see more than 4 GB of memory on Red Hat Enterprise Linux 5 32-bit?</em></a></p>
+</li>
+<li>
+<p><strong>kernel-rt-*</strong> (Red Hat Enterprise MRG Realtime) - realtime kernels, discussed in the <a href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_MRG/1.3/html/Realtime_Installation_Guide/chap-Realtime_Installation_Guide-Download.html#sect-Realtime_Installation_Guide-Download-RT_Kernel_Variants" class="mimir-link-warn" title="This content is not included in Mimir."><em>MRG Realtime Kernel Variants</em></a> section of the MRG Realtime Installation Guide.</p>
+</li>
+<li>
+<p><strong>kernel-smp</strong> - in addition to the options of kernel (not shipped with RHEL6 and above:</p>
+<ul>
+<li>
+<p>multi processor support (all architectures) </p>
+</li>
+<li>
+<p>PAE - Physical Address Extension (Intel x86 only) upto 16GB RAM<sup>(2)</sup></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-pcmcia-cs</strong> (RHEL 3 only) - contains support for PCMCIA cards</p>
+</li>
+<li>
+<p><strong>kernel-source</strong> (RHEL 3 only) - contains complete source code for the Linux kernel</p>
+</li>
+<li>
+<p><strong>kernel-utils</strong> - contains utilities that can be used to control the kernel or system hardware</p>
+</li>
+<li>
+<p><strong>kernel-xenU</strong> - kernel used by paravirtualised guests (RHEL 4.5+)</p>
+</li>
+<li>
+<p><strong>kernel-xen</strong> - kernel which runs in Xen VM (RHEL 5 only) <br>
+*   for X86 only<br>
+*   supports up to 16 Gb of RAM in all installs if the processor allows it.<br>
+*   supports a maximum of 16 CPUs</p>
+<ul>
+<li>
+<p>for AMD64 and Intel 64</p>
+<ul>
+<li>
+<p>supports up to 1TB of RAM</p>
+</li>
+<li>
+<p>on RHEL5.0 and 5.1, supports up to 32 CPUs</p>
+</li>
+<li>
+<p>on RHEL5.2 supports up to 64 CPUs</p>
+</li>
+<li>
+<p>on RHEL5.3 supports up to 126 CPUs</p>
+</li>
+<li>
+<p>on RHEL5.4 and 5.5 supports up to 192 CPUs</p>
+</li>
+</ul>
+</li>
+<li>
+<p>for Intel Itanium</p>
+<ul>
+<li>supports up to 32 CPUs</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>kernel-{*-}unsupported</strong> (RHEL 3 only/some architectures)</p>
+<ul>
+<li>
+<p>contains modules not supported by Red Hat, Inc. in any SLA</p>
+</li>
+<li>
+<p>is not installed during installation</p>
+</li>
+<li>
+<p>updates and fixes may not be provided over time</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><sup>(1)</sup> Refer to the Red Hat Enterprise Linux product pages, in particular <a href="https://access.redhat.com/articles/rhel-limits" class="mimir-link-warn" title="This content is not included in Mimir.">Red Hat Enterprise Linux technology capabilities and limits</a> for other configuration limits.</p>
+<p><sup>(2)</sup> kernel-hugemem is required if system memory is greater than 16GB on x86 machines. x86_64 and AMD64 architectures support 64GB and EM64T supports 6GB.</p>
+<p><strong>Note</strong>: for more recent and maintained information on the memory limits, go to <a href="https://access.redhat.com/articles/rhel-limits" class="mimir-link-warn" title="This content is not included in Mimir.">Red Hat Enterprise Linux technology capabilities and limits</a></p>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

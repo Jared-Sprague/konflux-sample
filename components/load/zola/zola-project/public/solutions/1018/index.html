@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I set the time zone on a per user basis in Red Hat Enterprise Linux?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:28:35.000Z" />
+<meta name="url_slug" content="1018" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                How do I set the time zone on a per user basis in Red Hat Enterprise Linux?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>How do I set the time zone on a per user basis in Red Hat Enterprise Linux?</h1>
+
+  
+    <span class="status unverified" title="This solution has not yet been verified to work for Red Hat customers.">
+        <pfe-icon icon="web-icon-alert-warning" style="--pfe-icon--color: #ec7a08; top: -0.1em"></pfe-icon>
+       Solution Unverified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:28:35.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 3, 4 , 5  and 6</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>How do I set the time zone on a user basis?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<ul>
+<li>To configure a different time zone from the system-wide default for an individual user, add the following line to the .bashrc in that user's home directory:</li>
+</ul>
+<pre><code>export TZ=&quot;&#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;&lt;timezone_directory&gt;&#x2F;&lt;timezone_file&gt;&quot;
+</code></pre>
+<ul>
+<li>
+<p>In the above directive, replace &lt;timezone_directory&gt; with a time zone directory in the <em>/usr/share/zoneinfo/</em> directory, such as <em>US</em>, and replace &lt;timezone_file&gt; with a time zone file within that time zone directory, such as <em>Eastern</em>.</p>
+</li>
+<li>
+<p>It is possible to reference any file within the /usr/share/zoneinfo/ directory for valid values. If you wish to set the time zone system-wide, run the Time and Date Properties Tool: <em><strong>redhat-config-date</strong></em> for Red Hat Enterprise Linux 3 and earlier or <em><strong>system-config-date</strong></em> for Red Hat Enterprise Linux 4 and later and choose the appropriate time zone.</p>
+</li>
+</ul>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

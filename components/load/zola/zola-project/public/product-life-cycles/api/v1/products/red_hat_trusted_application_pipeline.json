@@ -1,0 +1,71 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": true,
+  "link": "https://access.redhat.com/node/7062907",
+  "name": "Red Hat Trusted Application Pipeline",
+  "package": "",
+  "policies": "https://access.redhat.com/node/7062908",
+  "release_cadence": "3 months",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "0a255dbc-5f9d-4f84-b2bd-ebf297ad0eb4",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.0",
+      "openshift_compatibility": "4.13, 4.14, 4.15",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2024-04-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "Release of RHTAP 1.1",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "Release of RHTAP 1.2",
+          "date_format": "string",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Rolling",
+      "type": "Full Support"
+    }
+  ]
+}]}

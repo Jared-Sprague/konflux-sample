@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How to configure minicom to communicate with a modem or serial device?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:27:55.000Z" />
+<meta name="url_slug" content="1054" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                How to configure minicom to communicate with a modem or serial device?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>How to configure minicom to communicate with a modem or serial device?</h1>
+
+  
+  <span class="status verified" title="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s).">
+        <pfe-icon icon="web-icon-alert-success" style="--pfe-icon--color: #3f9c35; top: -0.1em"></pfe-icon>
+       Solution Verified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:27:55.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>Minicom is not able to communicate with a serial port device, such as a modem</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<p>The minicom program is a terminal emulation program included with Red Hat Enterprise Linux. It is a tool accessed from the command line. Minicom provides a terminal emulation interface for a serial device or a modem. It also has a text-based menu to access various features.</p>
+<p>You will need to have the minicom package installed to use it. If regular users need to have access to minicom, then you will need to grant permission on the relevant device files. We have related articles to help.</p>
+<p>In addition you will also need to know the capabilities of the device you are connecting to. For a modem it is usually safe to use a speed of 57,600 baud (number of 8-bit characters per second). Other serial devices may communicate at a different rates. Please note, that this rate is the speed between your computer and the device. In the case of the <strong>modem to modem</strong> signaling rate this speed may be different depending on the device.</p>
+<p>Most present day serial devices support 8 <strong>data bits,</strong> No <strong>parity,</strong> and 1 <strong>stop bit.</strong> If the these settings are different for your device then make a note of it.</p>
+<p>You will get the fastest and most reliable connection with a device that supports Hardware (i.e. CTS/RTS) <strong>flow control.</strong> This option is often used with modems and generally is well supported. Other serial devices may or may not specify flow control capabilities. If the flow control setting is not specified in the specifications for the device, you are usually safe using no flow control.</p>
+<p>To set the system-wide parameters in minicom you will need to execute <code>minicom</code> as root with the <code>-s</code> (setup) option. For example:</p>
+<pre><code># minicom -s
+
+            ┌─────[configuration]──────┐
+            │ Filenames and paths      │
+            │ File transfer protocols  │
+            │ Serial port setup        │
+            │ Modem and dialing        │
+            │ Screen and keyboard      │
+            │ Save setup as dfl        │
+            │ Save setup as..          │
+            │ Exit                     │
+            │ Exit from Minicom        │
+            └──────────────────────────┘
+</code></pre>
+<p>Generally, in Red Hat Linux, the serial devices are typically represented as follows:</p>
+<ul>
+<li>
+<p><code>/dev/ttyS0</code> -&gt; First serial port (i.e. COM 1)</p>
+</li>
+<li>
+<p><code>/dev/ttyS1</code> -&gt; Second serial port (i.e. COM 2)</p>
+</li>
+<li>
+<p><code>/dev/ttyS2</code> -&gt; Third serial port (i.e. COM 3)</p>
+</li>
+<li>
+<p><code>/dev/ttyS3</code> -&gt; Fourth serial port (i.e. COM 4) ( <strong>Note:</strong> that the device name uses a capatal &quot;S&quot; before the number) or /dev/cua0 -&gt; First serial port (i.e. COM 1)</p>
+</li>
+<li>
+<p><code>/dev/cua1</code> -&gt; Second serial port (i.e. COM 2)</p>
+</li>
+<li>
+<p><code>/dev/cua2</code> -&gt; Third serial port (i.e. COM 3)</p>
+</li>
+<li>
+<p><code>/dev/cua3</code> -&gt; Fourth serial port (i.e. COM 4) <strong>General Explination:</strong> The difference between the ttyS and cua devices is technical. Generally speaking if one doesn't work try the other. If both don't work then you have some other problem. <strong>Technical Explination:</strong> When connecting to the ttyS devices, they will &quot;block&quot; until the carrier detect line (DCD) goes high. The cua devices are &quot;non-blocking&quot; and will accept the connection even if there is no DCD signal.</p>
+</li>
+</ul>
+<p>Use the arrow keys to navigate the menu selecting the option &quot; <strong>Serial port setup</strong> &quot; first. Press [Enter] to select this option and another window will open (see below). The letters on the left side of the window are used to select which setting to modify. Most likely you will want to modify &quot; <strong>A - Serial Device</strong> &quot; to use one of the device files listed above. Press [Enter] once you are done typing the device name.</p>
+<p>Next, choose option &quot; <strong>E - Bps/Par/Bits</strong> &quot;. Another window will open displaying the possible communication parameters. Choose the baud rate (speed) on the left by pressing the corresponding letter (A - J). The <strong>8N1</strong> at the top of the window refers to the options <strong>8</strong> data bits, No parity, and <strong>1</strong> stop bit. If you need to change these settings, then press the corresponding letter for the new setting. When you are done, press [Enter] to exit the menu.</p>
+<pre><code>    ┌───────────────────────────────────────────────────────────────────────┐
+    │ A -    Serial Device      : &#x2F;dev&#x2F;cua0                                 │
+    │ B - Lockfile Location     : &#x2F;var&#x2F;lock                                 │
+    │ C -   Callin Program      :                                           │
+    │ D -  Callout Program      :                                           │
+    │ E -    Bps&#x2F;Par&#x2F;Bits       : 57600 8N1                                 │
+    │ F - Hardware Flow Control : Yes                                       │
+    │ G - Software Flow Control : No                                        │
+    │                                                                       │
+    │    Change which setting?                                              │
+    └───────────────────────────────────────────────────────────────────────┘
+            │ Screen and keyboard      │
+            │ Save setup as dfl        │
+            │ Save setup as..          │
+            │ Exit                     │
+            │ Exit from Minicom        │
+            └──────────────────────────┘
+</code></pre>
+<p>If required, you can change the flow control setting with option F and G. I would not recommend turning on both hardware and software at the same time. Software flow control is rarely used, Hardware is more common as is no flow control. Again, pressing [Enter] will exit this menu and take you back to the main configuration menu.</p>
+<p>Next, arrow down to &quot; <strong>Modem and dialing</strong> &quot; and press [Enter]. You will get a screen full of options resembling the following:</p>
+<pre><code> ┌────────────────────[Modem and dialing parameter setup]─────────────────────┐
+ │                                                                            │
+ │ A - Init string ......... ~~AT S7=45 S0=0 L1 V1 X4 &amp;c1 E1 Q0               │
+ │ B - Reset string ........ ~ATZ~                                            │
+ │ C - Dialing prefix #1.... ATDT                                             │
+ │ D - Dialing suffix #1....                                                  │
+ │ E - Dialing prefix #2.... ATDP                                             │
+ │ F - Dialing suffix #2....                                                  │
+ │ G - Dialing prefix #3.... ATX1DT                                           │
+ │ H - Dialing suffix #3.... ;X4D                                             │
+ │ I - Connect string ...... CONNECT                                          │
+ │ J - No connect strings .. NO CARRIER            BUSY                       │
+ │                           NO DIALTONE           VOICE                      │
+ │ K - Hang-up string ...... ~~+++~~ATH                                       │
+ │ L - Dial cancel string ..                                                  │
+ │                                                                            │
+ │ M - Dial time ........... 45      Q - Auto bps detect ..... No             │
+ │ N - Delay before redial . 2       R - Modem has DCD line .. Yes            │
+ │ O - Number of tries ..... 10      S - Status line shows ... DTE speed      │
+ │ P - DTR drop time (0=no). 1       T - Multi-line untag .... No             │
+ │                                                                            │
+ │ Change which setting?       (Return or Esc to exit)                        │
+ └────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p>If you are using a modem, you may need to modify option <strong>A.</strong> See your hardware documentation for details. Generally the other default options are suitable for most modems.</p>
+<p>If you are not configuring for a modem, I would recommend blanking out the strings for options A, B, and K.</p>
+<p>The other options at the bottom can be set if required but the defaults are usually okay. Press [enter] to exit this screen.</p>
+<p>You may find, while connected to your device that the [Backspace] key does not behave properly. If so, you will want to return to this menu and change the setting under <strong>Screen and keyboard</strong></p>
+<p>Lastly, choose &quot; <strong>Save setup as defl</strong> &quot; to save your default configuration. The &quot;Configuration Saved&quot; message should close on it's own in a few seconds. Choose <strong>Exit</strong> and your ready to test your setup.</p>
+<p><em>If you ever need to return to this configuration menu from the terminal screen,</em> press <code>Ctrl+A</code>, release, then press the letters &quot;z&quot; then &quot;o&quot;.</p>
+<p>For additional features and information on minicom you will find documentation for located under <code>/usr/share/doc/minicom-&lt;version-number&gt;/doc/</code></p>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

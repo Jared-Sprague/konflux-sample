@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How to disable system reboot when pressing Ctrl+Alt+DEL keys in Red Hat Enterprise Linux 3, 4, 5
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-06T05:22:34.000Z" />
+<meta name="url_slug" content="1058" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                How to disable system reboot when pressing Ctrl+Alt+DEL keys in Red Hat Enterprise Linux 3, 4, 5
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>How to disable system reboot when pressing Ctrl+Alt+DEL keys in Red Hat Enterprise Linux 3, 4, 5</h1>
+
+  
+  <span class="status verified" title="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s).">
+        <pfe-icon icon="web-icon-alert-success" style="--pfe-icon--color: #3f9c35; top: -0.1em"></pfe-icon>
+       Solution Verified
+    </span>
+  
+  - Updated <time datetime="2024-08-06T05:22:34.000Z">6 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 3</li>
+<li>Red Hat Enterprise Linux 4</li>
+<li>Red Hat Enterprise Linux 5</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>How to avoid the system reboots when pressing Ctrl+Alt+DEL keys on a virtual console?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<p><em><strong>Note: For RHEL6, see <a href="https://access.redhat.com/site/solutions/449373" class="mimir-link-warn" title="This content is not included in Mimir.">How to disable Ctrl+Alt+Del causing system reboot in Red Hat Enterprise Linux 6</a></strong></em><br>
+ </p>
+<p>To prevent the <code>init</code> process from handling Ctrl-Alt-Del, change the line in <code>/etc/inittab</code> that begins with:  <strong><code>ca::ctrlaltdel:</code></strong></p>
+<ul>
+<li>
+<p>The line could be deleted altogether or commented out, e.g.:</p>
+<pre><code># Trap CTRL-ALT-DELETE
+#ca::ctrlaltdel:&#x2F;sbin&#x2F;shutdown -t3 -r now
+</code></pre>
+</li>
+<li>
+<p>It could be modified to run a different (innocuous) command, e.g., <code>logger</code> (to generate a log entry)</p>
+<pre><code># Trap CTRL-ALT-DELETE
+ca::ctrlaltdel:&#x2F;bin&#x2F;logger -p authpriv.warning -t init &quot;Console-invoked Ctrl-Alt-Del was ignored&quot;
+</code></pre>
+</li>
+<li>
+<p>Additionally, it could be restricted to certain users, e.g.:</p>
+<ol>
+<li>
+<p>Add the <code>-a</code> option to the <code>shutdown</code> command on the referenced line in <code>/etc/inittab</code>, i.e.:</p>
+<pre><code># Trap CTRL-ALT-DELETE
+ca::ctrlaltdel:&#x2F;sbin&#x2F;shutdown -t3 -r now -a
+</code></pre>
+</li>
+<li>
+<p>Populate a new <code>/etc/shutdown.allow</code> file with users (one per-line) which should be allowed to use Ctrl-Alt-Del, e.g.:</p>
+<pre><code>[root@localhost ~]# cat &#x2F;etc&#x2F;shutdown.allow 
+adminuser9
+jack
+</code></pre>
+</li>
+<li>
+<p>After doing this, tell the <code>init</code> process to re-read <code>/etc/inittab</code> via use of the command: <strong><code>init q</code></strong></p>
+</li>
+</ol>
+<ul>
+<li>EXPLANATION:<br>
+Using the above example, if Ctrl-Alt-Del is pressed from a virtual console (one of the black-screen ttys), it will only trigger a shutdown if the users root, adminuser9, or jack are logged in<br>
+For more details on this, see the <code>shutdown</code> man page</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

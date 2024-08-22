@@ -1,0 +1,75 @@
+/* give a little extra scroll padding to the top when targeting an id */
+body {
+    --mimir-scroll-margin: 16.666vh;
+}
+.mimir-doc-toc-inner  {
+    position: sticky;
+    top: 2em;
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-right: 1em;
+}
+.mimir-doc-toc ol,
+.mimir-doc-toc ol ol {
+    list-style: none;
+}
+.mimir-doc-toc ol a,
+.mimir-doc-toc ol ol a {
+    list-style: none;
+
+    /* indent any <a> text that wraps */
+    margin-left: -24px;
+    text-indent: 24px;
+}
+.mimir-doc-toc-inner > ol {
+    /* remove padding on the outermost <ol> so it makes contact with the left
+       edge of the container */
+    padding: 0;
+
+    /* shift the toc to the right to compensate for the -24px <a> text indentation */
+    margin-left: 24px;
+}
+
+.docs-grid {
+    display: grid;
+    grid-template-areas:
+        "heading" "heading"
+        "toc" "content";
+    grid-template-columns: minmax(auto, 40em) 60%;
+    gap: 1em;
+    max-width: 100%;
+}
+
+/* smol */
+@media (max-width: 1200px) {
+    .mimir-doc-toc-inner  {
+        max-height: 44vh;
+        margin-top: 1em;
+    }
+    .docs-grid {
+        grid-template-columns: 100%;
+    }
+}
+
+/* big */
+@media (min-width: 2040px) {
+    main.container.mimir-docs {
+        width: 140rem;
+    }
+}
+
+/* color for links in the TOC */
+.mimir-doc-toc a {
+    color: #151515;
+}
+
+/* the active TOC link, and the active heading */
+.mimir-doc-toc .mimir-doc-toc__active, /* TOC links */
+.title.mimir-doc-toc__active /* docs headings */ {
+    color: #06c;
+    background: #e7f1fa;
+}
+
+section.mimir-doc-title[id] {
+    padding-bottom: 1rem;
+}

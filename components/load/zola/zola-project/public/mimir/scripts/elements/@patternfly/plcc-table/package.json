@@ -1,0 +1,69 @@
+{
+  "name": "@cpelements/plcc-table",
+  "description": "Plcc table element for PatternFly Elements",
+  "pfelement": {
+    "packageName": "@cpelements",
+    "className": "PlccTable",
+    "elementName": "plcc-table",
+    "files": {
+      "styles": "./src/plcc-table.css",
+      "template": "./src/plcc-table.html",
+      "js": "./src/plcc-table.js"
+    },
+    "assets": []
+  },
+  "version": "2.1.5",
+  "keywords": [
+    "web-components",
+    "html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.cee.redhat.com/customer-platform/cp-elements",
+    "directory": "elements/plcc-table"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/plcc-table.umd.js",
+  "module": "./dist/plcc-table.js",
+  "unpkg": "./dist/plcc-table.umd.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "../../node_modules/.bin/gulp",
+    "dev": "../../node_modules/.bin/gulp dev",
+    "test": "../../node_modules/.bin/wct --configFile ../../wct.conf.json elements/plcc-table/test/"
+  },
+  "contributors": [
+    {
+      "name": "Kyle Buchanan"
+    },
+    {
+      "name": "Tyler Martin"
+    },
+    {
+      "name": "Wes Ruvalcaba"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@patternfly/pfe-datetime": "1.12.3",
+    "@patternfly/pfe-progress-indicator": "1.12.3",
+    "@patternfly/pfelement": "1.12.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "strip-css-comments": "^3.0.0",
+    "trim": "0.0.1",
+    "wct-browser-legacy": "^1.0.1",
+    "web-component-tester": "^6.7.1"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly-elements/issues?q=is%3Aissue+is%3Aopen+plcc-table"
+  },
+  "generator-pfelement-version": "1.5.2"
+}

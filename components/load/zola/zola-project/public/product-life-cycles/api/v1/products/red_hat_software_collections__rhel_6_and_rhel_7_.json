@@ -1,0 +1,16 @@
+{"data": [{
+  "all_phases": [],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/rhscl",
+  "name": "Red Hat Software Collections (RHEL 6 and RHEL 7)",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "be342301-1f42-4774-94f7-ec28996bae14",
+  "versions": []
+}]}

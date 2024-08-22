@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+What’s new in cost management - Red Hat Insights cost management 1-latest
+</title>
+        
+<meta name="product" content="Red Hat Insights cost management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-08-06T17:05:24.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">Red Hat Insights cost management</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">1-latest</a>
+                                
+                                
+                                What’s new in cost management
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">What’s new in cost management</a>
+                    </li><li>
+                        <a href="#idm140264458525136">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#august_2024">
+                            1. August 2024
+                        </a><ol>
+                <li>
+                        <a href="#attribute_the_cost_of_node_attached_storage_to_openshift_projects">
+                            1.1. Attribute the cost of node attached storage to OpenShift Projects
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#june_2024">
+                            2. June 2024
+                        </a><ol>
+                <li>
+                        <a href="#node_networking_costs_for_openshift_on_cloud">
+                            2.1. Node networking costs for OpenShift on cloud
+                        </a>
+                    </li><li>
+                        <a href="#default_to_aws_savings_plan">
+                            2.2. Default to AWS savings plan
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#april_2024">
+                            3. April 2024
+                        </a><ol>
+                <li>
+                        <a href="#cluster_info">
+                            3.1. Cluster info
+                        </a>
+                    </li><li>
+                        <a href="#tag_mapping">
+                            3.2. Tag mapping
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#march_2024">
+                            4. March 2024
+                        </a><ol>
+                <li>
+                        <a href="#ibm_power_ibm_z_ibm_linuxone_and_arm_support">
+                            4.1. IBM Power®, IBM Z, IBM LinuxONE, and ARM Support
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#october_2023">
+                            5. October 2023
+                        </a><ol>
+                <li>
+                        <a href="#changes_to_settings">
+                            5.1. Changes to settings
+                        </a><ol>
+                <li>
+                        <a href="#configuring_cost_management">
+                            5.1.1. Configuring cost management
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm140264459103424">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--whats_new_in_cost_management">
+            <h1 class="title">What’s new in cost management</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140264457232624"><div class="titlepage"><div><div class="producttitle"><span class="productname">Cost Management Service</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn about new features and updates</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm140264459103424">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Learn about important updates and features in cost management. Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.
+			</div></div></div></div><hr/></div><section class="preface" id="idm140264458525136"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p>
+			These following updates highlight the latest features and improvements in cost management. For information about what is new in other parts of Red Hat Insights, see the <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_insights/1-latest/html/release_notes/index" title="This content is not included in Mimir.">Red Hat Insights release notes</a>.
+		</p></section><section class="chapter" id="august_2024"><div class="titlepage"><div><div><h1 class="title">Chapter 1. August 2024</h1></div></div></div><section class="section" id="attribute_the_cost_of_node_attached_storage_to_openshift_projects"><div class="titlepage"><div><div><h2 class="title">1.1. Attribute the cost of node attached storage to OpenShift Projects</h2></div></div></div><p>
+				<span class="strong strong"><strong>Unattributed Storage</strong></span> is a type of project that gets created when cost management is unable to correlate a portion of the cloud cost to an OpenShift namespace.
+			</p><p>
+				There are two scenarios where <span class="strong strong"><strong>Unattributed Storage</strong></span> can happen:
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Volumes without a claim
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								A persistent volume (PV) exists, but there are no persistent volume claims (PVCs) that use the volume. Without a claim, the cloud cost cannot be associated with a node or namespace.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						Unutilized disk space
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								In some situations, cost management creates its own project because it cannot determine which project should be charged with the money from Azure.
+							</li></ul></div></li></ol></div><p>
+				To learn more about how to calculate <span class="strong strong"><strong>Unattributed Storage</strong></span> in Azure, see <a class="link mimir-link-warn" href="https://docs.redhat.com/en/documentation/cost_management_service/1-latest/html/visualizing_your_costs_using_cost_explorer/assembly-using-cost-explorer#unattributed_storage_project_for_azure" title="This content is not included in Mimir.">Unattributed Storage project for Azure</a>.
+			</p></section></section><section class="chapter" id="june_2024"><div class="titlepage"><div><div><h1 class="title">Chapter 2. June 2024</h1></div></div></div><section class="section" id="node_networking_costs_for_openshift_on_cloud"><div class="titlepage"><div><div><h2 class="title">2.1. Node networking costs for OpenShift on cloud</h2></div></div></div><p>
+				Costs associated with ingress and egress network traffic for individual nodes are now separated. A new project called network unattributed shows costs related to network traffic. You can use a cost model to distribute theses network costs in a similar way to platform and worker unallocated costs.
+			</p></section><section class="section" id="default_to_aws_savings_plan"><div class="titlepage"><div><div><h2 class="title">2.2. Default to AWS savings plan</h2></div></div></div><p>
+				If you have an AWS savings plan for the EC2 instances running on OpenShift nodes, cost management uses the savings plan cost by default.
+			</p></section></section><section class="chapter" id="april_2024"><div class="titlepage"><div><div><h1 class="title">Chapter 3. April 2024</h1></div></div></div><section class="section" id="cluster_info"><div class="titlepage"><div><div><h2 class="title">3.1. Cluster info</h2></div></div></div><p>
+				Customers noticed that cloud and OpenShift costs in cost management do not always match the data that is in the cloud provider’s console. Most of the time, this discrepancy is because there is a missing integration between the Hybrid Cloud Console and either the OpenShift cluster, or the cloud customer account. This missing integration creates discrepancies in billing and cluster data.
+			</p><p>
+				To help solve this discrepancy, we added two new views in the <span class="strong strong"><strong>OpenShift details</strong></span> page of cost management:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						The <span class="strong strong"><strong>Cluster information</strong></span> view shows details about your cluster such as the cluster ID, the <span class="strong strong"><strong>Cost Management Metrics Operator version</strong></span> and if there is an update available, and links to your integrations.
+					</li><li class="listitem">
+						The <span class="strong strong"><strong>Data details</strong></span> view shows your data processing states. These states inform you if data is already processed, is currently processing, or has errors. If you have a linked cloud integration for a cluster, it also displays the processing states for supported clouds.
+					</li></ul></div></section><section class="section" id="tag_mapping"><div class="titlepage"><div><div><h2 class="title">3.2. Tag mapping</h2></div></div></div><p>
+				You can now unify your tags by mapping ones that have similar or related meanings. This functionality offers greater flexibility and control over how you categorize and track your resources. Tag mapping reduces complexity, helps you have accurate reporting and analysis, and enhances consistency across your resources.
+			</p><p>
+				For example, imagine that you are tracking your environment spending across different platforms, each with its own naming conventions:
+			</p><p>
+				Platforms:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						GCP
+					</li><li class="listitem">
+						OpenShift
+					</li><li class="listitem">
+						AWS
+					</li></ul></div><p>
+				Variations in your key values:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">env</code>
+					</li><li class="listitem">
+						<code class="literal">environment</code>
+					</li><li class="listitem">
+						<code class="literal">Environment</code>
+					</li></ul></div><p>
+				With the tag mapping feature, you can seamlessly convert these key values under a single expected key, such as <code class="literal">environment</code>, to ensure that you are consistent in tracking your spending.
+			</p><p>
+				To learn about tag mapping, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/#tag-mapping">Enabling and creating a tag mapping</a>.
+			</p></section></section><section class="chapter" id="march_2024"><div class="titlepage"><div><div><h1 class="title">Chapter 4. March 2024</h1></div></div></div><section class="section" id="ibm_power_ibm_z_ibm_linuxone_and_arm_support"><div class="titlepage"><div><div><h2 class="title">4.1. IBM Power®, IBM Z, IBM LinuxONE, and ARM Support</h2></div></div></div><p>
+				The Cost Management Metrics Operator is now supported on IBM Power® (<span class="emphasis"><em>ppc64le</em></span>), IBM Z® (<span class="emphasis"><em>s390x</em></span>), IBM® LinuxONE (<span class="emphasis"><em>s390x</em></span>), and ARM (aarch64) architectures. Cost management for OpenShift on IBM Z® is not IFL aware.
+			</p></section></section><section class="chapter" id="october_2023"><div class="titlepage"><div><div><h1 class="title">Chapter 5. October 2023</h1></div></div></div><section class="section" id="changes_to_settings"><div class="titlepage"><div><div><h2 class="title">5.1. Changes to settings</h2></div></div></div><p>
+				We made several changes to the UI that affect how to update your cost management settings. Before, you updated your settings in the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> settings page. With this update, cost management has its own <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/settings" title="Mimir does not include content from: console.redhat.com">settings page</a>.
+			</p><section class="section" id="configuring_cost_management"><div class="titlepage"><div><div><h3 class="title">5.1.1. Configuring cost management</h3></div></div></div><p>
+					You can configure cost management from a few different locations on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>:
+				</p><p>
+					From the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <a class="link mimir-link-warn" href="https://console.redhat.com/settings" title="Mimir does not include content from: console.redhat.com">Settings</a>, you can configure the following:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							Adding and editing cloud integrations
+						</li><li class="listitem">
+							Notifications
+						</li></ul></div><p>
+					From the <a class="link mimir-link-warn" href="https://console.redhat.com/iam" title="Mimir does not include content from: console.redhat.com">Identity &amp; Access Management</a> settings, you can configure the following:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							User access
+						</li><li class="listitem">
+							Authentication policy
+						</li></ul></div><p>
+					From the <a class="link mimir-link-warn" href="https://console.redhat.com/settings/applications/cost-management" title="Mimir does not include content from: console.redhat.com">cost management settings</a>, you can configure the following:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							Enablement, grouping, and filtering of Tags and Labels
+						</li><li class="listitem">
+							Enablement of AWS cost categories
+						</li><li class="listitem">
+							Your preferred currency calculation
+						</li><li class="listitem">
+							Your preferred savings plan or subscription fee calculation for AWS
+						</li></ul></div></section></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm140264459103424"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

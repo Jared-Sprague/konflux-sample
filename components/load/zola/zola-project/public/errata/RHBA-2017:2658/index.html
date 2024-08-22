@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/errata.min.css">
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+RHBA-2017:2658 - python-django-horizon bug fix advisory - Red Hat Customer Portal
+</title>
+        
+<meta name="documentKind" content="Errata" />
+<meta name="lastModifiedDate" content="2018-03-19T12:26:32Z" />
+
+<meta name="id" content="RHBA-2017:2658" />
+<meta name="allTitle" content="RHBA-2017:2658 - python-django-horizon bug fix advisory - Red Hat Customer Portal" />
+<meta name="portal_synopsis" content="python-django-horizon bug fix advisory" />
+<meta name="portal_summary" content="Updated OpenStack Dashboard packages that resolve various issues are now
+available for Red Hat OpenStack Platform 10.0 (Newton) for RHEL 7." />
+<meta name="portal_severity" content="None" />
+<meta name="portal_publication_date" content="2017-09-06T16:38:43Z" />
+<meta name="view_uri" content="&#x2F;errata&#x2F;RHBA-2017:2658" />
+<meta name="portal_advisory_type" content="Bug Fix Advisory" />
+
+    
+        <meta name="portal_product_names" content="Red Hat OpenStack" />
+    
+    
+        <meta name="portal_product_filter" content="Red Hat OpenStack Platform|Red Hat OpenStack|10|x86_64" />
+    
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/errata-search/">Red Hat Product Errata</a>
+                                
+                                
+                                RHBA-2017:2658
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<dl class="details">
+    <dt>Issued:</dt>
+    <dd>2017-09-06</dd>
+    <dt>Updated:</dt>
+    <dd>2018-03-19</dd>
+</dl>
+
+<h1>RHBA-2017:2658 - python-django-horizon bug fix advisory</h1>
+
+<hr />
+<h2 id="synopsis">Synopsis</h2>
+<p>python-django-horizon bug fix advisory</p>
+<h2 id="type-severity">Type/Severity</h2>
+<p>Bug Fix Advisory None</p>
+<h2 id="topic">Topic</h2>
+<p>Updated OpenStack Dashboard packages that resolve various issues are now
+available for Red Hat OpenStack Platform 10.0 (Newton) for RHEL 7.</p>
+<h2 id="description">Description</h2>
+<p>Red Hat OpenStack Platform provides the facilities for building, deploying
+and monitoring a private or public infrastructure-as-a-service (IaaS) cloud
+running on commonly available physical hardware. This advisory includes
+packages for:</p>
+<ul>
+<li>OpenStack Dashboard</li>
+</ul>
+<p>OpenStack Dashboard (horizon) provides administrators and users a graphical
+interface to access, provision, and automate cloud-based resources.  The
+dashboard allows cloud administrators to get an overall view of the size
+and state of the cloud, and it provides end-users a self-service portal to
+provision their own resources within the limits set by administrators.</p>
+<p>Changes to the python-django-horizon component:</p>
+<ul>
+<li>Cause: Some binary python modules used by Horizon were compiled with a flag that makes them use the simplified GIL state API.</li>
+</ul>
+<p>Consequence: Since mod_wsgi uses sub-interpreters, and the simplified GIL state API is not re-entrant, this results in the mod_wsgi locking up and hanging, making the dashboard unavailable.</p>
+<p>Fix: Added &quot;WSGIApplicationGroup %{GLOBAL}&quot; to mod_wsgi configuration, which forces it to always use the main interpreter instead of sub-interpreters.</p>
+<p>Result: With that option, mod_wsgi works correctly no matter what options were used to compile the binary python modules. The slight performance penalty is not noticeable. (BZ#1479051)</p>
+<h2 id="solution">Solution</h2>
+<p>Before applying this update, ensure all previously released errata relevant
+to your system have been applied.</p>
+<p>Red Hat OpenStack Platform 10 runs on Red Hat Enterprise Linux 7.3.</p>
+<p>The Red Hat OpenStack Platform 10 Release Notes contain the following:</p>
+<ul>
+<li>An explanation of the way in which the provided components interact to
+form a working cloud computing environment.</li>
+<li>Technology Previews, Recommended Practices, and Known Issues.</li>
+<li>The channels required for Red Hat OpenStack Platform 10, including which
+channels need to be enabled and disabled.</li>
+</ul>
+<p>The Release Notes are available at:
+<a href="https://access.redhat.com/documentation/en/red-hat-openstack-platform/10/paged/release-notes" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/documentation/en/red-hat-openstack-platform/10/paged/release-notes</a></p>
+<p>This update is available through 'yum update' on systems registered through
+Red Hat Subscription Manager. For more information about Red Hat
+Subscription Manager, see:</p>
+<p><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/html/RHSM/index.html" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/html/RHSM/index.html</a></p>
+<h2 id="affected-products">Affected Products</h2>
+<table><thead><tr><th>Product</th><th>Version</th><th>Arch</th></tr></thead><tbody>
+<tr><td>Red Hat OpenStack</td><td>10</td><td>x86_64</td></tr>
+</tbody></table>
+<h2 id="updated-packages">Updated Packages</h2>
+<ul>
+<li>python-django-horizon-10.0.5-4.el7ost.noarch.rpm</li>
+<li>openstack-dashboard-10.0.5-4.el7ost.noarch.rpm</li>
+<li>openstack-dashboard-theme-10.0.5-4.el7ost.noarch.rpm</li>
+<li>python-django-horizon-10.0.5-4.el7ost.src.rpm</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1425581" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1425581</a></li>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1457747" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1457747</a></li>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1460135" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1460135</a></li>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1478467" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1478467</a></li>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1479051" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1479051</a></li>
+<li><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1480779" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">BZ - 1480779</a></li>
+</ul>
+<h2 id="cves">CVEs</h2>
+<p>(none)</p>
+<h2 id="references">References</h2>
+<p>(none)</p>
+
+
+<hr/>
+<p class="contact">
+The Red Hat security contact is <a href="mailto:secalert@redhat.com" class="mimir-link-warn" title="This content is not included in Mimir.">secalert@redhat.com</a>.
+More contact details at <a href="https://access.redhat.com/security/team/contact/" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/security/team/contact/</a>.
+</p>
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

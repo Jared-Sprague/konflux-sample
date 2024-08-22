@@ -1,0 +1,63 @@
+{
+  "version": {
+    "name": "2.4",
+    "slug": "2.4",
+    "url": "/documentation/en-us/ansible_on_clouds/2.4"
+  },
+  "titles": [
+    {
+      "titleId": "3c82913b-c0d5-476c-b3df-4c80cb933423",
+      "modified": 1709909387,
+      "name": "Red Hat Ansible Automation Platform from GCP Release Notes",
+      "url": "/documentation/en-us/ansible_on_clouds/2.4/html-single/red_hat_ansible_automation_platform_from_gcp_release_notes/index",
+      "category": {
+        "weight": 50,
+        "name": "Release Notes"
+      },
+      "description": "Install and configure Red Hat Ansible Automation Platform from GCP Marketplace",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/ansible_on_clouds/2.4/html-single/red_hat_ansible_automation_platform_from_gcp_release_notes/index",
+        "slug": "red_hat_ansible_automation_platform_from_gcp_release_notes",
+        "id": "1ff0d03455543573317c7389c8aa892f.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/ansible_on_clouds/2.4/pdf/red_hat_ansible_automation_platform_from_gcp_release_notes/Ansible_on_Clouds-2.4-Red_Hat_Ansible_Automation_Platform_from_GCP_Release_Notes-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/ansible_on_clouds/2.4/pdf/red_hat_ansible_automation_platform_from_gcp_release_notes/ansible_on_clouds-2.4-red_hat_ansible_automation_platform_from_gcp_release_notes-en-us.pdf",
+        "relative_path": "/documentation/en-us/ansible_on_clouds/2.4/pdf/red_hat_ansible_automation_platform_from_gcp_release_notes/ansible_on_clouds-2.4-red_hat_ansible_automation_platform_from_gcp_release_notes-en-us.pdf"
+      },
+      "toc": {
+        "id": "3037a9b61ca78ae7fea718f8d3475df1.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "ae7fbfdc-1a3e-408e-bce7-7255473d2bd3",
+      "modified": 1709915144,
+      "name": "Red Hat Ansible Automation Platform from GCP Marketplace Guide",
+      "url": "/documentation/en-us/ansible_on_clouds/2.4/html-single/red_hat_ansible_automation_platform_from_gcp_marketplace_guide/index",
+      "category": {
+        "weight": 51,
+        "name": "GCP Marketplace"
+      },
+      "description": "Install and configure Red Hat Ansible Automation Platform from GCP Marketplace",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/ansible_on_clouds/2.4/html-single/red_hat_ansible_automation_platform_from_gcp_marketplace_guide/index",
+        "slug": "red_hat_ansible_automation_platform_from_gcp_marketplace_guide",
+        "id": "ad538c6b054a61314fdfc12c4d71bc15.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/ansible_on_clouds/2.4/pdf/red_hat_ansible_automation_platform_from_gcp_marketplace_guide/Ansible_on_Clouds-2.4-Red_Hat_Ansible_Automation_Platform_from_GCP_Marketplace_Guide-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/ansible_on_clouds/2.4/pdf/red_hat_ansible_automation_platform_from_gcp_marketplace_guide/ansible_on_clouds-2.4-red_hat_ansible_automation_platform_from_gcp_marketplace_guide-en-us.pdf",
+        "relative_path": "/documentation/en-us/ansible_on_clouds/2.4/pdf/red_hat_ansible_automation_platform_from_gcp_marketplace_guide/ansible_on_clouds-2.4-red_hat_ansible_automation_platform_from_gcp_marketplace_guide-en-us.pdf"
+      },
+      "toc": {
+        "id": "b82b7c37914ff392795a00a4452c9bac.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

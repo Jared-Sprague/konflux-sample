@@ -1,0 +1,76 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "Upstream version",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/support/policy/updates/openshift_operators",
+  "name": "nbde tang server",
+  "package": "tang-operator",
+  "product_extra_headers": [
+    "Upstream version"
+  ],
+  "release_cadence": "",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "26a79bbe-7cf4-4372-a854-4f6d4da41ded",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [
+        "1.0.6"
+      ],
+      "extra_header_value": "1.0.6",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.0",
+      "openshift_compatibility": "4.13, 4.14",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-11-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-04-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-07-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        }
+      ],
+      "tier": "Rolling",
+      "type": "End of life"
+    }
+  ]
+}]}

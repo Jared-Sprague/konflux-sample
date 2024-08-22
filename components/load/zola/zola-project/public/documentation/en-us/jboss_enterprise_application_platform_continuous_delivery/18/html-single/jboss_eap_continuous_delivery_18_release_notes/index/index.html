@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+JBoss EAP Continuous Delivery 18 Release Notes - JBoss Enterprise Application Platform Continuous Delivery 18
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Continuous Delivery" />
+<meta name="documentation_version" content="18" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2019-12-06T22:33:49.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/">JBoss Enterprise Application Platform Continuous Delivery</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/">18</a>
+                                
+                                
+                                JBoss EAP Continuous Delivery 18 Release Notes
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">JBoss EAP Continuous Delivery 18 Release Notes</a>
+                    </li><li>
+                        <a href="#about_cd">
+                            1. About JBoss EAP Continuous Delivery 18
+                        </a><ol>
+                <li>
+                        <a href="#cd_release_limitations">
+                            1.1. Differences Between JBoss EAP and JBoss EAP Continuous Delivery
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#new_features_and_enhancements">
+                            2. New Features and Enhancements
+                        </a><ol>
+                <li>
+                        <a href="#security">
+                            2.1. Security
+                        </a>
+                    </li><li>
+                        <a href="#ejb">
+                            2.2. EJB
+                        </a>
+                    </li><li>
+                        <a href="#clustering">
+                            2.3. Clustering
+                        </a>
+                    </li><li>
+                        <a href="#infinispan">
+                            2.4. Infinispan
+                        </a>
+                    </li><li>
+                        <a href="#web_services">
+                            2.5. Web Services
+                        </a>
+                    </li><li>
+                        <a href="#OpenShift">
+                            2.6. OpenShift
+                        </a>
+                    </li><li>
+                        <a href="#quickstarts_boms">
+                            2.7. Quickstarts and BOMs
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#resolved_issues">
+                            3. Resolved Issues
+                        </a>
+                    </li><li>
+                        <a href="#fixed_cves">
+                            4. Fixed CVEs
+                        </a>
+                    </li><li>
+                        <a href="#known_issues">
+                            5. Known Issues
+                        </a>
+                    </li><li>
+                        <a href="#idm139689279706144">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--jboss_eap_continuous_delivery_18_release_notes">
+            <h1 class="title">JBoss EAP Continuous Delivery 18 Release Notes</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139689283998768"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Continuous Delivery</span> <span class="productnumber">18</span></div><div><h2 class="subtitle">For Use with JBoss Enterprise Application Platform Continuous Delivery 18</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139689279706144">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				These release notes contain important information related to JBoss Enterprise Application Platform continuous delivery release 18, which is available as a Technology Preview release in the cloud only.
+			</div></div></div></div><hr/></div><section class="chapter" id="about_cd"><div class="titlepage"><div><div><h1 class="title">Chapter 1. About JBoss EAP Continuous Delivery 18</h1></div></div></div><p>
+			The JBoss Enterprise Application Platform continuous delivery (JBoss EAP CD) release 18 is a Technology Preview release available in the cloud only. This JBoss EAP CD release introduces a new delivery stream of JBoss EAP, which provides incremental updates and new capabilities on a regular schedule for Red Hat OpenShift Online and the Red Hat OpenShift Container Platform.
+		</p><p>
+			The purpose of this new delivery model is to quickly introduce new features ahead of the traditional JBoss EAP GA release. The JBoss EAP CD releases are only available in the OpenShift image format and can be accessed from the Red Hat Container Catalog.
+		</p><p>
+			Traditional JBoss EAP GA releases, the next being JBoss EAP 7.3, will be based on an aggregate of JBoss EAP CD releases and will continue to be available through the normal distribution methods.
+		</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+				This continuous delivery release for JBoss EAP is provided as Technology Preview only. Technology Preview features are not supported with Red Hat production service level agreements (SLAs), might not be functionally complete, and Red Hat does not recommend to use them for production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.
+			</p><p>
+				See <a class="link mimir-link-warn" href="https://access.redhat.com/support/offerings/techpreview" title="This content is not included in Mimir.">Technology Preview Features Support Scope</a> on the Red Hat Customer Portal for information about the support scope for Technology Preview features.
+			</p></div></div><section class="section" id="cd_release_limitations"><div class="titlepage"><div><div><h2 class="title">1.1. Differences Between JBoss EAP and JBoss EAP Continuous Delivery</h2></div></div></div><p>
+				There are notable differences between the JBoss EAP product and the continuous delivery release for JBoss EAP.
+			</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					For descriptions of differences and details about feature support in the continuous delivery release for JBoss EAP, see the comparison table in <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/getting_started_with_jboss_eap_for_openshift_container_platform/index/#comparison_eap_and_xpaas_eap_image"><span class="emphasis"><em>Getting Started with JBoss EAP for OpenShift Container Platform</em></span></a> or <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/getting_started_with_jboss_eap_for_openshift_online/index/#comparison_eap_and_xpaas_eap_image"><span class="emphasis"><em>Getting Started with JBoss EAP for OpenShift Online</em></span></a>.
+				</p></div></div></section></section><section class="chapter" id="new_features_and_enhancements"><div class="titlepage"><div><div><h1 class="title">Chapter 2. New Features and Enhancements</h1></div></div></div><section class="section" id="security"><div class="titlepage"><div><div><h2 class="title">2.1. Security</h2></div></div></div><h4 id="ability-to-combine-multiple-security-realms-for-authorization-in-aggregate-realm">Ability to Combine Multiple Security Realms for Authorization in an Aggregate Realm</h4><p>
+				You can now use multiple security realms for authorization in an <code class="literal">aggregate-realm</code> with the <code class="literal">authorization-realms</code> attribute.
+			</p><p>
+				For more information, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/how_to_configure_identity_management/#configure-authentication-and-authorization-using-multiple-identity-stores_aggregate-realm" title="This content is not included in Mimir.">Configure Authentication and Authorization Using Multiple Identity Stores</a> in the <span class="emphasis"><em>How to Configure Identity Management</em></span> guide for JBoss EAP.
+			</p><h4 id="ability-to-use-subject-alternative-name-extension">Ability to Use the Subject Alternative Name Extension From X.509 Certificate as the Principal</h4><p>
+				You can now configure an evidence decoder to use a subject alternative name from an X.509 certificate as the principal associated with that certificate.
+			</p><p>
+				For more information, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/how_to_configure_server_security/#configuring-evidence-decoder-for-x-509-certificate-with-subject-alternative-name-extension_elytron" title="This content is not included in Mimir.">Configuring Evidence Decoder for X.509 Certificate with Subject Alternative Name Extension</a> in the <span class="emphasis"><em>How to Configure Server Security</em></span> guide.
+			</p><h4 id="ability-to-combine-multiple-evidence-decoders-with-aggregate-evidence-decoder">Ability to Combine Multiple Evidence Decoders with Aggregate Evidence Decoder</h4><p>
+				Elytron now provides an aggregate evidence decoder to combine two or more evidence decoders into a single decoder.
+			</p><p>
+				For more information, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/how_to_configure_server_security/#configuring-an-aggregate-evidence-decoder_elytron" title="This content is not included in Mimir.">Configuring an Aggregate Evidence Decoder</a> in the <span class="emphasis"><em>How to Configure Server Security</em></span> guide.
+			</p><h4 id="certificate-revocation-capability-using-ocsp">Certificate Revocation Capability using OCSP</h4><p>
+				Elytron now provides certificate revocation capability using Online Certificate Status Protocol (OCSP), defined in <a class="link mimir-link-warn" href="https://tools.ietf.org/html/rfc6960" title="Mimir does not include content from: tools.ietf.org">RFC6960</a>, when undertow is used as a load balancer.
+			</p><h4 id="syslog-audit-logging-enhancements">Syslog Audit Logging Enhancements</h4><p>
+				Elytron syslog audit logging now supports log formats defined in <a class="link mimir-link-warn" href="https://tools.ietf.org/html/rfc5424" title="Mimir does not include content from: tools.ietf.org">RFC5424</a> and <a class="link mimir-link-warn" href="https://tools.ietf.org/html/rfc3164" title="Mimir does not include content from: tools.ietf.org">RFC3164</a> to describe audit events.
+			</p><p>
+				A new attribute, <code class="literal">reconnect-attempts</code>, is now available to configure the maximum number of times Elytron attempts to send successive messages to a syslog server before closing the connection when using UDP.
+			</p></section><section class="section" id="ejb"><div class="titlepage"><div><div><h2 class="title">2.2. EJB</h2></div></div></div><h4 id="client-and-server-interceptors">Client and Server Interceptors</h4><p>
+				JBoss EAP 7.2 and earlier only supported EJB interceptors configured in the container.
+			</p><p>
+				In JBoss EAP 7.3, client interceptors and server interceptors are now supported. Client and server interceptors can be configured globally.
+			</p></section><section class="section" id="clustering"><div class="titlepage"><div><div><h2 class="title">2.3. Clustering</h2></div></div></div><h4 id="ranked_multiple_routes_session_affinity">Ability to Specify Ranked Multiple Routes Session Affinity</h4><p>
+				You can now specify session affinity as an ordered list of nodes. If your load balancer supports multiple, ordered routes, in the event of a primary node failure, it can choose the optimal nodes in the order defined. It also ensures a definite failover target, if the primary owner of a specific session is inactive.
+			</p><p>
+				For information about the ranked affinity options, see <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/development_guide/index/#distributable_web_subsystem">The distributable-web subsystem for Distributable Web Session Configurations</a> in the <span class="emphasis"><em>Development Guide</em></span> for JBoss EAP. For information on how to enable ranked session affinity in your load balancer, see <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/configuration_guide/index/">Enabling Ranked Session Affinity in Your Load Balancer</a> in the <span class="emphasis"><em>Configuration Guide</em></span> for JBoss EAP.
+			</p></section><section class="section" id="infinispan"><div class="titlepage"><div><div><h2 class="title">2.4. Infinispan</h2></div></div></div><h4 id="enabling_statistics_for_remote_cache_containers">Enabling Statistics for Remote Cache Containers</h4><p>
+				You can now use the HotRod client to expose remote cache container statistics. The <code class="literal">statistics-enabled</code> attribute can be configured for remote cache containers using the management CLI. For more information, see <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/configuration_guide/index/">Configuring Remote Cache Containers</a> in the <span class="emphasis"><em>Configuration Guide</em></span> for JBoss EAP.
+			</p></section><section class="section" id="web_services"><div class="titlepage"><div><div><h2 class="title">2.5. Web Services</h2></div></div></div><h4 id="optional_parameter_types_resteasy">Optional &lt;T&gt; Parameter Types Available for RESTEasy</h4><p>
+				RESTEasy now supports the following <code class="literal">java.util.Optional</code> parameters as wrapper object types:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<code class="literal">@QueryParam</code>
+					</li><li class="listitem">
+						<code class="literal">@MatrixParam</code>
+					</li><li class="listitem">
+						<code class="literal">@FormParam</code>
+					</li><li class="listitem">
+						<code class="literal">@HeaderParam</code>
+					</li><li class="listitem">
+						<code class="literal">@CookieParam</code>
+					</li></ul></div><p>
+				For more information, see <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_web_services_applications/index/"><code class="literal">java.util.Optional</code> Parameter Types</a> in the <span class="emphasis"><em>Developing Web Services Applications</em></span> book for JBoss EAP.
+			</p></section><section class="section" id="OpenShift"><div class="titlepage"><div><div><h2 class="title">2.6. OpenShift</h2></div></div></div><h4 id="reduce-memory-footprint-with-galleon-feature-packs">Reduce Memory Footprint with Galleon Feature-packs</h4><p>
+				You can now customize the main JBoss EAP for OpenShift image configuration to include only the capabilities that you require, thereby reducing the memory footprint. The provisioning tool, <a class="link mimir-link-warn" href="https://github.com/wildfly/galleon" title="Mimir does not include content from: github.com">Galleon</a>, offers several layers that you can select to control the capabilities present in the JBoss EAP server.
+			</p><p>
+				Additionally, you can package customized capabilities as Galleon feature-packs that are installed during the JBoss EAP server Galleon provisioning. For JBoss EAP for OpenShift Source-to-Image (S2I), you can build your feature-packs offline, deploy them to Maven and reference them in your <code class="literal">provisioning.xml</code> file.
+			</p><h4 id="eap-operator-for-automating-app-deployment-on-openshift">EAP Operator for Automating Application Deployment on OpenShift</h4><p>
+				JBoss EAP now offers EAP operator, a JBoss EAP-specific controller, to automate common deployment-related tasks. You can install the EAP operator using OperatorHub, the graphical interface that OpenShift cluster administrators use to discover, install, and upgrade operators.
+			</p><h4 id="eap-operator-for-safe-transaction-recovery-and-ejb-remoting">EAP Operator for Safe Transaction Recovery and EJB Remoting</h4><p>
+				The EAP operator ensures safe transaction recovery in your application cluster by verifying that all transactions are completed before scaling down the replicas and marking the pod as <code class="literal">clean</code> for termination.
+			</p><p>
+				The EAP operator uses <a class="link mimir-link-warn" href="https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/" title="Mimir does not include content from: kubernetes.io"><code class="literal">StatefulSet</code></a> for the appropriate handling of EJB remoting and transaction recovery processing. The <code class="literal">StatefulSet</code> ensures persistent storage and network hostname preservation even after the pods are restarted.
+			</p><h4 id="calculate-jvm-memory-settings">Calculate JVM Memory Settings</h4><p>
+				JBoss EAP 7.2 and earlier did not address conditions where JVM memory settings are higher than the container limit.
+			</p><p>
+				The OpenShift JBoss EAP image can now calculate default JVM memory settings when a container limit has been defined and the JVM memory settings are higher than the container limit.
+			</p></section><section class="section" id="quickstarts_boms"><div class="titlepage"><div><div><h2 class="title">2.7. Quickstarts and BOMs</h2></div></div></div><h4 id="new_client_bom_jax-ws">New Client BOM for JAX-WS</h4><p>
+				JBoss EAP now provides a new client BOM, <code class="literal">wildfly-jaxws-client-bom</code>, to manage JAX-WS dependencies. For information on how to add the <code class="literal">wildfly-jaxws-client-bom</code> dependencies to your project, see <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/development_guide/index/#manage_project_dependencies">JBoss EAP Client BOMs</a> in the <span class="emphasis"><em>Development Guide</em></span> for JBoss EAP.
+			</p></section></section><section class="chapter" id="resolved_issues"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Resolved Issues</h1></div></div></div><p>
+			See <a class="link mimir-link-warn" href="https://issues.jboss.org/issues/?filter=12338053" title="Mimir does not include content from: issues.jboss.org">Resolved Issues for JBoss EAP CD 18</a> to view the list of issues that have been resolved for this release.
+		</p></section><section class="chapter" id="fixed_cves"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Fixed CVEs</h1></div></div></div><p>
+			JBoss EAP Continuous Delivery 18 does not include any fixed CVEs.
+		</p></section><section class="chapter" id="known_issues"><div class="titlepage"><div><div><h1 class="title">Chapter 5. Known Issues</h1></div></div></div><p>
+			See <a class="link mimir-link-warn" href="https://issues.jboss.org/issues/?filter=12341472" title="Mimir does not include content from: issues.jboss.org">Known Issues for JBoss EAP CD 18</a> to view the list of known issues for this release.
+		</p><p>
+			<br/><br/><br/><br/>
+		</p><p>
+			<span class="emphasis"><em><span class="right right">Revised on 2019-12-05 13:51:34 UTC</span></em></span>
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm139689279706144"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2019 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

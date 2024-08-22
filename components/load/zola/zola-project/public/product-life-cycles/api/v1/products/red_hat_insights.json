@@ -1,0 +1,58 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/red-hat-insights/lifecycle",
+  "name": "Red Hat Insights",
+  "package": null,
+  "policies": "https://access.redhat.com/support/policy/updates/red-hat-insights/policies",
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "f4210477-88f3-41f8-ae10-e6610e608e1e",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "v3 client",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2018-03-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "End of Life with respective version of Red Hat Enterprise Linux",
+          "date_format": "string",
+          "name": "End of Life"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    }
+  ]
+}]}

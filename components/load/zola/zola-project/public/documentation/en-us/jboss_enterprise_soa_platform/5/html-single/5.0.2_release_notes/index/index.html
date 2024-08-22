@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+5.0.2 Release Notes - JBoss Enterprise SOA Platform 5
+</title>
+        
+<meta name="product" content="JBoss Enterprise SOA Platform" />
+<meta name="documentation_version" content="5" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2017-11-09T09:52:27.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_soa_platform/5/">JBoss Enterprise SOA Platform</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_soa_platform/5/">5</a>
+                                
+                                
+                                5.0.2 Release Notes
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">5.0.2 Release Notes</a>
+                    </li><li>
+                        <a href="#id-release_notes-components">
+                            1. Components of the 5.0.2 Release
+                        </a>
+                    </li><li>
+                        <a href="#sect-release_notes_requirements">
+                            2. Requirements and Installation
+                        </a>
+                    </li><li>
+                        <a href="#id-release_notes-documentation">
+                            3. Documentation
+                        </a>
+                    </li><li>
+                        <a href="#issues_resolved_in_5.0.2">
+                            4. Resolved Issues
+                        </a>
+                    </li><li>
+                        <a href="#id-release_notes-known_issues">
+                            5. Known Issues
+                        </a>
+                    </li><li>
+                        <a href="#sect-migrating_to_50">
+                            6. Possible Issues When Migrating to 5
+                        </a>
+                    </li><li>
+                        <a href="#id-release_notes-product_support_links">
+                            7. Product Support and License Website Links
+                        </a>
+                    </li><li>
+                        <a href="#id-release_notes-obtaining_source">
+                            8. Obtaining Source Code
+                        </a>
+                    </li><li>
+                        <a href="#appe-Publican-Revision_History">
+                            A. Revision History
+                        </a>
+                    </li><li>
+                        <a href="#idm139781849488896">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--5.0.2_release_notes">
+            <h1 class="title">5.0.2 Release Notes</h1>
+        </section>
+        <body><div xml:lang="en-US" class="article" id="id-release_notes" lang="en-US"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise SOA Platform</span> <span class="productnumber">5</span></div><div><h3 class="subtitle"><em>Changes in the 5.0.2 Release</em></h3></div><div><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="https://access.redhat.com/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-5.0.2_Release_Notes-en-US/images/a78399a6916bd5b945caa082f6c4fa4e/title_logo.svg" type="image/svg+xml"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-5.0.2_Release_Notes-en-US/images/20c014cff25dbc2aeb4126383228ede4/title_logo.png" alt="" /></object></span>
+
+	</h3></div><div><a href="#idm139781849488896">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+			These Release Notes contain important information regarding changes in the 5.0.2 release of the JBoss Enterprise SOA Platform.
+		</div><div class="para">
+			The JBoss Enterprise SOA Platform is a certified, tested, and supported environment for developing Enterprise Application Integration and SOA solutions.
+		</div><div class="para">
+			For the latest version of these release notes please refer to the online documentation available at <a href="http://www.redhat.com/docs/en-US/JBoss_SOA_Platform/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/docs/en-US/JBoss_SOA_Platform/</a>.
+		</div></div></div></div></div><div xml:lang="en-US" class="section" id="id-release_notes-components" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1. Components of the 5.0.2 Release</h2></div></div></div><div class="para">
+		The JBoss Enterprise SOA Platform includes the following components.
+	</div><div class="table" id="table-"><p class="title"><strong>Table 1. Included Components</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Included Components"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139781840863680" scope="col"> Component </th><th align="left" id="idm139781845103280" scope="col"> Version </th></tr></thead><tbody><tr><td align="left" headers="idm139781840863680"> JBoss EAP </td><td align="left" headers="idm139781845103280"> 5.0.1 </td></tr><tr><td align="left" headers="idm139781840863680"> JBoss ESB </td><td align="left" headers="idm139781845103280"> 4.7 CP02 </td></tr><tr><td align="left" headers="idm139781840863680"> JBoss Rules </td><td align="left" headers="idm139781845103280"> 5.0.1 </td></tr><tr><td align="left" headers="idm139781840863680"> JBoss jBPM </td><td align="left" headers="idm139781845103280"> 3.2.9 </td></tr><tr><td align="left" headers="idm139781840863680"> Apache jUDDI </td><td align="left" headers="idm139781845103280"> 3.0.1 </td></tr><tr><td align="left" headers="idm139781840863680"> PicketLink </td><td align="left" headers="idm139781845103280"> 1.0 </td></tr></tbody></table></div></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			The JBoss Enterprise SOA Platform includes the <span class="application"><strong>Hypersonic</strong></span> database (HQSQL) for testing and demonstration purposes. <span class="application"><strong>Hypersonic</strong></span> is not suitable for use in a production environment and it is not supported in that capacity. Instructions on how to change the database provider are in the Post-Installation Configuration section of the <span class="emphasis"><em>JBoss Enterprise SOA Platform Getting Started Guide</em></span>.
+		</div></div></div><div class="para">
+		The following features are included as <em class="firstterm">Technology Previews</em> only:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Support for SAML Tokens
+			</div></li><li class="listitem"><div class="para">
+				JBoss Rules Fusion
+			</div><div class="para">
+				The JBoss Rules Fusion is an API for Event Drive Architecture (EDA) and is provided as a Technology Preview. It is accessible from the JBoss Rules API but the JBoss ESB does not currently provide any support for it. You will need to create your own custom actions to interact with Fusion functions from the ESB.
+			</div></li></ul></div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+			Technology Preview features are not fully supported and may not be functionally complete. They are not intended for production use. These features are included to provide customers with early access to upcoming product innovations, enabling them to test functionality and provide feedback during the development process.
+		</div><div class="para">
+			Red Hat JBoss support will provide commercially-reasonable efforts to resolve any reported issues that customers experience when using these features.
+		</div></div></div></div><div class="section" id="sect-release_notes_requirements"><div class="titlepage"><div><div><h2 class="title">2. Requirements and Installation</h2></div></div></div><div class="para">
+			The JBoss Enterprise SOA Platform Getting Started Guide contains details of software and hardware requirements as well as detailed installation instructions.
+		</div><div class="para">
+			The JBoss Enterprise SOA Platform Getting Started Guide can be found online at <a href="http://www.redhat.com/docs/en-US/JBoss_SOA_Platform/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/docs/en-US/JBoss_SOA_Platform/</a>.
+		</div></div><div class="section" id="id-release_notes-documentation"><div class="titlepage"><div><div><h2 class="title">3. Documentation</h2></div></div></div><div class="para">
+			The documentation for the JBoss Enterprise SOA Platform is available online at <a href="http://www.redhat.com/docs/en-US/JBoss_SOA_Platform" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/docs/en-US/JBoss_SOA_Platform</a>.
+		</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+				Read the <span class="emphasis"><em>Getting Started Guide</em></span> first as it contains instructions for installing and configuring the platform.
+			</div></div></div><div class="para">
+			The documentation consists of the following books:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Getting Started Guide
+				</div></li><li class="listitem"><div class="para">
+					ESB Administration Guide
+				</div></li><li class="listitem"><div class="para">
+					JBoss Rules Reference Guide
+				</div></li><li class="listitem"><div class="para">
+					jBPM Reference Guide
+				</div></li><li class="listitem"><div class="para">
+					ESB Programmer's Guide
+				</div></li><li class="listitem"><div class="para">
+					ESB Services Guide
+				</div></li><li class="listitem"><div class="para">
+					Smooks Users' Guide
+				</div></li></ul></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+				Documentation for the JBoss Enterprise Application Platform (EAP) is available online at <a href="http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/</a>.
+			</div></div></div></div><div xml:lang="en-US" class="section" id="issues_resolved_in_5.0.2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4. Resolved Issues</h2></div></div></div><div class="para">
+		Each release of the JBoss Enterprise SOA Platform contains all the fixes from the previous releases. Refer to the Release Notes for each release for details.
+	</div><div class="para">
+		The following issues have been resolved for the 5.0.2 release of the JBoss Enterprise SOA Platform:
+	</div><div class="variablelist"><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1549" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1549</a></span></dt><dd><div class="para">
+					An <code class="exceptionname">Invalid End-Point Address</code> error would occur if the user tried to access <a href="http://localhost:8080/jbossws/services" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/jbossws/services</a> whilst a <code class="filename">WAR</code> file was embedded in a <code class="filename">JAR</code> archive. This occurred because the web service inside the ESB archive was deployed in such a way that the <code class="filename">WAR</code> did not contain the <code class="filename">WEB-INF/jboss-web.xml</code> file, meaning that the web service's WSDL would be inaccessible.
+				</div><div class="para">
+					This was a backwards-compatibility issue. It has been fixed by adding <code class="filename">jboss-web.xml</code> and specifying a context root. As a result, the error no longer occurs.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1600" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1600</a></span></dt><dd><div class="para">
+					The <span class="application"><strong>jUDDI v3</strong></span> database was created through the use of <span class="application"><strong>Hibernate</strong></span>. This was in contrast to the other ESB components, which used SQL scripts. The <span class="application"><strong>Schema</strong></span> tool has now been revised to support the creation of the <span class="application"><strong>jUDDI</strong></span> database.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1623" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1623</a></span></dt><dd><div class="para">
+					A null pointer exception would occur when the user deployed a JAX-WS end-point with types in the target name-space that ended with <code class="literal">#</code>. To fix this problem, the software has been changed so that it now detects the presence of the <code class="literal">#</code> character and converts it to <code class="literal">_</code> in the schema name-space. It does so at the point in time at which the temporary filename to which the schema is written is generated. (This filename is based on the schema's name-space.) As a result, the exception no longer occurs.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1970" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1970</a></span></dt><dd><div class="para">
+					Previously, the <code class="systemitem">Schema</code> tool would only support a limited number of databases. It has now been enhanced and, as a result, supports these second-tier databases:
+				</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							MySQL 5.0
+						</div></li><li class="listitem"><div class="para">
+							PostgreSQL 8.2.4
+						</div></li><li class="listitem"><div class="para">
+							Microsoft SQL Server 2008
+						</div></li><li class="listitem"><div class="para">
+							Oracle 11g
+						</div></li></ul></div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1711" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1711</a></span></dt><dd><div class="para">
+					Three quick-starts have been removed. These are <code class="filename">xsd_validation </code>, <code class="filename">webservice_proxy</code> and <code class="filename">JAAS_action</code>. The reason for their removal is that none of them were part of the ESB project. They are, therefore, no longer available to users.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1867" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1867</a></span></dt><dd><div class="para">
+					The Web Service Console only used basic authentication. It now features form-based authentication, the use of which avoids the need to send the username/password pair on each request, making the system more secure.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1981" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1981</a></span></dt><dd><div class="para">
+					The Oracle RAC required URLs to be presented in a specific format, which the Schema tool was unable to handle. Extensions have been added to the tool to provide compatibility with this format.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2007" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2007</a></span></dt><dd><div class="para">
+					The EsbDeployment stop/start MBean functions would not restart the listeners. To fix this problem, reference to the controller is nulled upon stopping and a guard for null has been added to the method. As a result, the restart function now works as expected. A state for querying this has also been added.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2029" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2029</a></span></dt><dd><div class="para">
+					<code class="classname">JmsConnectionPool</code> was performing a JNDI lookup of the connection factory for every session obtained from the connection pool. This lookup is now only done when the connection factory is first accessed or when the connection returns an error. This provides faster performance.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2034" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2034</a></span></dt><dd><div class="para">
+					The files required for integration of the JBoss Enterprise SOA Platform with HP Systinet where not included. These files, <code class="filename">jbossesb-transport-client-1.0.jar</code> and <code class="filename">jbossesb-transport-1.0.jar</code>, are now included in the directory <code class="filename"><em class="replaceable">$SOA_ROOT</em>/tools/systinet/</code>.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2083" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2083</a></span></dt><dd><div class="para">
+					The jBPM and jUDDI web consoles were included as WAR files in the earlier releases. The WAR files had to be unzipped ("exploded") before they could be configured. The consoles are now included in their "exploded" form to simplify this process.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2084" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2084</a></span></dt><dd><div class="para">
+					ESB archives could fail to deploy if they contained XSD files that were not in the root directory of the archive. If the XSD file was in a sub-directory of the archive and contained &lt;xs:import ../&gt; statements, deployment would fail and thrown an exception (<code class="exceptionname">IllegalArgumentException</code>). This was because the paths for import elements where resolved from the root of the archive and not from the location of the XSD file. This has been fixed and the paths for imported XSD files (including nested imports) are resolved correctly.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2086" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2086</a></span></dt><dd><div class="para">
+					The included version of the JBoss Enterprise Application Platform has been updated to 5.0.1. This resolves a number of issues which can be found documented in the JBoss Enterprise Application Platform 5.0.1 Release Notes.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2099" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2099</a></span></dt><dd><div class="para">
+					Support for Microsoft SQL Server and IBM DB2 databases has been added to the JBoss Enterprise SOA Platform database schema tool. Refer to the ESB Administration Guide and the Getting Started Guide for more information on its use.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2105" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2105</a></span></dt><dd><div class="para">
+					The deployment descriptor (<code class="filename">web.xml</code>) of <code class="filename">picketlink-sts.war</code> in the <code class="filename">security_saml</code> quickstart contained configuration that could allow an attacker to bypass the application's security with a crafted HTTP request. The following lines have been removed from the file <code class="filename">web.xml</code> of this quickstart to fix this:
+				</div><pre class="programlisting language-xml">&lt;http-method&gt;GET&lt;/http-method&gt;
+&lt;http-method&gt;POST&lt;/http-method&gt;</pre><div class="para">
+					If this quickstart was used to create another application then the new application will need to be reviewed to ensure it does not also have the same issue.
+				</div><div class="para">
+					For additional details refer to <a href="https://www.redhat.com/security/data/cve/CVE-2010-2493.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">https://www.redhat.com/security/data/cve/CVE-2010-2493.html</a>.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/SOA-2114" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/SOA-2114</a></span></dt><dd><div class="para">
+					JBoss Rules projects with <span class="application"><strong>JBoss Developer Studio 3</strong></span> and <span class="application"><strong>JBoss Enterprise SOA Platform 4.3.CP04</strong></span> required that the <code class="filename">JAR</code> files <code class="filename">mvel2-2.0.12.jar</code> <code class="filename">xstream-1.2.2.jar</code> to the class-path.
+				</div><div class="para">
+					Those files are now included in each server profile. They can be found in <code class="filename"><em class="replaceable">$SOA_ROOT</em>/server/<em class="replaceable">$PROFILE</em>/deployers/esb.deployer/lib/</code>.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-2120" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-2120</a></span></dt><dd><div class="para">
+					The default configuration of several of the included web applications could allow an attacker to bypass the application's security with a crafted HTTP request. The affected applications were: web-console, http-invoker, gpd-deployer, jbpm-console, contract, and uddi-console.
+				</div><div class="para">
+					The following lines have been removed from the file <code class="filename">web.xml</code> of each application to fix this:
+				</div><pre class="programlisting language-xml">&lt;http-method&gt;GET&lt;/http-method&gt;
+&lt;http-method&gt;POST&lt;/http-method&gt;</pre><div class="para">
+					For additional details refer to <a href="https://www.redhat.com/security/data/cve/CVE-2010-2493.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">https://www.redhat.com/security/data/cve/CVE-2010-2493.html</a>.
+				</div></dd></dl></div><div class="variablelist"><p class="title"><strong>JBoss ESB</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3257" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3257</a></span></dt><dd><div class="para">
+					The Contract JSP application was not showing the WSDL for ESB archives that were deployed when the server launched. This was because the collection of the service contracts at launch time occurred too early. This has been resolved and the collection now occurs at the correct time.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3263" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3263</a></span></dt><dd><div class="para">
+					<code class="classname">JmsConnectionPool</code> searched for associated <code class="classname">JmsSessionPool</code>s by sequentially iterating over all <code class="classname">JmsSession</code>s. <code class="classname">JmsSession</code> now contains a reference to its associated pool so this search does not have to be done. This provides faster performance.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3280" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3280</a></span></dt><dd><div class="para">
+					WSDL contracts suffered from a character encoding problem. This occurred when Russian character sets were used by the <span class="application"><strong>Contract JSP</strong></span> application. The WSDL contracts were also being truncated by the <code class="systemitem">HttpGatewayServlet</code> in this scenario. The software has now been changed to fully support Russian character encoding. As a result, the Russian alphabet can now be displayed and WSDL contracts are no longer truncated.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3282" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3282</a></span></dt><dd><div class="para">
+					<code class="classname">SqlTableGatewayListener</code> did not correctly support transacted mode. This would result in a number of problems if it was configured with <code class="literal">transacted="true"</code> including the following:
+				</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							Commits and rollbacks not being handled correctly.
+						</div></li><li class="listitem"><div class="para">
+							Connections were not being released when creation of prepared statements failed.
+						</div></li><li class="listitem"><div class="para">
+							Connections are not released after a database shutdown period.
+						</div></li></ul></div><div class="para">
+					This has been fixed and <code class="classname">SqlTableGatewayListener</code> now behaves as expected in both transacted and non-transacted modes. However the <code class="code">&lt;local-tx-datasource&gt;</code> configuration must have a <code class="code">&lt;check-valid-connection-sql&gt;</code> configuration or the unused connections will not be removed.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3288" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3288</a></span></dt><dd><div class="para">
+					Using JMSRouter to send a message to a Topic would fail and throw an exception (<code class="exceptionname">ClassCastException</code>). This has been fixed and works as expected.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3290" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3290</a></span></dt><dd><div class="para">
+					A new <code class="classname">DocumentBuilder</code> was being created for each incoming message. This had a minor impact upon system performance. This has been resolved by eliminating the need for DOM parsing by simply wrapping the message payload string in a <code class="classname">StreamSource</code> and passing that to the <code class="systemitem">validator</code> instead. As a result, performance is now much faster.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3296" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3296</a></span></dt><dd><div class="para">
+					The <code class="systemitem">HttpGateway</code> could not support multiple connectors if more than one was configured in <code class="filename">jbossweb.sar/server.xml</code>. The software now supports multiple connectors bound to different port addresses.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3300" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3300</a></span></dt><dd><div class="para">
+					Deploying an ESB archive that used <code class="classname">SOAProxy</code> would fail if the schema location URL in the WSDL contained characters that would be invalid in a filename on the host. This occurred because the URL was used in the name of a temp file. The URL is no longer used as part of the filename and deployment is successful.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3301" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3301</a></span></dt><dd><div class="para">
+					In order to prevent the jBPM database from growing to unmanageable sizes, the <code class="interfacename">GraphSession.deleteProcessInstance</code> is able to delete ended process instances. However, this functionality was not working correctly, meaning that some legacy data was left "orphaned" in the tables. This happened because only the references to the process execution were removed, not the variables themselves.
+				</div><div class="para">
+					To fix this problem, variable instances are now deleted if logging is not enabled. If the logging service is enabled, the variable cannot be deleted immediately becauses the new <code class="classname">VariableDeleteLog</code> instance holds a reference to the variable. (These records are eventually removed upon process instance deletion.) As a result of this fixed, there are no longer orphaned files in the database.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3317" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3317</a></span></dt><dd><div class="para">
+					<code class="classname">JMSProviderAdapter</code> is now supported by jBPM JCA inflow. This allows the jBPM JCA inflow to be referred to by JMS providers which are located in a different JNDI context to the current one, such as on a different server.
+				</div><div class="para">
+					Documentation for this feature has been added to section 9.2.1 of the ESB Administration Guide.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3326" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3326</a></span></dt><dd><div class="para">
+					<code class="classname">JAXRRegistryImpl</code> has had the following performance enhancements.
+				</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							Classification schemes are now cached when retrieved so they can be reused without having to query the database again.
+						</div></li><li class="listitem"><div class="para">
+							When deleting End Point References (EPRs), the string representation of the EPR to delete is now only generated once and reused for each EPR comparision instead of re-creating it each time.
+						</div></li><li class="listitem"><div class="para">
+							The process for querying the current list of EPRs now reuses the associated bindings information returned with the overall service information instead of performing a separate query for this information.
+						</div></li></ul></div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3337" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3337</a></span></dt><dd><div class="para">
+					Some users may encounter an error when running the <code class="filename">webservice_proxy_security</code> quick start. This occurs if the server is using a test certificate, which the client will not trust. To resolve this issue, install the certificate in the client. Instructions for doing so are found in the <code class="filename">readme.txt</code> file supplied with the quick start.
+				</div><div class="para">
+					Some further information can be found here: <a href="http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#X509TrustManager" class="mimir-link-warn" title="Mimir does not include content from: java.sun.com">http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#X509TrustManager</a>
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3345" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3345</a></span></dt><dd><div class="para">
+					An authentication request's security context now contains additional functionality that allows it to check the service's domain. It can then invalidate the information if a different domain is being used to secure that service. This eliminates a low impact privilege escalation flaw whereby the execution of a service with a different domain could, potentially, have resulted in the pipeline being run with different sets of credentials, (one set from the first domain if the request were still valid and a second set from the other domain if it had expired.) (<a href="https://www.redhat.com/security/data/cve/CVE-2010-2474.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">CVE-2010-2474</a>.)
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3346" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3346</a></span></dt><dd><div class="para">
+					<code class="classname">JBossASContextPropagation</code> was using the class <code class="classname">SecurityAssociation</code> instead of <code class="classname">SecurityContextAssociation</code>. <code class="classname">SecurityContextAssociation</code> contains security domain information in addition to the information included in <code class="classname">SecurityAssociation</code>. The correct class is now used.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/browse/JBESB-3347" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBESB-3347</a></span></dt><dd><div class="para">
+					The <code class="systemitem">RetryExecutor</code> failed with an exception when it tried to query the database for the first "due job" when there was a large backlog of these jobs. This has been fixed by a change to make the <span class="property">maximum count</span> applicable to all due jobs, not just suspended ones. As a result, this exception no longer occurs.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3349" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3349</a></span></dt><dd><div class="para">
+					The deployment descriptor (<code class="filename">web.xml</code>) of the <code class="filename">webservice_proxy_security</code> quickstart contained configuration that could allow an attacker to bypass the application's security with a crafted HTTP request. The following lines have been removed from the file <code class="filename">web.xml</code> of this quickstart to fix this:
+				</div><pre class="programlisting language-xml">&lt;http-method&gt;GET&lt;/http-method&gt;
+&lt;http-method&gt;POST&lt;/http-method&gt;</pre><div class="para">
+					If this quickstart was used to create another application then the new application will need to be reviewed to ensure it does not also have the same issue.
+				</div><div class="para">
+					For additional details refer to <a href="https://www.redhat.com/security/data/cve/CVE-2010-2493.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">https://www.redhat.com/security/data/cve/CVE-2010-2493.html</a>.
+				</div></dd></dl></div><div class="variablelist"><p class="title"><strong>jBPM</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/browse/JBPM-2828" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/JBPM-2828</a></span></dt><dd><div class="para">
+					<code class="methodname">ContextInstance.deleteVariable(name)</code> did not delete variables from the database, and instead only removed references to the process execution. This was leading to orphaned records in the database. This method now removes the variables from the database if the logging service is disabled. If logging is enabled the new log <code class="systemitem">VariableDeleteLog</code> holds a reference to the variable and it is removed when the process instance is deleted.
+				</div></dd></dl></div><div class="variablelist"><p class="title"><strong>Documentation</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1445" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1445</a></span></dt><dd><div class="para">
+					The RuleFlow example "Conroy's Game of Life" has been added to the JBoss Rules Reference Guide, Section 8.8.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1446" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1446</a></span></dt><dd><div class="para">
+					The RuleFlow example "Number Guess" has been added to the JBoss Rules Reference Guide, Section 8.9.
+				</div></dd></dl></div></div><div xml:lang="en-US" class="section" id="id-release_notes-known_issues" lang="en-US"><div class="titlepage"><div><div><h2 class="title">5. Known Issues</h2></div></div></div><div class="para">
+		The following issues are known to exist in this release of the JBoss Enterprise SOA Platform and will be fixed in a subsequent release.
+	</div><div class="variablelist"><p class="title"><strong>JBoss Enterprise SOA Platform</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1673" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1673</a></span></dt><dd><div class="para">
+					Seam applications that include their own <code class="filename">jbpm-jpdl.jar</code> cannot use the provided jBPM-ESB integration (e.g. EsbNotifier) within a jBPM process to invoke ESB services that are hosted on the same server. This is due to classloader issues between the jBPM classes in the Seam application and the jBPM ESB Services.
+				</div><div class="para">
+					There are three possible workarounds:
+				</div><div class="orderedlist"><ol><li class="listitem"><div class="para">
+							If possible, deploy the Seam application to a different server instance than the JBoss Enterprise SOA Platform instance that is hosting the ESB service.
+						</div></li><li class="listitem"><div class="para">
+							If invoking ESB Services is the only use of jBPM in the Seam application :
+						</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+									Remove the jbpm-jpdl.jar and jBPM process archive from the EAR
+								</div></li><li class="listitem"><div class="para">
+									Deploy the jBPM process archive separately from the Seam application using the jBPM console.
+								</div></li></ul></div></li><li class="listitem"><div class="para">
+							If jBPM is used by the Seam application for other purposes, e.g. Seam Pageflow :
+						</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+									Enable class namespace isolation within the Seam application.
+								</div></li><li class="listitem"><div class="para">
+									Create a custom ActionHandler to call the ESB Service.
+								</div></li><li class="listitem"><div class="para">
+									Make the custom ActionHandler available to the classloader.
+								</div></li><li class="listitem"><div class="para">
+									Modify the jBPM process definition to invoke the custom ActionHandler.
+								</div></li></ul></div></li></ol></div><div class="para">
+					Refer to <a href="http://community.jboss.org/wiki/WorkaroundforSeamESBjBPMClassloadingIssue" class="mimir-link-warn" title="Mimir does not include content from: community.jboss.org">http://community.jboss.org/wiki/WorkaroundforSeamESBjBPMClassloadingIssue</a> for more details of how to implement the second workaround.
+				</div><div class="para">
+					Refer to <a href="http://community.jboss.org/wiki/JbossClassLoadingUseCases" class="mimir-link-warn" title="Mimir does not include content from: community.jboss.org">http://community.jboss.org/wiki/JbossClassLoadingUseCases</a> for more information about JBoss Class Loading.
+				</div></dd></dl></div><div class="variablelist"><p class="title"><strong>JBoss Operations Network</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1916" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1916</a></span></dt><dd><div class="para">
+					When you try to delete an ESB archive using the JON Console, the associated queues are not removed. They remain there, displaying as <code class="systemitem">DOWN</code>. Furthermore, if you try to delete these queues, an <code class="exceptionname">java.lang.IllegalStateException</code> exception will occur.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JOPR-419" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JOPR-419</a></span></dt><dd><div class="para">
+					When the server is started without the <code class="command">-c</code> configuration switch, the profile named <code class="systemitem">default</code> is run. This is correct operation. Unfortunately, JON erroneously assumes that the <code class="systemitem">production</code> profile is run instead. JON also mistakenly assumes that the binding address is 0.0.0.0 if this has not been specified. To ensure that JON recognizes the default profile and binds to the correct address of 127.0.0.1, always use the <code class="command">-c</code> and <code class="command">-b</code> parameters. By doing so, JON will recognize the platform.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-952" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-952</a>, <a href="https://jira.jboss.org/jira/browse/SOA-1077" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1077</a>, <a href="https://jira.jboss.org/jira/browse/SOA-1168" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1168</a></span></dt><dd><div class="para">
+					The JON plug-in's "Message Count" feature is incorrectly displaying a total number of messages for the ESB server, deployment, services and actions. It should actually be showing a rolling average.
+				</div></dd></dl></div><div class="variablelist"><p class="title"><strong>JBoss Enterprise Service Bus</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3028" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3028</a></span></dt><dd><div class="para">
+					If SOAPProxy is configured to obtain the WSDL for a proxied service URL, a warning is logged, because the web service responds with a content length which either exceeds the limit or is unspecified.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3038" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3038</a></span></dt><dd><div class="para">
+					Currently, the <code class="systemitem">spring_aop</code> quick start does not work with signed <code class="filename">JARs</code>. If you try to run <code class="command"> ant deploy</code> for this quick start, an <code class="exceptionname">org.jboss.deployers.client.spi.IncompleteDeploymentException</code> will be thrown.
+				</div><div class="para">
+					To work around this issue, replace the <code class="filename">cglib JARs</code> with unsigned versions.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-3035" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-3035</a></span></dt><dd><div class="para">
+					When the Web Service proxy is used to invoke a one-way web service, it erroneously throws a run-time exception with <code class="systemitem">HTTP Code 500</code>, which is returned to the client together with a fault message. <code class="systemitem">HTTP Code 500</code> is invalid in these situations as only <code class="systemitem">Code 200</code> or <code class="systemitem">202</code> should ever be returned as the message was successfully transmitted to the ESB.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/SOA-1564" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1564</a></span></dt><dd><div class="para">
+					Currently, the default ESB <code class="classname">handler</code> class for the UDP Gateway is hard-coded into the XSD schema and cannot be changed or removed.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-2911" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-2911</a>, <a href="https://jira.jboss.org/jira/browse/JBPAPP-3002" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBPAPP-3002</a></span></dt><dd><div class="para">
+					A web service's WSDL will be invalid and return a 404 error if the web service is deployed embedded within an ESB archive and the <code class="systemitem">WAR</code> does not contain the <code class="filename">WEB-INF/jboss-web.xml</code> file.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBESB-2442" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBESB-2442</a></span></dt><dd><div class="para">
+					Currently, <span class="application"><strong>Scout</strong></span> creates a new <code class="systemitem">AuthToken</code> for every invocation that occurs through the <code class="systemitem">BusinessQuery</code>/<code class="systemitem">BusinessLifecycle</code> Managers. This results in rapid growth of the jUDDI authentication table.
+				</div><div class="para">
+					A possibly way to work around this problem is to delete rows within certain timestamp parameters. For instance, all rows created more than ten minutes ago could be removed.
+				</div></dd></dl></div><div class="variablelist"><p class="title"><strong>JBoss Developer Studio</strong></p><dl class="variablelist"><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBIDE-5597" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBIDE-5597</a></span></dt><dd><div class="para">
+					Using the <span class="guimenu"><strong>Full Publish</strong></span> option in the <code class="systemitem">JBossAS</code> view to republish a <code class="filename">jboss-esb.xml</code> project does not work.
+				</div><div class="para">
+					To work around this issue, remove the project from the server and then add it again.
+				</div></dd><dt><span class="term"><a href="https://jira.jboss.org/jira/browse/JBIDE-5596" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/JBIDE-5596</a></span></dt><dd><div class="para">
+					The ESB node properties for <span class="guilabel"><strong>input/output</strong></span> variables grow larger than the jBPM panel when the latter is resized, to the point where the user must scroll left to see all of the buttons.
+				</div><div class="para">
+					To work around this problem, click on a different node on the jBPM panel and then click back on the ESB Service node. Next, click on the <span class="guilabel"><strong>input/output</strong></span> subpanel and it will be the correct size again.
+				</div></dd></dl></div></div><div xml:lang="en-US" class="section" id="sect-migrating_to_50" lang="en-US"><div class="titlepage"><div><div><h2 class="title">6. Possible Issues When Migrating to 5</h2></div></div></div><div class="para">
+		Read this section to learn about the differences between JBoss Enterprise SOA Platform 5.0 and previous versions that may cause difficulties when moving applications to version 5.
+	</div><div class="variablelist"><dl class="variablelist"><dt><span class="term">JAR files required by JBoss Rules projects are now included</span></dt><dd><div class="para">
+					A JBoss Rules project created with <span class="application"><strong>JBoss Developer Studio 3</strong></span> for <span class="application"><strong>JBoss Enterprise SOA Platform 4.3</strong></span> required that the <code class="systemitem">JAR</code> files <code class="filename">mvel2-2.0.12.jar</code> and <code class="filename">xstream-1.2.2.jar</code> were added to the <code class="systemitem">classpath</code>. This is no longer necessary because JBoss Enterprise SOA Platform 5 now includes these files in each server profile. They can be found in <code class="filename"><em class="replaceable">$SOA_ROOT</em>/server/<em class="replaceable">$PROFILE</em>/deployers/esb.deployer/lib/</code>.
+				</div><div class="para">
+					Refer to <a href="https://jira.jboss.org/browse/SOA-2114" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/browse/SOA-2114</a> for additional information.
+				</div></dd><dt><span class="term">Changed behavior regarding JAR files in ESB archives</span></dt><dd><div class="para">
+					The JBoss Enterprise SOA Platform 5.0 requires that <code class="systemitem">JAR</code> files in <code class="systemitem">ESB</code> archives are placed in either the root directory of the archive, the <code class="filename">/jars</code> directory, or the <code class="filename">/lib</code> directory. Previous versions did not have this restriction.
+				</div></dd><dt><span class="term">Potential Performance Issues Related to Logging</span></dt><dd><div class="para">
+					Logging has changed in this release. Do not copy your customized logging definitions over from past releases or you may encounter performance problems.
+				</div><div class="para">
+					Refer to <a href="https://jira.jboss.org/jira/browse/SOA-1754" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.org">https://jira.jboss.org/jira/browse/SOA-1754</a> to learn more about this issue.
+				</div><div class="para">
+					Refer to the EAP Administration and Configuration Guide at <a href="http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/</a> to learn how logging has changed.
+				</div></dd><dt><span class="term">HttpResponse is not backwards compatible</span></dt><dd><div class="para">
+					The <code class="classname">HttpResponse</code> class in 5.0 is not backwards compatible with previous versions because of changes made to unify the ESB HTTP classes. This was done as a part of the new servlet-based HTTP gateway.
+				</div><div class="para">
+					Applications and services that use <code class="classname">HttpResponse</code> will have to be updated before they can be deployed on JBoss Enterprise SOA Platform 5.0. The changes required are summarized in <a class="xref" href="#table-httpresponse_refactoring">Table 2, “Refactoring requirements for HttpResponse”</a>.
+				</div><div class="table" id="table-httpresponse_refactoring"><p class="title"><strong>Table 2. Refactoring requirements for HttpResponse</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Refactoring requirements for HttpResponse"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139781852433968" scope="col"> Pre-5.0.x code </th><th align="left" id="idm139781852433488" scope="col"> 5.0.x code </th></tr></thead><tbody><tr><td align="left" headers="idm139781852433968"> <code class="classname">org.jboss.soa.esb.actions.routing.http.HttpResponse</code> </td><td align="left" headers="idm139781852433488"> <code class="classname">org.jboss.soa.esb.http.HttpResponse</code> </td></tr><tr><td align="left" headers="idm139781852433968"> <code class="classname">org.jboss.soa.esb.actions.routing.http.HttpHeader</code> </td><td align="left" headers="idm139781852433488"> <code class="classname">org.jboss.soa.esb.http.HttpHeader</code> </td></tr><tr><td align="left" headers="idm139781852433968"> <code class="methodname">HttpResponse.getHeaders()</code> </td><td align="left" headers="idm139781852433488"> <code class="methodname">HttpResponse.getHttpHeaders()</code> </td></tr></tbody></table></div></div></dd><dt><span class="term">Reusing Existing Databases</span></dt><dd><div class="para">
+					The JBoss Enterprise SOA Platform creates new databases for its components to use. Databases from community versions have not been tested and may not work. If the use of existing databases is needed, then contact Red Hat JBoss Support for advice.
+				</div></dd><dt><span class="term">Groovy Scripting</span></dt><dd><div class="para">
+					Groovy has undergone a major update from version 1.0 to 1.5.4. Be aware that many changes were made to the language and, whilst most scripts will still work, you may find that some will need minor work. Ensure that you test them as part of your migration process. See <a href="http://groovy.codehaus.org/Documentation" class="mimir-link-warn" title="Mimir does not include content from: groovy.codehaus.org">http://groovy.codehaus.org/Documentation</a> for more information.
+				</div></dd><dt><span class="term">Smooks</span></dt><dd><div class="para">
+					Smooks no longer supports the <span class="property">addToList</span> option. Update any configurations that rely upon this option so that they instead use the newer &lt;jb:bean&gt; configuration namespace, which can handle lists. See the "Java Binding" chapter in the <span class="emphasis"><em>Smooks User Guide</em></span> for more information.
+				</div></dd><dt><span class="term">The jBPM console now supports authentication</span></dt><dd><div class="para">
+					The non-secured version of the jBPM console is no longer needed for process deployment because the jBPM console now supports authentication for deployment. The process deployer is available at <a href="http://localhost:8080/gpd-deployer/" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/gpd-deployer/</a> . This replaces the deployers from previous versions, <a href="http://localhost:8080/app/upload" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/app/upload</a> and <a href="http://localhost:8080/upload" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/upload</a> .
+				</div></dd></dl></div></div><div class="section" id="id-release_notes-product_support_links"><div class="titlepage"><div><div><h2 class="title">7. Product Support and License Website Links</h2></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">Support Processes</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/support/process/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/support/process/</a>
+					</div></dd><dt><span class="term">Production Support Scope of Coverage</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/support/policy/soc/production" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/support/policy/soc/production</a>
+					</div></dd><dt><span class="term">Production Support Service Level Agreement</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/support/policy/sla/production/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/support/policy/sla/production/</a>
+					</div></dd><dt><span class="term">Developer Support Scope of Coverage</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/support/policy/soc/developer/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/support/policy/soc/developer/</a>
+					</div></dd><dt><span class="term">Developer Support Service Level Agreement</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/support/policy/sla/developer/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/support/policy/sla/developer/</a>
+					</div></dd><dt><span class="term">Product Update and Support Policy by Product</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/security/updates/jboss_notes/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/security/updates/jboss_notes/</a>
+					</div></dd><dt><span class="term">JBoss End User License Agreement</span></dt><dd><div class="para">
+						<a href="http://www.redhat.com/licenses/jboss_eula.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/licenses/jboss_eula.html</a>
+					</div></dd></dl></div></div><div class="section" id="id-release_notes-obtaining_source"><div class="titlepage"><div><div><h2 class="title">8. Obtaining Source Code</h2></div></div></div><div class="para">
+			The source code for this and earlier JBoss Enterprise SOA Platform releases are available from the Red Hat JBoss Customer Support Portal at <a href="https://support.redhat.com/jbossnetwork/" class="mimir-link-warn" title="Mimir does not include content from: support.redhat.com">https://support.redhat.com/jbossnetwork/</a>.
+		</div></div><div xml:lang="en-US" class="appendix" id="appe-Publican-Revision_History" lang="en-US"><h2 class="title">A. Revision History</h2><div class="para"><p><!--Empty--></p>
+		<div class="revhistory"><table summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 5.0.2-72.400</td><td align="left">2013-10-31</td><td align="left"><span class="author"><span class="firstname">Rüdiger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild with publican 4.0.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.0.2-72</td><td align="left">2012-07-18</td><td align="left"><span class="author"><span class="firstname">Anthony</span> <span class="surname">Towns</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild for Publican 3.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 1.2-0</td><td align="left">Wed Jun 23 2010</td><td align="left"><span class="author"><span class="firstname">David</span> <span class="surname">Le Sage</span></span>, <span class="author"><span class="firstname">Darrin</span> <span class="surname">Mison</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Created for SOA 5.0.2</td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div><div class="legalnotice"><a id="idm139781849488896"><!--Empty--></a><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2010 Red Hat, Inc..
+	</div><div class="para">
+		This document is licensed by Red Hat under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="mimir-link-warn" title="Mimir does not include content from: creativecommons.org">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original. If the document is modified, all Red Hat trademarks must be removed.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat Software Collections is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

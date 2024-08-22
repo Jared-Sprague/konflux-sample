@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I download RPMs affected by security errata using the Red Hat Customer Portal?
+</title>
+        
+<meta name="documentKind" content="article" />
+<meta name="lastModifiedDate" content="2017-11-29T16:45:48.000Z" />
+<meta name="url_slug" content="1009" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=article">Articles</a>
+                                
+                                
+                                How do I download RPMs affected by security errata using the Red Hat Customer Portal?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_article cirrus-content" id="main-content">
+    <h1>How do I download RPMs affected by security errata using the Red Hat Customer Portal?</h1>
+
+    <div class="status-container">
+      Updated <time datetime="2017-11-29T16:45:48.000Z">29 Nov 2017</time>
+    </div>
+
+    <hr>
+    <p>When security advisories are released, they are published at our <a href="https://access.redhat.com/security/security-updates/" class="mimir-link-warn" title="This content is not included in Mimir.">Security Advisories</a> page. Click on the advisory number for more details. </p>
+<p>It is also possible to view all errata for a given product by visiting <a href="https://access.redhat.com/downloads/" class="mimir-link-warn" title="This content is not included in Mimir.">Downloads</a>. Browse to the product you are interested in and then select the 'Errata' tab. For example, <a href="https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-errata" class="mimir-link-warn" title="This content is not included in Mimir.">errata for RHEL 7 Server</a></p>
+<p>All Red Hat errata advisories can be browsed at <a href="/#/">Red Hat Product Errata</a></p>
+<p>The <strong>advisory details page</strong> <a href="https://access.redhat.com/errata/RHSA-2017:3200" class="mimir-link-warn" title="This content is not included in Mimir.">(example)</a> describes the issue and any special instructions that must be performed in addition to updating the package to fix the vulnerability. You can also find information about what products are affected and the CVEs that are addressed.</p>
+<p>From the advisory details page, click the 'Updated Packages' tab. To download the updated package(s), click on the package name(s) and save to the hard drive. It is highly recommended that you create a new directory, such as /tmp/updates, and save all the downloaded packages to it.</p>
+<p>All Red Hat Enterprise Linux packages are signed with the Red Hat, Inc. GPG key. The RPM utility within Red Hat Enterprise Linux automatically tries to verify the GPG signature of an RPM package before installing it. If the Red Hat, Inc. GPG key is not installed, install it from a secure, static location such as an Red Hat Enterprise Linux installation CD-ROM.</p>
+<p>Assuming the CD-ROM is mounted in <code>/mnt/cdrom</code>, use the following command to import it into the keyring:</p>
+<pre><code>rpm --import &#x2F;mnt&#x2F;cdrom&#x2F;RPM-GPG-KEY
+</code></pre>
+<p>To display a list of all keys installed for RPM verification, execute the following command:</p>
+<pre><code>rpm -qa gpg-pubkey*
+</code></pre>
+<p>For the Red Hat, Inc. key, the output includes the following:</p>
+<pre><code>gpg-pubkey-db42a60e-37ea5438
+</code></pre>
+<p>To display details about a specific key, use the rpm -qi command followed by the output from the previous command, as in this example:</p>
+<pre><code>rpm -qi gpg-pubkey-db42a60e-37ea5438
+</code></pre>
+<p>It is extremely important to verify the signature of the RPM files before installing them to ensure that they have not been altered from the Red Hat, Inc. release of the packages. To verify all the downloaded packages at once, issue the following command:</p>
+<pre><code>rpm -K &#x2F;tmp&#x2F;updates&#x2F;*.rpm
+</code></pre>
+<p>For each package, if the GPG key verifies successfully, the command returns <code>gpg OK</code> .</p>
+<p>After verifying the GPG key and downloading all the packages associated with the errata report, install the packages as root at a shell prompt.</p>
+<p>This can be done safely for most packages (except kernel packages) by issuing the following command:</p>
+<pre><code>rpm -Uvh &#x2F;tmp&#x2F;updates&#x2F;*.rpm
+</code></pre>
+<p>For kernel packages it is advised that the following command be used:</p>
+<pre><code>rpm -ivh &#x2F;tmp&#x2F;updates&#x2F;&lt; kernel-package&gt;
+</code></pre>
+<p>Replace &lt;kernel-package&gt; in the previous example with the name of the kernel RPM.</p>
+<p>Once the machine has been safely rebooted using the new kernel, the old kernel may be removed using the following command:</p>
+<pre><code>rpm -e &lt;old-kernel-package&gt;
+</code></pre>
+<p>Replace &lt; old-kernel-package&gt; in the previous example with the name of the older kernel RPM.</p>
+<p><strong>Note:</strong> It is not a requirement that the old kernel be removed.</p>
+<p><strong>Important:</strong> Before installing any security errata, be sure to read any special instructions contained in the errata report and execute them accordingly.</p>
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

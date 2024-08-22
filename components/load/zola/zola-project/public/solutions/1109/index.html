@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I create a new ext3 file system if a disk was added to the system?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:29:14.000Z" />
+<meta name="url_slug" content="1109" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                How do I create a new ext3 file system if a disk was added to the system?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>How do I create a new ext3 file system if a disk was added to the system?</h1>
+
+  
+  <span class="status verified" title="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s).">
+        <pfe-icon icon="web-icon-alert-success" style="--pfe-icon--color: #3f9c35; top: -0.1em"></pfe-icon>
+       Solution Verified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:29:14.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 4</li>
+<li>Red Hat Enterprise Linux 5</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>How do I create a new ext3 file system if a disk was added to the system?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<ul>
+<li>Create the partition using the <code>fdisk</code> command. To start <code>fdisk</code> at a shell prompt (as root), type the command:</li>
+</ul>
+<pre><code>[root@host ~]# fdisk &#x2F;dev&#x2F;hdb
+</code></pre>
+<ul>
+<li>
+<p><code>/dev/hdb</code> is the device name for the drive you want to configure. The <code>Command (m for help):</code> prompt is displayed. Type <code>n</code> then <code>p</code>, to create a new (n) primary (p) partition. You will then be asked to enter a partition number 1-4. You can only have a total of 4 primary partitions. If you need more than 4 partitions, then your 4th partition will become your extended partition and you can create up to 15 partitions that the system will recognize. You will then enter the size of the partition that you want to create. The easiest way to do this is to select the defaulted start cylinder, then issue a size based on MB. Example: +5000MB to create a 5 GB partition. Then at the prompt put p to check and confirm the partition is created as specified. Finally put w at the prompt to write changes to the disk and create the partition(s) on it, or put q to quit without creating the parition and quit fdisk.</p>
+</li>
+<li>
+<p>Format the partition with the ext3 file system using <code>mke2fs</code>. Note that an ext3 file system is an ext2 filesystem with journaling (the -j option). See <code>man mke2fs</code> for more options. Type:</p>
+</li>
+</ul>
+<pre><code>[root@host ~]# &#x2F;sbin&#x2F;mke2fs -j &#x2F;dev&#x2F;hdb3
+</code></pre>
+<ul>
+<li>
+<p><code>/dev/hdb3</code> is the partition you want to format.</p>
+</li>
+<li>
+<p>Note:  If <code>mke2fs</code> does not recognize your partition, then you must reboot your system or run partprobe so that the new partition table is recognized.</p>
+</li>
+<li>
+<p>You can label the partition using <code>e2label</code>. For example, if you want to label the new partition <code>/work</code>, type:</p>
+</li>
+</ul>
+<pre><code>[root@host ~]# e2label &#x2F;dev&#x2F;hdb3 &#x2F;work
+</code></pre>
+<ul>
+<li>As root, create the mount point:</li>
+</ul>
+<pre><code>[root@host ~]# mkdir &#x2F;work
+</code></pre>
+<ul>
+<li>As root, edit the <code>/etc/fstab</code> to include the new partition. The new line should similar to the following:</li>
+</ul>
+<pre><code>LABEL=&#x2F;work           &#x2F;work               ext3      defaults    1 2
+</code></pre>
+<ul>
+<li>Reboot your system so that the new partition table is recognized.</li>
+</ul>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

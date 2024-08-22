@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How to force a kickstart installation to take place over a specific Ethernet device?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:29:06.000Z" />
+<meta name="url_slug" content="1043" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                How to force a kickstart installation to take place over a specific Ethernet device?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>How to force a kickstart installation to take place over a specific Ethernet device?</h1>
+
+  
+  <span class="status verified" title="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s).">
+        <pfe-icon icon="web-icon-alert-success" style="--pfe-icon--color: #3f9c35; top: -0.1em"></pfe-icon>
+       Solution Verified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:29:06.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 3, 4, 5, 6</li>
+<li>kickstart</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>What option can be used to force a kickstart installation to take place over a specified Ethernet device?</li>
+<li>How to use a specific Ethernet device for kickstart on system with multiple NIC cards.</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<p>The <code>ksdevice</code> option at the install boot prompt ( or in PXE config ) can be used to setup prefered Ethernet device for kickstart :</p>
+<pre><code>boot: linux ks=kickstart.redhat.com:&#x2F;redhat ksdevice=ethX
+</code></pre>
+<p>Replace &quot;X&quot; with preferred device. Example : 0, 1 .</p>
+<p>The &quot;ksdevice&quot; takes one of 4 types of argument which tells the installation what network device to use for kickstart from network:</p>
+<ul>
+<li>
+<p>An argument like 'eth0' naming a specific interface</p>
+</li>
+<li>
+<p>An argument like &quot;00:12:34:56:78:9a&quot; indicating the MAC address of a specific interface</p>
+</li>
+<li>
+<p>The keyword `link' indicating that the first interface with link is up</p>
+</li>
+<li>
+<p>The keyword `bootif' indicating that the MAC address indicated by the BOOTIF command line option will be used to locate the boot interface. BOOTIF is automagically supplied by pxelinux when the option `IPAPPEND 2' in the <code>pxelinux.cfg</code> file is included.</p>
+</li>
+</ul>
+<p>See <code>/usr/share/doc/anaconda-*/command-line.txt</code> for more information on <code>ksdevice</code> and other command line options for Anaconda.</p>
+<p>Refer:  <a href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html-single/Installation_Guide/index.html#sn-booting-from-pxe-x86" class="mimir-link-warn" title="This content is not included in Mimir.">Booting from the Network Using PXE</a></p>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

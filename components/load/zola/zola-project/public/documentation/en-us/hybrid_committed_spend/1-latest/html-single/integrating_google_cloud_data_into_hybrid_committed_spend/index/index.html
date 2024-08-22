@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Integrating Google Cloud data into hybrid committed spend - Hybrid committed spend 1-latest
+</title>
+        
+<meta name="product" content="Hybrid committed spend" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-07-26T20:02:52.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">Hybrid committed spend</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">1-latest</a>
+                                
+                                
+                                Integrating Google Cloud data into hybrid committed spend
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Integrating Google Cloud data into hybrid committed spend</a>
+                    </li><li>
+                        <a href="#idm139760860848384">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#assembly-adding-gcp-int-hcs">
+                            1. Creating a Google Cloud integration
+                        </a><ol>
+                <li>
+                        <a href="#proc_adding-a-gcp-account-hcs_adding-gcp-int-hcs">
+                            1.1. Adding your Google Cloud account as an integration
+                        </a>
+                    </li><li>
+                        <a href="#creating-a-project-gcp_adding-gcp-int-hcs">
+                            1.2. Creating a Google Cloud project
+                        </a>
+                    </li><li>
+                        <a href="#creating-iam-role-gcp_adding-gcp-int-hcs">
+                            1.3. Creating a Google Cloud Identity and Access Management role
+                        </a>
+                    </li><li>
+                        <a href="#adding-new-member-with-cost-role-gcp_adding-gcp-int-hcs">
+                            1.4. Adding a billing service account member to your Google Cloud project
+                        </a>
+                    </li><li>
+                        <a href="#creating-a-dataset-gcp_adding-gcp-int-hcs">
+                            1.5. Creating a Google Cloud BigQuery dataset
+                        </a>
+                    </li><li>
+                        <a href="#exporting-billing-data-gcp_adding-gcp-int-hcs">
+                            1.6. Exporting Google Cloud billing data to BigQuery
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-adding-filtered-gcp-int-hcs">
+                            2. Integrating filtered Google Cloud data into hybrid committed spend
+                        </a><ol>
+                <li>
+                        <a href="#proc_adding-a-gcp-account-hcs_adding-filtered-gcp-int-hcs">
+                            2.1. Adding your Google Cloud account as an integration
+                        </a>
+                    </li><li>
+                        <a href="#creating-a-project-gcp_adding-filtered-gcp-int-hcs">
+                            2.2. Creating a Google Cloud project
+                        </a>
+                    </li><li>
+                        <a href="#creating-a-bucket-gcp-hcs_adding-filtered-gcp-int-hcs">
+                            2.3. Creating a Google Cloud bucket
+                        </a>
+                    </li><li>
+                        <a href="#creating-iam-role-gcp_adding-filtered-gcp-int-hcs">
+                            2.4. Creating a Google Cloud Identity and Access Management role
+                        </a>
+                    </li><li>
+                        <a href="#adding-new-member-with-cost-role-gcp_adding-filtered-gcp-int-hcs">
+                            2.5. Adding a billing service account member to your Google Cloud project
+                        </a>
+                    </li><li>
+                        <a href="#creating-a-dataset-gcp_adding-filtered-gcp-int-hcs">
+                            2.6. Creating a Google Cloud BigQuery dataset
+                        </a>
+                    </li><li>
+                        <a href="#exporting-billing-data-gcp_adding-filtered-gcp-int-hcs">
+                            2.7. Exporting Google Cloud billing data to BigQuery
+                        </a>
+                    </li><li>
+                        <a href="#configuring-function-post-reports-gcp-hcs_adding-filtered-gcp-int-hcs">
+                            2.8. Creating a function to post filtered data to your storage bucket
+                        </a>
+                    </li><li>
+                        <a href="#trigger-function-gcp-hcs_adding-filtered-gcp-int-hcs">
+                            2.9. Trigger your function to post filtered data to your storage bucket
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm139760855674800">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--integrating_google_cloud_data_into_hybrid_committed_spend">
+            <h1 class="title">Integrating Google Cloud data into hybrid committed spend</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139760860735456"><div class="titlepage"><div><div class="producttitle"><span class="productname">Hybrid committed spend</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn how to add and configure your Google Cloud integrations</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139760855674800">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				You can add a Google Cloud Platform integration to hybrid committed spend.
+			</div></div></div></div><hr/></div><section class="preface" id="idm139760860848384"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p>
+			To add a Google Cloud account to hybrid committed spend, you must add it as a integration from the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user interface and configure Google Cloud to provide metrics. You can send your data automatically, or configure a function script to copy the cost exports and object storage bucket that hybrid committed spend can access and filter your data to share a subset of your billing data with Red Hat.
+		</p></section><section class="chapter" id="assembly-adding-gcp-int-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Creating a Google Cloud integration</h1></div></div></div><p>
+			To add a Google Cloud account to hybrid committed spend, you must configure your Google Cloud account to provide metrics, then add it as a integration from the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user interface.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				You must have a Red Hat account user with Cloud Administrator permissions before you can add integrations to hybrid committed spend.
+			</p></div></div><p>
+			To configure your Google Cloud account to be a hybrid committed spend integration, you must complete the following tasks:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					Create a Google Cloud project for your hybrid committed spend data.
+				</li><li class="listitem">
+					Create a bucket for filtered reports.
+				</li><li class="listitem">
+					Billing service account member with the correct role to export your data to hybrid committed spend.
+				</li><li class="listitem">
+					Create a BigQuery dataset to contain the cost data.
+				</li><li class="listitem">
+					Create a billing export that sends the hybrid committed spend data to your BigQuery dataset.
+				</li></ul></div><p>
+			As you will complete some of the following steps in the Google Cloud Console, and some steps in the hybrid committed spend user interface, keep both applications open in a web browser.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				Because third-party products and documentation can change, instructions for configuring the third-party integrations provided are general and correct at the time of publishing. For the most up-to-date information, see the <a class="link mimir-link-warn" href="https://cloud.google.com/docs" title="Mimir does not include content from: cloud.google.com">Google Cloud Platform documentation</a>.
+			</p></div></div><p>
+			Add your Google Cloud integrations to hybrid committed spend from <a class="link mimir-link-warn" href="https://console.redhat.com/settings/integrations" title="Mimir does not include content from: console.redhat.com">the Integrations page</a>.
+		</p><section class="section" id="proc_adding-a-gcp-account-hcs_adding-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.1. Adding your Google Cloud account as an integration</h2></div></div></div><p>
+				You can add your Google Cloud account as an integration. After adding a Google Cloud integration, the hybrid committed spend application processes the cost and usage data from your Google Cloud account and makes it viewable.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						To add data integrations to cost management, you must have a Red Hat account with Cloud Administrator permissions.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Hybrid_committed_spend-1-latest-Integrating_Google_Cloud_data_into_hybrid_committed_spend-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> page, in the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="strong strong"><strong>Google Cloud</strong></span> as the cloud provider type and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Enter a name for your integration. Click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Select application</strong></span> step, select <span class="strong strong"><strong>Hybrid committed spend</strong></span> and click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-a-project-gcp_adding-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.2. Creating a Google Cloud project</h2></div></div></div><p class="_abstract _abstract">
+				Create a Google Cloud project to gather and send your cost reports to hybrid committed spend.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Access to Google Cloud Console with <code class="literal">resourcemanager.projects.create</code> permission
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a> click <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">Create a Project</span>.
+					</li><li class="listitem">
+						Enter a <span class="strong strong"><strong>Project name</strong></span> in the new page that appears and select your billing account.
+					</li><li class="listitem">
+						Select the <span class="strong strong"><strong>Organization</strong></span>.
+					</li><li class="listitem">
+						Enter the parent organization in the <span class="strong strong"><strong>Location</strong></span> box.
+					</li><li class="listitem">
+						Click <span class="guibutton">Create</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Project</strong></span> page, enter your <span class="strong strong"><strong>Project ID</strong></span>.
+					</li><li class="listitem">
+						To send the default data to Red Hat automatically, select <span class="strong strong"><strong>I am OK with sending the default data set to hybrid committed spend</strong></span> and click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Navigate to the Google Cloud Console Dashboard
+					</li><li class="listitem">
+						Verify the project is in the menu bar.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about creating projects, see the Google Cloud documentation <a class="link mimir-link-warn" href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing projects</em></span></a>.
+					</li></ul></div></section><section class="section" id="creating-iam-role-gcp_adding-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.3. Creating a Google Cloud Identity and Access Management role</h2></div></div></div><p class="_abstract _abstract">
+				A custom Identity and Access Management (IAM) role for hybrid committed spend gives access to specific cost related resources required to enable a Google Cloud Platform integration and prohibits access to other resources.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						Access to Google Cloud Console with these permissions:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">resourcemanager.projects.get</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.getIamPolicy</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.setIamPolicy</code>
+							</li></ul></div></li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-gcp-int-hcs" title="1.2. Creating a Google Cloud project">project</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">Roles</span>.
+					</li><li class="listitem">
+						Select the hybrid committed spend project from the dropdown in the menu bar.
+					</li><li class="listitem">
+						Click <span class="guibutton">+ Create role</span>.
+					</li><li class="listitem">
+						Enter a <span class="strong strong"><strong>Title</strong></span>, <span class="strong strong"><strong>Description</strong></span> and <span class="strong strong"><strong>ID</strong></span> for the role. In this example, use <code class="literal">customer-data-role</code>.
+					</li><li class="listitem">
+						Click <span class="guibutton">+ ADD PERMISSIONS</span>.
+					</li><li class="listitem"><p class="simpara">
+						Use the <span class="strong strong"><strong>Enter property name or value</strong></span> field to search and select these four permissions for your custom role:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								<code class="literal">bigquery.jobs.create</code>
+							</li><li class="listitem">
+								<code class="literal">bigquery.tables.getData</code>
+							</li><li class="listitem">
+								<code class="literal">bigquery.tables.get</code>
+							</li><li class="listitem">
+								<code class="literal">bigquery.tables.list</code>
+							</li></ul></div></li><li class="listitem">
+						Click <span class="guibutton">ADD</span>.
+					</li><li class="listitem">
+						Click <span class="guibutton">CREATE</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Create IAM role</strong></span> page, click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about roles and their usage, see the Google Cloud documentation <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/understanding-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Understanding roles</em></span></a> and <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/creating-custom-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing custom roles</em></span></a>.
+					</li></ul></div></section><section class="section" id="adding-new-member-with-cost-role-gcp_adding-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.4. Adding a billing service account member to your Google Cloud project</h2></div></div></div><p class="_abstract _abstract">
+				You must create a billing service account member that can export cost reports to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> in your project.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						Access to Google Cloud Console with these permissions:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">resourcemanager.projects.get</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.getIamPolicy</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.setIamPolicy</code>
+							</li></ul></div></li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-gcp-int-hcs" title="1.2. Creating a Google Cloud project">project</a>
+					</li><li class="listitem">
+						A hybrid committed spend Identity and Access Management (IAM) <a class="link" href="#creating-iam-role-gcp_adding-gcp-int-hcs" title="1.3. Creating a Google Cloud Identity and Access Management role">role</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">IAM</span>.
+					</li><li class="listitem">
+						Select the hybrid committed spend project from the dropdown in the menu bar.
+					</li><li class="listitem">
+						Click <span class="guibutton">ADD</span>.
+					</li><li class="listitem"><p class="simpara">
+						Paste the IAM role you created into the <span class="strong strong"><strong>New principals</strong></span> field:
+					</p><pre class="screen">billing-export@red-hat-cost-management.iam.gserviceaccount.com</pre></li><li class="listitem">
+						In the <span class="strong strong"><strong>Assign roles</strong></span> section, assign the IAM role you created. In this example, use <code class="literal">customer-data-role</code>.
+					</li><li class="listitem">
+						Click <span class="guibutton">SAVE</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Assign access</strong></span> page, click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Navigate to <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">IAM</span>.
+					</li><li class="listitem">
+						Verify the new member is present with the correct role.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about roles and their usage, see the Google Cloud documentation <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/understanding-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Understanding roles</em></span></a> and <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/creating-custom-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing custom roles</em></span></a>.
+					</li></ul></div></section><section class="section" id="creating-a-dataset-gcp_adding-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.5. Creating a Google Cloud BigQuery dataset</h2></div></div></div><p class="_abstract _abstract">
+				Create a BigQuery dataset to collect and store the billing data for hybrid committed spend.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Access to Google Cloud Console with <code class="literal">bigquery.datasets.create</code> permission
+					</li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-gcp-int-hcs" title="1.2. Creating a Google Cloud project">project</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">Big Data</span> → <span class="guimenuitem">BigQuery</span>.
+					</li><li class="listitem">
+						Select the hybrid committed spend project in the <span class="strong strong"><strong>Explorer</strong></span> panel.
+					</li><li class="listitem">
+						Click <span class="guibutton">CREATE DATASET</span>.
+					</li><li class="listitem">
+						Enter a name for your dataset in the <span class="strong strong"><strong>Dataset ID</strong></span> field. In this example, use <code class="literal">CustomerData</code>.
+					</li><li class="listitem">
+						Click <span class="guibutton">CREATE DATASET</span>.
+					</li></ol></div></section><section class="section" id="exporting-billing-data-gcp_adding-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.6. Exporting Google Cloud billing data to BigQuery</h2></div></div></div><p class="_abstract _abstract">
+				Enabling a billing export to BigQuery sends your Google Cloud billing data (such as usage, cost estimates, and pricing data) automatically to the hybrid committed spend BigQuery dataset.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Access to Google Cloud Console with the <span class="strong strong"><strong>Billing Account Administrator</strong></span> role
+					</li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-gcp-int-hcs" title="1.2. Creating a Google Cloud project">project</a>
+					</li><li class="listitem">
+						<a class="link" href="#adding-new-member-with-cost-role-gcp_adding-gcp-int-hcs" title="1.4. Adding a billing service account member to your Google Cloud project">Billing service member</a> with the cost management Identity and Access Management (IAM) <a class="link" href="#creating-iam-role-gcp_adding-gcp-int-hcs" title="1.3. Creating a Google Cloud Identity and Access Management role">role</a>
+					</li><li class="listitem">
+						<a class="link" href="#creating-a-dataset-gcp_adding-gcp-int-hcs" title="1.5. Creating a Google Cloud BigQuery dataset">BigQuery dataset</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">Billing</span> → <span class="guimenuitem">Billing export</span>.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Billing export</strong></span> tab.
+					</li><li class="listitem">
+						Click <span class="guibutton">EDIT SETTINGS</span> in the <span class="strong strong"><strong>Detailed usage cost</strong></span> section.
+					</li><li class="listitem">
+						Select the hybrid committed spend <span class="strong strong"><strong>Project</strong></span> and <span class="strong strong"><strong>Billing export dataset</strong></span> you created in the dropdown menus.
+					</li><li class="listitem">
+						Click <span class="guibutton">SAVE</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Billing export</strong></span> page, click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Review details</strong></span> page, click <span class="strong strong"><strong>Add</strong></span>.
+					</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Verify a checkmark with <span class="strong strong"><strong>Enabled</strong></span> in the <span class="strong strong"><strong>Detailed usage cost</strong></span> section, with correct <span class="strong strong"><strong>Project name</strong></span> and <span class="strong strong"><strong>Dataset name</strong></span>.
+					</li></ol></div></section></section><section class="chapter" id="assembly-adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Integrating filtered Google Cloud data into hybrid committed spend</h1></div></div></div><p>
+			You can configure a function script in Google Cloud to copy the cost exports and object storage bucket that hybrid committed spend can access and filter your data to share a subset of your billing data with Red Hat.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				You must have a Red Hat account user with Cloud Administrator permissions before you can add integrations to hybrid committed spend.
+			</p></div></div><p>
+			To configure your Google Cloud account to be a hybrid committed spend integration, you must complete the following tasks:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					Create a Google Cloud project for your hybrid committed spend data.
+				</li><li class="listitem">
+					Create a bucket for filtered reports.
+				</li><li class="listitem">
+					Have a billing service account member with the correct role to export your data to hybrid committed spend.
+				</li><li class="listitem">
+					Create a BigQuery dataset to contain the cost data.
+				</li><li class="listitem">
+					Create a billing export that sends the hybrid committed spend data to your BigQuery dataset.
+				</li></ul></div><p>
+			Because you will complete some of the following steps in the Google Cloud Console, and some steps in the hybrid committed spend user interface, keep both applications open in a web browser.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				Because third-party products and documentation can change, instructions for configuring the third-party integrations provided are general and correct at the time of publishing. For the most up-to-date information, see the <a class="link mimir-link-warn" href="https://cloud.google.com/docs" title="Mimir does not include content from: cloud.google.com">Google Cloud Platform documentation</a>.
+			</p></div></div><p>
+			Add your Google Cloud integration to hybrid committed spend from <a class="link mimir-link-warn" href="https://console.redhat.com/settings/integrations" title="Mimir does not include content from: console.redhat.com">the Integrations page</a>.
+		</p><section class="section" id="proc_adding-a-gcp-account-hcs_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.1. Adding your Google Cloud account as an integration</h2></div></div></div><p>
+				You can add your Google Cloud account as an integration. After adding a Google Cloud integration, the hybrid committed spend application processes the cost and usage data from your Google Cloud account and makes it viewable.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						To add data integrations to cost management, you must have a Red Hat account with Cloud Administrator permissions.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Hybrid_committed_spend-1-latest-Integrating_Google_Cloud_data_into_hybrid_committed_spend-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> page, in the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="strong strong"><strong>Google Cloud</strong></span> as the cloud provider type and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Enter a name for your integration. Click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Select application</strong></span> step, select <span class="strong strong"><strong>Hybrid committed spend</strong></span> and click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-a-project-gcp_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.2. Creating a Google Cloud project</h2></div></div></div><p class="_abstract _abstract">
+				Create a Google Cloud project to gather and send your cost reports to hybrid committed spend.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Access to Google Cloud Console with <code class="literal">resourcemanager.projects.create</code> permission
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a> click <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">Create a Project</span>.
+					</li><li class="listitem">
+						Enter a <span class="strong strong"><strong>Project name</strong></span> in the new page that appears and select your billing account.
+					</li><li class="listitem">
+						Select the <span class="strong strong"><strong>Organization</strong></span>.
+					</li><li class="listitem">
+						Enter the parent organization in the <span class="strong strong"><strong>Location</strong></span> box.
+					</li><li class="listitem">
+						Click <span class="guibutton">Create</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Project</strong></span> page, enter your <span class="strong strong"><strong>Project ID</strong></span>.
+					</li><li class="listitem">
+						To configure Google Cloud to filter your data before it sends the data to Red Hat, select <span class="strong strong"><strong>I wish to manually customize the data set sent to hybrid committed spend</strong></span>, click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Navigate to the Google Cloud Console Dashboard
+					</li><li class="listitem">
+						Verify the project is in the menu bar.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about creating projects, see the Google Cloud documentation <a class="link mimir-link-warn" href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing projects</em></span></a>.
+					</li></ul></div></section><section class="section" id="creating-a-bucket-gcp-hcs_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.3. Creating a Google Cloud bucket</h2></div></div></div><p>
+				Create a bucket for filtered reports that you will create later. Buckets are containers that store data.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="strong strong"><strong>Buckets</strong></span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Create bucket</strong></span>.
+					</li><li class="listitem">
+						Enter your bucket information. Name your bucket. In this example, use <code class="literal">customer-data</code>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Create</strong></span>, then click <span class="strong strong"><strong>Confirm</strong></span> in the confirmation dialog.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Create cloud storage bucket</strong></span> page, enter your <span class="strong strong"><strong>Cloud storage bucket name</strong></span>.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about creating buckets, see the Google Cloud documentation on <a class="link mimir-link-warn" href="https://cloud.google.com/storage/docs/creating-buckets" title="Mimir does not include content from: cloud.google.com">Creating buckets</a>.
+					</li></ul></div></section><section class="section" id="creating-iam-role-gcp_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.4. Creating a Google Cloud Identity and Access Management role</h2></div></div></div><p class="_abstract _abstract">
+				A custom Identity and Access Management (IAM) role for hybrid committed spend gives access to specific cost related resources required to enable a Google Cloud Platform integration and prohibits access to other resources.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						Access to Google Cloud Console with these permissions:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">resourcemanager.projects.get</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.getIamPolicy</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.setIamPolicy</code>
+							</li></ul></div></li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-filtered-gcp-int-hcs" title="2.2. Creating a Google Cloud project">project</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">Roles</span>.
+					</li><li class="listitem">
+						Select the hybrid committed spend project from the dropdown in the menu bar.
+					</li><li class="listitem">
+						Click <span class="guibutton">+ Create role</span>.
+					</li><li class="listitem">
+						Enter a <span class="strong strong"><strong>Title</strong></span>, <span class="strong strong"><strong>Description</strong></span> and <span class="strong strong"><strong>ID</strong></span> for the role. In this example, use <code class="literal">customer-data-role</code>.
+					</li><li class="listitem">
+						Click <span class="guibutton">+ ADD PERMISSIONS</span>.
+					</li><li class="listitem"><p class="simpara">
+						Use the <span class="strong strong"><strong>Enter property name or value</strong></span> field to search and select these four permissions for your custom role:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								<code class="literal">storage.objects.get</code>
+							</li><li class="listitem">
+								<code class="literal">storage.objects.list</code>
+							</li><li class="listitem">
+								<code class="literal">storage.buckets.get</code>
+							</li></ul></div></li><li class="listitem">
+						Click <span class="guibutton">ADD</span>.
+					</li><li class="listitem">
+						Click <span class="guibutton">CREATE</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Create IAM role</strong></span> page, click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about roles and their usage, see the Google Cloud documentation <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/understanding-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Understanding roles</em></span></a> and <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/creating-custom-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing custom roles</em></span></a>.
+					</li></ul></div></section><section class="section" id="adding-new-member-with-cost-role-gcp_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.5. Adding a billing service account member to your Google Cloud project</h2></div></div></div><p class="_abstract _abstract">
+				You must create a billing service account member that can export cost reports to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> in your project.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						Access to Google Cloud Console with these permissions:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								<code class="literal">resourcemanager.projects.get</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.getIamPolicy</code>
+							</li><li class="listitem">
+								<code class="literal">resourcemanager.projects.setIamPolicy</code>
+							</li></ul></div></li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-filtered-gcp-int-hcs" title="2.2. Creating a Google Cloud project">project</a>
+					</li><li class="listitem">
+						A hybrid committed spend Identity and Access Management (IAM) <a class="link" href="#creating-iam-role-gcp_adding-filtered-gcp-int-hcs" title="2.4. Creating a Google Cloud Identity and Access Management role">role</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">IAM</span>.
+					</li><li class="listitem">
+						Select the hybrid committed spend project from the dropdown in the menu bar.
+					</li><li class="listitem">
+						Click <span class="guibutton">ADD</span>.
+					</li><li class="listitem"><p class="simpara">
+						Paste the IAM role you created into the <span class="strong strong"><strong>New principals</strong></span> field:
+					</p><pre class="screen">billing-export@red-hat-cost-management.iam.gserviceaccount.com</pre></li><li class="listitem">
+						In the <span class="strong strong"><strong>Assign roles</strong></span> section, assign the IAM role you created. In this example, use <code class="literal">customer-data-role</code>.
+					</li><li class="listitem">
+						Click <span class="guibutton">SAVE</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Assign access</strong></span> page, click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Navigate to <span class="guimenu">IAM &amp; Admin</span> → <span class="guimenuitem">IAM</span>.
+					</li><li class="listitem">
+						Verify the new member is present with the correct role.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						For additional information about roles and their usage, see the Google Cloud documentation <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/understanding-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Understanding roles</em></span></a> and <a class="link mimir-link-warn" href="https://cloud.google.com/iam/docs/creating-custom-roles" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing custom roles</em></span></a>.
+					</li></ul></div></section><section class="section" id="creating-a-dataset-gcp_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.6. Creating a Google Cloud BigQuery dataset</h2></div></div></div><p class="_abstract _abstract">
+				Create a BigQuery dataset to collect and store the billing data for hybrid committed spend.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Access to Google Cloud Console with <code class="literal">bigquery.datasets.create</code> permission
+					</li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-filtered-gcp-int-hcs" title="2.2. Creating a Google Cloud project">project</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">Big Data</span> → <span class="guimenuitem">BigQuery</span>.
+					</li><li class="listitem">
+						Select the hybrid committed spend project in the <span class="strong strong"><strong>Explorer</strong></span> panel.
+					</li><li class="listitem">
+						Click <span class="guibutton">CREATE DATASET</span>.
+					</li><li class="listitem">
+						Enter a name for your dataset in the <span class="strong strong"><strong>Dataset ID</strong></span> field. In this example, use <code class="literal">CustomerFilteredData</code>.
+					</li><li class="listitem">
+						Click <span class="guibutton">CREATE DATASET</span>.
+					</li></ol></div></section><section class="section" id="exporting-billing-data-gcp_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.7. Exporting Google Cloud billing data to BigQuery</h2></div></div></div><p class="_abstract _abstract">
+				Enabling a billing export to BigQuery sends your Google Cloud billing data (such as usage, cost estimates, and pricing data) automatically to the hybrid committed spend BigQuery dataset.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Access to Google Cloud Console with the <span class="strong strong"><strong>Billing Account Administrator</strong></span> role
+					</li><li class="listitem">
+						Google Cloud <a class="link" href="#creating-a-project-gcp_adding-filtered-gcp-int-hcs" title="2.2. Creating a Google Cloud project">project</a>
+					</li><li class="listitem">
+						<a class="link" href="#adding-new-member-with-cost-role-gcp_adding-filtered-gcp-int-hcs" title="2.5. Adding a billing service account member to your Google Cloud project">Billing service member</a> with the cost management Identity and Access Management (IAM) <a class="link" href="#creating-iam-role-gcp_adding-filtered-gcp-int-hcs" title="2.4. Creating a Google Cloud Identity and Access Management role">role</a>
+					</li><li class="listitem">
+						<a class="link" href="#creating-a-dataset-gcp_adding-filtered-gcp-int-hcs" title="2.6. Creating a Google Cloud BigQuery dataset">BigQuery dataset</a>
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, click <span class="guimenu">Billing</span> → <span class="guimenuitem">Billing export</span>.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Billing export</strong></span> tab.
+					</li><li class="listitem">
+						Click <span class="guibutton">EDIT SETTINGS</span> in the <span class="strong strong"><strong>Detailed usage cost</strong></span> section.
+					</li><li class="listitem">
+						Select the hybrid committed spend <span class="strong strong"><strong>Project</strong></span> and <span class="strong strong"><strong>Billing export dataset</strong></span> you created in the dropdown menus.
+					</li><li class="listitem">
+						Click <span class="guibutton">SAVE</span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Billing export</strong></span> page, click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the hybrid committed spend <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Review details</strong></span> page, click <span class="strong strong"><strong>Add</strong></span>.
+					</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Verify a checkmark with <span class="strong strong"><strong>Enabled</strong></span> in the <span class="strong strong"><strong>Detailed usage cost</strong></span> section, with correct <span class="strong strong"><strong>Project name</strong></span> and <span class="strong strong"><strong>Dataset name</strong></span>.
+					</li></ol></div></section><section class="section" id="configuring-function-post-reports-gcp-hcs_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.8. Creating a function to post filtered data to your storage bucket</h2></div></div></div><p>
+				Create a function that filters your data and adds it to the storage account that you created to share with Red Hat. You can use the example Python script to gather the cost data from your cost exports related to your Red Hat expenses and add it to the storage account. This script filters the cost data you created with BigQuery, removes non-Red Hat information, then creates <code class="literal">.csv</code> files, stores them in the bucket you created, and sends the data to Red Hat.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, search for <code class="literal">secret</code> and select the <span class="strong strong"><strong>Secret manager</strong></span> result to set up a secret to authenticate your function with Red Hat without storing your credentials in your function.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								On the Secret Manager page, click <span class="strong strong"><strong>Create Secret</strong></span>.
+							</li><li class="listitem">
+								Name your secret, add your Red Hat username, and click <span class="strong strong"><strong>Create Secret</strong></span>.
+							</li><li class="listitem">
+								Repeat this process to save a secret for your Red Hat password.
+							</li></ol></div></li><li class="listitem">
+						In the Google Cloud Console search bar, search for <code class="literal">functions</code> and select the <span class="strong strong"><strong>Cloud Functions</strong></span> result.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Cloud Functions</strong></span> page, click <span class="strong strong"><strong>Create function</strong></span>.
+					</li><li class="listitem">
+						Name the function. In this example, use <code class="literal">customer-data-function</code>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Trigger</strong></span> section, click <span class="strong strong"><strong>Save</strong></span> to accept the HTTP Trigger type.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Runtime, build, connections and security settings</strong></span>, click the Security and image repository, reference the secrets you created, click <span class="strong strong"><strong>Done</strong></span>, and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Cloud Functions</strong></span> Code page, set the runtime to <span class="strong strong"><strong>Python 3.9</strong></span>.
+					</li><li class="listitem"><p class="simpara">
+						Open the <code class="literal">requirements.txt</code> file. Paste the following lines to the end of the file.
+					</p><pre class="screen">requests
+google-cloud-bigquery
+google-cloud-storage</pre></li><li class="listitem"><p class="simpara">
+						Open the <code class="literal">main.py</code> file.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Set the <span class="strong strong"><strong>Entry Point</strong></span> to <code class="literal">get_filtered_data</code>.
+							</li><li class="listitem"><p class="simpara">
+								Paste the following python script. Change the values in the section marked <code class="literal"># Required vars to update</code> to the values for your environment.
+							</p><pre class="programlisting language-python">import csv
+import datetime
+import uuid
+import os
+import requests
+from google.cloud import bigquery
+from google.cloud import storage
+from itertools import islice
+from dateutil.relativedelta import relativedelta
+
+query_range = 5
+now = datetime.datetime.now()
+delta = now - relativedelta(days=query_range)
+year = now.strftime("%Y")
+month = now.strftime("%m")
+day = now.strftime("%d")
+report_prefix=f"{year}/{month}/{day}/{uuid.uuid4()}"
+
+# Required vars to update
+USER = os.getenv('username')         # Cost management username
+PASS = os.getenv('password')         # Cost management password
+INTEGRATION_ID = "&lt;integration_id&gt;"  # Cost management integration_id
+BUCKET = "&lt;bucket&gt;"                  # Filtered data GCP Bucket
+PROJECT_ID = "&lt;project_id&gt;"          # Your project ID
+DATASET = "&lt;dataset&gt;"                # Your dataset name
+TABLE_ID = "&lt;table_id&gt;"              # Your table ID
+
+gcp_big_query_columns = [
+    "billing_account_id",
+    "service.id",
+    "service.description",
+    "sku.id",
+    "sku.description",
+    "usage_start_time",
+    "usage_end_time",
+    "project.id",
+    "project.name",
+    "project.labels",
+    "project.ancestry_numbers",
+    "labels",
+    "system_labels",
+    "location.location",
+    "location.country",
+    "location.region",
+    "location.zone",
+    "export_time",
+    "cost",
+    "currency",
+    "currency_conversion_rate",
+    "usage.amount",
+    "usage.unit",
+    "usage.amount_in_pricing_units",
+    "usage.pricing_unit",
+    "credits",
+    "invoice.month",
+    "cost_type",
+    "resource.name",
+    "resource.global_name",
+]
+table_name = ".".join([PROJECT_ID, DATASET, TABLE_ID])
+
+BATCH_SIZE = 200000
+
+def batch(iterable, n):
+    """Yields successive n-sized chunks from iterable"""
+    it = iter(iterable)
+    while chunk := tuple(islice(it, n)):
+        yield chunk
+
+def build_query_select_statement():
+    """Helper to build query select statement."""
+    columns_list = gcp_big_query_columns.copy()
+    columns_list = [
+        f"TO_JSON_STRING({col})" if col in ("labels", "system_labels", "project.labels", "credits") else col
+        for col in columns_list
+    ]
+    columns_list.append("DATE(_PARTITIONTIME) as partition_date")
+    return ",".join(columns_list)
+
+def create_reports(query_date):
+    query = f"SELECT {build_query_select_statement()} FROM {table_name} WHERE DATE(_PARTITIONTIME) = {query_date} AND sku.description LIKE '%RedHat%' OR sku.description LIKE '%Red Hat%' OR  service.description LIKE '%Red Hat%' ORDER BY usage_start_time"
+    client = bigquery.Client()
+    query_job = client.query(query).result()
+    column_list = gcp_big_query_columns.copy()
+    column_list.append("partition_date")
+    daily_files = []
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(BUCKET)
+    for i, rows in enumerate(batch(query_job, BATCH_SIZE)):
+        csv_file = f"{report_prefix}/{query_date}_part_{str(i)}.csv"
+        daily_files.append(csv_file)
+        blob = bucket.blob(csv_file)
+        with blob.open(mode='w') as f:
+            writer = csv.writer(f)
+            writer.writerow(column_list)
+            writer.writerows(rows)
+    return daily_files
+
+def post_data(files_list):
+    # Post CSV's to console.redhat.com API
+    url = "https://console.redhat.com/api/cost-management/v1/ingress/reports/"
+    json_data = {"source": INTEGRATION_ID, "reports_list": files_list, "bill_year": year, "bill_month": month}
+    resp = requests.post(url, json=json_data, auth=(USER, PASS))
+    return resp
+
+def get_filtered_data(request):
+    files_list = []
+    query_dates = [delta + datetime.timedelta(days=x) for x in range(query_range)]
+    for query_date in query_dates:
+        files_list += create_reports(query_date.date())
+    resp = post_data(files_list)
+    return f'Files posted! {resp}'</pre></li></ol></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Deploy</strong></span>.
+					</li></ol></div></section><section class="section" id="trigger-function-gcp-hcs_adding-filtered-gcp-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.9. Trigger your function to post filtered data to your storage bucket</h2></div></div></div><p>
+				Create a scheduler job to run the function you created to send filtered data to Red Hat on a schedule.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Copy the <span class="strong strong"><strong>Trigger URL</strong></span> for the function you created to post the cost reports. You will need to add it to the Google Cloud Scheduler.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, search for <code class="literal">functions</code> and select the <span class="strong strong"><strong>Cloud Functions</strong></span> result.
+							</li><li class="listitem">
+								On the <span class="strong strong"><strong>Cloud Functions</strong></span> page, select your function, and click the Trigger tab.
+							</li><li class="listitem">
+								In the HTTP section, click <span class="strong strong"><strong>Copy to clipboard</strong></span>.
+							</li></ol></div></li><li class="listitem">
+						Create the scheduler job. In the <a class="link mimir-link-warn" href="https://console.cloud.google.com/" title="Mimir does not include content from: console.cloud.google.com">Google Cloud Console</a>, search for <code class="literal">cloud scheduler</code> and select the <span class="strong strong"><strong>Cloud Scheduler</strong></span> result.
+					</li><li class="listitem"><p class="simpara">
+						Click <span class="strong strong"><strong>Create job</strong></span>.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Name your scheduler job. In this example, use <code class="literal">CustomerFilteredDataSchedule</code>.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Frequency</strong></span> field, set the cron expression for when you want the function to run. In this example, use <code class="literal">09***</code> to run the function daily at 9 AM.
+							</li><li class="listitem">
+								Set the timezone and click <span class="strong strong"><strong>Continue</strong></span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						Configure the execution on the next page.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the <span class="strong strong"><strong>Target type</strong></span> field, select <span class="strong strong"><strong>HTTP</strong></span>.
+							</li><li class="listitem">
+								In the URL field, paste the Trigger URL you copied.
+							</li><li class="listitem"><p class="simpara">
+								In the body field, paste the following code that passes into the function to trigger it.
+							</p><pre class="programlisting language-python">{"name": "Scheduler"}</pre></li><li class="listitem">
+								In the Auth header field, select <span class="strong strong"><strong>Add OIDC token</strong></span>.
+							</li><li class="listitem">
+								Click the <span class="strong strong"><strong>Service account</strong></span> field and click <span class="strong strong"><strong>Create</strong></span> to create a service account and role for the scheduler job.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						In the <span class="strong strong"><strong>Service account details</strong></span> step, name your service account. In this example, use <code class="literal">scheduler-service-account</code>. Accept the default <span class="strong strong"><strong>Service account ID</strong></span> and click <span class="strong strong"><strong>Create and Continue</strong></span>.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the Grand this service account access to project, select two roles for your account.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>ADD ANOTHER ROLE</strong></span> then search for and select <code class="literal">Cloud Scheduler Job Runner</code> and Cloud Functions Invoker.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>Continue</strong></span>.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>Done</strong></span> to finish creating the service account.
+							</li></ol></div></li><li class="listitem">
+						On the Service accounts for your project page, select the scheduler job that you were working on. In this example, the name is <code class="literal">scheduler-service-account</code>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Configure the execution</strong></span> page, select the <span class="strong strong"><strong>Service account</strong></span> field and select the <code class="literal">scheduler-service-account</code> you just created.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Continue</strong></span> and then click <span class="strong strong"><strong>Create</strong></span>.
+					</li></ol></div></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12384146" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm139760855674800"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

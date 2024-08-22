@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Getting Started Guide - JBoss Enterprise Application Platform Common Criteria Certification 5
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Common Criteria Certification" />
+<meta name="documentation_version" content="5" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2017-11-28T18:42:57.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/">JBoss Enterprise Application Platform Common Criteria Certification</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/5/">5</a>
+                                
+                                
+                                Getting Started Guide
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Getting Started Guide</a>
+                    </li><li>
+                        <a href="#Book-Preface">
+                            Introduction
+                        </a><ol>
+                <li>
+                        <a href="#Book-We_Need_Feedback">
+                            1. Help Contribute
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour">
+                            1. The JBoss Server - A Quick Tour
+                        </a><ol>
+                <li>
+                        <a href="#Server_Structure">
+                            1.1. Server Structure
+                        </a>
+                    </li><li>
+                        <a href="#Starting_and_Stopping_the_Server">
+                            1.2. Starting and Stopping the Server
+                        </a><ol>
+                <li>
+                        <a href="#Starting_and_Stopping_the_Server-Start_the_Server">
+                            1.2.1. Start the Server
+                        </a>
+                    </li><li>
+                        <a href="#Starting_and_Stopping_the_Server-Start_the_Server_With_Alternate_Configuration">
+                            1.2.2. Start the Server With Alternate Configuration
+                        </a>
+                    </li><li>
+                        <a href="#Starting_and_Stopping_the_Server-Using_run.sh">
+                            1.2.3. Using run.sh
+                        </a>
+                    </li><li>
+                        <a href="#Starting_and_Stopping_the_Server-Stopping_the_Server">
+                            1.2.4. Stopping the Server
+                        </a>
+                    </li><li>
+                        <a href="#idm139997959198832">
+                            1.2.5. Running As A System Service
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-The_JMX_Console">
+                            1.3. The JMX Console
+                        </a>
+                    </li><li>
+                        <a href="#The_JNDIView_Service">
+                            1.4. The JNDIView Service
+                        </a>
+                    </li><li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-Hot-deployment_of_services_in_JBoss">
+                            1.5. Hot-deployment of services in JBoss
+                        </a><ol>
+                <li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-Hot-deployment_of_services_in_JBoss-Hot-deployment_configurations">
+                            1.5.1. Hot-deployment configurations
+                        </a>
+                    </li><li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-Hot-deployment_of_services_in_JBoss-Adding_a_custom_deploy_folder">
+                            1.5.2. Adding a custom deploy folder
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-Basic_Configuration_Issues">
+                            1.6. Basic Configuration Issues
+                        </a><ol>
+                <li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-Setting_your_application_as_the_default_application_on_the_server">
+                            1.6.1. Setting your application as the default application on the server
+                        </a>
+                    </li><li>
+                        <a href="#The_JBoss_Server___A_Quick_Tour-Bootstrap_Configuration">
+                            1.6.2. Bootstrap Configuration
+                        </a>
+                    </li><li>
+                        <a href="#Basic_Configuration_Issues-Core_Services">
+                            1.6.3. Legacy Core Services
+                        </a>
+                    </li><li>
+                        <a href="#Basic_Configuration_Issues-Logging_Service">
+                            1.6.4. Logging Service
+                        </a>
+                    </li><li>
+                        <a href="#Basic_Configuration_Issues-Security_Service">
+                            1.6.5. Security Service
+                        </a>
+                    </li><li>
+                        <a href="#Basic_Configuration_Issues-Additional_Services">
+                            1.6.6. Additional Services
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#The_Service_Binding_Manager">
+                            1.7. The Service Binding Manager
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Using_other_Databases">
+                            2. Using other Databases
+                        </a><ol>
+                <li>
+                        <a href="#Using_other_Databases-DataSource_Configuration_Files">
+                            2.1. DataSource Configuration Files
+                        </a>
+                    </li><li>
+                        <a href="#Using_other_Databases-Using_MySQL_as_the_Default_DataSource">
+                            2.2. Using MySQL as the Default DataSource
+                        </a><ol>
+                <li>
+                        <a href="#Using_MySQL_as_the_Default_DataSource-Creating_a_Database_and_User">
+                            2.2.1. Creating a Database and User
+                        </a>
+                    </li><li>
+                        <a href="#Using_MySQL_as_the_Default_DataSource-Installing_the_JDBC_Driver_and_Deploying_the_DataSource">
+                            2.2.2. Installing the JDBC Driver and Deploying the datasource
+                        </a>
+                    </li><li>
+                        <a href="#Using_MySQL_as_the_Default_DataSource-Testing_the_MySQL_DataSource">
+                            2.2.3. Testing the MySQL DataSource
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#Configuring_a_datasource_for_Oracle_DB">
+                            2.3. Configuring a datasource for Oracle DB
+                        </a><ol>
+                <li>
+                        <a href="#Setting_up_an_XADataSource_with_Oracle_9i-Installing_the_JDBC_Driver_and_Deploying_the_DataSource">
+                            2.3.1. Installing the JDBC Driver and Deploying the DataSource
+                        </a>
+                    </li><li>
+                        <a href="#Setting_up_an_XADataSource_with_Oracle_9i-Testing_the_Oracle_DataSource">
+                            2.3.2. Testing the Oracle DataSource
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm139997966035696">
+                            2.4. Configuring a datasource for Microsoft SQL Server 200x
+                        </a><ol>
+                <li>
+                        <a href="#idm139997966033872">
+                            2.4.1. Installing the JDBC Driver and Deploying the DataSource
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#configuring_jbossmessaging_persistence_manager">
+                            2.5. Configuring JBoss Messaging Persistence Manager
+                        </a>
+                    </li><li>
+                        <a href="#creating_a_jdbc_client">
+                            2.6. Creating a JDBC client
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#appe-Publican-Revision_History">
+                            A. Revision History
+                        </a>
+                    </li><li>
+                        <a href="#idm139997947832272">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--getting_started_guide">
+            <h1 class="title">Getting Started Guide</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139997966399008" lang="en-US"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Common Criteria Certification</span> <span class="productnumber">5</span></div><div><h2 class="subtitle">for Use with JBoss Enterprise Application Platform 5 Common Criteria Certification</h2></div><p class="edition">Edition 5.1.0</p><div><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="https://access.redhat.com/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Getting_Started_Guide-en-US/images/a78399a6916bd5b945caa082f6c4fa4e/title_logo.svg" type="image/svg+xml"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Getting_Started_Guide-en-US/images/20c014cff25dbc2aeb4126383228ede4/title_logo.png" alt="" /></object></span>
+
+	</h3></div><div><div xml:lang="en-US" class="authorgroup" lang="en-US"><div class="author"><h3 class="author"><span class="firstname">Red Hat</span> <span class="surname">Documentation Group</span></h3></div></div></div><div><p class="copyright">Copyright © 2011 Red Hat, Inc</p></div><div><a href="#idm139997947832272">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+			This Getting Started Guide documents information regarding the initial use of the JBoss Enterprise Application Platform 5.1.0.
+		</div></div></div></div></div><div xml:lang="en-US" class="preface" id="Book-Preface" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Introduction</h1></div></div></div><div class="para">
+		JBoss Enterprise Application Platform is the open source implementation of the Java EE suite of services. It comprises a set of offerings for enterprise customers who are looking for preconfigured profiles of JBoss Enterprise Middleware components that have been tested and certified together to provide an integrated experience. Its easy-to-use server architecture and high flexibility makes JBoss the ideal choice for users just starting out with J2EE, as well as senior architects looking for a customizable middleware platform.
+	</div><div class="para">
+		Because it is Java-based, JBoss Enterprise Application Platform is cross-platform, easy to install and use on any operating system that supports Java. The readily available source code is a powerful learning tool to debug the server and understand it. It also gives you the flexibility to create customized versions for your personal or business use.
+	</div><div class="section" id="Book-We_Need_Feedback"><div class="titlepage"><div><div><h2 class="title">1. Help Contribute</h2></div></div></div><div class="para">
+			If you find a typographical error or if you have thought of a way to make this manual better, submit a report in JIRA: <a href="http://jira.jboss.com" class="mimir-link-warn" title="Mimir does not include content from: jira.jboss.com">http://jira.jboss.com</a> against the product <em class="citetitle">JBoss Enterprise Application Platform</em> and component <em class="citetitle">Documentation</em>.
+		</div><div class="para">
+			If you have a suggestion for improving the documentation, try to be as specific as possible when describing it. If you have found an error, please include the section number and some of the surrounding text so we can find it easily.
+		</div></div></div><div xml:lang="en-US" class="chapter" id="The_JBoss_Server___A_Quick_Tour" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 1. The JBoss Server - A Quick Tour</h1></div></div></div><div class="section" id="Server_Structure"><div class="titlepage"><div><div><h2 class="title">1.1. Server Structure</h2></div></div></div><div class="para">
+			For a thorough explanation of the structure of the application server, see Migration chapter of the Installation Guide that accompanies this release of JBoss Enterprise Application Platform.
+		</div></div><div xml:lang="en-US" class="section" id="Starting_and_Stopping_the_Server" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.2. Starting and Stopping the Server</h2></div></div></div><div class="section" id="Starting_and_Stopping_the_Server-Start_the_Server"><div class="titlepage"><div><div><h3 class="title">1.2.1. Start the Server</h3></div></div></div><div class="para">
+			 Move to <code class="filename">$JBOSS_HOME/server/$PROFILE/bin</code> directory and execute the <code class="literal">run.sh</code> (for Linux) script.
+		</div><div class="para">
+			There is no <code class="literal">Server Started</code> message shown at the console when the server is started using the <code class="literal">production</code> profile. This message can be found in the <code class="filename">server.log</code> file located in the <code class="filename">$JBOSS_HOME/server/$PROFILE/production/log</code> subdirectory.
+		</div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+				The JBoss Enterprise Application Platform now binds its services to localhost (127.0.0.1) by default, instead of binding to all available interfaces (0.0.0.0). This was primarily done for security reasons because of concerns of users going to production without having secured their servers correctly. To enable remote access by binding JBoss services to a particular interface, simply run JBoss with the <code class="command">-b</code> option. To bind to all available interfaces and re-enable the legacy behaviour use <code class="command">./run.sh -b 0.0.0.0</code> on Linux. In any case, be aware you still need to secure your server properly.
+			</div><div class="para">
+				Using <code class="command">-b</code> as part of the JBoss Server's command line is equivalent to setting these individual properties: <span class="property">-Djboss.bind.address</span>, <span class="property">-Djava.rmi.server.hostname</span>, <span class="property">-Djgroups.bind_addr</span> and <span class="property">-Dbind.address</span>. Passing <span class="property">-Djboss.bind.address</span> to the Java process as part of the <code class="varname">JAVA_OPTS</code> variable in the run scripts will not work as it is a JBoss property not a JVM property.
+			</div></div></div><div class="para">
+			For more information including setting up multiple JBoss server instances on one machine and hosting multiple domains with JBoss, please refer to the <a href="http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/5.0.0/html-single/Administration_And_Configuration_Guide/index.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">Administration and Configuration Guide</a>.
+		</div><div class="para">
+			On starting your server, your screen output should look like the following (accounting for installation directory differences) and contain no error or exception messages:
+		</div><pre class="screen">[user@mypc bin]$ ./run.sh 
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: <em class="replaceable">unzip_location</em>jboss-as
+
+  JAVA: java
+
+  JAVA_OPTS: -Dprogram.name=run.sh -server -Xms1503m -Xmx1503m -Dsun.rmi.dgc.client.
+gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djava.net.preferIPv4Stack=true
+
+  CLASSPATH: <em class="replaceable">unzip_location</em>/jboss-as/bin/run.jar
+
+=========================================================================
+
+</pre><div class="para">
+			More options for the JBoss Enterprise Application Platform <code class="literal">run</code> script are discussed in <a class="xref" href="#Starting_and_Stopping_the_Server-Start_the_Server_With_Alternate_Configuration">Section 1.2.2, “Start the Server With Alternate Configuration”</a> below.
+		</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+				There is no <span class="emphasis"><em>Server Started</em></span> message shown at the console when the server is started using the <code class="literal">production</code> profile. This message may be observed in the <code class="filename">server.log</code> file located in the <code class="filename">server/production/log</code> subdirectory.
+			</div></div></div></div><div class="section" id="Starting_and_Stopping_the_Server-Start_the_Server_With_Alternate_Configuration"><div class="titlepage"><div><div><h3 class="title">1.2.2. Start the Server With Alternate Configuration</h3></div></div></div><div class="para">
+			Using <code class="literal">run.sh</code> without any arguments starts the server using the <code class="literal">default</code> server profile file set. To start with an alternate profile file set, pass the name of the server configuration file set (same as the name of the server configuration directory under <code class="literal">$JBOSS_HOME/server/$PROFILE/</code>) that you want to use, as the value to the <code class="literal">-c</code> command line option. For example, to start with the <code class="literal">minimal</code> profile file set you should specify:
+		</div><pre class="programlisting">[bin]$ ./run.sh -c minimal
+...
+...
+...
+15:05:40,301 INFO  [Server] JBoss (MX MicroKernel) [5.0.0 (build: SVNTag=JBoss_5_0_0 date=200801092200)] Started in 5s:75ms
+</pre></div><div class="section" id="Starting_and_Stopping_the_Server-Using_run.sh"><div class="titlepage"><div><div><h3 class="title">1.2.3. Using run.sh</h3></div></div></div><div class="para">
+			The <code class="literal">run</code> script supports the following options:
+		</div><pre class="programlisting">
+usage: run.sh [options]
+-h, --help                          Show help message
+-V, --version                       Show version information
+--                                  Stop processing options
+-D&lt;name&gt;[=&lt;value&gt;]      Set a system property
+-d, --bootdir=&lt;dir&gt;           Set the boot patch directory; Must be absolute or url
+-p, --patchdir=&lt;dir&gt;          Set the patch directory; Must be absolute or url
+-c, --configuration=&lt;name&gt;    Set the server configuration name
+-B, --bootlib=&lt;filename&gt;      Add an extra library to the front bootclasspath
+-L, --library=&lt;filename&gt;      Add an extra library to the loaders classpath
+-C, --classpath=&lt;url&gt;         Add an extra url to the loaders classpath
+-P, --properties=&lt;url&gt;        Load system properties from the given url
+-b, --host=&lt;host or ip&gt;       Bind address for all JBoss services. 
+-g, --partition=&lt;name&gt;        HA Partition name (default=DefaultDomain)
+-m, --mcast_port=&lt;ip&gt;         UDP multicast port; only used by JGroups
+-u, --udp=&lt;ip&gt;                UDP multicast address
+-l, --log=&lt;log4j|jdk&gt;         Specify the logger plugin type
+</pre></div><div class="section" id="Starting_and_Stopping_the_Server-Stopping_the_Server"><div class="titlepage"><div><div><h3 class="title">1.2.4. Stopping the Server</h3></div></div></div><div class="para">
+			To shutdown the server, you simply issue a <code class="literal">Ctrl-C</code> sequence in the console in which JBoss was started. Alternatively, you can use the <code class="literal">shutdown.sh</code> command.
+		</div><pre class="programlisting">[bin]$ ./shutdown.sh -S</pre><div class="para">
+			The <code class="literal">shutdown</code> script supports the following options:
+		</div><pre class="programlisting">A JMX client to shutdown (exit or halt) a remote JBoss server.
+
+usage: shutdown [options] &lt;operation&gt;
+
+options:
+-h, --help                      Show this help message (default)
+-D&lt;name&gt;[=&lt;value&gt;]  Set a system property
+--                              Stop processing options
+-s, --server=&lt;url&gt;        Specify the JNDI URL of the remote server
+-n, --serverName=&lt;url&gt;    Specify the JMX name of the ServerImpl
+-a, --adapter=&lt;name&gt;      Specify JNDI name of the MBeanServerConnection to use
+-u, --user=&lt;name&gt;         Specify the username for authentication
+-p, --password=&lt;name&gt;     Specify the password for authentication
+
+operations:
+-S, --shutdown                  Shutdown the server
+-e, --exit=&lt;code&gt;         Force the VM to exit with a status code
+-H, --halt=&lt;code&gt;         Force the VM to halt with a status code
+</pre><div class="para">
+			Using the shutdown command requires a server configuration that contains the <code class="literal">jmx-invoker-service.xml</code> service. Hence you cannot use the shutdown command with the <code class="literal">minimal</code> profile.
+		</div></div><div class="section" id="idm139997959198832"><div class="titlepage"><div><div><h3 class="title">1.2.5. Running As A System Service</h3></div></div></div><div class="para">
+			It is possible to run the Application Server as a service under Windows, Linux, and UNIX. Refer to the post-installation chapter of the JBoss Enterprise Application Platform Installation Guide for instructions.
+		</div></div></div><div class="section" id="The_JBoss_Server___A_Quick_Tour-The_JMX_Console"><div class="titlepage"><div><div><h2 class="title">1.3. The JMX Console</h2></div></div></div><div class="para">
+			When the JBoss Server is running, you can get a live view of the server by going to the JMX console application at <a href="http://localhost:8080/jmx-console" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/jmx-console</a>.
+		</div><div class="para">
+			By default, the JMX console is secured and will prompt you for a username and password. If you installed JBoss Enterprise Application Platform using the graphical installer and you want to access the JMX console, you can use the username and password you provided when it was installed. If you installed using other modes such as .zip, go to the <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/props/directory</code> and uncomment the admin userid and password code within the <code class="filename">jmx-console-users.properties</code> file. You can add other users as needed. This will allow the defined users access to the JMX console using the username and password combination specified within the <code class="filename">jmx-console-users.properties</code> file.
+		</div><div class="para">
+			See <a class="xref" href="#Basic_Configuration_Issues-Security_Service">Section 1.6.5, “Security Service”</a> for further information about the security service in JBoss Enterprise Application Platform.
+		</div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+				If you changed the <code class="filename">jmx-console-users.properties</code> file when the server was running, you may have to restart the server for the changes to take effect. In some cases, lazy loading can make this change live without restarting the server.
+			</div></div></div><div class="para">
+			The JMX Console is the JBoss Management Console which provides a raw view of the JMX MBeans which make up the server. They can provide a lot of information about the running server and allow you to modify its configuration, start and stop components and so on.
+		</div><div class="para">
+			For example, find the <code class="literal">service=JNDIView</code> link and click on it. This particular MBean provides a service to allow you to view the structure of the JNDI namespaces within the server. Now find the operation called <code class="literal">list</code> near the bottom of the MBean view page and click the <code class="literal">invoke</code> button. The operation returns a view of the current names bound into the JNDI tree, which is very useful when you start deploying your own applications and want to know why you can’t resolve a particular EJB name.
+		</div><div class="para">
+			Look at some of the other MBeans and their listed operations; try changing some of the configuration attributes and see what happens. With a very few exceptions, none of the changes made through the console are persistent. The original configuration will be reloaded when you restart JBoss, so you can experiment freely without doing any permanent damage.
+		</div></div><div xml:lang="en-US" class="section" id="The_JNDIView_Service" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.4. The JNDIView Service</h2></div></div></div><div class="para">
+		The JNDIView Service is enabled by default in the JBoss Enterprise Application Platform. This service is listed in the <code class="literal">jmx-console</code> (<a href="http://localhost:8080/jmx-console" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/jmx-console</a>). Navigate to the <code class="filename">jboss:service=JNDIView</code> Mbean and click on that link. On the MBean operations page, you will find the <code class="methodname">list</code> method. Click on the <span class="guibutton"><strong>Invoke</strong></span> button adjacent to this <code class="methodname">list</code> method.
+	</div><div class="para">
+		The list operation will display the JNDI tree contents. The output will look something similar to this:
+	</div><pre class="screen">
+java: Namespace
+	
++- securityManagement (class: org.jboss.security.integration.JNDIBasedSecurityManagement)
++- comp (class: javax.namingMain.Context)
++- XAConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- JmsXA (class: org.jboss.resource.adapter.jms.JmsConnectionFactoryImpl)
++- policyRegistration (class: org.jboss.security.plugins.JBossPolicyRegistration)
++- TransactionPropagationContextImporter (class: com.arjuna.ats.internal.jbossatx.jta.PropagationContextManager)
++- app (class: org.jnp.interfaces.NamingContext)
+|   +- Manager (class: javax.inject.manager.Manager)
++- ClusteredConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- Mail (class: javax.mail.Session)
++- TransactionPropagationContextExporter (class: com.arjuna.ats.internal.jbossatx.jta.PropagationContextManager)
++- ProfileService (class: org.jboss.system.server.profileservice.repository.AbstractProfileService)
++- DefaultDS (class: org.jboss.resource.adapter.jdbc.WrapperDataSource)
++- jaas (class: javax.naming.Context)
+|   +- HsqlDbRealm (class: org.jboss.security.plugins.SecurityDomainContext)
++- ClusteredXAConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- TransactionSynchronizationRegistry (class: 
+   com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionSynchronizationRegistryImple)
++- SecurityProxyFactory (class: org.jboss.security.SubjectSecurityProxyFactory)
++- ConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- DefaultJMSProvider (class: org.jboss.jms.jndi.JNDIProviderAdapter)
++- TransactionManager (class: com.arjuna.ats.jbossatx.jta.TransactionManagerDelegate)
++- timedCacheFactory (class: javax.naming.Context)
+Failed to lookup: timedCacheFactory, errmsg=org.jboss.util.TimedCachePolicy cannot be cast to javax.naming.NamingEnumeration
+	
+	
+Global JNDI Namespace
+	
++- UserTransactionSessionFactory (proxy: $Proxy109 implements interface org.jboss.tm.usertx.interfaces.UserTransactionSessionFactory)
++- UUIDKeyGeneratorFactory (class: org.jboss.ejb.plugins.keygenerator.uuid.UUIDKeyGeneratorFactory)
++- HiLoKeyGeneratorFactory (class: org.jboss.ejb.plugins.keygenerator.hilo.HiLoKeyGeneratorFactory)
++- SecureDeploymentManager (class: org.jnp.interfaces.NamingContext)
+|   +- remote[link -&gt; DeploymentManager] (class: javax.naming.LinkRef)
++- SecureManagementView (class: org.jnp.interfaces.NamingContext)
+|   +- remote[link -&gt; ManagementView] (class: javax.naming.LinkRef)
++- persistence.unit:unitName=jsfejb3.ear (class: org.jnp.interfaces.NamingContext)
+|   +- app.jar#helloworld (class: org.hibernate.impl.SessionFactoryImpl)
++- DeploymentManager (class: org.jboss.aop.generatedproxies.AOPProxy$4)
++- XAConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- topic (class: org.jnp.interfaces.NamingContext)
++- ClusteredConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- ProfileService (class: org.jboss.aop.generatedproxies.AOPProxy$2)
++- SecureProfileService (class: org.jnp.interfaces.NamingContext)
+|   +- remote[link -&gt; ProfileService] (class: javax.naming.LinkRef)
++- queue (class: org.jnp.interfaces.NamingContext)
+|   +- DLQ (class: org.jboss.jms.destination.JBossQueue)
+|   +- ExpiryQueue (class: org.jboss.jms.destination.JBossQueue)
++- ClusteredXAConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- UserTransaction (class: org.jboss.tm.usertx.client.ClientUserTransaction)
++- ConnectionFactory (class: org.jboss.jms.client.JBossConnectionFactory)
++- jmx (class: org.jnp.interfaces.NamingContext)
+|   +- invoker (class: org.jnp.interfaces.NamingContext)
+|   |   +- RMIAdaptor (proxy: $Proxy103 implements interface org.jboss.jmx.adaptor.rmi.RMIAdaptor,interface org.jboss.jmx.adaptor.rmi.RMIAdaptorExt)
+|   +- rmi (class: org.jnp.interfaces.NamingContext)
+|   |   +- RMIAdaptor[link -&gt; jmx/invoker/RMIAdaptor] (class: javax.naming.LinkRef)
++- TomcatAuthenticators (class: java.util.Properties)
++- console (class: org.jnp.interfaces.NamingContext)
+|   +- PluginManager (proxy: $Proxy104 implements interface org.jboss.console.manager.PluginManagerMBean)
++- ManagementView (class: org.jboss.aop.generatedproxies.AOPProxy$3)
+</pre><div class="para">
+		This details the JNDI names to which your EJBs are bound.
+	</div></div><div class="section" id="The_JBoss_Server___A_Quick_Tour-Hot-deployment_of_services_in_JBoss"><div class="titlepage"><div><div><h2 class="title">1.5. Hot-deployment of services in JBoss</h2></div></div></div><div class="para">
+			Hot-deployable services are those which can be added to or removed from the running server. These are placed in the <code class="literal">JBOSS_DIST/jboss-as/server/&lt;instance-name&gt;/deploy</code> directory. Let’s have a look at a practical example of hot-deployment of services in JBoss.
+		</div><div class="para">
+			Start JBoss if it isn’t already running and take a look at the <code class="filename">server/default/deploy</code> directory. Remove the <code class="filename">mail-service.xml</code> file and watch the output from the server: 
+<pre class="programlisting">
+13:10:05,235 INFO  [MailService] Mail service 'java:/Mail' removed from JNDI
+</pre>
+
+		</div><div class="para">
+			Then replace the file and watch JBoss re-install the service: 
+<pre class="programlisting">
+13:58:54,331 INFO  [MailService] Mail Service bound to java:/Mail
+</pre>
+			 This is hot-deployment in action.
+		</div><div class="section" id="The_JBoss_Server___A_Quick_Tour-Hot-deployment_of_services_in_JBoss-Hot-deployment_configurations"><div class="titlepage"><div><div><h3 class="title">1.5.1. Hot-deployment configurations</h3></div></div></div><div class="para">
+				Hot deployment of services in the server is controlled by the HDScanner MC bean configured in <code class="filename">$JBOSS_HOME/server/conf/deploy/hdscanner-jboss-beans.xml</code> file. For the <code class="literal">default</code> server configuration the <span class="property">scanPeriod</span> is set to 5 seconds:
+			</div><pre class="programlisting">
+&lt;bean name="HDScanner" class="org.jboss.system.server.profileservice.hotdeploy.HDScanner"&gt;
+	&lt;property name="deployer"&gt;&lt;inject bean="ProfileServiceDeployer"/&gt;&lt;/property&gt;
+	&lt;property name="profileService"&gt;&lt;inject bean="ProfileService"/&gt;&lt;/property&gt;
+	&lt;property name="scanPeriod"&gt;5000&lt;/property&gt;
+	&lt;property name="scanThreadName"&gt;HDScanner&lt;/property&gt;
+&lt;/bean&gt;
+</pre><div class="para">
+				The <span class="property">scanPeriod</span> attribute controls the interval for thread which picks up the hot deployable changes.
+			</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					The changes to the <code class="filename">hdscanner-jboss-beans.xml</code> file itself are hot deployable. No server restart is needed.
+				</div></div></div></div><div class="section" id="The_JBoss_Server___A_Quick_Tour-Hot-deployment_of_services_in_JBoss-Adding_a_custom_deploy_folder"><div class="titlepage"><div><div><h3 class="title">1.5.2. Adding a custom deploy folder</h3></div></div></div><div class="para">
+				JBoss server by default looks for deployments under the <code class="filename">JBOSS_DIST/jboss-as/server/&lt;instance-name&gt;/deploy</code> folder. However you can configure the server to even include your custom folder for scanning deployments. This can be done by configuring the <code class="classname">BootstrapProfileFactory</code> MC bean in <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/bootstrap/profile.xml</code> file. The <span class="property">applicationURIs</span> property of the <code class="classname">BootstrapProfileFactory</code> accepts a list of URLs which will be scanned for applications. You can add your custom deploy folder to this list. For example, if you want <code class="filename">/home/me/myapps</code> to be scanned for deployments, then you can add the following:
+			</div><pre class="programlisting">
+&lt;bean name="BootstrapProfileFactory" class="org.jboss.system.server.profileservice.repository.
+StaticProfileFactory"&gt;
+	...
+	&lt;property name="applicationURIs"&gt;
+		&lt;list elementClass="java.net.URI"&gt;
+			&lt;value&gt;${jboss.server.home.url}deploy&lt;/value&gt;
+			&lt;value&gt;file:///home/me/myapps&lt;/value&gt;
+		&lt;/list&gt;
+	...
+</pre><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+					Modifying the <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/bootstrap/profile.xml</code> requires a server restart, for the changes to take effect.
+				</div></div></div><div class="para">
+				For performance reasons, adding a new deployment folder to the <code class="classname">BootstrapProfileFactory</code> also requires the same URL to be added to the <code class="classname">VFSCache</code> MC bean configuration in <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/bootstrap/vfs.xml</code>. For example:
+			</div><pre class="programlisting">
+&lt;bean name="VFSCache"&gt;
+	...
+	&lt;property name="permanentRoots"&gt;
+		&lt;map keyClass="java.net.URL" valueClass="org.jboss.virtual.spi.ExceptionHandler"&gt;
+			...
+			&lt;entry&gt;
+				&lt;key&gt;file:///home/me/myapps&lt;/key&gt;
+				&lt;value&gt;&lt;inject bean="VfsNamesExceptionHandler"/&gt;&lt;/value&gt;
+			&lt;/entry&gt;
+		&lt;/map&gt;
+	&lt;/property&gt;
+	...
+</pre><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+					Not adding the custom deployment folder to <code class="classname">VFSCache</code> might result in growing disk space usage by the server, over a period of time.
+				</div></div></div></div></div><div class="section" id="The_JBoss_Server___A_Quick_Tour-Basic_Configuration_Issues"><div class="titlepage"><div><div><h2 class="title">1.6. Basic Configuration Issues</h2></div></div></div><div class="para">
+			Now that we have examined the JBoss server, we will take a look at some of the main configuration files and what they are used for. All paths are relative to the server configuration directory (<code class="filename">server/default</code>, for example).
+		</div><div class="section" id="The_JBoss_Server___A_Quick_Tour-Setting_your_application_as_the_default_application_on_the_server"><div class="titlepage"><div><div><h3 class="title">1.6.1. Setting your application as the default application on the server</h3></div></div></div><div class="para">
+				JBoss server by default configures <code class="filename">$JBOSS_HOME/server/$PROFILE/deploy/ROOT.war</code> as the default application on the server. So accessing <code class="literal">http://localhost:8080/</code> results in displaying the index page of this application. If you want your application to be available as the default application, then you will wish to follow these steps:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Rename <code class="filename">ROOT.war</code> in <code class="filename">$JBOSS_HOME/server/$PROFILE/deploy</code> to something else, for example, <code class="filename">jboss.war</code>.
+					</div></li><li class="listitem"><div class="para">
+						In your WAR file (the one which you want to be the default application), add a <code class="filename">jboss-web.xml</code>, in the <code class="filename">WEB-INF</code> folder, with a configuration for the context-root:
+					</div><pre class="programlisting">
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE jboss-web PUBLIC "-//JBoss//DTD Web Application 5.0//EN" "http://www.jboss.org/j2ee/dtd/jboss-web_5_0.dtd"&gt;
+
+&lt;jboss-web&gt;
+	&lt;context-root&gt;/&lt;/context-root&gt;
+	&lt;!-- Other configurations as needed --&gt;
+&lt;/jboss-web&gt;
+</pre><div class="para">
+						By setting the context-root to <code class="filename">/</code> you are making your application the default application. Your application will now be available at <code class="literal">http://localhost:8080/</code>.
+					</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+							Renaming the <code class="filename">ROOT.war</code> to <code class="filename">jboss.war</code> will make that application be available at <code class="literal">http://localhost:8080/jboss</code>
+						</div></div></div></li></ul></div></div><div class="section" id="The_JBoss_Server___A_Quick_Tour-Bootstrap_Configuration"><div class="titlepage"><div><div><h3 class="title">1.6.2. Bootstrap Configuration</h3></div></div></div><div class="para">
+				The microcontainer bootstrap configuration is described by the <code class="filename">conf/bootstrap.xml</code> and the <code class="filename">conf/bootstrap/*.xml</code> it references. It is expected that the number of bootstrap beans will be reduced in the future. It is not expected that you would need to edit the bootstrap configuration files for a typical installation.
+			</div></div><div class="section" id="Basic_Configuration_Issues-Core_Services"><div class="titlepage"><div><div><h3 class="title">1.6.3. Legacy Core Services</h3></div></div></div><div class="para">
+				The legacy core services specified in the <code class="filename">conf/jboss-service.xml</code> file are started just after server starts up the microcontainer. If you have a look at this file in an editor you will see MBeans for various services including logging, security, JNDI, JNDIView etc. Try commenting out the entry for the <code class="literal">JNDIView</code> service.
+			</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					Eventually this file will be dropped as the services are converted to microcontainer beans or mbeans that are deployed as deploy directory services.
+				</div></div></div><div class="para">
+				Note that because the mbeans definition had nested comments, we had to comment out the mbean in two sections, leaving the original comment as it was.
+			</div><pre class="programlisting">
+&lt;!-- Section 1 commented out
+&lt;mbean code="org.jboss.naming.JNDIView"
+    name="jboss:service=JNDIView"
+    xmbean-dd="resource:xmdesc/JNDIView-xmbean.xml"&gt;
+--&gt;
+    &lt;!-- The HANamingService service name --&gt;
+&lt;!-- Section two commented out
+    &lt;attribute name="HANamingService"&gt;jboss:service=HAJNDI&lt;/attribute&gt;&lt;/mbean&gt;
+--&gt;
+
+</pre><div class="para">
+				If you then restart JBoss, you will see that the <code class="literal">JNDIView</code> service no longer appears in the JMX Management Console (JMX Console) listing. In practice, you should rarely, if ever, need to modify this file, though there is nothing to stop you adding extra MBean entries in here if you want to. The alternative is to use a separate file in the <code class="filename">deploy</code> directory, which allows your service to be hot deployable.
+			</div></div><div class="section" id="Basic_Configuration_Issues-Logging_Service"><div class="titlepage"><div><div><h3 class="title">1.6.4. Logging Service</h3></div></div></div><div class="para">
+				In JBoss <code class="literal">log4j</code> is used for logging. If you are not familiar with the <code class="literal">log4j</code> package and would like to use it in your applications, you can read more about it at the Jakarta web site (<a href="http://jakarta.apache.org/log4j/" class="mimir-link-warn" title="Mimir does not include content from: jakarta.apache.org">http://jakarta.apache.org/log4j/</a>).
+			</div><div class="para">
+				Logging is controlled from a central <code class="filename">conf/jboss-log4j.xml</code> file. This file defines a set of appenders specifying the log files, what categories of messages should go there, the message format and the level of filtering. By default, JBoss produces output to both the console and a log file (<code class="filename">log/server.log</code>).
+			</div><div class="para">
+				There are six basic log levels used: <code class="literal">TRACE</code>, <code class="literal">DEBUG</code>, <code class="literal">INFO</code>, <code class="literal">WARN</code>, <code class="literal">ERROR</code> and <code class="literal">FATAL</code>. The logging threshold on the console is <code class="literal">INFO</code>, which means that you will see informational messages, warning messages and error messages on the console but not general debug and trace messages. In contrast, there is no threshold set for the <code class="filename">server.log</code> file, so all generated logging messages will be logged there.
+			</div><div class="para">
+				If things are going wrong and there doesn’t seem to be any useful information in the console, always check the <code class="filename">server.log</code> file to see if there are any debug messages which might help you to track down the problem. However, be aware that just because the logging threshold allows debug messages to be displayed, that doesn't mean that all of JBoss will produce detailed debug information for the log file. You will also have to boost the logging limits set for individual categories. Take the following category for example.
+			</div><pre class="programlisting">&lt;!-- Limit JBoss categories to INFO --&gt; 
+&lt;category name="org.jboss"&gt; 
+    &lt;priority value="<span class="bold bold"><strong>INFO</strong></span>"/&gt; 
+&lt;/category&gt;
+</pre><div class="para">
+				This limits the level of logging to <code class="literal">INFO</code> for all JBoss classes, apart from those which have more specific overrides provided. By default the root logger in the <code class="filename">jboss-log4j.xml</code> is set to <code class="literal">INFO</code>. This effectively means that any <code class="literal">TRACE</code> or <code class="literal">DEBUG</code> logger from any logger categories will not be logged in any files or the console appender. This setting is controlled through the <span class="property">jboss.server.log.threshold</span> property. By default this is <code class="literal">INFO</code>. If you were to change this to <code class="literal">DEBUG</code>, it would produce much more detailed logging output. In order to change this there are two options:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						You can pass the <span class="property">-Djboss.server.log.threshold=DEBUG</span> parameter while starting the server:
+					</div><pre class="programlisting">
+./run.sh -Djboss.server.log.threshold=DEBUG
+</pre></li><li class="listitem"><div class="para">
+						You can edit the <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/jboss-log4j.xml</code> file directly in order to set this property:
+					</div><pre class="programlisting">
+&lt;root&gt;
+	&lt;!-- Let's comment this out to set our own value 
+	&lt;priority value="${jboss.server.log.threshold}"/&gt;--&gt;
+	&lt;priority value="DEBUG"/&gt;
+	&lt;appender-ref ref="CONSOLE"/&gt;
+	&lt;appender-ref ref="FILE"/&gt;
+&lt;/root&gt;
+</pre><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+							The <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/jboss-log4j.xml</code> is scanned every 60 seconds (by default) to check for any changes. Changing this file does not require a server restart as the changes will be hot deployed within the next 60 seconds following the change.
+						</div></div></div></li></ul></div><div class="para">
+				As another example, let’s say you wanted to set the output from the container-managed persistence engine to <code class="literal">DEBUG</code> level and to redirect it to a separate file, <code class="filename">cmp.log</code>, in order to analyze the generated SQL commands. You would add the following code to the <code class="filename">conf/jboss-log4j.xml</code> file:
+			</div><pre class="programlisting">&lt;appender name="CMP" class="org.jboss.logging.appender.RollingFileAppender"&gt; 
+    &lt;errorHandler class="org.jboss.logging.util.OnlyOnceErrorHandler"/&gt; 
+    &lt;param name="File" value="${jboss.server.home.dir}/log/cmp.log"/&gt; 
+    &lt;param name="Append" value="false"/&gt; 
+    &lt;param name="MaxFileSize" value="500KB"/&gt; 
+    &lt;param name="MaxBackupIndex" value="1"/&gt; 
+ 
+    &lt;layout class="org.apache.log4j.PatternLayout"&gt; 
+        &lt;param name="ConversionPattern" value="%d %-5p [%c] %m%n"/&gt; 
+    &lt;/layout&gt; 
+&lt;/appender&gt; 
+ 
+&lt;category name="org.jboss.ejb.plugins.cmp"&gt; 
+    &lt;priority value="DEBUG" /&gt; 
+    &lt;appender-ref ref="CMP"/&gt; 
+&lt;/category&gt;
+</pre><div class="para">
+				This creates a new file appender and specifies that it should be used by the logger (or category) for the package <code class="literal">org.jboss.ejb.plugins.cmp</code>.
+			</div><div class="para">
+				The file appender is set up to produce a new log file every day rather than producing a new one every time you restart the server or writing to a single file indefinitely. The current log file is <code class="filename">cmp.log</code>. Older files have the date they were written added to their filenames. Please note that the <code class="filename">log</code> directory also contains HTTP request logs which are produced by the web container.
+			</div><div class="para">
+				By default the <code class="filename">server.log</code> appender is configured to retain log messages between server restarts. This is controlled by the <span class="property">Append</span> property on the <code class="literal">FILE</code> appender which corresponds to the <code class="filename">server.log</code> file. By default this property is set to true; if you want the <code class="filename">server.log</code> contents to be wiped out on server restarts then you can edit the <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/jboss-log4j.xml</code> file to set this property value to false. For example:
+			</div><pre class="programlisting">
+&lt;appender name="FILE" class="org.jboss.logging.appender.DailyRollingFileAppender"&gt;
+	&lt;errorHandler class="org.jboss.logging.util.OnlyOnceErrorHandler"/&gt;
+		&lt;param name="File" value="${jboss.server.log.dir}/server.log"/&gt;
+		&lt;param name="Append" value="false"/&gt;
+		...
+</pre></div><div class="section" id="Basic_Configuration_Issues-Security_Service"><div class="titlepage"><div><div><h3 class="title">1.6.5. Security Service</h3></div></div></div><div class="para">
+				The security domain information is stored in the file <code class="filename">conf/login-config.xml</code> as a list of named security domains, each of which specifies a number of JAAS <a href="#ftn.idm139997943733184" class="footnote"><sup class="footnote" id="idm139997943733184">[1]</sup></a> login modules which are used for authentication purposes in that domain. When you want to use security in an application, you specify the name of the domain you want to use in the application’s JBoss-specific deployment descriptors, <code class="filename">jboss.xml</code> (used in defining jboss specific configurations for an application) and/or <code class="filename">jboss-web.xml</code> (used in defining JBoss for a Web application. We'll quickly look at how to do this to secure the JMX Console application which ships with JBoss.
+			</div><div class="para">
+				Almost every aspect of the JBoss server can be controlled through the JMX Console, so it is important to make sure that, at the very least, the application is password protected. Otherwise, any remote user could completely control your server. To protect it, we will add a security domain to cover the application.  This can be done in the <code class="filename">jboss-web.xml</code> file for the JMX Console, which can be found in <code class="filename">deploy/jmx-console.war/WEB-INF/</code> directory. Uncomment the <code class="literal">security-domain</code> in that file, as shown below.
+			</div><div class="para">
+				
+<pre class="programlisting">&lt;jboss-web&gt;
+    &lt;security-domain&gt;java:/jaas/jmx-console&lt;/security-domain&gt;
+&lt;/jboss-web&gt;
+</pre>
+
+			</div><div class="para">
+				This links the security domain to the web application, but it doesn't tell the web application what security policy to enforce, what URLs are we trying to protect, and who is allowed to access them. To configure this, go to the <code class="filename">web.xml</code> file in the same directory and uncomment the <code class="literal">security-constraint</code> that is already there. This security constraint will require a valid user name and password for a user in the <code class="literal">JBossAdmin</code> group.
+			</div><pre class="programlisting">&lt;!-- 
+   A security constraint that restricts access to the HTML JMX console
+   to users with the role JBossAdmin. Edit the roles to what you want and
+   uncomment the WEB-INF/jboss-web.xml/security-domain element to enable
+   secured access to the HTML JMX console.
+--&gt;
+&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;HtmlAdaptor&lt;/web-resource-name&gt;
+        &lt;description&gt;
+            An example security config that only allows users with the
+            role JBossAdmin to access the HTML JMX console web application
+        &lt;/description&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+        &lt;http-method&gt;GET&lt;/http-method&gt;
+        &lt;http-method&gt;POST&lt;/http-method&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+        &lt;role-name&gt;JBossAdmin&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+&lt;/security-constraint&gt;
+</pre><div class="para">
+				That's great, but where do the user names and passwords come from? They come from the <code class="literal">jmx-console</code> security domain we linked the application to. We have provided the configuration for this in the <code class="filename">conf/login-config.xml</code>.
+			</div><div class="para">
+				
+<pre class="programlisting">&lt;application-policy name="jmx-console"&gt;
+    &lt;authentication&gt;
+        &lt;login-module code="org.jboss.security.auth.spi.UsersRolesLoginModule"
+                     flag="required"&gt;
+            &lt;module-option name="usersProperties"&gt;
+                props/jmx-console-users.properties
+            &lt;/module-option&gt;
+            &lt;module-option name="rolesProperties"&gt;
+                props/jmx-console-roles.properties
+            &lt;/module-option&gt;
+        &lt;/login-module&gt;
+    &lt;/authentication&gt; 
+&lt;/application-policy&gt;
+</pre>
+
+			</div><div class="para">
+				This configuration uses a simple file based security policy. The configuration files are found in the <code class="filename">conf/props</code> directory of your server configuration. The usernames and passwords are stored in the <code class="literal">conf/props/jmx-console-users.properties</code> file and take the form "<code class="literal">username=password</code>". To assign a user to the <code class="literal">JBossAdmin</code> group add "<code class="literal">username=JBossAdmin</code>" to the <code class="literal">jmx-console-roles.properties</code> file (additional roles on that username can be added comma separated). The existing file creates an <code class="literal">admin</code> user with the password <code class="literal">admin</code>. For security, please either remove the user or change the password to a stronger one.
+			</div><div class="para">
+				JBoss will re-deploy the JMX Console whenever you update its <code class="filename">web.xml</code>. You can check the server console to verify that JBoss has seen your changes. If you have configured everything correctly and re-deployed the application, the next time you try to access the JMX Console, it will ask you for a name and password. <a href="#ftn.idm139997957876320" class="footnote"><sup class="footnote" id="idm139997957876320">[2]</sup></a>
+			</div><div class="para">
+				The JMX Console is not the only web based management interface to JBoss. There is also the Web Console. Although it is a Java applet, the corresponding web application can be secured in the same way as the JMX Console. The Web Console is in the file <code class="filename">deploy/management/console-mgr.sar/web-console.war.</code>. The only difference is that the Web Console is provided as a simple WAR file instead of using the exploded directory structure that the JMX Console did. The only real difference between the two is that editing the files inside the WAR file is a bit more cumbersome.
+			</div></div><div class="section" id="Basic_Configuration_Issues-Additional_Services"><div class="titlepage"><div><div><h3 class="title">1.6.6. Additional Services</h3></div></div></div><div class="para">
+				The non-core, hot-deployable services are added to the <code class="filename">deploy</code> directory. They can be either XML descriptor files, <code class="filename">*-service.xml, *-jboss-beans.xml</code>, MC <code class="filename">.beans</code> archive, or JBoss Service Archive (SAR) files. SARs contains an <code class="filename">META-INF/jboss-service.xml</code> descriptor and additional resources the service requires (for example, classes, library JAR files or other archives), all packaged up into a single archive. Similarly, a <code class="filename">.beans</code> archive contains a <code class="filename">META-INF/jboss-beans.xml</code> and additional resources.
+			</div><div class="para">
+				Detailed information on all these services can be found in the <span class="emphasis"><em>JBoss Enterprise Application Platform: Aministration and Configuration Guide</em></span>, which also provides comprehensive information on server internals and the implementation of services such as JTA and the J2EE Connector Architecture (JCA).
+			</div></div></div><div class="section" id="The_Service_Binding_Manager"><div class="titlepage"><div><div><h2 class="title">1.7. The Service Binding Manager</h2></div></div></div><div class="para">
+			JBoss server uses various ports for the services that it provides (for example, port 8080 for HTTP, 1099 for JNDI). The Service Binding Manager (SBM) service provides a centralized location where settings for all services that need to bind to ports can be configured. SBM can be used to configure different sets of port bindings for a server instance. A system property on the SBM controls which named set (for example, ports-default, ports-01) is used by a particular server instance. If you want to run multiple server instances on the same system then you can configure the SBM on each instance to use a different named binding set. You can even use SBM to switch to a different binding set (for example, 8180 port for HTTP instead of the default 8080) for a server instance.
+		</div><div class="para">
+			In a typical configuration, the <code class="literal">ports-default</code> set uses the standard ports (for example, JNDI on port 1099), with <code class="literal">ports-01</code> increasing each port value by 100 (for example, JNDI on 1199), <code class="literal">ports-02</code> by 200 and so on.
+		</div><div class="para">
+			SBM is configured through the <code class="filename">$JBOSS_HOME/server/$PROFILE/conf/bindingservice.beans/ META-INF/bindings-jboss-beans.xml</code> file. The configuration of the <code class="classname">ServiceBindingManager</code> involves three primary elements :
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					A set of beans containing standard (default) binding configuration data. These are the base values (for example, JNDI on 1099) used to drive <code class="literal">ports-default</code>, <code class="literal">ports-01</code> and so on.
+				</div></li><li class="listitem"><div class="para">
+					A number of beans defining <code class="classname">ServiceBindingSets</code>, for example, <code class="literal">ports-default</code>, <code class="literal">ports-01</code>, <code class="literal">ports-02</code>. The sets of standard bindings are combined with each of these, along with an offset value (for example, 100 for <code class="literal">ports-01</code>) that should be applied to the standard port values to create the binding values for that set.
+				</div></li><li class="listitem"><div class="para">
+					The <code class="classname">ServiceBindingManager</code> service bean itself. This has the standard bindings and the <code class="classname">ServiceBindingSets</code> injected into it. It is also configured with the name of the binding set the particular server instance should use. The name of the binding set to be used is configurable from the command line by using the system property <span class="property">jboss.service.binding.set</span>. The default value is <code class="literal">ports-default</code>.
+				</div><pre class="programlisting">
+&lt;bean name="ServiceBindingManagementObject" class="org.jboss.services.binding.managed.ServiceBindingManagementObject"&gt;
+	&lt;constructor&gt;
+		
+		&lt;parameter&gt;
+			${jboss.service.binding.set:ports-default}
+		&lt;/parameter&gt;
+	...
+</pre><div class="para">
+					To switch to a different set of ports than the ones used by default, you can start the server by passing the <span class="property">-Djboss.service.binding.set</span> property to the run command as follows:
+				</div><pre class="programlisting">
+./run.sh -Djboss.service.binding.set=ports-01
+</pre><div class="para">
+					This will instruct the server to use the group of ports configured in the <code class="literal">ports-01</code> binding set.
+				</div></li></ul></div></div><div class="footnotes"><br/><hr width="100" align="left"/><div id="ftn.idm139997943733184" class="footnote"><div class="para"><a href="#idm139997943733184" class="para"><sup class="para">[1] </sup></a>
+					The Java Authentication and Authorization Service. JBoss uses JAAS to provide pluggable authentication modules. You can use the ones that are provided or write your own if you have more specific requirements.
+				</div></div><div id="ftn.idm139997957876320" class="footnote"><div class="para"><a href="#idm139997957876320" class="para"><sup class="para">[2] </sup></a>
+					Since the username and password are session variables in the web browser you may need to restart your browser to use the login dialog window.
+				</div></div></div></div><div xml:lang="en-US" class="chapter" id="Using_other_Databases" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Using other Databases</h1></div></div></div><div class="para">
+		In the previous chapters, we’ve been using the JBoss Enterprise Application Platform server default datasource in our applications. This datasource is configured to use the embedded Hypersonic database instance shipped by default with the distribution. This datasource is bound to the JNDI name <code class="literal">java:/DefaultDS</code> and its descriptor is named <code class="literal">hsqldb-ds.xml</code> under the deploy directory.
+	</div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+			The default persistence configuration works out of the box with Hypersonic (HSQLDB) so that the JBoss Enterprise Platforms are able to run "out of the box". However, <span class="emphasis"><em>Hypersonic is not supported in production and should not be used in a production environment.</em></span>
+		</div><div class="para">
+			Known issues with the Hypersonic Database include:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					no transaction isolation
+				</div></li><li class="listitem"><div class="para">
+					thread and socket leaks (<code class="methodname">connection.close()</code> does not tidy up resources)
+				</div></li><li class="listitem"><div class="para">
+					persistence quality (logs commonly become corrupted after a failure, preventing automatic recovery)
+				</div></li><li class="listitem"><div class="para">
+					database corruption
+				</div></li><li class="listitem"><div class="para">
+					stability under load (database processes cease when dealing with too much data)
+				</div></li><li class="listitem"><div class="para">
+					not viable in clustered environments
+				</div></li></ul></div></div></div><div class="para">
+		In this chapter we will explain in detail how to configure and deploy a datasource to connect the JBoss Enterprise Application Platform to the most popular database servers available on the market today.
+	</div><div class="section" id="Using_other_Databases-DataSource_Configuration_Files"><div class="titlepage"><div><div><h2 class="title">2.1. DataSource Configuration Files</h2></div></div></div><div class="para">
+			Datasource configuration file names end with the suffix <code class="filename">-ds.xml</code> so that they will be recognized correctly by the JCA deployer. The <code class="filename">docs/example/jca</code> directory contains sample files for a wide selection of databases and it is a good idea to use one of these as a starting point. For a full description of the configuration format, the best place to look is the DTD file <code class="filename">docs/dtd/jboss-ds_1_5.dtd</code>. Additional documentation on the files and the JBoss JCA implementation can also be found in the JBoss Enterprise Application Platform Administration and Server Configuration Guide available at <a href="http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/</a>.
+		</div><div class="para">
+			Local transaction datasources are configured using the <code class="literal">local-tx-datasource</code> element and XA-compliant ones using <code class="literal">xa-tx-datasource</code>. The example file <code class="filename">generic-ds.xml</code> shows how to use both types and also some of the other elements that are available for things like connection pool configuration. Examples of both local and XA configurations are available for Oracle, DB2 and Informix.
+		</div><div class="para">
+			If you look at the example files <code class="filename"> firebird-ds.xml</code>, <code class="filename"> facets-ds.xml</code> and <code class="filename">sap3-ds.xml</code>, you’ll notice that they have a completely different format, with the root element being <code class="literal">connection-factories</code> rather than <code class="literal">datasources</code>. These use an alternative, more generic JCA configuration syntax used with a pre-packaged JCA resource adapter. The syntax is not specific to datasource configuration and is used, for example, in the <code class="filename">$JBOSS_HOME/server/$PROFILE/deploy/messaging/jms-ds.xml</code> file to configure the JMS resource adapter.
+		</div><div class="para">
+			Next, we’ll work through some step-by-step examples to illustrate what’s involved setting up a datasource for a specific database.
+		</div></div><div class="section" id="Using_other_Databases-Using_MySQL_as_the_Default_DataSource"><div class="titlepage"><div><div><h2 class="title">2.2. Using MySQL as the Default DataSource</h2></div></div></div><div class="para">
+			The MySQL® database has become the world's most popular open source database thanks to its consistent fast performance, high reliability and ease of use. This database server is used in millions of installations ranging from large corporations to specialized embedded applications across every continent of the world. The official JDBC driver is called <code class="literal">Connector/J</code>. For this example we’ve used MySQL 5.1.31 and <code class="literal">Connector/J</code> 5.1.8. Both are available at <a href="http://www.mysql.com" class="mimir-link-warn" title="Mimir does not include content from: www.mysql.com">http://www.mysql.com</a>.
+		</div><div class="section" id="Using_MySQL_as_the_Default_DataSource-Creating_a_Database_and_User"><div class="titlepage"><div><div><h3 class="title">2.2.1. Creating a Database and User</h3></div></div></div><div class="para">
+				We’ll assume that you’ve already installed MySQL and that you have it running and are familiar with the basics. Run the MySQL client program from the command line so we can execute some administration commands. You should make sure that you are connected as a user with sufficient privileges (for example, by specifying the <code class="code">-u</code> root option to run as the MySQL root user).
+			</div><div class="para">
+				First create a database called <code class="literal">jboss</code> within MySQL for use by JBoss:
+			</div><pre class="programlisting">
+mysql&gt; CREATE DATABASE jboss;
+
+Query OK, 1 row affected (0.05 sec)
+</pre><div class="para">
+				Then check that it has been created:
+			</div><pre class="programlisting">
+mysql&gt; SHOW DATABASES;
+
++----------+
+| Database |
++----------+
+| jboss    |
++----------+
+1 rows in set (0.00 sec)
+</pre><div class="para">
+				Next, create a user called <code class="literal">jboss</code> with 'password' as the password to access the database:
+			</div><pre class="programlisting">
+mysql&gt; GRANT ALL PRIVILEGES ON jboss.* TO jboss@localhost IDENTIFIED BY 'password';
+
+Query OK, 0 rows affected (0.06 sec)
+</pre><div class="para">
+				Again, you can check that everything has gone smoothly:
+			</div><pre class="programlisting">
+mysql&gt; select User,Host,Password from mysql.User;
+
++-------+-----------+------------------+
+| User  | Host      | Password         |
++-------+-----------+------------------+
+| root  | localhost |                  |
+| root  | %         |                  |
+|       | localhost |                  |
+|       | %         |                  |
+| jboss | localhost | 5d2e19393cc5ef67 |
++-------+-----------+------------------+
+5 rows in set (0.02 sec)
+</pre></div><div class="section" id="Using_MySQL_as_the_Default_DataSource-Installing_the_JDBC_Driver_and_Deploying_the_DataSource"><div class="titlepage"><div><div><h3 class="title">2.2.2. Installing the JDBC Driver and Deploying the datasource</h3></div></div></div><div class="para">
+				To make the JDBC driver classes available to the JBoss Enterprise Application Platform, copy the archive <code class="filename">mysql-connector-java-5.1.8-bin.jar</code> from the <code class="literal">Connector/J</code> distribution to the <code class="literal">lib</code> directory in the <code class="literal">default</code> server configuration (assuming that is the server configuration you’re running).
+			</div><div class="para">
+				Then create a file in the deploy directory called <code class="filename">mysql-ds.xml</code> with the following datasource configuration. Note that the databse user name and password corresponds to the MySQL user that we created in the previous section:
+			</div><pre class="programlisting XML XML">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;datasources&gt;
+	&lt;local-tx-datasource&gt;
+		&lt;jndi-name&gt;MySqlDS&lt;/jndi-name&gt;
+		&lt;connection-url&gt;jdbc:mysql://localhost:3306/jboss&lt;/connection-url&gt;
+		&lt;driver-class&gt;com.mysql.jdbc.Driver&lt;/driver-class&gt;
+		&lt;user-name&gt;jboss&lt;/user-name&gt;
+		&lt;password&gt;password&lt;/password&gt;
+	&lt;/local-tx-datasource&gt;
+&lt;/datasources&gt;
+</pre><div class="para">
+				To ensure that you have correctly configured the datasource in <code class="filename">$JBOSS_HOME/server/$PROFILE/deploy</code> folder, start the server and you will notice messages like these in the logs:
+			</div><pre class="screen">
+INFO  [ConnectionFactoryBindingService] Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' to JNDI name 'java:MySqlDS'
+</pre><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					Configuring other datasources is a similar process.
+				</div></div></div></div><div class="section" id="Using_MySQL_as_the_Default_DataSource-Testing_the_MySQL_DataSource"><div class="titlepage"><div><div><h3 class="title">2.2.3. Testing the MySQL DataSource</h3></div></div></div><div class="para">
+				Using the test client described in <a class="xref" href="#creating_a_jdbc_client">Section 2.6, “Creating a JDBC client”</a>, you may now verify the proper installation of your datasource.
+			</div></div></div><div class="section" id="Configuring_a_datasource_for_Oracle_DB"><div class="titlepage"><div><div><h2 class="title">2.3. Configuring a datasource for Oracle DB</h2></div></div></div><div class="para">
+			Oracle is one of the main players in the commercial database field and most readers will probably have come across it at some point. You can download it freely for non-commercial purposes from <a href="http://www.oracle.com/technology/products/database/xe/index.html" class="mimir-link-warn" title="Mimir does not include content from: www.oracle.com">http://www.oracle.com/technology/products/database/xe/index.html</a>
+		</div><div class="para">
+			In this section, we'll connect the server to Oracle Database 11g Express Edition using the latest JDBC driver (11g) available at <a href="http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html" class="mimir-link-warn" title="Mimir does not include content from: www.oracle.com">http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html</a>
+		</div><div class="section" id="Setting_up_an_XADataSource_with_Oracle_9i-Installing_the_JDBC_Driver_and_Deploying_the_DataSource"><div class="titlepage"><div><div><h3 class="title">2.3.1. Installing the JDBC Driver and Deploying the DataSource</h3></div></div></div><div class="para">
+				To make the JDBC driver classes available to the JBoss Enterprise Application Platform, copy the archive <code class="filename">ojdbc6.jar</code> to the lib directory in the default server configuration (assuming that is the server configuration you’re running).
+			</div><div class="para">
+				Then create a text file in the <code class="filename">deploy</code> directory called <code class="filename">oracle-ds.xml</code> with the following datasource descriptor :
+			</div><pre class="programlisting XML XML">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;datasources&gt;
+	&lt;local-tx-datasource&gt;
+		&lt;jndi-name&gt;DefaultDS&lt;/jndi-name&gt;
+		&lt;connection-url&gt;jdbc:oracle:thin:@localhost:1521:xe&lt;/connection-url&gt;
+		&lt;driver-class&gt;oracle.jdbc.driver.OracleDriver&lt;/driver-class&gt;
+		&lt;user-name&gt;SYSTEM&lt;/user-name&gt;
+		&lt;password&gt;jboss&lt;/password&gt;
+		&lt;valid-connection-checker-class-name&gt;org.jboss.resource.adapter.jdbc.vendor.OracleValidConnectionChecker&lt;/valid-connection-checker-class-name&gt;
+		&lt;metadata&gt;
+			&lt;type-mapping&gt;Oracle9i&lt;/type-mapping&gt;
+		&lt;/metadata&gt;
+	&lt;/local-tx-datasource&gt;
+&lt;/datasources&gt;</pre><div class="para">
+				The datasource is pointing at the database/SID called <span class="emphasis"><em>xe</em></span> provided by default with Oracle XE.
+			</div><div class="para">
+				Of course, you need to update the connection url attributes as well as the username/password combination to match your environment setup.
+			</div></div><div class="section" id="Setting_up_an_XADataSource_with_Oracle_9i-Testing_the_Oracle_DataSource"><div class="titlepage"><div><div><h3 class="title">2.3.2. Testing the Oracle DataSource</h3></div></div></div><div class="para">
+				Before you can verify the datasource configuration, Oracle XE should be reconfigured to avoid port conflict with the JBoss Enterprise Application Platform as by default they both start a web server on port 8080.
+			</div><div class="para">
+				Open up an Oracle SQLcommand line and execute the following commands:
+			</div><pre class="screen">
+<code class="command">SQL&gt; connect; Enter user-name: SYSTEM Enter password:</code>
+Connected.
+SQL&gt; <code class="command">begin 2 dbms_xdb.sethttpport('8090'); 3 end; 4 /</code>
+PL/SQL procedure successfully completed.
+SQL&gt; <code class="command">select dbms_xdb.gethttpport from dual;</code>
+GETHTTPPORT
+-----------
+8090
+</pre><div class="para">
+				The web server started by Oracle XE to provide http-based administration tools is now running on port 8090. Start the JBoss Enterprise Application Platform server instance as you would normally do. You are now ready to use the test client to verify the proper installation of your datasource.
+			</div></div></div><div class="section" id="idm139997966035696"><div class="titlepage"><div><div><h2 class="title">2.4. Configuring a datasource for Microsoft SQL Server 200x</h2></div></div></div><div class="para">
+			In this section, we'll connect the server to MS SQL Server 2005 using the latest JDBC driver (v2.0) available at <a href="http://msdn2.microsoft.com/en-us/data/aa937724.aspx" class="mimir-link-warn" title="Mimir does not include content from: msdn2.microsoft.com">http://msdn2.microsoft.com/en-us/data/aa937724.aspx</a>.
+		</div><div class="section" id="idm139997966033872"><div class="titlepage"><div><div><h3 class="title">2.4.1. Installing the JDBC Driver and Deploying the DataSource</h3></div></div></div><div class="para">
+				To make the JDBC driver classes available to the JBoss Enterprise Application Platform, copy the archive <code class="filename">sqljdbc.jar</code> from the <code class="filename">sqljdbc_2.0</code> distribution to the <code class="filename">lib</code> directory in the default server configuration (assuming that is the server configuration you’re running).
+			</div><div class="para">
+				Then create a text file in the <code class="literal">deploy</code> directory called <code class="literal">mssql-ds.xml</code> with the following datasource descriptor : 
+<pre class="programlisting"> 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;datasources&gt;
+  &lt;local-tx-datasource&gt;
+  &lt;jndi-name&gt;DefaultDS&lt;/jndi-name&gt;
+  &lt;connection-url&gt;jdbc:sqlserver://localhost:1433;DatabaseName=pubs&lt;/connection-url&gt;
+  &lt;driver-class&gt;com.microsoft.sqlserver.jdbc.SQLServerDriver&lt;/driver-class&gt;
+  &lt;user-name&gt;sa&lt;/user-name&gt;
+  &lt;password&gt;jboss&lt;/password&gt;
+  &lt;check-valid-connection-sql&gt;SELECT 1 FROM sysobjects&lt;/check-valid-connection-sql&gt;
+  &lt;metadata&gt;
+	  &lt;type-mapping&gt;MS SQLSERVER2000&lt;/type-mapping&gt;
+  &lt;/metadata&gt;
+  &lt;/local-tx-datasource&gt;
+&lt;/datasources&gt;
+</pre>
+				 The datasource is pointing at a database <code class="literal">pubs</code> provided by default with MS SQL Server 2000.
+			</div><div class="para">
+				Remember to update the connection url attributes as well as the username/password combination to match your environment setup.
+			</div><div class="section" id="testing_the_datasource"><div class="titlepage"><div><div><h4 class="title">2.4.1.1. Testing the datasource</h4></div></div></div><div class="para">
+					Using the test client described in <a class="xref" href="#creating_a_jdbc_client">Section 2.6, “Creating a JDBC client”</a>, you may now verify the proper installation of your datasource.
+				</div></div></div></div><div class="section" id="configuring_jbossmessaging_persistence_manager"><div class="titlepage"><div><div><h2 class="title">2.5. Configuring JBoss Messaging Persistence Manager</h2></div></div></div><div class="para">
+			The persistence manager of JBoss Messaging uses the default datasource to create tables to store messages, transaction data and other indexes. Configuration of "persistence" is grouped in <code class="filename">xxx-persistence-service.xml</code> files. JBoss Enterprise Application Platform ships with a default <code class="filename">hsqldb-persistence-service.xml</code> file, which configures the Messaging server to use the Hypersonic database instance that ships by default with the JBoss Enterprise Application Platform.
+		</div><div class="para">
+			You can view the <code class="filename">hsqldb-persistence-service.xml</code> file in configurations based on the <span class="emphasis"><em>all</em></span> or <span class="emphasis"><em>default</em></span> configurations: 
+<pre class="screen">&lt;JBoss_Home&gt;/server/all/deploy/messaging/hsqldb-persistence-service.xml  and
+			&lt;JBoss_Home&gt;/server/default/deploy/messaging/hsqldb-persistence-service.xml</pre>
+
+		</div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+				The Hypersonic database is not recommended for production environments due to its limited support for transaction isolation and its low reliability under high load
+			</div></div></div><div class="para">
+			More information on configuring JBoss Messaging can be found in the <a href="http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/5.0.0/html-single/Administration_And_Configuration_Guide/index.html" class="mimir-link-warn" title="Mimir does not include content from: www.redhat.com">Administration and Configuration Guide</a>.
+		</div></div><div class="section" id="creating_a_jdbc_client"><div class="titlepage"><div><div><h2 class="title">2.6. Creating a JDBC client</h2></div></div></div><div class="para">
+			When testing a newly configured datasource we suggest using some very basic JDBC client code embedded in a JSP page. First of all, you should create an exploded WAR archive under the deploy directory which is simply a folder named "<code class="literal">jdbcclient.war</code>". In this folder, create a text document named client.jsp and paste the code below: 
+<pre class="programlisting">
+&lt;%@page contentType="text/html"
+ import="java.util.*,javax.naming.*,javax.sql.DataSource,java.sql.*"
+ %&gt;
+ &lt;%
+   
+  DataSource ds = null;
+  Connection con = null; 
+  PreparedStatement pr = null; 
+  InitialContext ic; 
+  try {
+  ic = new InitialContext();
+  ds = (DataSource)ic.lookup( "java:/DefaultDS" );
+  con = ds.getConnection(); 
+  pr = con.prepareStatement("SELECT USER_ID, PASSWD FROM JBM_USER");
+  ResultSet rs = pr.executeQuery();
+  while (rs.next()) {
+  out.println("&lt;br&gt; " +rs.getString("USER_ID") + " | " +rs.getString("PASSWD")); 
+  }
+  rs.close();
+  pr.close();
+  }catch(Exception e){
+  out.println("Exception thrown " +e); 
+  }finally{
+  if(con != null){
+  con.close();
+ }      
+} %&gt;</pre>
+			 Open up a web browser and hit the url: <a href="http://localhost:8080/jdbcclient/client.jsp" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/jdbcclient/client.jsp</a>. A list of users and password should show up as a result of the JDBC query: 
+<pre class="screen">
+dynsub | dynsub 
+guest | guest 
+j2ee | j2ee 
+john | needle 
+nobody | nobody
+</pre>
+
+		</div></div></div><div xml:lang="en-US" class="appendix" id="appe-Publican-Revision_History" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Appendix A. Revision History</h1></div></div></div><div class="para"><p><!--Empty--></p>
+		<div class="revhistory"><table summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 5.1.0-110.33.400</td><td align="left">2013-10-31</td><td align="left"><span class="author"><span class="firstname">Rüdiger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild with publican 4.0.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.1.0-110.33</td><td align="left">July 24 2012</td><td align="left"><span class="author"><span class="firstname">Ruediger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild for Publican 3.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.1-0</td><td align="left">Wed Sep 15 2010</td><td align="left"><span class="author"><span class="firstname">Laura</span> <span class="surname">Bailey</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Changed version number in line with new versioning requirements.</td></tr><tr><td>Revised for JBoss Enterprise Application Platform 5.1.0.GA.</td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div><div class="legalnotice"><a id="idm139997947832272"><!--Empty--></a><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2011 Red Hat, Inc.
+	</div><div class="para">
+		This document is licensed by Red Hat under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="mimir-link-warn" title="Mimir does not include content from: creativecommons.org">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original. If the document is modified, all Red Hat trademarks must be removed.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat Software Collections is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

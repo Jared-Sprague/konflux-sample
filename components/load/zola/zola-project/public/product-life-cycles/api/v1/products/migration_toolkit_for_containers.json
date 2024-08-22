@@ -1,0 +1,119 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended update support ends",
+      "name": "Extended update support",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "extra_header": "",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "name": "Migration Toolkit for Containers",
+  "package": "mtc-operator",
+  "product_extra_headers": [],
+  "release_cadence": "Not Specified",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "0fcd8a7f-3877-4f49-8337-537b5e28f729",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.8",
+      "openshift_compatibility": "4.14, 4.15, 4.16",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-10-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "Release of 1.9",
+          "date_format": "string",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "Release of 1.10",
+          "date_format": "string",
+          "name": "Maintenance support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support"
+        }
+      ],
+      "tier": "Agnostic",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.7",
+      "openshift_compatibility": "3, 4.14, 4.15, 4.16",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-03-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-07-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-07-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended update support"
+        }
+      ],
+      "tier": "Agnostic",
+      "type": "Maintenance Support"
+    }
+  ]
+}]}

@@ -1,0 +1,179 @@
+body {
+    scroll-behavior: auto;
+}
+
+/* customized subset of pfe-navigation lightdom styles */
+.pfe-nav__wrapper {
+    display: grid;
+    background: #151515;
+    grid-gap: 1em;
+    padding: 10px 16px 10px 16px;
+    height: 72px;
+    grid-template-columns: minmax(235px, auto) 1fr auto;
+    --pfe-icon--color: white;
+    --pfe-nav__nav-bar--highlight-color: #e00;
+    --pfe-icon--size: 18px;
+
+    overflow: hidden; /* no scrollbar on small devices */
+}
+
+/* split into two rows when size runs out */
+@media (max-width: 325px) {
+    .pfe-nav__wrapper {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 0 auto;
+    }
+}
+
+.pfe-nav__secondary-links-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: -10px;
+}
+.pfe-nav__secondary-links-wrapper .pfe-nav__secondary-link {
+    display: grid;
+    grid-template-rows: 26px 18px;
+    align-items: center;
+    justify-items: center;
+    padding: 14px 8px;
+    color: var(--pfe-nav__nav-bar--Color--default,var(--pfe-theme--color--ui-base--text,#fff));
+    font-size: var(--pfe-nav--FontSize--xs, 12px);
+    margin: 0;
+    border: 0;
+    white-space: nowrap;
+    text-decoration: none;
+    background: 0 0;
+    outline: 0;
+    appearance: none;
+    cursor: pointer;
+}
+.pfe-nav__secondary-links-wrapper .pfe-nav__secondary-link:hover {
+    box-shadow: inset 0 4px 0 0 var(--pfe-nav__nav-bar--highlight-color,var(--pfe-theme--color--ui-accent,#06c));
+}
+
+.pfe-nav__wrapper .pfe-nav__logo-link {
+    margin: 6px 8px 6px 0;
+    outline: 0;
+}
+
+.pfe-nav__wrapper .pfe-nav__logo-link .pfe-nav__logo-image {
+    max-height: 100%;
+    height: 40px;
+}
+
+.pfe-nav__wrapper pfe-icon {
+    padding: 2px 0 4px;
+}
+
+/* linkwarn */
+a.mimir-link-warn {
+    text-decoration: line-through !important;
+    text-decoration-color: rgb(0 0 0 / 68%) !important;
+    text-decoration-thickness: 1px !important;
+    opacity: 0.6;
+}
+
+a.mimir-link-warn:hover {
+    cursor: not-allowed;
+    text-decoration: none !important;
+}
+
+img.mimir-link-warn {
+    display: inline-block;
+    position: relative;
+    aspect-ratio: 1;
+    width: 400px;
+    max-width: 100%;
+}
+
+img.mimir-link-warn::before {
+    content: "Image not included in Mimir";
+    font-weight: bold;
+    background-color: lightgrey;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* center the linkwarn text on both axes */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img.mimir-link-warn:-moz-broken {
+    -moz-force-broken-image-icon: 1;
+}
+
+/* linkwarn approx */
+a.mimir-link-warn-approx::before {
+    content: '⚠️';
+    /* text-decoration: line-through !important; */
+    /* text-decoration-color: rgb(0 0 0 / 68%) !important; */
+    /* text-decoration-thickness: 1px !important; */
+    /* opacity: 0.6; */
+}
+
+/* sticky footer */
+.footer-main {
+    position: sticky !important;
+    top: 100vh;
+}
+
+/* position footnote label on same line as number marker */
+.footnote-definition p {
+    display: inline;
+}
+
+/* commonmark puts paragraphs inside list items, so ensure they don't add extra
+ * spacing if it's the only paragraph in the li */
+li p:first-child:last-child {
+    margin-bottom: 0;
+}
+
+
+/* give a little extra scroll padding to the top when targeting an id */
+body {
+    --mimir-fixed-header-height: 22px;
+    --mimir-scroll-margin: calc(4px + var(--mimir-fixed-header-height));
+}
+:target {
+    /* adjust scroll target by unclassified height, plus a little extra */
+    scroll-margin-top: var(--mimir-scroll-margin);
+}
+
+/* remove the excessive top margin of the cp-content element, as it creates too
+ * much empty space above the main page content, _especially_ when breadcrumbs
+ * are present */
+#cp-content {
+    padding-top: 0;
+}
+
+/* give breadcrumbs a little more breathing room below, with a very normative
+ * and not at all pathological way to override the specificity of the
+ * .breadcrumbs[class][class] selector in the Portal's main.css */
+.breadcrumbs[class][class][class] {
+    padding: 1rem 0 1.7rem;
+}
+
+
+/* improve the container sizing for the unified search app in Mimir */
+body main.search {
+    display: grid;
+    grid-template-columns: 1fr minmax(700px, 1800px) minmax(10px, 1fr);
+}
+body main.search bdo {
+    /* put the content (currently the workaround 'bdo' tag) into the middle column */
+    grid-column: 2;
+}
+
+/* remove minimim width when screen gets very narrow*/
+@media (max-width: 700px) {
+    body main.search {
+        grid-template-columns: 0 100% 0;
+    }
+}

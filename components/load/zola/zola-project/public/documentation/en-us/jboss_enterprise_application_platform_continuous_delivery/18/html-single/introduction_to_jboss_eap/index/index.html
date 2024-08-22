@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Introduction to JBoss EAP - JBoss Enterprise Application Platform Continuous Delivery 18
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Continuous Delivery" />
+<meta name="documentation_version" content="18" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2019-12-06T22:33:32.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/">JBoss Enterprise Application Platform Continuous Delivery</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/">18</a>
+                                
+                                
+                                Introduction to JBoss EAP
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Introduction to JBoss EAP</a>
+                    </li><li>
+                        <a href="#idm139771863174032">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#overview_of_general_concepts">
+                            1. Overview of General Concepts
+                        </a><ol>
+                <li>
+                        <a href="#java_language">
+                            1.1. Java
+                        </a>
+                    </li><li>
+                        <a href="#application_servers">
+                            1.2. Application Servers
+                        </a>
+                    </li><li>
+                        <a href="#java_ee_8">
+                            1.3. Java Enterprise Edition 8
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#overview_of_jboss_eap">
+                            2. Overview of JBoss EAP
+                        </a><ol>
+                <li>
+                        <a href="#about_eap">
+                            2.1. About JBoss EAP 7
+                        </a>
+                    </li><li>
+                        <a href="#subsystems_eap">
+                            2.2. Subsystems
+                        </a>
+                    </li><li>
+                        <a href="#high_availability">
+                            2.3. High Availability
+                        </a>
+                    </li><li>
+                        <a href="#operating_modes">
+                            2.4. Operating Modes
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#examples">
+                            3. Examples
+                        </a><ol>
+                <li>
+                        <a href="#simple_example">
+                            3.1. Simple Example
+                        </a>
+                    </li><li>
+                        <a href="#expanded_example">
+                            3.2. Expanded Example
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm139771867950752">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--introduction_to_jboss_eap">
+            <h1 class="title">Introduction to JBoss EAP</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139771863033232"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Continuous Delivery</span> <span class="productnumber">18</span></div><div><h2 class="subtitle">For Use with JBoss Enterprise Application Platform Continuous Delivery 18</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139771867950752">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This document provides a high-level, conceptual overview of Red Hat JBoss Enterprise Application Platform (JBoss EAP). The document also introduces you to <a class="link" href="#subsystems_eap" title="2.2. Subsystems">JBoss EAP subsystems</a> and the <a class="link" href="#operating_modes" title="2.4. Operating Modes">different operating modes</a> that JBoss EAP offers.
+			</div></div></div></div><hr/></div><section class="preface" id="idm139771863174032"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p id="preface_cd">
+			This document is intended for use with the JBoss Enterprise Application Platform continuous delivery release 18, which is a Technology Preview release available in the cloud only.
+		</p><p>
+			Some features described in this document might not work or might not be available on Red Hat OpenShift Online and Red Hat OpenShift Container Platform. For specific details about the feature differences in the JBoss EAP CD release, see the <a class="link" href="/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/jboss_eap_continuous_delivery_18_release_notes/index/#cd_release_limitations">Release Limitations</a> section in the <span class="emphasis"><em>JBoss EAP Continuous Delivery 18 Release Notes</em></span>.
+		</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+				This continuous delivery release for JBoss EAP is provided as Technology Preview only. Technology Preview features are not supported with Red Hat production service level agreements (SLAs), might not be functionally complete, and Red Hat does not recommend to use them for production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.
+			</p><p>
+				See <a class="link mimir-link-warn" href="https://access.redhat.com/support/offerings/techpreview" title="This content is not included in Mimir.">Technology Preview Features Support Scope</a> on the Red Hat Customer Portal for information about the support scope for Technology Preview features.
+			</p></div></div></section><section class="chapter" id="overview_of_general_concepts"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Overview of General Concepts</h1></div></div></div><p>
+			Before understanding how Red Hat JBoss Enterprise Application Platform can be configured and deployed, there are some important concepts to understand.
+		</p><section class="section" id="java_language"><div class="titlepage"><div><div><h2 class="title">1.1. Java</h2></div></div></div><p>
+				Java is a programming language and a computing platform that incorporates concepts such as object-orientation, classes, and concurrency. Java applications are compiled down to bytecode and are run inside a Java Virtual Machine (JVM).
+			</p></section><section class="section" id="application_servers"><div class="titlepage"><div><div><h2 class="title">1.2. Application Servers</h2></div></div></div><p>
+				An application server, or app server, is software that provides an environment to run web applications. Most app servers also provide functionality to web applications running in their environment through a set of APIs. For example, an app server can provide an API for connecting to a database.
+			</p></section><section class="section" id="java_ee_8"><div class="titlepage"><div><div><h2 class="title">1.3. Java Enterprise Edition 8</h2></div></div></div><p>
+				Java Platform, Enterprise Edition (Java EE) is a standards-based enterprise platform that provides both an API and runtime environment for running and developing Java applications. The goal is to improve developer productivity by providing rich enterprise capabilities in easy to consume frameworks that eliminate boilerplate and reduce technical burden. The frameworks that compose Java EE are heavily tested in combination.
+			</p><p>
+				Java EE 8, which is based on <a class="link mimir-link-warn" href="https://www.jcp.org/en/jsr/detail?id=366" title="Mimir does not include content from: www.jcp.org">JSR 366</a>, builds upon Java EE 7. The primary focus of this release was to improve API and programming models needed for today’s applications. In addition to the Java EE 8 (JSR 366) specification, the following specifications are new or updated in Java EE 8:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=250" title="Mimir does not include content from: jcp.org">JSR 250</a>: Common Annotations 1.3
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=338" title="Mimir does not include content from: jcp.org">JSR 338</a>: Java Persistence 2.2
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=356" title="Mimir does not include content from: jcp.org">JSR 356</a>: Java API for WebSocket 1.1
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=365" title="Mimir does not include content from: jcp.org">JSR 365</a>: Contexts and Dependency Injection (CDI) 2.0
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=367" title="Mimir does not include content from: jcp.org">JSR 367</a>: The Java API for JSON Binding (JSON-B) 1.0
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=369" title="Mimir does not include content from: jcp.org">JSR 369</a>: Java Servlet 4.0
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=370" title="Mimir does not include content from: jcp.org">JSR 370</a>: Java API for RESTful Web Services (JAX-RS) 2.1
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=372" title="Mimir does not include content from: jcp.org">JSR 372</a>: JavaServer Faces (JSF) 2.3
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=374" title="Mimir does not include content from: jcp.org">JSR 374</a>: Java API for JSON Processing (JSON-P) 1.1
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=375" title="Mimir does not include content from: jcp.org">JSR 375</a>: Java EE Security API 1.0
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=380" title="Mimir does not include content from: jcp.org">JSR 380</a>: Bean Validation 2.0
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://jcp.org/en/jsr/detail?id=919" title="Mimir does not include content from: jcp.org">JSR 919</a>: JavaMail 1.6
+					</li></ul></div></section></section><section class="chapter" id="overview_of_jboss_eap"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Overview of JBoss EAP</h1></div></div></div><section class="section" id="about_eap"><div class="titlepage"><div><div><h2 class="title">2.1. About JBoss EAP 7</h2></div></div></div><p>
+				Red Hat JBoss Enterprise Application Platform (JBoss EAP) 7.3 is a certified implementation of the Java Enterprise Edition (Java EE) 8 specification. Major versions of JBoss EAP are forked from the <a class="link mimir-link-warn" href="http://wildfly.org" title="Mimir does not include content from: wildfly.org">WildFly</a> community project at certain points when the community project has reached the desired feature completeness level. After that point, an extended period of testing and productization takes place in which JBoss EAP is stabilized, certified, and enhanced for production use. During the lifetime of a JBoss EAP major version, selected features may be cherry-picked and back-ported from the community project into a series of feature enhancing minor releases within the same major version family.
+			</p><p>
+				JBoss EAP provides preconfigured options for features such as high-availability clustering, messaging, and distributed caching. It also enables users to write, deploy, and run applications using the various APIs and services that JBoss EAP provides.
+			</p><p>
+				JBoss EAP includes a modular structure that allows service enabling only when required, improving startup speed. The web-based management console and management command line interface (CLI) make editing XML configuration files unnecessary and add the ability to script and automate tasks. In addition, JBoss EAP includes APIs and development frameworks for quickly developing secure and scalable Java EE applications.
+			</p><div class="table" id="idm139771862574896"><p class="title"><strong>Table 2.1. Features of JBoss EAP</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"><!--Empty--></col><col style="width: 50%; " class="col_2"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm139771862570064" scope="col">Feature</th><th align="left" valign="top" id="idm139771864625888" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Java EE 8 compliant
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								Java Enterprise Edition 8 full platform and Web Profile certified.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Managed Domain
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								Centralized management of multiple server instances and physical hosts, while a standalone server allows for a single server instance. Per-server group management of configuration, deployment, socket bindings, modules, extensions, and system properties. Centralized and simplified management of application security (including security domains).
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Management console and management CLI
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								New domain or standalone server management interfaces. The management CLI also includes a batch mode that can script and automate management tasks. Directly editing the JBoss EAP XML configuration files is not recommended.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Simplified directory layout
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								The modules directory contains all application server modules. The domain and standalone directories contain the artifacts and configuration files for domain and standalone deployments respectively.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Modular class-loading mechanism
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								Modules are loaded and unloaded on demand. This improves performance, has security benefits, and reduces start-up and restart times.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Streamlined datasource management
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								Database drivers are deployed like other services. In addition, datasources are created and managed using the management console and management CLI.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm139771862570064"> <p>
+								Unified security framework
+							</p>
+							 </td><td align="left" valign="top" headers="idm139771864625888"> <p>
+								Elytron provides a single unified framework that can manage and configure access for both standalone servers and managed domains. It can also be used to configure security access for applications deployed to JBoss EAP servers.
+							</p>
+							 </td></tr></tbody></table></div></div></section><section class="section" id="subsystems_eap"><div class="titlepage"><div><div><h2 class="title">2.2. Subsystems</h2></div></div></div><p>
+				Many of the APIs and capabilities that are exposed to applications deployed to JBoss EAP are organized into subsystems. These subsystems can be configured by administrators to provide different behavior, depending on the goal of the application. For instance, if an application requires a database, a datasource can be configured in the <code class="literal">datasources</code> subsystem and accessed by that application after it is deployed to that JBoss EAP server or domain.
+			</p></section><section class="section" id="high_availability"><div class="titlepage"><div><div><h2 class="title">2.3. High Availability</h2></div></div></div><p>
+				High availability (HA) in JBoss EAP refers to multiple JBoss EAP instances working together to provide applications that are more resistant to fluctuations in traffic, server load, and server failure. HA incorporates concepts such as scalability, load balancing, and fault tolerance.
+			</p></section><section class="section" id="operating_modes"><div class="titlepage"><div><div><h2 class="title">2.4. Operating Modes</h2></div></div></div><p>
+				In addition to providing functionality and APIs to its applications, JBoss EAP has powerful management capabilities. These management capabilities differ depending on which operating mode is used to start JBoss EAP. JBoss EAP offers a <span class="emphasis"><em>standalone server</em></span> operating mode for managing discrete instances and a <span class="emphasis"><em>managed domain</em></span> operating mode for managing groups of instances from a single control point.
+			</p></section></section><section class="chapter" id="examples"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Examples</h1></div></div></div><p>
+			Below are several examples to illustrate how JBoss EAP works and where it fits into different environments.
+		</p><section class="section" id="simple_example"><div class="titlepage"><div><div><h2 class="title">3.1. Simple Example</h2></div></div></div><div class="informalfigure"><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Introduction_to_JBoss_EAP-en-US/images/12f621751f842d5d4e9b6e2bd5e10083/intro-example-simple.png" width="800" alt="intro example simple" /></div></div><p>
+				This example shows a simple JBoss EAP setup. The JBoss EAP instance has two applications deployed to it. It is also configured to connect to a database using the <code class="literal">datasources</code> subsystem and a Kerberos server which can use either the legacy <code class="literal">security</code> subsystem or the <code class="literal">elytron</code> subsystem. These connections are exposed to the deployed applications. The JBoss EAP instance handles requests through the <code class="literal">undertow</code> subsystem and directs those requests to the appropriate application. The applications use the APIs exposed by JBoss EAP to connect to the database and Kerberos server, and perform their implemented business logic. After completion, the applications send a response back to the requester through the <code class="literal">undertow</code> subsystem.
+			</p></section><section class="section" id="expanded_example"><div class="titlepage"><div><div><h2 class="title">3.2. Expanded Example</h2></div></div></div><div class="informalfigure"><div class="mediaobject"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Introduction_to_JBoss_EAP-en-US/images/d61b43b33fe5621529abd37abc081a34/intro-example-expanded.png" width="800" alt="intro example expanded" /></div></div><p>
+				This example illustrates a more complex setup involving three JBoss EAP instances arranged in a managed domain with either a load balancer or a web server. The three instances are also configured to support high availability through load balancing using mod_cluster and session replication using Infinispan. All three JBoss EAP instances have a web application, a web service, and EJB deployed. One JBoss EAP instance has a JMS queue configured through the <code class="literal">messaging-activemq</code> subsystem. All three JBoss EAP instances have connections to a database through the datasource. They also have a connection to the LDAP server using either the legacy <code class="literal">security</code> subsystem or the <code class="literal">elytron</code> subsystem. In addition, one JBoss EAP instance is configured to connect to an external message broker through the <code class="literal">messaging-activemq</code> subsystem. Those configured connections are exposed to the applications, web services, EJBs, and JMS queues deployed to that respective instance.
+			</p><p>
+				All inbound requests intended for the application, web service, or EJB are first received by the load balancer or web server. Based on the configured load balancing algorithm and the information provided by each JBoss EAP instance, the web server or load balancer directs that request to the appropriate JBoss EAP instance. The JBoss EAP instance handles requests through the <code class="literal">undertow</code> subsystem and directs those requests to the appropriate application. The applications use the APIs exposed by JBoss EAP to connect to the database and Kerberos server, and perform their implemented business logic. After completion, the applications send a response back to the requester through the <code class="literal">undertow</code> subsystem. Any non-persisted information, for example session information, is propagated among the JBoss EAP instances through the <code class="literal">infinispan</code> subsystem.
+			</p><p>
+				<br/><br/><br/><br/>
+			</p><p>
+				<span class="emphasis"><em><span class="right right">Revised on 2019-12-05 13:42:48 UTC</span></em></span>
+			</p></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm139771867950752"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2019 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

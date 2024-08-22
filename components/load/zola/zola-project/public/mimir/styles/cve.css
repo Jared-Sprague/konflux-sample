@@ -1,0 +1,330 @@
+.pfe-l-grid.pfe-m-gutters {
+  grid-gap: 1rem;
+  margin: 1rem;
+}
+
+/* overriding bootstrap and or cp-chrome/nimbus theme styles  */
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+#cve-overview {
+    margin-top: 0;
+    padding: 1rem 0 1rem;
+}
+
+.card .card-heading {
+  font-weight: 500;
+}
+
+.cvss-alert {
+  --rh-border-width-md: 3px;
+  --rh-font-weight-heading-bold: 500;
+}
+
+.cvss-alert p {
+  font-size: 0.875rem;
+  line-height: 24px;
+  color: #000;
+}
+
+.cvss-alert h3 {
+  line-height: 18.2px;
+  color: #004080;
+}
+
+#cve-details-statement p {
+  margin-bottom: 8px;
+}
+
+/* End style overrides */
+
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+#cve-overview .cve-public-date {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+#cve-overview .cve-public-date,
+#cve-overview .cve-last-modified {
+  font-size: 1rem;
+}
+
+#cve-overview .dropdown-menu li {
+  cursor: pointer;
+  padding: 0.4375rem 0.625rem;
+}
+
+#cve-overview .dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+#cve-overview .cve-user-preferences {
+  text-align: right;
+}
+
+#stat-card-impact pfe-icon {
+  --pfe-icon--size: 45px;
+  margin: 0 auto;
+}
+
+#cve-overview .cve-user-preferences div {
+  margin-top: 0.5rem;
+}
+
+#cve-overview #stat-card-impact .stat-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+#cve-overview #stat-card-impact:hover .stat-title {
+  text-decoration: none;
+}
+
+#cve-overview #stat-card-impact .stat-subtitle {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#cve-overview #stat-card-impact .cve-impact-critical,
+.label.cve-impact-critical {
+  background-color: #a30000;
+  border-color: #a30000;
+}
+
+#cve-overview #stat-card-impact .cve-impact-important,
+.label.cve-impact-important {
+  background-color: #b85c00;
+  border-color: #b85c00;
+}
+
+#cve-overview #stat-card-impact .cve-impact-moderate,
+.label.cve-impact-moderate {
+  background-color: #f5c12e;
+  border-color: #f5c12e;
+  color: #002952;
+  --pfe-icon--color: #002952;
+}
+
+#cve-overview #stat-card-impact .cve-impact-low,
+.label.cve-impact-low {
+  background-color: #316dc1;
+  border-color: #316dc1;
+}
+
+.stat-card-left:hover > .stat-number {
+  background-color: #37424a;
+  border-color: #37424a;
+}
+
+#cve-overview .cve-impact-scoring li {
+  margin-bottom: 15px;
+}
+
+#cve-details-description .cve-details-mitre {
+  font-weight: 500;
+}
+
+#cve-affected-packages {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#cve-affected-packages input[type="search"] {
+  margin-left: 10px;
+}
+
+#cve-details-description h2 {
+  margin-top: 0;
+}
+
+#cve-faq {
+  background-color: #f0f0f0;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#cve-faq .pfe-l-grid.pfe-m-gutters {
+  margin: 0;
+  padding: 0;
+}
+
+#cve-faq h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* overriding primer body color value */
+body,
+p,
+.card-bordered,
+h3.card-heading {
+  color: #151515;
+}
+
+#glossary-link {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#glossary-link span {
+  font-weight: 500;
+}
+
+h1.headline,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+section > h1:first-of-type,
+h2:first-of-type,
+h3:first-of-type,
+h4:first-of-type,
+h5:first-of-type,
+h6:first-of-type {
+  margin-top: 1.5rem;
+}
+
+h3:first-of-type {
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+.severity-text {
+  line-height: 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.slide-enter-active {
+  transition: opacity 0.5s, transform 0.75s;
+}
+
+.slide-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+
+#cve-references pfe-accordion {
+  word-break: break-word;
+  border: none;
+}
+
+#cve-references pfe-accordion a {
+  display: block;
+  margin: 0.75rem 0;
+}
+
+#cve-footer {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#cve-footer p {
+  font-size: 1rem;
+  color: #707070;
+  margin: 0;
+}
+
+#cve-footer a {
+  text-decoration: underline;
+}
+
+pfe-card.callout {
+  --pfe-card__header--BackgroundColor: #37424a;
+  --pfe-card__header--Color: white;
+}
+
+pfe-cta a {
+  font-family: Red Hat Display, RedHatDisplay, Helvetica Neue, Arial, sans-serif;
+  font-weight: 400;
+}
+
+pfe-card.callout h3 {
+  margin: 0;
+}
+
+@media only screen and (min-width: 90rem) {
+  .container {
+    width: 90rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .pfe-l-grid.pfe-m-gutters {
+    grid-gap: 1.5rem;
+    margin: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  #cve-overview .cve-user-preferences {
+    text-align: left;
+  }
+}
+
+
+
+#affected-packages-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 50px;
+}
+/* switch to two rows at 1200px */
+@media screen and (max-width: 1200px) {
+    #affected-packages-controls {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #affected-packages-controls {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        height: 11em;
+    }
+}
+
+#cve-filter-input {
+    height: 50px;
+}
+

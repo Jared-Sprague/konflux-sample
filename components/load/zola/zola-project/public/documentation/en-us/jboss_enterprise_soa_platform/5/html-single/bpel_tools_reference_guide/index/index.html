@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+BPEL Tools Reference Guide - JBoss Enterprise SOA Platform 5
+</title>
+        
+<meta name="product" content="JBoss Enterprise SOA Platform" />
+<meta name="documentation_version" content="5" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2017-11-09T09:53:12.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_soa_platform/5/">JBoss Enterprise SOA Platform</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_soa_platform/5/">5</a>
+                                
+                                
+                                BPEL Tools Reference Guide
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">BPEL Tools Reference Guide</a>
+                    </li><li>
+                        <a href="#pref-BPEL_Tools_Reference_Guide-Preface">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#chap-Preface">
+                            1. Preface
+                        </a><ol>
+                <li>
+                        <a href="#Business_Integration">
+                            1.1. Business Integration
+                        </a>
+                    </li><li>
+                        <a href="#What_is_a_Service-Oriented_Architecture1">
+                            1.2. What is a Service-Oriented Architecture?
+                        </a>
+                    </li><li>
+                        <a href="#Key_Components_of_a_Service-Oriented_Architecture2">
+                            1.3. Key Points of a Service-Oriented Architecture
+                        </a>
+                    </li><li>
+                        <a href="#What_is_the_JBoss_Enterprise_SOA_Platform2">
+                            1.4. What is the JBoss Enterprise SOA Platform?
+                        </a>
+                    </li><li>
+                        <a href="#The_Service-Oriented_Architecture_Paradigm">
+                            1.5. The Service-Oriented Architecture Paradigm
+                        </a>
+                    </li><li>
+                        <a href="#Core_and_Components">
+                            1.6. Core and Components
+                        </a>
+                    </li><li>
+                        <a href="#Components_of_the_JBoss_Enterprise_SOA_Platform2">
+                            1.7. Components of the JBoss Enterprise SOA Platform
+                        </a>
+                    </li><li>
+                        <a href="#JBoss_SOA_Features">
+                            1.8. JBoss Enterprise SOA Platform Features
+                        </a>
+                    </li><li>
+                        <a href="#Features_of_the_JBoss_Enterprise_SOA_Platforms_JBossESB_Component">
+                            1.9. Features of the JBoss Enterprise SOA Platform's JBossESB Component
+                        </a>
+                    </li><li>
+                        <a href="#Task_Management">
+                            1.10. Task Management
+                        </a>
+                    </li><li>
+                        <a href="#Integration_Use_Case">
+                            1.11. Integration Use Case
+                        </a>
+                    </li><li>
+                        <a href="#Utilising_JBoss_SOA_in_a_Business_Environment">
+                            1.12. Utilising the JBoss Enterprise SOA Platform in a Business Environment
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#chap-Introduction">
+                            2. Introduction
+                        </a><ol>
+                <li>
+                        <a href="#Intended_Audience7">
+                            2.1. Intended Audience
+                        </a>
+                    </li><li>
+                        <a href="#Aim_of_the_Guide2">
+                            2.2. Aim of the Guide
+                        </a>
+                    </li><li>
+                        <a href="#Installation2">
+                            2.3. Installation
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#chap-Tasks">
+                            3. Tasks
+                        </a><ol>
+                <li>
+                        <a href="#Creating_a_BPEL_project">
+                            3.1. Creating a BPEL Project
+                        </a>
+                    </li><li>
+                        <a href="#Creating_a_BPEL_Process1">
+                            3.2. Creating a BPEL Process
+                        </a>
+                    </li><li>
+                        <a href="#Create_a_New_Server_Runtime">
+                            3.3. Create a New Server Runtime
+                        </a>
+                    </li><li>
+                        <a href="#Editing_a_BPEL_Process_File">
+                            3.4. Editing a BPEL Process File
+                        </a>
+                    </li><li>
+                        <a href="#Tabs_Shown_in_the_Properties_View">
+                            3.5. Tabs Shown in the Properties View
+                        </a>
+                    </li><li>
+                        <a href="#Observing_a_BPEL_Process1">
+                            3.6. Observing a BPEL Process
+                        </a>
+                    </li><li>
+                        <a href="#Adding_a_Service_to_a_WSDL_File">
+                            3.7. Adding a Service to a WSDL File
+                        </a>
+                    </li><li>
+                        <a href="#Creating_a_deploy.xml_File">
+                            3.8. Creating a deploy.xml File
+                        </a>
+                    </li><li>
+                        <a href="#Creating_JBoss_BPEL_Server1">
+                            3.9. Creating JBoss BPEL Server
+                        </a>
+                    </li><li>
+                        <a href="#Creating_Correlation_Sets1">
+                            3.10. Creating Correlation Sets
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#chap-Reference">
+                            4. Reference
+                        </a><ol>
+                <li>
+                        <a href="#Wizards">
+                            4.1. Wizards
+                        </a>
+                    </li><li>
+                        <a href="#Views1">
+                            4.2. Views
+                        </a>
+                    </li><li>
+                        <a href="#Property_Section_Tabs">
+                            4.3. Property Section Tabs
+                        </a>
+                    </li><li>
+                        <a href="#Process_Property_Sheet_Tabs1">
+                            4.4. Process Property Sheet Tabs
+                        </a>
+                    </li><li>
+                        <a href="#Details_Tab_Options1">
+                            4.5. Details Tab Options
+                        </a>
+                    </li><li>
+                        <a href="#BPEL_Designer_Features">
+                            4.6. BPEL Designer Features
+                        </a>
+                    </li><li>
+                        <a href="#BPEL_Designer_Concepts">
+                            4.7. BPEL Designer Concepts
+                        </a>
+                    </li><li>
+                        <a href="#Structured_Activities1">
+                            4.8. Structured Activities
+                        </a>
+                    </li><li>
+                        <a href="#Fault_Compensation_Termination_and_Event_Handlers">
+                            4.9. Fault, Compensation, Termination and Event Handlers
+                        </a>
+                    </li><li>
+                        <a href="#BPEL_Deployment_Descriptor_Editor_Properties">
+                            4.10. BPEL Deployment Descriptor Editor Properties
+                        </a>
+                    </li><li>
+                        <a href="#Dialogs">
+                            4.11. Dialogs
+                        </a>
+                    </li><li>
+                        <a href="#Type_Selection">
+                            4.12. Type Selection
+                        </a>
+                    </li><li>
+                        <a href="#Select_WSDL_Property">
+                            4.13. Select WSDL Property
+                        </a>
+                    </li><li>
+                        <a href="#Create_WSDL_Property">
+                            4.14. Create WSDL Property
+                        </a>
+                    </li><li>
+                        <a href="#Create_WSDL_Property_Alias">
+                            4.15. Create WSDL Property Alias
+                        </a>
+                    </li><li>
+                        <a href="#Cheat_Sheets1">
+                            4.16. Cheat Sheets
+                        </a>
+                    </li><li>
+                        <a href="#Context_Menu">
+                            4.17. Context Menu
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#appe-BPEL_Tools_Reference_Guide-Revision_History">
+                            A. Revision History
+                        </a>
+                    </li><li>
+                        <a href="#idm139887179947552">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--bpel_tools_reference_guide">
+            <h1 class="title">BPEL Tools Reference Guide</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139887177578512" lang="en-US"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise SOA Platform</span> <span class="productnumber">5</span></div><div><h2 class="subtitle">This guide is for developers</h2></div><p class="edition">Edition 5.3.1</p><div><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="https://access.redhat.com/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/a78399a6916bd5b945caa082f6c4fa4e/title_logo.svg" type="image/svg+xml"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/20c014cff25dbc2aeb4126383228ede4/title_logo.png" alt="" /></object></span>
+
+	</h3></div><div><div xml:lang="en-US" class="authorgroup" lang="en-US"><div class="author"><h3 class="author"><span class="firstname"> David </span> <span class="surname"> Le Sage </span></h3><div class="affiliation"><span class="orgname"> Red Hat </span> <span class="orgdiv"> Engineering Content Services </span></div><code class="email"><a class="email mimir-link-warn" href="mailto:dlesage@redhat.com" title="This content is not included in Mimir.">dlesage@redhat.com</a></code></div></div></div><div><a href="#idm139887179947552">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+			This guide teaches developers to use JBDS' BPEL plug-in.
+		</div></div></div></div></div><div xml:lang="en-US" class="preface" id="pref-BPEL_Tools_Reference_Guide-Preface" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><div class="para">
+</div></div><div xml:lang="en-US" class="chapter" id="chap-Preface" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Preface</h1></div></div></div><div xml:lang="en-US" class="section" id="Business_Integration" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.1. Business Integration</h2></div></div></div><div class="para">
+		In order to provide a dynamic and competitive business infrastructure, it is crucial to have a service-oriented architecture in place that enables your disparate applications and data sources to communicate with each other with minimum overhead.
+	</div><div class="para">
+		The JBoss Enterprise SOA Platform is a framework capable of orchestrating business services without the need to constantly reprogram them to fit changes in business processes. By using its business rules and message transformation and routing capabilities, JBoss Enterprise SOA Platform enables you to manipulate business data from multiple sources.
+	</div><div class="simplesect" id="idm139887172551680"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12942-364832+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Business+Integration&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="What_is_a_Service-Oriented_Architecture1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.2. What is a Service-Oriented Architecture?</h2></div></div></div><div class="para"><div class="title">Introduction</div><p>
+			A <em class="firstterm">Service Oriented Architecture</em> (SOA) is not a single program or technology. Think of it, rather, as a software design paradigm.
+		</p></div><div class="para">
+		As you may already know, a <em class="firstterm">hardware bus</em> is a physical connector that ties together multiple systems and subsystems. If you use one, instead of having a large number of point-to-point connectors between pairs of systems, you can simply connect each system to the central bus. An <em class="firstterm">enterprise service bus</em> (ESB) does exactly the same thing in software.
+	</div><div class="para">
+		The ESB sits in the architectural layer above a messaging system. This messaging system facilitates <em class="firstterm">asynchronous communications</em> between services through the ESB. In fact, when you are using an ESB, everything is, conceptually, either a <em class="firstterm">service</em> (which, in this context, is your application software) or a <em class="firstterm">message</em> being sent between services. The services are listed as connection addresses (known as <em class="firstterm">end-points references</em>.)
+	</div><div class="para">
+		It is important to note that, in this context, a "service" is not necessarily always a web service. Other types of applications, using such transports as File Transfer Protocol and the Java Message Service, can also be "services."
+	</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			At this point, you may be wondering if an enterprise service bus is the same thing as a service-oriented architecture. The answer is, "Not exactly." An ESB does not form a service-oriented architecture of itself. Rather, it provides many of the tools than can be used to build one. In particular, it facilitates the <em class="firstterm">loose-coupling</em> and <em class="firstterm">asynchronous message passing</em> needed by a SOA. Always think of a SOA as being more than just software: it is a series of principles, patterns and best practices.
+		</div></div></div><div class="simplesect" id="idm139887157116816"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=6819-299120+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=What+is+a+Service-Oriented+Architecture%3F&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Key_Components_of_a_Service-Oriented_Architecture2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.3. Key Points of a Service-Oriented Architecture</h2></div></div></div><div class="para">
+		These are the key components of a service-oriented architecture:
+	</div><div class="orderedlist"><ol><li class="listitem"><div class="para">
+				the <em class="firstterm">messages</em> being exchanged
+			</div></li><li class="listitem"><div class="para">
+				the <em class="firstterm">agents</em> that act as service requesters and providers
+			</div></li><li class="listitem"><div class="para">
+				the <em class="firstterm">shared transport mechanisms</em> that allow the messages to flow back and forth.
+			</div></li></ol></div><div class="simplesect" id="idm139887162347632"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=6670-364901+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Key+Points+of+a+Service-Oriented+Architecture&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="What_is_the_JBoss_Enterprise_SOA_Platform2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.4. What is the JBoss Enterprise SOA Platform?</h2></div></div></div><div class="para">
+		The JBoss Enterprise SOA Platform is a framework for developing enterprise application integration (EAI) and service-oriented architecture (SOA) solutions. It is made up of an enterprise service bus (JBoss ESB) and some business process automation infrastructure. It allows you to build, deploy, integrate and orchestrate business services.
+	</div><div class="simplesect" id="idm139887167152736"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=5591-299120+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=What+is+the+JBoss+Enterprise+SOA+Platform%3F&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="The_Service-Oriented_Architecture_Paradigm" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.5. The Service-Oriented Architecture Paradigm</h2></div></div></div><div class="para">
+		The service-oriented architecture (SOA) consists of three roles: requester, provider, and broker.
+	</div><div class="variablelist"><dl class="variablelist"><dt><span class="term">Service Provider</span></dt><dd><div class="para">
+					A service provider allows access to services, creates a description of a service and publishes it to the service broker.
+				</div></dd><dt><span class="term">Service Requester</span></dt><dd><div class="para">
+					A service requester is responsible for discovering a service by searching through the service descriptions given by the service broker. A requester is also responsible for binding to services provided by the service provider.
+				</div></dd><dt><span class="term">Service Broker</span></dt><dd><div class="para">
+					A service broker hosts a registry of service descriptions. It is responsible for linking a requester to a service provider.
+				</div></dd></dl></div><div class="simplesect" id="idm139887171213296"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12973-365005+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=The+Service-Oriented+Architecture+Paradigm&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Core_and_Components" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.6. Core and Components</h2></div></div></div><div class="para">
+		The JBoss Enterprise SOA Platform provides a comprehensive server for your data integration needs. On a basic level, it is capable of updating business rules and routing messages through an Enterprise Service Bus.
+	</div><div class="para">
+		The heart of the JBoss Enterprise SOA Platform is the Enterprise Service Bus. JBoss (ESB) creates an environment for sending and receiving messages. It is able to apply “actions” to messages to transform them and route them between services.
+	</div><div class="para">
+		There are a number of components that make up the JBoss Enterprise SOA Platform. Along with the ESB, there is a registry (jUDDI), transformation engine (Smooks), message queue (HornetQ) and BPEL engine (Riftsaw).
+	</div><div class="simplesect" id="idm139887160350272"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12943-364832+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Core+and+Components&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Components_of_the_JBoss_Enterprise_SOA_Platform2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.7. Components of the JBoss Enterprise SOA Platform</h2></div></div></div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				A full Java EE-compliant application server (the JBoss Enterprise Application Platform)
+			</div></li><li class="listitem"><div class="para">
+				an enterprise service bus (JBoss ESB)
+			</div></li><li class="listitem"><div class="para">
+				a business process management system (jBPM)
+			</div></li><li class="listitem"><div class="para">
+				a business rules engine (JBoss Rules)
+			</div></li><li class="listitem"><div class="para">
+				support for the optional JBoss Enterprise Data Services (EDS) product.
+			</div></li></ul></div><div class="simplesect" id="idm139887170646512"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=6504-366703+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Components+of+the+JBoss+Enterprise+SOA+Platform&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="JBoss_SOA_Features" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.8. JBoss Enterprise SOA Platform Features</h2></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">The JBoss Enterprise Service Bus (ESB)</span></dt><dd><div class="para">
+					The ESB sends messages between services and transforms them so that they can be processed by different types of systems.
+				</div></dd><dt><span class="term">Business Process Execution Language (BPEL)</span></dt><dd><div class="para">
+					You can use web services to orchestrate business rules using this language. It is included with SOA for the simple execution of business process instructions.
+				</div></dd><dt><span class="term">Java Universal Description, Discovery and Integration (jUDDI)</span></dt><dd><div class="para">
+					This is the default service registry in SOA. It is where all the information pertaining to services on the ESB are stored.
+				</div></dd><dt><span class="term">Smooks</span></dt><dd><div class="para">
+					This transformation engine can be used in conjunction with SOA to process messages. It can also be used to split messages and send them to the correct destination.
+				</div></dd><dt><span class="term">JBoss Rules</span></dt><dd><div class="para">
+					This is the rules engine that is packaged with SOA. It can infer data from the messages it receives to determine which actions need to be performed.
+				</div></dd></dl></div><div class="simplesect" id="idm139887162654976"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12945-365858+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=JBoss+Enterprise+SOA+Platform+Features&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Features_of_the_JBoss_Enterprise_SOA_Platforms_JBossESB_Component" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.9. Features of the JBoss Enterprise SOA Platform's JBossESB Component</h2></div></div></div><div class="para">
+		The JBoss Enterprise SOA Platform's JBossESB component supports:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Multiple transports and protocols
+			</div></li><li class="listitem"><div class="para">
+				A listener-action model (so that you can loosely-couple services together)
+			</div></li><li class="listitem"><div class="para">
+				Content-based routing (through the JBoss Rules engine, XPath, Regex and Smooks)
+			</div></li><li class="listitem"><div class="para">
+				Integration with the JBoss Business Process Manager (jBPM) in order to provide service orchestration functionality
+			</div></li><li class="listitem"><div class="para">
+				Integration with JBoss Rules in order to provide business rules development functionality.
+			</div></li><li class="listitem"><div class="para">
+				Integration with a BPEL engine.
+			</div></li></ul></div><div class="para">
+		Furthermore, the ESB allows you to integrate legacy systems in new deployments and have them communicate either synchronously or asynchronously.
+	</div><div class="para">
+		In addition, the enterprise service bus provides an infrastructure and set of tools that can:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Be configured to work with a wide variety of transport mechanisms (such as e-mail and JMS),
+			</div></li><li class="listitem"><div class="para">
+				Be used as a general-purpose object repository,
+			</div></li><li class="listitem"><div class="para">
+				Allow you to implement pluggable data transformation mechanisms,
+			</div></li><li class="listitem"><div class="para">
+				Support logging of interactions.
+			</div></li></ul></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			There are two trees within the source code: <code class="filename">org.jboss.internal.soa.esb</code> and <code class="filename">org.jboss.soa.esb</code>. Use the contents of the <code class="filename">org.jboss.internal.soa.esb</code> package sparingly because they are subject to change without notice. By contrast, everything within the <code class="filename">org.jboss.soa.esb</code> package is covered by Red Hat's deprecation policy.
+		</div></div></div><div class="simplesect" id="idm139887167854224"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=6820-299120+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Features+of+the+JBoss+Enterprise+SOA+Platform%27s+JBossESB+Component&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Task_Management" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.10. Task Management</h2></div></div></div><div class="para">
+		JBoss SOA simplifies tasks by designating tasks to be performed universally across all systems it affects. This means that the user does not have to configure the task to run separately on each terminal. Users can connect systems easily by using web services.
+	</div><div class="para">
+		Businesses can save time and money by using JBoss SOA to delegate their transactions once across their networks instead of multiple times for each machine. This also decreases the chance of errors ocurring.
+	</div><div class="simplesect" id="idm139887159634288"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12946-364832+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Task+Management&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Integration_Use_Case" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.11. Integration Use Case</h2></div></div></div><div class="para">
+		Acme Equity is a large financial service. The company possesses many databases and systems. Some are older, COBOL-based legacy systems and some are databases obtained through the acquisition of smaller companies in recent years. It is challenging and expensive to integrate these databases as business rules frequently change. The company wants to develop a new series of client-facing e-commerce websites, but these may not synchronise well with the existing systems as they currently stand.
+	</div><div class="para">
+		The company wants an inexpensive solution but one that will adhere to the strict regulations and security requirements of the financial sector. What the company does not want to do is to have to write and maintain “glue code” to connect their legacy databases and systems.
+	</div><div class="para">
+		The JBoss Enterprise SOA Platform was selected as a middleware layer to integrate these legacy systems with the new customer websites. It provides a bridge between front-end and back-end systems. Business rules implemented with the JBoss Enterprise SOA Platform can be updated quickly and easily.
+	</div><div class="para">
+		As a result, older systems can now synchronise with newer ones due to the unifying methods of SOA. There are no bottlenecks, even with tens of thousands of transactions per month. Various integration types, such as XML, JMS and FTP, are used to move data between systems. Any one of a number of enterprise-standard messaging systems can be plugged into JBoss Enterprise SOA Platform providing further flexibility.
+	</div><div class="para">
+		An additional benefit is that the system can now be scaled upwards easily as more servers and databases are added to the existing infrastructure.
+	</div><div class="simplesect" id="idm139887162528016"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12944-364832+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Integration+Use+Case&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Utilising_JBoss_SOA_in_a_Business_Environment" lang="en-US"><div class="titlepage"><div><div><h2 class="title">1.12. Utilising the JBoss Enterprise SOA Platform in a Business Environment</h2></div></div></div><div class="para">
+		Cost reduction can be achieved due to the implementation of services that can quickly communicate with each other with less chance of error messages occurring. Through enhanced productivity and sourcing options, ongoing costs can be reduced.
+	</div><div class="para">
+		Information and business processes can be shared faster because of the increased connectivity. This is enhanced by web services, which can be used to connect clients easily.
+	</div><div class="para">
+		Legacy systems can be used in conjunction with the web services to allow different systems to "speak" the same language. This reduces the amount of upgrades and custom code required to make systems synchronise.
+	</div><div class="simplesect" id="idm139887164182592"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=12947-365860+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Utilising+the+JBoss+Enterprise+SOA+Platform+in+a+Business+Environment&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div></div><div xml:lang="en-US" class="chapter" id="chap-Introduction" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Introduction</h1></div></div></div><div xml:lang="en-US" class="section" id="Intended_Audience7" lang="en-US"><div class="titlepage"><div><div><h2 class="title">2.1. Intended Audience</h2></div></div></div><div class="para">
+		This book is aimed at developers who wish to learn how to utilize the tools in JBoss BPEL. It explains how to create new projects, debug projects and how to use editors.
+	</div><div class="simplesect" id="idm139887161697280"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7166-340671+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Intended+Audience&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Aim_of_the_Guide2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">2.2. Aim of the Guide</h2></div></div></div><div class="para">
+		This guide aims to give users an overview of how to use BPEL with projects. Users will be given steps to follow to create projects and edit those projects. They will also learn about different types of editors and how to deal with error messages.
+	</div><div class="simplesect" id="idm139887175534672"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7167-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Aim+of+the+Guide&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Installation2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">2.3. Installation</h2></div></div></div><div class="procedure"><p class="title"><strong>Procedure 2.1. Task</strong></p><ol class="1"><li class="step"><div class="para">
+				Click <code class="command">Help</code> -&gt; <code class="command">Install New Software...</code> -&gt; <code class="command">Add...</code> and insert name and location (for example, https://devstudio.jboss.com/updates/5.0/staging/soa-tooling/). Then click <code class="command">OK</code>.
+			</div></li><li class="step"><div class="para">
+				Choose <span class="emphasis"><em>BPEL Editor</em></span>, then click <code class="command">Next</code> and <code class="command">Next</code>.
+			</div></li><li class="step"><div class="para">
+				Accept the licence agreement.
+			</div></li><li class="step"><div class="para">
+				Click <code class="command">Finish</code> and restart your JBDS. (It isn't neccessary to restart computer.)
+			</div></li><li class="step"><div class="para">
+				The JBoss BPEL Editor will be availible to you after restart.
+			</div></li></ol></div><div class="simplesect" id="idm139887160180048"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7165-340747+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Installation&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div></div><div xml:lang="en-US" class="chapter" id="chap-Tasks" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Tasks</h1></div></div></div><div xml:lang="en-US" class="section" id="Creating_a_BPEL_project" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.1. Creating a BPEL Project</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				First, select <span class="guimenuitem"><strong>File</strong></span> → <span class="guimenuitem"><strong>New</strong></span> → <span class="guimenuitem"><strong>Project...</strong></span> → <span class="guimenuitem"><strong>BPEL 2.0</strong></span> → <span class="guimenuitem"><strong>BPEL Project</strong></span> or <span class="guimenuitem"><strong>Legacy BPEL Project</strong></span> from the menu bar. Then click the <span class="guibutton"><strong>Next</strong></span> button.
+			</div><div class="figure" id="idm139887163570160"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/affff09dd0c997df3482dc2b2aa7e9fc/1484.png" align="middle" alt="Step 1" /></div></div><p class="title"><strong>Figure 3.1. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				Enter a project name in the <span class="property"> Project Name</span> field.
+			</div><div class="figure" id="idm139887170073040"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/a2a56d653c773d6303cc2cc30942b10b/1485.png" align="middle" alt="Step 2" /></div></div><p class="title"><strong>Figure 3.2. Diagram 2</strong></p></div></li><li class="step"><div class="para">
+				Click the <span class="guibutton"><strong>Finish</strong></span> button. The following screen will appear.
+			</div><div class="figure" id="idm139887160481888"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/affff09dd0c997df3482dc2b2aa7e9fc/1486.png" align="middle" alt="Step 3" /></div></div><p class="title"><strong>Figure 3.3. Diagram 3</strong></p></div></li><li class="step"><div class="para">
+				You have now created a new project.
+			</div></li></ol></div><div class="simplesect" id="idm139887177307936"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7138-375255+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Creating+a+BPEL+Project&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Creating_a_BPEL_Process1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.2. Creating a BPEL Process</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				First, select <span class="guimenuitem"><strong>File</strong></span> → <span class="guimenuitem"><strong>New</strong></span> → <span class="guimenuitem"><strong>Others...</strong></span> → <span class="guimenuitem"><strong>BPEL 2.0</strong></span> → <span class="guimenuitem"><strong>BPEL Process File</strong></span> and click <span class="guibutton"><strong>Next</strong></span>.
+			</div><div class="figure" id="idm139887167338608"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/befa5ebead5e7a775c2d2c4612651528/1487.png" align="middle" alt="Step 1" /></div></div><p class="title"><strong>Figure 3.4. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				From here you can choose to create a BPEL process from a template or a service description. The former is recommended.
+			</div></li><li class="step"><div class="para">
+				Enter the following information:
+			</div><div class="table" id="idm139887159715456"><p class="title"><strong>Table 3.1. Fields and Values</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Fields and Values"><colgroup><col width="33%" align="left"><!--Empty--></col><col width="67%"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887160362304" scope="col"> Field </th><th id="idm139887160422112" scope="col"> Value </th></tr></thead><tbody><tr><td align="left" headers="idm139887160362304"> <div class="para">
+								BPEL Process Name
+							</div>
+							 </td><td headers="idm139887160422112"> <div class="para">
+								Enter a process name. For example, <span class="property"> HelloWorld</span>.
+							</div>
+							 </td></tr><tr><td align="left" headers="idm139887160362304"> <div class="para">
+								Namespace
+							</div>
+							 </td><td headers="idm139887160422112"> <div class="para">
+								Enter or select a namespace for the BPEL process.
+							</div>
+							 </td></tr><tr><td align="left" headers="idm139887160362304"> <div class="para">
+								Template
+							</div>
+							 </td><td headers="idm139887160422112"> <div class="para">
+								Select the appropriate template for the BPEL process. When you select the template, you will see information about it. Select <span class="guilabel"><strong>Synchronous BPEL Process</strong></span>.
+							</div>
+							 </td></tr></tbody></table></div></div><div class="figure" id="idm139887161571232"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/70b439cc98d883eef4d8e77a52754199/1488.png" align="middle" alt="Step 2" /></div></div><p class="title"><strong>Figure 3.5. Diagram 2</strong></p></div></li><li class="step"><div class="para">
+				Click <span class="guibutton"><strong>Next</strong></span>. On this page, you can customize your WSDL service details using a template. Enter the following information:
+			</div><div class="table" id="idm139887161914944"><p class="title"><strong>Table 3.2. Fields and Values</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Fields and Values"><colgroup><col width="33%" align="left"><!--Empty--></col><col width="67%"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887172638928" scope="col"> Field </th><th id="idm139887172638448" scope="col"> Value </th></tr></thead><tbody><tr><td align="left" headers="idm139887172638928"> <div class="para">
+								Service Name
+							</div>
+							 </td><td headers="idm139887172638448"> <div class="para">
+								A WSDL service name for the BPEL process. The default name is <span class="guilabel"><strong>HelloWorld</strong></span>.
+							</div>
+							 </td></tr><tr><td align="left" headers="idm139887172638928"> <div class="para">
+								Port Name
+							</div>
+							 </td><td headers="idm139887172638448"> <div class="para">
+								A WSDL port name for the BPEL process. The default name is <span class="guilabel"><strong>HelloWorldPort</strong></span>.
+							</div>
+							 </td></tr><tr><td align="left" headers="idm139887172638928"> <div class="para">
+								Service Address
+							</div>
+							 </td><td headers="idm139887172638448"> <div class="para">
+								An address of the WSDL service for the BPEL process. The default value is <span class="guilabel"><strong>http://localhost:8080/HelloWorld</strong></span>.
+							</div>
+							 </td></tr><tr><td align="left" headers="idm139887172638928"> <div class="para">
+								Binding Protocol
+							</div>
+							 </td><td headers="idm139887172638448"> <div class="para">
+								The binding protocol that you use in the WSDL. You can choose SOAP or HTTP. The default value is <span class="guilabel"><strong>SOAP</strong></span>.
+							</div>
+							 </td></tr></tbody></table></div></div><div class="figure" id="idm139887173979712"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/07df1216f306940ce0db9af0a08ac8cc/1489.png" align="middle" alt="Step 3" /></div></div><p class="title"><strong>Figure 3.6. Diagram 3</strong></p></div></li><li class="step"><div class="para">
+				Click the <span class="guibutton"><strong>Next</strong></span> button. On the this page, you can select a folder for the process file from the projects in your workspace. If a folder is not selected, the default folder <code class="filename">HelloWorld/bpelContent</code> will be used.
+			</div></li><li class="step"><div class="para">
+				Click the <span class="guibutton"><strong>Finish</strong></span> button. The process is complete.
+			</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					All of the files used in your BPEL project must be under the <code class="filename">bpelContent</code> folder of a BPEL project.
+				</div></div></div></li></ol></div><div class="simplesect" id="idm139887166934480"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7139-375259+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Creating+a+BPEL+Process&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Create_a_New_Server_Runtime" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.3. Create a New Server Runtime</h2></div></div></div><div class="procedure"><p class="title"><strong>Procedure 3.1. Task</strong></p><ol class="1"><li class="step"><div class="para">
+				Go to the <span class="guilabel"><strong>New Server</strong></span> wizard.
+			</div></li><li class="step"><div class="para">
+				Click on <span class="guilabel"><strong>Add</strong></span>.
+			</div></li><li class="step"><div class="para">
+				Fill in the name if you wish to do so (this step is optional because the name is preset.
+			</div></li><li class="step"><div class="para">
+				Click on <span class="guilabel"><strong>Browse</strong></span> and select the home directory.
+			</div></li><li class="step"><div class="para">
+				Select one of the available configurations (the configuration you choose must have the BPEL engine available).
+			</div></li><li class="step"><div class="para">
+				Click on <span class="guilabel"><strong>Finish</strong></span>.
+			</div></li></ol></div><div class="simplesect" id="idm139887171618000"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=9015-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Create+a+New+Server+Runtime&amp;assigned_to=dlesage%40redhat.com&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Editing_a_BPEL_Process_File" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.4. Editing a BPEL Process File</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				Open the <span class="guilabel"><strong>Properties view</strong></span> and <span class="guilabel"><strong>Palette view</strong></span> by right-clicking the BPEL editor and selecting the <span class="guilabel"><strong>Show in Properties</strong></span> or <span class="guilabel"><strong>Show Palette in Palette view</strong></span> options.
+			</div><div class="figure" id="idm139887168217392"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/674e1f76400db9525791941f1fd9828a/1490.png" align="middle" alt="Step 1" /></div></div><p class="title"><strong>Figure 3.7. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				In the <span class="guilabel"><strong>Palette</strong></span> view, drag and drop your chosen BPEL element into the BPEL editor.
+			</div></li><li class="step"><div class="para">
+				Switch to the <span class="guilabel"><strong>Properties</strong></span> view to see information on the BPEL process.
+			</div></li><li class="step"><div class="para">
+				The contents of the <span class="guilabel"><strong>Properties</strong></span> view is automatically updated as elements are selected in the BPEL editor.
+			</div></li></ol></div><div class="simplesect" id="idm139887177213712"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7140-375262+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Editing+a+BPEL+Process+File&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Tabs_Shown_in_the_Properties_View" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.5. Tabs Shown in the Properties View</h2></div></div></div><div class="table" id="tableTabs"><p class="title"><strong>Table 3.3. Tabs Shown in the Properties View</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Tabs Shown in the Properties View"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887159060016" scope="col"> Tab </th><th align="left" id="idm139887159059536" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887159060016"> Description </td><td align="left" headers="idm139887159059536"> Displays information about the element such as name, size, etc. </td></tr><tr><td align="left" headers="idm139887159060016"> Details </td><td align="left" headers="idm139887159059536"> Shows detailed and important information about the element. Most of the properties of an element are set in this section. </td></tr><tr><td align="left" headers="idm139887159060016"> Join Behavior </td><td align="left" headers="idm139887159059536"> Shows the Join Failure property of the element. </td></tr><tr><td align="left" headers="idm139887159060016"> Documentation </td><td align="left" headers="idm139887159059536"> Shows the documentation sub-element of an element. </td></tr><tr><td align="left" headers="idm139887159060016"> Imports </td><td align="left" headers="idm139887159059536"> Allows you to choose which documents will be imported into the BPEL process definition. </td></tr><tr><td align="left" headers="idm139887159060016"> Namespaces </td><td align="left" headers="idm139887159059536"> Lets you edit the defined namespaces in the BPEL process document. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887159321920"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7141-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Tabs+Shown+in+the+Properties+View&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Observing_a_BPEL_Process1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.6. Observing a BPEL Process</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				Change the <span class="property">Empty</span> element between elements <span class="property">receiveInput</span> and <span class="property">replyOutput</span> to Assign.
+			</div></li><li class="step"><div class="para">
+				Add an <span class="property"> Assign</span> element between the <span class="property"> receiveInput</span> element and <span class="property"> replyOutput</span> element.
+			</div></li><li class="step"><div class="para">
+				Click the <span class="property"> Assign</span> element in the BPEL editor to see the properties information in the Properties view.
+			</div></li><li class="step"><div class="para">
+				Set its name in the <span class="property"> Description</span> tab as <span class="property"> assignHelloMesg</span>.
+			</div></li><li class="step"><div class="para">
+				In the <span class="property"> Details</span> section of Properties view, click the <span class="property"> New</span> button to add a <span class="property"> copy</span> sub-element to the element. Assign "Variable to Variable" (input:string to result:string). An " <span class="property"> initializer</span>" popup dialog will appear. Click on the <span class="property"> Yes</span> button.
+			</div></li><li class="step"><div class="para">
+				Navigate down to the desired component and click it. The icon to the left of the component name indicates its type: a blue dot is the BPEL variable, an envelope is a message, an "e" is an XML element. Click the <span class="guibutton"><strong>New</strong></span> button once more and select <span class="emphasis"><em>Expression to Variable</em></span> (assign <code class="code">concat($input.payload/tns:input, ' World')</code>) to <span class="guilabel"><strong>result:string</strong></span>.
+			</div></li></ol></div><div class="simplesect" id="idm139887159921920"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7142-340801+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Observing+a+BPEL+Process&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Adding_a_Service_to_a_WSDL_File" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.7. Adding a Service to a WSDL File</h2></div></div></div><div class="para">
+		The <code class="filename">HelloWorldArtifacts.wsdl</code> file is added to a service when you create a BPEL process file. A default service is already defined in this WSDL file. However, if you want to add your own service, follow the steps below:
+	</div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				Open the file <code class="filename">HelloWorldArtifacts.wsdl</code> in the <span class="guilabel"><strong>HelloWorld</strong></span> project.
+			</div></li><li class="step"><div class="para">
+				Right-click the WSDL editor and select the <span class="guilabel"><strong>Add Service</strong></span> option. A new service should appear in the editor. Name it <span class="guilabel"><strong>HelloWorldProcessService</strong></span>. It has the Port named <span class="guilabel"><strong>NewPort</strong></span>. Select it, right-click on it and rename it to <span class="guilabel"><strong>HelloWorldProcessPort</strong></span> in the <span class="guilabel"><strong>Properties</strong></span> view.
+			</div><div class="figure" id="idm139887171420048"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/c08959070b06c56ed2ff13da0ce7f56b/1492.png" align="middle" alt="Properties view" /></div></div><p class="title"><strong>Figure 3.8. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				Right-click in the whitespace of the WSDL editor and select the <span class="guilabel"><strong>Add Binding</strong></span> option. A new Binding component will appear in the editor. Name it <span class="guilabel"><strong>HelloWorldSOAPBinding</strong></span>. Select it, and in the <span class="guilabel"><strong>General</strong></span> tab of the <span class="guilabel"><strong>Properties</strong></span> view and select <span class="guilabel"><strong>HelloWorld</strong></span> as a port type in the <span class="guilabel"><strong>PortType</strong></span> field.
+			</div></li><li class="step"><div class="para">
+				Click on the <span class="guibutton"><strong>Generate Binding Content...</strong></span> button to open the <span class="guilabel"><strong>Binding Wizard</strong></span>.
+			</div></li><li class="step"><div class="para">
+				In the wizard, select <span class="guilabel"><strong>SOAP</strong></span> as the <span class="guilabel"><strong>Protocol</strong></span>. Click the <span class="guibutton"><strong>Finish</strong></span> button to close the wizard.
+			</div><div class="figure" id="idm139887159467744"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/e1373cf1642df86936daeb4b9ee8b608/1493.png" align="middle" alt="Diagram" /></div></div><p class="title"><strong>Figure 3.9. Diagram 2</strong></p></div></li><li class="step"><div class="para">
+				Click the <span class="guilabel"><strong>HelloWorldProcessPort</strong></span> property in the <span class="guilabel"><strong>General</strong></span> section of the <span class="guilabel"><strong>Properties</strong></span> view.
+			</div></li><li class="step"><div class="para">
+				Select <span class="guilabel"><strong>HelloWorldSOAPBinding</strong></span> in the <span class="guilabel"><strong>Binding</strong></span> combobox.
+			</div></li><li class="step"><div class="para">
+				Enter <a href="http://localhost:8080/bpel/processes/HelloWorld?wsdl" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/bpel/processes/HelloWorld?wsdl</a> in the <span class="guilabel"><strong>Address</strong></span> field.
+			</div><div class="figure" id="idm139887163580544"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/cd32179014f98cfedf7ebb24b2242a8d/1494.png" align="middle" alt="Address field" /></div></div><p class="title"><strong>Figure 3.10. Diagram 3</strong></p></div></li></ol></div><div class="simplesect" id="idm139887172174288"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7143-375264+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Adding+a+Service+to+a+WSDL+File&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Creating_a_deploy.xml_File" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.8. Creating a deploy.xml File</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				To create a new <code class="filename">deploy.xml</code> file for deploying BPEL projects, select <span class="guimenuitem"><strong>File</strong></span> → <span class="guimenuitem"><strong>New</strong></span> → <span class="guimenuitem"><strong>Other...</strong></span> → <span class="guimenuitem"><strong>BPEL 2.0</strong></span> → <span class="guimenuitem"><strong>BPEL Deployment Descriptor</strong></span>. Click the <span class="guibutton"><strong>Next</strong></span> button.
+			</div><div class="figure" id="idm139887170254800"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/11ecfe02fe75b1ccc5d0b28065af7e35/1498.png" align="middle" alt="Deployment screen" /></div></div><p class="title"><strong>Figure 3.11. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				On this page of the wizard, enter the <span class="property"> BPEL Project</span>. Do so by clicking the <span class="guibutton"><strong>Browse...</strong></span> button to select the BPEL project in your workspace that you want to deploy to the runtime.
+			</div></li><li class="step"><div class="para">
+				Select the <code class="filename">bpelContent</code> folder in your new BPEL project for the <span class="property"> BPEL Project</span> field. Do not change the default file name which is <code class="filename">deploy.xml</code>.
+			</div></li><li class="step"><div class="para">
+				Click on the <span class="guibutton"><strong>Finish</strong></span> button to close the wizard and a new <code class="filename">deploy.xml</code> file will be created.
+			</div><div class="figure" id="idm139887172629872"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/ce5aab7831723ab9fc59fc965781a96f/1499.png" align="middle" alt="Diagram" /></div></div><p class="title"><strong>Figure 3.12. Diagram 2</strong></p></div></li><li class="step"><div class="para">
+				Finally, double-click the <code class="filename">deploy.xml</code> file to open it in <span class="guilabel"><strong>ODE Descriptor Deployment Editor</strong></span>. In the <span class="guilabel"><strong>Inbound Interfaces</strong></span> section, click the <span class="guilabel"><strong>Associated Port</strong></span> column and select <span class="guilabel"><strong>HelloWorldProcessPort</strong></span> in the combobox.The <span class="guilabel"><strong>Related Service</strong></span> and <span class="guilabel"><strong>Binding Used</strong></span> columns should be automatically filled in. Save the changes to the <code class="filename">deploy.xml</code> file.
+			</div><div class="figure" id="idm139887170948224"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/239239025972b02005bea841a3cbdf9e/1500.png" align="middle" alt="Deployment editor" /></div></div><p class="title"><strong>Figure 3.13. Diagram 3</strong></p></div></li></ol></div><div class="simplesect" id="idm139887171231792"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7144-375250+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Creating+a+deploy.xml+File&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Creating_JBoss_BPEL_Server1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.9. Creating JBoss BPEL Server</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				Open the <span class="guilabel"><strong>Servers</strong></span> view by selecting <span class="guimenuitem"><strong>Windows</strong></span> → <span class="guimenuitem"><strong>Show View</strong></span> → <span class="guimenuitem"><strong>Other...</strong></span> → <span class="guimenuitem"><strong>Server</strong></span> → <span class="guimenuitem"><strong>Servers</strong></span>.
+			</div></li><li class="step"><div class="para">
+				Right-click the <span class="guilabel"><strong>Servers</strong></span> view and select <span class="guimenuitem"><strong>New</strong></span> → <span class="guimenuitem"><strong>Server</strong></span> to open the <span class="guilabel"><strong>New Server</strong></span> wizard.
+			</div><div class="figure" id="idm139887174040384"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/1ba1cbbfae9cee0e0fb56da70745069f/1502.png" align="middle" alt="Wizard selection" /></div></div><p class="title"><strong>Figure 3.14. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				Select <span class="guilabel"><strong>JBoss EAP 5.x</strong></span> as a server type.
+			</div></li><li class="step"><div class="para">
+				Click the <span class="guibutton"><strong>Next</strong></span> button. On this page, input your <span class="productname"> JBoss EAP</span> location. Then click <span class="guibutton"><strong>Next</strong></span>.
+			</div><div class="figure" id="idm139887170701552"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/6f47215a97d288cee3950f7d6161a335/1503.png" align="middle" alt="Selection screen" /></div></div><p class="title"><strong>Figure 3.15. Diagram 2</strong></p></div></li><li class="step"><div class="para">
+				Select <span class="guilabel"><strong>HelloWorld</strong></span>, then click the <span class="guibutton"><strong>Add</strong></span> button to add the project to the server. Finally, click the <span class="guibutton"><strong>Finish</strong></span> button.
+			</div></li><li class="step"><div class="para">
+				Start the server by right-clicking on the server and selecting the <span class="guilabel"><strong>Start</strong></span> item.
+			</div><div class="figure" id="idm139887167542640"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/6afd2ce87ad4f5a160d59ca8a34b23e8/1504.png" align="middle" alt="Server list" /></div></div><p class="title"><strong>Figure 3.16. Diagram 3</strong></p></div></li><li class="step"><div class="para">
+				Enter the link <a href="http://localhost:8080/bpel-console/app.html" class="mimir-link-warn" title="Mimir does not include content from: localhost">http://localhost:8080/bpel-console/app.html</a> in your web browser to access the deployed processes.
+			</div></li></ol></div><div class="simplesect" id="idm139887157343792"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7145-375252+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Creating+JBoss+BPEL+Server&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Creating_Correlation_Sets1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">3.10. Creating Correlation Sets</h2></div></div></div><div class="procedure"><ol class="1"><li class="step"><div class="para">
+				To create a correlation for a messaging activity, go to the dashboard tab <span class="guibutton"><strong>Correlation Sets</strong></span> and click the plus button. Set a name for the set when prompted.
+			</div></li><li class="step"><div class="para">
+				In <span class="guibutton"><strong>Properties</strong></span> view, click the <span class="guibutton"><strong>Details</strong></span> tab and then click the <span class="guibutton"><strong>Add...</strong></span> button. This will display the <span class="guibutton"><strong>Select a Property</strong></span> dialog.
+			</div></li><li class="step"><div class="para">
+				Enter a name for the new WSDL property and its type. (Either an XSD simple type or an XML Schema element.)
+			</div></li><li class="step"><div class="para">
+				Click the <span class="guibutton"><strong>Browse</strong></span> button to select a type. This will display the <span class="guilabel"><strong>Type Selection</strong></span> dialog.
+			</div></li><li class="step"><div class="para">
+				Click <span class="guilabel"><strong>New</strong></span> in the <span class="guilabel"><strong>Aliases</strong></span> section to create a new WSDL property alias.
+			</div></li><li class="step"><div class="para">
+				Select either the <span class="guilabel"><strong>Message Type</strong></span>, XSD <span class="guilabel"><strong>Simple Type</strong></span> or XML scheme <span class="guilabel"><strong>Element</strong></span> radio button and click <span class="guibutton"><strong>Browse</strong></span> to select its type. Click <span class="guibutton"><strong>OK</strong></span>.
+			</div></li><li class="step"><div class="para">
+				A correlation can be assigned to a messaging activity (for example, Invoke, Receive, Reply). Select the activity, click <span class="guilabel"><strong>Add</strong></span> on the <span class="guilabel"><strong>Correlation</strong></span> property tab and choose the appropriate correlation set.
+			</div></li></ol></div><div class="simplesect" id="idm139887167590624"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7146-341362+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Creating+Correlation+Sets&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div></div><div xml:lang="en-US" class="chapter" id="chap-Reference" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Reference</h1></div></div></div><div xml:lang="en-US" class="section" id="Wizards" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.1. Wizards</h2></div></div></div><div class="table" id="tableWizards"><p class="title"><strong>Table 4.1. Wizards</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Wizards"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887163929216" scope="col"> Wizard name </th><th align="left" id="idm139887174079664" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887163929216"> New BPEL Project wizard </td><td align="left" headers="idm139887174079664"> Creates a faceted project which can be deployed to the JBoss Riftsaw runtime engine. It is available by selecting <span class="guimenuitem"><strong>File</strong></span> → <span class="guimenuitem"><strong>New</strong></span> → <span class="guimenuitem"><strong>Other</strong></span> → <span class="guimenuitem"><strong>BPEL 2.0</strong></span> → <span class="guimenuitem"><strong>BPEL Project</strong></span>. The <code class="filename">bpelContent</code> folder contains all the files necessary for your project. </td></tr><tr><td align="left" headers="idm139887163929216"> New BPEL Process File Wizard </td><td align="left" headers="idm139887174079664"> Creates a BPEL process based on one of several templates defined by the wizard. The wizard assumes the new BPEL process is to be created in the current project of the <span class="guilabel"><strong>Project Explorer</strong></span> or <span class="guilabel"><strong>Navigator</strong></span> view. If a BPEL process of the same name already exists within the project, a warning message will be displayed before any action is performed. </td></tr><tr><td align="left" headers="idm139887163929216"> New BPEL Deployment Descriptor </td><td align="left" headers="idm139887174079664"> Use this wizard to create a <code class="filename">Deployment Descriptor</code> file. This file is a manifest for the web service and is required if the BPEL process is to be deployed to a runtime engine. The BPEL Deployment Descriptor Editor will open once this wizard completes. </td></tr></tbody></table></div></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+			BPEL artifacts must be contained somewhere within the <code class="filename">bpelContent</code> folder hierarchy if you intend to deploy the process. Complex projects may be organized into a folder hierarchy, but these folders must be contained within <code class="filename">bpelContent</code>.
+		</div><div class="para">
+			The <code class="filename">Deployment Descriptor</code> file must be contained within the <code class="filename">bpelContent</code> folder and at the root of any folder hierarchy.
+		</div></div></div><div class="simplesect" id="idm139887170311840"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7147-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Wizards&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Views1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.2. Views</h2></div></div></div><div class="table" id="tableviews"><p class="title"><strong>Table 4.2. Views</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Views"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887157285744" scope="col"> View </th><th align="left" id="idm139887160160000" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887157285744"> Outline </td><td align="left" headers="idm139887160160000"> The <span class="guilabel"><strong>Outline</strong></span> view provides a structural layout of the BPEL process. You can view the process as either a hierarchical tree-structured outline or as a thumbnail view by pressing the associated button. </td></tr><tr><td align="left" headers="idm139887157285744"> Palette </td><td align="left" headers="idm139887160160000"> <div class="para">
+						The primary editing, creation and viewing tools of the BPEL Designer are accessed from the <span class="guilabel"><strong>Palette</strong></span>. The <span class="guilabel"><strong>Palette</strong></span> can be docked either at the right or left edge of the BPEL Designer main window, or it can be detached and displayed in its own view.
+					</div>
+					 <div class="itemizedlist"><ul><li class="listitem"><div class="para">
+								The <span class="guilabel"><strong>Selection Tool</strong></span> is used to select individual activities in the editors drawing canvas. Multiple activities can be selected by holding the <span class="keycap"><strong> CTRL</strong></span> or <span class="keycap"><strong> SHIFT</strong></span> keys in combination with left mouse click. The <span class="guilabel"><strong>Marquee Tool</strong></span> allows selection of groups of activities by dragging a selection rectangle around them.
+							</div></li><li class="listitem"><div class="para">
+								BPEL activities are created by dragging icons from the labeled <span class="guilabel"><strong>Actions</strong></span>, <span class="guilabel"><strong>Controls</strong></span> and <span class="guilabel"><strong>Faults</strong></span> palette sections (or drawers), onto the editor’s drawing canvas. These sections can be collapsed and expanded by clicking on individual palette section titles. They can also be <span class="emphasis"><em> pinned</em></span> to prevent them from collapsing if another section is expanded.
+							</div></li><li class="listitem"><div class="para">
+								The tools at the bottom of the <span class="guilabel"><strong>Palette</strong></span> are used to expand or shrink the drawing canvas.
+							</div></li></ul></div>
+					 </td></tr><tr><td align="left" headers="idm139887157285744"> Dashboard </td><td align="left" headers="idm139887160160000"> This panel is embedded in the BPEL Designer canvas and provides a quick overview of the BPEL elements that are defined for the currently selected activity or BPEL process. The process name appears at the top of the Dashboard. The main Dashboard area lists all of the <span class="guilabel"><strong>Partner Links</strong></span>, <span class="guilabel"><strong>Variables</strong></span>,<span class="guilabel"><strong>Correlation Sets</strong></span> and <span class="guilabel"><strong>Message Exchanges</strong></span> currently defined for the process. The green plus symbol and grey x symbol allow you to add and delete each of these elements. In-line editing of all element names works by selecting the name and then clicking again to enable the editor. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887170756288"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7149-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Views&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Property_Section_Tabs" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.3. Property Section Tabs</h2></div></div></div><div class="table" id="tablePropertySections"><p class="title"><strong>Table 4.3. Property Sections</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Property Sections"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887167204672" scope="col"> Name </th><th align="left" id="idm139887157757488" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887167204672"> Description tab </td><td align="left" headers="idm139887157757488"> The <span class="guilabel"><strong>Description</strong></span> tab contains the activity name. Names must follow XML element naming conventions, limiting characters to letters, numbers and certain special characters only (spaces are not permitted). </td></tr><tr><td align="left" headers="idm139887167204672"> Join Behavior tab </td><td align="left" headers="idm139887157757488"> Join conditions are evaluated by the target activities of links. With the drop-down <span class="guilabel"><strong>Expression language</strong></span> menu, enter an XPath expression that defines the condition of the join. The <span class="guilabel"><strong>Suppress Join Failure</strong></span> behavior defined by the process or a containing scope can be overridden with the radio buttons at the bottom. </td></tr><tr><td align="left" headers="idm139887167204672"> Correlation tab </td><td align="left" headers="idm139887157757488"> The <span class="guilabel"><strong>Correlation</strong></span> tab lists all correlations that are used by the currently selected <span class="guilabel"><strong>Receive</strong></span>, <span class="guilabel"><strong>Reply</strong></span> or <span class="guilabel"><strong>Invoke</strong></span> activity. Correlations can be added to or removed from the activity through this tab. </td></tr><tr><td align="left" headers="idm139887167204672"> Namespaces tab </td><td align="left" headers="idm139887157757488"> Namespaces are URIs (Uniform Resource Identifiers) that uniquely identify a set of resources on the Internet. Shorthand aliases called prefixes are typically used in XML files to make them more readable. The <span class="guilabel"><strong>Namespaces</strong></span> tab lists all of the namespace URIs and their prefixes in scope for the currently selected activity. Whenever you create a reference to an external property (an element defined in an XSD) whose namespace has not yet been assigned a prefix, the BPEL Designer will prompt you to create a prefix. This can also be done through the <span class="guilabel"><strong>Namespace</strong></span> tab of the <span class="guilabel"><strong>Properties</strong></span> sheet for the property by clicking the <span class="guibutton"><strong>Assign Prefix</strong></span> button. </td></tr><tr><td align="left" headers="idm139887167204672"> Message Exchange tab </td><td align="left" headers="idm139887157757488"> Message exchanges are used to associate a <span class="property"> Reply</span> activity with an <span class="property"> inbound message</span> activity and can be either a <span class="property"> Receive</span>, <span class="property"> OnMessage</span> or <span class="property"> OnEvent</span>. These are descriptive names given to a request-response conversation between two parties and must conform to XML element naming conventions. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887167292720"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7150-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Property+Section+Tabs&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Process_Property_Sheet_Tabs1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.4. Process Property Sheet Tabs</h2></div></div></div><div class="table" id="tableppst"><p class="title"><strong>Table 4.4.  Process Property Sheet Tabs</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary=" Process Property Sheet Tabs"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887163404688" scope="col"> Name </th><th align="left" id="idm139887159657504" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887163404688"> Description tab </td><td align="left" headers="idm139887159657504"> The <span class="guilabel"><strong>Description</strong></span> tab allows you to change the process name and its namespace URI. </td></tr><tr><td align="left" headers="idm139887163404688"> Details tab </td><td align="left" headers="idm139887159657504"> The <span class="guilabel"><strong>Process Details</strong></span> tab allows you to select the default <span class="guilabel"><strong>Expression</strong></span> and <span class="guilabel"><strong>Query</strong></span> language. If you set <span class="guilabel"><strong>Exit on Standard Fault</strong></span> to <span class="guilabel"><strong>Yes</strong></span>, it will cause the process to terminate if a WS-BPEL standard fault, other than a join failure, is encountered. Currently only XPath 1.0 is supported. </td></tr><tr><td align="left" headers="idm139887163404688"> Join Behavior tab </td><td align="left" headers="idm139887159657504"> The <span class="guilabel"><strong>Process Join Behavior</strong></span> tab determines how the process will handle join failures. When set to <span class="guilabel"><strong>Yes</strong></span>, any <code class="exceptionname"> JoinFailure </code> fault will be ignored for all activities in the process. An activity is able override this value or inherit the value from its parent. </td></tr><tr><td align="left" headers="idm139887163404688"> Imports tab </td><td align="left" headers="idm139887159657504"> The <span class="guilabel"><strong>Imports Detail</strong></span> tab lists all of the imported service interfaces (WSDL) and XML Schemas (XSD) used by the process. Additional WSDL and XSD files can be added to the imports on this page. After a new resource has been imported, you may assign a prefix to the namespace URI from the <span class="guilabel"><strong>Namespaces</strong></span> tab. Imported resources must be located in the project root folder (<code class="filename">bpelContent</code> by default) or in a sub-folder. </td></tr><tr><td align="left" headers="idm139887163404688"> Namespace tab </td><td align="left" headers="idm139887159657504"> Here you can enter a name for your project. </td></tr><tr><td align="left" headers="idm139887163404688"> Documentation tab </td><td align="left" headers="idm139887159657504"> Click this tab to view relevant documentation pertaining to your process. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887174477648"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7151-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Process+Property+Sheet+Tabs&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Details_Tab_Options1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.5. Details Tab Options</h2></div></div></div><div class="table" id="tabledto"><p class="title"><strong>Table 4.5. Details Tab Options</strong></p><div class="table-contents"><table class="lt-4-cols gt-14-rows" summary="Details Tab Options"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887160747440" scope="col"> Name </th><th align="left" id="idm139887174787184" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887160747440"> Partner Links </td><td align="left" headers="idm139887174787184"> <span class="property"> Partner Links</span> help define the conversations between two services. They define the roles each partner plays in the conversation and the types of messages that can be exchanged between them. The <span class="guilabel"><strong>Details</strong></span> tab allows you to choose the <span class="guilabel"><strong>Expression language</strong></span> and <span class="guilabel"><strong>Query language</strong></span> for selecting elements of a <span class="property"> Partner Link</span>. </td></tr><tr><td align="left" headers="idm139887160747440"> Variables </td><td align="left" headers="idm139887174787184"> <span class="property"> Variables</span> are used in BPEL to store inbound and outbound messages for examination and manipulation by the business logic. They can also be used to save intermediate results and the process state. The three kinds of variable declarations are messages types, XML Schema types and XML Schema elements. The <span class="guilabel"><strong>Details</strong></span> tab allows you to define the variable declared type and its structure by selecting from known types. Once a variable type has been defined, the structure of the variable is shown. Clicking on the hyperlink will open the WSDL or XML Schema editor for the selected type or element. </td></tr><tr><td align="left" headers="idm139887160747440"> Empty </td><td align="left" headers="idm139887174787184"> The <span class="property"> Empty</span> activity is a placeholder for any undefined <span class="property"> Basic Activity</span> and is intended to eventually be replaced by a real activity before the process can actually be executed. If the BPEL engine encounters an <span class="property"> Empty</span> activity, it is ignored. The <span class="guilabel"><strong>Details</strong></span> tab allows you to select one of four basic actions: <span class="property"> Invoke</span>, <span class="property"> Receive</span>, <span class="property"> Reply</span> and <span class="property"> Assign</span>. Hovering the mouse over one of the selection buttons displays a brief description of that activity. </td></tr><tr><td align="left" headers="idm139887160747440"> Invoke </td><td align="left" headers="idm139887174787184"> The <span class="property"> Invoke</span> activity requires a <span class="property"> Partner Link</span> name and an <span class="property"> Operation</span> as defined in the WSDL for that service. You can use the <span class="guilabel"><strong>Quick Pick</strong></span> tree control on the right to select the <span class="property"> Partner Link</span> and <span class="property"> Operation</span>. For one-way invocations, specify only an <span class="property"> Input Variable</span>. For request-response invocations you must also specify an <span class="property"> Output Variable</span>. The checkbox labeled <span class="guilabel"><strong>Use WSDL Message Parts Mapping</strong></span> provides an alternative to using variables for the request message. </td></tr><tr><td align="left" headers="idm139887160747440"> Receive </td><td align="left" headers="idm139887174787184"> A <span class="property"> Receive</span> activity requires a <span class="property"> Partner Link</span> name and an Operation as defined in the WSDL for this service. You can use the <span class="guilabel"><strong>Quick Pick</strong></span> tree control on the right to select the <span class="property"> Partner Link</span> and <span class="property"> Operation</span>. A previously defined variable can be used to hold the message data, or the <span class="guilabel"><strong>Use WSDL Message Parts Mapping</strong></span> checkbox can be set to store the incoming message in an anonymous WSDL message variable. The <span class="guilabel"><strong>Create a new Process Instance</strong></span> checkbox, when enabled, will cause the BPEL engine to start a new process. This will start a new conversation with a client. </td></tr><tr><td align="left" headers="idm139887160747440"> Reply </td><td align="left" headers="idm139887174787184"> A <span class="property"> Reply</span> activity requires a <span class="property"> Partner Link</span> name and an <span class="property"> Operation</span> as defined in the WSDL. You can use the <span class="guilabel"><strong>Quick Pick</strong></span> tree control at the right to select the <span class="property"> Partner Link</span> and <span class="property"> Operation</span>. A previously defined variable can be used to provide the response message data, or the <span class="guilabel"><strong>Use WSDL Message Parts Mapping</strong></span> checkbox can be set to use the data from the anonymous WSDL message variable. </td></tr><tr><td align="left" headers="idm139887160747440"> Opaque </td><td align="left" headers="idm139887174787184"> <span class="property"> Opaque</span> activities are only used in abstract processes and are meant as placeholders for other activities yet to be determined. When you drag and drop an <span class="property"> Opaque</span> activity onto the drawing canvas, the process will be converted to a non-executable, abstract process. </td></tr><tr><td align="left" headers="idm139887160747440"> Assign </td><td align="left" headers="idm139887174787184"> The <span class="property"> Assign</span> section contains an array of variables including message options and management buttons. Additional type selection or data entry widgets will appear below the <span class="guilabel"><strong>From</strong></span> and <span class="guilabel"><strong>To</strong></span> combo boxes, depending on the source and target item categories selected in the combo boxes. Initially these will be controls for the selection of process variables, since the default combo box selection is <span class="property"> Variable</span>. </td></tr><tr><td align="left" headers="idm139887160747440"> Validate </td><td align="left" headers="idm139887174787184"> The <span class="property"> Validate</span> details tab contains a list of variables to be validated. </td></tr><tr><td align="left" headers="idm139887160747440"> While and RepeatUntil </td><td align="left" headers="idm139887174787184"> These activities have the same details tab, which allows you to specify an XPath expression to be evaluated for the conditional activity. </td></tr><tr><td align="left" headers="idm139887160747440"> Link </td><td align="left" headers="idm139887174787184"> The <span class="property"> Link</span> detail tab allows you to specify a condition that will cause <span class="property"> Flow</span> synchronization to be satisfied and allow the target activity to continue. This is similar to the details tab of the other conditional activities. </td></tr><tr><td align="left" headers="idm139887160747440"> Pick </td><td align="left" headers="idm139887174787184"> The <span class="property"> Pick</span> tab allows you to specify whether the event will create a new process instance. </td></tr><tr><td align="left" headers="idm139887160747440"> OnMessage </td><td align="left" headers="idm139887174787184"> The <span class="property"> OnMessage</span> activity is used in <span class="property"> Pick</span> and event handlers. The <span class="guilabel"><strong>Details</strong></span> tab allows you to specify the <span class="property"> Partner Link</span>, <span class="property"> Operation</span> and <span class="property"> Message Type</span> expected by the activity, and the process variable that will contain the received message data. </td></tr><tr><td align="left" headers="idm139887160747440"> OnAlarm </td><td align="left" headers="idm139887174787184"> The <span class="property"> OnAlarm</span> activity is used in either a <span class="property"> Pick</span> or event handler to handle timeouts while waiting for messages to arrive. This activity can be configured to wait for a certain period of time or until a specific date and time. The <span class="guilabel"><strong>Details</strong></span> tab allows you to specify the <span class="property"> Partner Link</span>, <span class="property"> Operation</span> and <span class="property"> Message Type</span> expected by the activity, and the process variable that will contain the received message data. <span class="guilabel"><strong>Repeat</strong></span> conditions are only allowed for an <span class="property"> OnAlarm</span> in an event handler. This allows the activities enclosed in the activity to be executed repeatedly. <span class="guilabel"><strong>Repeat</strong></span> duration is the amount of time the process will wait before each repetition. </td></tr><tr><td align="left" headers="idm139887160747440"> ForEach </td><td align="left" headers="idm139887174787184"> <span class="property"> ForEach</span> allows you to specify a counter variable to be used for keeping track of the loop iterations. The <span class="guilabel"><strong>Parallel execution</strong></span> checkbox will execute all iterations in parallel. The <span class="guilabel"><strong>Counter Values</strong></span> tab is where the starting and ending counter values are specified. The optional <span class="guilabel"><strong>Completion</strong></span> tab allows you to specify the early termination condition for the loop. </td></tr><tr><td align="left" headers="idm139887160747440"> Wait </td><td align="left" headers="idm139887174787184"> The details tab of the <span class="property"> Wait</span> activity allows you set a delay ( <span class="property"> Duration</span>) or specify a date and time to continue process execution. </td></tr><tr><td align="left" headers="idm139887160747440"> Scope </td><td align="left" headers="idm139887174787184"> The details tab for the <span class="property"> Scope</span> activity allows you to define whether the Scope is <span class="guilabel"><strong>isolated</strong></span>. </td></tr><tr><td align="left" headers="idm139887160747440"> Throw </td><td align="left" headers="idm139887174787184"> The <span class="property"> Throw</span> activity will invoke a fault handler in an enclosing <span class="property"> Scope</span> activity. <span class="property"> Throw</span> requires the name of either a standard BPEL fault, or the name of a user-defined fault message. A variable is used to hold the value of the fault data. </td></tr><tr><td align="left" headers="idm139887160747440"> CompensateScope </td><td align="left" headers="idm139887174787184"> The <span class="property"> CompensateScope</span> activity will invoke a compensation handler in the <span class="property"> Scope</span> or the <span class="property"> Invoke</span> activity given by the name of the <span class="guilabel"><strong>Target Activity</strong></span>. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887166648880"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7152-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Details+Tab+Options&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="BPEL_Designer_Features" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.6. BPEL Designer Features</h2></div></div></div><div class="table" id="tableBPELdesignerfeatures"><p class="title"><strong>Table 4.6. BPEL Designer Features</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="BPEL Designer Features"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887173272896" scope="col"> Name </th><th align="left" id="idm139887173272416" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887173272896"> <span class="emphasis"><em> Drawing Canvas</em></span> </td><td align="left" headers="idm139887173272416"> Contains the graphical representation of the BPEL process and is displayed when the <span class="guilabel"><strong>Design</strong></span> tab at the bottom of the editor window is selected. Clicking on any of the activity names activates an in-line editor, allowing you to edit the process name. To finish editing, press the <span class="keycap"><strong> ENTER</strong></span> key or change focus by clicking on a different window control. </td></tr><tr><td align="left" headers="idm139887173272896"> <span class="guilabel"><strong>Source</strong></span> </td><td align="left" headers="idm139887173272416"> This tab displays the XML (text) representation of the process. Any changes made in one view are shown in the other. The default layout of activities is top-to-bottom, but can be changed to horizontal layout from the context menu. </td></tr><tr><td align="left" headers="idm139887173272896"> <span class="emphasis"><em> Palette</em></span> </td><td align="left" headers="idm139887173272416"> The primary editing, creation and viewing tools of the BPEL Designer are accessed from this tool. </td></tr><tr><td align="left" headers="idm139887173272896"> <span class="emphasis"><em> Dashboard</em></span> </td><td align="left" headers="idm139887173272416"> Provides an overview of the BPEL process. </td></tr><tr><td align="left" headers="idm139887173272896"> <span class="emphasis"><em> Property Sheet</em></span> </td><td align="left" headers="idm139887173272416"> Displays the properties of an activity when it is selected in the drawing canvas. </td></tr><tr><td align="left" headers="idm139887173272896"> <span class="emphasis"><em> Outline</em></span> </td><td align="left" headers="idm139887173272416"> This panel provides a structural view of the BPEL process. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887169907136"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7153-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=BPEL+Designer+Features&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="BPEL_Designer_Concepts" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.7. BPEL Designer Concepts</h2></div></div></div><div class="table" id="tableBPELDesignerConcepts"><p class="title"><strong>Table 4.7. BPEL Designer Concepts</strong></p><div class="table-contents"><table class="lt-4-cols gt-7-rows" summary="BPEL Designer Concepts"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887176465648" scope="col"> Name </th><th align="left" id="idm139887176465168" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887176465648"> Assign error </td><td align="left" headers="idm139887176465168"> Hovering your mouse over this icon will display an error message. </td></tr><tr><td align="left" headers="idm139887176465648"> Basic activities </td><td align="left" headers="idm139887176465168"> Basic activities are represented on the drawing canvas as rounded rectangles containing an icon and the user-defined name of the activity. The <span class="guilabel"><strong>Actions</strong></span> section of the <span class="guilabel"><strong>Palette</strong></span> contains all of the basic activities. For example: <span class="property"> Assign</span>, <span class="property"> Invoke</span> and <span class="property"> Receive</span>. </td></tr><tr><td align="left" headers="idm139887176465648"> Start and End </td><td align="left" headers="idm139887176465168"> Every process has Start and End activities that act as placeholders for visualizing the beginning and end of the process flow. </td></tr><tr><td align="left" headers="idm139887176465648"> Assign activity </td><td align="left" headers="idm139887176465168"> The <span class="property"> Assign</span> activity allows you to manipulate variables and message contents that are defined in the process. </td></tr><tr><td align="left" headers="idm139887176465648"> Invoke </td><td align="left" headers="idm139887176465168"> The <span class="property"> Invoke</span> activity is used to send a message to an external service (one-way invocation) and, optionally, wait for a response (request and response). An <span class="property"> Invoke</span> can also define a compensation handler and a fault handler to handle exception conditions. </td></tr><tr><td align="left" headers="idm139887176465648"> Receive </td><td align="left" headers="idm139887176465168"> The <span class="property"> Receive</span> activity will wait for a specific message type from a service client. </td></tr><tr><td align="left" headers="idm139887176465648"> Reply </td><td align="left" headers="idm139887176465168"> The <span class="property"> Reply</span> activity is used to respond to clients with a specific message type or a fault message. </td></tr><tr><td align="left" headers="idm139887176465648"> Validate </td><td align="left" headers="idm139887176465168"> The <span class="property"> Validate</span> activity is used to validate the values of variables against their XML Schema and WSDL data definitions. This includes the variable’s data type as well as structure. If validation fails, the BPEL standard fault invalidVariables is thrown. Validation is typically performed just before sending messages to a partner or client, or after receiving a message to ensure the message contains all required data. </td></tr><tr><td align="left" headers="idm139887176465648"> Wait </td><td align="left" headers="idm139887176465168"> The <span class="property"> Wait</span> activity will delay process execution for a certain amount of time, or until a given date and time. This is typically used to invoke an operation at a certain time. For example to update process state hourly or daily, or to collect some information from another service at a certain time. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887159599520"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7154-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=BPEL+Designer+Concepts&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Structured_Activities1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.8. Structured Activities</h2></div></div></div><div class="para">
+		Structured activities are containers that can hold one or more activities. The <span class="guilabel"><strong>Controls</strong></span> section of the <span class="guilabel"><strong>Palette</strong></span> contains all of the <span class="emphasis"><em> structured activities</em></span>. When you drag and drop one of these onto the drawing canvas, the BPEL Designer will create a basic skeleton of the activity and assign default properties.
+	</div><div class="para">
+		All structured activities will require some additional configuration before they are considered valid. For example, BPEL does not allow an empty <span class="property"> Sequence</span> activity. Invalid structured activities will be decorated with an error icon similar to basic activities.
+	</div><div class="para">
+		Structured activities can be expanded and collapsed on the drawing canvas by clicking the plus and minus buttons at the bottom of the figure. See the list of activities below.
+	</div><div class="table" id="tableStructuredactivities"><p class="title"><strong>Table 4.8. Structured Activities</strong></p><div class="table-contents"><table class="lt-4-cols gt-7-rows" summary="Structured Activities"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887160820640" scope="col"> Name </th><th align="left" id="idm139887160820160" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887160820640"> If, ElseIf and Else </td><td align="left" headers="idm139887160820160"> <div class="para">
+						The <span class="property"> If</span> activity allows conditional execution of one or more sequences of activities. It consists of a sequence of one or more conditional branches defined by <span class="property"> If</span> and optional <span class="property"> ElseIf</span> elements. The elements are evaluated in left-to-right order (or top-to-bottom if you have selected horizontal layout). An optional <span class="property"> Else</span> branch will be executed if none of the other conditions are true.
+					</div>
+					 <div class="para">
+						An <span class="property"> If</span> activity must define a condition (expressed as an XPath) and an activity which is executed if the condition evaluates true. To insert additional <span class="property"> ElseIf</span> and <span class="property"> Else</span> elements, right-click the <span class="property"> If</span> figure and select the desired element from the context menu. The figure above shows a complete <span class="property"> If</span> activity with optional <span class="property"> ElseIf</span> and <span class="property"> Else</span> elements.
+					</div>
+					 </td></tr><tr><td align="left" headers="idm139887160820640"> Pick </td><td align="left" headers="idm139887160820160"> The <span class="property"> Pick</span> activity will cause the process to wait for one of any number of messages to be received. An optional timer can be set to limit the time to wait for receipt of these messages. Activities to handle receipt of messages and timer expiration are defined in the <span class="property"> Pick</span>. Message receipts are handled by <span class="property"> OnMessage</span> activities and timer expiration is handled by the <span class="property"> OnAlarm</span> activity. </td></tr><tr><td align="left" headers="idm139887160820640"> While </td><td align="left" headers="idm139887160820160"> The <span class="property"> While</span> activity repeatedly executes the contained activity as long as a condition evaluates true at the beginning of each iteration. A <span class="property"> While</span> activity must define a condition and must contain an activity. </td></tr><tr><td align="left" headers="idm139887160820640"> ForEach </td><td align="left" headers="idm139887160820160"> <div class="para">
+						<span class="property"> ForEach</span> is a looping activity that executes the activities contained in its <span class="property"> Scope</span> a specified number of times. A counter variable, defined in the <span class="property"> ForEach</span> property detail tab, is used to keep track of the iterations. The <span class="property"> ForEach</span> properties must be configured with starting and ending value expressions for this counter variable. The counter is initially set to the starting value and activities in the <span class="property"> Scope</span> are executed until the counter exceeds the ending value.
+					</div>
+					 <div class="para">
+						This activity can also be configured to execute all iterations in parallel, meaning the enclosed <span class="property"> Scope</span> activity behaves as if multiple <span class="property"> Scopes</span> are enclosed in a <span class="property"> Flow</span> activity.
+					</div>
+					 <div class="para">
+						An optional early termination value can be defined, which will cause the loop to complete before the counter has reached its ending value. The <span class="property"> ForEach</span> will complete when the counter is equal to this early termination value for the sequential execution case. For the parallel execution case, the early termination value is the number of completed iterations. For example, the <span class="property"> ForEach</span> completes when at least <span class="emphasis"><em> some number</em></span> of <span class="emphasis"><em> some action</em></span> have finished.
+					</div>
+					 </td></tr><tr><td align="left" headers="idm139887160820640"> RepeatUntil </td><td align="left" headers="idm139887160820160"> The <span class="property"> RepeatUntil</span> activity repeatedly executes the contained activity as long as a condition evaluates true at the end of each iteration. A condition must be defined for a <span class="property"> RepeatUntil</span>, and it must contain an activity. </td></tr><tr><td align="left" headers="idm139887160820640"> Sequence </td><td align="left" headers="idm139887160820160"> A <span class="property"> Sequence</span> is a container for one or more other activities. They are executed in sequential order and (unlike <span class="property"> Scope</span> and <span class="property"> Flow</span> activities), have no other special characteristics. Because the conditional activities ( <span class="property"> If</span>, <span class="property"> While</span>, <span class="property"> RepeatUntil</span> and <span class="property"> ForEach</span>) can have only one activity as the target of their execution, a <span class="property"> Sequence</span> is typically used to execute multiple activities. The BPEL Designer will automatically create a <span class="property"> Sequence</span> if you drag-drop a second activity into any of the conditional activities. </td></tr><tr><td align="left" headers="idm139887160820640"> Scope </td><td align="left" headers="idm139887160820160"> <div class="para">
+						A <span class="property"> Scope</span> provides a context for its enclosed activity. It can be thought of as a compartmentalized sub-process. If the <span class="property"> Scope</span> is declared as being <span class="emphasis"><em> isolated</em></span>, then the variables and partner links shared with the process are locked to prevent other concurrent <span class="property"> Scopes</span> from altering them while a <span class="property"> Scope</span> is executing. <span class="property"> Scope</span> may also be nested to any depth and all variables, partner links and others defined in a <span class="property"> Scope</span>, are inherited by its children.
+					</div>
+					 <div class="para">
+						To be valid, a <span class="property"> Scope</span> must have a single activity. It is usually used to invoke a service and wait for a response message or timeout.
+					</div>
+					 </td></tr><tr><td align="left" headers="idm139887160820640"> Flow </td><td align="left" headers="idm139887160820160"> The <span class="property"> Flow</span> activity allows multiple activities to be executed in parallel. All activities or <span class="property"> Sequences</span> contained in a <span class="property"> Flow</span> are executed at the same time by the BPEL engine. A <span class="property"> Flow</span> completes when all of its enclosed activities have completed. </td></tr><tr><td align="left" headers="idm139887160820640"> Link </td><td align="left" headers="idm139887160820160"> <div class="para">
+						<span class="property"> Links</span> are used for synchronization. To create a <span class="property"> Link</span>, right-click on a completed activity and select <span class="guimenuitem"><strong>Add Link</strong></span>. Next, move the mouse to the activity in the <span class="property"> Flow</span> that depends on this one (the <span class="emphasis"><em> target</em></span>) and click the left mouse button to create the link.
+					</div>
+					 <div class="para">
+						A <span class="property"> Link</span> is identified by a name that must be unique within the <span class="property"> Flow</span>. The BPEL Designer generates a default name, but you can change this in its properties. You can also add a test to the <span class="property"> Link</span> that defines the conditions for considering an activity to be complete.
+					</div>
+					 </td></tr><tr><td align="left" headers="idm139887160820640"> Faults </td><td align="left" headers="idm139887160820160"> Fault activities cause the normal process execution flow to jump to a specialized handler, similar to exceptions in modern programming languages. The <span class="property"> Exit</span> fault causes the process to immediately terminate. The <span class="property"> Throw</span> fault propagates a specified fault to its ancestor <span class="property"> Scope</span>, or the process itself. The <span class="property"> Rethrow</span> fault is used inside a fault handler and propagates the fault using the original fault data. The <span class="property"> Compensate</span> fault is used to invoke a compensation handler. Finally, the <span class="property"> CompensateScope</span> fault is used to invoke a compensation handler in the enclosing <span class="property"> Scope</span>. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887171443520"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7155-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Structured+Activities&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Fault_Compensation_Termination_and_Event_Handlers" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.9. Fault, Compensation, Termination and Event Handlers</h2></div></div></div><div class="table" id="tableFault"><p class="title"><strong>Table 4.9. Fault, Compensation, Termination and Event Handlers</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Fault, Compensation, Termination and Event Handlers"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887176719328" scope="col"> Name </th><th align="left" id="idm139887164044640" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887176719328"> Fault handler </td><td align="left" headers="idm139887164044640"> Executed when a fault is thrown by an activity. </td></tr><tr><td align="left" headers="idm139887176719328"> Compensation handler </td><td align="left" headers="idm139887164044640"> Executed when the BPEL process encounters a <span class="property"> Compensate</span> or <span class="property"> CompensateScope</span> activity. </td></tr><tr><td align="left" headers="idm139887176719328"> Termination handler </td><td align="left" headers="idm139887164044640"> Executed if a <span class="property"> Scope</span> is forced to terminate early. </td></tr><tr><td align="left" headers="idm139887176719328"> Event handler </td><td align="left" headers="idm139887164044640"> Executed for events include the receipt of a message and a timer expiration. </td></tr><tr><td align="left" headers="idm139887176719328"> Scope-level handlers </td><td align="left" headers="idm139887164044640"> A Scope may have any handler. Since Scopes can be nested, each level can define its own set of handlers. Events that are not caught and processed by a handler in an inner Scope, will be propagated to its ancestors. </td></tr><tr><td align="left" headers="idm139887176719328"> Activity-level handlers </td><td align="left" headers="idm139887164044640"> Only the Invoke activity can define handlers. The handlers available to it are the fault and compensation handlers. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887161482176"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7156-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Fault%2C+Compensation%2C+Termination+and+Event+Handlers&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="BPEL_Deployment_Descriptor_Editor_Properties" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.10. BPEL Deployment Descriptor Editor Properties</h2></div></div></div><div class="table" id="tableBDDE"><p class="title"><strong>Table 4.10. BPEL Deployment Descriptor Editor Properties</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="BPEL Deployment Descriptor Editor Properties"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887164223920" scope="col"> Name </th><th align="left" id="idm139887164223440" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887164223920"> Process selection tabs </td><td align="left" headers="idm139887164223440"> Click on these tabs to display the configuration page for each process. </td></tr><tr><td align="left" headers="idm139887164223920"> Initial process state </td><td align="left" headers="idm139887164223440"> The process can be deployed in either an <span class="emphasis"><em> active</em></span>, <span class="emphasis"><em> inactive</em></span> or <span class="emphasis"><em> retired</em></span> state. </td></tr><tr><td align="left" headers="idm139887164223920"> Inbound interfaces selection </td><td align="left" headers="idm139887164223440"> Select the WSDL port type that clients will use to invoke this service. </td></tr><tr><td align="left" headers="idm139887164223920"> Output interfaces selection: </td><td align="left" headers="idm139887164223440"> Each invoked service (if any) will require you to select its port type. </td></tr><tr><td align="left" headers="idm139887164223920"> Scope-level monitoring events </td><td align="left" headers="idm139887164223440"> The BPEL engine can be configured to generate monitoring events for each Scope defined in the process. </td></tr></tbody></table></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+			Before a BPEL project can be deployed to the runtime engine, you must create what is called a <span class="emphasis"><em> deployment descriptor</em></span>. This is simply a manifest file, serialized as XML, that describes all of the BPEL processes and their interfaces to the BPEL engine. The <span class="emphasis"><em> deployment descriptor</em></span> file must be created in the root folder of your project.
+		</div></div></div><div class="simplesect" id="idm139887172781760"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7157-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=BPEL+Deployment+Descriptor+Editor+Properties&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Dialogs" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.11. Dialogs</h2></div></div></div><div class="table" id="tableDialogs"><p class="title"><strong>Table 4.11. Dialogs</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Dialogs"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887154806752" scope="col"> Name </th><th align="left" id="idm139887154806272" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887154806752"> XPath expression editor (embedded control) </td><td align="left" headers="idm139887154806272"> The XPath expression editor provides context-sensitive assistance in the form of pop-up proposals. The light bulb icon indicates that content assist is available by pressing the <span class="keycap"><strong> CTRL</strong></span> and <span class="keycap"><strong> SPACE</strong></span> keys simultaneously. The BPEL 2.0 specification provides for the definition of an XPath language version at the process level, as well as the activity level (for those activities that make use of XPath). However, only XPath 1.0 is supported by the BPEL Designer and the JBoss Riftsaw runtime engine. </td></tr><tr><td align="left" headers="idm139887154806752"> Quick pick (embedded control) </td><td align="left" headers="idm139887154806272"> Tree control is used in many property pages for selecting message parts, partner links and operations. </td></tr><tr><td align="left" headers="idm139887154806752"> Type selection </td><td align="left" headers="idm139887154806272"> <div class="para">
+						This dialog is displayed whenever the BPEL Designer requires you to select a message, message part, XML Schema type or XML element.
+					</div>
+					 <div class="orderedlist"><ol><li class="listitem"><div class="para">
+								<span class="guilabel"><strong>Type Name</strong></span>: Used to limit the items displayed in the <span class="guilabel"><strong>Matches</strong></span> (4) list. Only items that begin with the text in this filter will be displayed.
+							</div></li><li class="listitem"><div class="para">
+								<span class="guilabel"><strong>Show XSD Types</strong></span>: Can be used to limit where the editor will search for XSD files.
+							</div></li><li class="listitem"><div class="para">
+								<span class="guilabel"><strong>Filter</strong></span>: Further reduces the number of matches according to types.
+							</div></li><li class="listitem"><div class="para">
+								<span class="guilabel"><strong>Matches</strong></span>: Displays the items matching the selected filters. Selecting an item in this list will update the <span class="guilabel"><strong>Type Structure</strong></span> (5) tree view.
+							</div></li><li class="listitem"><div class="para">
+								<span class="guilabel"><strong>Type Structure</strong></span>: Displays the structure of the item selected in the <span class="guilabel"><strong>Matches</strong></span> (4) list. Depending on the type of item requested, you may need to select an item from this tree control as well; the <span class="guibutton"><strong>OK</strong></span> button being enabled is an indicated of a selection being required here.
+							</div></li><li class="listitem"><div class="para">
+								<span class="guibutton"><strong>Add Schema</strong></span>: If the required XML Schema has not been resolved, you can add it to the process’ imports by clicking this button.
+							</div></li></ol></div>
+					 </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887159831200"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7158-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Dialogs&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Type_Selection" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.12. Type Selection</h2></div></div></div><div class="table" id="tableTypeselection"><p class="title"><strong>Table 4.12. Type Selection</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Type Selection"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887170505632" scope="col"> Name </th><th align="left" id="idm139887170505152" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887170505632"> <span class="guilabel"><strong>Type Name</strong></span> </td><td align="left" headers="idm139887170505152"> Used to limit the items displayed in the <span class="guilabel"><strong>Matches</strong></span> (4) list. Only items that begin with the text in this filter will be displayed. </td></tr><tr><td align="left" headers="idm139887170505632"> <span class="guilabel"><strong>Show XSD Types</strong></span> </td><td align="left" headers="idm139887170505152"> Can be used to limit where the editor will search for XSD files. </td></tr><tr><td align="left" headers="idm139887170505632"> <span class="guilabel"><strong>Filter</strong></span> </td><td align="left" headers="idm139887170505152"> Further reduces the number of matches according to types. </td></tr><tr><td align="left" headers="idm139887170505632"> <span class="guilabel"><strong>Matches</strong></span> </td><td align="left" headers="idm139887170505152"> Displays the items matching the selected filters. Selecting an item in this list will update the <span class="guilabel"><strong>Type Structure</strong></span> (5) tree view. </td></tr><tr><td align="left" headers="idm139887170505632"> <span class="guilabel"><strong>Type Structure</strong></span> </td><td align="left" headers="idm139887170505152"> Displays the structure of the item selected in the <span class="guilabel"><strong>Matches</strong></span> list. You may need to select an item from this tree control. The <span class="guibutton"><strong>OK</strong></span> button will be enabled if this is required. </td></tr><tr><td align="left" headers="idm139887170505632"> <span class="guibutton"><strong>Add Schema</strong></span> </td><td align="left" headers="idm139887170505152"> If the required XML Schema has not been resolved, you can add it to the process’ imports by clicking this button. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887164097024"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7159-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Type+Selection&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Select_WSDL_Property" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.13. Select WSDL Property</h2></div></div></div><div class="para">
+		This dialog allows you to select an existing WSDL property or create a new one.
+	</div><div class="table" id="tableSelect"><p class="title"><strong>Table 4.13. Select WSDL Property</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Select WSDL Property"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887154825504" scope="col"> Name </th><th align="left" id="idm139887154825024" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887154825504"> <span class="guilabel"><strong>Property Name</strong></span> </td><td align="left" headers="idm139887154825024"> Used to limit the items displayed in the <span class="guilabel"><strong>Matches</strong></span> list. Only items beginning with the text in this filter will be displayed. </td></tr><tr><td align="left" headers="idm139887154825504"> <span class="guibutton"><strong>New</strong></span> </td><td align="left" headers="idm139887154825024"> Click this button to create a new WSDL property. </td></tr><tr><td align="left" headers="idm139887154825504"> <span class="guilabel"><strong>Matches</strong></span> </td><td align="left" headers="idm139887154825024"> Displays the items that match the <span class="guilabel"><strong> Property Name</strong></span>, or all items if the filter is blank. </td></tr><tr><td align="left" headers="idm139887154825504"> <span class="guilabel"><strong>Property Type</strong></span> </td><td align="left" headers="idm139887154825024"> Displays the type of an item selected in the <span class="guilabel"><strong>Matches</strong></span> list. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887171564576"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7160-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Select+WSDL+Property&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Create_WSDL_Property" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.14. Create WSDL Property</h2></div></div></div><div class="para">
+		This dialog is used to create a new WSDL property and is displayed when you click the <span class="guibutton"><strong>New</strong></span> button in the <span class="property"> Select WSDL property</span>dialog.
+	</div><div class="table" id="tableCreatewsdl"><p class="title"><strong>Table 4.14.  Create WSDL Property</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary=" Create WSDL Property"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887174696544" scope="col"> Name </th><th align="left" id="idm139887174696064" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887174696544"> <span class="guilabel"><strong>Name</strong></span> </td><td align="left" headers="idm139887174696064"> Enter the name for the new property. </td></tr><tr><td align="left" headers="idm139887174696544"> <span class="guibutton"><strong>Defined As</strong></span> </td><td align="left" headers="idm139887174696064"> Select how the property type will be defined. </td></tr><tr><td align="left" headers="idm139887174696544"> <span class="guilabel"><strong>Browse</strong></span> </td><td align="left" headers="idm139887174696064"> Click this button to select the property type. </td></tr><tr><td align="left" headers="idm139887174696544"> <span class="guilabel"><strong>New</strong></span> </td><td align="left" headers="idm139887174696064"> Click this button to create a new property alias. </td></tr><tr><td align="left" headers="idm139887174696544"> <span class="guilabel"><strong>Aliases</strong></span> </td><td align="left" headers="idm139887174696064"> This list displays all property aliases defined for the property. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887173789008"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7161-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Create+WSDL+Property&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Create_WSDL_Property_Alias" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.15. Create WSDL Property Alias</h2></div></div></div><div class="para">
+		This dialog allows you to create a WSDL property alias for a selected property.
+	</div><div class="table" id="tablepa"><p class="title"><strong>Table 4.15. Create WSDL Property Alias</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows" summary="Create WSDL Property Alias"><colgroup><col width="50%" align="left" class="c1"><!--Empty--></col><col width="50%" align="left" class="c2"><!--Empty--></col></colgroup><thead><tr><th align="left" id="idm139887174344384" scope="col"> Name </th><th align="left" id="idm139887160819664" scope="col"> Description </th></tr></thead><tbody><tr><td align="left" headers="idm139887174344384"> <span class="guilabel"><strong>Defined As</strong></span> </td><td align="left" headers="idm139887160819664"> Select how the property alias type will be defined. ** </td></tr><tr><td align="left" headers="idm139887174344384"> <span class="guibutton"><strong>Browse</strong></span> </td><td align="left" headers="idm139887160819664"> Click this button to select the property alias type. </td></tr><tr><td align="left" headers="idm139887174344384"> <span class="guilabel"><strong>Query</strong></span> </td><td align="left" headers="idm139887160819664"> This editor allows you to use the XPath Expression Editor to define a query for the property alias. </td></tr></tbody></table></div></div><div class="simplesect" id="idm139887160526528"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7162-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Create+WSDL+Property+Alias&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Cheat_Sheets1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.16. Cheat Sheets</h2></div></div></div><div class="procedure"><p class="title"><strong>Procedure 4.1. Task</strong></p><ol class="1"><li class="step"><div class="para">
+				Access the cheat sheet by clicking <span class="guimenuitem"><strong>Help</strong></span> → <span class="guimenuitem"><strong>Cheat Sheets</strong></span>.
+			</div></li><li class="step"><div class="para">
+				The cheat sheet will open in a separate view as show below. Click on the <span class="guibutton"><strong>Click to begin</strong></span> link to begin.
+			</div><div class="figure" id="idm139887177182752"><div class="figure-contents"><div class="mediaobject" align="center"><img src="/webassets/avalon/d/JBoss_Enterprise_SOA_Platform-5-BPEL_Tools_Reference_Guide-en-US/images/51e8ab97a4560d3bf48018ed2bd6baa2/1505.png" align="middle" alt="Cheat sheet list" /></div></div><p class="title"><strong>Figure 4.1. Diagram 1</strong></p></div></li><li class="step"><div class="para">
+				You can now view tutorials for plug-in tools.
+			</div></li></ol></div><div class="simplesect" id="idm139887166755344"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7163-375268+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Cheat+Sheets&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div><div xml:lang="en-US" class="section" id="Context_Menu" lang="en-US"><div class="titlepage"><div><div><h2 class="title">4.17. Context Menu</h2></div></div></div><div class="para">
+		Access the context menu by right-clicking over an activity figure on the drawing canvas. A sub-menu will appear. The items within the <span class="guibutton"><strong>Add</strong></span> sub-menu appends a new activity after the current one while those within the <span class="guibutton"><strong>Insert Before</strong></span> sub-menu inserts the new activity before the current one.
+	</div><div class="simplesect" id="idm139887171234064"><div class="titlepage"><div><div><h3 class="title"><!--Empty--></h3></div></div></div><div class="para RoleCreateBugPara">
+		<a href="https://bugzilla.redhat.com/enter_bug.cgi?cf_environment=Instance+Name%3A+Not+Defined%0ABuild%3A+CSProcessor+Builder+Version+1.7%0ABuild+Name%3A+7172%2C+BPEL+Tools+Reference+Guide-5-5.3.1%0ABuild+Date%3A+20-02-2013+15%3A19%3A20&amp;cf_build_id=7164-299095+20+Feb+2013+15%3A19+en-US+%5BLatest%5D&amp;short_desc=Context+Menu&amp;product=JBoss+Enterprise+SOA+Platform+5&amp;component=doc-JBoss_BPEL_User_Guide&amp;version=5.3.1" class="mimir-link-warn" title="Mimir does not include content from: bugzilla.redhat.com">Report a bug</a>
+	</div></div></div></div><div xml:lang="en-US" class="appendix" id="appe-BPEL_Tools_Reference_Guide-Revision_History" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Appendix A. Revision History</h1></div></div></div><div class="para"><p><!--Empty--></p>
+		<div class="revhistory"><table summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 5.3.1-31.400</td><td align="left">2013-10-31</td><td align="left"><span class="author"><span class="firstname">Rüdiger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild with publican 4.0.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.3.1-31</td><td align="left">Wed Feb 20 2013</td><td align="left"><span class="author"><span class="firstname"> CS Builder </span> <span class="surname"> Robot </span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td> Built from Content Specification: 7172, Revision: 375275 </td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div><div class="legalnotice"><a id="idm139887179947552"><!--Empty--></a><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2013 Red Hat, Inc.
+	</div><div class="para">
+		This document is licensed by Red Hat under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="mimir-link-warn" title="Mimir does not include content from: creativecommons.org">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original. If the document is modified, all Red Hat trademarks must be removed.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat Software Collections is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

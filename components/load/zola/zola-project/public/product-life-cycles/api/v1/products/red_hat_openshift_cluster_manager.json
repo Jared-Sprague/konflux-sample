@@ -1,0 +1,44 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/node/5168201",
+  "name": "Red Hat Openshift Cluster Manager",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "f1ffa444-4edb-484f-9c29-66e5011737d0",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "(Hosted SaaS)",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2020-05-05T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    }
+  ]
+}]}

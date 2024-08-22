@@ -1,0 +1,36 @@
+{
+  "version": {
+    "name": "20",
+    "slug": "20",
+    "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20"
+  },
+  "titles": [
+    {
+      "titleId": "c9a5b237-ad7a-4fea-bca2-dee9935363cc",
+      "modified": 1596552935,
+      "name": "JBoss EAP Continuous Delivery 20 Release Notes",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/html-single/jboss_eap_continuous_delivery_20_release_notes/index",
+      "category": {
+        "weight": 50,
+        "name": "Release Notes"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 20",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/html-single/jboss_eap_continuous_delivery_20_release_notes/index",
+        "slug": "jboss_eap_continuous_delivery_20_release_notes",
+        "id": "775b68f04156a9bab64b24c3047aa564.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/pdf/jboss_eap_continuous_delivery_20_release_notes/JBoss_Enterprise_Application_Platform_Continuous_Delivery-20-JBoss_EAP_Continuous_Delivery_20_Release_Notes-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/pdf/jboss_eap_continuous_delivery_20_release_notes/jboss_enterprise_application_platform_continuous_delivery-20-jboss_eap_continuous_delivery_20_release_notes-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/20/pdf/jboss_eap_continuous_delivery_20_release_notes/jboss_enterprise_application_platform_continuous_delivery-20-jboss_eap_continuous_delivery_20_release_notes-en-us.pdf"
+      },
+      "toc": {
+        "id": "5cb2420953c41db8bff088b44404c53f.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

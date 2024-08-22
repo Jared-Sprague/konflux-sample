@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Managing cost data using tagging - Red Hat Insights cost management 1-latest
+</title>
+        
+<meta name="product" content="Red Hat Insights cost management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-08-21T21:31:30.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">Red Hat Insights cost management</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">1-latest</a>
+                                
+                                
+                                Managing cost data using tagging
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Managing cost data using tagging</a>
+                    </li><li>
+                        <a href="#assembly-planning-your-tagging-strategy">
+                            1. Planning your tagging strategy
+                        </a><ol>
+                <li>
+                        <a href="#why-use-tags_planning-your-tagging-strategy">
+                            1.1. Using tags
+                        </a>
+                    </li><li>
+                        <a href="#planning-tagging-strategy_planning-your-tagging-strategy">
+                            1.2. Creating a strategy for tags
+                        </a>
+                    </li><li>
+                        <a href="#value-precedence-tagging_planning-your-tagging-strategy">
+                            1.3. Understanding value precedence in tags
+                        </a><ol>
+                <li>
+                        <a href="#openshift_value_precedence">
+                            1.3.1. OpenShift value precedence
+                        </a><ol>
+                <li>
+                        <a href="#namespace_node_and_pod_labels">
+                            1.3.1.1. Namespace, node, and pod labels
+                        </a>
+                    </li><li>
+                        <a href="#persistent_volumes_and_persistent_volume_claims_labels">
+                            1.3.1.2. Persistent Volumes and Persistent Volume Claims labels
+                        </a>
+                    </li><li>
+                        <a href="#cloud_data_that_is_filtered_by_openshift">
+                            1.3.1.3. Cloud data that is filtered by Openshift
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-managing-cost-data-tagging">
+                            2. Using tags to manage cost data
+                        </a><ol>
+                <li>
+                        <a href="#tag-mapping">
+                            2.1. Enabling and creating a tag mapping
+                        </a><ol>
+                <li>
+                        <a href="#troubleshooting_duplicate_keys">
+                            2.1.1. Troubleshooting duplicate keys
+                        </a><ol>
+                <li>
+                        <a href="#troubleshooting_example">
+                            2.1.1.1. Troubleshooting example
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-configuring-tags-and-labels-in-cost-management">
+                            3. Configuring tags and labels in cost management
+                        </a><ol>
+                <li>
+                        <a href="#how-cost-associates-tags_configuring-tags-and-labels">
+                            3.1. How cost management associates tags
+                        </a><ol>
+                <li>
+                        <a href="#tag-matching-hierarchy_configuring-tags-and-labels">
+                            3.1.1. Tag matching hierarchy in cost management
+                        </a>
+                    </li><li>
+                        <a href="#understanding-openshift-label-inheritance-in-cost-management_configuring-tags-and-labels">
+                            3.1.2. OpenShift label inheritance in cost management
+                        </a>
+                    </li><li>
+                        <a href="#direct-resource-matching_configuring-tags-and-labels">
+                            3.1.3. Direct resource matching (instance ID)
+                        </a>
+                    </li><li>
+                        <a href="#special-openshift-tags_configuring-tags-and-labels">
+                            3.1.4. Special OpenShift tags
+                        </a>
+                    </li><li>
+                        <a href="#custom-tags_configuring-tags-and-labels">
+                            3.1.5. Custom tags
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-configuring-tags-int_configuring-tags-and-labels">
+                            3.2. Configuring tags on your integrations
+                        </a><ol>
+                <li>
+                        <a href="#adding-tags-to-an-AWS-resource_configuring-tags-int">
+                            3.2.1. Adding tags to an AWS resource
+                        </a>
+                    </li><li>
+                        <a href="#adding-tags-to-an-Azure-resource_configuring-tags-int">
+                            3.2.2. Adding tags to a Microsoft Azure resource
+                        </a>
+                    </li><li>
+                        <a href="#adding-tags-to-a-gcp-resource_configuring-tags-int">
+                            3.2.3. Adding tags to a Google Cloud resource
+                        </a>
+                    </li><li>
+                        <a href="#adding-tags-to-an-OCP-resource_configuring-tags-int">
+                            3.2.4. Viewing labels in an OpenShift namespace
+                        </a>
+                    </li><li>
+                        <a href="#disabling-tags_configuring-tags-int">
+                            3.2.5. Enabling and Disabling tags in cost management
+                        </a>
+                    </li><li>
+                        <a href="#configuring-categories_configuring-tags-int">
+                            3.2.6. Configuring Amazon Web Services cost categories in cost management
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-viewing-and-exporting-your-cost-data">
+                            4. Viewing and exporting your cost data
+                        </a><ol>
+                <li>
+                        <a href="#filtering-cost-data-views_viewing-and-exporting-data">
+                            4.1. Filtering your cost data view
+                        </a>
+                    </li><li>
+                        <a href="#grouping-cost-data-tag-category_viewing-and-exporting-data">
+                            4.2. Grouping cost data by tag category
+                        </a>
+                    </li><li>
+                        <a href="#exporting-cost-data-reporting_viewing-and-exporting-data">
+                            4.3. Exporting cost data to a reporting tool
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-additional-resources-tags">
+                            5. Additional resources
+                        </a><ol>
+                <li>
+                        <a href="#tagging-specifications_additional-resources-tags">
+                            5.1. Tag specifications by integration type
+                        </a>
+                    </li><li>
+                        <a href="#further-reading-tags_additional-resources-tags">
+                            5.2. Further reading
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm140125837598016">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--managing_cost_data_using_tagging">
+            <h1 class="title">Managing cost data using tagging</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140125832669280"><div class="titlepage"><div><div class="producttitle"><span class="productname">Cost Management Service</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Organize resources and allocate costs with tags</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services </span></div></div><div><a href="#idm140125837598016">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Learn how tagging works in cost management and the strategies for managing your cost data with tags and labels. Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-planning-your-tagging-strategy"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Planning your tagging strategy</h1></div></div></div><section class="section" id="why-use-tags_planning-your-tagging-strategy"><div class="titlepage"><div><div><h2 class="title">1.1. Using tags</h2></div></div></div><p class="_abstract _abstract">
+				Tags, which are also known as labels in OpenShift, are strings of custom metadata that you can assign to resources. In cost management, tags enable you to allocate costs to different parts of your environment and get a more accurate view of your cost data.
+			</p><p>
+				You can use tags in conjunction with hierarchies, such as projects, in your clouds and clusters. Cloud providers place limits on the number of tags that you can associate with resources, so you should plan a tagging strategy for cost management.
+			</p><p>
+				Tags can also help you achieve the following goals:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Map business concepts to reports
+					</li><li class="listitem">
+						Show costs grouped by business concepts
+					</li><li class="listitem">
+						Define operations like business automation, operational profiles, or access and security controls
+					</li><li class="listitem">
+						Apply policies based on tags
+					</li><li class="listitem">
+						Split resources into smaller units when it is not possible to use projects or subprojects
+					</li><li class="listitem">
+						Identify relationships between integrations and group applications across multiple clusters with the same environment, cost center, or team
+					</li><li class="listitem">
+						Identify dependencies when there is no direct link between a resource, such as an RDS database and the OpenShift project that uses it
+					</li></ul></div></section><section class="section" id="planning-tagging-strategy_planning-your-tagging-strategy"><div class="titlepage"><div><div><h2 class="title">1.2. Creating a strategy for tags</h2></div></div></div><p class="_abstract _abstract">
+				When you plan a strategy for your tags, you should consider how you will organize and report costs for your integrations. Start with the minimum number of tags that you think you need to accomplish your organizational objectives. If you need more, slowly build over time.
+			</p><p>
+				The following sections outline some key considerations to make before you begin creating your tags:
+			</p><div class="formalpara"><p class="title"><strong>Value precedence:</strong></p><p>
+					When multiple values are associated with the same key for a specific resource, <span class="strong strong"><strong>Value precedence</strong></span> refers to the criteria that determines which value takes precedence. To avoid duplicating costs when you group by a tag, each tag or label key must be unique for every resource.
+				</p></div><p>
+				To learn more about how to consider value precedence, see <a class="xref" href="#value-precedence-tagging_planning-your-tagging-strategy" title="1.3. Understanding value precedence in tags">Section 1.3, “Understanding value precedence in tags”</a>.
+			</p><div class="formalpara"><p class="title"><strong>Map business to reporting::</strong></p><p>
+					Define the business perspectives you want to report on. For example, your taxonomy for cost management could consider these different perspectives:
+				</p></div><p>
+				+ .Ownership and usage: Defining the owner and the user of the resource: for example, the unique identifier of the user who requested the resource, and the one that is actually consuming the resource.
+			</p><p>
+				+ .Tenancy: If your environment is shared, it can be beneficial to understand which group or business unit has requested the resource. When the user is part of different groups, one group needs to be selected. For cost reporting, you can achieve this in many cases using cost center; but department, project, or partner are also good candidates.
+			</p><p>
+				+ .Location: For organizations with software deployed globally, cloud providers already identify the region where your resources are running, but your private cloud may be different.
+			</p><p>
+				+ .Environment or stage: You may want to differentiate between development and production, so that different cost decisions can be made depending on the environment where you are creating or running the resources. If your development pipeline already includes stages, such as development, testing, staging, pre-production and production, this is a good candidate.
+			</p><p>
+				+ .Application / Project / Service / Event: Perhaps your environment is providing a service, such as a group of transient resources for an event (for example, your yearly customer-focused conference). You could even include the application version.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Standardize your labels</span></dt><dd><p class="simpara">
+							Consistency is the most important aspect of a tagging strategy to deliver accurate and comparable cost reporting results.
+						</p><p class="simpara">
+							Create a clear tagging policy that defines what resources need to be tagged, what tags are mandatory and what tags are optional, making sure that there is no room for interpretation.
+						</p><p class="simpara">
+							If the values need to be chosen between a list, verify that those values are defined, consistent, and easily accessible, or that the list is presented to the user. For example, if you are defining development with the key “Development”, do not also use variations such as “Dev”, “DEV”, or “R&amp;D” to also identify resources as “Development”.
+						</p></dd><dt><span class="term">Tag all elements on your integrations (manually or through automation)</span></dt><dd><p class="simpara">
+							Since untagged resources cannot be reported, tag as many elements as possible, ideally using automation to prevent human error. Integrations have different automation features to take advantage of for tagging:
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									In Azure, you can use Azure Policies to enforce tagging rules and conventions and avoid resources being deployed that do not comply with your expectations. You can create a policy that automatically applies necessary tags during provisioning, that enforces a predefined format for dates, or that makes some tags mandatory for some resource type.
+								</li><li class="listitem">
+									In AWS, you can use IAM policies for the same. Additionally, you can use an automation tool such as Ansible to add the necessary tags during provisioning and to verify that all the resources have been properly tagged.
+								</li><li class="listitem">
+									OpenShift Container Platform does not presently have a method of automating labelling.
+								</li></ul></div></dd><dt><span class="term">Review your tags often and refine as needed</span></dt><dd><p class="simpara">
+							Define your tags and use them as early as possible with cost management, even if you need to adjust your tagging scheme afterwards.
+						</p><p class="simpara">
+							Review the resulting reports with your business owner and stakeholders early on to ensure your tags are helping you to generate the desired reports, and review your tagging strategy every few weeks to optimize it.
+						</p></dd><dt><span class="term">Select your tag terminology</span></dt><dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									Name your resources with names that allow you to identify your resources without accessing metadata, and then continue by adding metadata to it. Many clouds have a guide about how to do this properly; see <a class="xref" href="#assembly-additional-resources-tags" title="Chapter 5. Additional resources">Chapter 5, <em>Additional resources</em></a> for links.
+								</li><li class="listitem">
+									Map your resources into keys and values. Keys will map to perspectives, while values will define the different options allowed for each key. In some cases, the value will be <span class="emphasis"><em>Null</em></span>.
+								</li></ul></div></dd></dl></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Not all integrations allow the same identifiers, and have different limitations. See <a class="xref" href="#tagging-specifications_additional-resources-tags" title="5.1. Tag specifications by integration type">Section 5.1, “Tag specifications by integration type”</a> for limitations by integration.
+				</p></div></div></section><section class="section" id="value-precedence-tagging_planning-your-tagging-strategy"><div class="titlepage"><div><div><h2 class="title">1.3. Understanding value precedence in tags</h2></div></div></div><p>
+				When you associate multiple values with the same key for a specific resource, <span class="strong strong"><strong>value precedence</strong></span> refers to the criteria that determines which value cost management prioritizes. To avoid duplicating costs when you group by a tag, each tag or label key should be unique for every resource.
+			</p><section class="section" id="openshift_value_precedence"><div class="titlepage"><div><div><h3 class="title">1.3.1. OpenShift value precedence</h3></div></div></div><p>
+					In OpenShift, create a protocol that maintains the most specific value possible.
+				</p><section class="section" id="namespace_node_and_pod_labels"><div class="titlepage"><div><div><h4 class="title">1.3.1.1. Namespace, node, and pod labels</h4></div></div></div><p>
+						If each resource has the same key, pod values override both node and namespace values. Cost management prioritizes pod values because the labels at these levels are more specific to the workload that is running inside of them. Node labels and namespace labels are more generic and describe characteristics at a higher level.
+					</p><p>
+						Namespace, node, and pod labels have the following value precedence:
+					</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+								Pod labels
+							</li><li class="listitem">
+								Namespace labels
+							</li><li class="listitem">
+								Node labels
+							</li></ol></div></section><section class="section" id="persistent_volumes_and_persistent_volume_claims_labels"><div class="titlepage"><div><div><h4 class="title">1.3.1.2. Persistent Volumes and Persistent Volume Claims labels</h4></div></div></div><p>
+						Persistent Volumes (PVs) are resources in the cluster that exist independently from the node or namespace. Pods create Persistent Volume Claims (PVCs) to make requests for those resources from the available PVs. When a request matches the criteria for one of these PVs, the pod uses these claims as volumes.
+					</p><p>
+						PVs and PVCs have the following value precedence:
+					</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+								Persistent Volume Claim labels
+							</li><li class="listitem">
+								Persistent Volume labels
+							</li><li class="listitem">
+								Pod labels
+							</li><li class="listitem">
+								Namespace labels
+							</li><li class="listitem">
+								Node labels
+							</li></ol></div></section><section class="section" id="cloud_data_that_is_filtered_by_openshift"><div class="titlepage"><div><div><h4 class="title">1.3.1.3. Cloud data that is filtered by Openshift</h4></div></div></div><p>
+						When something is filtered by OpenShift, it indicates what amount of the cloud provider’s cost is associated with running an OpenShift cluster. When a cloud provider and an OpenShift source have matching tags or resource IDs in the cost reports, cost management correlates the two reports. This correlation calculates how much of the cloud provider cost is related to running OpenShift.
+					</p><p>
+						We combine the tags and labels of the two reports into one, but prioritize the cloud instance’s tags—​rather than the Openshift labels—​because the cloud instance is the original source of the data:
+					</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+								Cloud instance tags
+							</li><li class="listitem">
+								OpenShift labels
+							</li></ol></div></section></section></section></section><section class="chapter" id="assembly-managing-cost-data-tagging"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Using tags to manage cost data</h1></div></div></div><p class="_abstract _abstract">
+			Learn how tags work in cost management and how you can use them to best organize and view your resources to manage your costs.
+		</p><section class="section" id="tag-mapping"><div class="titlepage"><div><div><h2 class="title">2.1. Enabling and creating a tag mapping</h2></div></div></div><p>
+				Tag mapping is when you combine multiple tags across your cloud integrations. Tag mapping enables you to group and filter similar tags with one tag key.
+			</p><p>
+				To map a tag, you must first enable it. Cost management has a limit of 200 tags that you can enable. Complete the following steps:
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+						In cost management, click <span class="strong strong"><strong>Settings</strong></span>.
+					</li><li class="listitem">
+						Click the header tab, <span class="strong strong"><strong>Tags and labels</strong></span>.
+					</li><li class="listitem">
+						Click the drop-down menu, <span class="strong strong"><strong>Enable tags and labels</strong></span>.
+					</li><li class="listitem">
+						Select the tags that you want to enable. Clear a tag to disable it.
+					</li><li class="listitem">
+						Next, click the <span class="strong strong"><strong>Map tags and labels</strong></span> drop-down menu and click <span class="strong strong"><strong>Create a tag mapping</strong></span>.
+					</li><li class="listitem">
+						In the wizard that opens, select the tags that you want to make child tags. Then click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Select one tag that you want to be the parent tag. This action will map the parent tag to the children tags that you selected in the previous step. Click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Review your selections and click <span class="strong strong"><strong>Create tag mapping</strong></span>.
+					</li></ol></div><section class="section" id="troubleshooting_duplicate_keys"><div class="titlepage"><div><div><h3 class="title">2.1.1. Troubleshooting duplicate keys</h3></div></div></div><p>
+					For every resource, each tag key must be unique and have only one value. However, when you map tags, you can unintentionally create scenarios that violate this rule and create multiple values.
+				</p><p>
+					Ordinarily, having more than one value would duplicate your costs. However, to avoid duplication, cost management prioritizes one key’s value. To understand how cost management prioritizes values and plan accordingly, see <a class="xref" href="#value-precedence-tagging_planning-your-tagging-strategy" title="1.3. Understanding value precedence in tags">Section 1.3, “Understanding value precedence in tags”</a>.
+				</p><section class="section" id="troubleshooting_example"><div class="titlepage"><div><div><h4 class="title">2.1.1.1. Troubleshooting example</h4></div></div></div><p>
+						Consider the following example where you are running an EC2 instance on AWS. You tagged this instance with the following key &gt; value pairs:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								<code class="literal">app</code> &gt; <code class="literal">cost-management</code>
+							</li><li class="listitem">
+								<code class="literal">App</code> &gt; <code class="literal">Insights</code>
+							</li></ul></div><p>
+						In cost management, you mapped <code class="literal">app</code> to <code class="literal">App</code>. Therefore, the same EC2 instance has the following key &gt; value pairs:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								<code class="literal">App</code> &gt; <code class="literal">cost-management</code>
+							</li><li class="listitem">
+								<code class="literal">App</code> &gt; <code class="literal">Insights</code>
+							</li></ul></div><p>
+						In this situation, cost management prioritizes the pre-existing value of the key <code class="literal">App</code> &gt; <code class="literal">Insights</code>. Cost management also removes the association of the key <code class="literal">app</code> and its value <code class="literal">cost-management</code> from the AWS resource to prevent duplicate costs. <code class="literal">App=cost-management</code> is added to the <code class="literal">App=insight</code> cost.
+					</p><p>
+						Because <code class="literal">App</code> is set as the parent key, cost management prioritizes its value over the value of <code class="literal">app</code> in the tag mapping. Therefore, you should consider your tag mapping strategy before you set parent tags.
+					</p><p>
+						To troubleshoot issues with duplicate keys, ensure that your tag keys are unique and have only one value. Alternatively, to learn how to prioritize your keys, see <a class="xref" href="#value-precedence-tagging_planning-your-tagging-strategy" title="1.3. Understanding value precedence in tags">Section 1.3, “Understanding value precedence in tags”</a>.
+					</p></section></section></section></section><section class="chapter" id="assembly-configuring-tags-and-labels-in-cost-management"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Configuring tags and labels in cost management</h1></div></div></div><p class="_abstract _abstract">
+			You must configure tags in each integration before cost management can use the tags to automatically organize your cost data.
+		</p><p>
+			After adding your integrations to cost management:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Tag or label resources on each of your integrations. See <a class="xref" href="#assembly-configuring-tags-int_configuring-tags-and-labels" title="3.2. Configuring tags on your integrations">Section 3.2, “Configuring tags on your integrations”</a>.
+				</li><li class="listitem">
+					Refine and add to your tags to optimize your view of cost data. See <a class="xref" href="#planning-tagging-strategy_planning-your-tagging-strategy" title="1.2. Creating a strategy for tags">Section 1.2, “Creating a strategy for tags”</a>.
+				</li></ol></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				See the <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/">Getting started with cost management</a></em></span> guide for instructions on configuring integrations.
+			</p></div></div><section class="section" id="how-cost-associates-tags_configuring-tags-and-labels"><div class="titlepage"><div><div><h2 class="title">3.1. How cost management associates tags</h2></div></div></div><p class="_abstract _abstract">
+				Tags in AWS and Microsoft Azure and labels in OpenShift consist of key:value pairs. When the key:value pairs match, the AWS/Azure and OpenShift costs are automatically associated by cost management. Tag matching in cost management is not case sensitive: for example, an AWS resource tagged <span class="emphasis"><em>APP</em></span> and an OpenShift resource tagged <span class="emphasis"><em>app</em></span> are a match:
+			</p><div class="table" id="idm140125835656704"><p class="title"><strong>Table 3.1. Example: Tag matching</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"><!--Empty--></col><col style="width: 33%; " class="col_2"><!--Empty--></col><col style="width: 33%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140125834270864" scope="col">Source and resource type</th><th align="left" valign="top" id="idm140125834269808" scope="col">Key</th><th align="left" valign="top" id="idm140125834268720" scope="col">Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140125834270864"> <p>
+								AWS resource (RDS)
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125834269808"> <p>
+								APP
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125834268720"> <p>
+								Cost-Management
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125834270864"> <p>
+								OpenShift pod
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125834269808"> <p>
+								app
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125834268720"> <p>
+								cost-management
+							</p>
+							 </td></tr></tbody></table></div></div><p>
+				If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects.
+			</p><p>
+				This is not the case with AWS compute resources that are matched through the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
+			</p><p>
+				By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Microsoft Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.
+			</p><section class="section" id="tag-matching-hierarchy_configuring-tags-and-labels"><div class="titlepage"><div><div><h3 class="title">3.1.1. Tag matching hierarchy in cost management</h3></div></div></div><p>
+					To identify your OpenShift resources running on AWS or Azure instances, cost management matches tags between integrations in the following order:
+				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+							Direct resource matching (AWS EC2 instance ID or Azure virtual machine instance ID)
+						</li><li class="listitem">
+							Special OpenShift tags
+						</li><li class="listitem">
+							Custom tags
+						</li></ol></div></section><section class="section" id="understanding-openshift-label-inheritance-in-cost-management_configuring-tags-and-labels"><div class="titlepage"><div><div><h3 class="title">3.1.2. OpenShift label inheritance in cost management</h3></div></div></div><p>
+					OpenShift labels follow an inheritance pattern from cluster to node, and from project to pod. You can associate costs at the node or project level without labeling every pod in your cluster.
+				</p><p>
+					Key-value pairs from node and project labels are inherited at the pod level for pod metrics in cost management. Key-value pairs from the cluster and node labels are inherited at the project level by the persistent volume claims (PVC) at each level. You can group by cluster, node, or project labels to see relevant PVCs in those workloads.
+				</p><p>
+					If a key already exists in the pod, then the value for that key in the pod remains. Cost management does not overwrite the pod value with the project or node value. A similar process happens from node to project.
+				</p><p>
+					Consider the following examples.
+				</p><p>
+					Example 1: Your organization assigns the label <code class="literal">app</code> and the value <code class="literal">costpod1</code> to a pod. The project for this pod has the label <code class="literal">app</code> and the value <code class="literal">cost-project</code>. These resources are running on a node with the label <code class="literal">us-east-1</code>. The label <code class="literal">app</code> and the value <code class="literal">costpod1</code> remain associated with the pod.
+				</p><p>
+					Example 2: Your organization has a project with the label <code class="literal">app</code> and the value <code class="literal">cost-project</code>. The project has three pods running and they are not labeled. Cost management associates the label <span class="emphasis"><em>app</em></span> and the value <code class="literal">cost-project</code> with these pods.
+				</p></section><section class="section" id="direct-resource-matching_configuring-tags-and-labels"><div class="titlepage"><div><div><h3 class="title">3.1.3. Direct resource matching (instance ID)</h3></div></div></div><p>
+					The integrations apply these identifiers automatically. This form of tagging provides a direct link between Microsoft Azure or AWS instances and OpenShift nodes.
+				</p><p>
+					AWS assigns every EC2 instance a resource identifier (a number such as <code class="literal">i-01f44b3d90ef90055</code>). OpenShift nodes are matched directly to the AWS EC2 instance the cluster is running on using the AWS resource identifier. The OpenShift reports in cost management (generated from Prometheus data) include this identifier for nodes. Similarly in Microsoft Azure, each virtual machine instance ID is included in the OpenShift reports for cost management.
+				</p></section><section class="section" id="special-openshift-tags_configuring-tags-and-labels"><div class="titlepage"><div><div><h3 class="title">3.1.4. Special OpenShift tags</h3></div></div></div><p>
+					There are three special-case AWS tags you can use to associate cost with OpenShift:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							<code class="literal">openshift_cluster</code>
+						</li><li class="listitem">
+							<code class="literal">openshift_node</code>
+						</li><li class="listitem">
+							<code class="literal">openshift_project</code>
+						</li></ul></div><p>
+					These tags have matching priority over custom tags, and are especially useful in differentiating the costs of different OpenShift clusters running on the same AWS instance.
+				</p><p>
+					To use this tagging method to identify an OpenShift cluster, tag your AWS instance with the key <code class="literal">openshift_cluster</code>, and provide the OpenShift integration name as the value. In the following example, the name of OpenShift integration in the cost management application is <code class="literal">dev-cluster</code>:
+				</p><div class="table" id="idm140125835879296"><p class="title"><strong>Table 3.2. Example: Special OpenShift tags</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"><!--Empty--></col><col style="width: 33%; " class="col_2"><!--Empty--></col><col style="width: 33%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140125835873568" scope="col">Source and resource type</th><th align="left" valign="top" id="idm140125835872512" scope="col">Key</th><th align="left" valign="top" id="idm140125839974688" scope="col">Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140125835873568"> <p>
+									AWS resource (RDS)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125835872512"> <p>
+									<code class="literal">openshift_cluster</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125839974688"> <p>
+									<code class="literal">dev-cluster</code>
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140125835873568"> <p>
+									OpenShift cluster
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125835872512"> <p>
+									No tags needed. This will match if the name of the OpenShift integration in cost management is <code class="literal">dev-cluster</code>.
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125839974688"> <p>
+									No tags needed.
+								</p>
+								 </td></tr></tbody></table></div></div></section><section class="section" id="custom-tags_configuring-tags-and-labels"><div class="titlepage"><div><div><h3 class="title">3.1.5. Custom tags</h3></div></div></div><p>
+					You can use any key:value combination as tags, and cost management will associate identical tag key and values together. You can then group costs by tag key, account, service, region, and more to view your costs and charge for that tag.
+				</p><div class="table" id="idm140125839958384"><p class="title"><strong>Table 3.3. Example: Custom tags</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"><!--Empty--></col><col style="width: 33%; " class="col_2"><!--Empty--></col><col style="width: 33%; " class="col_3"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140125837760864" scope="col">Source and resource type</th><th align="left" valign="top" id="idm140125837759808" scope="col">Key</th><th align="left" valign="top" id="idm140125837758720" scope="col">Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140125837760864"> <p>
+									AWS resource (RDS)
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125837759808"> <p>
+									<code class="literal">team</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125837758720"> <p>
+									<code class="literal">engineering</code>
+								</p>
+								 </td></tr><tr><td align="left" valign="top" headers="idm140125837760864"> <p>
+									OpenShift pod
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125837759808"> <p>
+									<code class="literal">team</code>
+								</p>
+								 </td><td align="left" valign="top" headers="idm140125837758720"> <p>
+									<code class="literal">engineering</code>
+								</p>
+								 </td></tr></tbody></table></div></div></section></section><section class="section" id="assembly-configuring-tags-int_configuring-tags-and-labels"><div class="titlepage"><div><div><h2 class="title">3.2. Configuring tags on your integrations</h2></div></div></div><p class="_abstract _abstract">
+				To control the tags that cost management imports, activate or enable the tags that you want to view for each integration:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						You must activate AWS tags, and are then selected and exported to cost management in the data export. For instructions, see <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index/#activating-aws-tags_adding-aws-int">Activating AWS tags for cost management</a></em></span> in the <span class="emphasis"><em>Adding an Amazon Web Services (AWS) source</em></span> guide.
+					</li><li class="listitem">
+						Microsoft Azure tags are exported to cost management in the cost export report configured in <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_microsoft_azure_data_into_cost_management/index/#configuring-an-azure-daily-export-schedule_adding-an-azure-int">Configuring a daily Azure data export schedule</a></em></span>.
+					</li><li class="listitem">
+						OpenShift Container Platform labels are exported by the Cost Management Metrics Operator and included in the metrics reports that cost management uses as input.
+					</li></ul></div><section class="section" id="adding-tags-to-an-AWS-resource_configuring-tags-int"><div class="titlepage"><div><div><h3 class="title">3.2.1. Adding tags to an AWS resource</h3></div></div></div><p>
+					Amazon creates certain identifiers automatically, such as the EC2 instance resource identifier, or a number such as <code class="literal">i-123456789</code>, which cost management uses similarly.
+				</p><p>
+					You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage Reporting to export them to the cost management application.
+				</p><p>
+					Configure AWS tags for cost management using the following steps:
+				</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							Create and apply tags to your AWS resources.
+						</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								If you converted from a compatible third-party Linux distribution to Red Hat Enterprise Linux (RHEL) and purchased the RHEL for third-party migration listing in AWS, activate the cost allocation tags for your RHEL systems on the AWS Cost Allocation tags page. Create <code class="literal">com_redhat_rhel_conversion</code> and set the tag value to <code class="literal">true</code>. If you are using ELS (Extended Lifecycle Support), create <code class="literal">com_redhat_rhel_addon</code> and set the value to <code class="literal">ELS</code>. Finally, create <code class="literal">com_redhat_rhel</code> and set the tag value to <code class="literal">7</code> or <code class="literal">8</code> to match your version of RHEL. The changes will be reflected in cost management the next time cost management downloads data.
+							</p><p>
+								Do not use host metering if you plan on tagging items for RHEL metering. Your instances could be double-billed.
+							</p></div></div><p class="simpara">
+							For instructions in the AWS documentation, see <a class="link mimir-link-warn" href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html" title="Mimir does not include content from: docs.aws.amazon.com"><span class="emphasis"><em>User-Defined Cost Allocation Tags</em></span></a>.
+						</p></li><li class="listitem"><p class="simpara">
+							Activate the tags you want to be collected by the cost management application through the data export. In the AWS Billing console, select the tags that you want to activate from the Cost Allocation Tags area.
+						</p><p class="simpara">
+							For instructions in the AWS documentation, see <a class="link mimir-link-warn" href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html" title="Mimir does not include content from: docs.aws.amazon.com"><span class="emphasis"><em>Activating the AWS-Generated Cost Allocation Tags</em></span></a>.
+						</p></li></ol></div></section><section class="section" id="adding-tags-to-an-Azure-resource_configuring-tags-int"><div class="titlepage"><div><div><h3 class="title">3.2.2. Adding tags to a Microsoft Azure resource</h3></div></div></div><p>
+					To create identifiers for virtual machine instances automatically, add a Microsoft Azure integration, which cost management uses similarly to tags to associate Microsoft Azure resources to related OpenShift resources. Add your own tags in Microsoft Azure at the individual resource level.
+				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						If you converted from a compatible third-party Linux distribution to Red Hat Enterprise Linux (RHEL) and purchased the RHEL for third party migration listing in Microsoft Azure, label the VMs for your RHEL systems. Create <code class="literal">com_redhat_rhel_conversion</code> and set the tag value to <code class="literal">true</code>. If you are using ELS (Extended Lifecycle Support), create <code class="literal">com_redhat_rhel_addon</code> and set the value to <code class="literal">ELS</code>. Finally, create <code class="literal">com_redhat_rhel</code> and set the tag value to <code class="literal">7</code> or <code class="literal">8</code> to match your version of RHEL. The changes will be reflected in cost management the next time cost management downloads data.
+					</p><p>
+						Do not use host metering if you plan on tagging items for RHEL metering. If you plan to tag, this could cause instances to be double-billed.
+					</p></div></div><p>
+					Create and apply Microsoft Azure tags for cost management using the instructions in the Microsoft Azure documentation: <a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources" title="Mimir does not include content from: docs.microsoft.com"><span class="emphasis"><em>Use tags to organize your Azure resources and management hierarchy</em></span></a>.
+				</p></section><section class="section" id="adding-tags-to-a-gcp-resource_configuring-tags-int"><div class="titlepage"><div><div><h3 class="title">3.2.3. Adding tags to a Google Cloud resource</h3></div></div></div><p class="_abstract _abstract">
+					You can apply custom labels to Google cloud resources, such as virtual machine instances, images, and persistent disks. These labels are automatically added to your BigQuery export and sent to cost management.
+				</p><div class="itemizedlist"><p class="title"><strong>Procedure</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+							Create and apply labels to your Google Cloud resources.
+						</p><p class="simpara">
+							See <a class="link mimir-link-warn" href="https://cloud.google.com/compute/docs/labeling-resources" title="Mimir does not include content from: cloud.google.com"><span class="emphasis"><em>Creating and managing labels</em></span></a> in the Google Cloud documentation for instructions.
+						</p></li></ul></div></section><section class="section" id="adding-tags-to-an-OCP-resource_configuring-tags-int"><div class="titlepage"><div><div><h3 class="title">3.2.4. Viewing labels in an OpenShift namespace</h3></div></div></div><p class="_abstract _abstract">
+					The AWS or Microsoft Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. The cost management service collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Cost Management Metrics Operator.
+				</p><p>
+					To view the available tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the <span class="strong strong"><strong>Labels</strong></span> heading, for example: <span class="emphasis"><em>openshift.io/cluster-monitoring=true</em></span>.
+				</p></section><section class="section" id="disabling-tags_configuring-tags-int"><div class="titlepage"><div><div><h3 class="title">3.2.5. Enabling and Disabling tags in cost management</h3></div></div></div><p class="_abstract _abstract">
+					All cloud provider tags are activated in cost management by default. Sometimes having too many resource tags can affect cost management performance. Enabled tags are limited to 200 per account. Unnecessary tags can also make managing your costs more complicated when grouping tags and matching key:value pairs. Disable tags you are not actively using to reduce these potential issues.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You must have Organization Administrator or Cost Price List Administrator privileges to change these settings in cost management. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for more information about user roles and access.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							From <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a>, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">Settings</span>.
+						</li><li class="listitem">
+							Click the <span class="strong strong"><strong>Tags and labels</strong></span> tab.
+						</li><li class="listitem">
+							Select the tags you want to disable.
+						</li><li class="listitem"><p class="simpara">
+							Click <span class="strong strong"><strong>Disable tags</strong></span>.
+						</p><p class="simpara">
+							This tag is now deactivated for the cost management application. You can enable tags you have disabled on the same page by selecting the tags you want to enable and clicking <span class="strong strong"><strong>Enable tags</strong></span>.
+						</p></li></ol></div></section><section class="section" id="configuring-categories_configuring-tags-int"><div class="titlepage"><div><div><h3 class="title">3.2.6. Configuring Amazon Web Services cost categories in cost management</h3></div></div></div><p class="_abstract _abstract">
+					You can enable or disable Amazon Web Services (AWS) cost categories in the cost management service. AWS cost categories allow your organization to group meaningful cost and usage information in addition to tags. In order to use cost categories in cost management, they must first be configured in the AWS Console. The following procedure describes how to enable cost categories in the cost management service.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You must have Organization Administrator or Cost Price List Administrator privileges to change these settings in cost management. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for more information about user roles and access.
+						</li><li class="listitem">
+							You have an Amazon Web Services integration added to cost management with cost categories enabled through the Amazon Web Services Console.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							From <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a>, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">Settings</span>.
+						</li><li class="listitem">
+							Click the <span class="strong strong"><strong>Cost categories</strong></span> tab.
+						</li><li class="listitem">
+							Select the cost category to enable. You can select more than one.
+						</li><li class="listitem"><p class="simpara">
+							Click <span class="strong strong"><strong>Enable categories</strong></span>.
+						</p><p class="simpara">
+							The selected cost categories are now enabled for the cost management application. You can also disable cost categories by selecting the cost categories you want to disable and clicking <span class="strong strong"><strong>Disable categories</strong></span>.
+						</p></li></ol></div></section></section></section><section class="chapter" id="assembly-viewing-and-exporting-your-cost-data"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Viewing and exporting your cost data</h1></div></div></div><section class="section" id="filtering-cost-data-views_viewing-and-exporting-data"><div class="titlepage"><div><div><h2 class="title">4.1. Filtering your cost data view</h2></div></div></div><p class="_abstract _abstract">
+				Tags allow you to customize your view of cost data. You can view resources by type (for example, project, node, cluster) or tag or label to investigate why certain resources show an increase in cost, or when data looks abnormal.
+			</p><p>
+				This example shows how to see how much each OpenShift project within a cluster is costing.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Your OpenShift cluster added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/">Integrating OpenShift Container Platform data into cost management</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions.
+					</li><li class="listitem">
+						Your cloud infrastructure account added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/">Getting started with cost management</a></em></span> for instructions for your cloud provider type.
+					</li><li class="listitem">
+						Configure tags on your integrations. For tips and configuration instructions, see <a class="xref" href="#assembly-configuring-tags-int_configuring-tags-and-labels" title="3.2. Configuring tags on your integrations">Section 3.2, “Configuring tags on your integrations”</a>.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From the <span class="strong strong"><strong>OpenShift details</strong></span> menu, click the filter button and select <span class="strong strong"><strong>Tag</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Choose key</strong></span> dropdown list, select the key to filter by. For example, select <span class="emphasis"><em>environment</em></span> to view clusters with the <span class="emphasis"><em>environment</em></span> tag. Selecting a tag key reveals another dropdown to choose the value to filter by.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Choose value</strong></span> dropdown list, select one or more values to filter by. For example, select <span class="emphasis"><em>qe</em></span> and <span class="emphasis"><em>dev</em></span> to show cost data for OpenShift projects with these tags.
+					</li><li class="listitem"><p class="simpara">
+						To view more information about each project:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
+							</li><li class="listitem"><p class="simpara">
+								Click <span class="strong strong"><strong>More options</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Managing_cost_data_using_tagging-en-US/images/b3f9b91399f654c70b36469c5570f4e9/more-options.png" alt="More options icon" /></span>
+								 to reveal more viewing options:
+							</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+										Click <span class="strong strong"><strong>View price lists</strong></span> to see rates applied to the OpenShift metrics to calculate the costs.
+									</li><li class="listitem">
+										Click <span class="strong strong"><strong>View historical data</strong></span> to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
+									</li><li class="listitem">
+										Click <span class="strong strong"><strong>View all projects</strong></span> or <span class="strong strong"><strong>View all tags</strong></span> to see related resources and metadata.
+									</li></ul></div></li></ul></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Clear all filters</strong></span> to reset your OpenShift details view.
+					</li></ol></div></section><section class="section" id="grouping-cost-data-tag-category_viewing-and-exporting-data"><div class="titlepage"><div><div><h2 class="title">4.2. Grouping cost data by tag category</h2></div></div></div><p class="_abstract _abstract">
+				You can group resources by tag category to further investigate your cost data.
+			</p><p>
+				Grouping and filtering is useful for finding the root cause of a cost or problem, or investigating part of the environment that acts independently of the rest, such as a cost center or an specific environment.
+			</p><p>
+				This allows you to hide information about the rest of the environment to help avoid unneeded complexity in cost data results and allow you to find the desired information, which can otherwise be hidden among other data.
+			</p><p>
+				This example shows how an educational course provider who is running a lab environment on OpenShift Container Platform can use tag grouping to filter cost information by student and course.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Your OpenShift cluster added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/">Integrating OpenShift Container Platform data into cost management</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions.
+					</li><li class="listitem">
+						Your cloud infrastructure account added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/">Getting started with cost management</a></em></span> for instructions for your cloud provider type.
+					</li><li class="listitem">
+						Configure tags on your integrations. For tips and configuration instructions, see <a class="xref" href="#assembly-configuring-tags-int_configuring-tags-and-labels" title="3.2. Configuring tags on your integrations">Section 3.2, “Configuring tags on your integrations”</a>.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From the <span class="strong strong"><strong>OpenShift details</strong></span> page in the <span class="strong strong"><strong>Group cost by:</strong></span> field, select the tag key to group the cost by. In this case, select <span class="emphasis"><em>Tag Key:user</em></span> to show results grouped by student user.
+					</li><li class="listitem">
+						In the filter area, select <span class="strong strong"><strong>Tag</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Choose key</strong></span> list, select the tag key <span class="emphasis"><em>user</em></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Choose value</strong></span> dropdown list, check the values <span class="emphasis"><em>course_id</em></span> and <span class="emphasis"><em>course_type</em></span> to identify how many students have taken the course X and the costs for that course.
+					</li><li class="listitem"><p class="simpara">
+						To view more information about each resource, for example, how much course X has cost:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>View Historical Data</strong></span> to open the daily usage comparison view, which compares by month the usage, request, and limits per day for that resource.
+							</li><li class="listitem"><p class="simpara">
+								Click <span class="strong strong"><strong>More options</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Managing_cost_data_using_tagging-en-US/images/b3f9b91399f654c70b36469c5570f4e9/more-options.png" alt="More options icon" /></span>
+								 to reveal more viewing options:
+							</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+										Click <span class="strong strong"><strong>View historical data</strong></span> to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
+									</li><li class="listitem">
+										Click <span class="strong strong"><strong>Export data</strong></span> to create a .CSV file for reporting. Specify a daily or monthly aggregate and click <span class="strong strong"><strong>Generate and download</strong></span>.
+									</li></ul></div></li></ul></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Clear all filters</strong></span> to reset your OpenShift details view.
+					</li></ol></div></section><section class="section" id="exporting-cost-data-reporting_viewing-and-exporting-data"><div class="titlepage"><div><div><h2 class="title">4.3. Exporting cost data to a reporting tool</h2></div></div></div><p class="_abstract _abstract">
+				Tags allow you to customize your view of cost data. This is useful when you want to investigate further why certain resources show an increase in cost, or data looks abnormal.
+			</p><p>
+				This example shows how to view data for specific OpenShift resources, and export the data to your desired reporting tool.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Your OpenShift cluster added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/">Integrating OpenShift Container Platform data into cost management</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions.
+					</li><li class="listitem">
+						Your cloud infrastructure account added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/">Getting started with cost management</a></em></span> for instructions for your cloud provider type.
+					</li><li class="listitem">
+						Configure tags on your integrations. For tips and configuration instructions, see <a class="xref" href="#assembly-configuring-tags-int_configuring-tags-and-labels" title="3.2. Configuring tags on your integrations">Section 3.2, “Configuring tags on your integrations”</a>.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From the <span class="strong strong"><strong>OpenShift details</strong></span> menu, click the filter button and select <span class="strong strong"><strong>Tag</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Choose key</strong></span> dropdown list, select the key to filter by. For example, select <span class="emphasis"><em>version</em></span>. Selecting a tag key reveals another dropdown to choose the value to filter by.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Choose value</strong></span> dropdown list, select one or more values to filter by. For example, select <span class="emphasis"><em>qe</em></span> and <span class="emphasis"><em>dev</em></span> to show cost data for OpenShift resources with these tags.
+					</li><li class="listitem">
+						To export data about your resources, check the boxes next to each resource you want to export data for. Click <span class="strong strong"><strong>Export</strong></span> to open the export options dialog.
+					</li><li class="listitem">
+						Specify a daily or monthly aggregate and click <span class="strong strong"><strong>Generate and download</strong></span>.
+					</li></ol></div><p>
+				The CSV file will download to your local system, and you can use it in your desired reporting tool.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					You can also export your data as a .CSV file from the <span class="strong strong"><strong>More options</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Managing_cost_data_using_tagging-en-US/images/b3f9b91399f654c70b36469c5570f4e9/more-options.png" alt="More options icon" /></span>
+					 &gt; <span class="strong strong"><strong>Export data</strong></span> menu on each resource.
+				</p></div></div><p>
+				Click <span class="strong strong"><strong>Clear all filters</strong></span> to reset your OpenShift details view.
+			</p></section></section><section class="chapter" id="assembly-additional-resources-tags"><div class="titlepage"><div><div><h1 class="title">Chapter 5. Additional resources</h1></div></div></div><section class="section" id="tagging-specifications_additional-resources-tags"><div class="titlepage"><div><div><h2 class="title">5.1. Tag specifications by integration type</h2></div></div></div><p class="_abstract _abstract">
+				Tagging standards differ between integration types. To use the same tags/labels across integrations, you must use the most common of all the restrictions across the different providers.
+			</p><p>
+				The following table summarizes tagging and labelling criteria across AWS, Azure and OpenShift Container Platform 4:
+			</p><div class="table" id="idm140125833425984"><p class="title"><strong>Table 5.1. Tagging specifications by integration</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 20%; " class="col_1"><!--Empty--></col><col style="width: 20%; " class="col_2"><!--Empty--></col><col style="width: 20%; " class="col_3"><!--Empty--></col><col style="width: 20%; " class="col_4"><!--Empty--></col><col style="width: 20%; " class="col_5"><!--Empty--></col></colgroup><thead><tr><th align="left" valign="top" id="idm140125833418400" scope="col">Criteria</th><th align="left" valign="top" id="idm140125833417312" scope="col">AWS</th><th align="left" valign="top" id="idm140125833416224" scope="col">Azure</th><th align="left" valign="top" id="idm140125835438784" scope="col">Google Cloud</th><th align="left" valign="top" id="idm140125835437696" scope="col">Red Hat OpenShift</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Name
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								Tags
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								Tags
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Labels
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								Labels
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Format
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								Key &amp; value
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								Name &amp; value
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Key &amp; value
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								Key &amp; value Keys: [prefix/]name Prefix: must be a DNS subdomain
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Allows empty value
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								Yes
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Unique label per key
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								Yes
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Case sensitive
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								Yes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								No
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Only lowercase letters
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								Yes
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Limit per resource
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								50
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								50 (15 for storage)
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								64
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								N/A
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Length of key
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								128
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								512 (128 for storage)
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								63
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								253(prefix) / 63(name)
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Length of value
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								256
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								256
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								63
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								63
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Allowed characters
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								Letters, numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : / @
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								Tag names cannot contain these characters: &lt;, &gt;, %, &amp;, \, ?, /
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Only lowercase letters, numeric characters, underscores, and dashes.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Restrictions
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								The prefix “aws:” is reserved. Tags applied to EC2 can use any character. Not all resource types support tags.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								Not all resource types support tags. Generalized VMs do not support tags. Tags applied to the resource group are not inherited by the resources.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								Keys must start with a lowercase letter or international character.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								Prefixes kubernetes.io/ and k8s.io/ are reserved. Not all resource types support tags.
+							</p>
+							 </td></tr><tr><td align="left" valign="top" headers="idm140125833418400"> <p>
+								Notes
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833417312"> <p>
+								You need to select the tag keys that will be included in cost and usage files and billing reports.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125833416224"> <p>
+								You can use a JSON string to go over the limit of keys.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835438784"> <p>
+								There is no limit on how many labels you can apply across all resources within a project.
+							</p>
+							 </td><td align="left" valign="top" headers="idm140125835437696"> <p>
+								If the prefix is omitted, the label Key is presumed to be private to the user.
+							</p>
+							 </td></tr></tbody></table></div></div></section><section class="section" id="further-reading-tags_additional-resources-tags"><div class="titlepage"><div><div><h2 class="title">5.2. Further reading</h2></div></div></div><p class="_abstract _abstract">
+				The following links provide further guidance on tagging for each integration type.
+			</p><p>
+				<span class="strong strong"><strong>AWS:</strong></span>
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn" href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/" title="Mimir does not include content from: aws.amazon.com">AWS tagging strategies</a>
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html" title="Mimir does not include content from: docs.aws.amazon.com">IAM: Add a specific tag with specific values</a>
+					</li></ul></div><p>
+				<span class="strong strong"><strong>OpenShift:</strong></span>
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn" href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set" title="Mimir does not include content from: kubernetes.io">Kubernetes labels and selectors</a>
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md" title="Mimir does not include content from: github.com">Kubernetes user guide: labels</a>
+					</li></ul></div><p>
+				<span class="strong strong"><strong>Microsoft Azure:</strong></span>
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/" title="Mimir does not include content from: docs.microsoft.com">Azure resource naming and tagging decision guide</a>
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions" title="Mimir does not include content from: docs.microsoft.com">Azure recommended naming and tagging conventions</a>
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags" title="Mimir does not include content from: docs.microsoft.com">Use tags to organize your Azure resources and management hierarchy</a>
+					</li><li class="listitem">
+						<a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups" title="Mimir does not include content from: docs.microsoft.com">Enforce tags in Azure resource groups</a>
+					</li></ul></div><p>
+				<span class="strong strong"><strong>Google Cloud:</strong></span>
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn" href="https://cloud.google.com/compute/docs/labeling-resources" title="Mimir does not include content from: cloud.google.com">Creating and managing labels</a>
+					</li></ul></div></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12368954" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm140125837598016"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

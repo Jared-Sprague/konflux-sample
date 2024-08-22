@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>Red Hat Customer Portal</title>
+        
+        
+        
+            
+            <!-- mimir_solr_noindex -->
+            <meta name="mimir_solr_noindex" content="true" />
+            <meta name="robots" content="noindex" />
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="">
+                            
+                            <bdo>
+                                
+<script type="module">
+    import { components } from "/services/primer/js/primer.js";
+    [
+        "pfe-icon",
+        "pfe-cta",
+        "pfe-card",
+        "pfe-band"
+    ].forEach(components.include);
+
+    (async () => {
+        const pfeIcon = await components.include("pfe-icon");
+
+        pfeIcon.addIconSet("mimir", "/mimir/icons", (name, setName, setPath) => {
+            return `${setPath}/rh-${name.replace("mimir-", "")}.svg`;
+        })
+    })();
+</script>
+
+<pfe-band id="mimir-home-hero" color="darker">
+    <h1>How can we help?</h1>
+    <p>Search Red Hat's knowledge and documentation.</p>
+    <cp-search-autocomplete id="home-search"></cp-search-autocomplete>
+</pfe-band>
+
+<script>
+    const homeSearch = document.querySelector(
+        "#home-search"
+    );
+    homeSearch.addEventListener(
+        "pfe-autocomplete:search-event",
+        function (event) {
+            const search_term = event.detail.searchValue;
+            event.preventDefault();
+            window.location.assign(
+                `${window.portal.host}/search/?q=${encodeURIComponent(search_term)}`
+            );
+        }
+    );
+</script>
+
+<style>
+/* remove the top padding from #cp-content so the pfe-band can touch the header */
+#cp-content {
+    padding-top: 0
+}
+
+#mimir-home-hero {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: min(100%, 456px);
+    background-image: url("/mimir/images/hero_desktop.min.svg");
+    background-size: cover;
+}
+
+    #mimir-home-hero h1 {
+        font-size: 2.165em;
+        font-weight: normal;
+    }
+    #mimir-home-hero p {
+        font-size: 1.0em;
+        font-weight: normal;
+        margin-top: -0.6em;
+    }
+
+
+@media (max-width: 575px) {
+    #mimir-home-hero {
+        background-image: url("/mimir/images/hero_mobile.min.svg");
+        padding-top: 3em;
+        padding-bottom: 5em;
+    }
+}
+
+.homepage-link-layout {
+    margin-top: 1.5em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+@media (max-width: 991px) {
+    .homepage-link-layout {
+        grid-template-columns: 1fr;
+    }
+}
+.homepage-link-layout pfe-icon {
+    --pfe-icon--size: 3.3em;
+    --pfe-icon--color: #e00;
+}
+
+.homepage-link-layout pfe-card {
+    --pfe-card__header--BackgroundColor: transparent;
+}
+
+#home-search {
+    margin-top: 1.8em;
+}
+</style>
+
+
+
+<div class="container">
+    <div class="homepage-link-layout">
+
+        
+            <pfe-card color="lightest" border size="small">
+                <h2>
+                    <pfe-icon style="margin-left: -7.4px" icon="rh-icon-book"></pfe-icon>
+                    Documentation
+                </h2>
+                <p>Read detailed guides about your product. View release notes,
+                    getting started info, user guides, installation guides, and
+                    system administration information.</p>
+                <div slot="pfe-card--footer">
+                    <pfe-cta>
+                        <a href="/products/">See list</a>
+                    </pfe-cta>
+                </div> 
+            </pfe-card>
+        
+
+        
+        
+            <pfe-card color="lightest" border size="small">
+                <h2>
+                    <pfe-icon style="margin-left: -14px" icon="rh-icon-checklist"></pfe-icon>
+                    Solutions
+                </h2>
+                <p>Find answers to typical questions from Red Hat customers and associates.  Solutions solve a specific customer problem.</p>
+                <div slot="pfe-card--footer">
+                    <pfe-cta>
+                        <a href="/search/?q=*&p=1&rows=10&documentKind=solution">
+                            Find answers
+                        </a>
+                    </pfe-cta>
+                </div> 
+            </pfe-card>
+        
+
+        
+            <pfe-card color="lightest" border size="small">
+                <h2>
+                    <pfe-icon style="margin-left: -9px" icon="rh-icon-notepad-pencil"></pfe-icon>
+                    Articles
+                </h2>
+                <p>Get more general information to solve your problems.  Articles include technical briefs, reference architectures, and documentation in its early stages.</p>
+                <div slot="pfe-card--footer">
+                    <pfe-cta>
+                        <a href="/search/?q=*&p=1&rows=10&documentKind=article">
+                            Find answers
+                        </a>
+                    </pfe-cta>
+                </div> 
+            </pfe-card>
+        
+
+        
+            <pfe-card color="lightest" border size="small">
+                <h2>
+                    <pfe-icon style="margin-left: -9px" icon="rh-icon-vulnerability"></pfe-icon>
+                    CVEs
+                </h2>
+                <p>Explore the Red Hat CVE database, offering comprehensive information on published CVEs and their impact on Red Hat products. Stay informed about mitigation steps to proactively secure your Red Hat solutions against potential threats and vulnerabilities.</p>
+                <div slot="pfe-card--footer">
+                    <pfe-cta>
+                        <a href="/security/security-updates/cve/">
+                            See list
+                        </a>
+                    </pfe-cta>
+                </div> 
+            </pfe-card>
+        
+
+        
+            <pfe-card color="lightest" border size="small">
+                <h2>
+                    <pfe-icon style="margin-left: -9px" icon="rh-icon-waveform"></pfe-icon>
+                    Errata
+                </h2>
+                <p>Explore the Red Hat Product Errata database to stay informed about the latest security advisories, enhancements, and bug fixes for Red Hat products.</p>
+                <div slot="pfe-card--footer">
+                    <pfe-cta>
+                        <a href="/errata-search/">
+                            See list
+                        </a>
+                    </pfe-cta>
+                </div> 
+            </pfe-card>
+        
+
+        
+    </div>
+</div>
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

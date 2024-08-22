@@ -1,0 +1,5 @@
+# This htaccess template will get built (run through a template engine) and
+# then copied into any directory containing static assets such as: JS, CSS,
+# fonts, images.
+
+FileETag MTime Size

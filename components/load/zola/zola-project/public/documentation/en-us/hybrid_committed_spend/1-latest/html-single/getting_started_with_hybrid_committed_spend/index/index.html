@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Getting started with hybrid committed spend - Hybrid committed spend 1-latest
+</title>
+        
+<meta name="product" content="Hybrid committed spend" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-07-26T20:02:28.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">Hybrid committed spend</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">1-latest</a>
+                                
+                                
+                                Getting started with hybrid committed spend
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Getting started with hybrid committed spend</a>
+                    </li><li>
+                        <a href="#assembly-introduction-to-hcs">
+                            1. Introduction to hybrid committed spend
+                        </a><ol>
+                <li>
+                        <a href="#about-hcs_getting-started">
+                            1.1. Understanding hybrid committed spend
+                        </a>
+                    </li><li>
+                        <a href="#understanding_hybrid_committed_spend_data_usage_and_security">
+                            1.2. Understanding hybrid committed spend data usage and security
+                        </a>
+                    </li><li>
+                        <a href="#accessing_the_hybrid_committed_spend_service">
+                            1.3. Accessing the hybrid committed spend service
+                        </a>
+                    </li><li>
+                        <a href="#configuring_hybrid_committed_spend_integrations">
+                            1.4. Configuring hybrid committed spend integrations
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm139831354778112">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--getting_started_with_hybrid_committed_spend">
+            <h1 class="title">Getting started with hybrid committed spend</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139831355089936"><div class="titlepage"><div><div class="producttitle"><span class="productname">Hybrid committed spend</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn about and configure hybrid committed spend</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139831354778112">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This guide describes the initial steps to begin using hybrid committed spend.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-introduction-to-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Introduction to hybrid committed spend</h1></div></div></div><p class="_abstract _abstract">
+			This document provides an overview and instructions to begin using the hybrid committed spend service, including prerequisites and instructions for connecting your cloud environments. To access and use hybrid committed spend, your organization must have a hyperscaler drawdown agreement with Red Hat.
+		</p><section class="section" id="about-hcs_getting-started"><div class="titlepage"><div><div><h2 class="title">1.1. Understanding hybrid committed spend</h2></div></div></div><p class="_abstract _abstract">
+				Hybrid committed spend is a service in the Red Hat toolchain that enables your organization to automate the tracking of hyperscaler drawdown spending with select hyperscalers. Hybrid committed spend automatically aggregates and processes data from the required integrations reducing the need for manual reporting.
+			</p><p>
+				The hybrid committed spend service utilizes Red Hat’s cloud spend integration toolchain to gather and process the data from Red Hat and cloud provider integrations after initial configuration.
+			</p></section><section class="section _abstract" id="understanding_hybrid_committed_spend_data_usage_and_security"><div class="titlepage"><div><div><h2 class="title">1.2. Understanding hybrid committed spend data usage and security</h2></div></div></div><p>
+				When you configure hybrid committed spend, the Red Hat cloud spend integration toolchain processes all of your organization’s hyperscaler spend for the configured account. The data is then sent to a secure system that is part of Red Hat’s financial data processing servers. It will be used to calculate hyperscaler drawdown against your commitment. Data is only collected for the purpose of calculating hyperscaler drawdown and spend tracking. It is not shared internally or externally.
+			</p><p>
+				Red Hat employs technical and organizational measures designed to protect your data. No development engineer has access to view the customer data directly. Outside of the cloud integration toolchain, data analysis only occurs for the purpose of debugging.
+			</p></section><section class="section _abstract" id="accessing_the_hybrid_committed_spend_service"><div class="titlepage"><div><div><h2 class="title">1.3. Accessing the hybrid committed spend service</h2></div></div></div><p>
+				You can access the hybrid committed spend service from <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+			</p><p>
+				To access and use hybrid committed spend, your organization must sign a hybrid committed spend agreement with Red Hat. This agreement enables you to share data with Red Hat to calculate drawdown.
+			</p><p>
+				If you are unable to access hybrid committed spend from <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, you must first identify if your organization signed a hybrid committed spend contract. Your account must also have HCS viewer permissions. Contact your Red Hat sales or support representative for more information.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Navigate to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Services</strong></span> menu.
+					</li><li class="listitem">
+						From the left navigation menu, click <span class="strong strong"><strong>Spend Management</strong></span>.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Hybrid Committed Spend</strong></span> card.
+					</li></ol></div></section><section class="section _abstract" id="configuring_hybrid_committed_spend_integrations"><div class="titlepage"><div><div><h2 class="title">1.4. Configuring hybrid committed spend integrations</h2></div></div></div><p>
+				An integration is a provider account that is connected to hybrid committed spend to be monitored for drawdown. To use hybrid committed spend to monitor your hyperscaler drawdown, you must first connect a data integration to hybrid committed spend. Once an integration is connected to hybrid committed spend it will automatically send your cost and usage data to Red Hat. You can enable an integration using unfiltered cloud provider cost data for a more detailed overview, or limit your account to a minimal amount of filtered data required to see Red Hat related spend for drawdown.
+			</p><p>
+				Currently, the cloud spend integration toolchain can track drawdown for Amazon Web Services (AWS), Microsoft Azure, and Google Cloud.
+			</p><p>
+				From <a class="link mimir-link-warn" href="https://console.redhat.com/settings/integrations" title="Mimir does not include content from: console.redhat.com">the Integrations page</a>, you can view, edit, and delete integrations connected to hybrid committed spend.
+			</p><p>
+				For more information about how to add your cloud provider to hybrid committed spend, follow these guides:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<span class="emphasis"><em><a class="link" href="/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_amazon_web_services_aws_data_into_hybrid_committed_spend/index/">Integrating Amazon Web Services (AWS) data into hybrid committed spend</a></em></span>
+					</li><li class="listitem">
+						<span class="emphasis"><em><a class="link" href="/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_google_cloud_data_into_hybrid_committed_spend/index/">Integrating Google Cloud data into hybrid committed spend</a></em></span>
+					</li><li class="listitem">
+						<span class="emphasis"><em><a class="link" href="/documentation/en-us/hybrid_committed_spend/1-latest/html-single/integrating_microsoft_azure_data_into_hybrid_committed_spend/index/#index">Integrating Microsoft Azure data into hybrid committed spend</a></em></span>
+					</li></ul></div></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12384146" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm139831354778112"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

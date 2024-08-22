@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Hibernate Validator Reference Guide - JBoss Enterprise Application Platform Common Criteria Certification 5
+</title>
+        
+<meta name="product" content="JBoss Enterprise Application Platform Common Criteria Certification" />
+<meta name="documentation_version" content="5" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2017-11-28T18:42:58.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/">JBoss Enterprise Application Platform Common Criteria Certification</a>
+                                
+                                <a href="/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/5/">5</a>
+                                
+                                
+                                Hibernate Validator Reference Guide
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Hibernate Validator Reference Guide</a>
+                    </li><li>
+                        <a href="#preface">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#validator-defineconstraints">
+                            1. Defining constraints
+                        </a><ol>
+                <li>
+                        <a href="#validator-defineconstraints-definition">
+                            1.1. What is a constraint?
+                        </a>
+                    </li><li>
+                        <a href="#validator-defineconstraints-builtin">
+                            1.2. Built in constraints
+                        </a>
+                    </li><li>
+                        <a href="#validator-defineconstraints-error">
+                            1.3. Error messages
+                        </a>
+                    </li><li>
+                        <a href="#validator-defineconstraints-own">
+                            1.4. Writing your own constraints
+                        </a>
+                    </li><li>
+                        <a href="#idm140256003408384">
+                            1.5. Annotating your domain model
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#validator-checkconstraints">
+                            2. Using the Validator framework
+                        </a><ol>
+                <li>
+                        <a href="#validator-checkconstraints-db">
+                            2.1. Database schema-level validation
+                        </a>
+                    </li><li>
+                        <a href="#validator-checkconstraints-orm">
+                            2.2. ORM integration
+                        </a><ol>
+                <li>
+                        <a href="#validator-checkconstraints-orm-hibernateevent">
+                            2.2.1. Hibernate event-based validation
+                        </a>
+                    </li><li>
+                        <a href="#validator-checkconstraints-orm-jpaevent">
+                            2.2.2. Java Persistence event-based validation
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm140255986995136">
+                            2.3. Application-level validation
+                        </a>
+                    </li><li>
+                        <a href="#idm140256003075776">
+                            2.4. Presentation layer validation
+                        </a>
+                    </li><li>
+                        <a href="#idm140256000724896">
+                            2.5. Validation informations
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#appe-Publican-Revision_History">
+                            A. Revision History
+                        </a>
+                    </li><li>
+                        <a href="#idm140255992369728">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--hibernate_validator_reference_guide">
+            <h1 class="title">Hibernate Validator Reference Guide</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140255997315792" lang="en-US"><div class="titlepage"><div><div class="producttitle"><span class="productname">JBoss Enterprise Application Platform Common Criteria Certification</span> <span class="productnumber">5</span></div><div><h2 class="subtitle">for use with JBoss Enterprise Application Platform 5 Common Criteria Certification</h2></div><p class="edition">Edition 5.1.0</p><div><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="https://access.redhat.com/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Hibernate_Validator_Reference_Guide-en-US/images/a78399a6916bd5b945caa082f6c4fa4e/title_logo.svg" type="image/svg+xml"><img src="/webassets/avalon/d/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-5-Hibernate_Validator_Reference_Guide-en-US/images/20c014cff25dbc2aeb4126383228ede4/title_logo.png" alt="" /></object></span>
+
+	</h3></div><div><div xml:lang="en-US" class="authorgroup" lang="en-US"><div class="author"><h3 class="author"><span class="firstname">Red Hat Documentation Group</span> <span class="surname"><!--Empty--></span></h3></div></div></div><div><p class="copyright">Copyright © 2011 Red Hat, Inc</p></div><div><a href="#idm140255992369728">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+			The Hibernate Validator Reference Guide for JBoss Enterprise Application Platform and its patch releases.
+		</div></div></div></div></div><div xml:lang="en-US" class="preface" id="preface" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><div class="para">
+		Annotations are a very convenient and elegant way to specify invariant constraints for a domain model. You can, for example, express that a property should never be null, that the account balance should be strictly positive, etc. These domain model constraints are declared in the bean itself by annotating its properties. A validator can then read them and check for constraint violations. The validation mechanism can be executed in different layers in your application without having to duplicate any of these rules (presentation layer, data access layer). Following the DRY principle, Hibernate Validator has been designed for that purpose.
+	</div><div class="para">
+		Hibernate Validator works at two levels. First, it is able to check in-memory instances of a class for constraint violations. Second, it can apply the constraints to the Hibernate metamodel and incorporate them into the generated database schema.
+	</div><div class="para">
+		Each constraint annotation is associated to a validator implementation responsible for checking the constraint on the entity instance. A validator can also (optionally) apply the constraint to the Hibernate metamodel, allowing Hibernate to generate DDL that expresses the constraint. With the appropriate event listener, you can execute the checking operation on inserts and updates done by Hibernate. Hibernate Validator is not limited to use with Hibernate. You can easily use it anywhere in your application as well as with any Java Persistence provider (entity listener provided).
+	</div><div class="para">
+		When checking instances at runtime, Hibernate Validator returns information about constraint violations in an array of <code class="classname">InvalidValue</code> s. Among other information, the <code class="classname">InvalidValue</code> contains an error description message that can embed the parameter values bundle with the annotation (eg. length limit), and message strings that may be externalized to a <code class="classname">ResourceBundle</code> .
+	</div></div><div xml:lang="en-US" class="chapter" id="validator-defineconstraints" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Defining constraints</h1></div></div></div><div class="section" id="validator-defineconstraints-definition"><div class="titlepage"><div><div><h2 class="title">1.1. What is a constraint?</h2></div></div></div><div class="para">
+			A constraint is a rule that a given element (field, property or bean) has to comply to. The rule semantic is expressed by an annotation. A constraint usually has some attributes used to parameterize the constraints limits. The constraint applies to the annotated element.
+		</div></div><div class="section" id="validator-defineconstraints-builtin"><div class="titlepage"><div><div><h2 class="title">1.2. Built in constraints</h2></div></div></div><div class="para">
+			Hibernate Validator comes with some built-in constraints, which covers most basic data checks. As we'll see later, you're not limited to them, you can literally in a minute write your own constraints.
+		</div><div class="table" id="idm140255995645600"><p class="title"><strong>Table 1.1. Built-in constraints</strong></p><div class="table-contents"><table class="gt-4-cols gt-14-rows" summary="Built-in constraints"><colgroup><col align="center"><!--Empty--></col><col><!--Empty--></col><col><!--Empty--></col><col><!--Empty--></col></colgroup><thead><tr><th align="center" id="idm140255993912992" scope="col"> Annotation </th><th id="idm140255994336400" scope="col"> Apply on </th><th id="idm140255987717744" scope="col"> Runtime checking </th><th id="idm140255987081168" scope="col"> Hibernate Metadata impact </th></tr></thead><tbody><tr><td align="center" headers="idm140255993912992"> @Length(min=, max=) </td><td headers="idm140255994336400"> property (String) </td><td headers="idm140255987717744"> check if the string length match the range </td><td headers="idm140255987081168"> Column length will be set to max </td></tr><tr><td align="center" headers="idm140255993912992"> @Max(value=) </td><td headers="idm140255994336400"> property (numeric or string representation of a numeric) </td><td headers="idm140255987717744"> check if the value is less than or equals to max </td><td headers="idm140255987081168"> Add a check constraint on the column </td></tr><tr><td align="center" headers="idm140255993912992"> @Min(value=) </td><td headers="idm140255994336400"> property (numeric or string representation of a numeric) </td><td headers="idm140255987717744"> check if the value is more than or equals to min </td><td headers="idm140255987081168"> Add a check constraint on the column </td></tr><tr><td align="center" headers="idm140255993912992"> @NotNull </td><td headers="idm140255994336400"> property </td><td headers="idm140255987717744"> check if the value is not null </td><td headers="idm140255987081168"> Column(s) are not null </td></tr><tr><td align="center" headers="idm140255993912992"> @NotEmpty </td><td headers="idm140255994336400"> property </td><td headers="idm140255987717744"> check if the string is not null nor empty. Check if the connection is not null nor empty </td><td headers="idm140255987081168"> Column(s) are not null (for String) </td></tr><tr><td align="center" headers="idm140255993912992"> @Past </td><td headers="idm140255994336400"> property (date or calendar) </td><td headers="idm140255987717744"> check if the date is in the past </td><td headers="idm140255987081168"> Add a check constraint on the column </td></tr><tr><td align="center" headers="idm140255993912992"> @Future </td><td headers="idm140255994336400"> property (date or calendar) </td><td headers="idm140255987717744"> check if the date is in the future </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @Pattern(regex="regexp", flag=) or @Patterns( {@Pattern(...)} ) </td><td headers="idm140255994336400"> property (string) </td><td headers="idm140255987717744"> check if the property match the regular expression given a match flag (see <code class="classname">java.util.regex.Pattern </code> ) </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @Range(min=, max=) </td><td headers="idm140255994336400"> property (numeric or string representation of a numeric) </td><td headers="idm140255987717744"> check if the value is between min and max (included) </td><td headers="idm140255987081168"> Add a check constraint on the column </td></tr><tr><td align="center" headers="idm140255993912992"> @Size(min=, max=) </td><td headers="idm140255994336400"> property (array, collection, map) </td><td headers="idm140255987717744"> check if the element size is between min and max (included) </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @AssertFalse </td><td headers="idm140255994336400"> property </td><td headers="idm140255987717744"> check that the method evaluates to false (useful for constraints expressed in code rather than annotations) </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @AssertTrue </td><td headers="idm140255994336400"> property </td><td headers="idm140255987717744"> check that the method evaluates to true (useful for constraints expressed in code rather than annotations) </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @Valid </td><td headers="idm140255994336400"> property (object) </td><td headers="idm140255987717744"> perform validation recursively on the associated object. If the object is a Collection or an array, the elements are validated recursively. If the object is a Map, the value elements are validated recursively. </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @Email </td><td headers="idm140255994336400"> property (String) </td><td headers="idm140255987717744"> check whether the string is conform to the email address specification </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @CreditCardNumber </td><td headers="idm140255994336400"> property (String) </td><td headers="idm140255987717744"> check whether the string is a well formated credit card number (derivative of the Luhn algorithm) </td><td headers="idm140255987081168"> none </td></tr><tr><td align="center" headers="idm140255993912992"> @Digits(integerDigits=1) </td><td headers="idm140255994336400"> property (numeric or string representation of a numeric) </td><td headers="idm140255987717744"> check whether the property is a number having up to <code class="literal">integerDigits</code> integer digits and <code class="literal">fractionalDigits</code> fractonal digits </td><td headers="idm140255987081168"> define column precision and scale </td></tr><tr><td align="center" headers="idm140255993912992"> @EAN </td><td headers="idm140255994336400"> property (string) </td><td headers="idm140255987717744"> check whether the string is a properly formated EAN or UPC-A code </td><td headers="idm140255987081168"> none </td></tr></tbody></table></div></div></div><div class="section" id="validator-defineconstraints-error"><div class="titlepage"><div><div><h2 class="title">1.3. Error messages</h2></div></div></div><div class="para">
+			Hibernate Validator comes with a default set of error messages translated in about ten languages (if yours is not part of it, please sent us a patch). You can override those messages by creating a <code class="filename">ValidatorMessages.properties</code> or ( <code class="filename">ValidatorMessages_loc.properties</code> ) and override the needed keys. You can even add your own additional set of messages while writing your validator annotations. If Hibernate Validator cannot resolve a key from your resourceBundle nor from ValidatorMessage, it falls back to the default built-in values.
+		</div><div class="para">
+			Alternatively you can provide a <code class="classname">ResourceBundle</code> while checking programmatically the validation rules on a bean or if you want a completly different interpolation mechanism, you can provide an implementation of <code class="literal">org.hibernate.validator.MessageInterpolator</code> (check the JavaDoc for more informations).
+		</div></div><div class="section" id="validator-defineconstraints-own"><div class="titlepage"><div><div><h2 class="title">1.4. Writing your own constraints</h2></div></div></div><div class="para">
+			Extending the set of built-in constraints is extremely easy. Any constraint consists of two pieces: the constraint <span class="emphasis"><em>descriptor</em></span> (the annotation) and the constraint <span class="emphasis"><em>validator</em></span> (the implementation class). Here is a simple user-defined descriptor:
+		</div><pre class="programlisting">@ValidatorClass(CapitalizedValidator.class)
+@Target(METHOD)
+@Retention(RUNTIME)
+@Documented
+public @interface Capitalized {
+    CapitalizeType type() default Capitalize.FIRST;
+    String message() default "has incorrect capitalization"
+}</pre><div class="para">
+			<code class="literal">type</code> is a parameter describing how the property should to be capitalized. This is a user parameter fully dependant on the annotation business.
+		</div><div class="para">
+			<code class="literal">message</code> is the default string used to describe the constraint violation and is mandatory. You can hard code the string or you can externalize part/all of it through the Java ResourceBundle mechanism. Parameters values are going to be injected inside the message when the <code class="literal">{parameter}</code> string is found (in our example <code class="literal">Capitalization is not {type}</code> would generate <code class="literal">Capitalization is not FIRST</code> ), externalizing the whole string in <code class="filename">ValidatorMessages.properties</code> is considered good practice. See <a class="xref" href="#validator-defineconstraints-error">Section 1.3, “Error messages”</a> .
+		</div><pre class="programlisting">@ValidatorClass(CapitalizedValidator.class)
+@Target(METHOD)
+@Retention(RUNTIME)
+@Documented
+public @interface Capitalized {
+    CapitalizeType type() default Capitalize.FIRST;
+    String message() default "{validator.capitalized}";
+}
+
+
+#in ValidatorMessages.properties
+validator.capitalized = <code class="literal">Capitalization is not {type}</code></pre><div class="para">
+			As you can see the {} notation is recursive.
+		</div><div class="para">
+			To link a descriptor to its validator implementation, we use the <code class="literal">@ValidatorClass</code> meta-annotation. The validator class parameter must name a class which implements <code class="literal">Validator&lt;ConstraintAnnotation&gt;</code> .
+		</div><div class="para">
+			We now have to implement the validator (ie. the rule checking implementation). A validation implementation can check the value of the a property (by implementing <code class="literal">PropertyConstraint</code> ) and/or can modify the hibernate mapping metadata to express the constraint at the database level (by implementing <code class="literal">PersistentClassConstraint</code> )
+		</div><pre class="programlisting">public class CapitalizedValidator
+        implements Validator&lt;Capitalized&gt;, PropertyConstraint {
+    private CapitalizeType type;
+
+    //part of the Validator&lt;Annotation&gt; contract,
+    //allows to get and use the annotation values
+    public void initialize(Capitalized parameters) {
+        type = parameters.type();
+    }
+
+    //part of the property constraint contract
+    public boolean isValid(Object value) {
+        if (value==null) return true;
+        if ( !(value instanceof String) ) return false;
+        String string = (String) value;
+        if (type == CapitalizeType.ALL) {
+            return string.equals( string.toUpperCase() );
+        }
+        else {
+            String first = string.substring(0,1);
+            return first.equals( first.toUpperCase();
+        }
+    }
+}</pre><div class="para">
+			The <code class="literal">isValid()</code> method should return false if the constraint has been violated. For more examples, refer to the built-in validator implementations.
+		</div><div class="para">
+			We only have seen property level validation, but you can write a Bean level validation annotation. Instead of receiving the return instance of a property, the bean itself will be passed to the validator. To activate the validation checking, just annotated the bean itself instead. A small sample can be found in the unit test suite.
+		</div><div class="para">
+			If your constraint can be applied multiple times (with different parameters) on the same property or type, you can use the following annotation form:
+		</div><pre class="programlisting">@Target(METHOD)
+@Retention(RUNTIME)
+@Documented
+<span class="bold bold"><strong>public @interface Patterns {</strong></span>
+    Pattern[] value();
+}
+
+@Target(METHOD)
+@Retention(RUNTIME)
+@Documented
+@ValidatorClass(PatternValidator.class)
+public @interface Pattern {
+    String regexp();
+}</pre><div class="para">
+			Basically an annotation containing the value attribute as an array of validator annotations.
+		</div></div><div class="section" id="idm140256003408384"><div class="titlepage"><div><div><h2 class="title">1.5. Annotating your domain model</h2></div></div></div><div class="para">
+			Since you are already familiar with annotations now, the syntax should be very familiar
+		</div><pre class="programlisting">public class Address {
+    private String line1;
+    private String line2;
+    private String zip;
+    private String state;
+    private String country;
+    private long id;
+
+    // a not null string of 20 characters maximum
+    @Length(max=20)
+    @NotNull
+    public String getCountry() {
+        return country;
+    }
+
+    // a non null string
+    @NotNull
+    public String getLine1() {
+        return line1;
+    }
+
+    //no constraint
+    public String getLine2() {
+        return line2;
+    }
+
+    // a not null string of 3 characters maximum
+    @Length(max=3) @NotNull
+    public String getState() {
+        return state;
+    }
+
+    // a not null numeric string of 5 characters maximum
+    // if the string is longer, the message will
+    //be searched in the resource bundle at key 'long'
+    @Length(max=5, message="{long}")
+    @Pattern(regex="[0-9]+")
+    @NotNull
+    public String getZip() {
+        return zip;
+    }
+
+    // should always be true
+    @AssertTrue
+    public boolean isValid() {
+        return true;
+    }
+
+    // a numeric between 1 and 2000
+    @Id @Min(1)
+    @Range(max=2000)
+    public long getId() {
+        return id;
+    }
+}</pre><div class="para">
+			While the example only shows public property validation, you can also annotate fields of any kind of visibility
+		</div><pre class="programlisting">@MyBeanConstraint(max=45)
+public class Dog {
+    @AssertTrue private boolean isMale;
+    @NotNull protected String getName() { ... };
+    ...
+}</pre><div class="para">
+			You can also annotate interfaces. Hibernate Validator will check all superclasses and interfaces extended or implemented by a given bean to read the appropriate validator annotations.
+		</div><pre class="programlisting">public interface Named {
+    @NotNull String getName();
+    ...
+}
+
+public class Dog implements Named {
+
+    @AssertTrue private boolean isMale;
+
+    public String getName() { ... };
+
+}
+</pre><div class="para">
+			The name property will be checked for nullity when the Dog bean is validated.
+		</div></div></div><div xml:lang="en-US" class="chapter" id="validator-checkconstraints" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Using the Validator framework</h1></div></div></div><div class="para">
+		Hibernate Validator is intended to be used to implement multi-layered data validation, where constraints are expressed in a single place (the annotated domain model) and checked in various different layers of the application.
+	</div><div class="para">
+		This chapter will cover Hibernate Validator usage for different layers
+	</div><div class="section" id="validator-checkconstraints-db"><div class="titlepage"><div><div><h2 class="title">2.1. Database schema-level validation</h2></div></div></div><div class="para">
+			Out of the box, Hibernate Annotations will translate the constraints you have defined for your entities into mapping metadata. For example, if a property of your entity is annotated <code class="literal">@NotNull</code>, its columns will be declared as <code class="literal">not null</code> in the DDL schema generated by Hibernate.
+		</div><div class="para">
+			Using hbm2ddl, domain model constraints will be expressed into the database schema.
+		</div><div class="para">
+			If, for some reason, the feature needs to be disabled, set <code class="literal">hibernate.validator.apply_to_ddl</code> to <code class="literal">false</code>.
+		</div></div><div class="section" id="validator-checkconstraints-orm"><div class="titlepage"><div><div><h2 class="title">2.2. ORM integration</h2></div></div></div><div class="para">
+			Hibernate Validator integrates with both Hibernate and all pure Java Persistence providers
+		</div><div class="section" id="validator-checkconstraints-orm-hibernateevent"><div class="titlepage"><div><div><h3 class="title">2.2.1. Hibernate event-based validation</h3></div></div></div><div class="para">
+				Hibernate Validator has two built-in Hibernate event listeners. Whenever a <code class="literal">PreInsertEvent</code> or <code class="literal">PreUpdateEvent</code> occurs, the listeners will verify all constraints of the entity instance and throw an exception if any constraint is violated. Basically, objects will be checked before any inserts and before any updates made by Hibernate. This includes changes applied by cascade! This is the most convenient and the easiest way to activate the validation process. On constraint violation, the event will raise a runtime <code class="classname">InvalidStateException</code> which contains an array of <code class="literal">InvalidValue</code>s describing each failure.
+			</div><div class="para">
+				If Hibernate Validator is present in the classpath, Hibernate Annotations (or Hibernate EntityManager) will use it transparently. If, for some reason, you want to disable this integration, set <code class="literal">hibernate.validator.autoregister_listeners</code> to false
+			</div><div class="para">
+				<div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+						If the beans are not annotated with validation annotations, there is no runtime performance cost.
+					</div></div></div>
+
+			</div><div class="para">
+				In case you need to manually set the event listeners for Hibernate Core, use the following configuration in <code class="literal">hibernate.cfg.xml</code>:
+			</div><pre class="programlisting">&lt;hibernate-configuration&gt;
+    ...
+    &lt;event type="pre-update"&gt;
+        &lt;listener 
+          class="org.hibernate.validator.event.ValidateEventListener"/&gt;
+    &lt;/event&gt;
+    &lt;event type="pre-insert"&gt;
+        &lt;listener 
+          class="org.hibernate.validator.event.ValidateEventListener"/&gt;
+    &lt;/event&gt;
+&lt;/hibernate-configuration&gt;</pre></div><div class="section" id="validator-checkconstraints-orm-jpaevent"><div class="titlepage"><div><div><h3 class="title">2.2.2. Java Persistence event-based validation</h3></div></div></div><div class="para">
+				Hibernate Validator is not tied to Hibernate for event based validation: a Java Persistence entity listener is available. Whenever an listened entity is persisted or updated, Hibernate Validator will verify all constraints of the entity instance and throw an exception if any constraint is violated. Basically, objects will be checked before any inserts and before any updates made by the Java Persistence provider. This includes changes applied by cascade! On constraint violation, the event will raise a runtime <code class="classname">InvalidStateException</code> which contains an array of <code class="literal">InvalidValue</code>s describing each failure.
+			</div><div class="para">
+				Here is how to make a class validatable:
+			</div><pre class="programlisting">@Entity
+@EntityListeners( JPAValidateListener.class )
+public class Submarine {
+    ...
+}</pre><div class="para">
+				<div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+						Compared to the Hibernate event, the Java Persistence listener has two drawbacks. You need to define the entity listener on every validatable entity. The DDL generated by your provider will not reflect the constraints.
+					</div></div></div>
+
+			</div></div></div><div class="section" id="idm140255986995136"><div class="titlepage"><div><div><h2 class="title">2.3. Application-level validation</h2></div></div></div><div class="para">
+			Hibernate Validator can be applied anywhere in your application code.
+		</div><pre class="programlisting">ClassValidator personValidator = new ClassValidator( Person.class );
+ClassValidator addressValidator = new ClassValidator( Address.class, ResourceBundle.getBundle("messages", Locale.ENGLISH) );
+
+InvalidValue[] validationMessages = addressValidator.getInvalidValues(address);</pre><div class="para">
+			The first two lines prepare the Hibernate Validator for class checking. The first one relies upon the error messages embedded in Hibernate Validator (see <a class="xref" href="#validator-defineconstraints-error">Section 1.3, “Error messages”</a>), the second one uses a resource bundle for these messages. It is considered a good practice to execute these lines once and cache the validator instances.
+		</div><div class="para">
+			The third line actually validates the <code class="literal">Address</code> instance and returns an array of <code class="literal">InvalidValue</code>s. Your application logic will then be able to react to the failure.
+		</div><div class="para">
+			You can also check a particular property instead of the whole bean. This might be useful for property per property user interaction
+		</div><pre class="programlisting">ClassValidator addressValidator = new ClassValidator( Address.class, ResourceBundle.getBundle("messages", Locale.ENGLISH) );
+
+//only get city property invalid values
+InvalidValue[] validationMessages = addressValidator.getInvalidValues(address, "city");
+
+//only get potential city property invalid values
+InvalidValue[] validationMessages = addressValidator.getPotentialInvalidValues("city", "Paris");</pre></div><div class="section" id="idm140256003075776"><div class="titlepage"><div><div><h2 class="title">2.4. Presentation layer validation</h2></div></div></div><div class="para">
+			When working with JSF and <span class="productname">JBoss Seam</span> , one can triggers the validation process at the presentation layer using Seam's JSF tags <code class="literal">&lt;s:validate&gt;</code> and <code class="literal">&lt;s:validateAll/&gt;</code>, letting the constraints be expressed on the model, and the violations presented in the view
+		</div><pre class="programlisting">&lt;h:form&gt;
+    &lt;div&gt;
+        &lt;h:messages/&gt;
+    &lt;/div&gt;
+    <span class="bold bold"><strong>&lt;s:validateAll&gt;</strong></span>
+        &lt;div&gt;
+            Country:
+            &lt;h:inputText value="#{location.country}" required="true"/&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            Zip code:
+            &lt;h:inputText value="#{location.zip}" required="true"/&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h:commandButton/&gt;
+        &lt;/div&gt;
+    <span class="bold bold"><strong>&lt;/s:validateAll&gt;</strong></span>
+&lt;/h:form&gt;</pre><div class="para">
+			Going even further, and adding <span class="productname">Ajax4JSF</span> to the loop will bring client side validation with just a couple of additional JSF tags, again without validation definition duplication.
+		</div><div class="para">
+			Check the <a href="http://www.jboss.com/products/seam" class="mimir-link-warn" title="Mimir does not include content from: www.jboss.com">JBoss Seam</a> documentation for more information.
+		</div></div><div class="section" id="idm140256000724896"><div class="titlepage"><div><div><h2 class="title">2.5. Validation informations</h2></div></div></div><div class="para">
+			As a validation information carrier, hibernate provide an array of <code class="classname">InvalidValue</code>. Each <code class="literal">InvalidValue</code> has a buch of methods describing the individual issues.
+		</div><div class="para">
+			<code class="methodname">getBeanClass()</code> retrieves the failing bean type
+		</div><div class="para">
+			<code class="methodname">getBean()</code>retrieves the failing instance (if any ie not when using <code class="methodname">getPotentianInvalidValues()</code>)
+		</div><div class="para">
+			<code class="methodname">getValue()</code> retrieves the failing value
+		</div><div class="para">
+			<code class="methodname">getMessage()</code> retrieves the proper internationalized error message
+		</div><div class="para">
+			<code class="methodname">getRootBean()</code> retrieves the root bean instance generating the issue (useful in conjunction with <code class="literal">@Valid</code>), is null if getPotentianInvalidValues() is used.
+		</div><div class="para">
+			<code class="literal">getPropertyPath()</code> retrieves the dotted path of the failing property starting from the root bean
+		</div></div></div><div xml:lang="en-US" class="appendix" id="appe-Publican-Revision_History" lang="en-US"><div class="titlepage"><div><div><h1 class="title">Appendix A. Revision History</h1></div></div></div><div class="para"><p><!--Empty--></p>
+		<div class="revhistory"><table summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 5.1.0-110.33.400</td><td align="left">2013-10-31</td><td align="left"><span class="author"><span class="firstname">Rüdiger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild with publican 4.0.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.1.0-110.33</td><td align="left">July 24 2012</td><td align="left"><span class="author"><span class="firstname">Ruediger</span> <span class="surname">Landmann</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Rebuild for Publican 3.0</td></tr></table>
+
+				</td></tr><tr><td align="left">Revision 5.1-0</td><td align="left">Wed Sep 15 2010</td><td align="left"><span class="author"><span class="firstname">Laura</span> <span class="surname">Bailey</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Changed version number in line with new versioning requirements.</td></tr><tr><td>Revised for JBoss Enterprise Application Platform 5.1.0.GA.</td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div><div class="legalnotice"><a id="idm140255992369728"><!--Empty--></a><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2011 Red Hat, Inc.
+	</div><div class="para">
+		This document is licensed by Red Hat under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="mimir-link-warn" title="Mimir does not include content from: creativecommons.org">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original. If the document is modified, all Red Hat trademarks must be removed.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat Software Collections is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

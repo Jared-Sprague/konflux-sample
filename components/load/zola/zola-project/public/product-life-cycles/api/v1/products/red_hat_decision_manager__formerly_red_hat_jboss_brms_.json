@@ -1,0 +1,207 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": null,
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "End of Life",
+      "name": "End of Life",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": null,
+      "display_name": "Extended life cycle support (ELS) 1 ends",
+      "name": "Extended life cycle support (ELS) 1",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    },
+    {
+      "additional_text": null,
+      "display_name": "Extended life cycle support (ELS) 2 ends",
+      "name": "Extended life cycle support (ELS) 2",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    }
+  ],
+  "footnote": "<p><strong>NOTE:</strong> Support for containerization of product bits is discontinued for 6.x from ELS-1 onward. Please note health index grades are not maintained henceforth.</p>\n<p><strong>NOTE:</strong> Red Hat build of OptaPlanner 8.38 product lifecycle follows the product lifecycle of Red Hat Decision Manager 7.</p>\n<p><strong>NOTE:</strong> Red Hat build of OptaPlanner 8 reaches End of Life on 30 May 2024. See <a href=\"https://access.redhat.com/articles/7060671\">OptaPlanner End of Life</a></p>\n",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/jboss_notes/",
+  "name": "Red Hat Decision Manager (Formerly Red Hat JBoss BRMS)",
+  "package": null,
+  "release_cadence": null,
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": false,
+  "uuid": "3450a7d0-857a-4833-a6cc-34f74d982172",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "6.x",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2014-02-28T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2018-04-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Extended Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "7.x",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2018-02-28T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "2026-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 1"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Extended Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "5.x",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2009-05-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2014-03-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2015-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2015-01-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "End of Life"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-01-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2021-01-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) 2"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    }
+  ]
+}]}

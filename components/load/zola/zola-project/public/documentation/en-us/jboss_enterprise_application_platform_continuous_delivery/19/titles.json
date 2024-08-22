@@ -1,0 +1,68 @@
+{
+  "version": {
+    "name": "19",
+    "slug": "19",
+    "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19"
+  },
+  "titles": [
+    {
+      "titleId": "1830e530-ccc3-43a9-93b5-91eb3e2daf9d",
+      "modified": 1588247276,
+      "name": "JBoss EAP Continuous Delivery 19 Release Notes",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19/html-single/jboss_eap_continuous_delivery_19_release_notes/index",
+      "category": {
+        "weight": 50,
+        "name": "Release Notes"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 19",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19/html-single/jboss_eap_continuous_delivery_19_release_notes/index",
+        "slug": "jboss_eap_continuous_delivery_19_release_notes",
+        "id": "40dc69df91f6caeefccfb52a2243743e.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19/pdf/jboss_eap_continuous_delivery_19_release_notes/JBoss_Enterprise_Application_Platform_Continuous_Delivery-19-JBoss_EAP_Continuous_Delivery_19_Release_Notes-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19/pdf/jboss_eap_continuous_delivery_19_release_notes/jboss_enterprise_application_platform_continuous_delivery-19-jboss_eap_continuous_delivery_19_release_notes-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/19/pdf/jboss_eap_continuous_delivery_19_release_notes/jboss_enterprise_application_platform_continuous_delivery-19-jboss_eap_continuous_delivery_19_release_notes-en-us.pdf"
+      },
+      "toc": {
+        "id": "12185d6b82b10c4bba01ca0810b9bf7d.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": null,
+      "modified": null,
+      "name": "API Javadocs",
+      "url": "https://access.redhat.com/webassets/avalon/d/jboss_enterprise_application_platform_continuous_delivery/19/javadocs/index.html",
+      "category": {
+        "weight": 51,
+        "name": "Reference"
+      },
+      "description": "Browse the API for JBoss Enterprise Application Platform Continuous Delivery 19",
+      "weight": 50,
+      "singlePage": null,
+      "pdf": null,
+      "toc": null,
+      "custom_link": true
+    },
+    {
+      "titleId": null,
+      "modified": null,
+      "name": "JBoss EAP Management Model",
+      "url": "https://access.redhat.com/webassets/avalon/d/jboss_enterprise_application_platform_continuous_delivery/19/mgmt_model/index.html",
+      "category": {
+        "weight": 51,
+        "name": "Reference"
+      },
+      "description": "Browse the management model for JBoss Enterprise Application Platform Continuous Delivery 19",
+      "weight": 50,
+      "singlePage": null,
+      "pdf": null,
+      "toc": null,
+      "custom_link": true
+    }
+  ]
+}

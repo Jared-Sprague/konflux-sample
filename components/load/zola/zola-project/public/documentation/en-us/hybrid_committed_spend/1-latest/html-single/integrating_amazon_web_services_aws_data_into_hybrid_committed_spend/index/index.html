@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Integrating Amazon Web Services (AWS) data into hybrid committed spend - Hybrid committed spend 1-latest
+</title>
+        
+<meta name="product" content="Hybrid committed spend" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-07-26T20:02:39.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">Hybrid committed spend</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">1-latest</a>
+                                
+                                
+                                Integrating Amazon Web Services (AWS) data into hybrid committed spend
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Integrating Amazon Web Services (AWS) data into hybrid committed spend</a>
+                    </li><li>
+                        <a href="#assembly-adding-aws-int-hcs">
+                            1. Creating an Amazon Web Services integration
+                        </a><ol>
+                <li>
+                        <a href="#adding_an_aws_account_adding-aws-int-hcs">
+                            1.1. Adding an AWS account as an integration
+                        </a>
+                    </li><li>
+                        <a href="#creating-an-aws-s3-bucket-hcs-n_adding-aws-int-hcs">
+                            1.2. Creating an AWS S3 bucket for storing your cost data
+                        </a>
+                    </li><li>
+                        <a href="#activating-aws-tags_adding-aws-int-hcs">
+                            1.3. Activating AWS tags
+                        </a>
+                    </li><li>
+                        <a href="#enabling-aws-account-access_adding-aws-int-hcs">
+                            1.4. Configure an IAM policy to enable minimal account access for Cost and Usage Reports
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-adding-filtered-aws-int-hcs">
+                            2. Filtering your Amazon Web Services data before sending it to hybrid committed spend
+                        </a><ol>
+                <li>
+                        <a href="#adding_an_aws_account_adding-filtered-aws-int-hcs">
+                            2.1. Adding an AWS account as an integration
+                        </a>
+                    </li><li>
+                        <a href="#creating-an-aws-s3-bucket-hcs-n_adding-filtered-aws-int-hcs">
+                            2.2. Creating an AWS S3 bucket for storing your cost data
+                        </a>
+                    </li><li>
+                        <a href="#creating-an-aws-s3-bucket-hcs-f_adding-filtered-aws-int-hcs">
+                            2.3. Creating a data export for filtered data reporting
+                        </a>
+                    </li><li>
+                        <a href="#activating-aws-tags_adding-filtered-aws-int-hcs">
+                            2.4. Activating AWS tags
+                        </a>
+                    </li><li>
+                        <a href="#enabling-aws-account-access-hcs-f_adding-filtered-aws-int-hcs">
+                            2.5. Enabling minimal account access for cost and usage consumption
+                        </a>
+                    </li><li>
+                        <a href="#enabling-aws-account-access-hcs-lambda_adding-filtered-aws-int-hcs">
+                            2.6. Enabling account access for Athena
+                        </a><ol>
+                <li>
+                        <a href="#configuring-athena-for-report-generation_adding-filtered-aws-int-hcs">
+                            2.6.1. Configuring Athena for report generation
+                        </a>
+                    </li><li>
+                        <a href="#creating-lambda-for-athena_adding-filtered-aws-int-hcs">
+                            2.6.2. Creating a Lambda function for Athena
+                        </a>
+                    </li><li>
+                        <a href="#creating-lambda-for-athena-post_adding-filtered-aws-int-hcs">
+                            2.6.3. Creating a Lambda function to post the report files
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm139666456299008">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--integrating_amazon_web_services_aws_data_into_hybrid_committed_spend">
+            <h1 class="title">Integrating Amazon Web Services (AWS) data into hybrid committed spend</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139666460915728"><div class="titlepage"><div><div class="producttitle"><span class="productname">Hybrid Committed Spend</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn how to add and configure your AWS integrations</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139666456299008">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Amazon Web Services (AWS) integration to hybrid committed spend.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-adding-aws-int-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Creating an Amazon Web Services integration</h1></div></div></div><p class="_abstract _abstract">
+			To add an AWS account to hybrid committed spend, you must configure your AWS account to provide metrics, then add your AWS account as an integration from the hybrid committed spend user interface.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				You must have a user with Cloud Administrator entitlements before you can add integrations to hybrid committed spend.
+			</p></div></div><p>
+			When you add your AWS account as an integration, this creates a read-only connection to AWS to collect cost and usage information hourly in hybrid committed spend, but does not make any changes to the AWS account.
+		</p><p>
+			Before you can add your AWS account to hybrid committed spend as an integration, you must configure the following services on your AWS account to allow hybrid committed spend access to metrics:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					An S3 bucket to store cost and usage data reporting for hybrid committed spend
+				</li><li class="listitem">
+					An Identity Access Management (IAM) policy and role for hybrid committed spend to process the cost and usage data
+				</li><li class="listitem">
+					A Hybrid Committed Spend integration on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>
+				</li></ol></div><p>
+			As you will complete some of the following steps in the AWS console, and some steps in the hybrid committed spend user interface, keep both applications open in a web browser.
+		</p><p>
+			Add your AWS integration to hybrid committed spend from <a class="link mimir-link-warn" href="https://console.redhat.com/settings/integrations" title="Mimir does not include content from: console.redhat.com">the Integrations page</a>.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				Because non-Red Hat products and documentation can change, instructions for configuring the third-party integrations provided in this guide are general and correct at the time of publishing. See the <a class="link mimir-link-warn" href="https://docs.aws.amazon.com/" title="Mimir does not include content from: docs.aws.amazon.com">AWS documentation</a> for the most up-to-date and accurate information.
+			</p></div></div><section class="section" id="adding_an_aws_account_adding-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.1. Adding an AWS account as an integration</h2></div></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						To add data integrations to cost management, you must have a Red Hat account with Cloud Administrator permissions.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Hybrid_Committed_Spend-1-latest-Integrating_Amazon_Web_Services_AWS_data_into_hybrid_committed_spend-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> page, in the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Select integration type</strong></span> step, in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="guibutton">Amazon Web Services</span>. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem">
+						Enter a name for the integration and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem"><p class="simpara">
+						On the <span class="strong strong"><strong>Select configuration</strong></span> step, select how you want to connect to your AWS integration.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Select <span class="guibutton">Account authorization</span> to provide your AWS account credentials and let Red Hat configure and manage your integration for you.
+							</li><li class="listitem">
+								Select <span class="guibutton">Manual configuration</span> to customize your integration. You can filter your information before it is sent to hybrid committed spend. For instructions on how to filter your data, see <a class="xref" href="#assembly-adding-filtered-aws-int-hcs" title="Chapter 2. Filtering your Amazon Web Services data before sending it to hybrid committed spend">Chapter 2, <em>Filtering your Amazon Web Services data before sending it to hybrid committed spend</em></a>. Click <span class="guibutton">Next</span>.
+							</li></ol></div></li><li class="listitem">
+						In the <span class="strong strong"><strong>Select application</strong></span> step, select <span class="strong strong"><strong>Cost management</strong></span>. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem">
+						If you selected the account authorization method, on the <span class="strong strong"><strong>Review details</strong></span> step, review the details and click <span class="guibutton">Add</span>. If you selected the manual configuration method, continue to the next step in the wizard and configure your S3 bucket.
+					</li></ol></div></section><section class="section" id="creating-an-aws-s3-bucket-hcs-n_adding-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.2. Creating an AWS S3 bucket for storing your cost data</h2></div></div></div><p>
+				Create an Amazon S3 bucket with permissions configured to store billing reports.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to your AWS account to begin configuring cost and usage reporting.
+					</li><li class="listitem">
+						In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.
+					</li><li class="listitem"><p class="simpara">
+						In the AWS Billing console, create a data export that will be delivered to your S3 bucket. Specify the following values and accept the defaults for any other values:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								Report name: <span class="emphasis"><em>&lt;rh_cost_report&gt;</em></span> (note this name as you will use it later)
+							</li><li class="listitem">
+								Additional report details: Include resource IDs
+							</li><li class="listitem">
+								S3 bucket: <span class="emphasis"><em>&lt;the S3 bucket you configured previously&gt;</em></span>
+							</li><li class="listitem">
+								Time granularity: Hourly
+							</li><li class="listitem">
+								Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)
+							</li><li class="listitem">
+								Compression type: GZIP
+							</li><li class="listitem"><p class="simpara">
+								Report path prefix: cost
+							</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+									See the AWS <span class="emphasis"><em>Billing and Cost Management</em></span> documentation for more details on configuration.
+								</p></div></div></li></ul></div></li><li class="listitem">
+						On the <span class="strong strong"><strong>Create storage</strong></span> step, in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, paste the name of your S3 bucket and select the region that it was created in. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Create cost and usage report</strong></span> step, click <span class="guibutton">Next</span>.
+					</li></ol></div></section><section class="section" id="activating-aws-tags_adding-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.3. Activating AWS tags</h2></div></div></div><p class="_abstract _abstract">
+				To use tags to organize your AWS resources in the hybrid committed spend application, activate your tags in AWS to allow them to be imported automatically.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						In the AWS Billing console:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Open the <span class="emphasis"><em>Cost Allocation Tags</em></span> section.
+							</li><li class="listitem">
+								Select the tags you want to use in the hybrid committed spend application, and click <span class="strong strong"><strong>Activate</strong></span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						If your organization is converting systems from CentOS 7 to RHEL and using hourly billing, activate the <code class="literal">com_redhat_rhel</code> tag for your systems in the <span class="strong strong"><strong>Cost Allocation Tags</strong></span> section of the AWS console.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								After tagging the instances of RHEL you want to meter in AWS, select <span class="guibutton">Include RHEL usage</span>.
+							</li></ol></div></li><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Integrations</strong></span> wizard, click <span class="guibutton">Next</span>.
+					</li></ol></div><div class="_additional-resources _additional-resources"><p class="title"><strong>Additional resources</strong></p><p>
+					For more information about tagging, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/#adding-tags-to-an-AWS-resource_configuring-tags-int">Adding tags to an AWS resource</a>.
+				</p></div></section><section class="section" id="enabling-aws-account-access_adding-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.4. Configure an IAM policy to enable minimal account access for Cost and Usage Reports</h2></div></div></div><p class="_abstract _abstract">
+				To provide data in the web interface and API, hybrid committed spend must consume the Cost and Usage Reports produced by AWS. To only provide access to the stored information and nothing else, create an IAM policy and role for hybrid committed spend to use.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket that you configured previously.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+								Select the JSON tab and paste the following content in the JSON policy text box:
+							</p><pre class="programlisting language-json">{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "s3:List*"
+      ],
+        "Resource": [
+        "arn:aws:s3:::&lt;your_bucket_name&gt;", <span id="CO1-1"><!--Empty--></span><span class="callout">1</span>
+        "arn:aws:s3:::&lt;your_bucket_name&gt;/*"
+      ]
+    },
+
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "cur:DescribeReportDefinitions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre><div class="calloutlist"><dl class="calloutlist"><dt><a href="#CO1-1"><span class="callout">1</span></a> </dt><dd><div class="para">
+										Replace <code class="literal">&lt;your_bucket_name&gt;</code> in both locations with the name of the Amazon S3 bucket you configured previously.
+									</div></dd></dl></div></li></ol></div></li><li class="listitem"><p class="simpara">
+						In the AWS IAM console, create a new IAM role:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Select <span class="strong strong"><strong>Another AWS account</strong></span> as the type of trusted entity.
+							</li><li class="listitem">
+								Enter <span class="emphasis"><em>589173575009</em></span> as the Account ID to provide the hybrid committed spend application with read access to the AWS account cost data.
+							</li><li class="listitem">
+								Attach the IAM policy you just configured.
+							</li><li class="listitem">
+								Enter a role name and description.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						In the AWS IAM console, in the <span class="strong strong"><strong>Roles</strong></span> section, open the summary screen for the role you just created.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Copy the Role ARN, which is a string beginning with <code class="literal">arn:aws:</code>.
+							</li></ol></div></li><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, paste your Role ARN and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Review the details and click <span class="strong strong"><strong>Finish</strong></span> to add the AWS account to cost management.
+					</li></ol></div><p>
+				Cost management will begin collecting Cost and Usage data from your AWS account and any linked AWS accounts.
+			</p><p>
+				The data can take a few days to populate before it shows on the <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a> dashboard.
+			</p></section></section><section class="chapter" id="assembly-adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Filtering your Amazon Web Services data before sending it to hybrid committed spend</h1></div></div></div><p>
+			Configure a function script in AWS to copy the cost exports and object storage bucket that hybrid committed spend can access and filter your data to share a subset of your billing data with Red Hat. This option is only recommended if your organization has third party data limitations.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				You must have a Red Hat account user with Cloud Administrator permissions before you can add data integrations to hybrid committed spend.
+			</p></div></div><p>
+			To configure your AWS account to be a hybrid committed spend data integration, you must complete the following tasks:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					Create an AWS S3 bucket to store your cost data.
+				</li><li class="listitem">
+					Create an AWS S3 bucket to report your filtered hybrid committed spend data.
+				</li><li class="listitem">
+					Configure IAM roles for your cost data bucket.
+				</li><li class="listitem">
+					Add your AWS integrations to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+				</li><li class="listitem">
+					Configure IAM roles for AWS Athena.
+				</li><li class="listitem">
+					Enable Athena.
+				</li><li class="listitem">
+					Create Lambda tasks for Athena to export filtered data to your S3 bucket.
+				</li></ul></div><p>
+			Because you will complete some of the following steps in the AWS Console, and some steps in the hybrid committed spend user interface, keep both applications open in a web browser.
+		</p><section class="section" id="adding_an_aws_account_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.1. Adding an AWS account as an integration</h2></div></div></div><p>
+				Add an AWS integration so the hybrid committed spend application can processes the Cost and Usage Reports from your AWS account. You can add an AWS integration automatically by providing your AWS account credentials, or you can configure cost management to filter the data that you send to Red Hat.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						To add data integrations to cost management, you must have a Red Hat account with Cloud Administrator permissions.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Hybrid_Committed_Spend-1-latest-Integrating_Amazon_Web_Services_AWS_data_into_hybrid_committed_spend-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> page, in the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Select integration type</strong></span> step, in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="guibutton">Amazon Web Services</span>. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem"><p class="simpara">
+						Enter a name for the integration and click <span class="strong strong"><strong>Next</strong></span>.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Select <span class="guibutton">Manual configuration</span> to customize your integration. For example, you can filter your information before it is sent to hybrid committed spend. Click <span class="guibutton">Next</span>.
+							</li></ol></div></li><li class="listitem">
+						In the <span class="strong strong"><strong>Select application</strong></span> step, select <span class="strong strong"><strong>Cost management</strong></span>. Click <span class="guibutton">Next</span>.
+					</li></ol></div></section><section class="section" id="creating-an-aws-s3-bucket-hcs-n_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.2. Creating an AWS S3 bucket for storing your cost data</h2></div></div></div><p>
+				Create an Amazon S3 bucket with permissions configured to store billing reports.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to your AWS account to begin configuring cost and usage reporting.
+					</li><li class="listitem">
+						In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.
+					</li><li class="listitem"><p class="simpara">
+						In the AWS Billing console, create a data export that will be delivered to your S3 bucket. Specify the following values and accept the defaults for any other values:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								Report name: <span class="emphasis"><em>&lt;rh_cost_report&gt;</em></span> (note this name as you will use it later)
+							</li><li class="listitem">
+								Additional report details: Include resource IDs
+							</li><li class="listitem">
+								S3 bucket: <span class="emphasis"><em>&lt;the S3 bucket you configured previously&gt;</em></span>
+							</li><li class="listitem">
+								Time granularity: Hourly
+							</li><li class="listitem">
+								Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)
+							</li><li class="listitem">
+								Compression type: GZIP
+							</li><li class="listitem"><p class="simpara">
+								Report path prefix: cost
+							</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+									See the AWS <span class="emphasis"><em>Billing and Cost Management</em></span> documentation for more details on configuration.
+								</p></div></div></li></ul></div></li><li class="listitem">
+						On the <span class="strong strong"><strong>Create storage</strong></span> step, in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, paste the name of your S3 bucket and select the region that it was created in. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Create cost and usage report</strong></span> step, click <span class="guibutton">Next</span>.
+					</li></ol></div></section><section class="section" id="creating-an-aws-s3-bucket-hcs-f_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.3. Creating a data export for filtered data reporting</h2></div></div></div><p>
+				To create a data export in AWS, set up Athena and Lambda functions to filter the data. This process delivers your data export to your S3 bucket. Complete the following steps:
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to your AWS account.
+					</li><li class="listitem">
+						In the AWS S3 console, create a data export that will be delivered to your S3 bucket.
+					</li><li class="listitem">
+						Enter a report name. Save this name. You will use it later.
+					</li><li class="listitem">
+						Click include resource IDs.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						From Configure S3 Bucket, click Configure. Create a bucket and apply the default policy.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Save</strong></span>.
+					</li><li class="listitem"><p class="simpara">
+						Specify the following values and accept the defaults for any other values:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								Report Path prefix: HCS-Athena
+							</li><li class="listitem">
+								Time granularity: Hourly
+							</li><li class="listitem">
+								Enable report data integration for: Amazon Athena
+							</li></ul></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>
+					</li><li class="listitem">
+						Verify the information and click <span class="strong strong"><strong>Create report</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Create storage</strong></span> step, in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, paste the name of your S3 bucket and select the region that it was created in and click <span class="guibutton">Next</span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Create cost and usage report</strong></span> step in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="strong strong"><strong>I wish to manually customize the CUR sent to Cost Management</strong></span> and click <span class="guibutton">Next</span>.
+					</li></ol></div></section><section class="section" id="activating-aws-tags_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.4. Activating AWS tags</h2></div></div></div><p class="_abstract _abstract">
+				To use tags to organize your AWS resources in the hybrid committed spend application, activate your tags in AWS to allow them to be imported automatically.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						In the AWS Billing console:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Open the <span class="emphasis"><em>Cost Allocation Tags</em></span> section.
+							</li><li class="listitem">
+								Select the tags you want to use in the hybrid committed spend application, and click <span class="strong strong"><strong>Activate</strong></span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						If your organization is converting systems from CentOS 7 to RHEL and using hourly billing, activate the <code class="literal">com_redhat_rhel</code> tag for your systems in the <span class="strong strong"><strong>Cost Allocation Tags</strong></span> section of the AWS console.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								After tagging the instances of RHEL you want to meter in AWS, select <span class="guibutton">Include RHEL usage</span>.
+							</li></ol></div></li><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Integrations</strong></span> wizard, click <span class="guibutton">Next</span>.
+					</li></ol></div><div class="_additional-resources _additional-resources"><p class="title"><strong>Additional resources</strong></p><p>
+					For more information about tagging, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/#adding-tags-to-an-AWS-resource_configuring-tags-int">Adding tags to an AWS resource</a>.
+				</p></div></section><section class="section" id="enabling-aws-account-access-hcs-f_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.5. Enabling minimal account access for cost and usage consumption</h2></div></div></div><p class="_abstract _abstract">
+				For hybrid committed spend to provide data, it must consume the Cost and Usage Reports produced by AWS. For hybrid committed spend to obtain this data with a minimal amount of access, create an IAM policy and role for hybrid committed spend to use. This configuration only provides access to the stored information.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket that you configured.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+								Select the JSON tab and paste the following content in <span class="strong strong"><strong>JSON policy</strong></span>:
+							</p><pre class="programlisting language-json">{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+        "Resource": [
+        "arn:aws:s3:::&lt;your_bucket_name&gt;", <span id="CO2-1"><!--Empty--></span><span class="callout">1</span>
+        "arn:aws:s3:::&lt;your_bucket_name&gt;/*"
+      ]
+    },
+
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "cur:DescribeReportDefinitions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre><div class="calloutlist"><dl class="calloutlist"><dt><a href="#CO2-1"><span class="callout">1</span></a> </dt><dd><div class="para">
+										Replace <code class="literal">&lt;your_bucket_name&gt;</code> in both locations with the name of the Amazon S3 bucket you configured for storing your filtered data.
+									</div></dd></dl></div></li><li class="listitem">
+								Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open. You will need it for the next step.
+							</li><li class="listitem">
+								In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, click <span class="guibutton">Next</span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						In the AWS IAM console, create a new IAM role:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								For the type of trusted entity, select <span class="strong strong"><strong>AWS account</strong></span>.
+							</li><li class="listitem">
+								Enter <span class="emphasis"><em>589173575009</em></span> as the Account ID to provide the hybrid committed spend application with read access to the AWS account cost data.
+							</li><li class="listitem">
+								Attach the IAM policy you just configured.
+							</li><li class="listitem">
+								Enter a role name and description and finish creating the role.
+							</li><li class="listitem">
+								In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, click <span class="guibutton">Next</span>.
+							</li></ol></div></li><li class="listitem">
+						In the AWS IAM console, from Roles, open the summary screen for the role you just created and copy the Role ARN. It is a string beginning with <code class="literal">arn:aws:</code>.
+					</li><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, enter the ARN on the <span class="strong strong"><strong>Enter ARN</strong></span> page and click <span class="guibutton">Next</span>.
+					</li><li class="listitem">
+						Review the details of your cloud integration and click <span class="guibutton">Add</span>.
+					</li></ol></div><div class="formalpara"><p class="title"><strong>Next steps</strong></p><p>
+					Return to AWS to customize your AWS data export by configuring Athena and Lambda to filter your reports.
+				</p></div></section><section class="section" id="enabling-aws-account-access-hcs-lambda_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.6. Enabling account access for Athena</h2></div></div></div><p class="_abstract _abstract">
+				To provide data within the web interface and API, create an IAM policy and role for hybrid committed spend to use. This configuration provides access to the stored information and nothing else.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						From the AWS Identity and Access Management (IAM) console, create an IAM policy for the Athena Lambda functions you will configure.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+								Select the JSON tab and paste the following content in the JSON policy text box:
+							</p><pre class="programlisting language-json">{
+	"Version": "2012-10-17",
+	"Statement": [
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"athena:*"
+        	],
+        	"Resource": [
+            	"*"
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"glue:CreateDatabase",
+            	"glue:DeleteDatabase",
+            	"glue:GetDatabase",
+            	"glue:GetDatabases",
+            	"glue:UpdateDatabase",
+            	"glue:CreateTable",
+            	"glue:DeleteTable",
+            	"glue:BatchDeleteTable",
+            	"glue:UpdateTable",
+            	"glue:GetTable",
+            	"glue:GetTables",
+            	"glue:BatchCreatePartition",
+            	"glue:CreatePartition",
+            	"glue:DeletePartition",
+            	"glue:BatchDeletePartition",
+            	"glue:UpdatePartition",
+            	"glue:GetPartition",
+            	"glue:GetPartitions",
+            	"glue:BatchGetPartition"
+        	],
+        	"Resource": [
+            	"*"
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"s3:GetBucketLocation",
+            	"s3:GetObject",
+            	"s3:ListBucket",
+            	"s3:ListBucketMultipartUploads",
+            	"s3:ListMultipartUploadParts",
+            	"s3:AbortMultipartUpload",
+            	"s3:CreateBucket",
+            	"s3:PutObject",
+            	"s3:PutBucketPublicAccessBlock"
+        	],
+        	"Resource": [
+            	"arn:aws:s3:::CHANGE-ME*"<span id="CO3-1"><!--Empty--></span><span class="callout">1</span>
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"s3:GetObject",
+            	"s3:ListBucket"
+        	],
+        	"Resource": [
+            	"arn:aws:s3:::CHANGE-ME*"<span id="CO3-2"><!--Empty--></span><span class="callout">2</span>
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"s3:ListBucket",
+            	"s3:GetBucketLocation",
+            	"s3:ListAllMyBuckets"
+        	],
+        	"Resource": [
+            	"*"
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"sns:ListTopics",
+            	"sns:GetTopicAttributes"
+        	],
+        	"Resource": [
+            	"*"
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"cloudwatch:PutMetricAlarm",
+            	"cloudwatch:DescribeAlarms",
+            	"cloudwatch:DeleteAlarms",
+            	"cloudwatch:GetMetricData"
+        	],
+        	"Resource": [
+            	"*"
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"lakeformation:GetDataAccess"
+        	],
+        	"Resource": [
+            	"*"
+        	]
+    	},
+    	{
+        	"Effect": "Allow",
+        	"Action": [
+            	"logs:*"
+        	],
+        	"Resource": "*"
+    	}
+	]
+}</pre><div class="calloutlist"><dl class="calloutlist"><dt><a href="#CO3-1"><span class="callout">1</span></a> <a href="#CO3-2"><span class="callout">2</span></a> </dt><dd><div class="para">
+										Replace <code class="literal">CHANGE-ME*</code> in both locations with the ARN for the IAM policy for the Athena Lambda functions.
+									</div></dd></dl></div></li><li class="listitem">
+								Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open because you will need it for the next step.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						In the AWS IAM console, create a new IAM role:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								For the type of trusted entity, select <span class="strong strong"><strong>AWS service</strong></span>.
+							</li><li class="listitem">
+								Select Lambda.
+							</li><li class="listitem">
+								Attach the IAM policy you just configured.
+							</li><li class="listitem">
+								Enter a role name and description and finish creating the role.
+							</li></ol></div></li></ol></div><section class="section" id="configuring-athena-for-report-generation_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h3 class="title">2.6.1. Configuring Athena for report generation</h3></div></div></div><p class="_abstract _abstract">
+					Configuring Athena to provide a filtered data export for hybrid committed spend.
+				</p><p>
+					The following configuration only provides access to additional stored information. It does not provide access to anything else:
+				</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							In the AWS S3 console, navigate to the filtered bucket that you created and download the <code class="literal">crawler-cfn.yml</code> file.
+						</li><li class="listitem">
+							From <span class="strong strong"><strong>Cloudformation</strong></span> in the AWS console, create a new stack.
+						</li><li class="listitem">
+							Select <span class="strong strong"><strong>Template as Ready</strong></span>.
+						</li><li class="listitem">
+							Upload the <code class="literal">crawler-cfn.yml</code> file that you previously downloaded. This should load immediately.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Next</strong></span>.
+						</li><li class="listitem">
+							Enter a name and click <span class="strong strong"><strong>Next</strong></span>.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>I acknowledge that AWS Cloudformation might create IAM resources</strong></span> and then click <span class="strong strong"><strong>Submit</strong></span>.
+						</li></ol></div></section><section class="section" id="creating-lambda-for-athena_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h3 class="title">2.6.2. Creating a Lambda function for Athena</h3></div></div></div><p>
+					You must create a Lambda function that queries the data export for your Red Hat related expenses and creates a report of your filtered expenses.
+				</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Navigate to Lambda in the AWS console and click <span class="strong strong"><strong>Create function</strong></span>.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Author from scratch</strong></span>.
+						</li><li class="listitem">
+							Enter a name your function.
+						</li><li class="listitem">
+							From the Runtime dropdown, Select python 3.7.
+						</li><li class="listitem">
+							Select x86_64 as the Architecture.
+						</li><li class="listitem">
+							Under Permissions select the Athena role you created.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Create function</strong></span>.
+						</li><li class="listitem"><p class="simpara">
+							Paste the following code to the function:
+						</p><pre class="programlisting language-python">import boto3
+import uuid
+import json
+from datetime import datetime
+
+now = datetime.now()
+year = now.strftime("%Y")
+month = now.strftime("%m")
+day = now.strftime("%d")
+
+# Vars to Change!
+integration_uuid = &lt;your_integration_uuid&gt;                            # integration_uuid
+bucket = &lt;your_S3_Bucket_Name&gt;                              # Bucket created for query results
+database = 'athenacurcfn_athena_cost_and_usage'             # Database to execute athena queries
+output=f's3://{bucket}/{year}/{month}/{day}/{uuid.uuid4()}' # Output location for query results
+
+# Athena query
+query = f"SELECT * FROM {database}.koku_athena WHERE ((bill_billing_entity = 'AWS Marketplace' AND line_item_legal_entity like '%Red Hat%') OR (line_item_legal_entity like '%Amazon Web Services%' AND line_item_line_item_description like '%Red Hat%') OR (line_item_legal_entity like '%Amazon Web Services%' AND line_item_line_item_description like '%RHEL%') OR (line_item_legal_entity like '%AWS%' AND line_item_line_item_description like '%Red Hat%') OR (line_item_legal_entity like '%AWS%' AND line_item_line_item_description like '%RHEL%') OR (line_item_legal_entity like '%AWS%' AND product_product_name like '%Red Hat%') OR (line_item_legal_entity like '%Amazon Web Services%' AND product_product_name like '%Red Hat%')) AND year = '{year}' AND month = '{month}'"
+
+def lambda_handler(event, context):
+    # Initiate Boto3 athena Client
+    athena_client = boto3.client('athena')
+
+    # Trigger athena query
+    response = athena_client.start_query_execution(
+        QueryString=query,
+        QueryExecutionContext={
+            'Database': database
+        },
+        ResultConfiguration={
+            'OutputLocation': output
+        }
+    )
+
+    # Save query execution to s3 object
+    s3 = boto3.client('s3')
+    json_object = {"integration_uuid": integration_uuid, "bill_year": year, "bill_month": month, "query_execution_id": response.get("QueryExecutionId"), "result_prefix": output}
+    s3.put_object(
+        Body=json.dumps(json_object),
+        Bucket=bucket,
+        Key='query-data.json'
+    )
+
+    return json_object</pre><p class="simpara">
+							Replace <code class="literal">&lt;your_integration_uuid&gt;</code> with the UUID from the integration you created on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">console.redhat.com</a>. Replace <code class="literal">&lt;your_S3_Bucket_Name&gt;</code> with the name of the S3 bucket you created to store reports.
+						</p></li><li class="listitem">
+							Click <span class="strong strong"><strong>Deploy</strong></span> to test the function.
+						</li></ol></div></section><section class="section" id="creating-lambda-for-athena-post_adding-filtered-aws-int-hcs"><div class="titlepage"><div><div><h3 class="title">2.6.3. Creating a Lambda function to post the report files</h3></div></div></div><p>
+					You must create a Lambda function to post your report files to the S3 bucket that you created.
+				</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Navigate to Lambda in the AWS console and click <span class="strong strong"><strong>Create function</strong></span>.
+						</li><li class="listitem">
+							Click Author from scratch
+						</li><li class="listitem">
+							Enter a name your function
+						</li><li class="listitem">
+							From the Runtime dropdown, Select python 3.7.
+						</li><li class="listitem">
+							Select x86_64 as the Architecture.
+						</li><li class="listitem">
+							Under Permissions select the Athena role you created.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Create function</strong></span>.
+						</li><li class="listitem"><p class="simpara">
+							Paste the following code to the function:
+						</p><pre class="programlisting language-python">import boto3
+import json
+import requests
+from botocore.exceptions import ClientError
+
+
+def get_credentials(secret_name, region_name):
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        raise e
+    secret = get_secret_value_response['SecretString']
+    return secret
+
+secret_name = "CHANGEME"
+region_name = "us-east-1"
+secret = get_credentials(secret_name, region_name)
+json_creds = json.loads(secret)
+
+USER = json_creds.get("&lt;your_username&gt;")      # console.redhat.com Username
+PASS = json_creds.get("&lt;your_password&gt;")      # console.redhat.com  Password
+bucket = "&lt;your_S3_Bucket_Name&gt;"              # Bucket for athena query results
+
+
+def lambda_handler(event, context):
+    # Initiate Boto3 s3 and fetch query file
+    s3_resource = boto3.resource('s3')
+    json_content = json.loads(s3_resource.Object(bucket, 'query-data.json').get()['Body'].read().decode('utf-8'))
+
+    # Initiate Boto3 athena Client and attempt to fetch athena results
+    athena_client = boto3.client('athena')
+    try:
+        athena_results = athena_client.get_query_execution(QueryExecutionId=json_content["query_execution_id"])
+    except Exception as e:
+        return f"Error fetching athena query results: {e} \n Consider increasing the time between running and fetching results"
+
+    reports_list = []
+    prefix = json_content["result_prefix"].split(f'{bucket}/')[-1]
+
+    # Initiate Boto3 s3 client
+    s3_client = boto3.client('s3')
+    result_data = s3_client.list_objects(Bucket=bucket, Prefix=prefix)
+    for item in result_data.get("Contents"):
+        if item.get("Key").endswith(".csv"):
+            reports_list.append(item.get("Key"))
+
+    # Post results to console.redhat.com API
+    url = "https://console.redhat.com/api/cost-management/v1/ingress/reports/"
+    json_data = {"source": json_content["integration_uuid"], "reports_list": reports_list, "bill_year": json_content["bill_year"], "bill_month": json_content["bill_month"]}
+    resp = requests.post(url, json=json_data, auth=(USER, PASS))
+
+    return resp</pre><p class="simpara">
+							Replace <code class="literal">&lt;your_username&gt;</code> with your username for <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">console.redhat.com</a>. Replace <code class="literal">&lt;your_password&gt;</code> with your password for <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">console.redhat.com</a>. Replace <code class="literal">&lt;your_S3_Bucket_Name&gt;</code> with the name of the S3 bucket that you created to store reports.
+						</p></li><li class="listitem">
+							Click <span class="strong strong"><strong>Deploy</strong></span> to test the function.
+						</li></ol></div></section></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12384146" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm139666456299008"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

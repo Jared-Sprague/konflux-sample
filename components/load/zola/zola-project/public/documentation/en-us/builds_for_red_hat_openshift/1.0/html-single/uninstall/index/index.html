@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Uninstall - builds for Red Hat OpenShift 1.0
+</title>
+        
+<meta name="product" content="builds for Red Hat OpenShift" />
+<meta name="documentation_version" content="1.0" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-02-13T10:25:24.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/builds_for_red_hat_openshift/1.0/">builds for Red Hat OpenShift</a>
+                                
+                                <a href="/documentation/en-us/builds_for_red_hat_openshift/1.0/">1.0</a>
+                                
+                                
+                                Uninstall
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Uninstall</a>
+                    </li><li>
+                        <a href="#uninstalling-builds">
+                            1. Uninstalling Builds
+                        </a><ol>
+                <li>
+                        <a href="#ob-deleting-the-builds-component-and-custom-resources_uninstalling-openshift-builds">
+                            1.1. Deleting the Builds components and custom resources
+                        </a>
+                    </li><li>
+                        <a href="#ob-uninstalling-the-builds-operator_uninstalling-openshift-builds">
+                            1.2. Uninstalling the Builds for Red Hat OpenShift Operator
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#idm139683019296688">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--uninstall">
+            <h1 class="title">Uninstall</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139683018988848"><div class="titlepage"><div><div class="producttitle"><span class="productname">builds for Red Hat OpenShift</span> <span class="productnumber">1.0</span></div><div><h2 class="subtitle">Uninstalling Builds</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm139683019296688">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This document provides information about uninstalling Builds.
+			</div></div></div></div><hr/></div><section class="chapter" id="uninstalling-builds"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Uninstalling Builds</h1></div></div></div><p>
+			As a cluster administrator, you can uninstall the Builds for Red Hat OpenShift Operator. Uninstalling the Operator does not automatically remove the custom resources (CRs) and Builds components.
+		</p><p>
+			To uninstall the Builds for Red Hat OpenShift Operator, perform the following tasks:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+					Delete the custom resources (CRs) that were created by default when you installed the Operator.
+				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						If you uninstall the Operator without removing the CRs, you cannot remove them later.
+					</p></div></div></li><li class="listitem">
+					Uninstall the Operator.
+				</li></ol></div><section class="section" id="ob-deleting-the-builds-component-and-custom-resources_uninstalling-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.1. Deleting the Builds components and custom resources</h2></div></div></div><p>
+				Delete the custom resources (CRs) that were created by default during Operator installation.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You are logged in to the OpenShift Container Platform cluster as an administrator.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <span class="strong strong"><strong>Administrator</strong></span> perspective of the web console, navigate to <span class="strong strong"><strong>Administration</strong></span> → <span class="strong strong"><strong>Custom Resource Definition</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Filter by name</strong></span> box, enter <code class="literal">shipwright.io</code> to search for the Builds for Red Hat OpenShift Operator CRs.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>CRD Config</strong></span> to see the <span class="strong strong"><strong>Custom Resource Definition Details</strong></span> page.
+					</li><li class="listitem"><p class="simpara">
+						Click the <span class="strong strong"><strong>Actions</strong></span> drop-down list, and select <span class="strong strong"><strong>Delete Custom Resource Definition</strong></span>.
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+							Deleting the CRs deletes the Builds controller and all the related components and tasks on the cluster.
+						</p></div></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Delete</strong></span> to confirm the deletion of the CRs.
+					</li></ol></div></section><section class="section" id="ob-uninstalling-the-builds-operator_uninstalling-openshift-builds"><div class="titlepage"><div><div><h2 class="title">1.2. Uninstalling the Builds for Red Hat OpenShift Operator</h2></div></div></div><p>
+				You can uninstall the Builds for Red Hat OpenShift Operator by using the <span class="strong strong"><strong>Administrator</strong></span> perspective in the web console.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You are logged in to the OpenShift Container Platform cluster as an administrator.
+					</li><li class="listitem">
+						You have deleted the Builds components and custom resources.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Navigate to <span class="strong strong"><strong>Operators</strong></span> → <span class="strong strong"><strong>OperatorHub</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>OperatorHub</strong></span> page, search for the <span class="strong strong"><strong>Builds for Red Hat OpenShift Operator</strong></span> by using the <span class="strong strong"><strong>Filter by keyword</strong></span> box.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Builds for Red Hat OpenShift Operator</strong></span> tile. The Operator tile indicates that the Operator is installed.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Builds for Red Hat OpenShift Operator</strong></span> description page, click <span class="strong strong"><strong>Uninstall</strong></span>.
+					</li></ol></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+						<a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">Deleting Operators from a cluster</a>
+					</li></ul></div></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm139683019296688"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

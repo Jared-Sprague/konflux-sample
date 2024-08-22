@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Limiting access to cost management resources - Red Hat Insights cost management 1-latest
+</title>
+        
+<meta name="product" content="Red Hat Insights cost management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-07-26T20:05:00.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">Red Hat Insights cost management</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">1-latest</a>
+                                
+                                
+                                Limiting access to cost management resources
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Limiting access to cost management resources</a>
+                    </li><li>
+                        <a href="#assembly-limiting-access-cost-resources-rbac">
+                            1. Limiting access to cost management resources
+                        </a><ol>
+                <li>
+                        <a href="#default-user-roles_limiting-access">
+                            1.1. Default user roles in cost management
+                        </a>
+                    </li><li>
+                        <a href="#adding-role-to-group-cost-rbac_limiting-access">
+                            1.2. Adding a role to a group
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm139778954184928">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--limiting_access_to_cost_management_resources">
+            <h1 class="title">Limiting access to cost management resources</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139778953354624"><div class="titlepage"><div><div class="producttitle"><span class="productname">Cost Management Service</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn how to secure your cost information</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139778954184928">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				You might not want users to have access to all cost management data, but instead only data specific to their projects or organization. Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-limiting-access-cost-resources-rbac"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Limiting access to cost management resources</h1></div></div></div><p class="_abstract _abstract">
+			You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user’s view to only AWS integrations, rather than the entire environment.
+		</p><p>
+			Role-based access control works by organizing users into groups, which can be associated with one or more roles. A role defines a permission and a set of resource definitions.
+		</p><p>
+			By default, a user who is not an administrator or viewer will not have access to data, but instead must be granted access to resources. Account administrators can view all data without any further role-based access control configuration.
+		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				A Red Hat account user with Organization Administrator entitlements is required to configure account users on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>. This Red Hat login allows you to look up users, add them to groups, and to assign roles that control visibility to resources.
+			</p><p>
+				For more information about Red Hat account roles, see <span class="emphasis"><em><a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2023/html-single/user_access_configuration_guide_for_role-based_access_control_rbac/index" title="This content is not included in Mimir.">User Access Configuration Guide For Role-Based Access Control (RBAC)</a></em></span> in the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> documentation..
+			</p></div></div><section class="section" id="default-user-roles_limiting-access"><div class="titlepage"><div><div><h2 class="title">1.1. Default user roles in cost management</h2></div></div></div><p class="_abstract _abstract">
+				You can configure custom user access roles for cost management, or assign each user a predefined role within the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+			</p><p>
+				To use a default role, determine the required level of access to permit your users based on the following predefined cost management related roles:
+			</p><div class="itemizedlist"><p class="title"><strong>Administrator roles</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						<span class="strong strong"><strong>Organization Administrator</strong></span>: Can configure and manage user access and is the only user with access to <a class="link mimir-link-warn" href="https://console.redhat.com/settings/applications/cost-management" title="Mimir does not include content from: console.redhat.com">cost management settings</a>.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>User Access Administrator</strong></span>: Can configure and manage user access to services hosted on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>Cloud Administrator</strong></span>: Can perform any available operation on any integration.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>Cost Administrator</strong></span>: Can read and write to all resources in cost management.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>Cost Price List Administrator</strong></span>: Can read and write on all cost models.
+					</li></ul></div><div class="itemizedlist"><p class="title"><strong>Viewer roles</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						<span class="strong strong"><strong>Cost Cloud Viewer</strong></span>: Has read permissions on cost reports related to cloud integrations.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>Cost OpenShift Viewer</strong></span>: Has read permissions on cost reports related to OpenShift integrations.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>Cost Price List Viewer</strong></span>: Has read permissions on price list rates.
+					</li></ul></div><p>
+				In addition to using these predefined roles, you can create and manage custom User Access roles with granular permissions for one or more applications in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>. For more information, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/1-latest/html/user_access_configuration_guide_for_role-based_access_control_rbac/assembly-rbac-procedures_user-access-configuration#proc-insights-rbac-adding-and-modifying-roles_rbac-procedures" title="This content is not included in Mimir."><span class="emphasis"><em>Adding custom User Access roles</em></span></a> in the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> documentation.
+			</p></section><section class="section" id="adding-role-to-group-cost-rbac_limiting-access"><div class="titlepage"><div><div><h2 class="title">1.2. Adding a role to a group</h2></div></div></div><p class="_abstract _abstract">
+				Once you have decided the correct roles for your organization, you must add your role to a group to manage and limit the scope of information that members in that group can see within cost management.
+			</p><p>
+				The Member tab shows all users that you can add to the group. When you add users to a group, they become members of that group. A group member inherits the roles of all other groups they belong to.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You must be an Organization Administrator.
+					</li><li class="listitem">
+						If you are not an Organization Administrator, you must be a member of a group that has the User Access Administrator role assigned to it.
+					</li></ul></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Only the Organization Administrator can assign the User Access Administrator role to a group.
+				</p></div></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to your Red Hat organization account at <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Settings</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Limiting_access_to_cost_management_resources-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Identity &amp; Access Management</strong></span> to open the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> Settings page.
+					</li><li class="listitem">
+						In the Global navigation, click the <span class="guimenu">User Access</span> → <span class="guimenuitem">Groups</span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Create group</strong></span>.
+					</li><li class="listitem">
+						Follow the guided actions provided by the wizard to add a group name, roles, and members.
+					</li><li class="listitem">
+						To grant additional group access, edit the group and add additional roles.
+					</li></ol></div><p>
+				Your new group is listed in the <span class="strong strong"><strong>Groups</strong></span> list on the <span class="strong strong"><strong>User Access</strong></span> screen.
+			</p><div class="itemizedlist"><p class="title"><strong>Verification</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						To verify your configuration, log out of the cost management application and log back in as a user added to the group.
+					</li></ul></div><p>
+				For more information about configuring Red Hat account roles and groups, see <span class="emphasis"><em><a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2023/html-single/user_access_configuration_guide_for_role-based_access_control_rbac/index" title="This content is not included in Mimir.">User Access Configuration Guide For Role-Based Access Control (RBAC)</a></em></span> in the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> documentation.
+			</p></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12368954" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm139778954184928"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Set solr memory based on of environment variable SOLR_MEM was set, default 1g
+[[ ${#SOLR_MEM} -gt 0 ]] && mem="${SOLR_MEM}" || mem="1g"
+
+# function for calling solr start
+# redirect stdout & stderr of the following commands to log file at:
+# /opt/solr/server/logs/run-solr.log
+run-solr() {
+    /opt/solr/bin/solr start -m "$mem" 2>&1 | tee -a /opt/solr/server/logs/run-solr.log
+}
+
+# Start solr in the background
+# use tee to output to stdout and a log file
+echo "$(date): Starting Solr server" | tee -a /opt/solr/server/logs/run-solr.log
+run-solr
+
+# start an infinite loop that restarts solr if it stops
+while true; do
+    sleep 60 # sleep for 60 seconds
+
+    # verify that solr is running by parsing the output of solr status
+    if ! /opt/solr/bin/solr status | grep -qE 'Solr process [0-9]+ running on port 8983'; then
+        echo "$(date): Solr is not running, restarting" | tee -a /opt/solr/server/logs/run-solr.log
+        run-solr
+    fi
+done

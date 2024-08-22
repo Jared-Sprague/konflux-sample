@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Integrating Microsoft Azure data into hybrid committed spend - Hybrid committed spend 1-latest
+</title>
+        
+<meta name="product" content="Hybrid committed spend" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-07-26T20:03:05.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">Hybrid committed spend</a>
+                                
+                                <a href="/documentation/en-us/hybrid_committed_spend/1-latest/">1-latest</a>
+                                
+                                
+                                Integrating Microsoft Azure data into hybrid committed spend
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Integrating Microsoft Azure data into hybrid committed spend</a>
+                    </li><li>
+                        <a href="#assembly-adding-azure-int-hcs">
+                            1. Creating a Microsoft Azure integration
+                        </a><ol>
+                <li>
+                        <a href="#adding-an-azure-account_adding-an-azure-int-hcs">
+                            1.1. Adding a Microsoft Azure account and naming your integration
+                        </a>
+                    </li><li>
+                        <a href="#creating-an-azure-storage-account-hcs_adding-an-azure-int-hcs">
+                            1.2. Creating a Microsoft Azure resource group and storage account
+                        </a>
+                    </li><li>
+                        <a href="#creating-daily-export-azure-hcs_adding-an-azure-int-hcs">
+                            1.3. Creating a daily export in Microsoft Azure
+                        </a>
+                    </li><li>
+                        <a href="#finding-azure-subscription-id-hcs_adding-an-azure-int-hcs">
+                            1.4. Finding your Microsoft Azure subscription ID
+                        </a>
+                    </li><li>
+                        <a href="#configuring-azure-roles-hcs_adding-an-azure-int-hcs">
+                            1.5. Creating Microsoft Azure roles
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-adding-filtered-azure-int-hcs">
+                            2. Filtering your Microsoft Azure data before integrating it into hybrid committed spend
+                        </a><ol>
+                <li>
+                        <a href="#adding-an-azure-account-filtered-hcs_adding-filtered-azure-int-hcs">
+                            2.1. Adding a Microsoft Azure account and naming your integration
+                        </a>
+                    </li><li>
+                        <a href="#creating-an-azure-storage-account-hcs_adding-filtered-azure-int-hcs">
+                            2.2. Creating a Microsoft Azure resource group and storage account
+                        </a>
+                    </li><li>
+                        <a href="#finding-azure-subscription-id-hcs_adding-filtered-azure-int-hcs">
+                            2.3. Finding your Microsoft Azure subscription ID
+                        </a>
+                    </li><li>
+                        <a href="#creating-azure-roles-hcs_adding-filtered-azure-int-hcs">
+                            2.4. Creating Microsoft Azure roles for your storage account
+                        </a>
+                    </li><li>
+                        <a href="#creating-daily-export-azure-hcs_adding-filtered-azure-int-hcs">
+                            2.5. Creating a daily export in Microsoft Azure
+                        </a>
+                    </li><li>
+                        <a href="#creating-function-filter-azure-hcs_adding-filtered-azure-int-hcs">
+                            2.6. Creating a function in Microsoft Azure to filter your data
+                        </a>
+                    </li><li>
+                        <a href="#configuring-azure-roles-hcs_adding-filtered-azure-int-hcs">
+                            2.7. Configuring Microsoft Azure roles
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm140452386074064">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--integrating_microsoft_azure_data_into_hybrid_committed_spend">
+            <h1 class="title">Integrating Microsoft Azure data into hybrid committed spend</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140452386997536"><div class="titlepage"><div><div class="producttitle"><span class="productname">Hybrid committed spend</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn how to add and configure your Microsoft Azure integrations</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm140452386074064">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Learn how to add a Microsoft Azure integration to hybrid committed spend.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-adding-azure-int-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Creating a Microsoft Azure integration</h1></div></div></div><p>
+			To add an Microsoft Azure account to hybrid committed spend, you must add it as a integration from the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user interface and configure Microsoft Azure to provide metrics.
+		</p><p>
+			To configure your Microsoft Azure account to be an hybrid committed spend integration, you must complete the following tasks:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Create a storage account and resource group.
+				</li><li class="listitem">
+					Configure Storage Account Contributor and Reader roles for access.
+				</li><li class="listitem">
+					Create a function to filter the data you want to send to Red Hat.
+				</li><li class="listitem">
+					Schedule daily cost exports to a storage account accessible to Red Hat.
+				</li></ol></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				Because third-party products and documentation can change, instructions for configuring the third-party integrations provided are general and correct at the time of publishing. For the most up-to-date information, see the <a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/" title="Mimir does not include content from: docs.microsoft.com">Microsoft Azure documentation</a>.
+			</p></div></div><p>
+			Add your Microsoft Azure integration to hybrid committed spend from <a class="link mimir-link-warn" href="https://console.redhat.com/settings/integrations" title="Mimir does not include content from: console.redhat.com">the Integrations page</a>.
+		</p><section class="section" id="adding-an-azure-account_adding-an-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.1. Adding a Microsoft Azure account and naming your integration</h2></div></div></div><p>
+				Add your Microsoft Azure account as an integration so hybrid committed spend can process the cost and usage data.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Hybrid_committed_spend-1-latest-Integrating_Microsoft_Azure_data_into_hybrid_committed_spend-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> page, in the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="strong strong"><strong>Microsoft Azure</strong></span> as the cloud provider type and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Enter a name for your integration and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Select application</strong></span> step, select <span class="strong strong"><strong>Hybrid committed spend</strong></span> and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Specify cost export scope</strong></span> step, select <span class="strong strong"><strong>I am OK with sending the default data to Cost Management</strong></span>.
+					</li><li class="listitem"><p class="simpara">
+						Select the scope of your cost data export from the menu. You can export data at the subscription level or other scopes in your subscription.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Copy the generated command for the scope that you selected.
+							</li><li class="listitem">
+								In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, click <span class="strong strong"><strong>Cloud Shell</strong></span> and paste and run the command that you copied from the earlier step.
+							</li></ol></div></li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, paste the returned value from Microsoft Azure into the <span class="strong strong"><strong>Cost export scope</strong></span> field on the <span class="strong strong"><strong>Specify cost export scope</strong></span> step.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-an-azure-storage-account-hcs_adding-an-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.2. Creating a Microsoft Azure resource group and storage account</h2></div></div></div><p>
+				Create a storage account and resource group in Microsoft Azure to house your billing exports so that hybrid committed spend can collect the information. In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in hybrid committed spend, enter the resource group name and storage account name in the fields in the Resource group and storage account page.
+			</p><div class="formalpara"><p class="title"><strong>Prerequisites</strong></p><p>
+					You must have a Red Hat user account with Cloud Administrator entitlements.
+				</p></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, search for <code class="literal">storage</code> and click <span class="strong strong"><strong>Storage accounts</strong></span>.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								On the <span class="strong strong"><strong>Storage accounts</strong></span> page, click <span class="strong strong"><strong>Create</strong></span>.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Resource Group</strong></span> field, click <span class="strong strong"><strong>Create new</strong></span>. Enter a name, and click <span class="strong strong"><strong>OK</strong></span>. In this example, use <code class="literal">cost-data-group</code>.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Instance details</strong></span> section, enter a name in the <span class="strong strong"><strong>Storage account name</strong></span> field. For example, use <code class="literal">costdata</code>.
+							</li><li class="listitem">
+								Copy the names of the resource group and storage account so you can add them to the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> and click <span class="strong strong"><strong>Review</strong></span>.
+							</li><li class="listitem">
+								Review the storage account and click <span class="strong strong"><strong>Create</strong></span>.
+							</li></ol></div></li><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Resource group and storage account</strong></span> page, enter values in the <span class="strong strong"><strong>Resource group name</strong></span> and <span class="strong strong"><strong>Storage account name</strong></span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-daily-export-azure-hcs_adding-an-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.3. Creating a daily export in Microsoft Azure</h2></div></div></div><p>
+				Create a function in Microsoft Azure to filter your data and export it on a regular schedule. Exports create a recurring task that sends your Microsoft Azure cost data regularly to a storage account, which exists within a resource group. Hybrid committed spend must be able to access the resource group toread the Microsoft Azure cost data. This example uses a Python function to filter the data and post it to the storage account you created earlier.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						To create the export, go to the <span class="strong strong"><strong>Portal</strong></span> menu in Microsoft Azure and click <span class="strong strong"><strong>Cost Management + Billing</strong></span>.
+					</li><li class="listitem">
+						On the Cost Management + Billing page, click <span class="strong strong"><strong>Cost Management</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Settings</strong></span> menu, in the Cost management overview page, click, <span class="strong strong"><strong>Exports</strong></span>.
+					</li><li class="listitem">
+						To add an export, click <span class="strong strong"><strong>Add</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Export details</strong></span> section, name the export.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Storage</strong></span> section, add the resource group you created.
+					</li></ol></div></section><section class="section" id="finding-azure-subscription-id-hcs_adding-an-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.4. Finding your Microsoft Azure subscription ID</h2></div></div></div><p>
+				Find your <code class="literal">subscription_id</code> in the Microsoft Azure Cloud Shell and add it to the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in hybrid committed spend.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, click <span class="strong strong"><strong>Cloud Shell</strong></span>.
+					</li><li class="listitem"><p class="simpara">
+						Enter the following command to obtain your Subscription ID:
+					</p><pre class="programlisting language-bash">az account show --query "{subscription_id: id }"</pre></li><li class="listitem"><p class="simpara">
+						Copy the value for the <code class="literal">subscription_id</code> from the returned data.
+					</p><div class="formalpara"><p class="title"><strong>Example response</strong></p><p>
+							
+<pre class="programlisting language-json">{
+    "subscription_id": 00000000-0000-0000-000000000000
+    }</pre>
+
+						</p></div></li><li class="listitem">
+						Paste that value in the <span class="strong strong"><strong>Subscription ID</strong></span> field on the Subscription ID page in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="configuring-azure-roles-hcs_adding-an-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">1.5. Creating Microsoft Azure roles</h2></div></div></div><p>
+				To grant Red Hat access to your data, you must configure dedicated roles in Microsoft Azure. If you already created a service principal in Microsoft Azure, do not create another one, skip to step 4 and use it to share your <span class="strong strong"><strong>Tenant (Directory) ID</strong></span>, <span class="strong strong"><strong>Client (Application) ID</strong></span>, and <span class="strong strong"><strong>Client secret</strong></span> values with hybrid committed spend.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Roles</strong></span> step, copy the generated <code class="literal">az ad sp create-for-rbac</code> command from the wizard to create a service principal with the Cost Management Storage Account Contributor role.
+					</li><li class="listitem">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, click <span class="strong strong"><strong>Cloud Shell</strong></span>.
+					</li><li class="listitem">
+						Paste the command you copied in the earlier step in the cloud shell prompt.
+					</li><li class="listitem">
+						Copy the <span class="strong strong"><strong>Tenant (Directory) ID</strong></span>, <span class="strong strong"><strong>Client (Application) ID</strong></span>, and <span class="strong strong"><strong>Client secret</strong></span> values and paste them into the <span class="strong strong"><strong>Roles</strong></span> step of the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard.
+					</li><li class="listitem">
+						Copy the second generated <code class="literal">az role assignment create</code> command from the wizard and paste it in the cloud shell prompt to create a Cost Management Reader role.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Review the information you provided in the wizard and click <span class="strong strong"><strong>Add</strong></span>.
+					</li></ol></div></section></section><section class="chapter" id="assembly-adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Filtering your Microsoft Azure data before integrating it into hybrid committed spend</h1></div></div></div><p>
+			To share a subset of your billing data with RH, you can configure a function script in Microsoft Azure. This script copies exports an object storage bucket that hybrid committed spend can then access and filter.
+		</p><p>
+			To integrate your Microsoft Azure account:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Create a storage account and resource group.
+				</li><li class="listitem">
+					Configure Storage Account Contributor and Reader roles for access.
+				</li><li class="listitem">
+					Create a function to filter the data you want to send to Red Hat.
+				</li><li class="listitem">
+					Schedule daily cost exports to a storage account accessible to Red Hat.
+				</li></ol></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+				Because third-party products and documentation can change, instructions for configuring the third-party integrations provided are general and correct at the time of publishing. For the most up-to-date information, see the <a class="link mimir-link-warn" href="https://docs.microsoft.com/en-us/azure/" title="Mimir does not include content from: docs.microsoft.com">Microsoft Azure documentation</a>.
+			</p></div></div><p>
+			Add your Microsoft Azure integration to hybrid committed spend from <a class="link mimir-link-warn" href="https://console.redhat.com/settings/integrations" title="Mimir does not include content from: console.redhat.com">the Integrations page</a>.
+		</p><section class="section" id="adding-an-azure-account-filtered-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.1. Adding a Microsoft Azure account and naming your integration</h2></div></div></div><p>
+				Add your Microsoft Azure account as an integration so hybrid committed spend can process the cost and usage data.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Hybrid_committed_spend-1-latest-Integrating_Microsoft_Azure_data_into_hybrid_committed_spend-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Settings</strong></span> page, in the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Cloud</strong></span> tab, click <span class="strong strong"><strong>Add integration</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, select <span class="strong strong"><strong>Microsoft Azure</strong></span> as the cloud provider type and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Enter a name for your integration and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Select application</strong></span> step, select <span class="strong strong"><strong>Hybrid committed spend</strong></span> and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In the Specify cost export scope step, select <span class="strong strong"><strong>I wish to manually customize the data set sent to Cost Management</strong></span> and click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-an-azure-storage-account-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.2. Creating a Microsoft Azure resource group and storage account</h2></div></div></div><p>
+				Create a storage account in Microsoft Azure to house your billing exports and a second storage account to house your filtered data so that hybrid committed spend can collect the information. In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in hybrid committed spend, enter the resource group name and storage account name in the fields in the Resource group and storage account page.
+			</p><div class="formalpara"><p class="title"><strong>Prerequisites</strong></p><p>
+					You must have a Red Hat user account with Cloud Administrator entitlements.
+				</p></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, search for <code class="literal">storage</code> and click <span class="strong strong"><strong>Storage accounts</strong></span>.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								On the <span class="strong strong"><strong>Storage accounts</strong></span> page, click <span class="strong strong"><strong>Create</strong></span>.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Resource Group</strong></span> field, click <span class="strong strong"><strong>Create new</strong></span>. Enter a name, and click <span class="strong strong"><strong>OK</strong></span>. In this example, use <code class="literal">filtered-data-group</code>.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Instance details</strong></span> section, enter a name in the <span class="strong strong"><strong>Storage account name</strong></span> field. For example, use <code class="literal">filtereddata</code>.
+							</li><li class="listitem">
+								Copy the names of the resource group and storage account so you can add them to the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> and click <span class="strong strong"><strong>Review</strong></span>.
+							</li><li class="listitem">
+								Review the storage account and click <span class="strong strong"><strong>Create</strong></span>.
+							</li></ol></div></li><li class="listitem">
+						In the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard, on the <span class="strong strong"><strong>Resource group and storage account</strong></span> page, enter values in the <span class="strong strong"><strong>Resource group name</strong></span> and <span class="strong strong"><strong>Storage account name</strong></span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="finding-azure-subscription-id-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.3. Finding your Microsoft Azure subscription ID</h2></div></div></div><p>
+				Find your <code class="literal">subscription_id</code> in the Microsoft Azure Cloud Shell and add it to the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in hybrid committed spend.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, click <span class="strong strong"><strong>Cloud Shell</strong></span>.
+					</li><li class="listitem"><p class="simpara">
+						Enter the following command to obtain your Subscription ID:
+					</p><pre class="programlisting language-bash">az account show --query "{subscription_id: id }"</pre></li><li class="listitem"><p class="simpara">
+						Copy the value for the <code class="literal">subscription_id</code> from the returned data.
+					</p><div class="formalpara"><p class="title"><strong>Example response</strong></p><p>
+							
+<pre class="programlisting language-json">{
+    "subscription_id": 00000000-0000-0000-000000000000
+    }</pre>
+
+						</p></div></li><li class="listitem">
+						Paste that value in the <span class="strong strong"><strong>Subscription ID</strong></span> field on the Subscription ID page in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-azure-roles-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.4. Creating Microsoft Azure roles for your storage account</h2></div></div></div><p>
+				Use the Microsoft Azure Cloud Shell to find your <span class="strong strong"><strong>Tenant (Directory) ID</strong></span>, <span class="strong strong"><strong>Client (Application) ID</strong></span>, and <span class="strong strong"><strong>Client secret</strong></span>.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, click <span class="strong strong"><strong>Cloud Shell</strong></span>.
+					</li><li class="listitem">
+						Enter the command from the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard to get your client ID, secret, and tenant name. Replace the values with your subscription ID from the last step and replace <code class="literal">resourceGroup1</code> with the resource group name you created previously. In this example, use <code class="literal">filtered-data-group</code>.
+					</li><li class="listitem"><p class="simpara">
+						Copy the values from the returned data for the <code class="literal">client_id</code>, <code class="literal">secret</code>, and <code class="literal">tenant</code>.
+					</p><div class="formalpara"><p class="title"><strong>Example response</strong></p><p>
+							
+<pre class="programlisting language-json">{
+    "client_id": "00000000-0000-0000-000000000000",
+    "secret": "00000000-0000-0000-000000000000",
+    "tenant": "00000000-0000-0000-000000000000"
+}</pre>
+
+						</p></div></li><li class="listitem">
+						Paste the values of client_id`, <code class="literal">secret</code>, and `tenant in the <span class="strong strong"><strong>Roles</strong></span> step in the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						Copy the command from the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard and paste it in the Cloud shell to create a Cost Management Reader role. Replace <code class="literal">{Client ID}</code> with the value from the previous step.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li></ol></div></section><section class="section" id="creating-daily-export-azure-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.5. Creating a daily export in Microsoft Azure</h2></div></div></div><p>
+				Create a function in Microsoft Azure to filter your data and export it on a regular schedule. Exports create a recurring task that sends your Microsoft Azure cost data regularly to a storage account, which exists within a resource group. Hybrid committed spend must be able to access the resource group toread the Microsoft Azure cost data. This example uses a Python function to filter the data and post it to the storage account you created earlier.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						To create the export, go to the <span class="strong strong"><strong>Portal</strong></span> menu in Microsoft Azure and click <span class="strong strong"><strong>Cost Management + Billing</strong></span>.
+					</li><li class="listitem">
+						On the Cost Management + Billing page, click <span class="strong strong"><strong>Cost Management</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Settings</strong></span> menu, in the Cost management overview page, click, <span class="strong strong"><strong>Exports</strong></span>.
+					</li><li class="listitem">
+						To add an export, click <span class="strong strong"><strong>Add</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Export details</strong></span> section, name the export.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Storage</strong></span> section, add the resource group you created.
+					</li></ol></div></section><section class="section" id="creating-function-filter-azure-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.6. Creating a function in Microsoft Azure to filter your data</h2></div></div></div><p>
+				Create the function that filters your data and adds it to the storage account that you created to share with Red Hat. You can use the example Python script to gather the cost data from your cost exports related to your Red Hat expenses and add it to the storage account.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You must have Visual Studio Code installed on your device.
+					</li><li class="listitem">
+						You must have the Microsoft Azure functions extension installed in Visual Studio Code.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>.
+					</li><li class="listitem">
+						Enter <code class="literal">functions</code> in the search bar, select <span class="strong strong"><strong>Functions</strong></span>, and click <span class="strong strong"><strong>Create</strong></span>.
+					</li><li class="listitem">
+						Select a hosting option for your function and click <span class="guibutton">Select</span>.
+					</li><li class="listitem"><p class="simpara">
+						On the Create Function App page, configure your function app by adding your resource group. =
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the <span class="strong strong"><strong>Instance Details</strong></span> section, name your function app.
+							</li><li class="listitem">
+								In <span class="strong strong"><strong>Runtime stack</strong></span>, select <span class="strong strong"><strong>Python</strong></span>
+							</li><li class="listitem">
+								In <span class="strong strong"><strong>Version</strong></span>, select <span class="strong strong"><strong>3.10</strong></span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						Click <span class="strong strong"><strong>Review + create</strong></span>:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Click <span class="strong strong"><strong>Create</strong></span>.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>Go to resource</strong></span> to configure the function.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						In the function app menu, click <span class="strong strong"><strong>Functions</strong></span> to create a time trigger function:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Click <span class="strong strong"><strong>Create</strong></span>.
+							</li><li class="listitem">
+								In the development environment field, select <span class="strong strong"><strong>VSCode</strong></span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						Open Visual Studio Code and ensure that the Microsoft Azure Functions Visual Studio Code extension is installed. To create an Azure function, Microsoft recommends that you use their Microsoft Visual Studio Code IDE to develop and deploy code. For more information about configuring Visual Studio Code, see <a class="link mimir-link-warn" href="https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python?pivots=python-mode-configuration" title="Mimir does not include content from: learn.microsoft.com">Quickstart: Create a function in Azure with Python using Visual Studio Code </a>.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Click the Microsoft Azure tab in Visual Studio Code, sign in to Azure.
+							</li><li class="listitem">
+								In the workspaces tab in Visual Studio Code, click <span class="strong strong"><strong>Create function</strong></span>.
+							</li><li class="listitem">
+								Follow the prompts to set a local location for your function and select a language and version for your function. In this example, select <span class="strong strong"><strong>Python</strong></span>, for and select <span class="strong strong"><strong>Python 3.9</strong></span>.
+							</li><li class="listitem">
+								In the <span class="strong strong"><strong>Select a template for your project’s first function</strong></span> dialog, select <span class="strong strong"><strong>Timer trigger</strong></span>, name the function, and press <span class="strong strong"><strong>Enter</strong></span>
+							</li><li class="listitem">
+								Set the cron expression for when you want the function to run. In this example, use <code class="literal">0*9***</code> to run the function daily at 9 AM.
+							</li><li class="listitem">
+								Click <span class="strong strong"><strong>Create</strong></span>.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						After you create the function in your development environment, open the <code class="literal">requirements.txt</code> file, add the following requirements, and save the file:
+					</p><pre class="screen">azure-functions
+pandas
+requests
+azure-identity
+azure-storage-blob</pre></li><li class="listitem"><p class="simpara">
+						Open <code class="literal">__init__.py</code> and paste the following Python script. Change the values in the section marked <code class="literal"># Required vars to update</code> to the values for your environment. For the <code class="literal">USER</code> and <code class="literal">PASS</code> values, you can optionally use <a class="link mimir-link-warn" href="https://github.com/project-koku/koku-data-selector/blob/main/docs/azure/azure.rst#key-vault-credentials" title="Mimir does not include content from: github.com">Key Vault Credentials</a> to configure your username and password as environment variables.
+					</p><pre class="programlisting language-python">import datetime
+import logging
+import uuid
+import requests
+import pandas as pd
+from azure.identity import DefaultAzureCredential
+from azure.storage.blob import BlobServiceClient, ContainerClient
+
+import azure.functions as func
+
+
+def main(mytimer: func.TimerRequest) -&gt; None:
+    utc_timestamp = datetime.datetime.utcnow().replace(
+        tzinfo=datetime.timezone.utc).isoformat()
+
+    default_credential = DefaultAzureCredential()
+
+    now = datetime.datetime.now()
+    year = now.strftime("%Y")
+    month = now.strftime("%m")
+    day = now.strftime("%d")
+    output_blob_name=f"{year}/{month}/{day}/{uuid.uuid4()}.csv"
+
+    # Required vars to update
+    USER = os.getenv('UsernameFromVault')                                   # Cost management username
+    PASS = os.getenv('PasswordFromVault')                                   # Cost management password
+    integration_id = "&lt;your_integration_id&gt;"                                          # Cost management integration_id
+    cost_export_store = "https://&lt;your-cost-export-storage-account&gt;.blob.core.windows.net"           # Cost export storage account url
+    cost_export_container = "&lt;your-cost-export-container&gt;"                                     # Cost export container
+    filtered_data_store = "https://&lt;your_filtered_data_container-storage-account&gt;.blob.core.windows.net"         # Filtered data storage account url
+    filtered_data_container = "&lt;your_filtered_data_container&gt;"                                   # Filtered data container
+
+    # Create the BlobServiceClient object
+    blob_service_client = BlobServiceClient(filtered_data_store, credential=default_credential)
+    container_client = ContainerClient(cost_export_store, credential=default_credential, container_name=cost_export_container)
+
+    blob_list = container_client.list_blobs()
+    latest_blob = None
+    for blob in blob_list:
+        if latest_blob:
+            if blob.last_modified &gt; latest_blob.last_modified:
+                latest_blob = blob
+        else:
+            latest_blob = blob
+
+    bc = container_client.get_blob_client(blob=latest_blob)
+    data = bc.download_blob()
+    blobjct = "/tmp/blob.csv"
+    with open(blobjct, "wb") as f:
+        data.readinto(f)
+    df = pd.read_csv(blobjct)
+
+    filtered_data = df.loc[((df["publisherType"] == "Marketplace") &amp; ((df["publisherName"].astype(str).str.contains("Red Hat")) | (((df["publisherName"] == "Microsoft") | (df["publisherName"] == "Azure")) &amp; (df['meterSubCategory'].astype(str).str.contains("Red Hat") | df['serviceInfo2'].astype(str).str.contains("Red Hat")))))]
+
+    filtered_data_csv = filtered_data.to_csv (index_label="idx", encoding = "utf-8")
+
+    blob_client = blob_service_client.get_blob_client(container=filtered_data_container, blob=output_blob_name)
+
+    blob_client.upload_blob(filtered_data_csv, overwrite=True)
+
+    # Post results to console.redhat.com API
+    url = "https://console.redhat.com/api/cost-management/v1/ingress/reports/"
+    json_data = {"source": integration_id, "reports_list": [f"{filtered_data_container}/{output_blob_name}"], "bill_year": year, "bill_month": month}
+    resp = requests.post(url, json=json_data, auth=(USER, PASS))
+    logging.info(f'Post result: {resp}')
+
+    if mytimer.past_due:
+        logging.info('The timer is past due!')
+
+    logging.info('Python timer trigger function ran at %s', utc_timestamp)</pre></li><li class="listitem">
+						Save the file.
+					</li><li class="listitem">
+						Deploy the function to Microsoft Azure.
+					</li></ol></div></section><section class="section" id="configuring-azure-roles-hcs_adding-filtered-azure-int-hcs"><div class="titlepage"><div><div><h2 class="title">2.7. Configuring Microsoft Azure roles</h2></div></div></div><p>
+				Configure dedicated credentials to grant your function blob access to Microsoft Azure cost data so it can transfer the data from the original storage container to the filtered storage container.
+			</p><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						In your <a class="link mimir-link-warn" href="https://azure.microsoft.com/en-us" title="Mimir does not include content from: azure.microsoft.com">Microsoft Azure account</a>, type <code class="literal">functions</code> in the search bar.
+					</li><li class="listitem">
+						Find your function and select it.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Settings</strong></span> menu, click <span class="strong strong"><strong>Identity</strong></span>.
+					</li><li class="listitem">
+						On the Identity page, click <span class="strong strong"><strong>Azure role assignments</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Role assignments</strong></span> page, click <span class="strong strong"><strong>Add role assignment</strong></span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Scope</strong></span> field, select the <span class="strong strong"><strong>Storage</strong></span> scope.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Resource</strong></span> field, select the storage account that you created. In this example, use <code class="literal">filtereddata</code>.
+					</li><li class="listitem">
+						In the role field, select <span class="strong strong"><strong>Storage Blob Data Contributor</strong></span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Save</strong></span>.
+					</li><li class="listitem">
+						Repeat these steps to create a role for <span class="strong strong"><strong>Storage Queue Data Contributor</strong></span>.
+					</li><li class="listitem">
+						Repeat this process for the other storage account that you created. In this example, use <code class="literal">billingexportdata</code>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Review the information you provided in the wizard and click <span class="strong strong"><strong>Add</strong></span>.
+					</li></ol></div></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12384146" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm140452386074064"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

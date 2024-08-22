@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Integrating OpenShift Container Platform data into cost management - Red Hat Insights cost management 1-latest
+</title>
+        
+<meta name="product" content="Red Hat Insights cost management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-08-21T21:31:27.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">Red Hat Insights cost management</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">1-latest</a>
+                                
+                                
+                                Integrating OpenShift Container Platform data into cost management
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Integrating OpenShift Container Platform data into cost management</a>
+                    </li><li>
+                        <a href="#assembly-adding-openshift-container-platform-int">
+                            1. Creating an OpenShift Container Platform integration
+                        </a><ol>
+                <li>
+                        <a href="#installation-overview_adding-an-ocp-int">
+                            1.1. Installation tasks summary
+                        </a>
+                    </li><li>
+                        <a href="#installing-cost-operator_adding-an-ocp-int">
+                            1.2. Installing the cost operator by using OperatorHub
+                        </a>
+                    </li><li>
+                        <a href="#installing-cost-operator-cli_adding-an-ocp-int">
+                            1.3. Optional: Installing the cost management operator by using the CLI
+                        </a>
+                    </li><li>
+                        <a href="#configuring-the-operator-instance-for-a-new-installation_adding-an-ocp-int">
+                            1.4. Configuring the operator instance
+                        </a>
+                    </li><li>
+                        <a href="#verifying-cost-operator_adding-an-ocp-int">
+                            1.5. Troubleshooting issues with your Cost Management Operator
+                        </a><ol>
+                <li>
+                        <a href="#verify_the_yaml_file_is_propery_configured">
+                            1.5.1. Verify the YAML file is propery configured
+                        </a>
+                    </li><li>
+                        <a href="#large_openshift_deployment_issues">
+                            1.5.2. Large OpenShift deployment issues
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#basic-authentication_adding-an-ocp-int">
+                            1.6. Configuring basic authentication for cost operator
+                        </a><ol>
+                <li>
+                        <a href="#creating-secret-pair">
+                            1.6.1. Creating the secret key/value pair for basic authentication
+                        </a>
+                    </li><li>
+                        <a href="#modify-yaml-file">
+                            1.6.2. Modifying the YAML file
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#service-account-authentication_adding-an-ocp-int">
+                            1.7. Configuring service account authentication for the cost operator
+                        </a><ol>
+                <li>
+                        <a href="#service-creating-secret-pair">
+                            1.7.1. Creating the secret key/value pair for service account authentication
+                        </a>
+                    </li><li>
+                        <a href="#service-modify-yaml-file">
+                            1.7.2. Modifying the YAML file
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc_creating-an-openshift-container-platform-int-manually_adding-an-ocp-int">
+                            1.8. Manually creating an Openshift Container Platform integration
+                        </a>
+                    </li><li>
+                        <a href="#update-operator-resources_adding-an-ocp-int">
+                            1.9. Updating operator resources
+                        </a><ol>
+                <li>
+                        <a href="#default_resources">
+                            1.9.1. Default resources
+                        </a>
+                    </li><li>
+                        <a href="#increasing_resources">
+                            1.9.2. Increasing resources
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-adding-a-restricted-network-int_adding-an-ocp-int">
+                            1.10. Adding a restricted network integration
+                        </a><ol>
+                <li>
+                        <a href="#proc_installing-cost-operator-on-a-restricted-network_adding-restricted-network-int">
+                            1.10.1. Installing the cost management operator on a restricted network
+                        </a>
+                    </li><li>
+                        <a href="#configuring-cost-operator-on-a-restricted-network_adding-restricted-network-int">
+                            1.10.2. Configuring the Cost Operator on a restricted network
+                        </a>
+                    </li><li>
+                        <a href="#proc_downloading-reports_adding-restricted-network-int">
+                            1.10.3. Downloading cost reports
+                        </a>
+                    </li><li>
+                        <a href="#proc_uploading-reports_adding-restricted-network-int">
+                            1.10.4. Uploading cost reports to console.redhat.com
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-cost-management-next-steps-ocp">
+                            2. Next steps for managing your costs
+                        </a><ol>
+                <li>
+                        <a href="#limiting-access_next-steps-ocp">
+                            2.1. Limiting access to cost management resources
+                        </a>
+                    </li><li>
+                        <a href="#configure-tagging-next-step_next-steps-ocp">
+                            2.2. Configuring tagging for your integrations
+                        </a>
+                    </li><li>
+                        <a href="#configure-cost-models-next-step_next-steps-ocp">
+                            2.3. Configuring cost models to accurately report costs
+                        </a>
+                    </li><li>
+                        <a href="#cost-explorer-next-step_next-steps-ocp">
+                            2.4. Visualizing your costs with Cost Explorer
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm139709925070416">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--integrating_openshift_container_platform_data_into_cost_management">
+            <h1 class="title">Integrating OpenShift Container Platform data into cost management</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm139709920471168"><div class="titlepage"><div><div class="producttitle"><span class="productname">Cost Management Service</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn how to add and configure your OpenShift Container Platform integrations</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm139709925070416">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Learn how to add an OpenShift Container Platform integration to cost management. Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-adding-openshift-container-platform-int"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Creating an OpenShift Container Platform integration</h1></div></div></div><section class="section _abstract" id="installation-overview_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.1. Installation tasks summary</h2></div></div></div><p class="_abstract _abstract">
+				The Cost Management Metrics Operator gathers data from OpenShift Container Platform for cost management. Install the Cost Management Metrics Operator on your OpenShift Container Platform instance as part of <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/#steps-to-cost-management">installing</a> cost management. When you have finished installing cost management, visit <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a> to view your cost data.
+			</p><p>
+				Operator installation, configuration, and integration management can all be performed from the OpenShift Container Platform web console.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					To install and configure Cost Management Metrics Operator from the OpenShift Container Platform web console, you must use an account with cluster administrator privileges.
+				</p></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						The OpenShift Container Platform cluster is installed.
+					</li><li class="listitem">
+						You can access the OpenShift Container Platform web console using an account that has cluster administrator privileges.
+					</li><li class="listitem">
+						You can access <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> with the correct privileges for the cost management service. See, <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a> for more information.
+					</li></ul></div><p>
+				Perform the following tasks to install the Cost Management Metrics Operator and begin using the cost management application in OpenShift Container Platform:
+			</p><div class="itemizedlist"><p class="title"><strong>Task summary</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						Install the Cost Management Metrics Operator (<code class="literal">costmanagement-metrics-operator</code>) and use the default token authentication.
+					</li><li class="listitem">
+						Create a CostManagementMetricsConfig YAML file that configures <code class="literal">costmanagement-metrics-operator</code>
+					</li><li class="listitem">
+						Create a cost management OpenShift Container Platform integration with a new installation, or confirm an existing integration with a replacement installation.
+					</li></ul></div><p>
+				If you do not use token authentication, you must take additional steps to configure the secret that holds the <code class="literal">client_id</code> and <code class="literal">client_secret</code> credentials for your service account from <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+			</p></section><section class="section" id="installing-cost-operator_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.2. Installing the cost operator by using OperatorHub</h2></div></div></div><p class="_abstract _abstract">
+				Learn how to install the <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> from the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a>.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You logged in to the OpenShift Container Platform web console and have cluster administrator privileges.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to the OpenShift Container Platform web console and click <span class="strong strong"><strong>Operators &gt; OperatorHub</strong></span>.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span>.
+					</li><li class="listitem">
+						When the <span class="strong strong"><strong>Install Operator</strong></span> window appears, select the <code class="literal">costmanagement-metrics-operator</code> namespace. If the namespace does not exist, we create it for you.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Install</strong></span>. After a short wait, <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> appears in the <span class="strong strong"><strong>Installed Operators</strong></span> tab under <span class="strong strong"><strong>Project: all projects</strong></span> or <span class="strong strong"><strong>Project: costmanagement-metrics-operator</strong></span>.
+					</li></ol></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					If a proxy with a custom CA certificate, you must create additional configurations to inject this certificate into Cost Management Metrics Operator. For more details, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.16/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support" title="This content is not included in Mimir."><span class="emphasis"><em>Injecting a custom CA certificate</em></span></a> in the OpenShift Container Platform documentation.
+				</p></div></div></section><section class="section" id="installing-cost-operator-cli_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.3. Optional: Installing the cost management operator by using the CLI</h2></div></div></div><p class="_abstract _abstract">
+				If you are automating cluster creation, you can optionally install the Cost Management Metrics Operator by using the OpenShift CLI instead of OperatorHub. In the OpenShift Container Platform CLI, you can create an integration for your OpenShift Container Platform cluster in cost management. If you use service authentication, you must configure your Operator to use it.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You installed the OpenShift CLI, <code class="literal">oc</code>.
+					</li><li class="listitem">
+						You have cluster administrator privileges for your OpenShift Container Platform cluster.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						To verify the package manifests have the supported install modes and available channels, enter the following command:
+					</p><pre class="programlisting language-bash">oc describe packagemanifests costmanagement-metrics-operator -n openshift-marketplace</pre></li><li class="listitem"><p class="simpara">
+						Create an <code class="literal">OperatorGroup</code> object and a subscription object.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								To create a subscription object, see the OpenShift documentation <a class="link mimir-link-warn" href="https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/operators/administrator-tasks#olm-installing-operator-from-operatorhub-using-cli_olm-adding-operators-to-a-cluster" title="This content is not included in Mimir.">Installing from OperatorHub using the CLI</a>.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						If you are not using token authentication, configure your Operator to use service account authorization. To use this method, add your service account to a User Access Group that has a Cloud Administrator role. Ensure the service account inherits the permissions of the user group.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+								For more information, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost managment resources</a>.
+							</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+										Retrieve your <code class="literal">client_id</code> and <code class="literal">client_secret</code> from the <a class="link mimir-link-warn" href="https://console.redhat.com/iam/service-accounts/" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console service account</a>.
+									</li><li class="listitem"><p class="simpara">
+										Encode the value of your service account’s <code class="literal">client_id</code> in base64. In your terminal, enter:
+									</p><pre class="programlisting language-bash">echo -n "&lt;red_hat_service_account_client_id&gt;" | base64</pre></li><li class="listitem"><p class="simpara">
+										Encode the value of your service account’s `client_secret`in base64. In your terminal, enter:
+									</p><pre class="programlisting language-bash">echo -n "&lt;red_hat_service_account_client_secret&gt;" | base64</pre></li></ol></div></li></ul></div></li><li class="listitem"><p class="simpara">
+						Create a YAML file to store your secrets. Paste the <code class="literal">client_id</code> and <code class="literal">client_secret</code> in the <code class="literal">data.client_id</code> and <code class="literal">data.client_secret</code> fields.
+					</p><div class="formalpara"><p class="title"><strong>Example.yaml</strong></p><p>
+							
+<pre class="programlisting language-yaml">kind: Secret
+apiVersion: v1
+metadata:
+  name: service-account-auth-secret
+  namespace: costmanagement-metrics-operator
+data:
+  client_id: &lt;base64_encoded_red_hat_service_account_client_id&gt;
+  client_secret: &lt;base64_encoded_red_hat_service_account_client_secret&gt;</pre>
+
+						</p></div><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+								Deploy your secret YAML file with the following command:
+							</p><pre class="programlisting language-bash">oc apply -f example.yaml</pre></li></ol></div></li><li class="listitem"><p class="simpara">
+						To use service authentication for the cost management Operator, edit the custom resource definition for the Operator. You must edit the custom resource example YAML so that <code class="literal">authentication.type</code> is set to <code class="literal">service-account</code>. You must also add a line so that <code class="literal">authentication.secret_name</code> is set to the name of your secret. In this earlier example, the name of the secret is <code class="literal">service-account-auth-secret</code>.
+					</p><div class="formalpara"><p class="title"><strong>Custom resource example</strong></p><p>
+							
+<pre class="programlisting language-yaml">kind: CostManagementMetricsConfig
+apiVersion: costmanagement-metrics-cfg.openshift.io/v1beta1
+metadata:
+  name: costmanagementmetricscfg-sample-v1beta1
+  namespace: costmanagement-metrics-operator
+spec:
+  authentication:
+    type: service-account
+    secret_name: service-account-auth-secret
+  packaging:
+    max_reports_to_store: 30
+    max_size_MB: 100
+  prometheus_config:
+    collect_previous_data: true
+    context_timeout: 120
+    disable_metrics_collection_cost_management: false
+    disable_metrics_collection_resource_optimization: false
+  source:
+    check_cycle: 1440
+    create_source: false
+    name: ''
+  upload:
+    upload_cycle: 360
+    upload_toggle: true</pre>
+
+						</p></div></li><li class="listitem"><p class="simpara">
+						To create an integration automatically without using the wizard in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, edit the custom resource example YAML so that <code class="literal">source.create_source</code> is set to <code class="literal">true</code> and <code class="literal">source.name</code> is set to a name. In this example, the name is set to <code class="literal">cluster2</code>.
+					</p><div class="formalpara"><p class="title"><strong>Source creation example</strong></p><p>
+							
+<pre class="programlisting language-yaml">kind: CostManagementMetricsConfig
+apiVersion: costmanagement-metrics-cfg.openshift.io/v1beta1
+metadata:
+  name: costmanagementmetricscfg-sample-v1beta1
+  namespace: costmanagement-metrics-operator
+spec:
+  authentication:
+    type: service-account
+    secret_name: service-account-auth-secret
+  packaging:
+    max_reports_to_store: 30
+    max_size_MB: 100
+  prometheus_config:
+    collect_previous_data: true
+    context_timeout: 120
+    disable_metrics_collection_cost_management: false
+    disable_metrics_collection_resource_optimization: false
+  source:
+    check_cycle: 1440
+    create_source: true
+    name: 'cluster2'
+  upload:
+    upload_cycle: 360
+    upload_toggle: true</pre>
+
+						</p></div></li></ol></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					If a proxy with a custom CA certificate, you must create additional configurations to inject this certificate into Cost Management Metrics Operator. For more details, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.16/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support" title="This content is not included in Mimir."><span class="emphasis"><em>Injecting a custom CA certificate</em></span></a> in the OpenShift Container Platform documentation.
+				</p></div></div></section><section class="section" id="configuring-the-operator-instance-for-a-new-installation_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.4. Configuring the operator instance</h2></div></div></div><p class="_abstract _abstract">
+				After you install the <code class="literal">costmanagement-metrics-operator</code> instance, you can configure it in the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a>.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You logged in to the OpenShift Container Platform web console and have cluster administrator privileges.
+					</li><li class="listitem">
+						<span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> appears in the <span class="strong strong"><strong>Installed Operators</strong></span> tab.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <span class="strong strong"><strong>Name</strong></span> in the list of installed operators, click <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span>. An <span class="strong strong"><strong>Installed Operators &gt; Operator Details</strong></span> window appears.
+					</li><li class="listitem">
+						From <span class="strong strong"><strong>Details</strong></span>, click <span class="strong strong"><strong>+ Create Instance</strong></span>. An <span class="strong strong"><strong>Cost Management Metrics Operator &gt; Create CostManagementMetricsConfig</strong></span> window appears.
+					</li><li class="listitem">
+						Select <span class="strong strong"><strong>YAML view</strong></span> to view and modify the contents of the YAML configuration file.
+					</li><li class="listitem"><p class="simpara">
+						Create a cost management instance for the Cost Management Metrics Operator by editing the following two lines in the YAML file:
+					</p><pre class="screen">    create_source: false
+    name: ''</pre><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								Change <code class="literal">false</code> to <code class="literal">true</code>.
+							</li><li class="listitem"><p class="simpara">
+								Change <code class="literal">''</code> to the name of your integration. If a name is not provided, the operator defaults to using the cluster ID as the name when creating the integration.
+							</p><div class="formalpara"><p class="title"><strong>Example</strong></p><p>
+									
+<pre class="screen">    create_source: true
+    name: my-openshift-cost-source</pre>
+
+								</p></div></li></ol></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Create</strong></span>.
+					</li></ol></div></section><section class="section" id="verifying-cost-operator_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.5. Troubleshooting issues with your Cost Management Operator</h2></div></div></div><p>
+				Troubleshoot problems that might occur when you install the Cost Management Operator.
+			</p><section class="section" id="verify_the_yaml_file_is_propery_configured"><div class="titlepage"><div><div><h3 class="title">1.5.1. Verify the YAML file is propery configured</h3></div></div></div><p class="_abstract _abstract">
+					To verify that the cost management operator is functioning correctly, check that your YAML file is properly configured.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You have access to the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a>.
+						</li><li class="listitem">
+							You can view the content in the <span class="strong strong"><strong>Installed Operators</strong></span> tab.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Click the <span class="strong strong"><strong>Installed Operators</strong></span> tab.
+						</li><li class="listitem">
+							In the list of installed operators, click <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span>.A <span class="strong strong"><strong>metrics operator</strong></span> window opens.
+						</li><li class="listitem">
+							Click the <span class="strong strong"><strong>CostManagementMetricsConfig</strong></span> tab to show a list of the configuration file names.
+						</li><li class="listitem">
+							In the file name list, click the configuration file that you want to verify. In the default installation, the file name is <code class="literal">costmanagementmetricscfg-sample</code>. A <span class="strong strong"><strong>Details</strong></span> window opens.
+						</li><li class="listitem"><p class="simpara">
+							Click <span class="strong strong"><strong>YAML</strong></span> and check the following items:
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+									<code class="literal">prometheus_configured</code> and <code class="literal">prometheus_connected</code> should be set to <code class="literal">true</code>:
+								</p><pre class="screen">  prometheus:
+    last_query_start_time: '2021-01-25T20:59:06Z'
+    last_query_success_time: '2021-01-25T20:59:06Z'
+    prometheus_configured: true
+    prometheus_connected: true
+    service_address: 'https://thanos-querier.openshift-monitoring.svc:9091'
+    skip_tls_verification: false</pre></li><li class="listitem"><p class="simpara">
+									<code class="literal">ingress_path</code>, <code class="literal">last_successful_upload_time</code>, <code class="literal">last_upload_status</code>, and <code class="literal">last_upload_time</code> should all have content:
+								</p><pre class="screen"> upload:
+    ingress_path: /api/ingress/v1/upload
+    last_successful_upload_time: '2021-01-25T20:59:35Z'
+    last_upload_status: 202 Accepted
+    last_upload_time: '2021-01-25T20:59:35Z'
+    upload: true
+    upload_cycle: 360
+    upload_wait: 28
+    validate_cert: true</pre></li></ul></div></li></ol></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						To collect data, cost management uses Prometheus queries that you can find in the <a class="link mimir-link-warn" href="https://github.com/project-koku/koku-metrics-operator/blob/main/internal/collector/queries.go" title="Mimir does not include content from: github.com">source code</a>.
+					</p></div></div></section><section class="section" id="large_openshift_deployment_issues"><div class="titlepage"><div><div><h3 class="title">1.5.2. Large OpenShift deployment issues</h3></div></div></div><p>
+					If your deployment is large, the pod might be stopped with an ``OOMkilled`` message using the default resource requests. Increase the pod memory to 2GiB or more for the initial data ingestion. After the initial data ingestion completes, pod memory can be reduced. The exact memory requirements for the pod vary based on the size of the OpenShift cluster.
+				</p></section></section><section class="section" id="basic-authentication_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.6. Configuring basic authentication for cost operator</h2></div></div></div><p class="_abstract _abstract">
+				You can configure the cost operator to use basic authentication. By default, the cost operator uses token authentication.
+			</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					Basic authentication is deprecated and will be removed December 31, 2024. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements.
+				</p></div></div><p>
+				There are two procedures required when you configure basic authentication.
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link" href="#creating-secret-pair" title="1.6.1. Creating the secret key/value pair for basic authentication">Creating the secret key/value pair for basic authentication</a>
+					</li><li class="listitem">
+						<a class="link" href="#modify-yaml-file" title="1.6.2. Modifying the YAML file">Modifying the YAML file</a>
+					</li></ul></div><section class="section" id="creating-secret-pair"><div class="titlepage"><div><div><h3 class="title">1.6.1. Creating the secret key/value pair for basic authentication</h3></div></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+						</li><li class="listitem">
+							The <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> appears in the <span class="strong strong"><strong>Installed Operators</strong></span> tab.
+						</li><li class="listitem">
+							You have a username and password for your <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> account.
+						</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+						This procedure describes setting up basic authentication using the OpenShift Container Platform web console.
+					</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+							In the OpenShift Container Platform web console, click the <span class="strong strong"><strong>Workloads &gt; Secrets</strong></span> tab.
+						</li><li class="listitem">
+							In the <span class="strong strong"><strong>Secrets</strong></span> window, select <span class="strong strong"><strong>Project:costmanagement-metrics-operator</strong></span> from the dropdown.
+						</li><li class="listitem">
+							Click the <span class="strong strong"><strong>Create &gt; Key/Value Secret</strong></span> selection.
+						</li><li class="listitem"><p class="simpara">
+							In the <span class="strong strong"><strong>Create Key/Value Secret</strong></span> window enter the following information to create a new secret that contains a username key and a password key and a value for each key.
+						</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+									Enter a name for your secret in the <span class="strong strong"><strong>Secret Name</strong></span> field.
+								</p><pre class="programlisting language-yaml">basic-auth-secret</pre></li><li class="listitem"><p class="simpara">
+									In the <span class="strong strong"><strong>Key</strong></span> field, enter <code class="literal">username</code>.
+								</p><pre class="programlisting language-yaml">username</pre></li><li class="listitem"><p class="simpara">
+									In the <span class="strong strong"><strong>Value</strong></span> field for the key <code class="literal">username</code>, enter the actual username for your authorized <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user account.
+								</p><div class="formalpara"><p class="title"><strong>Value for username key</strong></p><p>
+										
+<pre class="programlisting language-yaml"><span class="emphasis"><em>your_red_hat_username</em></span></pre>
+
+									</p></div></li><li class="listitem">
+									Click the <code class="literal">Add Key/Value</code> link to add the required password key name and value.
+								</li><li class="listitem"><p class="simpara">
+									In the <span class="strong strong"><strong>Key</strong></span> field, enter <code class="literal">password</code>.
+								</p><pre class="programlisting language-yaml">password</pre></li><li class="listitem"><p class="simpara">
+									In the <span class="strong strong"><strong>Value</strong></span> field for the key <code class="literal">password</code>, enter the actual password for your authorized <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user account.
+								</p><div class="formalpara"><p class="title"><strong>Value for password key</strong></p><p>
+										
+<pre class="programlisting language-yaml"><span class="emphasis"><em>your_red_hat_password</em></span></pre>
+
+									</p></div></li><li class="listitem">
+									Click the <span class="strong strong"><strong>Create</strong></span> button to complete the creation of your basic authorization secret.
+								</li><li class="listitem">
+									After you click the <span class="strong strong"><strong>Create</strong></span> button, you can verify the key/value details for the secret.
+								</li></ol></div></li></ol></div></section><section class="section" id="modify-yaml-file"><div class="titlepage"><div><div><h3 class="title">1.6.2. Modifying the YAML file</h3></div></div></div><p>
+					Modify the Cost Management Metrics Operator API YAML file to use basic authentication with a secret username and password key/value pair.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+						</li><li class="listitem">
+							You created a secret name for the username and password key/value pair.
+						</li><li class="listitem">
+							The Cost Management Metrics Operator is installed.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Click on the <span class="strong strong"><strong>Operators &gt; Installed Operators</strong></span> tab.
+						</li><li class="listitem">
+							Locate the row that contains <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> and click the <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> link that is under the <span class="strong strong"><strong>Provided APIs</strong></span> heading.
+						</li><li class="listitem"><p class="simpara">
+							When the <span class="strong strong"><strong>CostManagementMetricsConfig</strong></span> window appears, click the configuration file in the <span class="strong strong"><strong>Name</strong></span> column.
+						</p><p class="simpara">
+							The default name is <code class="literal">costmanagementmetricscfg-sample</code>.
+						</p></li><li class="listitem">
+							When the <code class="literal">costmanagementmetricscfg-sample</code> window appears, click in the <span class="strong strong"><strong>YAML</strong></span> tab to open an edit and view window.
+						</li><li class="listitem"><p class="simpara">
+							Locate the following lines in the YAML view.
+						</p><pre class="programlisting language-yaml">  authentication:
+    type: token</pre></li><li class="listitem">
+							Change <code class="literal">type: token</code> to <code class="literal">type: basic</code>.
+						</li><li class="listitem"><p class="simpara">
+							Insert a new line for <code class="literal">secret_name</code>. Enter the value for <code class="literal">secret_name</code>, which is the name you previously created.
+						</p><div class="formalpara"><p class="title"><strong>Example</strong></p><p>
+								
+<pre class="programlisting language-yaml">  authentication:
+    secret_name: basic-auth-secret
+    type: basic</pre>
+
+							</p></div></li><li class="listitem">
+							Click the <span class="strong strong"><strong>Save</strong></span> button. A confirmation message appears.
+						</li></ol></div></section></section><section class="section" id="service-account-authentication_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.7. Configuring service account authentication for the cost operator</h2></div></div></div><p>
+				To configure service account authentication, complete the following two tasks:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						<a class="link" href="#service-creating-secret-pair" title="1.7.1. Creating the secret key/value pair for service account authentication">Creating the secret key/value pair for authentication</a>
+					</li><li class="listitem">
+						<a class="link" href="#service-modify-yaml-file" title="1.7.2. Modifying the YAML file">Modifying the YAML file</a>
+					</li></ul></div><section class="section" id="service-creating-secret-pair"><div class="titlepage"><div><div><h3 class="title">1.7.1. Creating the secret key/value pair for service account authentication</h3></div></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You are logged into the OpenShift Container Platform web console and have cluster administrator privileges.
+						</li><li class="listitem">
+							The <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> appears in the <span class="strong strong"><strong>Installed Operators</strong></span> tab.
+						</li><li class="listitem">
+							You have a <code class="literal">client_id</code> and <code class="literal">client_secret</code> for your Red Hat Hybrid Cloud Console <a class="link mimir-link-warn" href="https://console.redhat.com/iam/service-accounts/" title="Mimir does not include content from: console.redhat.com">Service Account</a>.
+						</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+						The following procedure outlines how to set up service account authentication with the OpenShift Container Platform web console:
+					</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+							In the OpenShift Container Platform web console, click <span class="strong strong"><strong>Workloads &gt; Secrets</strong></span>.
+						</li><li class="listitem">
+							In the <span class="strong strong"><strong>Secrets</strong></span> window, select <span class="strong strong"><strong>Project:costmanagement-metrics-operator</strong></span> from the drop-down.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Create &gt; Key/Value Secret</strong></span>.
+						</li><li class="listitem"><p class="simpara">
+							To create a new secret with a <code class="literal">client_id</code> key and a <code class="literal">client_secret</code> key, enter the following information in the <span class="strong strong"><strong>Create Key/Value Secret</strong></span> window:
+						</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+									In <span class="strong strong"><strong>Secret Name</strong></span>, enter a name for your secret:
+								</p><pre class="programlisting language-yaml">service-account-auth-secret</pre></li><li class="listitem"><p class="simpara">
+									In <span class="strong strong"><strong>Key</strong></span>, enter <code class="literal">client_id</code>.
+								</p><pre class="programlisting language-yaml">client_id</pre></li><li class="listitem"><p class="simpara">
+									In the <span class="strong strong"><strong>Value</strong></span> field for the key <code class="literal">client_id</code>, enter the Client ID for your authorized <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user account.
+								</p><pre class="programlisting language-yaml"><span class="emphasis"><em>red_hat_service_account_client_id</em></span></pre></li><li class="listitem">
+									Click <code class="literal">Add Key/Value</code> to add the <code class="literal">client_secret</code> for the key name and value.
+								</li><li class="listitem"><p class="simpara">
+									In <span class="strong strong"><strong>Key</strong></span>, enter <code class="literal">client_secret</code>:
+								</p><pre class="programlisting language-yaml">client_secret</pre></li><li class="listitem"><p class="simpara">
+									In the <span class="strong strong"><strong>Value</strong></span> field for the key <code class="literal">client_secret</code>, enter the Client secret for your authorized <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> user account.
+								</p><pre class="programlisting language-yaml"><span class="emphasis"><em>red_hat_service_account_client_secret</em></span></pre></li><li class="listitem">
+									Click <span class="strong strong"><strong>Create</strong></span> to complete the creation of your service account authorization secret.
+								</li><li class="listitem">
+									Verify that the key/value details for the secret are correct.
+								</li></ol></div></li></ol></div></section><section class="section" id="service-modify-yaml-file"><div class="titlepage"><div><div><h3 class="title">1.7.2. Modifying the YAML file</h3></div></div></div><p>
+					To use authentication with a Client ID and Client secret key/value pair, you must modify the Cost Management Metrics Operator API YAML file.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You are logged into the OpenShift Container Platform web console and have cluster administrator privileges.
+						</li><li class="listitem">
+							You created a secret name for the Client ID and Client secret key/value pair.
+						</li><li class="listitem">
+							The Cost Management Metrics Operator is installed.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Click <span class="strong strong"><strong>Operators &gt; Installed Operators</strong></span>.
+						</li><li class="listitem">
+							Locate the row that contains <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> and click the <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> link that is under the <span class="strong strong"><strong>Provided APIs</strong></span> heading.
+						</li><li class="listitem"><p class="simpara">
+							When the <span class="strong strong"><strong>CostManagementMetricsConfig</strong></span> window appears, click the configuration file in <span class="strong strong"><strong>Name</strong></span>.
+						</p><p class="simpara">
+							The default name is <code class="literal">costmanagementmetricscfg-sample</code>.
+						</p></li><li class="listitem">
+							When the <code class="literal">costmanagementmetricscfg-sample</code> window appears, click the <span class="strong strong"><strong>YAML</strong></span> tab to edit and view the content.
+						</li><li class="listitem"><p class="simpara">
+							Locate the following lines in the YAML window that you opened in the previous step:
+						</p><pre class="programlisting language-yaml"> authentication:
+   type: token</pre></li><li class="listitem">
+							Change <code class="literal">type: token</code> to <code class="literal">type: service-account</code>.
+						</li><li class="listitem"><p class="simpara">
+							Insert a new line for <code class="literal">secret_name</code>. Enter the value for <code class="literal">secret_name</code>, which is the name you previously created.
+						</p><div class="formalpara"><p class="title"><strong>Example</strong></p><p>
+								
+<pre class="programlisting language-yaml"> authentication:
+   secret_name: service-account-auth-secret
+   type: service-account</pre>
+
+							</p></div></li><li class="listitem">
+							Click <span class="strong strong"><strong>Save</strong></span>. A confirmation message appears.
+						</li></ol></div></section></section><section class="section" id="proc_creating-an-openshift-container-platform-int-manually_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.8. Manually creating an Openshift Container Platform integration</h2></div></div></div><p class="_abstract _abstract">
+				You can automatically create your OpenShift Container Platform integration by following the steps in <a class="link" href="#installing-cost-operator_adding-an-ocp-int" title="1.2. Installing the cost operator by using OperatorHub">Installing a cost operator</a>. However, some situations, such as restricted network installations, require that you create an OpenShift Container Platform integration manually on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You have an OpenShift Container Platform cluster installed.
+					</li><li class="listitem">
+						You are logged into the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a> and have cluster administrator privileges.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, click <span class="strong strong"><strong>Settings Menu</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Integrating_OpenShift_Container_Platform_data_into_cost_management-en-US/images/f8511490af3f869d160b05f003f56521/configuration-gear.png" alt="Settings icon" /></span>
+						 &gt; <span class="strong strong"><strong>Integrations</strong></span>.
+					</li><li class="listitem">
+						Click the <span class="strong strong"><strong>Red Hat</strong></span> tab.
+					</li><li class="listitem">
+						Click <span class="strong strong"><strong>Add integration</strong></span>, which opens the <span class="strong strong"><strong>Add a cloud integration</strong></span> wizard.
+					</li><li class="listitem">
+						In <span class="strong strong"><strong>Select your integration type</strong></span>, click <span class="strong strong"><strong>Red Hat OpenShift Container Platform</strong></span>.
+					</li><li class="listitem">
+						In <span class="strong strong"><strong>Application</strong></span>, click <span class="strong strong"><strong>cost management</strong></span>. Then click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Enter a name in <span class="strong strong"><strong>Integration name</strong></span>. Then click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						In a new tab, access the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a>. Go to <span class="strong strong"><strong>Home &gt; Overview</strong></span> and copy your <span class="strong strong"><strong>Cluster Identifier</strong></span>.
+					</li><li class="listitem">
+						Back in cost management, enter your <span class="strong strong"><strong>Cluster Identifier</strong></span>. Then click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Review the details and click <span class="strong strong"><strong>Add</strong></span> to create the integration.
+					</li></ol></div></section><section class="section" id="update-operator-resources_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.9. Updating operator resources</h2></div></div></div><p class="_abstract _abstract">
+				The <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> comes with a finite amount of resources. On larger clusters, the <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> might run out of memory when it processes all of the metric data from Prometheus.
+			</p><section class="section" id="default_resources"><div class="titlepage"><div><div><h3 class="title">1.9.1. Default resources</h3></div></div></div><p>
+					The <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> has the following resources by default:
+				</p><p>
+					Limits:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							CPU: 500m
+						</li><li class="listitem">
+							memory: 500Mi
+						</li></ul></div><p>
+					Requests:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							CPU: 100m
+						</li><li class="listitem">
+							memory: 20Mi
+						</li></ul></div></section><section class="section" id="increasing_resources"><div class="titlepage"><div><div><h3 class="title">1.9.2. Increasing resources</h3></div></div></div><p>
+					If the standard resources do not meet your needs, complete the following steps to increase the resources that are available to the operator:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							Go to the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a>.
+						</li><li class="listitem">
+							From <span class="strong strong"><strong>Installed Operators</strong></span>, click <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span>.
+						</li><li class="listitem">
+							Click the <span class="strong strong"><strong>Subscription</strong></span> tab. Then click the <span class="strong strong"><strong>Actions</strong></span> drop-down and select <span class="strong strong"><strong>Edit Subscription</strong></span>.
+						</li><li class="listitem">
+							In the YAML file that appears, edit the deployment resources with values that meet the CPU and memory needs of your cluster:
+						</li></ul></div><pre class="programlisting language-yaml">kind: Subscription
+metadata:
+...
+spec:
+  ...
+  config:
+    resources: &lt;&lt;&lt;&lt;&lt;
+      limits:
+        cpu: 500m
+        memory: 500Mi
+      requests:
+        cpu: 200m
+        memory: 100Mi</pre><p>
+					The operator is now redeployed and <span class="strong strong"><strong>Deployment</strong></span> shows the new resources.
+				</p><p>
+					For more information about <code class="literal">.spec.config.resources</code>, see <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">the API documentation</a>.
+				</p></section></section><section class="section" id="assembly-adding-a-restricted-network-int_adding-an-ocp-int"><div class="titlepage"><div><div><h2 class="title">1.10. Adding a restricted network integration</h2></div></div></div><p class="_abstract _abstract">
+				You can install OpenShift Container Platform on a restricted network that does not have access to the internet.
+			</p><p>
+				The procedure to add an OpenShift Container Platform cluster operating on a restricted network as a cost management integration is different in the following ways:
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+						Operator Lifecycle Manager is configured to install and run local integrations.
+					</li><li class="listitem">
+						The <code class="literal">costmanagement-metrics-operator</code> is configured to store cost report CSV files locally using a persistent volume claim (PVC).
+					</li><li class="listitem">
+						Cost reports stored in the PVC are downloaded to a workstation.
+					</li><li class="listitem">
+						An OpenShift Container Platform integration is created manually.
+					</li><li class="listitem">
+						Cost reports are uploaded to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> from your workstation.
+					</li></ol></div><section class="section" id="proc_installing-cost-operator-on-a-restricted-network_adding-restricted-network-int"><div class="titlepage"><div><div><h3 class="title">1.10.1. Installing the cost management operator on a restricted network</h3></div></div></div><p class="_abstract _abstract">
+					Operator Lifecycle Manager (OLM) cannot access the OpenShift Container Platform clusters that are installed on restricted networks because remote integrations require full Internet connectivity. In these situations, you must install and configure OLM to run locally.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You installed an OpenShift Container Platform cluster.
+						</li><li class="listitem">
+							You have a workstation with unrestricted network access.
+						</li><li class="listitem">
+							You logged in to the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a> and have cluster administrator privileges.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							Complete the following OpenShift Container Platform procedure to create a local mirror of the <code class="literal">costmanagement-metrics-operator</code>: <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.11/html/operators/administrator-tasks#olm-restricted-networks" title="This content is not included in Mimir.">Using Operator Lifecycle Manager on restricted networks</a>.
+						</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								The <code class="literal">costmanagement-metrics-operator</code> is in the <code class="literal">redhat-operators</code> catalog in the <code class="literal">registry.redhat.io/redhat/redhat-operator-index:v4.11</code> index.
+							</p><p>
+								Prune unwanted objects from the index before you push to the mirrored registry, but do <span class="strong strong"><strong>not</strong></span> delete the <code class="literal">costmanagement-metrics-operator</code> package.
+							</p></div></div></li><li class="listitem">
+							Log in to the OpenShift Container Platform web console and click <span class="strong strong"><strong>Operators &gt; OperatorHub</strong></span>.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span>.
+						</li><li class="listitem">
+							The <span class="strong strong"><strong>Install Operator</strong></span> window should open. Select the <code class="literal">costmanagement-metrics-operator</code> namespace that you want to install. If the namespace does not exist, it gets created.
+						</li><li class="listitem">
+							Click <span class="guibutton">Install</span>.
+						</li></ol></div><div class="itemizedlist"><p class="title"><strong>Verification steps</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							After a short wait, <span class="strong strong"><strong>Cost Management Metrics Operator</strong></span> appears in the <span class="strong strong"><strong>Installed Operators</strong></span> tab in <span class="strong strong"><strong>Project: all projects</strong></span> or <span class="strong strong"><strong>Project: costmanagement-metrics-operator</strong></span>.
+						</li></ul></div><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+							For more details on the Operator Lifecycle Manager, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.11/html/operators/understanding-operators#operator-lifecycle-manager-olm" title="This content is not included in Mimir.">What is Operator Lifecycle Manager?</a>
+						</li></ul></div></section><section class="section" id="configuring-cost-operator-on-a-restricted-network_adding-restricted-network-int"><div class="titlepage"><div><div><h3 class="title">1.10.2. Configuring the Cost Operator on a restricted network</h3></div></div></div><p class="_abstract _abstract">
+					Learn how to run the <code class="literal">costmanagement-metrics-operator</code> on a restricted network.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You installed <code class="literal">costmanagement-metrics-operator</code>.
+						</li><li class="listitem">
+							You logged into the <a class="link mimir-link-warn-approx" href="/products/#letter-O" title="Mimir does not include this page, but the link has been rewritten to point to the nearest parent document.">OpenShift Container Platform web console</a> and have cluster administrator privileges.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							From the OpenShift Container Platform web console, select <span class="strong strong"><strong>Operators &gt; Installed Operators &gt; <code class="literal">costmanagement-metrics-operator</code> &gt; CostManagementMetricsConfig &gt; Create Instance</strong></span>.
+						</li><li class="listitem"><p class="simpara">
+							Set a storage amount. If you do not specify an amount, the operator creates a default persistent volume claim (PVC) called <code class="literal">costmanagement-metrics-operator-data</code> with <span class="strong strong"><strong>10Gi</strong></span> of storage.
+						</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								To configure the <code class="literal">costmanagement-metrics-operator</code> to use a different PVC, edit <code class="literal">volume_claim_template</code> in <span class="strong strong"><strong>YAML view</strong></span>.
+							</p></div></div></li><li class="listitem">
+							Select <span class="strong strong"><strong>YAML view</strong></span>.
+						</li><li class="listitem">
+							Enter a value in <code class="literal">max_reports_to_store</code> to set the maximum number of reports that you want to store.
+						</li><li class="listitem"><p class="simpara">
+							Enter a value in <code class="literal">upload_cycle</code> to set how many minutes you want to pass between each report generation.
+						</p><pre class="programlisting language-yaml">    packaging:
+      max_reports_to_store: 30
+      max_size_MB: 100</pre><pre class="programlisting language-yaml">    upload:
+      upload_cycle: 360</pre><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+								The <code class="literal">costmanagement-metrics-operator</code> creates one report every <span class="strong strong"><strong>360 minutes</strong></span> by default. The default value of <span class="strong strong"><strong>30</strong></span> reports and <span class="strong strong"><strong>360</strong></span> minutes gives you <span class="strong strong"><strong>7.5 days</strong></span> of reports.
+							</p><p>
+								After the maximum number of reports generate, any subsequent reports replace the oldest report in storage. To avoid losing reports, download them from your PVC.
+							</p></div></div></li><li class="listitem"><p class="simpara">
+							Set <code class="literal">upload_toggle</code> to <code class="literal">false</code>:
+						</p><pre class="programlisting language-yaml">    upload:
+      upload_cycle: 360
+      upload_toggle: false</pre></li><li class="listitem"><p class="simpara">
+							Set <code class="literal">source</code> to empty braces:
+						</p><pre class="programlisting language-yaml">    source: {}</pre></li><li class="listitem"><p class="simpara">
+							Set <code class="literal">authentication</code> to empty braces:
+						</p><pre class="programlisting language-yaml">    authentication: {}</pre></li><li class="listitem">
+							Click <span class="strong strong"><strong>Create</strong></span>.
+						</li></ol></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							Select the <span class="strong strong"><strong>CostManagementMetricsConfig</strong></span> that you created.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>YAML view</strong></span>.
+						</li><li class="listitem"><p class="simpara">
+							Verify that a report was created by viewing the data in <code class="literal">packaging</code>:
+						</p><pre class="programlisting language-yaml">    packaging:
+      last_successful_packaging_time: `current date and time`
+      max_reports_to_store: 30
+      max_size_MB: 100
+      number_of_reports_stored: 1
+      packaged_files:
+        - &gt;-
+            /tmp/costmanagement-metrics-operator-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz</pre><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								After configuration, <code class="literal">costmanagement-metrics-operator</code> generates an initial report. These reports are in <code class="literal">packaged_files</code>.
+							</p></div></div></li></ol></div></section><section class="section" id="proc_downloading-reports_adding-restricted-network-int"><div class="titlepage"><div><div><h3 class="title">1.10.3. Downloading cost reports</h3></div></div></div><p class="_abstract _abstract">
+					If you configured the <code class="literal">costmanagement-metrics-operator</code> to run on a restricted network, the reports from the persistent volume claims (PVC) are temporarily stored in a workstation. Copy the reports to an unrestricted network.
+				</p><p>
+					The default configuration saves one week of reports. To avoid losing metrics data, download the reports locally and upload them to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> weekly.
+				</p><p>
+					You can configure any PVC, but by default, most PVCs are <code class="literal">ReadWriteOnce</code>. For <code class="literal">ReadWriteOnce</code> PVCs, the <code class="literal">volume-shell</code> must be attached to the same node as the operator pod.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You have a workstation with unrestricted network access.
+						</li><li class="listitem">
+							<code class="literal">costmanagement-metrics-operator</code> reports in your PVC.
+						</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+							Create the following pod and set <code class="literal">claimName</code> to the PVC with the report data:
+						</p><pre class="programlisting language-bash">kind: Pod
+apiVersion: v1
+metadata:
+  name: volume-shell
+  namespace: costmanagement-metrics-operator
+spec:
+  volumes:
+  - name: costmanagement-metrics-operator-reports
+    persistentVolumeClaim:
+      claimName: costmanagement-metrics-operator-data
+  containers:
+  - name: volume-shell
+    image: busybox
+    command: ['sleep', '3600']
+    volumeMounts:
+    - name: costmanagement-metrics-operator-reports
+      mountPath: /tmp/costmanagement-metrics-operator-reports</pre></li><li class="listitem"><p class="simpara">
+							Run <code class="literal">rsync</code> to copy all of the files from the PVC to a local folder:
+						</p><pre class="programlisting language-bash">$ oc rsync volume-shell:/tmp/costmanagement-metrics-operator-reports/upload local/path/to/save/folder</pre></li><li class="listitem">
+							Confirm that the files were copied.
+						</li><li class="listitem"><p class="simpara">
+							Run the following command to connect to the pod and delete the contents of the upload folder:
+						</p><pre class="programlisting language-bash">$ oc rsh volume-shell
+$ rm /tmp/costmanagement-metrics-operator-reports/upload/*</pre></li><li class="listitem"><p class="simpara">
+							(Optional) Run the following command to delete the pod that you used to connect to the PVC:
+						</p><pre class="programlisting language-bash">$ oc delete -f volume-shell.yaml</pre></li></ol></div><div class="formalpara"><p class="title"><strong>Viewing your PVC usage</strong></p><p>
+						In the <span class="strong strong"><strong>OpenShift</strong></span> tab in <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, your PVCs with the highest usage automatically populate under <span class="strong strong"><strong>Persistent Volume Claims</strong></span>. To view all PVCs, click <span class="strong strong"><strong>more</strong></span> at the end of the section.
+					</p></div><p>
+					You can filter your PVC data by the following fields: * Persistent volume claim * Cluster * StorageClass
+				</p><div class="itemizedlist _additional-resources"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist _additional-resources" type="disc"><li class="listitem">
+							For more information about PVCs, see <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.11/html/storage/understanding-persistent-storage" title="This content is not included in Mimir.">Understanding persistent storage</a>.
+						</li></ul></div></section><section class="section" id="proc_uploading-reports_adding-restricted-network-int"><div class="titlepage"><div><div><h3 class="title">1.10.4. Uploading cost reports to console.redhat.com</h3></div></div></div><p class="_abstract _abstract">
+					You must manually upload locally stored cost reports from a restricted network to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+						The default configuration saves one week of reports. Download the reports locally and upload them to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> weekly to avoid losing metrics data.
+					</p></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You have <code class="literal">costmanagement-metrics-operator</code> reports downloaded locally.
+						</li><li class="listitem">
+							You created an integration on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>. For more information, see <a class="link" href="#proc_creating-an-openshift-container-platform-int-manually_adding-an-ocp-int" title="1.8. Manually creating an Openshift Container Platform integration">Manually creating an Openshift Container Platform integration</a>.
+						</li><li class="listitem">
+							You are a Red Hat account user with Organization Administrator entitlements.
+						</li><li class="listitem">
+							You have a workstation with unrestricted network access.
+						</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+						To upload your reports to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>, make the following edit:
+					</p></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+							Set <code class="literal">USERNAME</code> and <code class="literal">PASSWORD</code> to your <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a> login credentials and set <code class="literal">FILE_NAME</code> to the report that you want to upload:
+						</p><pre class="programlisting language-bash">$ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz"  https://cloud.redhat.com/api/ingress/v1/upload -u USERNAME:PASS</pre></li></ul></div><div class="orderedlist"><p class="title"><strong>Verification steps</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+							From <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a>, click <span class="strong strong"><strong>OpenShift</strong></span>.
+						</li><li class="listitem">
+							On the <span class="strong strong"><strong>OpenShift details</strong></span> page, confirm that you have OpenShift usage data for your cluster.
+						</li></ol></div></section></section></section><section class="chapter" id="assembly-cost-management-next-steps-ocp"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Next steps for managing your costs</h1></div></div></div><p class="_abstract _abstract">
+			After adding your OpenShift Container Platform and cloud infrastructure integrations, in addition to showing cost data by integration, cost management will automatically show AWS and Microsoft Azure cost and usage related to running your OpenShift Container Platform clusters on their platforms.
+		</p><p>
+			On the <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a> <span class="strong strong"><strong>Overview</strong></span> page, your cost data is sorted into <span class="strong strong"><strong>OpenShift</strong></span> and <span class="strong strong"><strong>Infrastructure</strong></span> tabs. Select <span class="strong strong"><strong>Perspective</strong></span> to toggle through different views of your cost data.
+		</p><p>
+			You can also use the global navigation menu to view additional details about your costs by cloud provider.
+		</p><div class="itemizedlist"><p class="title"><strong>Additional resources</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index/">Integrating Amazon Web Services (AWS) data into cost management</a></em></span>
+				</li><li class="listitem">
+					<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_google_cloud_data_into_cost_management/index/">Integrating Google Cloud data into cost management</a></em></span>
+				</li><li class="listitem">
+					<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_microsoft_azure_data_into_cost_management/index/">Integrating Microsoft Azure data into cost management</a></em></span>
+				</li><li class="listitem">
+					<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index/">Integrating Amazon Web Services (AWS) data into cost management</a></em></span>
+				</li></ul></div><section class="section" id="limiting-access_next-steps-ocp"><div class="titlepage"><div><div><h2 class="title">2.1. Limiting access to cost management resources</h2></div></div></div><p class="_abstract _abstract">
+				After you add and configure integrations in cost management, you can limit access to cost data and resources.
+			</p><p>
+				You might not want users to have access to all of your cost data. Instead, you can grant users access only to data that is specific to their projects or organizations. With role-based access control, you can limit the visibility of resources in cost management reports. For example, you can restrict a user’s view to only AWS integrations, rather than the entire environment.
+			</p><p>
+				To learn how to limit access, see the more in-depth guide <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a></em></span>.
+			</p></section><section class="section" id="configure-tagging-next-step_next-steps-ocp"><div class="titlepage"><div><div><h2 class="title">2.2. Configuring tagging for your integrations</h2></div></div></div><p class="_abstract _abstract">
+				The cost management application tracks cloud and infrastructure costs with tags. Tags are also known as labels in OpenShift.
+			</p><p>
+				You can refine tags in cost management to filter and attribute resources, organize your resources by cost, and allocate costs to different parts of your cloud infrastructure.
+			</p><div class="admonition important"><div class="admonition_header">Important</div><div><p>
+					You can only configure tags and labels directly on an integration. You can choose the tags that you activate in cost management, however, you cannot edit tags and labels in the cost management application.
+				</p></div></div><p>
+				To learn more about the following topics, see <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a></em></span>:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Planning your tagging strategy to organize your view of cost data
+					</li><li class="listitem">
+						Understanding how cost management associates tags
+					</li><li class="listitem">
+						Configuring tags and labels on your integrations
+					</li></ul></div></section><section class="section" id="configure-cost-models-next-step_next-steps-ocp"><div class="titlepage"><div><div><h2 class="title">2.3. Configuring cost models to accurately report costs</h2></div></div></div><p class="_abstract _abstract">
+				Now that you configured your integrations to collect cost and usage data in cost management, you can configure cost models to associate prices to metrics and usage.
+			</p><p>
+				A cost model is a framework that uses raw costs and metrics to define calculations for the costs in cost management. You can record, categorize, and distribute the costs that the cost model generates to specific customers, business units, or projects.
+			</p><p>
+				In <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/cost-models" title="Mimir does not include content from: console.redhat.com">Cost Models</a>, you can complete the following tasks:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Classifying your costs as infrastructure or supplementary costs
+					</li><li class="listitem">
+						Capturing monthly costs for OpenShift nodes and clusters
+					</li><li class="listitem">
+						Applying a markup to account for additional support costs
+					</li></ul></div><p>
+				To learn how to configure a cost model, see <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index/">Using cost models</a></em></span>.
+			</p></section><section class="section" id="cost-explorer-next-step_next-steps-ocp"><div class="titlepage"><div><div><h2 class="title">2.4. Visualizing your costs with Cost Explorer</h2></div></div></div><p class="_abstract _abstract">
+				Use cost management <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/explorer" title="Mimir does not include content from: console.redhat.com">Cost Explorer</a> to create custom graphs of time-scaled cost and usage information and ultimately better visualize and interpret your costs.
+			</p><p>
+				To learn more about the following topics, see <span class="emphasis"><em><a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/html-single/visualizing_your_costs_using_cost_explorer/index" title="This content is not included in Mimir.">Visualizing your costs using Cost Explorer</a></em></span>:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Using Cost Explorer to identify abnormal events
+					</li><li class="listitem">
+						Understanding how your cost data changes over time
+					</li><li class="listitem">
+						Creating custom bar charts of your cost and usage data
+					</li><li class="listitem">
+						Exporting custom cost data tables
+					</li></ul></div></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12368954" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm139709925070416"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

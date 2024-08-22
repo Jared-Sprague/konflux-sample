@@ -1,0 +1,72 @@
+rhsat,satellite
+jboss-as,jboss as,jboss_as,jbossas
+rhev-h,rhev h,rhevh
+rhev-m,rhev m,rhev_m,rhev-manager,rhev manager,rhevmanager, rhevm,rhev_manager
+red hat enterprise linux,rhel
+rhev, rhv, red hat enterprise virtualization, red hat virtualization
+rhel21,rhel2.1,rhel 21,rhel 2.1,rhel_21,rhel_2.1,rhel-21,rhel-2.1,red hat enterprise linux 2.1,rhel2
+rhel3,rhel 3,rhel_3,rhel-3,red hat enterprise linux 3
+rhel38,rhel3.8,rhel 38,rhel 3.8,rhel_38,rhel_3.8,rhel-38,rhel-3.8,red hat enterprise linux 3.8,rhel3
+rhel39,rhel3.9,rhel 39,rhel 3.9,rhel_39,rhel_3.9,rhel-39,rhel-3.9,red hat enterprise linux 3.9,rhel3
+rhel4,rhel 4,rhel_4,rhel-4,red hat enterprise linux 4
+rhel40,rhel4.0,rhel 40,rhel 4.0,rhel_40,rhel_4.0,rhel-40,rhel-4.0,red hat enterprise linux 4.0,rhel4
+rhel41,rhel4.1,rhel 41,rhel 4.1,rhel_41,rhel_4.1,rhel-41,rhel-4.1,red hat enterprise linux 4.1,rhel4
+rhel42,rhel4.2,rhel 42,rhel 4.2,rhel_42,rhel_4.2,rhel-42,rhel-4.2,red hat enterprise linux 4.2,rhel4
+rhel424,rhel4.2.4,rhel 424,rhel 4.2.4,rhel_424,rhel_4.2.4,rhel-424,rhel-4.2.4,red hat enterprise linux 4.2.4,rhel4,rhel42
+rhel43,rhel4.3,rhel 43,rhel 4.3,rhel_43,rhel_4.3,rhel-43,rhel-4.3,red hat enterprise linux 4.3,rhel4
+rhel44,rhel4.4,rhel 44,rhel 4.4,rhel_44,rhel_4.4,rhel-44,rhel-4.4,red hat enterprise linux 4.4,rhel4
+rhel45,rhel4.5,rhel 45,rhel 4.5,rhel_45,rhel_4.5,rhel-45,rhel-4.5,red hat enterprise linux 4.5,rhel4
+rhel46,rhel4.6,rhel 46,rhel 4.6,rhel_46,rhel_4.6,rhel-46,rhel-4.6,red hat enterprise linux 4.6,rhel4
+rhel47,rhel4.7,rhel 47,rhel 4.7,rhel_47,rhel_4.7,rhel-47,rhel-4.7,red hat enterprise linux 4.7,rhel4
+rhel48,rhel4.8,rhel 48,rhel 4.8,rhel_48,rhel_4.8,rhel-48,rhel-4.8,red hat enterprise linux 4.8,rhel4
+rhel49,rhel4.9,rhel 49,rhel 4.9,rhel_49,rhel_4.9,rhel-49,rhel-4.9,red hat enterprise linux 4.9,rhel4
+rhel5,rhel 5,rhel_5,rhel-5,red hat enterprise linux 5
+rhel50,rhel5.0,rhel 50,rhel 5.0,rhel_50,rhel_5.0,rhel-50,rhel-5.0,red hat enterprise linux 5.0,rhel5
+rhel51,rhel5.1,rhel 51,rhel 5.1,rhel_51,rhel_5.1,rhel-51,rhel-5.1,red hat enterprise linux 5.1,rhel5
+rhel52,rhel5.2,rhel 52,rhel 5.2,rhel_52,rhel_5.2,rhel-52,rhel-5.2,red hat enterprise linux 5.2,rhel5
+rhel53,rhel5.3,rhel 53,rhel 5.3,rhel_53,rhel_5.3,rhel-53,rhel-5.3,red hat enterprise linux 5.3,rhel5
+rhel54,rhel5.4,rhel 54,rhel 5.4,rhel_54,rhel_5.4,rhel-54,rhel-5.4,red hat enterprise linux 5.4,rhel5
+rhel540,rhel5.4.0,rhel 540,rhel 5.4.0,rhel_540,rhel_5.4.0,rhel-540,rhel-5.4.0,red hat enterprise linux 5.4.0,rhel5,rhel54
+rhel55,rhel5.5,rhel 55,rhel 5.5,rhel_55,rhel_5.5,rhel-55,rhel-5.5,red hat enterprise linux 5.5,rhel5
+rhel56,rhel5.6,rhel 56,rhel 5.6,rhel_56,rhel_5.6,rhel-56,rhel-5.6,red hat enterprise linux 5.6,rhel5
+rhel57,rhel5.7,rhel 57,rhel 5.7,rhel_57,rhel_5.7,rhel-57,rhel-5.7,red hat enterprise linux 5.7,rhel5
+rhel58,rhel5.8,rhel 58,rhel 5.8,rhel_58,rhel_5.8,rhel-58,rhel-5.8,red hat enterprise linux 5.8,rhel5
+rhel6,rhel 6,rhel_6,rhel-6,red hat enterprise linux 6
+rhel60,rhel6.0,rhel 60,rhel 6.0,rhel_60,rhel_6.0,rhel-60,rhel-6.0,red hat enterprise linux 6.0,rhel6
+rhel600,rhel6.0.0,rhel 600,rhel 6.0.0,rhel_600,rhel_6.0.0,rhel-600,rhel-6.0.0,red hat enterprise linux 6.0.0,rhel6,rhel60
+rhel61,rhel6.1,rhel 61,rhel 6.1,rhel_61,rhel_6.1,rhel-61,rhel-6.1,red hat enterprise linux 6.1,rhel6
+rhel610,rhel6.1.0,rhel 610,rhel 6.1.0,rhel_610,rhel_6.1.0,rhel-610,rhel-6.1.0,red hat enterprise linux 6.1.0,rhel6,rhel61
+rhel62,rhel6.2,rhel 62,rhel 6.2,rhel_62,rhel_6.2,rhel-62,rhel-6.2,red hat enterprise linux 6.2,rhel6
+rhel620,rhel6.2.0,rhel 620,rhel 6.2.0,rhel_620,rhel_6.2.0,rhel-620,rhel-6.2.0,red hat enterprise linux 6.2.0,rhel6,rhel62
+rhel63,rhel6.3,rhel 63,rhel 6.3,rhel_63,rhel_6.3,rhel-63,rhel-6.3,red hat enterprise linux 6.3,rhel6
+rhel64,rhel6.4,rhel 64,rhel 6.4,rhel_64,rhel_6.4,rhel-64,rhel-6.4,red hat enterprise linux 6.4,rhel6
+rhel65,rhel6.5,rhel 65,rhel 6.5,rhel_65,rhel_6.5,rhel-65,rhel-6.5,red hat enterprise linux 6.5,rhel6
+rhel66,rhel6.6,rhel 66,rhel 6.6,rhel_66,rhel_6.6,rhel-66,rhel-6.6,red hat enterprise linux 6.6,rhel6
+rhel7,rhel 7,rhel_7,rhel-7,red hat enterprise linux 7
+rhel70,rhel7.0,rhel 70,rhel 7.0,rhel_70,rhel_7.0,rhel-70,rhel-7.0,red hat enterprise linux 7.0,rhel7
+rhel8.0,rhel 8.0,rhel 8,rhel_8,rhel-8,rhel_8.0,rhel-8.0,red hat enterprise linux 8,red hat enterprise linux 8.0,rhel8
+rhel9.0,rhel 9.0,rhel 9,rhel_9,rhel-9,rhel_9.0,rhel-9.0,red hat enterprise linux 9,red hat enterprise linux 9.0,rhel9
+rhev2,rhev 2,rhev_2,rhev-2,red hat enterprise virtualization 2
+rhev20,rhev2.0,rhev 20,rhev 2.0,rhev_20,rhev_2.0,rhev-20,rhev-2.0,red hat enterprise virtualization 2.0,rhev2
+rhev21,rhev2.1,rhev 21,rhev 2.1,rhev_21,rhev_2.1,rhev-21,rhev-2.1,red hat enterprise virtualization 2.1,rhev2
+rhev22,rhev2.2,rhev 22,rhev 2.2,rhev_22,rhev_2.2,rhev-22,rhev-2.2,red hat enterprise virtualization 2.2,rhev2
+rhev220,rhev2.2.0,rhev 220,rhev 2.2.0,rhev_220,rhev_2.2.0,rhev-220,rhev-2.2.0,red hat enterprise virtualization 2.2.0,rhev2,rhev22
+rhev221,rhev2.2.1,rhev 221,rhev 2.2.1,rhev_221,rhev_2.2.1,rhev-221,rhev-2.2.1,red hat enterprise virtualization 2.2.1,rhev2,rhev22
+rhev222,rhev2.2.2,rhev 222,rhev 2.2.2,rhev_222,rhev_2.2.2,rhev-222,rhev-2.2.2,red hat enterprise virtualization 2.2.2,rhev2,rhev22
+rhev223,rhev2.2.3,rhev 223,rhev 2.2.3,rhev_223,rhev_2.2.3,rhev-223,rhev-2.2.3,red hat enterprise virtualization 2.2.3,rhev2,rhev22
+rhev224,rhev2.2.4,rhev 224,rhev 2.2.4,rhev_224,rhev_2.2.4,rhev-224,rhev-2.2.4,red hat enterprise virtualization 2.2.4,rhev2,rhev22
+rhev225,rhev2.2.5,rhev 225,rhev 2.2.5,rhev_225,rhev_2.2.5,rhev-225,rhev-2.2.5,red hat enterprise virtualization 2.2.5,rhev2,rhev22
+rhev226,rhev2.2.6,rhev 226,rhev 2.2.6,rhev_226,rhev_2.2.6,rhev-226,rhev-2.2.6,red hat enterprise virtualization 2.2.6,rhev2,rhev22
+rhev227,rhev2.2.7,rhev 227,rhev 2.2.7,rhev_227,rhev_2.2.7,rhev-227,rhev-2.2.7,red hat enterprise virtualization 2.2.7,rhev2,rhev22
+rhev228,rhev2.2.8,rhev 228,rhev 2.2.8,rhev_228,rhev_2.2.8,rhev-228,rhev-2.2.8,red hat enterprise virtualization 2.2.8,rhev2,rhev22
+rhev229,rhev2.2.9,rhev 229,rhev 2.2.9,rhev_229,rhev_2.2.9,rhev-229,rhev-2.2.9,red hat enterprise virtualization 2.2.9,rhev2,rhev22
+rhev2210,rhev2.2.10,rhev 2210,rhev 2.2.10,rhev_2210,rhev_2.2.10,rhev-2210,rhev-2.2.10,red hat enterprise virtualization 2.2.10,rhev2,rhev22
+rhev2211,rhev2.2.11,rhev 2211,rhev 2.2.11,rhev_2211,rhev_2.2.11,rhev-2211,rhev-2.2.11,red hat enterprise virtualization 2.2.11,rhev2,rhev22
+rhev2212,rhev2.2.12,rhev 2212,rhev 2.2.12,rhev_2212,rhev_2.2.12,rhev-2212,rhev-2.2.12,red hat enterprise virtualization 2.2.12,rhev2,rhev22
+rhev3,rhev 3,rhev_3,rhev-3,red hat enterprise virtualization 3
+rhev30,rhev3.0,rhev 30,rhev 3.0,rhev_30,rhev_3.0,rhev-30,rhev-3.0,red hat enterprise virtualization 3.0,rhev3
+rhev31,rhev3.1,rhev 31,rhev 3.1,rhev_31,rhev_3.1,rhev-31,rhev-3.1,red hat enterprise virtualization 3.1,rhev3
+rhev32,rhev3.2,rhev 32,rhev 3.2,rhev_32,rhev_3.2,rhev-32,rhev-3.2,red hat enterprise virtualization 3.2,rhev3
+rhev33,rhev3.3,rhev 33,rhev 3.3,rhev_33,rhev_3.3,rhev-33,rhev-3.3,red hat enterprise virtualization 3.3,rhev3
+rhev34,rhev3.4,rhev 34,rhev 3.4,rhev_34,rhev_3.4,rhev-34,rhev-3.4,red hat enterprise virtualization 3.4,rhev3
+rhev35,rhev3.5,rhev 35,rhev 3.5,rhev_35,rhev_3.5,rhev-35,rhev-3.5,red hat enterprise virtualization 3.5,rhev3

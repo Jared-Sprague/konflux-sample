@@ -1,0 +1,36 @@
+{
+  "version": {
+    "name": "7.2.3",
+    "slug": "7.2.3",
+    "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3"
+  },
+  "titles": [
+    {
+      "titleId": "d30f3950-b03a-44da-9696-553d82117eb8",
+      "modified": 1637177869,
+      "name": "Common Criteria Configuration Guide",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/html-single/common_criteria_configuration_guide/index",
+      "category": {
+        "weight": 50,
+        "name": "Reference"
+      },
+      "description": "For Use with Red Hat JBoss Enterprise Application Platform 7",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/html-single/common_criteria_configuration_guide/index",
+        "slug": "common_criteria_configuration_guide",
+        "id": "cd6383e539517a64868204caf4b586b8.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/pdf/common_criteria_configuration_guide/JBoss_Enterprise_Application_Platform_Common_Criteria_Certification-7.2.3-Common_Criteria_Configuration_Guide-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/pdf/common_criteria_configuration_guide/jboss_enterprise_application_platform_common_criteria_certification-7.2.3-common_criteria_configuration_guide-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_common_criteria_certification/7.2.3/pdf/common_criteria_configuration_guide/jboss_enterprise_application_platform_common_criteria_certification-7.2.3-common_criteria_configuration_guide-en-us.pdf"
+      },
+      "toc": {
+        "id": "c9c9b41b7ef1380a005c21afbb5fa07d.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

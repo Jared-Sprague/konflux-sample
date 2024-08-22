@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I determine how many logical CPUs are recognized by my system?
+</title>
+        
+<meta name="documentKind" content="solution" />
+<meta name="lastModifiedDate" content="2024-08-07T07:27:35.000Z" />
+<meta name="url_slug" content="1023" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=solution">Solutions</a>
+                                
+                                
+                                How do I determine how many logical CPUs are recognized by my system?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_solution cirrus-content" id="main-content">
+<h1>How do I determine how many logical CPUs are recognized by my system?</h1>
+
+  
+  <span class="status verified" title="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s).">
+        <pfe-icon icon="web-icon-alert-success" style="--pfe-icon--color: #3f9c35; top: -0.1em"></pfe-icon>
+       Solution Verified
+    </span>
+  
+  - Updated <time datetime="2024-08-07T07:27:35.000Z">7 Aug 2024</time>
+
+<hr>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Red Hat Enterprise Linux 3</li>
+<li>Red Hat Enterprise Linux 4</li>
+<li>Red Hat Enterprise Linux 5</li>
+<li>Red Hat Enterprise Linux 6</li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>How to find how many logical CPUs are recognized by my system?</li>
+</ul>
+<h2 id="resolution">Resolution</h2>
+<p>Viewing <code>/proc/cpuinfo</code> will display what type of processor your system is running including the number of CPUs present.</p>
+<p>A breakdown of the items you should look for are the following:</p>
+<ul>
+<li>
+<p><code>processor</code> - Provides each processor with an identifying number. If you have one processor it will display a 0. If you have more than one processor it will display all processor information separately counting the processors using zero notation.</p>
+</li>
+<li>
+<p><code>cpu family</code> - Authoritatively tells you the type of processor you have in the system. If your computer is an Intel-based system, simply place the number in front of &quot;86&quot; to determine the value. This is helpful to determine the type of architecture of an older system and is helpful in determining which compiled RPM package would best suit that system.</p>
+</li>
+<li>
+<p><code>model name</code> - Gives you the common name of the processor, including the project name.</p>
+</li>
+<li>
+<p><code>cpu MHz</code> - Shows the processor's precise speed, in megahertz, to the thousandth decimal point.</p>
+</li>
+<li>
+<p><code>cache size</code> - Tells you the amount of level 2 memory cache available to the processor.</p>
+</li>
+<li>
+<p><code>flags</code> - Defines a number of different processor attributes, such as the presence of a floating-point unit (FPU) and the ability to process MMX instructions.</p>
+</li>
+</ul>
+<p>Here is example output from <code>cat /proc/cpuinfo</code> of a system containing 2 CPUs. Note how processor 1 is displayed as 'processor : 0' and processor 2 is displayed as 'processor : 1' in the output:</p>
+<pre><code>processor : 0
+vendor_id : GenuineIntel
+cpu family : 15
+model : 2
+model name : Intel(R) Xeon(TM) CPU 2.80GHz
+stepping : 7
+cpu MHz : 2793.950
+cache size : 512 KB
+physical id : 0
+siblings : 2
+fdiv_bug : no
+hlt_bug : no
+f00f_bug : no
+coma_bug : no
+fpu : yes
+fpu_exception : yes
+cpuid level : 2
+wp : yes
+flags : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat
+ pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm
+bogomips : 5570.56
+
+processor : 1
+vendor_id : GenuineIntel
+cpu family : 15
+model : 2
+model name : Intel(R) Xeon(TM) CPU 2.80GHz
+stepping : 7
+cpu MHz : 2793.950
+cache size : 512 KB
+physical id : 0
+siblings : 2
+fdiv_bug : no
+hlt_bug : no
+f00f_bug : no
+coma_bug : no
+fpu : yes
+fpu_exception : yes
+cpuid level : 2
+wp : yes
+flags : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat
+ pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm
+bogomips : 5583.66
+</code></pre>
+<ul>
+<li>Note that /proc/cpuinfo will show as many CPU as there are &quot;logical&quot; CPU as seen by the operating system. If a CPU has multiple cores or supports hyperthreading, you will see more logical CPU than there are physical CPU. Refer to <a href="https://access.redhat.com/solutions/7714" class="mimir-link-warn" title="This content is not included in Mimir.">How do I determine if my x86-compatible Intel system is multi-processor, multi-core or supports hyperthreading?</a> for further information on that topic.</li>
+</ul>
+
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

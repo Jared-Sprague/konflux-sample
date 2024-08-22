@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Using cost models - Red Hat Insights cost management 1-latest
+</title>
+        
+<meta name="product" content="Red Hat Insights cost management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-08-19T19:21:17.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">Red Hat Insights cost management</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">1-latest</a>
+                                
+                                
+                                Using cost models
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Using cost models</a>
+                    </li><li>
+                        <a href="#assembly-using-cost-models">
+                            1. Using cost models and analyzing your usage
+                        </a><ol>
+                <li>
+                        <a href="#what-is-a-cost-model_using-cost-models">
+                            1.1. What is a cost model?
+                        </a>
+                    </li><li>
+                        <a href="#cost-model-terms_using-cost-models">
+                            1.2. Cost model concepts
+                        </a><ol>
+                <li>
+                        <a href="#cost-model-terminology">
+                            1.2.1. Cost model terminology
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#cost-model-workflow_using-cost-models">
+                            1.3. The cost model workflow
+                        </a>
+                    </li><li>
+                        <a href="#analyzing-unused-and-unrequested-capacity_using-cost-models">
+                            1.4. Analyzing unused cluster and node capacity
+                        </a>
+                    </li><li>
+                        <a href="#understanding-cost-distribution_using-cost-models">
+                            1.5. Understanding cost distribution in cost management
+                        </a><ol>
+                <li>
+                        <a href="#distributing_costs">
+                            1.5.1. Distributing costs
+                        </a>
+                    </li><li>
+                        <a href="#calculating_costs">
+                            1.5.2. Calculating costs
+                        </a>
+                    </li><li>
+                        <a href="#adding-openshift-projects">
+                            1.5.3. Adding OpenShift projects
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#assembly-setting-up-cost-models">
+                            2. Setting up a cost model
+                        </a><ol>
+                <li>
+                        <a href="#creating-an-AWS-Azure-cost-model_setting-up-cost-models">
+                            2.1. Applying a markup or discount to cloud integrations
+                        </a>
+                    </li><li>
+                        <a href="#creating-an-ocp-cost-model_setting-up-cost-models">
+                            2.2. Creating a cost model for an OpenShift Container Platform cluster
+                        </a>
+                    </li><li>
+                        <a href="#calculating-effective-cost-max">
+                            2.3. Calculating effective usage with cost models
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm140716705024176">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--using_cost_models">
+            <h1 class="title">Using cost models</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140716710495728"><div class="titlepage"><div><div class="producttitle"><span class="productname">Cost Management Service</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Configuring cost models to reflect your cloud costs</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services </span></div></div><div><a href="#idm140716705024176">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				This guide explains the cost model feature, configuration and related terminology. Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.
+			</div></div></div></div><hr/></div><section class="chapter" id="assembly-using-cost-models"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Using cost models and analyzing your usage</h1></div></div></div><p class="_abstract _abstract">
+			You can use cost models in cost management to apply a price to usage in your hybrid cloud environment, then distribute the costs to resources.
+		</p><section class="section" id="what-is-a-cost-model_using-cost-models"><div class="titlepage"><div><div><h2 class="title">1.1. What is a cost model?</h2></div></div></div><p class="_abstract _abstract">
+				It can be difficult to find out the real cost of cloud-based IT systems. Different integrations provide a variety of cost data and metrics, which can be complicated to calculate together and accurately distribute the costs.
+			</p><p>
+				A cost model is a framework used to define the calculations for the costs stored in cost management. Using a cost model, you can associate a price to metrics provided by your integrations to charge for utilization of resources.
+			</p><p>
+				In some cases, those costs are related to the raw costs of the infrastructure, while others will be based on a price list that associates usage to costs. The data must be normalized before you can add a markup to it to cover your overhead, and then distribute the charges to your resources or end customers. It helps to align costs to utilization: those customers that use a resource more will be charged more.
+			</p></section><section class="section" id="cost-model-terms_using-cost-models"><div class="titlepage"><div><div><h2 class="title">1.2. Cost model concepts</h2></div></div></div><p class="_abstract _abstract">
+				These terms and concepts are important for understanding cost management’s cost model workflow.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Cost model</span></dt><dd>
+							A cost model is a framework used to define the calculations for the costs stored in cost management, using raw costs and metrics. The cost model is used for budgeting and accounting, and also the visualization and analysis of costs — in cost management, it provides the basis for the cost information that the user will view. Costs generated by a cost model can be recorded, categorized and allocated to specific customers, business units or projects.
+						</dd></dl></div><section class="section" id="cost-model-terminology"><div class="titlepage"><div><div><h3 class="title">1.2.1. Cost model terminology</h3></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">Markup</span></dt><dd><p class="simpara">
+								The portion of cost calculated by applying markup or discount to infrastructure raw cost in the cost management application.
+							</p><p class="simpara">
+								<span class="emphasis"><em>Example: For a raw cost of $100 and a markup of 10%, the markup would be $10, and the cost would be $110 (sum of both).</em></span>
+							</p></dd><dt><span class="term">Request</span></dt><dd>
+								The pod resources requested, as reported by OpenShift.
+							</dd><dt><span class="term">Usage</span></dt><dd>
+								The pod resources used, as reported by OpenShift.
+							</dd><dt><span class="term">Usage cost</span></dt><dd><p class="simpara">
+								The portion of cost calculated by applying hourly or monthly price list rates to metrics.
+							</p><p class="simpara">
+								<span class="emphasis"><em>Example: For a metric of 100 core-hours and a rate of $1/core-hour, the usage cost would be $100.</em></span>
+							</p></dd><dt><span class="term">Effective usage</span></dt><dd>
+								The pod resources used or requested each hour, whichever is higher.
+							</dd><dt><span class="term">Monthly cost</span></dt><dd><p class="simpara">
+								The portion of cost calculated by applying monthly price list rates to metrics returned as part of usage cost. Monthly cost can be configured for OpenShift nodes or clusters in a cost model to account for subscription costs, for example.
+							</p><p class="simpara">
+								Monthly costs are currently shown as part of the usage costs in the cost management API and interface.
+							</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+									These costs are not currently amortized over the reported period in the API, so when viewing a daily breakdown of cost, monthly costs will only show on the first of the month.
+								</p></div></div><p class="simpara">
+								<span class="emphasis"><em>Example: For an OpenShift cluster with 10 nodes at a rate of $10,000 per node per month, the monthly cost would be $100,000.</em></span>
+							</p></dd><dt><span class="term">Price list</span></dt><dd>
+								A list of rates used within the application’s cost model to calculate the usage cost of resources.
+							</dd><dt><span class="term">Distributed costs</span></dt><dd>
+								The costs calculated by the cost model are distributed to higher level application concepts, such as project, account, service, and so on. How the costs are distributed depends on the cost type (infrastructure or supplementary) assigned in the cost model.
+							</dd><dt><span class="term">Count (cluster)</span></dt><dd>
+								The distinct number of clusters identified during the month.
+							</dd><dt><span class="term">Count (nodes)</span></dt><dd>
+								The distinct number of nodes identified during the month.
+							</dd><dt><span class="term">Count (persistent volume claims)</span></dt><dd>
+								The distinct number of volume claims identified during the month.
+							</dd></dl></div></section></section><section class="section" id="cost-model-workflow_using-cost-models"><div class="titlepage"><div><div><h2 class="title">1.3. The cost model workflow</h2></div></div></div><p class="_abstract _abstract">
+				The following diagram shows the cost model workflow that cost management uses to apply a price to metrics and inventory, normalize cost data from different integrations, apply a markup (or discount), then distribute the costs across the relevant resources.
+			</p><p>
+				The cost model also helps differentiate raw costs from the costs used in cost management.
+			</p><p>
+				<span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Using_cost_models-en-US/images/9cee7f0c1a9e46fa6ebab07a0713ef0e/costmodel-workflow.png" alt="Diagram described by the following paragraph" /></span>
+
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
+						Cost management collects cost data from several integrations:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								<span class="strong strong"><strong>Inventory</strong></span> - All the resources that have ever run in your integration, including those that are no longer in use. For example, if your OpenShift Container Platform environment contains a node that is not in use, that node still costs <span class="emphasis"><em>$x</em></span> amount per month. There are several ways to collect inventory data into cost management: cost management can generate inventory from the AWS data export, Azure or Google Cloud export, or OpenShift Metering Operator reports.
+							</li><li class="listitem">
+								<span class="strong strong"><strong>Metrics</strong></span> - A subset of the OpenShift inventory showing usage and consumption for each resource.
+							</li><li class="listitem">
+								<span class="strong strong"><strong>Cloud raw costs</strong></span> - AWS, Azure, and Google Cloud provide regular reports to cost management listing consumption of resources and their costs, which cost management uses for calculations. As a result, configuring a custom price list is not necessary for cloud integrations.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						The <span class="strong strong"><strong>cost model</strong></span> allows you to apply a markup or discount of your choice to account for other costs and overhead, and provides options for assigning a cost layer (infrastructure or supplementary) to costs:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								For OpenShift Container Platform integrations - Since the metrics and inventory data do not have a price assigned to usage, you must create and assign a <span class="strong strong"><strong>price list</strong></span> to your integrations to determine the <span class="strong strong"><strong>usage cost</strong></span> of these resources. A price list includes rates for storage, memory, CPU usage and requests, and clusters and nodes.
+							</li><li class="listitem">
+								For AWS, Azure, and Google Cloud integrations - You can create cost models for these integrations to account for any extra costs or overhead in your environment by applying a <span class="strong strong"><strong>markup</strong></span> percentage, or a negative percentage to calculate a discount.
+							</li></ol></div></li><li class="listitem">
+						Costs from integrations are then collected together and allocated as <span class="strong strong"><strong>infrastructure cost</strong></span> and <span class="strong strong"><strong>supplementary cost</strong></span>.
+					</li><li class="listitem">
+						The cost is then <span class="strong strong"><strong>distributed</strong></span> to resources across the environment. Depending on your organization, these resources may include OpenShift projects, nodes, or clusters, and cloud integration services or accounts. You can also use tagging to distribute the costs by team, project, or group within your organization.
+					</li></ol></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					For more information about configuring tagging for cost management, see <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a></em></span>.
+				</p></div></div></section><section class="section" id="analyzing-unused-and-unrequested-capacity_using-cost-models"><div class="titlepage"><div><div><h2 class="title">1.4. Analyzing unused cluster and node capacity</h2></div></div></div><p>
+				You can analyze your cluster usage with cost management by examining the unrequested capacity and unused capacity of your cluster. The unrequested capacity identifies how much of the requested resources are being used in the cluster. When this value is high, there are nodes in your cluster that are requesting more resources than it uses. You can find the nodes that are responsible and adjust your requests to make your cluster usage more efficient. However, the usage can exceed the amount requested, so the unused capacity can help you to understand if you should adjust the overall capacity.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Request</span></dt><dd>
+							The pod resources requested, which OpenShift reports.
+						</dd><dt><span class="term">Unrequested capacity</span></dt><dd>
+							is the requests minus the usage.
+						</dd><dt><span class="term">Effective usage</span></dt><dd>
+							The pod resources used or requested each hour, whichever is higher.
+						</dd><dt><span class="term">Unused capacity</span></dt><dd>
+							is the capacity minus the effective usage.
+						</dd></dl></div><p>
+				For more information, see <a class="xref" href="#cost-model-terms_using-cost-models" title="1.2. Cost model concepts">Section 1.2, “Cost model concepts”</a>.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You created a integration on <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to the <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						From the <span class="strong strong"><strong>Services</strong></span> menu, click <span class="guimenu">Spend Management</span> → <span class="guimenuitem">Cost Management</span>.
+					</li><li class="listitem"><p class="simpara">
+						To view unused cluster capacity and unrequested cluster capacity:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the Global Navigation, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">OpenShift</span>.
+							</li><li class="listitem">
+								On the OpenShift details page, in the <span class="strong strong"><strong>Group By</strong></span> menu, select <span class="strong strong"><strong>Cluster</strong></span>. Filter by <span class="strong strong"><strong>Cluster</strong></span>, then select a cluster from the results.
+							</li><li class="listitem">
+								On the Cost overview tab, you can see your unused capacity and unrequested capacity in the CPU tile. If the unrequested capacity is higher than your unused capacity, or the unrequested core-hours are too high as a percentage of capacity, you can search for the nodes in your cluster that are responsible.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						To view unused node capacity and unrequested node capacity:
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+								In the Global Navigation, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">OpenShift</span>.
+							</li><li class="listitem">
+								On the OpenShift details page, in the <span class="strong strong"><strong>Group By</strong></span> menu, select <span class="strong strong"><strong>Node</strong></span>. Filter by <span class="strong strong"><strong>Node</strong></span>, then select a node from the results.
+							</li></ol></div></li><li class="listitem">
+						If the unrequested capacity is higher than your unused capacity, or the unrequested core-hours are too high as a percentage of capacity for your node, you can adjust them in your cloud service provider to optimize your cloud spending.
+					</li></ol></div></section><section class="section" id="understanding-cost-distribution_using-cost-models"><div class="titlepage"><div><div><h2 class="title">1.5. Understanding cost distribution in cost management</h2></div></div></div><p class="_abstract _abstract">
+				Costs can belong to three different groups:
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Platform costs</span></dt><dd>
+							Costs that incur from running the OpenShift Container Platform. Platform costs include the cost of all projects with the label <span class="strong strong"><strong>Default</strong></span>. These namespaces and projects contain <code class="literal">openshift-</code> or <code class="literal">kube-</code> in the name. These projects were not created by the user but are required for OpenShift to run. You can optionally add namespaces and projects to platform costs. For more information, see <a class="xref" href="#adding-openshift-projects" title="1.5.3. Adding OpenShift projects">Section 1.5.3, “Adding OpenShift projects”</a>.
+						</dd><dt><span class="term">Worker unallocated costs</span></dt><dd>
+							Costs that represent any unused part of your worker node’s usage and request capacity.
+						</dd><dt><span class="term">Network unattributed costs</span></dt><dd>
+							Costs associated with ingress and egress network traffic for individual nodes.
+						</dd></dl></div><section class="section" id="distributing_costs"><div class="titlepage"><div><div><h3 class="title">1.5.1. Distributing costs</h3></div></div></div><p>
+					To configure the distribution of platform and worker unallocated costs into your projects, you can set costs to <span class="strong strong"><strong>Distribute</strong></span> or <span class="strong strong"><strong>Do not distribute</strong></span>. When you create a cost model, the costs are set to <span class="strong strong"><strong>Distribute</strong></span> by default. This default setting means that the cost of the Platform projects are set to zero.
+				</p><p>
+					The costs distribute <span class="emphasis"><em>into</em></span> your project costs according to the sum of the effective CPU or the Memory usage of your cost model. Most users use the default <span class="strong strong"><strong>Distribute</strong></span> setting to track platform and worker unallocated costs for their organizations.
+				</p><p>
+					If you instead set the costs to <span class="strong strong"><strong>Do not distribute</strong></span>, the costs of each Platform project are displayed individually instead of spread across all of the projects. The worker unallocated cost still is calculated, but it appears as an individual project in the <span class="strong strong"><strong>OpenShift details</strong></span> page. With this option, you cannot see how the costs would distribute to user projects.
+				</p><p>
+					You can always distribute platform or worker unallocated costs independently of each other, or you can choose to distribute none of them.
+				</p></section><section class="section" id="calculating_costs"><div class="titlepage"><div><div><h3 class="title">1.5.2. Calculating costs</h3></div></div></div><p>
+					Cost management uses effective usage to calculate both platform and worker unallocated costs, in addition to project costs.
+				</p><p>
+					To distribute platform costs, cost management uses the following formula:
+				</p><p>
+					<code class="literal">(individual user project effective usage) / (sum of usage for all user project's effective usage) * (platform cost)</code>
+				</p><p>
+					To distribute worker unallocated costs, cost management uses the following formula:
+				</p><p>
+					<code class="literal">(individual user project effective usage) / (sum of usage for all user project's effective usage) * (worker unallocated cost)</code>
+				</p></section><section class="section" id="adding-openshift-projects"><div class="titlepage"><div><div><h3 class="title">1.5.3. Adding OpenShift projects</h3></div></div></div><p>
+					In cost management, the <span class="strong strong"><strong>Group</strong></span> named <span class="strong strong"><strong>Platform</strong></span> has default projects that you cannot remove. These projects start with the prefixes <code class="literal">openshift</code> or <code class="literal">kube</code> and have a <span class="strong strong"><strong>Default</strong></span> label in the <span class="strong strong"><strong>OpenShift details</strong></span> page. You can add your own projects to the <span class="strong strong"><strong>Platform</strong></span> group so that you have control over what is considered a platform cost. Any projects that have the cost of some Platform projects have the <span class="strong strong"><strong>Overhead</strong></span> label.
+				</p><p>
+					For example, you might have a cost that you consider overhead and that you want to show up as a platform cost. You can add the cost to your Platform projects to distribute the costs according to your cost model.
+				</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+							You must have a cluster that has a cost model set to <span class="strong strong"><strong>Distribute</strong></span>.
+						</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+						To add OpenShift projects to the <span class="strong strong"><strong>Platform</strong></span> group, complete the following steps:
+					</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+							In <span class="strong strong"><strong>Settings</strong></span> in cost management, click the <span class="strong strong"><strong>Platform projects</strong></span> tab.
+						</li><li class="listitem">
+							Select a project to add to the <span class="strong strong"><strong>Platform</strong></span> group.
+						</li><li class="listitem">
+							Click <span class="strong strong"><strong>Add projects</strong></span>.
+						</li></ol></div><p>
+					The project now has the label <span class="strong strong"><strong>Platform</strong></span>, but <span class="strong strong"><strong>not</strong></span> the label <span class="strong strong"><strong>Default</strong></span>.
+				</p><div class="formalpara"><p class="title"><strong>Verification</strong></p><p>
+						Complete the following steps to verify that your costs are distributing properly:
+					</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+							In cost management, click <span class="strong strong"><strong>OpenShift</strong></span> to open the <span class="strong strong"><strong>OpenShift Details</strong></span> page.
+						</li><li class="listitem">
+							Select the cluster whose project you edited in the previous steps.
+						</li></ol></div><p>
+					The project should display a cost of <span class="strong strong"><strong>$0</strong></span> because you set the cost to distribute across all other projects. A project with the label <span class="strong strong"><strong>Overhead</strong></span> includes the cost of that project plus the default project costs.
+				</p></section></section></section><section class="chapter" id="assembly-setting-up-cost-models"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Setting up a cost model</h1></div></div></div><p class="_abstract _abstract">
+			Configure cost models in cost management based on your requirements.
+		</p><section class="section" id="creating-an-AWS-Azure-cost-model_setting-up-cost-models"><div class="titlepage"><div><div><h2 class="title">2.1. Applying a markup or discount to cloud integrations</h2></div></div></div><p class="_abstract _abstract">
+				Create a AWS, Azure, or Google Cloud cost model to apply a markup or discount to your cloud infrastructure costs.
+			</p><p>
+				As cloud infrastructure integrations (AWS, Azure, or Google Cloud) collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs.
+			</p><p>
+				Adding a markup to your <span class="emphasis"><em>raw costs</em></span> can allow you to account for your overhead costs, such as the cost of administering your AWS account, Azure subscription, or other support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
+			</p><p>
+				The following example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup or discount to your Azure or Google Cloud costs.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Creating, editing, or deleting a cost model only updates calculations starting from the first day of the current month.
+				</p></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						A user with Cost Administrator or Cost Price List Administrator permissions. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions on configuring user roles.
+					</li><li class="listitem">
+						Your AWS account added to cost management as a data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index/">Integrating Amazon Web Services (AWS) data into cost management</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a>, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">Settings</span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Cost models</strong></span> tab, click <span class="guibutton">Create cost model</span> to open the cost model wizard.
+					</li><li class="listitem">
+						Enter a name and description for the cost model, and select <span class="strong strong"><strong>Amazon Web Services (AWS)</strong></span> as the integration type to apply the cost model to. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem"><p class="simpara">
+						To apply a 10% markup to the base costs of your resources, enter <span class="emphasis"><em>10</em></span> in the as the <span class="strong strong"><strong>Markup rate</strong></span> and click <span class="guibutton">Next</span>.
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									To apply a discount rather than a markup, enter a minus sign with the value (for example, <span class="emphasis"><em>-15</em></span>).
+								</li><li class="listitem">
+									If you do not want to apply a markup or discount, enter <span class="emphasis"><em>0</em></span>.
+								</li></ul></div></div></div></li><li class="listitem">
+						Select one or multiple AWS integrations to assign the cost model to and click <span class="guibutton">Next</span>. Selecting a integration with a cost model already assigned will override its previous cost model. You can also assign integrations to your cost model at a later time.
+					</li><li class="listitem">
+						Review the cost model details, and click <span class="guibutton">Create</span>.
+					</li><li class="listitem">
+						Click <span class="guibutton">Close</span> to exit the cost model wizard.
+					</li></ol></div><p>
+				Your new cost model will appear in the list on the <span class="strong strong"><strong>Cost models</strong></span> page.
+			</p><div class="itemizedlist"><p class="title"><strong>Next steps</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						From the <span class="strong strong"><strong>Cost models</strong></span> summary page, you can review information about your cost models, including:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								The integration type the cost model was created for
+							</li><li class="listitem">
+								The number of integrations assigned to the cost model
+							</li><li class="listitem">
+								The date the cost model was last modified
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						To assign, edit, or see more information about a cost model:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								From the <span class="strong strong"><strong>Cost models</strong></span> summary page, click a cost model name to open the details page where you can edit the cost model, including integration assignments, markup, and other Settings.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						To delete a cost model:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								From the <span class="strong strong"><strong>Cost models</strong></span> summary page, click <span class="strong strong"><strong>More options</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Using_cost_models-en-US/images/b3f9b91399f654c70b36469c5570f4e9/more-options.png" alt="More options icon" /></span>
+								 , then <span class="strong strong"><strong>Delete</strong></span>.
+							</li></ul></div></li><li class="listitem">
+						Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a></em></span> for more information.
+					</li></ul></div></section><section class="section" id="creating-an-ocp-cost-model_setting-up-cost-models"><div class="titlepage"><div><div><h2 class="title">2.2. Creating a cost model for an OpenShift Container Platform cluster</h2></div></div></div><p class="_abstract _abstract">
+				Because metrics and inventory from OpenShift Container Platform integrations do not have costs associated, you must create a cost model to associate a price to resources.
+			</p><p>
+				Creating a cost model for an OpenShift integration includes assigning prices for usage and requests using CPU, memory, node, networking, cluster, storage, or persistent volume claim metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as storage methods. For more information about tagging in cost management, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a>.
+			</p><p>
+				The following example shows how to design and apply a cost model for an OpenShift Container Platform cluster on cloud infrastructure such as AWS or Azure. The cloud infrastructure costs display in cost management as part of the cluster cost. Because of the way it is displayed, you must cretae a cost model to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Creating, editing, or deleting a cost model only updates calculations starting from the first day of the current month.
+				</p></div></div><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						A user with Cost Administrator or Cost Price List Administrator permissions. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions on configuring user roles.
+					</li><li class="listitem">
+						Your OpenShift cluster added as a cost management data integration. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/">Integrating OpenShift Container Platform data into cost management</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span> for instructions.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						From <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management/" title="Mimir does not include content from: console.redhat.com">cost management</a>, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">Settings</span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Cost models</strong></span> tab, click <span class="guibutton">Create cost model</span> to open the cost model wizard.
+					</li><li class="listitem">
+						Enter a name and description for the cost model, and select <span class="strong strong"><strong>OpenShift Container Platform</strong></span> as the integration type to apply the cost model to. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem"><p class="simpara">
+						Create a price list so you can assign rates to usage or requests. The cost management service collects these metrics from OpenShift but there is no cost attached to them in cost management until you apply a cost model. You can also create your price list later.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+								To apply a monthly node cost of $1,000:
+							</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+										Click <span class="guibutton">Create rate</span>.
+									</li><li class="listitem">
+										For <span class="strong strong"><strong>Metric</strong></span>, select <span class="strong strong"><strong>Node</strong></span>.
+									</li><li class="listitem">
+										For <span class="strong strong"><strong>Measurement</strong></span>, select <span class="strong strong"><strong>Count (node-month)</strong></span>.
+									</li><li class="listitem">
+										The cost management service classifies node and cluster costs as <span class="emphasis"><em>infrastructure costs</em></span> by default. To change the cost type you are calculating, select it under <span class="strong strong"><strong>Calculation type</strong></span>. See <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/#key-concepts">Key concepts</a> to learn more.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Rate</strong></span> field, enter <span class="emphasis"><em>1000</em></span> to assign a $1,000 per price to each node in the integrations you select (in a later step).
+									</li><li class="listitem">
+										Click <span class="guibutton">Create rate</span> to save the node rate.
+									</li></ol></div></li><li class="listitem"><p class="simpara">
+								To apply a rate to CPU requests:
+							</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+										Click <span class="guibutton">Create rate</span>.
+									</li><li class="listitem">
+										For <span class="strong strong"><strong>Metric</strong></span>, select <span class="strong strong"><strong>CPU</strong></span>.
+									</li><li class="listitem">
+										For <span class="strong strong"><strong>Measurement</strong></span>, select <span class="strong strong"><strong>Request (core-hours)</strong></span>.
+									</li><li class="listitem">
+										The cost management service classifies metrics-based data such as CPU requests as <span class="emphasis"><em>supplementary costs</em></span> by default. To change the cost type you are calculating, select it under <span class="strong strong"><strong>Calculation type</strong></span>. See <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/#key-concepts">Key concepts</a> to learn more.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Rate</strong></span> field, enter <span class="emphasis"><em>0.09</em></span> to apply a $0.09 cost to each core-hour of CPU requests.
+									</li><li class="listitem">
+										Click <span class="guibutton">Create rate</span> to save the CPU request rate.
+									</li></ol></div></li><li class="listitem"><p class="simpara">
+								To apply tag-based rates to persistent volume claims:
+							</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+										Click <span class="guibutton">Create rate</span>.
+									</li><li class="listitem">
+										For <span class="strong strong"><strong>Metric</strong></span>, select <span class="strong strong"><strong>Persistent volume claims</strong></span>.
+									</li><li class="listitem">
+										For <span class="strong strong"><strong>Measurement</strong></span>, select <span class="strong strong"><strong>Count (pvc-month)</strong></span>.
+									</li><li class="listitem">
+										The cost management service classifies persistent volume claim rates as <span class="emphasis"><em>infrastructure costs</em></span> by default. To change the cost type you are calculating, select it under <span class="strong strong"><strong>Calculation type</strong></span>. See <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/getting_started_with_cost_management/index/#key-concepts">Key concepts</a> to learn more.
+									</li><li class="listitem">
+										Select <span class="strong strong"><strong>Enter rate by tag</strong></span>.
+									</li><li class="listitem">
+										Enter a tag key in the <span class="strong strong"><strong>Filter by tag key</strong></span> field.
+									</li><li class="listitem"><p class="simpara">
+										Enter a <span class="strong strong"><strong>Tag value</strong></span> and <span class="strong strong"><strong>Rate</strong></span>. You can select <span class="strong strong"><strong>Default</strong></span> to specify a rate as default for that tag key.
+									</p><div class="admonition note"><div class="admonition_header">Note</div><div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+													Specifying a default rate will apply that rate to all tag values for the corresponding tag key that are not defined. You can enter a rate of <span class="emphasis"><em>0</em></span> for any tag value that you do not want the default rate applied to.
+												</li></ul></div></div></div></li><li class="listitem">
+										Click <span class="guibutton">Add more tag values</span> to add as many tag values as you require.
+									</li><li class="listitem">
+										Click <span class="guibutton">Create rate</span> to save the persistent volume claim rates.
+									</li></ol></div></li><li class="listitem">
+								Add additional rates by repeating the previous steps, or click <span class="guibutton">Next</span> to finish configuring your price list.
+							</li></ol></div></li><li class="listitem"><p class="simpara">
+						If desired, set a markup or discount. To apply a 10% markup to the base costs of your resources, enter <span class="emphasis"><em>10</em></span> in the as the <span class="strong strong"><strong>Markup rate</strong></span> and click <span class="guibutton">Next</span>.
+					</p><div class="admonition note"><div class="admonition_header">Note</div><div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									To apply a discount rather than a markup, enter a minus sign with the value (for example, <span class="emphasis"><em>-15</em></span>).
+								</li><li class="listitem">
+									If you do not want to apply a markup or discount, enter <span class="emphasis"><em>0</em></span>.
+								</li></ul></div></div></div></li><li class="listitem">
+						On the <span class="strong strong"><strong>Cost distribution</strong></span> page, select the <span class="strong strong"><strong>CPU</strong></span> or <span class="strong strong"><strong>Memory</strong></span> distribution type. The distribution type distributes costs based on CPU or memory metrics in project cost breakdowns. If your cluster has high memory usage, select <span class="strong strong"><strong>Memory</strong></span>. If your cluster has high CPU usage, select <span class="strong strong"><strong>CPU</strong></span>.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Cost distribution</strong></span> page, select whether or not to distribute your <span class="strong strong"><strong>Platform</strong></span> or <span class="strong strong"><strong>Worker unallocated</strong></span> costs into your projects and click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Select one or multiple OpenShift integrations to assign the cost model to and click <span class="guibutton">Next</span>. Selecting a integration with a cost model already assigned will override its previous cost model. You can also assign integrations to your cost model later.
+					</li><li class="listitem">
+						Review the cost model details, and click <span class="guibutton">Create</span>.
+					</li><li class="listitem">
+						Click <span class="guibutton">Close</span> to exit the cost model wizard.
+					</li></ol></div><p>
+				Your new cost model will appear in the list on the <span class="strong strong"><strong>Cost models</strong></span> page.
+			</p><div class="itemizedlist"><p class="title"><strong>Next steps</strong></p><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						From the <span class="strong strong"><strong>Cost models</strong></span> summary page, you can review information about your cost models, including:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								The integration type the cost model was created for
+							</li><li class="listitem">
+								The number of integrations assigned to the cost model
+							</li><li class="listitem">
+								The date the cost model was last modified
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						To assign, edit, or see more information about a cost model:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								From the <span class="strong strong"><strong>Cost models</strong></span> summary page, click a cost model name to open the details page where you can edit the cost model, including integration assignments, price list, markup, and other Settings.
+							</li></ul></div></li><li class="listitem"><p class="simpara">
+						To delete a cost model:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								From the <span class="strong strong"><strong>Cost models</strong></span> summary page, click <span class="strong strong"><strong>More options</strong></span> <span class="inlinemediaobject"><img src="/webassets/avalon/d/Cost_Management_Service-1-latest-Using_cost_models-en-US/images/b3f9b91399f654c70b36469c5570f4e9/more-options.png" alt="More options icon" /></span>
+								 , then <span class="strong strong"><strong>Delete</strong></span>. .
+							</li></ul></div></li><li class="listitem">
+						Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a></em></span> for more information.
+					</li></ul></div></section><section class="section" id="calculating-effective-cost-max"><div class="titlepage"><div><div><h2 class="title">2.3. Calculating effective usage with cost models</h2></div></div></div><p>
+				Cloud providers charge for the infrastructure costs of running a cluster, regardless of your overall usage. By calculating the effective usage in cost management, you can more accurately correlate cloud costs with a pod or namespace by considering their direct utilization.
+			</p><p>
+				A pod typically requests resources, such as CPU or memory, from a cluster. The cluster then reserves these requested resources as a minimum, but the pod might use more or less than it initially requested. The effective usage metric in cost management uses whichever kind of usage, CPU or memory, is greater per hour.
+			</p><p>
+				You can create a cost model in cost management to estimate your effective usage. Ultimately, you can use this data to understand how infrastructure cost is distributed to your OpenShift project.
+			</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+						You must be a user with Cost Administrator or Cost Price List Administrator permissions. To learn how to configure user roles, see <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span>
+					</li><li class="listitem">
+						You must add your OpenShift cluster as a cost management data integration. For more details, see <span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/">Integrating OpenShift Container Platform data into cost management</a></em></span> in <span class="emphasis"><em>Getting started with cost management</em></span>.
+					</li></ul></div><div class="orderedlist"><p class="title"><strong>Procedure</strong></p><ol class="orderedlist" type="1"><li class="listitem">
+						Log in to <a class="link mimir-link-warn" href="https://console.redhat.com" title="Mimir does not include content from: console.redhat.com">Red Hat Hybrid Cloud Console</a>.
+					</li><li class="listitem">
+						From the <span class="strong strong"><strong>Services</strong></span> menu, click <span class="guimenu">Spend Management</span> → <span class="guimenuitem">Cost Management</span>.
+					</li><li class="listitem">
+						In the Global Navigation, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">Settings</span>.
+					</li><li class="listitem">
+						In the <span class="strong strong"><strong>Cost Models</strong></span> tab, click <span class="guibutton">Create cost model</span> to open the cost model wizard.
+					</li><li class="listitem">
+						Enter a name and description for the cost model and select <span class="strong strong"><strong>OpenShift Container Platform</strong></span> as the integration type. Click <span class="guibutton">Next</span>.
+					</li><li class="listitem"><p class="simpara">
+						Create a price list so that you can assign rates to usage or requests. The cost management service collects these metrics from OpenShift but there is no cost attached to them in cost management until you apply a cost model.
+					</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p class="simpara">
+								To create a price list to calculate effective CPU usage, click <span class="strong strong"><strong>Create rate</strong></span>.
+							</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+										Add a description. In this example, enter <code class="literal">effective cpu usage</code>.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Metric</strong></span> field, select <span class="strong strong"><strong>CPU</strong></span>.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Measurement</strong></span> field, select <span class="strong strong"><strong>Effective-usage (core-hours)</strong></span>.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Rate</strong></span> field, enter the rate you pay for CPU usage. In this example, enter <code class="literal">2</code>. Click <span class="strong strong"><strong>Create rate</strong></span>.
+									</li></ol></div></li><li class="listitem"><p class="simpara">
+								To create a price list to calculate effective memory usage, click <span class="strong strong"><strong>Create rate</strong></span>.
+							</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+										Add a description. In this example, enter <code class="literal">effective memory usage</code>.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Metric</strong></span> field, select <span class="strong strong"><strong>Memory</strong></span>.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Measurement</strong></span> field, select <span class="strong strong"><strong>Effective-usage (GiB-hours)</strong></span>.
+									</li><li class="listitem">
+										In the <span class="strong strong"><strong>Rate</strong></span> field, enter the rate you pay for memory usage. In this example, enter <code class="literal">1</code>. Click <span class="strong strong"><strong>Create rate</strong></span>.
+									</li></ol></div></li></ol></div></li><li class="listitem">
+						Click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						(Optional) On the <span class="strong strong"><strong>Cost calculations</strong></span> page, apply a markup or discount to change how raw costs are calculated for your integrations. Adding a markup to your <span class="emphasis"><em>raw costs</em></span> can allow you to account for your overhead costs, such as the cost of administering your AWS account, Azure subscription, or other support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
+					</li><li class="listitem">
+						On the <span class="strong strong"><strong>Cost distribution</strong></span> page, select the <span class="strong strong"><strong>CPU</strong></span> or <span class="strong strong"><strong>Memory</strong></span> distribution type. The distribution type distributes costs based on CPU or memory metrics in project cost breakdowns. If your cluster has high memory usage, select <span class="strong strong"><strong>Memory</strong></span>. If your cluster has high CPU usage, select <span class="strong strong"><strong>CPU</strong></span>. Click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Assign an integration to your cost model and then click <span class="strong strong"><strong>Next</strong></span>.
+					</li><li class="listitem">
+						Review the details and then click <span class="strong strong"><strong>Create</strong></span>.
+					</li><li class="listitem">
+						To review the results of your cost model on a integration, in the Global Navigation, click <span class="guimenu">Cost Management</span> → <span class="guimenuitem">OpenShift</span>.
+					</li><li class="listitem">
+						Select a project and view the results.
+					</li></ol></div></section></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12368954" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm140716705024176"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

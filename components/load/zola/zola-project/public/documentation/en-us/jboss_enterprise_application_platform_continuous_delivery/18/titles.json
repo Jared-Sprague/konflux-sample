@@ -1,0 +1,279 @@
+{
+  "version": {
+    "name": "18",
+    "slug": "18",
+    "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18"
+  },
+  "titles": [
+    {
+      "titleId": "d1f6960d-db34-4caa-8e9a-0c7512e7158b",
+      "modified": 1575671629,
+      "name": "JBoss EAP Continuous Delivery 18 Release Notes",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/jboss_eap_continuous_delivery_18_release_notes/index",
+      "category": {
+        "weight": 51,
+        "name": "Release Notes"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/jboss_eap_continuous_delivery_18_release_notes/index",
+        "slug": "jboss_eap_continuous_delivery_18_release_notes",
+        "id": "f38862463f27437f201bddba575d6948.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/jboss_eap_continuous_delivery_18_release_notes/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-JBoss_EAP_Continuous_Delivery_18_Release_Notes-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/jboss_eap_continuous_delivery_18_release_notes/jboss_enterprise_application_platform_continuous_delivery-18-jboss_eap_continuous_delivery_18_release_notes-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/jboss_eap_continuous_delivery_18_release_notes/jboss_enterprise_application_platform_continuous_delivery-18-jboss_eap_continuous_delivery_18_release_notes-en-us.pdf"
+      },
+      "toc": {
+        "id": "a4dcb290e9c18a8df45b71996c0e6164.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "699e4256-a46c-4bba-aeb1-b4a93b9ac774",
+      "modified": 1575671612,
+      "name": "Introduction to JBoss EAP",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/introduction_to_jboss_eap/index",
+      "category": {
+        "weight": 52,
+        "name": "Deployment"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/introduction_to_jboss_eap/index",
+        "slug": "introduction_to_jboss_eap",
+        "id": "137c2362ed39971253f008aadf724585.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/introduction_to_jboss_eap/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Introduction_to_JBoss_EAP-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/introduction_to_jboss_eap/jboss_enterprise_application_platform_continuous_delivery-18-introduction_to_jboss_eap-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/introduction_to_jboss_eap/jboss_enterprise_application_platform_continuous_delivery-18-introduction_to_jboss_eap-en-us.pdf"
+      },
+      "toc": {
+        "id": "913cbbcb169b8aa632baa507d87c7265.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "0dea4438-15bd-47bb-808d-2687bf02dacc",
+      "modified": 1575671609,
+      "name": "Getting Started with JBoss EAP for OpenShift Online",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/getting_started_with_jboss_eap_for_openshift_online/index",
+      "category": {
+        "weight": 52,
+        "name": "Deployment"
+      },
+      "description": "Guide to developing with Red Hat JBoss Enterprise Application Platform for OpenShift Online",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/getting_started_with_jboss_eap_for_openshift_online/index",
+        "slug": "getting_started_with_jboss_eap_for_openshift_online",
+        "id": "5193675778be8249452e3d22626e2c43.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/getting_started_with_jboss_eap_for_openshift_online/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Getting_Started_with_JBoss_EAP_for_OpenShift_Online-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/getting_started_with_jboss_eap_for_openshift_online/jboss_enterprise_application_platform_continuous_delivery-18-getting_started_with_jboss_eap_for_openshift_online-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/getting_started_with_jboss_eap_for_openshift_online/jboss_enterprise_application_platform_continuous_delivery-18-getting_started_with_jboss_eap_for_openshift_online-en-us.pdf"
+      },
+      "toc": {
+        "id": "d59ce3b1d903c13f042dbd6b7c8dbbc3.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "caba4a3e-aa61-4a0c-bf65-14dc8c9b2304",
+      "modified": 1575671604,
+      "name": "Getting Started with JBoss EAP for OpenShift Container Platform",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/getting_started_with_jboss_eap_for_openshift_container_platform/index",
+      "category": {
+        "weight": 52,
+        "name": "Deployment"
+      },
+      "description": "Guide to developing with Red Hat JBoss Enterprise Application Platform for OpenShift",
+      "weight": 52,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/getting_started_with_jboss_eap_for_openshift_container_platform/index",
+        "slug": "getting_started_with_jboss_eap_for_openshift_container_platform",
+        "id": "54618a187085946700479e9ab82d60b4.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/getting_started_with_jboss_eap_for_openshift_container_platform/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Getting_Started_with_JBoss_EAP_for_OpenShift_Container_Platform-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/getting_started_with_jboss_eap_for_openshift_container_platform/jboss_enterprise_application_platform_continuous_delivery-18-getting_started_with_jboss_eap_for_openshift_container_platform-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/getting_started_with_jboss_eap_for_openshift_container_platform/jboss_enterprise_application_platform_continuous_delivery-18-getting_started_with_jboss_eap_for_openshift_container_platform-en-us.pdf"
+      },
+      "toc": {
+        "id": "babca81133caa62e5a8af2ed450fb5b7.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "74a26168-c11d-47e5-8dd8-47a3eb6e6357",
+      "modified": 1575671598,
+      "name": "Development Guide",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/development_guide/index",
+      "category": {
+        "weight": 53,
+        "name": "Development"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/development_guide/index",
+        "slug": "development_guide",
+        "id": "fd98c5269cd5872473793b8c8e28b923.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/development_guide/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Development_Guide-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/development_guide/jboss_enterprise_application_platform_continuous_delivery-18-development_guide-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/development_guide/jboss_enterprise_application_platform_continuous_delivery-18-development_guide-en-us.pdf"
+      },
+      "toc": {
+        "id": "6428a0e33eefdc60e84f3fcd4e3cb084.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "3d609d08-11f5-43f5-abcd-7cddaf29248a",
+      "modified": 1575671586,
+      "name": "Developing Hibernate Applications",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_hibernate_applications/index",
+      "category": {
+        "weight": 53,
+        "name": "Development"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 51,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_hibernate_applications/index",
+        "slug": "developing_hibernate_applications",
+        "id": "7b2261e9c81759638fcc0b3f16b4332d.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_hibernate_applications/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Developing_Hibernate_Applications-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_hibernate_applications/jboss_enterprise_application_platform_continuous_delivery-18-developing_hibernate_applications-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_hibernate_applications/jboss_enterprise_application_platform_continuous_delivery-18-developing_hibernate_applications-en-us.pdf"
+      },
+      "toc": {
+        "id": "ef72bd6b88ce7594a60d9db7705d3046.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "7468ae67-670e-49c9-9c97-05e794f316ac",
+      "modified": 1575671585,
+      "name": "Developing EJB Applications",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_ejb_applications/index",
+      "category": {
+        "weight": 53,
+        "name": "Development"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 52,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_ejb_applications/index",
+        "slug": "developing_ejb_applications",
+        "id": "862b8ed861434834b0e510bae3cdfd5b.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_ejb_applications/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Developing_EJB_Applications-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_ejb_applications/jboss_enterprise_application_platform_continuous_delivery-18-developing_ejb_applications-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_ejb_applications/jboss_enterprise_application_platform_continuous_delivery-18-developing_ejb_applications-en-us.pdf"
+      },
+      "toc": {
+        "id": "276f06e8b27b38cef7ae68078ed611d9.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "1b6f77da-4296-4982-912f-6a03482b0be4",
+      "modified": 1575671593,
+      "name": "Developing Web Services Applications",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_web_services_applications/index",
+      "category": {
+        "weight": 53,
+        "name": "Development"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 53,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/developing_web_services_applications/index",
+        "slug": "developing_web_services_applications",
+        "id": "d26b0e5c4815fbf5047367eeaaa93b97.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_web_services_applications/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Developing_Web_Services_Applications-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_web_services_applications/jboss_enterprise_application_platform_continuous_delivery-18-developing_web_services_applications-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/developing_web_services_applications/jboss_enterprise_application_platform_continuous_delivery-18-developing_web_services_applications-en-us.pdf"
+      },
+      "toc": {
+        "id": "cd07f6abc837788967117fc6083de2c1.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "12f46a57-4e19-48a2-a095-fa47f97e93fa",
+      "modified": 1575671624,
+      "name": "Managing Transactions on JBoss EAP",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/managing_transactions_on_jboss_eap/index",
+      "category": {
+        "weight": 53,
+        "name": "Development"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 54,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/managing_transactions_on_jboss_eap/index",
+        "slug": "managing_transactions_on_jboss_eap",
+        "id": "ff766490ecccb6827887e5e8b4fbae77.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/managing_transactions_on_jboss_eap/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Managing_Transactions_on_JBoss_EAP-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/managing_transactions_on_jboss_eap/jboss_enterprise_application_platform_continuous_delivery-18-managing_transactions_on_jboss_eap-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/managing_transactions_on_jboss_eap/jboss_enterprise_application_platform_continuous_delivery-18-managing_transactions_on_jboss_eap-en-us.pdf"
+      },
+      "toc": {
+        "id": "6991aad45f8b621a3bc7b1c2316572d1.json"
+      },
+      "custom_link": false
+    },
+    {
+      "titleId": "c3ccf2db-6c36-48e5-b7b5-966dd3d1320f",
+      "modified": 1575671592,
+      "name": "Configuration Guide",
+      "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/configuration_guide/index",
+      "category": {
+        "weight": 54,
+        "name": "Configuring and maintaining"
+      },
+      "description": "For Use with JBoss Enterprise Application Platform Continuous Delivery 18",
+      "weight": 50,
+      "singlePage": {
+        "url": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/html-single/configuration_guide/index",
+        "slug": "configuration_guide",
+        "id": "d5d7b6870e7df32ab797cbd9f945f8ef.html"
+      },
+      "pdf": {
+        "type": "pdf",
+        "src": "https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/configuration_guide/JBoss_Enterprise_Application_Platform_Continuous_Delivery-18-Configuration_Guide-en-US.pdf",
+        "absolute_dest": "/home/jsprague/projects/mimir-cli/components/load/zola/zola-project/static/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/configuration_guide/jboss_enterprise_application_platform_continuous_delivery-18-configuration_guide-en-us.pdf",
+        "relative_path": "/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/18/pdf/configuration_guide/jboss_enterprise_application_platform_continuous_delivery-18-configuration_guide-en-us.pdf"
+      },
+      "toc": {
+        "id": "37d42178f53298231c20f5a34ca7e362.json"
+      },
+      "custom_link": false
+    }
+  ]
+}

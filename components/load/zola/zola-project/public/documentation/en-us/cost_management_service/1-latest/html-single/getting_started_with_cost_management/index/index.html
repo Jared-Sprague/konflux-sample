@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_87GMcmxT1ib8ziQiU2KUAnTDFtZQV6iP-KGslA9LigM.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sites/dxp-docs/files/css/css_Bwzy34i9pSdDlzGALvqVwG4fpgGp08KLMAkClGNY9M4.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir-doc-toc.min.css" />
+
+
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+Getting started with cost management - Red Hat Insights cost management 1-latest
+</title>
+        
+<meta name="product" content="Red Hat Insights cost management" />
+<meta name="documentation_version" content="1-latest" />
+<meta name="documentKind" content="documentation" />
+<meta name="portal_content_subtype" content="title" />
+<meta name="lastModifiedDate" content="2024-07-29T14:59:18.000Z" />
+
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/products/">Product Documentation</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">Red Hat Insights cost management</a>
+                                
+                                <a href="/documentation/en-us/cost_management_service/1-latest/">1-latest</a>
+                                
+                                
+                                Getting started with cost management
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container mimir-docs">
+                            
+                            <bdo>
+                                
+
+<script type="module" src="/mimir/scripts/mimir-doc-toc.min.js"></script>
+
+
+
+
+
+
+<div class="docs-grid">
+
+    <nav id="mimir-doc-toc" class="mimir-doc-toc">
+      <div class="mimir-doc-toc-inner">
+          <!-- single-page -->
+        
+            
+              <ol>
+                <li>
+                        
+                        <a href="#">Getting started with cost management</a>
+                    </li><li>
+                        <a href="#idm140093099082256">
+                            Preface
+                        </a>
+                    </li><li>
+                        <a href="#about-cost-management">
+                            1. Why use cost management
+                        </a><ol>
+                <li>
+                        <a href="#what_can_you_accomplish_with_cost_management">
+                            1.1. What can you accomplish with cost management?
+                        </a>
+                    </li><li>
+                        <a href="#how_does_cost_management_work">
+                            1.2. How does cost management work?
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#steps-to-cost-management">
+                            2. How to set up cost management
+                        </a><ol>
+                <li>
+                        <a href="#sign_up">
+                            2.1. Sign up
+                        </a>
+                    </li><li>
+                        <a href="#connect_and_view">
+                            2.2. Connect and view your cost data
+                        </a><ol>
+                <li>
+                        <a href="#option_1_on_premise">
+                            2.2.1. Option 1: On-premise
+                        </a><ol>
+                <li>
+                        <a href="#install_metrics_operator_1">
+                            2.2.1.1. Install the Metrics Operator
+                        </a>
+                    </li><li>
+                        <a href="#openshift_tags_1">
+                            2.2.1.2. Setting up OpenShift tags
+                        </a>
+                    </li><li>
+                        <a href="#cost_model_1">
+                            2.2.1.3. Create a Red Hat OpenShift cost model
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#option_2_cloud">
+                            2.2.2. Option 2: Cloud
+                        </a><ol>
+                <li>
+                        <a href="#install_metrics_operator_2">
+                            2.2.2.1. Install the Metrics Operator
+                        </a>
+                    </li><li>
+                        <a href="#integration">
+                            2.2.2.2. Add an integration for your cloud provider
+                        </a>
+                    </li><li>
+                        <a href="#openshift_tags_2">
+                            2.2.2.3. Setting up OpenShift tags
+                        </a>
+                    </li><li>
+                        <a href="#cost_model_2">
+                            2.2.2.4. Create a cloud cost model
+                        </a>
+                    </li>
+            </ol>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#control_permissions">
+                            2.3. Control your permissions
+                        </a>
+                    </li><li>
+                        <a href="#analyze_results">
+                            2.4. Analyze your results
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#key-concepts">
+                            3. Key concepts in cost management
+                        </a><ol>
+                <li>
+                        <a href="#cost-layers">
+                            3.1. Cost layers
+                        </a>
+                    </li><li>
+                        <a href="#additional_resources">
+                            3.2. Additional resources
+                        </a>
+                    </li>
+            </ol>
+                    </li><li>
+                        <a href="#privacy-and-data-cost-management">
+                            4. Your privacy and data in cost management
+                        </a>
+                    </li><li>
+                        <a href="#proc-providing-feedback-on-redhat-documentation">
+                            Providing feedback on Red Hat documentation
+                        </a>
+                    </li><li>
+                        <a href="#idm140093105085616">
+                            Legal Notice
+                        </a>
+                    </li>
+            </ol>
+            
+        
+      </div>
+    </nav>
+
+    
+    <div class="pvof-doc__wrapper" id="doc-wrapper">
+        <section class="mimir-doc-title" id="mimir-doc--getting_started_with_cost_management">
+            <h1 class="title">Getting started with cost management</h1>
+        </section>
+        <body><div xml:lang="en-US" class="book" id="idm140093105468304"><div class="titlepage"><div><div class="producttitle"><span class="productname">Cost Management Service</span> <span class="productnumber">1-latest</span></div><div><h2 class="subtitle">Learn how you can track your OpenShift costs</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm140093105085616">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Use cost management to track the cost of your clouds and containers. Start by setting up an integration, configuring cost management to process your data, and then learn how to use cost management to analyze your data.
+			</div><div class="para">
+				Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business. This getting started guide will teach you everything you need to know to begin using cost management.
+			</div></div></div></div><hr/></div><section class="preface" id="idm140093099082256"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p>
+			Cost management helps you monitor and analyze your OpenShift Container Platform and Public cloud costs to improve the management of your business. It is based on the upstream project Koku.
+		</p><p>
+			To get started, learn about the following topics:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					What you can do with cost management and why your organization might want to use it
+				</li><li class="listitem">
+					How to set up and configure cost management
+				</li><li class="listitem">
+					How to adjust your settings after setup
+				</li><li class="listitem">
+					How to use cost management
+				</li></ul></div><p>
+			You can use cost management to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Oracle Cloud, and OpenShift Container Platform environments.
+		</p></section><section class="chapter" id="about-cost-management"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Why use cost management</h1></div></div></div><p>
+			<a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management" title="Mimir does not include content from: console.redhat.com">Cost management</a> is a free offering as part of your subscription to the Red Hat Insights portfolio of services. With cost management, you can monitor and analyze your costs to improve the management of your business.
+		</p><p>
+			Cost management helps you simplify the management of your resources and costs across container platforms like OpenShift Container Platform, as well as public clouds like Amazon Web Services (AWS), Google Cloud, Oracle Cloud, and Microsoft Azure.
+		</p><section class="section" id="what_can_you_accomplish_with_cost_management"><div class="titlepage"><div><div><h2 class="title">1.1. What can you accomplish with cost management?</h2></div></div></div><p>
+				With the expanding scale and performance of containerized business applications, you need aggregated and meaningful data so that you can quickly analyze your cluster spending and align with business priorities.
+			</p><p>
+				To overcome business challenges, cost management gives your organization visibility into your costs down to the project level for on-premise and public cloud environments. This visibility gives IT and financial stakeholders a unique snapshot into the costs associated with applications.
+			</p><p>
+				With cost management, you can achieve some of the following goals:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						Visualize, understand, and analyze how you use your resources and costs across hybrid cloud infrastructure
+					</li><li class="listitem">
+						Track cost trends
+					</li><li class="listitem">
+						Map charges to projects and organizations
+					</li><li class="listitem">
+						Use cost models to normalize data and add markups
+					</li><li class="listitem">
+						Forecast your future consumption and compare it with your budgets
+					</li><li class="listitem">
+						Optimize your resources and usage
+					</li><li class="listitem">
+						Identify patterns of usage that you might want to investigate
+					</li><li class="listitem">
+						Integrate with third party tools that can use your cost and resourcing data
+					</li></ul></div><p>
+				These preceding goals can ultimately help your organization optimize costs, increase efficiency, and save money.
+			</p></section><section class="section" id="how_does_cost_management_work"><div class="titlepage"><div><div><h2 class="title">1.2. How does cost management work?</h2></div></div></div><p>
+				It’s important to understand some key OpenShift concepts:
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Cluster</span></dt><dd>
+							a group of servers that are managed together and participate in workload management.
+						</dd><dt><span class="term">Node</span></dt><dd><p class="simpara">
+							a worker machine that is either virtual or physical, depending on the cluster.
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									<span class="strong strong"><strong>Master node</strong></span>: The master node hosts the control plane and manages the cluster, including scheduling and scaling applications and maintaining the state of the cluster.
+								</li><li class="listitem">
+									<span class="strong strong"><strong>Worker node</strong></span>: Worker nodes are responsible for running the containers and executing the workloads.
+								</li></ul></div></dd><dt><span class="term">Pod</span></dt><dd>
+							a collection of one or more containers. It is the smallest unit possible.
+						</dd><dt><span class="term">Persistent volume claim (PVC)</span></dt><dd>
+							Persistent volume (PV) framework enables cluster administrators to provision persistent storage for a cluster. Developers can use persistent volume claims (PVCs) to request PV resources.
+						</dd></dl></div><p>
+				At a high level, cost management calculates your costs by processing data from your integrations in the following ways:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						From your cloud bill, cost management takes the cost of all of your nodes and determines what nodes belong to what cluster and which nodes are worker or master nodes.
+					</li><li class="listitem">
+						Cost management then determines what pods are running on what cluster and namespace and calculates how much central processing units (CPU), memory, disk space, and PVCs each one uses.
+					</li><li class="listitem">
+						Cost management multiplies the cost from the cloud bill by the established usage metrics to calculate the amount of money that each pod is costing you.
+					</li><li class="listitem"><p class="simpara">
+						If you have a cost model, it distributes the cost of the platform or the cost of unallocated capacity.
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								If you do not create a Red Hat OpenShift Container Platform cost model, we use the implicit cost model. This method distributes the cost from the cloud bill based on CPU effective use.
+							</li></ul></div></li></ul></div><p>
+				Cost management does not use public prices. Rather, it reads your cloud bill to process the savings plans, reserved instances, discounts, or other costs that you have. Cost management also tracks which nodes run on which pods. If you have different instance types, or same instance types but with different prices, cost management can still attribute the correct cost to each pod.
+			</p></section></section><section class="chapter" id="steps-to-cost-management"><div class="titlepage"><div><div><h1 class="title">Chapter 2. How to set up cost management</h1></div></div></div><p class="_abstract _abstract">
+			To get started with cost management, complete the following four steps, plus any applicable substeps:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					<a class="link" href="#sign_up" title="2.1. Sign up">Access and log in to cost management.</a>
+				</li><li class="listitem">
+					<a class="link" href="#connect_and_view" title="2.2. Connect and view your cost data">Connect and view your cost data:</a>
+				</li></ol></div><p>
+			Cost management can analyze cost data from on-premise instances of OpenShift or cloud-based instances of OpenShift. If your organization has an on-premise instance of OpenShift, complete the following additional steps:
+		</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+					<a class="link" href="#install_metrics_operator_1" title="2.2.1.1. Install the Metrics Operator">Install the Metrics Operator.</a>
+				</li><li class="listitem">
+					<a class="link" href="#openshift_tags_1" title="2.2.1.2. Setting up OpenShift tags">Set up OpenShift tags.</a>
+				</li><li class="listitem">
+					<a class="link" href="#cost_model_1" title="2.2.1.3. Create a Red Hat OpenShift cost model">Create a Red Hat OpenShift cost model.</a>
+				</li></ol></div><p>
+			Cost management also supports AWS, Google Cloud, Oracle Cloud, and Microsoft Azure. To set up cost management for OpenShift that is running on a cloud provider, complete the following additional steps:
+		</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+					<a class="link" href="#install_metrics_operator_2" title="2.2.2.1. Install the Metrics Operator">Install the Metrics Operator.</a>
+				</li><li class="listitem">
+					<a class="link" href="#integration" title="2.2.2.2. Add an integration for your cloud provider">Add an integration for your cloud provider.</a>
+				</li><li class="listitem">
+					<a class="link" href="#openshift_tags_2" title="2.2.2.3. Setting up OpenShift tags">Set up tags.</a>
+				</li><li class="listitem">
+					<a class="link" href="#cost_model_2" title="2.2.2.4. Create a cloud cost model">Create a cloud cost model.</a>
+				</li></ol></div><p>
+			Finally, finish getting set up for both on-premise and cloud with the following steps:
+		</p><div class="orderedlist"><ol class="orderedlist" start="3" type="1"><li class="listitem">
+					<a class="link" href="#control_permissions" title="2.3. Control your permissions">Control your permissions</a>
+				</li><li class="listitem">
+					<a class="link" href="#analyze_results" title="2.4. Analyze your results">Analyze your results</a>
+				</li></ol></div><section class="section" id="sign_up"><div class="titlepage"><div><div><h2 class="title">2.1. Sign up</h2></div></div></div><p>
+				Cost management is part of the <a class="link mimir-link-warn" href="https://redhat.com/insights" title="Mimir does not include content from: redhat.com">Red Hat Insights</a> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.
+			</p><p>
+				You can access cost management in the <a class="link mimir-link-warn" href="https://console.redhat.com/" title="Mimir does not include content from: console.redhat.com">Hybrid Cloud Console</a>. To get started, click <a class="link mimir-link-warn" href="https://console.redhat.com/openshift/cost-management" title="Mimir does not include content from: console.redhat.com"><span class="strong strong"><strong>OpenShift &gt; Cost Management</strong></span></a>.
+			</p><p>
+				After you sign up, configure a user with Cloud Administrator access that can add cloud or OpenShift integrations to your cost management. For more information, see <a class="link mimir-link-warn" href="https://docs.redhat.com/en/documentation/red_hat_hybrid_cloud_console/1-latest/html/configuring_cloud_integrations_for_red_hat_services/index" title="This content is not included in Mimir.">Configuring cloud integrations for Red Hat services</a>.
+			</p></section><section class="section" id="connect_and_view"><div class="titlepage"><div><div><h2 class="title">2.2. Connect and view your cost data</h2></div></div></div><p>
+				To begin analyzing your cost data, you need to enter information about your costs.
+			</p><p>
+				The steps you will take depend on if your organization set up an on-premise cluster with OpenShift, or integrated with a cloud provider.
+			</p><section class="section" id="option_1_on_premise"><div class="titlepage"><div><div><h3 class="title">2.2.1. Option 1: On-premise</h3></div></div></div><p>
+					To get started with an on-premise cluster, complete the following steps:
+				</p><section class="section" id="install_metrics_operator_1"><div class="titlepage"><div><div><h4 class="title">2.2.1.1. Install the Metrics Operator</h4></div></div></div><p>
+						Red Hat® OpenShift® Operators automate the creation, configuration, and management of instances of Kubernetes-native applications. Your OpenShift cluster should already be set up, but you additionally need to set up the Metrics Operator.
+					</p><p>
+						To install the Metrics Operator, follow the instructions in <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/#installing-cost-operator_adding-an-ocp-int">Installing a cost operator</a>.
+					</p></section><section class="section" id="openshift_tags_1"><div class="titlepage"><div><div><h4 class="title">2.2.1.2. Setting up OpenShift tags</h4></div></div></div><p>
+						Tags, also called labels, are strings of custom metadata that you assign to resources. You can use tags to differentiate and allocate costs between various parts of your environment.
+					</p><p>
+						To learn about the different use cases for tags and how to set them up, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a>.
+					</p></section><section class="section" id="cost_model_1"><div class="titlepage"><div><div><h4 class="title">2.2.1.3. Create a Red Hat OpenShift cost model</h4></div></div></div><p>
+						Finally, you must add a cost model to accurately analyze your costs.
+					</p><p>
+						A cost model is a framework that uses raw costs and metrics to define calculations for your costs. You can record, categorize, and distribute the costs that the cost model generates to specific customers, business units, or projects.
+					</p><p>
+						To learn how to set up a cost model, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index/">Using cost models</a>.
+					</p></section></section><section class="section" id="option_2_cloud"><div class="titlepage"><div><div><h3 class="title">2.2.2. Option 2: Cloud</h3></div></div></div><p>
+					Cost management supports AWS, Google Cloud, Oracle Cloud, and Microsoft Azure. Unlike an on-premise cluster, you need to set up an integration to connect to your cloud provider.
+				</p><p>
+					To integrate cost management with your cloud provider, complete the following steps:
+				</p><section class="section" id="install_metrics_operator_2"><div class="titlepage"><div><div><h4 class="title">2.2.2.1. Install the Metrics Operator</h4></div></div></div><p>
+						Red Hat® OpenShift® Operators automate the creation, configuration, and management of instances of Kubernetes-native applications. Your OpenShift cluster should already be set up, but you additionally need to set up the Metrics Operator.
+					</p><p>
+						To install the Metrics Operator, follow the instructions in <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/#installing-cost-operator_adding-an-ocp-int">Installing a cost operator</a>.
+					</p></section><section class="section" id="integration"><div class="titlepage"><div><div><h4 class="title">2.2.2.2. Add an integration for your cloud provider</h4></div></div></div><p>
+						To enable cost management to monitor your costs with a cloud provider such as AWS, Google, Oracle, or Azure, you need to set up an integration. An integration is a provider account that cost management connects to and monitors.
+					</p><p>
+						The process to set up an integration for each provider varies. To learn how to add your specific integration to cost management, see the following guides:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+								<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_openshift_container_platform_data_into_cost_management/index/">Integrating OpenShift Container Platform data into cost management</a></em></span>
+							</li><li class="listitem">
+								<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_amazon_web_services_aws_data_into_cost_management/index/">Integrating Amazon Web Services (AWS) data into cost management</a></em></span>
+							</li><li class="listitem">
+								<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_google_cloud_data_into_cost_management/index/">Integrating Google Cloud data into cost management</a></em></span>
+							</li><li class="listitem">
+								<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_microsoft_azure_data_into_cost_management/index/">Integrating Microsoft Azure data into cost management</a></em></span>
+							</li><li class="listitem">
+								<span class="emphasis"><em><a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/integrating_oracle_cloud_data_into_cost_management/index/#index">Integrating Oracle Cloud data into cost management</a></em></span>
+							</li></ul></div></section><section class="section" id="openshift_tags_2"><div class="titlepage"><div><div><h4 class="title">2.2.2.3. Setting up OpenShift tags</h4></div></div></div><p>
+						Tags, also called labels, are strings of custom metadata that you assign to resources. You can use tags to differentiate and allocate costs between various parts of your environment.
+					</p><p>
+						To learn about the different use cases for tags and how to set them up, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/managing_cost_data_using_tagging/index/">Managing cost data using tagging</a>.
+					</p></section><section class="section" id="cost_model_2"><div class="titlepage"><div><div><h4 class="title">2.2.2.4. Create a cloud cost model</h4></div></div></div><p>
+						Finally, depending on your cloud provider, you need to add either an AWS, Google, or Azure cost model to accurately analyze your costs.
+					</p><p>
+						A cost model is a framework that uses raw costs and metrics to define calculations for your costs. You can record, categorize, and distribute the costs that the cost model generates to specific customers, business units, or projects.
+					</p><p>
+						To learn how to set up a cloud cost model, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index/">Using cost models</a>.
+					</p></section></section></section><section class="section" id="control_permissions"><div class="titlepage"><div><div><h2 class="title">2.3. Control your permissions</h2></div></div></div><p>
+				You might want to limit access to your data to only specific users or organizations. To learn how to control permissions, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/limiting_access_to_cost_management_resources/index/">Limiting access to cost management resources</a>.
+			</p></section><section class="section" id="analyze_results"><div class="titlepage"><div><div><h2 class="title">2.4. Analyze your results</h2></div></div></div><p>
+				Now that your cost data is generated, you can analyze your results and make changes in your business. To learn more about cost analysis, go to <a class="link mimir-link-warn" href="https://access.redhat.com/documentation/en-us/cost_management_service/1-latest/html-single/visualizing_your_costs_using_cost_explorer/index" title="This content is not included in Mimir.">Visualizing your costs using Cost Explorer</a>.
+			</p><p>
+				=
+			</p></section></section><section class="chapter" id="key-concepts"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Key concepts in cost management</h1></div></div></div><p>
+			Review the following terms to ensure you understand important definitions in cost management.
+		</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Cost</span></dt><dd>
+						The sum of infrastructure and supplementary costs or the total cost for the filtered data. This sum can include the cost for a particular account, region, or service.
+					</dd><dt><span class="term">Raw cost</span></dt><dd>
+						The costs that a cloud provider reports before any cost model calculations.
+					</dd><dt><span class="term">Unallocated costs</span></dt><dd>
+						The costs that you can view when you group OpenShift cost data by project. These costs are in the rows <span class="strong strong"><strong>Platform unallocated</strong></span> and <span class="strong strong"><strong>Worker unallocated</strong></span> and are available when viewing OpenShift cost data by project.
+					</dd><dt><span class="term">Platform unallocated costs</span></dt><dd>
+						The costs for parts of primary and infrastructure nodes that are not allocated to run workloads. In this case, those workloads are the OpenShift platform or control plane.
+					</dd><dt><span class="term">Worker unallocated costs</span></dt><dd>
+						The costs that represent any unused part of your worker node’s usage and request capacity.
+					</dd><dt><span class="term">Unattributed cost</span></dt><dd>
+						The costs associated with a cloud integration that is not attributed to an OpenShift project.
+					</dd><dt><span class="term">Overhead costs</span></dt><dd>
+						The costs that you outlay to administer your cloud account.
+					</dd></dl></div><section class="section" id="cost-layers"><div class="titlepage"><div><div><h2 class="title">3.1. Cost layers</h2></div></div></div><p>
+				You can create costs at different layers of the environment. In cost management, all costs can be classified as either infrastructure or supplementary costs. To customize what cost management shows on the Details page, you can allocate and present your costs as any of the cost layers in your cost model.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Infrastructure cost</span></dt><dd><p class="simpara">
+							In cost management, all cloud costs are considered infrastructure costs. They can include costs that cloud providers directly report through an Amazon (AWS), Microsoft Azure, or Google Cloud export. However, you can also designate infrastructure costs calculated from a price list for rates specifically marked as infrastructure.
+						</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+								OpenShift Container Platform node and cluster cost per month rates are classified as infrastructure cost by default. You can choose to classify them as supplementary.
+							</p></div></div></dd><dt><span class="term">Supplementary cost</span></dt><dd>
+							All costs not directly attributed to infrastructure are identified as supplementary costs. In cost management, these costs come from applying a price list to the metrics taken from an OpenShift cluster. The rates in the price list must be specified as supplementary. This is the default for all OpenShift costs except node and cluster cost per month.
+						</dd></dl></div></section><section class="section" id="additional_resources"><div class="titlepage"><div><div><h2 class="title">3.2. Additional resources</h2></div></div></div><p>
+				For more information about cost models, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index/#cost-model-terminology">Cost model terminology</a>.
+			</p><p>
+				For information about distributing costs, see <a class="link" href="/documentation/en-us/cost_management_service/1-latest/html-single/using_cost_models/index/#understanding-cost-distribution_using-cost-models">Understanding cost distribution in cost management</a>
+			</p></section></section><section class="chapter" id="privacy-and-data-cost-management"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Your privacy and data in cost management</h1></div></div></div><p>
+			To run cost management, we gather your cost and usage data, but do not collect identifying information such as user names, passwords, or certificates.
+		</p><p>
+			For more information about your privacy and data, log in to the <a class="link" href="/">Customer Portal</a> and see <a class="link mimir-link-warn" href="https://www.redhat.com/en/about/privacy-policy" title="Mimir does not include content from: www.redhat.com">Red Hat’s Privacy Policy</a> and <a class="link mimir-link-warn" href="https://access.redhat.com/articles/6977699" title="This content is not included in Mimir.">our FAQ page</a>.
+		</p></section><section class="preface" id="proc-providing-feedback-on-redhat-documentation"><div class="titlepage"><div><div><h1 class="title">Providing feedback on Red Hat documentation</h1></div></div></div><p>
+			We appreciate and prioritize your feedback regarding our documentation. Provide as much detail as possible, so that your request can be quickly addressed.
+		</p><div class="itemizedlist"><p class="title"><strong>Prerequisites</strong></p><ul class="itemizedlist" type="disc"><li class="listitem">
+					You are logged in to the Red Hat Customer Portal.
+				</li></ul></div><div class="formalpara"><p class="title"><strong>Procedure</strong></p><p>
+				To provide feedback, perform the following steps:
+			</p></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					Click the following link: <a class="link mimir-link-warn" href="https://issues.redhat.com/secure/CreateIssueDetails!init.jspa?pid=12333524&amp;issuetype=1&amp;priority=10300&amp;description=URL%20where%20issue%20was%20found%3A%C2%A0%0A%0ADescription%20of%20issue%3A%C2%A0&amp;components=12368954" title="Mimir does not include content from: issues.redhat.com">Create Issue</a>.
+				</li><li class="listitem">
+					Describe the issue or enhancement in the <span class="strong strong"><strong>Summary</strong></span> text box.
+				</li><li class="listitem">
+					Provide details about the issue or requested enhancement in the <span class="strong strong"><strong>Description</strong></span> text box.
+				</li><li class="listitem">
+					Type your name in the <span class="strong strong"><strong>Reporter</strong></span> text box.
+				</li><li class="listitem">
+					Click the <span class="strong strong"><strong>Create</strong></span> button.
+				</li></ol></div><p>
+			This action creates a documentation ticket and routes it to the appropriate documentation team. Thank you for taking the time to provide feedback.
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm140093105085616"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"><!--Empty--></span>© 2024 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri mimir-link-warn" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Mimir does not include content from: creativecommons.org">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></body>
+
+        
+        
+    </div>
+    
+
+</div> 
+
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

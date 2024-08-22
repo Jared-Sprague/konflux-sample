@@ -1,0 +1,269 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support ends",
+      "name": "Maintenance support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended life cycle support (ELS) add-on ends",
+      "name": "Extended life cycle support (ELS) add-on",
+      "ptype": "extended",
+      "tooltip": "This is an Add-On entitlement. Customers must have this entitlement on their account in order to receive this support."
+    },
+    {
+      "additional_text": "",
+      "display_name": "Extended life phase ends",
+      "name": "Extended life phase",
+      "ptype": "extended",
+      "tooltip": "The Extended Life Cycle Phase (ELP) is the post-retirement time period. We require that customers running Red Hat Enterprise Linux products beyond their retirement continue to have active subscriptions which ensures that they continue receiving access to all previously released content, documentation, and knowledge base articles as well as receive limited technical support. As there are no bug fixes, security fixes, hardware enablement, or root cause analysis available during the Extended Life Phase, customers may choose to purchase the Extended Life Cycle Support Add-On during the Extended Life Phase, which will provide them with critical impact security fixes and selected urgent priority bug fixes."
+    }
+  ],
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": false,
+  "is_operator": false,
+  "link": "https://access.redhat.com/support/policy/updates/errata/",
+  "name": "Red Hat Enterprise Linux",
+  "package": null,
+  "policies": "https://access.redhat.com/articles/145463",
+  "release_cadence": null,
+  "show_final_minor_release": true,
+  "show_last_minor_release": true,
+  "show_openshift_compatibility": false,
+  "uuid": "0579380b-2d8f-4cc9-9997-99ef12d3435c",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": "7.9",
+      "last_minor_release": "7.9",
+      "name": "7",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2014-06-10T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2019-08-06T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2028-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        },
+        {
+          "additional_text": "",
+          "date": "Ongoing",
+          "date_format": "string",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of Maintenance"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": "6.10",
+      "last_minor_release": "6.10",
+      "name": "6",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2010-11-10T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2016-05-10T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2020-11-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        },
+        {
+          "additional_text": "",
+          "date": "Ongoing",
+          "date_format": "string",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of Maintenance"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": "5.11",
+      "last_minor_release": "5.11",
+      "name": "5",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2007-03-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2013-01-08T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2017-03-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2020-11-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        },
+        {
+          "additional_text": "",
+          "date": "Ongoing",
+          "date_format": "string",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of Maintenance"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": "9.10",
+      "last_minor_release": "9.10",
+      "name": "9",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-05-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2027-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2032-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2035-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        },
+        {
+          "additional_text": "",
+          "date": "Ongoing",
+          "date_format": "string",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": null,
+      "final_minor_release": "8.10",
+      "last_minor_release": "8.10",
+      "name": "8",
+      "openshift_compatibility": null,
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2019-05-07T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2029-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support"
+        },
+        {
+          "additional_text": "",
+          "date": "2032-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        },
+        {
+          "additional_text": "",
+          "date": "Ongoing",
+          "date_format": "string",
+          "name": "Extended life phase"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Maintenance Support"
+    }
+  ]
+}]}

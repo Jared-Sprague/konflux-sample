@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="/mimir/styles/mimir.min.css">
+        
+
+        
+        <!--#include virtual="/includes/head/index.html" -->
+
+        
+        <title>
+How do I uninstall Red Hat Enterprise Linux?
+</title>
+        
+<meta name="documentKind" content="article" />
+<meta name="lastModifiedDate" content="2016-06-07T20:31:49.000Z" />
+<meta name="url_slug" content="1014" />
+
+        
+            
+        
+        
+            
+                
+                
+                <!-- mimir_solr_yesindex -->
+                <meta name="mimir_solr_yesindex" content="true" />
+            
+        
+    </head>
+
+    <body class="mimir-body">
+
+        
+        
+
+        
+        <div id="page-wrap" class="page-wrap">
+            <div id="pers-top-page-wrap" class="top-page-wrap pers-loader-bg">
+                <div id="hero-bg-top-left" class="summit-bg-shapes"></div>
+                <div id="hero-bg-top-right" class="summit-bg-shapes"></div>
+
+                <header class="masthead" id="masthead">
+
+                    
+                    <!--#include virtual="/includes/header/index.html" -->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                        <div class="breadcrumbs">
+                            <div id="breadcrumbs" class="container">
+                                
+                                <a href="/">Home</a>
+                                
+                                <a href="/search/?q=*&p=1&rows=10&documentKind=article">Articles</a>
+                                
+                                
+                                How do I uninstall Red Hat Enterprise Linux?
+                                
+                            </div>
+                        </div>
+                    
+                </header>
+
+                <main id="cp-main" class="portal-content-area">
+                    <div id="cp-content" class="main-content">
+                        
+                        <main class="container">
+                            
+                            <bdo>
+                                
+<div class="kcs_article cirrus-content" id="main-content">
+    <h1>How do I uninstall Red Hat Enterprise Linux?</h1>
+
+    <div class="status-container">
+      Updated <time datetime="2016-06-07T20:31:49.000Z">7 Jun 2016</time>
+    </div>
+
+    <hr>
+    <p>If you need to uninstall Red Hat Enterprise Linux, follow the instructions in the <em>Installation Guide</em> appendix titled <em>Removing Red Hat Enterprise Linux.</em> or check the index for <em>uninstalling</em> entry.  Be sure to choose the appropriate hardware architecture and version of Red Hat Enterprise Linux listed on the following Web page:</p>
+<p><a href="https://access.redhat.com/documentation/red-hat-enterprise-linux/" class="mimir-link-warn" title="This content is not included in Mimir."><a href="https://access.redhat.com/documentation/red-hat-enterprise-linux/" class="mimir-link-warn" title="This content is not included in Mimir.">https://access.redhat.com/documentation/red-hat-enterprise-linux/</a></a></p>
+<p>Or you can delete partitions with the following the steps.</p>
+<p>1. Boot with &quot;boot: linux rescue&quot; to enter rescue mode.</p>
+<blockquote>
+<p>boot: linux rescue</p>
+</blockquote>
+<p>2. Open parted specifying the device you want to clean up.</p>
+<blockquote>
+<p># parted /dev/sda</p>
+</blockquote>
+<p>3. Print and Remove</p>
+<p>Confirm which partition you want to remove, and remove with the partition number.</p>
+<blockquote>
+<p>(parted) print</p>
+<p>(parted) rm <em>number</em></p>
+</blockquote>
+
+</div>
+
+                            </bdo>
+                        </main>
+                    </div>
+                </main>
+            </div>
+        
+            <!--#include virtual="/includes/footer/index.html" -->
+        </div>
+    </body>
+</html>

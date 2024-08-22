@@ -1,0 +1,314 @@
+{"data": [{
+  "all_phases": [
+    {
+      "additional_text": "",
+      "display_name": "General availability",
+      "name": "General availability",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Full support ends",
+      "name": "Full support",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance Support 1 ends",
+      "name": "Maintenance Support 1",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "",
+      "display_name": "Maintenance support 2 ends",
+      "name": "Maintenance support 2",
+      "ptype": "normal",
+      "tooltip": null
+    },
+    {
+      "additional_text": "This add-on is available for purchase for AAP 1.2. Contact your account representative for additional information.",
+      "display_name": "Extended life cycle support (ELS) add-on ends",
+      "name": "Extended life cycle support (ELS) add-on",
+      "ptype": "extended",
+      "tooltip": "This is an Add-On entitlement. Customers must have this entitlement on their account in order to receive this support."
+    }
+  ],
+  "extra_header": "Tier",
+  "footnote": "",
+  "former_names": [],
+  "is_layered_product": true,
+  "is_operator": true,
+  "link": "https://access.redhat.com/site/support/policy/updates/ansible-automation-platform",
+  "name": "Red Hat Ansible Automation Platform",
+  "package": "ansible-automation-platform-operator",
+  "policies": "https://access.redhat.com/ansible-top-support-policies",
+  "product_extra_headers": [],
+  "release_cadence": "6-8 months",
+  "show_final_minor_release": false,
+  "show_last_minor_release": false,
+  "show_openshift_compatibility": true,
+  "uuid": "d2c793b1-dec9-42a9-b4bc-4295b66d7cfc",
+  "versions": [
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.4",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2023-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-10-01T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-06-27T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2025-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Full Support"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.3",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-11-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-06-30T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-05-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.2",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2022-05-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-11-24T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-05-24T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-11-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.1",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2021-12-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-06-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-12-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-06-02T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "2.0",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2021-07-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-01-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-07-15T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-08-26T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "N/A",
+          "date_format": "string",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "End of life"
+    },
+    {
+      "additional_text": "",
+      "extra_dependences": [],
+      "extra_header_value": "N/A",
+      "final_minor_release": null,
+      "last_minor_release": null,
+      "name": "1.2",
+      "openshift_compatibility": "",
+      "phases": [
+        {
+          "additional_text": "",
+          "date": "2019-11-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "General availability"
+        },
+        {
+          "additional_text": "",
+          "date": "2021-05-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Full support"
+        },
+        {
+          "additional_text": "",
+          "date": "2022-05-18T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance Support 1"
+        },
+        {
+          "additional_text": "",
+          "date": "2023-09-29T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Maintenance support 2"
+        },
+        {
+          "additional_text": "",
+          "date": "2024-12-31T00:00:00.000Z",
+          "date_format": "date",
+          "name": "Extended life cycle support (ELS) add-on"
+        }
+      ],
+      "tier": "N/A",
+      "type": "Extended Support"
+    }
+  ]
+}]}

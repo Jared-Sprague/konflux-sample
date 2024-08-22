@@ -1,0 +1,1 @@
+body.mimir-body{border-top:var(--mimir-fixed-header-height) solid}body.mimir-body:before{position:fixed;z-index:1000000;top:0;left:0;right:0;content:"RED HAT INTERNAL - Associate Use Only. No Further Distribution.";text-align:center;display:block;background-color:#f0ab00;color:#252525;font-weight:700;font-size:18px}
